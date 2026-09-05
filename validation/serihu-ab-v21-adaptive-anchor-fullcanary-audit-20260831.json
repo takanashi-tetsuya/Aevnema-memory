@@ -1,0 +1,4378 @@
+{
+  "database": "/mnt/c/Users/Admin/Documents/chat_bot/data/knowledge/serihu-ab-v21-adaptive-anchor-fullcanary-20260831.db",
+  "counts": {
+    "sources": 7,
+    "episodes": 36,
+    "concepts": 87,
+    "associations": 125
+  },
+  "embedding_blob_lengths": {
+    "episode": [
+      4096
+    ],
+    "concept": [
+      4096
+    ],
+    "paragraph": []
+  },
+  "integrity": {
+    "schema_version": 8,
+    "expected_schema_version": 8,
+    "sqlite": "ok",
+    "foreign_key_issues": [],
+    "orphan_association_ids": [],
+    "concepts_without_episode_links": [],
+    "embedding_issues": [],
+    "empty_content_issues": [],
+    "json_payload_issues": [],
+    "fts_count_issues": [],
+    "sources_without_episodes": [],
+    "reference_coverage_issues": [],
+    "explicit_evidence_boundary_issues": [],
+    "explicit_evidence_mapping_ambiguities": [],
+    "association_generation_issues": [],
+    "noncompleted_runs": [],
+    "noncompleted_tasks": []
+  },
+  "segment_reconciliation": {
+    "supported_files": 5,
+    "expected_segments": 7,
+    "actual_segments": 7,
+    "roots": [
+      {
+        "root": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/serihu-quality-canary-v6-structural-corpus-20260831",
+        "supported_files": 5,
+        "expected_segments": 7
+      }
+    ],
+    "source_key_collisions": [],
+    "missing_segments": [],
+    "unexpected_segments": []
+  },
+  "tasks": [
+    {
+      "stage": "pass1",
+      "status": "completed",
+      "count": 7
+    }
+  ],
+  "episodes_per_source": {
+    "sources_with_episodes": 7,
+    "minimum": 1,
+    "mean": 5.14,
+    "maximum": 9,
+    "counts": [
+      5,
+      5,
+      1,
+      9,
+      4,
+      4,
+      8
+    ]
+  },
+  "association_types": {
+    "semantic": 125
+  },
+  "quality": {
+    "concept_alias_collisions": [],
+    "concept_output_issues": [],
+    "participant_grounding_issues": [],
+    "participant_completeness_issues": []
+  },
+  "temporal_cycles": {
+    "000__主线剧情_最終編_第1章__segment-0000.txt": {
+      "episode_count": 5,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "001__主线剧情_最終編_第2章__segment-0001.txt": {
+      "episode_count": 6,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "002__主线剧情_最終編_第4章__segment-0001.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt": {
+      "episode_count": 8,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt": {
+      "episode_count": 8,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "__global__": {
+      "episode_count": 36,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    }
+  },
+  "negative_associations": 0,
+  "duplicate_episode_pairs": [],
+  "associations": [
+    {
+      "id": 1,
+      "from_type": "episode",
+      "from_id": 1,
+      "to_type": "concept",
+      "to_id": 1,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“セイア”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 2,
+      "from_type": "episode",
+      "from_id": 1,
+      "to_type": "concept",
+      "to_id": 2,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“クズノハ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 3,
+      "from_type": "episode",
+      "from_id": 1,
+      "to_type": "concept",
+      "to_id": 3,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“色彩”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 4,
+      "from_type": "episode",
+      "from_id": 2,
+      "to_type": "concept",
+      "to_id": 4,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“黑服”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 5,
+      "from_type": "episode",
+      "from_id": 2,
+      "to_type": "concept",
+      "to_id": 5,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“マエストロ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 6,
+      "from_type": "episode",
+      "from_id": 2,
+      "to_type": "concept",
+      "to_id": 6,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ゴルコンダ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 7,
+      "from_type": "episode",
+      "from_id": 2,
+      "to_type": "concept",
+      "to_id": 7,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ベアトリーチェ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 8,
+      "from_type": "episode",
+      "from_id": 2,
+      "to_type": "concept",
+      "to_id": 8,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“名もなき神”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 9,
+      "from_type": "episode",
+      "from_id": 2,
+      "to_type": "concept",
+      "to_id": 9,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“無名の司祭”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 10,
+      "from_type": "episode",
+      "from_id": 2,
+      "to_type": "concept",
+      "to_id": 10,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“箱舟”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 11,
+      "from_type": "episode",
+      "from_id": 3,
+      "to_type": "concept",
+      "to_id": 7,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ベアトリーチェ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 12,
+      "from_type": "episode",
+      "from_id": 3,
+      "to_type": "concept",
+      "to_id": 11,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“アロナ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 13,
+      "from_type": "episode",
+      "from_id": 3,
+      "to_type": "concept",
+      "to_id": 12,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“先生”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 14,
+      "from_type": "episode",
+      "from_id": 3,
+      "to_type": "concept",
+      "to_id": 1,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“セイア”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 15,
+      "from_type": "episode",
+      "from_id": 3,
+      "to_type": "concept",
+      "to_id": 3,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“色彩”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 16,
+      "from_type": "episode",
+      "from_id": 4,
+      "to_type": "concept",
+      "to_id": 1,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“セイア”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 17,
+      "from_type": "episode",
+      "from_id": 4,
+      "to_type": "concept",
+      "to_id": 12,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“先生”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 18,
+      "from_type": "episode",
+      "from_id": 4,
+      "to_type": "concept",
+      "to_id": 11,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“アロナ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 19,
+      "from_type": "episode",
+      "from_id": 4,
+      "to_type": "concept",
+      "to_id": 13,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“リン”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 20,
+      "from_type": "episode",
+      "from_id": 4,
+      "to_type": "concept",
+      "to_id": 14,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“终焉”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 21,
+      "from_type": "episode",
+      "from_id": 5,
+      "to_type": "concept",
+      "to_id": 12,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“先生”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 22,
+      "from_type": "episode",
+      "from_id": 5,
+      "to_type": "concept",
+      "to_id": 13,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“リン”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 23,
+      "from_type": "episode",
+      "from_id": 5,
+      "to_type": "concept",
+      "to_id": 15,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“终焉预知梦”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 24,
+      "from_type": "episode",
+      "from_id": 5,
+      "to_type": "concept",
+      "to_id": 16,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“生徒会”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 25,
+      "from_type": "episode",
+      "from_id": 6,
+      "to_type": "concept",
+      "to_id": 17,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ホシノ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 26,
+      "from_type": "episode",
+      "from_id": 6,
+      "to_type": "concept",
+      "to_id": 18,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ノノミ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 27,
+      "from_type": "episode",
+      "from_id": 6,
+      "to_type": "concept",
+      "to_id": 19,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“セリカ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 28,
+      "from_type": "episode",
+      "from_id": 6,
+      "to_type": "concept",
+      "to_id": 20,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“シロコ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 29,
+      "from_type": "episode",
+      "from_id": 6,
+      "to_type": "concept",
+      "to_id": 12,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“老师”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 30,
+      "from_type": "episode",
+      "from_id": 7,
+      "to_type": "concept",
+      "to_id": 13,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“リン”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 31,
+      "from_type": "episode",
+      "from_id": 7,
+      "to_type": "concept",
+      "to_id": 21,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“夏莱”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 32,
+      "from_type": "episode",
+      "from_id": 7,
+      "to_type": "concept",
+      "to_id": 22,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“联邦学生会”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 33,
+      "from_type": "episode",
+      "from_id": 7,
+      "to_type": "concept",
+      "to_id": 23,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“圣所塔”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 34,
+      "from_type": "episode",
+      "from_id": 7,
+      "to_type": "concept",
+      "to_id": 12,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“老师”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 35,
+      "from_type": "episode",
+      "from_id": 7,
+      "to_type": "concept",
+      "to_id": 24,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“D.U.”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 36,
+      "from_type": "episode",
+      "from_id": 8,
+      "to_type": "concept",
+      "to_id": 3,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“色彩”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 37,
+      "from_type": "episode",
+      "from_id": 8,
+      "to_type": "concept",
+      "to_id": 1,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“セイア”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 38,
+      "from_type": "episode",
+      "from_id": 8,
+      "to_type": "concept",
+      "to_id": 25,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“シスターフッド”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 39,
+      "from_type": "episode",
+      "from_id": 8,
+      "to_type": "concept",
+      "to_id": 26,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“基沃托斯”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 40,
+      "from_type": "episode",
+      "from_id": 9,
+      "to_type": "concept",
+      "to_id": 27,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“虚妄的圣所”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 41,
+      "from_type": "episode",
+      "from_id": 9,
+      "to_type": "concept",
+      "to_id": 28,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ヒマリ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 42,
+      "from_type": "episode",
+      "from_id": 9,
+      "to_type": "concept",
+      "to_id": 29,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“デカグラマトンの預言者”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 43,
+      "from_type": "episode",
+      "from_id": 9,
+      "to_type": "concept",
+      "to_id": 30,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ミメシス”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 44,
+      "from_type": "episode",
+      "from_id": 9,
+      "to_type": "concept",
+      "to_id": 31,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“Divi:Sion”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 45,
+      "from_type": "episode",
+      "from_id": 10,
+      "to_type": "concept",
+      "to_id": 32,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“格黑娜”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 46,
+      "from_type": "episode",
+      "from_id": 10,
+      "to_type": "concept",
+      "to_id": 33,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“百鬼夜行”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 47,
+      "from_type": "episode",
+      "from_id": 10,
+      "to_type": "concept",
+      "to_id": 34,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“红冬”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 48,
+      "from_type": "episode",
+      "from_id": 10,
+      "to_type": "concept",
+      "to_id": 35,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“山海经”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 49,
+      "from_type": "episode",
+      "from_id": 10,
+      "to_type": "concept",
+      "to_id": 36,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“三一”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 50,
+      "from_type": "episode",
+      "from_id": 10,
+      "to_type": "concept",
+      "to_id": 24,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“D.U.”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 51,
+      "from_type": "episode",
+      "from_id": 11,
+      "to_type": "concept",
+      "to_id": 28,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ヒマリ”",
+      "polarity": 1,
+      "weight": 0.8700000000000002,
+      "confidence": 0.9,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 52,
+      "from_type": "episode",
+      "from_id": 11,
+      "to_type": "concept",
+      "to_id": 37,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“明守护者”",
+      "polarity": 1,
+      "weight": 0.7900000000000003,
+      "confidence": 0.8,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 53,
+      "from_type": "episode",
+      "from_id": 11,
+      "to_type": "concept",
+      "to_id": 38,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“治安维持”",
+      "polarity": 1,
+      "weight": 0.8700000000000002,
+      "confidence": 0.9,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 54,
+      "from_type": "episode",
+      "from_id": 11,
+      "to_type": "concept",
+      "to_id": 39,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“避难安排”",
+      "polarity": 1,
+      "weight": 0.8700000000000002,
+      "confidence": 0.9,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 55,
+      "from_type": "episode",
+      "from_id": 12,
+      "to_type": "concept",
+      "to_id": 40,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“春香”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 56,
+      "from_type": "episode",
+      "from_id": 12,
+      "to_type": "concept",
+      "to_id": 41,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“睦月”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 57,
+      "from_type": "episode",
+      "from_id": 12,
+      "to_type": "concept",
+      "to_id": 42,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“爱露”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 58,
+      "from_type": "episode",
+      "from_id": 12,
+      "to_type": "concept",
+      "to_id": 43,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“佳代子”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 59,
+      "from_type": "episode",
+      "from_id": 13,
+      "to_type": "concept",
+      "to_id": 44,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“时”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 60,
+      "from_type": "episode",
+      "from_id": 14,
+      "to_type": "concept",
+      "to_id": 45,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“日奈”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 61,
+      "from_type": "episode",
+      "from_id": 14,
+      "to_type": "concept",
+      "to_id": 46,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“宫子”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 62,
+      "from_type": "episode",
+      "from_id": 14,
+      "to_type": "concept",
+      "to_id": 47,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“美游”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 63,
+      "from_type": "episode",
+      "from_id": 14,
+      "to_type": "concept",
+      "to_id": 48,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“咲”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 64,
+      "from_type": "episode",
+      "from_id": 14,
+      "to_type": "concept",
+      "to_id": 49,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“圣所”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 65,
+      "from_type": "episode",
+      "from_id": 15,
+      "to_type": "concept",
+      "to_id": 50,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“优香”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 66,
+      "from_type": "episode",
+      "from_id": 15,
+      "to_type": "concept",
+      "to_id": 28,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“日鞠”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 67,
+      "from_type": "episode",
+      "from_id": 15,
+      "to_type": "concept",
+      "to_id": 51,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“リオ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 68,
+      "from_type": "episode",
+      "from_id": 15,
+      "to_type": "concept",
+      "to_id": 52,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“乌图纳皮什提姆”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 69,
+      "from_type": "episode",
+      "from_id": 15,
+      "to_type": "concept",
+      "to_id": 53,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“终端”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 70,
+      "from_type": "episode",
+      "from_id": 16,
+      "to_type": "concept",
+      "to_id": 54,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“千寻”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 71,
+      "from_type": "episode",
+      "from_id": 16,
+      "to_type": "concept",
+      "to_id": 55,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“真纪”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 72,
+      "from_type": "episode",
+      "from_id": 16,
+      "to_type": "concept",
+      "to_id": 56,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“小玉”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 73,
+      "from_type": "episode",
+      "from_id": 16,
+      "to_type": "concept",
+      "to_id": 57,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“晴”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 74,
+      "from_type": "episode",
+      "from_id": 16,
+      "to_type": "concept",
+      "to_id": 58,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“响”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 75,
+      "from_type": "episode",
+      "from_id": 16,
+      "to_type": "concept",
+      "to_id": 59,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“方舟”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 76,
+      "from_type": "episode",
+      "from_id": 16,
+      "to_type": "concept",
+      "to_id": 60,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“工程师部”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 77,
+      "from_type": "episode",
+      "from_id": 17,
+      "to_type": "concept",
+      "to_id": 20,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“白子”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 78,
+      "from_type": "episode",
+      "from_id": 18,
+      "to_type": "concept",
+      "to_id": 58,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“响”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 79,
+      "from_type": "episode",
+      "from_id": 18,
+      "to_type": "concept",
+      "to_id": 54,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“千寻”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 80,
+      "from_type": "episode",
+      "from_id": 18,
+      "to_type": "concept",
+      "to_id": 28,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“日鞠”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 81,
+      "from_type": "episode",
+      "from_id": 18,
+      "to_type": "concept",
+      "to_id": 61,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“花子”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 82,
+      "from_type": "episode",
+      "from_id": 18,
+      "to_type": "concept",
+      "to_id": 59,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“方舟”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 83,
+      "from_type": "episode",
+      "from_id": 18,
+      "to_type": "concept",
+      "to_id": 62,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“沙尔·卡利·沙里回廊”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 84,
+      "from_type": "episode",
+      "from_id": 20,
+      "to_type": "concept",
+      "to_id": 28,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“日鞠”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 85,
+      "from_type": "episode",
+      "from_id": 20,
+      "to_type": "concept",
+      "to_id": 63,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“爱丽丝”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 86,
+      "from_type": "episode",
+      "from_id": 20,
+      "to_type": "concept",
+      "to_id": 64,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“光之剑：阿特拉·哈希斯的超新星”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 87,
+      "from_type": "episode",
+      "from_id": 21,
+      "to_type": "concept",
+      "to_id": 65,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“カイザーコーポレーション”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 88,
+      "from_type": "episode",
+      "from_id": 21,
+      "to_type": "concept",
+      "to_id": 66,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“アビドス”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 89,
+      "from_type": "episode",
+      "from_id": 21,
+      "to_type": "concept",
+      "to_id": 67,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“前生徒会”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 90,
+      "from_type": "episode",
+      "from_id": 22,
+      "to_type": "concept",
+      "to_id": 17,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ホシノ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 91,
+      "from_type": "episode",
+      "from_id": 22,
+      "to_type": "concept",
+      "to_id": 68,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“最後の生徒会”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 92,
+      "from_type": "episode",
+      "from_id": 22,
+      "to_type": "concept",
+      "to_id": 69,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“対策委員会”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 93,
+      "from_type": "episode",
+      "from_id": 23,
+      "to_type": "concept",
+      "to_id": 70,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“アビドスの借金”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 94,
+      "from_type": "episode",
+      "from_id": 23,
+      "to_type": "concept",
+      "to_id": 71,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“カイザーコーポレーションの貸付”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 95,
+      "from_type": "episode",
+      "from_id": 24,
+      "to_type": "concept",
+      "to_id": 72,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“カイザーコーポレーションの目的”",
+      "polarity": 1,
+      "weight": 0.8700000000000002,
+      "confidence": 0.9,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 96,
+      "from_type": "episode",
+      "from_id": 24,
+      "to_type": "concept",
+      "to_id": 73,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“アビドスの砂漠”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 97,
+      "from_type": "episode",
+      "from_id": 24,
+      "to_type": "concept",
+      "to_id": 45,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ヒナ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 98,
+      "from_type": "episode",
+      "from_id": 25,
+      "to_type": "concept",
+      "to_id": 74,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“凯撒贷款”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 99,
+      "from_type": "episode",
+      "from_id": 25,
+      "to_type": "concept",
+      "to_id": 75,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“阿比多斯学园”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 100,
+      "from_type": "episode",
+      "from_id": 25,
+      "to_type": "concept",
+      "to_id": 67,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“前学生会”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 101,
+      "from_type": "episode",
+      "from_id": 25,
+      "to_type": "concept",
+      "to_id": 76,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“头盔团”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 102,
+      "from_type": "episode",
+      "from_id": 26,
+      "to_type": "concept",
+      "to_id": 45,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“日奈”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 1,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 103,
+      "from_type": "episode",
+      "from_id": 26,
+      "to_type": "concept",
+      "to_id": 77,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“阿比多斯沙漠”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 1,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 104,
+      "from_type": "episode",
+      "from_id": 27,
+      "to_type": "concept",
+      "to_id": 78,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“格黑娜风纪委员长”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 105,
+      "from_type": "episode",
+      "from_id": 28,
+      "to_type": "concept",
+      "to_id": 20,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“白子”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 106,
+      "from_type": "episode",
+      "from_id": 28,
+      "to_type": "concept",
+      "to_id": 17,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“星野”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 107,
+      "from_type": "episode",
+      "from_id": 29,
+      "to_type": "concept",
+      "to_id": 79,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ミカ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 108,
+      "from_type": "episode",
+      "from_id": 29,
+      "to_type": "concept",
+      "to_id": 80,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“圣歌队室”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 109,
+      "from_type": "episode",
+      "from_id": 30,
+      "to_type": "concept",
+      "to_id": 79,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ミカ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 110,
+      "from_type": "episode",
+      "from_id": 30,
+      "to_type": "concept",
+      "to_id": 81,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“コハル”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 111,
+      "from_type": "episode",
+      "from_id": 30,
+      "to_type": "concept",
+      "to_id": 82,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“魔女”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 112,
+      "from_type": "episode",
+      "from_id": 31,
+      "to_type": "concept",
+      "to_id": 79,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ミカ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 113,
+      "from_type": "episode",
+      "from_id": 31,
+      "to_type": "concept",
+      "to_id": 83,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“サオリ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 114,
+      "from_type": "episode",
+      "from_id": 32,
+      "to_type": "concept",
+      "to_id": 79,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ミカ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 115,
+      "from_type": "episode",
+      "from_id": 32,
+      "to_type": "concept",
+      "to_id": 1,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“セイア”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 116,
+      "from_type": "episode",
+      "from_id": 33,
+      "to_type": "concept",
+      "to_id": 79,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ミカ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 117,
+      "from_type": "episode",
+      "from_id": 33,
+      "to_type": "concept",
+      "to_id": 84,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“アリウススクワッド”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 118,
+      "from_type": "episode",
+      "from_id": 34,
+      "to_type": "concept",
+      "to_id": 79,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ミカ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 119,
+      "from_type": "episode",
+      "from_id": 34,
+      "to_type": "concept",
+      "to_id": 84,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“アリウススクワッド”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 120,
+      "from_type": "episode",
+      "from_id": 35,
+      "to_type": "concept",
+      "to_id": 79,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ミカ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 121,
+      "from_type": "episode",
+      "from_id": 35,
+      "to_type": "concept",
+      "to_id": 85,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“アツコ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 122,
+      "from_type": "episode",
+      "from_id": 35,
+      "to_type": "concept",
+      "to_id": 12,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“老师”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 123,
+      "from_type": "episode",
+      "from_id": 36,
+      "to_type": "concept",
+      "to_id": 79,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ミカ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 124,
+      "from_type": "episode",
+      "from_id": 36,
+      "to_type": "concept",
+      "to_id": 86,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“祈求慈悲的歌”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 125,
+      "from_type": "episode",
+      "from_id": 36,
+      "to_type": "concept",
+      "to_id": 87,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“反派”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    }
+  ],
+  "episodes": [
+    {
+      "id": 1,
+      "source_id": 1,
+      "source_key": "000__主线剧情_最終編_第1章__segment-0000.txt",
+      "segment_index": 0,
+      "text": "セイア与クズノハ讨论色彩遭遇事件，クズノハ解释色彩是致死威胁并说明セイア因通过白昼梦接触而暂时安全，但需支付代偿（失去构成本质）才能脱离侵染。",
+      "participants_json": "[\"セイア\", \"クズノハ\"]",
+      "event_type": "对话讨论",
+      "story_time_text": "未知",
+      "story_order": null,
+      "timeline_scope": "000__主线剧情_最終編_第1章__segment-0000.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 2,
+      "source_id": 1,
+      "source_key": "000__主线剧情_最終編_第1章__segment-0000.txt",
+      "segment_index": 0,
+      "text": "黑服向众人解释「名もなき神」和「無名の司祭」相关神秘遗产，提及「箱舟」观测事件及当前计划偏离情况，众人（マエストロ、ゴルコンダ、ベアトリーチェ）回应。",
+      "participants_json": "[\"黒服 / 黑服 / Black Suit / 검은 양복\", \"マエストロ\", \"ゴルコンダ\", \"ベアトリーチェ\"]",
+      "event_type": "信息说明",
+      "story_time_text": "未知",
+      "story_order": null,
+      "timeline_scope": "000__主线剧情_最終編_第1章__segment-0000.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 3,
+      "source_id": 1,
+      "source_key": "000__主线剧情_最終編_第1章__segment-0000.txt",
+      "segment_index": 0,
+      "text": "ベアトリーチェ宣布「色彩」已发现此处，マエストロ、ゴルコンダ、黒服反应，ベアトリーチェ说明是自己告知的。アロナ询问先生是否又做了梦，并否认自己用枪射击先生。セイア描述梦中モノクロ世界及歪なヘイローの少女对先生举枪场景。",
+      "participants_json": "[\"ベアトリーチェ\", \"黒服 / 黑服 / Black Suit / 검은 양복\", \"アロナ / 阿罗娜 / Arona / 아로나\", \"セイア\", \"先生 / 老师 / Sensei / 선생님\", \"マエストロ\", \"ゴルコンダ\"]",
+      "event_type": "事件宣告与梦境描述",
+      "story_time_text": "未知",
+      "story_order": null,
+      "timeline_scope": "000__主线剧情_最終編_第1章__segment-0000.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 4,
+      "source_id": 1,
+      "source_key": "000__主线剧情_最終編_第1章__segment-0000.txt",
+      "segment_index": 0,
+      "text": "セイア说明梦中多次与先生邂逅及未来视丧失情况，先生询问终焉发生时间，アロナ安慰先生并询问日程，先生提及找リン，アロナ表示担心リン是否相信。",
+      "participants_json": "[\"セイア\", \"先生 / 老师 / Sensei / 선생님\", \"アロナ / 阿罗娜 / Arona / 아로나\", \"リン\"]",
+      "event_type": "对话交流",
+      "story_time_text": "未知",
+      "story_order": null,
+      "timeline_scope": "000__主线剧情_最終編_第1章__segment-0000.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 5,
+      "source_id": 1,
+      "source_key": "000__主线剧情_最終編_第1章__segment-0000.txt",
+      "segment_index": 0,
+      "text": "先生向リン说明终焉预知梦内容，リン确认是梦并同意查看记录和名簿寻找线索，先生感谢リン并确认需证据说服其他生徒会，リン表示稍后联系。",
+      "participants_json": "[\"先生 / 老师 / Sensei / 선생님\", \"リン\"]",
+      "event_type": "信息传递与计划确认",
+      "story_time_text": "未知",
+      "story_order": null,
+      "timeline_scope": "000__主线剧情_最終編_第1章__segment-0000.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 6,
+      "source_id": 2,
+      "source_key": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "ホシノ和ノノミ在寻找シロコ，但不知道她在哪里。ホシノ想跳过シャーレ的召集。ノノミ指出还不知道シロコ在哪里，并说现在的情况和以前不同。ホシノ认为情况相同，但ノノミ坚持现在不同。セリカ出现，并说一起去见老师，因为老师一定会帮忙。ホシノ最终同意，并说老师一定会帮忙。ノノミ说一定没问题。",
+      "participants_json": "[\"ノノミ\", \"ホシノ\", \"セリカ\"]",
+      "event_type": "对话与决定",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 7,
+      "source_id": 2,
+      "source_key": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "アユム报告各自治区的学生正陆续聚集，即将到达。モモカ问リン待在夏莱而不是联邦学生会是否没问题。リン解释圣所塔被毁，作为代行者的她处于不信任状态，联邦学生会已瓦解，现在“夏莱”是唯一的希望。モモカ和アユム表示会跟随リン。カヨコ抵达，并说自己是第一个到的。リン说召唤她的是夏莱的老师。カヨコ表示知道，所以来了。ユウカ和アコ抵达。アコ问老师在哪里。リン说老师目前正在D.U.防卫。カヨコ惊讶老师也叫了她。ハナコ和アヤネ抵达并交谈。モモカ解释老师正在D.U.与不明士兵交战，即将解决，会返回这里。リン说老师到达后立刻去会议室。",
+      "participants_json": "[\"リン\", \"モモカ\", \"アユム\", \"カヨコ\", \"ユウカ\", \"アコ\", \"ハナコ\", \"アヤネ\"]",
+      "event_type": "集结与状况说明",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 8,
+      "source_id": 2,
+      "source_key": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "ハナコ介绍セイア，并提到ティーパーティー和シスターフッド的合作。セイア断言当前发生的可憎变化是名为“色彩”的存在踏入世界引发的现象。サクラコ补充说“色彩”在シスターフッド的古书中有记录，那是将人们陷入“疯狂”的光。ユウカ表示难以置信。セイア描述了自己曾告诉老师的预知梦：巨大的塔从天而降，虚空被染成绯红，不吉的塔鸣动，将世界一点点削去，用世界的碎片覆盖“某物”。ハナコ指出，如果约300小时（两周）后“色彩”将遍布基沃托斯，就必须进行早期决战。セイア继续描述梦境：被削去的世界碎片如风暴般吹袭，黑色的光从天而降，世界走向终结，基沃托斯的一切崩坏，化为虚无。",
+      "participants_json": "[\"セイア\", \"サクラコ\", \"ハナコ\", \"ユウカ\", \"ノア\", \"カヨコ\", \"アコ\"]",
+      "event_type": "危机分析",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 9,
+      "source_id": 2,
+      "source_key": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "リン总结，“虚妄的圣所”照此下去约两周后将到达临界点。ハナコ说那样世界将迎来终结。アコ说为了防止这点，需要破坏“虚妄的圣所”。ユウカ说要在两周内完成。リン说“虚妄的圣所”共有六处：阿比多斯沙漠、D.U.近郊的游乐园、千年郊外的封锁区域、三一和格黑娜的边界附近、千年近郊的新城市、以及D.U.的中心地点。アユム说其中D.U.的能量体最大。ヒマリナ现并说事情没那么简单。ヒマリナ守护“虚妄的圣所”的存在，是至今为止基沃托斯出现的所有奇怪现象的浓缩体，包括デカグラマトンの預言者、三一的复制体（ミメシス）、以及之前在千年废墟观测到的“Divi:Sion”。ヒマリナ老师认识他们。アコ总结说，总之打倒各地的守护者就能解决。カヨコ同意，说时间也有限。",
+      "participants_json": "[\"リン\", \"ヒマリ\", \"アコ\", \"カヨコ\", \"アユム\", \"ユウカ(优香/Yuuka/유우카)\", \"ハナコ(花子/Hanako/하나코)\", \"マリナ(真里奈/Marina/마리나)\"]",
+      "event_type": "作战目标确认",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 10,
+      "source_id": 2,
+      "source_key": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "モモカ让大家冷静，指出执行作战需要确保各自治区市民和学生的避难所以及维持治安，并列举了格黑娜、百鬼夜行、红冬、山海经、三一、D.U.。ナギサ说各自治区的治安维持由她们负责，并询ウミカ和セイア。ミカ表示同意，会按照ナギサ和セイア说的做，并说如果老师来帮忙会很高兴，但她们自己也能想办法。セイア说虽然看不到未来，但知道大家携手合作很重要。イオリ说格黑娜自治区的防卫交给她们。チナツ说她们风纪委员负责学生的避难和护卫。セナ说她们救急医学部也来帮忙，这样风纪委员长也能安心作战，并开玩笑让チナツ回救急医学部。トモエ表示明白并去准备。マリナ说红冬的同志交给她们。カホ说百鬼夜行自治区交给她们。チセ和ツバキ表示同意。シズコ说大家的避难和救护由她们祭典运营委员会负责。ウミカ说正好社长有借用的建筑，并感到兴奋，随后道歉说不谨慎。サヤ、シュン、ココナ表示负责梅花园。ルミ说如果避难场所和粮食不够就找她们玄武商会，玄龙门也不会沉默。キリノ说D.U.区域的避难交给她们。",
+      "participants_json": "[\"モモカ\", \"ナギサ\", \"ミカ\", \"セイア\", \"イオリ\", \"チナツ\", \"セナ\", \"カホ\", \"チセ\", \"ツバキ\", \"シズコ\", \"ウミカ\", \"ルミ\", \"キリノ\", \"トモエ\", \"マリナ\", \"サヤ\", \"シュン\", \"ココナ\"]",
+      "event_type": "任务分配与承诺",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 11,
+      "source_id": 3,
+      "source_key": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "segment_index": 1,
+      "text": "ヒマリナ明守护者相关信息，众人讨论治安维持与避难安排",
+      "participants_json": "[\"ヒマリ\", \"アコ\", \"カヨコ\", \"モモカ\", \"ナギサ\", \"ミカ\", \"セイア\", \"イオリ\", \"チナツ\", \"セナ\", \"トモエ\", \"マリナ\", \"カホ\", \"チセ\", \"ツバキ\", \"シズコ\", \"ウミカ\", \"サヤ\", \"シュン\", \"ココナ\", \"ルミ\", \"キリノ\"]",
+      "event_type": "讨论",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 12,
+      "source_id": 4,
+      "source_key": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "春香、睦月和爱露注意到天空异常，爱露催促大家行动，表示现在老师和佳代子正在努力，她们必须做自己能做的事。春香表示会跟随爱露，睦月称赞关键时刻的爱露很帅。",
+      "participants_json": "[\"ハルカ / 春香 / Haruka / 하루카\", \"ムツキ / 睦月 / Mutsuki / 무츠키\", \"アル / 爱露 / Aru / 아루\", \"カヨコ(佳代子/Kayoko/카요코)\"]",
+      "event_type": "对话与决心",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 13,
+      "source_id": 4,
+      "source_key": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "时在远方发现不自然的光，数据上无法测量位置，决定为防万一进行调查。",
+      "participants_json": "[\"トキ / 时 / Toki / 토키\"]",
+      "event_type": "观察与决策",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 14,
+      "source_id": 4,
+      "source_key": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "日奈询问状况，宫子报告圣所再次出现。美游担心老师。日奈下令准备应对敌人出现。咲和宫子表示了解。",
+      "participants_json": "[\"ヒナ / 日奈 / Hina / 히나\", \"ミヤコ / 宫子 / Miyako / 미야코\", \"ミユ / 美游 / Miyu / 미유\", \"サキ / 咲 / Saki / 사키\"]",
+      "event_type": "状况报告与部署",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 15,
+      "source_id": 4,
+      "source_key": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "优香向日鞠确认是否真的能阻止。日鞠努力后表示自己也无能为力。此时リオ出现，利用“多次元解释”的抑制功能强制停止了乌图纳皮什提姆，但只是拖延。日鞠指出只要破坏命令中继“终端”就能解除状态，但这只是权宜之计。リオ向日鞠道歉，日鞠表示虽然仍不喜欢リオ，但这次多亏了她。",
+      "participants_json": "[\"ユウカ / 优香 / Yuuka / 유우카\", \"ヒマリ / 日鞠 / Himari / 히마리\", \"リオ\"]",
+      "event_type": "技术对抗与计划制定",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 16,
+      "source_id": 4,
+      "source_key": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "千寻、真纪、小玉、晴和响讨论精确探测需要“方舟”设计图。晴认为需要工程师部的力量。",
+      "participants_json": "[\"チヒロ / 千寻 / Chihiro / 치히로\", \"マキ / 真纪 / Maki / 마키\", \"コタマ / 小玉 / Kotama / 코타마\", \"ハレ / 晴 / Hare / 하레\", \"ヒビキ / 响 / Hibiki / 히비키\", \"コトリ / 琴里 / Kotori / 코토리\", \"ウタハ / 歌原 / Utaha / 우타하\"]",
+      "event_type": "技术分析与定位",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 17,
+      "source_id": 4,
+      "source_key": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "日和、纱织、美咲、风纪委员、伊织和白子等人发言。白子调整呼吸，表示还能继续。",
+      "participants_json": "[\"ヒヨリ / 日和 / Hiyori / 히요리\", \"サオリ / 纱织 / Saori / 사오리\", \"ミサキ / 美咲 / Misaki / 미사키\", \"風紀委員\", \"イオリ / 伊织 / Iori / 이오리\", \"シロコ / 白子 / Shiroko / 시로코\"]",
+      "event_type": "情绪状态",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 18,
+      "source_id": 4,
+      "source_key": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "响找到了信号源位置。千寻确认位置。日鞠确认位置在“方舟”最下层区域的“沙尔·卡利·沙里回廊”。花子表示已掌握系统全貌，并指出需要同时破坏最东端和最西端的解除装置来使安全系统停止约5秒。",
+      "participants_json": "[\"ヒビキ / 响 / Hibiki / 히비키\", \"ウタハ / 歌原 / Utaha / 우타하\", \"チヒロ / 千寻 / Chihiro / 치히로\", \"ヒマリ / 日鞠 / Himari / 히마리\", \"ハナコ / 花子 / Hanako / 하나코\"]",
+      "event_type": "计划制定与任务分配",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 19,
+      "source_id": 4,
+      "source_key": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "佳代子、晴奈、明里、泉、纯子、风香、星野、野宫、绫音、优香、柚子、桃和绿等人发言。",
+      "participants_json": "[\"カヨコ / 佳代子 / Kayoko / 카요코\", \"ハルナ / 晴奈 / Haruna / 하루나\", \"アカリ / 明里 / Akari / 아카리\", \"イズミ / 泉 / Izumi / 이즈미\", \"ジュンコ / 纯子 / Junko / 준코\", \"フウカ / 风香 / Fuuka / 후우카\", \"ホシノ / 星野 / Hoshino / 호시노\", \"ノノミ / 野宫 / Nonomi / 노노미\", \"アヤネ / 绫音 / Ayane / 아야네\", \"ユウカ / 优香 / Yuuka / 유우카\", \"ユズ / 柚子 / Yuzu / 유즈\", \"モモイ / 桃 / Momoi / 모모이\", \"ミドリ / 绿 / Midori / 미도리\"]",
+      "event_type": "任务分工与出发准备",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 20,
+      "source_id": 4,
+      "source_key": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "segment_index": 0,
+      "text": "日鞠向爱丽丝确认是否真的没问题。爱丽丝表示没问题，并且“光之剑：阿特拉·哈希斯的超新星”也还没坏。日鞠感叹名字变了。爱丽丝希望之后能给日鞠前辈看。日鞠表示或许能帮上忙。爱丽丝告别后出发。",
+      "participants_json": "[\"ヒマリ / 日鞠 / Himari / 히마리\", \"アリス / 爱丽丝 / Aris / 아리스\"]",
+      "event_type": "对话与确认",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 21,
+      "source_id": 5,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "アヤネが、カイザーコーポレーションがアビドス自治区の土地を所有していることを説明する。所有権がまだ移っていないのは、現在本館として使っている校舎と周辺の一部の地域だけだと述べる。ノノミは驚き、どうしてそんな取引が可能だったのか疑問を呈する。ホシノは、学校の資産の議決権は生徒会にあると指摘し、アヤネが取引の主体はアビドスの前生徒会だったと確認する。ノノミは、生徒会は2年前に無くなったはずだと反論するが、アヤネは生徒会が無くなってからは取引は行われていないと説明する。セリカは、前生徒会が学校の土地をカイザーコーポレーションに売ったことに怒りを露わにする。",
+      "participants_json": "[\"ノノミ / 野宫 / Nonomi / 노노미\", \"アヤネ / 绫音 / Ayane / 아야네\", \"ホシノ / 星野 / Hoshino / 호시노\", \"セリカ / 芹香 / Serika / 세리카\"]",
+      "event_type": "情報共有と議論",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 22,
+      "source_id": 5,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "ノノミがホシノもアビドスの生徒会だったと指摘し、アヤネがホシノは最後の生徒会の副会長だったと補足する。ホシノは、自分が生徒会に入った時には生徒会の人たちはほとんど辞めており、在校生も二桁、教職員もいない状態だったと回想する。最後の生徒会は新任の生徒会長とホシノの二人だけであり、何もかもめちゃくちゃだったと語る。シロコは、ホシノが責任を感じる必要はなく、対策委員会ができたのはホシノのおかげだと擁護する。先生は、ホシノがいつも絶対に先陣を切ると述べる。",
+      "participants_json": "[\"ノノミ / 野宫 / Nonomi / 노노미\", \"アヤネ / 绫音 / Ayane / 아야네\", \"ホシノ / 星野 / Hoshino / 호시노\", \"シロコ / 白子 / Shiroko / 시로코\", \"先生 / 老师 / Sensei / 선생님\", \"セリカ / 芹香 / Serika / 세리카\"]",
+      "event_type": "回想と人物評価",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 23,
+      "source_id": 5,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "ノノミが、なぜ前生徒会はカイザーコーポレーションに土地を売ったのかと質問する。シロコは裏で手を組んでいた可能性を示唆するが、アヤネとホシノはそれは違うと否定する。ホシノは、学校のためを思って頑張っていた人たちで、多分最初は借金を返そうとしていたのだろうと推測する。アヤネも同意し、当時すでに学校の借金は膨れ上がっており、土地を売っても借金を減らすには至らなかったと説明する。先生は、アビドスが悪質な罠に嵌められたのかもしれないと指摘する。シロコは、アビドスにお金を貸したのもカイザーコーポレーションだと述べる。",
+      "participants_json": "[\"ノノミ / 野宫 / Nonomi / 노노미\", \"シロコ / 白子 / Shiroko / 시로코\", \"アヤネ / 绫音 / Ayane / 아야네\", \"ホシノ / 星野 / Hoshino / 호시노\", \"先生 / 老师 / Sensei / 선생님\"]",
+      "event_type": "推論と仮説構築",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 24,
+      "source_id": 5,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "セリカは、アビドスがカイザーコーポレーションに弄ばれているだけだと憤慨する。先生は、悪いのは騙されることより騙すことだと諭す。ホシノは、苦しんでいると切羽詰まりやすくなり、人は何でもやってしまうものだと説明する。アヤネが、学校の借金、アビドスの状況、見つけた糸口が全て繋がり始めていると総括する。カイザーコーポレーションの狙いはお金ではなく土地だったと結論付け、ノノミとアヤネは、なぜ荒れ地と砂漠の土地を奪うのかという新たな疑問を提起する。先生は、ヒナから聞いた情報として、アビドスの捨てられた砂漠でカイザーコーポレーションが何かを企んでいると伝える。",
+      "participants_json": "[\"セリカ / 芹香 / Serika / 세리카\", \"先生 / 老师 / Sensei / 선생님\", \"ホシノ / 星野 / Hoshino / 호시노\", \"アヤネ / 绫音 / Ayane / 아야네\", \"ノノミ / 野宫 / Nonomi / 노노미\", \"シロコ / 白子 / Shiroko / 시로코\", \"ヒナ / 日奈 / Hina / 히나\"]",
+      "event_type": "結論と新情報の提示",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 25,
+      "source_id": 6,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 1,
+      "text": "对策委员会的成员们讨论凯撒贷款对阿比多斯学园的陷阱。白子指出凯撒贷款借给学校无法偿还的金额，然后通过利息迫使学校出售土地。绫音推测他们最初以甜言蜜语诱使学校出售看似无用的沙漠和荒地。野宫和星野认为这可能是一个从几十年前就开始的大规模计划。芹香愤怒地指责前学生会的无能。老师安慰芹香，指出错在欺骗者而非受骗者。星野解释陷入困境的人更容易被逼入绝境并做出任何事情。绫音总结所有线索开始连接：凯撒公司在前学生会消失后失去了购买土地的方法，于是雇佣头盔团来夺取学校这“最后的土地”。结论是凯撒公司的目标不是金钱而是土地。",
+      "participants_json": "[\"シロコ / 白子 / Shiroko / 시로코\", \"アヤネ / 绫音 / Ayane / 아야네\", \"ノノミ / 野宫 / Nonomi / 노노미\", \"ホシノ / 星野 / Hoshino / 호시노\", \"セリカ / 芹香 / Serika / 세리카\", \"先生 / 老师 / Sensei / 선생님\"]",
+      "event_type": "讨论分析",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 26,
+      "source_id": 6,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 1,
+      "text": "野宫和绫音对凯撒公司为何想要这片几乎全是荒地和沙漠的土地提出疑问。老师表示有关于沙漠的信息要告知，并转述了从日奈那里听到的情报。日奈（通过老师转述）透露，凯撒公司正在阿比多斯被遗弃的沙漠里策划着什么。白子、星野和野宫对此感到震惊并重复了关键信息。",
+      "participants_json": "[\"ノノミ / 野宫 / Nonomi / 노노미\", \"アヤネ / 绫音 / Ayane / 아야네\", \"先生 / 老师 / Sensei / 선생님\", \"ヒナ / 日奈 / Hina / 히나\", \"シロコ / 白子 / Shiroko / 시로코\", \"ホシノ / 星野 / Hoshino / 호시노\"]",
+      "event_type": "情报分享",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 27,
+      "source_id": 6,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 1,
+      "text": "绫音和白子对格黑娜风纪委员长（日奈）为何知道此事以及为何告诉老师感到困惑。芹香提议停止复杂思考，直接去亲眼确认。白子同意。星野调侃芹香长大了，气氛变得轻松。绫音也同意芹香的意见。",
+      "participants_json": "[\"アヤネ / 绫音 / Ayane / 아야네\", \"シロコ / 白子 / Shiroko / 시로코\", \"セリカ / 芹香 / Serika / 세리카\", \"ホシノ / 星野 / Hoshino / 호시노\", \"先生(老师/Sensei/선생님)\", \"ヒナ(日奈/Hina/히나)\"]",
+      "event_type": "反应与提议",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 28,
+      "source_id": 6,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 1,
+      "text": "出发前，白子私下找老师，表示有事情想商量。白子交给老师一样东西，并解释是从星野前辈的包里找到的。白子认为其含义正如上面所写。她除了老师没给任何人看过或说过，但觉得翻包的事可能已经被星野前辈发现了。白子解释自己行动的原因：星野前辈长时间离开座位以及直到被风纪委员会逼到绝境才出现，这些异常让她很在意，于是翻了包。白子道歉，知道这是坏事，准备好接受老师和星野前辈的责备。老师表示还有很多事情不清楚，提议暂时保密。白子同意，并认为老师也明白，星野前辈在隐瞒着什么。",
+      "participants_json": "[\"シロコ / 白子 / Shiroko / 시로코\", \"先生 / 老师 / Sensei / 선생님\", \"ホシノ(星野/Hoshino/호시노)\"]",
+      "event_type": "私下交谈与证据提交",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 29,
+      "source_id": 7,
+      "source_key": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "segment_index": 0,
+      "text": "ミカ在圣歌队室醒来，感到疼痛和疲惫，观察了房间里的管风琴、乐谱和留声机，并尝试启动留声机但发现它不动。",
+      "participants_json": "[\"ミカ / 未花 / Mika / 미카\"]",
+      "event_type": "苏醒与观察",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 30,
+      "source_id": 7,
+      "source_key": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "segment_index": 0,
+      "text": "ミカ回想起コハル挺身救助她的场景，觉得コハル像童话里的公主，并表达了自己也曾想成为故事主角，但意识到作为“魔女”没有获得幸福结局的资格。",
+      "participants_json": "[\"ミカ / 未花 / Mika / 미카\"]",
+      "event_type": "回忆与反思",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 31,
+      "source_id": 7,
+      "source_key": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "segment_index": 0,
+      "text": "ミカ对サオリ说话，表示自己曾希望サオリ能感受到她所受的痛苦，但也理解サオリ等人同样渴望被拯救和获得幸福。",
+      "participants_json": "[\"ミカ / 未花 / Mika / 미카\"]",
+      "event_type": "独白与理解",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 32,
+      "source_id": 7,
+      "source_key": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "segment_index": 0,
+      "text": "ミカ说她和セイア也是如此。",
+      "participants_json": "[\"ミカ / 未花 / Mika / 미카\"]",
+      "event_type": "陈述与比较",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 33,
+      "source_id": 7,
+      "source_key": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "segment_index": 0,
+      "text": "ミカ说为アリウススクワッド祈祷，希望他们的痛苦终有一天能愈合，能获得重来的机会和未来。",
+      "participants_json": "[\"ミカ / 未花 / Mika / 미카\"]",
+      "event_type": "祈祷",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 34,
+      "source_id": 7,
+      "source_key": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "segment_index": 0,
+      "text": "ミカ宣布原谅アリウススクワッド，认为这比双方公平地不幸是更好的结局。",
+      "participants_json": "[\"ミカ / 未花 / Mika / 미카\"]",
+      "event_type": "宣告与推测",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "confidence": 0.85
+    },
+    {
+      "id": 35,
+      "source_id": 7,
+      "source_key": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "segment_index": 0,
+      "text": "ミカ表示如果相信未来仍有一丝光明，他们可以通过帮助アツコ来拯救自己，并说虽然自己为时已晚，但他们还有时间，而且有老师帮忙应该没问题，祝愿他们前行之路获得幸福。",
+      "participants_json": "[\"ミカ / 未花 / Mika / 미카\"]",
+      "event_type": "劝诫与祝愿",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "confidence": 1.0
+    },
+    {
+      "id": 36,
+      "source_id": 7,
+      "source_key": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "segment_index": 0,
+      "text": "留声机突然开始播放一首“祈求慈悲的歌”，ミカ虽然声称并非特别喜欢这首歌，但还是接受了。随后她语气转变，质问对方为何如此匆忙，并宣告他们无法通过，因为像她们这样的反派是不被允许的。最后她说自己会在这里阻挡。",
+      "participants_json": "[\"ミカ / 未花 / Mika / 미카\"]",
+      "event_type": "事件转折与宣告",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "confidence": 0.85
+    }
+  ],
+  "concepts": [
+    {
+      "id": 1,
+      "canonical_name": "セイア",
+      "description": "通过白昼梦接触了色彩，暂时安全但被侵染，需要支付失去构成本质的代价才能脱离。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "セイア",
+          "language": "canonical"
+        },
+        {
+          "alias": "圣娅",
+          "language": "ja"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "canonical_name": "クズノハ",
+      "description": "向セイア解释了色彩是致死威胁，并说明了セイア的现状和脱离侵染所需的代价。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "クズノハ",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "canonical_name": "色彩",
+      "description": "一种致死威胁，可以通过接触（如白昼梦）侵染他人，被侵染者需要支付失去构成本质的代价才能脱离。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "色彩",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "canonical_name": "黑服",
+      "description": "向众人解释了关于「名もなき神」和「無名の司祭」的神秘遗产，并提及了「箱舟」观测事件及当前计划偏离的情况。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "黑服",
+          "language": "canonical"
+        },
+        {
+          "alias": "黒服",
+          "language": "ja"
+        },
+        {
+          "alias": "Black Suit",
+          "language": "en"
+        },
+        {
+          "alias": "검은 양복",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "canonical_name": "マエストロ",
+      "description": "在场听取黑服解释的参与者之一。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "マエストロ",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "canonical_name": "ゴルコンダ",
+      "description": "在场听取黑服解释的参与者之一。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "ゴルコンダ",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "canonical_name": "ベアトリーチェ",
+      "description": "在场听取黑服解释的参与者之一。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "ベアトリーチェ",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "canonical_name": "名もなき神",
+      "description": "黑服提及的神秘遗产相关概念。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "名もなき神",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "canonical_name": "無名の司祭",
+      "description": "黑服提及的神秘遗产相关概念。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "無名の司祭",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "canonical_name": "箱舟",
+      "description": "黑服提及的观测事件。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "箱舟",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "canonical_name": "アロナ",
+      "description": "询问先生是否又做了梦，并否认自己用枪射击先生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "アロナ",
+          "language": "canonical"
+        },
+        {
+          "alias": "阿罗娜",
+          "language": "zh"
+        },
+        {
+          "alias": "Arona",
+          "language": "en"
+        },
+        {
+          "alias": "아로나",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "canonical_name": "先生",
+      "description": "被アロナ询问是否又做了梦，也是セイア梦中场景的涉及对象。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "先生",
+          "language": "canonical"
+        },
+        {
+          "alias": "老师",
+          "language": "zh"
+        },
+        {
+          "alias": "Sensei",
+          "language": "en"
+        },
+        {
+          "alias": "선생님",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "canonical_name": "リン",
+      "description": "先生提及要去找的人，アロナ担心其是否相信。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "リン",
+          "language": "canonical"
+        },
+        {
+          "alias": "凛",
+          "language": "ja"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "canonical_name": "终焉",
+      "description": "先生询问其发生时间的事件。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "终焉",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "canonical_name": "终焉预知梦",
+      "description": "先生向リン说明的梦的内容，涉及终焉事件。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "终焉预知梦",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "canonical_name": "生徒会",
+      "description": "先生认为需要证据来说服的对象。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "生徒会",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "canonical_name": "ホシノ",
+      "description": "正在寻找シロコ，最初想跳过シャーレ的召集，后被说服去见老师。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "ホシノ",
+          "language": "canonical"
+        },
+        {
+          "alias": "星野",
+          "language": "ja"
+        },
+        {
+          "alias": "Hoshino",
+          "language": "en"
+        },
+        {
+          "alias": "호시노",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "canonical_name": "ノノミ",
+      "description": "与ホシノ一起寻找シロコ，指出情况与以前不同，并说服ホシノ去见老师。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "ノノミ",
+          "language": "canonical"
+        },
+        {
+          "alias": "野乃美",
+          "language": "ja"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "canonical_name": "セリカ",
+      "description": "出现并提议一起去见老师，认为老师一定会帮忙。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "セリカ",
+          "language": "canonical"
+        },
+        {
+          "alias": "芹香",
+          "language": "ja"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "canonical_name": "シロコ",
+      "description": "被ホシノ和ノノミ寻找的人物，当前下落不明。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "シロコ",
+          "language": "canonical"
+        },
+        {
+          "alias": "白子",
+          "language": "ja"
+        },
+        {
+          "alias": "Shiroko",
+          "language": "en"
+        },
+        {
+          "alias": "시로코",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "canonical_name": "夏莱",
+      "description": "在联邦学生会瓦解后，被リン视为唯一的希望的组织或地点。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "夏莱",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "canonical_name": "联邦学生会",
+      "description": "已瓦解的组织，其代行者リン目前处于不信任状态。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "联邦学生会",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "canonical_name": "圣所塔",
+      "description": "已被摧毁的塔，其毁灭导致リン作为代行者处于不信任状态。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "圣所塔",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "canonical_name": "D.U.",
+      "description": "老师目前正在此地与不明士兵交战并进行防卫的地点。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "D.U.",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "canonical_name": "シスターフッド",
+      "description": "拥有记录“色彩”的古书的组织。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "シスターフッド",
+          "language": "canonical"
+        },
+        {
+          "alias": "修女会",
+          "language": "ja"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "canonical_name": "基沃托斯",
+      "description": "约300小时（两周）后可能被“色彩”遍布的世界或地区。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "基沃托斯",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "canonical_name": "虚妄的圣所",
+      "description": "照此下去约两周后将到达临界点的存在，共有六处，分布在基沃托斯各地。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "虚妄的圣所",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "canonical_name": "ヒマリ",
+      "description": "指出守护“虚妄的圣所”的存在是基沃托斯至今所有奇怪现象的浓缩体，包括デカグラマトンの預言者、三一的复制体（ミメシス）、以及“Divi:Sion”。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "ヒマリ",
+          "language": "canonical"
+        },
+        {
+          "alias": "日鞠",
+          "language": "ja"
+        },
+        {
+          "alias": "Himari",
+          "language": "en"
+        },
+        {
+          "alias": "히마리",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "canonical_name": "デカグラマトンの預言者",
+      "description": "被ヒマリ提及，是构成“虚妄的圣所”守护者的基沃托斯奇怪现象之一。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "デカグラマトンの預言者",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "canonical_name": "ミメシス",
+      "description": "被ヒマリ提及，是“三一的复制体”，构成“虚妄的圣所”守护者的基沃托斯奇怪现象之一。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "ミメシス",
+          "language": "canonical"
+        },
+        {
+          "alias": "三一的复制体",
+          "language": "ja"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "canonical_name": "Divi:Sion",
+      "description": "被ヒマリ提及，是之前在千年废墟观测到的存在，构成“虚妄的圣所”守护者的基沃托斯奇怪现象之一。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "Divi:Sion",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "canonical_name": "格黑娜",
+      "description": "一个自治区，其治安维持和防卫工作在本事件中被分配。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "格黑娜",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "canonical_name": "百鬼夜行",
+      "description": "一个自治区，其治安维持工作在本事件中被分配。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "百鬼夜行",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "canonical_name": "红冬",
+      "description": "一个自治区，其同志（人员）的治安维持工作在本事件中被分配。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "红冬",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "canonical_name": "山海经",
+      "description": "一个自治区，其治安维持工作在本事件中被提及需要确保。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "山海经",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "canonical_name": "三一",
+      "description": "一个自治区，其治安维持工作在本事件中被提及需要确保。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "三一",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "canonical_name": "明守护者",
+      "description": "Episode 中提及的组织或群体，与治安维持相关。",
+      "confidence": 0.8,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "明守护者",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "canonical_name": "治安维持",
+      "description": "Episode 中讨论的一个核心主题或任务。",
+      "confidence": 0.9,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "治安维持",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "canonical_name": "避难安排",
+      "description": "Episode 中讨论的一个核心主题或任务。",
+      "confidence": 0.9,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "避难安排",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "canonical_name": "春香",
+      "description": "在天空出现异常时，表示会跟随爱露行动的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "春香",
+          "language": "canonical"
+        },
+        {
+          "alias": "ハルカ",
+          "language": "ja"
+        },
+        {
+          "alias": "Haruka",
+          "language": "en"
+        },
+        {
+          "alias": "하루카",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "canonical_name": "睦月",
+      "description": "在天空出现异常时，称赞关键时刻的爱露很帅的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "睦月",
+          "language": "canonical"
+        },
+        {
+          "alias": "ムツキ",
+          "language": "ja"
+        },
+        {
+          "alias": "Mutsuki",
+          "language": "en"
+        },
+        {
+          "alias": "무츠키",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "canonical_name": "爱露",
+      "description": "在天空出现异常时，催促大家行动，认为现在老师和佳代子正在努力，大家必须做自己能做的事的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "爱露",
+          "language": "canonical"
+        },
+        {
+          "alias": "アル",
+          "language": "ja"
+        },
+        {
+          "alias": "Aru",
+          "language": "en"
+        },
+        {
+          "alias": "아루",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "canonical_name": "佳代子",
+      "description": "在天空出现异常时，被爱露提及正在努力的人物。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "佳代子",
+          "language": "canonical"
+        },
+        {
+          "alias": "カヨコ",
+          "language": "ja"
+        },
+        {
+          "alias": "Kayoko",
+          "language": "en"
+        },
+        {
+          "alias": "카요코",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "canonical_name": "时",
+      "description": "在远方发现无法测量位置的不自然的光，决定为防万一进行调查的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "时",
+          "language": "canonical"
+        },
+        {
+          "alias": "トキ",
+          "language": "ja"
+        },
+        {
+          "alias": "Toki",
+          "language": "en"
+        },
+        {
+          "alias": "토키",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "canonical_name": "日奈",
+      "description": "询问状况，在得知圣所再次出现后下令准备应对敌人出现的指挥者。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "日奈",
+          "language": "canonical"
+        },
+        {
+          "alias": "ヒナ",
+          "language": "ja"
+        },
+        {
+          "alias": "Hina",
+          "language": "en"
+        },
+        {
+          "alias": "히나",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "canonical_name": "宫子",
+      "description": "向日奈报告圣所再次出现，并表示了解日奈命令的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "宫子",
+          "language": "canonical"
+        },
+        {
+          "alias": "ミヤコ",
+          "language": "ja"
+        },
+        {
+          "alias": "Miyako",
+          "language": "en"
+        },
+        {
+          "alias": "미야코",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "canonical_name": "美游",
+      "description": "在圣所再次出现时，担心老师的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "美游",
+          "language": "canonical"
+        },
+        {
+          "alias": "ミユ",
+          "language": "ja"
+        },
+        {
+          "alias": "Miyu",
+          "language": "en"
+        },
+        {
+          "alias": "미유",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "canonical_name": "咲",
+      "description": "表示了解日奈命令的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "咲",
+          "language": "canonical"
+        },
+        {
+          "alias": "サキ",
+          "language": "ja"
+        },
+        {
+          "alias": "Saki",
+          "language": "en"
+        },
+        {
+          "alias": "사키",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "canonical_name": "圣所",
+      "description": "一个再次出现的场所或现象，引发了日奈等人的警戒和应对。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "圣所",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "canonical_name": "优香",
+      "description": "向日鞠确认是否真的能阻止某事的人物。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "优香",
+          "language": "canonical"
+        },
+        {
+          "alias": "ユウカ",
+          "language": "ja"
+        },
+        {
+          "alias": "Yuuka",
+          "language": "en"
+        },
+        {
+          "alias": "유우카",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "canonical_name": "リオ",
+      "description": "出现并利用“多次元解释”的抑制功能强制停止了乌图纳皮什提姆，但只是拖延，并向日鞠道歉的人物。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "リオ",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "canonical_name": "乌图纳皮什提姆",
+      "description": "被リオ利用“多次元解释”的抑制功能强制停止的事物或状态。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "乌图纳皮什提姆",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "canonical_name": "终端",
+      "description": "被日鞠指出的命令中继装置，破坏它可以解除乌图纳皮什提姆的状态，但这只是权宜之计。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "终端",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "canonical_name": "千寻",
+      "description": "参与讨论精确探测需要“方舟”设计图的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "千寻",
+          "language": "canonical"
+        },
+        {
+          "alias": "チヒロ",
+          "language": "ja"
+        },
+        {
+          "alias": "Chihiro",
+          "language": "en"
+        },
+        {
+          "alias": "치히로",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "canonical_name": "真纪",
+      "description": "参与讨论精确探测需要“方舟”设计图的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "真纪",
+          "language": "canonical"
+        },
+        {
+          "alias": "マキ",
+          "language": "ja"
+        },
+        {
+          "alias": "Maki",
+          "language": "en"
+        },
+        {
+          "alias": "마키",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "canonical_name": "小玉",
+      "description": "参与讨论精确探测需要“方舟”设计图的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "小玉",
+          "language": "canonical"
+        },
+        {
+          "alias": "コタマ",
+          "language": "ja"
+        },
+        {
+          "alias": "Kotama",
+          "language": "en"
+        },
+        {
+          "alias": "코타마",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "canonical_name": "晴",
+      "description": "参与讨论精确探测需要“方舟”设计图，并认为需要工程师部力量的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "晴",
+          "language": "canonical"
+        },
+        {
+          "alias": "ハレ",
+          "language": "ja"
+        },
+        {
+          "alias": "Hare",
+          "language": "en"
+        },
+        {
+          "alias": "하레",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "canonical_name": "响",
+      "description": "参与讨论精确探测需要“方舟”设计图的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "响",
+          "language": "canonical"
+        },
+        {
+          "alias": "ヒビキ",
+          "language": "ja"
+        },
+        {
+          "alias": "Hibiki",
+          "language": "en"
+        },
+        {
+          "alias": "히비키",
+          "language": "ko"
+        },
+        {
+          "alias": "ヒビ키",
+          "language": "ja"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "canonical_name": "方舟",
+      "description": "一个设施或项目，其设计图被认为对精确探测是必要的。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "方舟",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "canonical_name": "工程师部",
+      "description": "被晴提及，被认为其力量是获取“方舟”设计图所必需的组织或部门。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "工程师部",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "canonical_name": "花子",
+      "description": "表示已掌握系统全貌，并指出需要同时破坏最东端和最西端的解除装置来使安全系统停止约5秒的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "花子",
+          "language": "canonical"
+        },
+        {
+          "alias": "ハナコ",
+          "language": "ja"
+        },
+        {
+          "alias": "Hanako",
+          "language": "en"
+        },
+        {
+          "alias": "하나코",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "canonical_name": "沙尔·卡利·沙里回廊",
+      "description": "位于“方舟”最下层区域的特定地点，被确认为信号源位置。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "沙尔·卡利·沙里回廊",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "canonical_name": "爱丽丝",
+      "description": "向日鞠保证没问题，并表示自己的武器“光之剑：阿特拉·哈希斯的超新星”也还没坏，希望之后能给日鞠前辈看，然后告别出发的学生。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "爱丽丝",
+          "language": "canonical"
+        },
+        {
+          "alias": "アリス",
+          "language": "ja"
+        },
+        {
+          "alias": "Aris",
+          "language": "en"
+        },
+        {
+          "alias": "아리스",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "canonical_name": "光之剑：阿特拉·哈希斯的超新星",
+      "description": "爱丽丝所持有的武器，据她说还没坏。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "光之剑：阿特拉·哈希斯的超新星",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "canonical_name": "カイザーコーポレーション",
+      "description": "アビドス自治区の土地を所有している企業。前生徒会から土地を購入した。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "カイザーコーポレーション",
+          "language": "canonical"
+        },
+        {
+          "alias": "Kaiser Corporation",
+          "language": "en"
+        },
+        {
+          "alias": "カイザー公司",
+          "language": "zh"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "canonical_name": "アビドス",
+      "description": "自治区であり、学校がある地域。カイザーコーポレーションに土地を売却した。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "アビドス",
+          "language": "canonical"
+        },
+        {
+          "alias": "Abydos",
+          "language": "en"
+        },
+        {
+          "alias": "阿比多斯",
+          "language": "zh"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "canonical_name": "前生徒会",
+      "description": "アビドス高校の過去の生徒会。学校の土地をカイザーコーポレーションに売却した主体。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "前生徒会",
+          "language": "canonical"
+        },
+        {
+          "alias": "前学生会",
+          "language": "zh"
+        },
+        {
+          "alias": "前学生會",
+          "language": "zh"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "canonical_name": "最後の生徒会",
+      "description": "アビドス高校の最後期の生徒会組織。新任の生徒会長とホシノの二人だけで構成され、状況は混乱していた。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "最後の生徒会",
+          "language": "canonical"
+        },
+        {
+          "alias": "最后的学生会",
+          "language": "zh"
+        },
+        {
+          "alias": "最後的學生會",
+          "language": "zh"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "canonical_name": "対策委員会",
+      "description": "アビドス高校に設立された組織。ホシノの働きかけによってできた。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "対策委員会",
+          "language": "canonical"
+        },
+        {
+          "alias": "对策委员会",
+          "language": "zh"
+        },
+        {
+          "alias": "對策委員會",
+          "language": "zh"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "canonical_name": "アビドスの借金",
+      "description": "アビドス高校が抱えていた膨大な負債。土地を売却しても減らすには至らなかった。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "アビドスの借金",
+          "language": "canonical"
+        },
+        {
+          "alias": "阿比多斯的债务",
+          "language": "zh"
+        },
+        {
+          "alias": "阿比多斯的債務",
+          "language": "zh"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "canonical_name": "カイザーコーポレーションの貸付",
+      "description": "カイザーコーポレーションがアビドスにお金を貸した行為。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "カイザーコーポレーションの貸付",
+          "language": "canonical"
+        },
+        {
+          "alias": "凯撒公司的贷款",
+          "language": "zh"
+        },
+        {
+          "alias": "凱撒公司的貸款",
+          "language": "zh"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "canonical_name": "カイザーコーポレーションの目的",
+      "description": "カイザーコーポレーションの狙いはアビドスの土地であり、お金ではないと推測されている。",
+      "confidence": 0.9,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "カイザーコーポレーションの目的",
+          "language": "canonical"
+        },
+        {
+          "alias": "凯撒公司的目的",
+          "language": "zh"
+        },
+        {
+          "alias": "凱撒公司的目的",
+          "language": "zh"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "canonical_name": "アビドスの砂漠",
+      "description": "アビドス自治区にある捨てられた砂漠地帯。カイザーコーポレーションが何かを企んでいる場所。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "アビドスの砂漠",
+          "language": "canonical"
+        },
+        {
+          "alias": "阿比多斯的沙漠",
+          "language": "zh"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "canonical_name": "凯撒贷款",
+      "description": "一个向阿比多斯学园提供贷款的公司，其贷款策略被对策委员会成员分析为一种陷阱，旨在通过无法偿还的金额和高额利息迫使学校出售土地。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "凯撒贷款",
+          "language": "canonical"
+        },
+        {
+          "alias": "凯撒公司",
+          "language": "zh"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "canonical_name": "阿比多斯学园",
+      "description": "一所陷入财务困境的学校，因前学生会的决策而背负了来自凯撒贷款的巨额债务，面临被迫出售土地的风险。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "阿比多斯学园",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "canonical_name": "头盔团",
+      "description": "被凯撒公司雇佣的组织，其目的是为了夺取阿比多斯学园的土地。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "头盔团",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "canonical_name": "阿比多斯沙漠",
+      "description": "阿比多斯地区被遗弃的沙漠地带，据日奈的情报，凯撒公司正在此地策划着某些事情。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "阿比多斯沙漠",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "canonical_name": "格黑娜风纪委员长",
+      "description": "指日奈，其身份是格黑娜学园的风纪委员长，她向老师提供了关于凯撒公司的情报，这引起了绫音和白子的困惑。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "格黑娜风纪委员长",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "canonical_name": "ミカ",
+      "description": "在圣歌队室醒来，感到疼痛和疲惫，观察了房间里的管风琴、乐谱和留声机，并尝试启动留声机但发现它不动。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "ミカ",
+          "language": "canonical"
+        },
+        {
+          "alias": "未花",
+          "language": "zh"
+        },
+        {
+          "alias": "Mika",
+          "language": "en"
+        },
+        {
+          "alias": "미카",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "canonical_name": "圣歌队室",
+      "description": "ミカ在其中醒来的房间，里面有管风琴、乐谱和留声机。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "圣歌队室",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "canonical_name": "コハル",
+      "description": "挺身救助了ミカ的人，被ミカ觉得像童话里的公主。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "コハル",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "canonical_name": "魔女",
+      "description": "ミカ对自己的认知，认为自己作为“魔女”没有获得幸福结局的资格。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "魔女",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "canonical_name": "サオリ",
+      "description": "ミカ对话的对象，ミカ曾希望她能感受到自己受的痛苦，但也理解她同样渴望被拯救和获得幸福。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "サオリ",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "canonical_name": "アリウススクワッド",
+      "description": "ミカ为其祈祷的对象，ミカ希望他们的痛苦能愈合，能获得重来的机会和未来。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "アリウススクワッド",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "canonical_name": "アツコ",
+      "description": "ミカ提到的人物，ミカ认为可以通过帮助アツコ来拯救自己。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "アツコ",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "canonical_name": "祈求慈悲的歌",
+      "description": "留声机突然开始播放的一首歌，ミカ声称并非特别喜欢但还是接受了。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "祈求慈悲的歌",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "canonical_name": "反派",
+      "description": "ミカ对自己的定位，宣告像她们这样的反派是不被允许通过的。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "反派",
+          "language": "canonical"
+        }
+      ]
+    }
+  ]
+}

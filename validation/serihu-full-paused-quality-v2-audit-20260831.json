@@ -1,0 +1,1959 @@
+{
+  "database": "C:\\Users\\Admin\\PycharmProjects\\PythonProject\\validation\\serihu-full-safeparallel-candidate-20260831.db",
+  "counts": {
+    "sources": 80,
+    "episodes": 567,
+    "concepts": 807,
+    "associations": 3366
+  },
+  "embedding_blob_lengths": {
+    "episode": [
+      4096
+    ],
+    "concept": [
+      4096
+    ],
+    "paragraph": []
+  },
+  "integrity": {
+    "schema_version": 8,
+    "expected_schema_version": 8,
+    "sqlite": "ok",
+    "foreign_key_issues": [],
+    "orphan_association_ids": [],
+    "concepts_without_episode_links": [],
+    "embedding_issues": [],
+    "empty_content_issues": [],
+    "json_payload_issues": [],
+    "fts_count_issues": [],
+    "sources_without_episodes": [],
+    "reference_coverage_issues": [],
+    "explicit_evidence_boundary_issues": [],
+    "explicit_evidence_mapping_ambiguities": [],
+    "association_generation_issues": [],
+    "noncompleted_runs": [
+      {
+        "id": 2,
+        "status": "running"
+      }
+    ],
+    "noncompleted_tasks": [
+      {
+        "id": 99,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 0,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 100,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 1,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 101,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 2,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 102,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 3,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 103,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 4,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 104,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 5,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 105,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 6,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 106,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 7,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 107,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 8,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 108,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 9,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 109,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 10,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 110,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 11,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      },
+      {
+        "id": 111,
+        "run_id": 2,
+        "source_key": "主线剧情_最終編_第3章.txt",
+        "segment_index": 12,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      }
+    ]
+  },
+  "segment_reconciliation": null,
+  "tasks": [
+    {
+      "stage": "pass1",
+      "status": "completed",
+      "count": 80
+    },
+    {
+      "stage": "pass1",
+      "status": "running",
+      "count": 13
+    },
+    {
+      "stage": "pass2",
+      "status": "completed",
+      "count": 18
+    }
+  ],
+  "episodes_per_source": {
+    "sources_with_episodes": 80,
+    "minimum": 1,
+    "mean": 7.09,
+    "maximum": 10,
+    "counts": null
+  },
+  "association_types": {
+    "semantic": 2908,
+    "temporal": 273,
+    "interpersonal": 22,
+    "co_occurrence": 74,
+    "identity": 75,
+    "causal": 14
+  },
+  "quality": {
+    "concept_alias_collisions": [
+      {
+        "normalized_alias": "airi",
+        "aliases": [
+          "Airi"
+        ],
+        "active_concept_ids": [
+          625,
+          632
+        ]
+      },
+      {
+        "normalized_alias": "ako",
+        "aliases": [
+          "Ako"
+        ],
+        "active_concept_ids": [
+          286,
+          775
+        ]
+      },
+      {
+        "normalized_alias": "aoi",
+        "aliases": [
+          "Aoi"
+        ],
+        "active_concept_ids": [
+          78,
+          644
+        ]
+      },
+      {
+        "normalized_alias": "aris",
+        "aliases": [
+          "Aris"
+        ],
+        "active_concept_ids": [
+          73,
+          781
+        ]
+      },
+      {
+        "normalized_alias": "aru",
+        "aliases": [
+          "Aru"
+        ],
+        "active_concept_ids": [
+          292,
+          754
+        ]
+      },
+      {
+        "normalized_alias": "atsuko",
+        "aliases": [
+          "Atsuko"
+        ],
+        "active_concept_ids": [
+          121,
+          622
+        ]
+      },
+      {
+        "normalized_alias": "ayumu",
+        "aliases": [
+          "Ayumu"
+        ],
+        "active_concept_ids": [
+          343,
+          748
+        ]
+      },
+      {
+        "normalized_alias": "azusa",
+        "aliases": [
+          "Azusa"
+        ],
+        "active_concept_ids": [
+          70,
+          612,
+          626
+        ]
+      },
+      {
+        "normalized_alias": "beatrice",
+        "aliases": [
+          "Beatrice"
+        ],
+        "active_concept_ids": [
+          32,
+          641
+        ]
+      },
+      {
+        "normalized_alias": "cherino",
+        "aliases": [
+          "Cherino"
+        ],
+        "active_concept_ids": [
+          314,
+          760
+        ]
+      },
+      {
+        "normalized_alias": "craft chamber",
+        "aliases": [
+          "Craft Chamber"
+        ],
+        "active_concept_ids": [
+          677,
+          684
+        ]
+      },
+      {
+        "normalized_alias": "diving club",
+        "aliases": [
+          "Diving Club"
+        ],
+        "active_concept_ids": [
+          156,
+          210
+        ]
+      },
+      {
+        "normalized_alias": "eimi",
+        "aliases": [
+          "Eimi"
+        ],
+        "active_concept_ids": [
+          225,
+          765
+        ]
+      },
+      {
+        "normalized_alias": "fox小队",
+        "aliases": [
+          "FOX小队"
+        ],
+        "active_concept_ids": [
+          189,
+          503
+        ]
+      },
+      {
+        "normalized_alias": "general",
+        "aliases": [
+          "General"
+        ],
+        "active_concept_ids": [
+          660,
+          670
+        ]
+      },
+      {
+        "normalized_alias": "hanako",
+        "aliases": [
+          "Hanako"
+        ],
+        "active_concept_ids": [
+          621,
+          627
+        ]
+      },
+      {
+        "normalized_alias": "hifumi",
+        "aliases": [
+          "Hifumi"
+        ],
+        "active_concept_ids": [
+          69,
+          613,
+          628
+        ]
+      },
+      {
+        "normalized_alias": "hina",
+        "aliases": [
+          "Hina"
+        ],
+        "active_concept_ids": [
+          71,
+          774
+        ]
+      },
+      {
+        "normalized_alias": "hoshino",
+        "aliases": [
+          "Hoshino"
+        ],
+        "active_concept_ids": [
+          63,
+          752
+        ]
+      },
+      {
+        "normalized_alias": "ichika",
+        "aliases": [
+          "Ichika"
+        ],
+        "active_concept_ids": [
+          617,
+          634
+        ]
+      },
+      {
+        "normalized_alias": "iori",
+        "aliases": [
+          "Iori"
+        ],
+        "active_concept_ids": [
+          287,
+          776
+        ]
+      },
+      {
+        "normalized_alias": "iroha",
+        "aliases": [
+          "Iroha"
+        ],
+        "active_concept_ids": [
+          290,
+          741
+        ]
+      },
+      {
+        "normalized_alias": "kaya",
+        "aliases": [
+          "Kaya"
+        ],
+        "active_concept_ids": [
+          57,
+          640,
+          655
+        ]
+      },
+      {
+        "normalized_alias": "kayoko",
+        "aliases": [
+          "Kayoko"
+        ],
+        "active_concept_ids": [
+          291,
+          325,
+          753
+        ]
+      },
+      {
+        "normalized_alias": "kisaki",
+        "aliases": [
+          "Kisaki"
+        ],
+        "active_concept_ids": [
+          330,
+          756
+        ]
+      },
+      {
+        "normalized_alias": "kotori",
+        "aliases": [
+          "Kotori"
+        ],
+        "active_concept_ids": [
+          309,
+          780
+        ]
+      },
+      {
+        "normalized_alias": "koyuki",
+        "aliases": [
+          "Koyuki"
+        ],
+        "active_concept_ids": [
+          722,
+          725
+        ]
+      },
+      {
+        "normalized_alias": "makoto",
+        "aliases": [
+          "Makoto"
+        ],
+        "active_concept_ids": [
+          100,
+          740
+        ]
+      },
+      {
+        "normalized_alias": "mika",
+        "aliases": [
+          "Mika"
+        ],
+        "active_concept_ids": [
+          67,
+          610
+        ]
+      },
+      {
+        "normalized_alias": "minori",
+        "aliases": [
+          "Minori"
+        ],
+        "active_concept_ids": [
+          321,
+          763
+        ]
+      },
+      {
+        "normalized_alias": "misaki",
+        "aliases": [
+          "Misaki"
+        ],
+        "active_concept_ids": [
+          262,
+          719
+        ]
+      },
+      {
+        "normalized_alias": "momoka",
+        "aliases": [
+          "Momoka"
+        ],
+        "active_concept_ids": [
+          344,
+          749
+        ]
+      },
+      {
+        "normalized_alias": "nagisa",
+        "aliases": [
+          "Nagisa"
+        ],
+        "active_concept_ids": [
+          232,
+          784
+        ]
+      },
+      {
+        "normalized_alias": "natsu",
+        "aliases": [
+          "Natsu"
+        ],
+        "active_concept_ids": [
+          624,
+          630
+        ]
+      },
+      {
+        "normalized_alias": "noa",
+        "aliases": [
+          "Noa"
+        ],
+        "active_concept_ids": [
+          215,
+          726
+        ]
+      },
+      {
+        "normalized_alias": "nodoka",
+        "aliases": [
+          "Nodoka"
+        ],
+        "active_concept_ids": [
+          318,
+          762
+        ]
+      },
+      {
+        "normalized_alias": "nonomi",
+        "aliases": [
+          "Nonomi"
+        ],
+        "active_concept_ids": [
+          705,
+          706
+        ]
+      },
+      {
+        "normalized_alias": "orwell",
+        "aliases": [
+          "Orwell"
+        ],
+        "active_concept_ids": [
+          145,
+          518
+        ]
+      },
+      {
+        "normalized_alias": "perorodzilla",
+        "aliases": [
+          "Perorodzilla"
+        ],
+        "active_concept_ids": [
+          601,
+          611
+        ]
+      },
+      {
+        "normalized_alias": "president",
+        "aliases": [
+          "President"
+        ],
+        "active_concept_ids": [
+          659,
+          671
+        ]
+      },
+      {
+        "normalized_alias": "rin",
+        "aliases": [
+          "Rin"
+        ],
+        "active_concept_ids": [
+          77,
+          590,
+          643,
+          678,
+          683,
+          747
+        ]
+      },
+      {
+        "normalized_alias": "rumi",
+        "aliases": [
+          "Rumi"
+        ],
+        "active_concept_ids": [
+          333,
+          757
+        ]
+      },
+      {
+        "normalized_alias": "sanctum tower",
+        "aliases": [
+          "Sanctum Tower"
+        ],
+        "active_concept_ids": [
+          167,
+          674
+        ]
+      },
+      {
+        "normalized_alias": "saya",
+        "aliases": [
+          "Saya"
+        ],
+        "active_concept_ids": [
+          334,
+          758
+        ]
+      },
+      {
+        "normalized_alias": "schale",
+        "aliases": [
+          "Schale"
+        ],
+        "active_concept_ids": [
+          17,
+          604
+        ]
+      },
+      {
+        "normalized_alias": "seia",
+        "aliases": [
+          "Seia"
+        ],
+        "active_concept_ids": [
+          233,
+          581,
+          785
+        ]
+      },
+      {
+        "normalized_alias": "sensei",
+        "aliases": [
+          "Sensei"
+        ],
+        "active_concept_ids": [
+          18,
+          586,
+          736
+        ]
+      },
+      {
+        "normalized_alias": "tea party",
+        "aliases": [
+          "Tea Party"
+        ],
+        "active_concept_ids": [
+          38,
+          620
+        ]
+      },
+      {
+        "normalized_alias": "tsurugi",
+        "aliases": [
+          "Tsurugi"
+        ],
+        "active_concept_ids": [
+          708,
+          766
+        ]
+      },
+      {
+        "normalized_alias": "utaha",
+        "aliases": [
+          "Utaha"
+        ],
+        "active_concept_ids": [
+          311,
+          716
+        ]
+      },
+      {
+        "normalized_alias": "yuzu",
+        "aliases": [
+          "Yuzu"
+        ],
+        "active_concept_ids": [
+          219,
+          778
+        ]
+      },
+      {
+        "normalized_alias": "アイランド",
+        "aliases": [
+          "アイランド"
+        ],
+        "active_concept_ids": [
+          153,
+          204
+        ]
+      },
+      {
+        "normalized_alias": "アコ",
+        "aliases": [
+          "アコ"
+        ],
+        "active_concept_ids": [
+          286,
+          775
+        ]
+      },
+      {
+        "normalized_alias": "アリス",
+        "aliases": [
+          "アリス"
+        ],
+        "active_concept_ids": [
+          73,
+          781
+        ]
+      },
+      {
+        "normalized_alias": "アル",
+        "aliases": [
+          "アル"
+        ],
+        "active_concept_ids": [
+          292,
+          754
+        ]
+      },
+      {
+        "normalized_alias": "イオリ",
+        "aliases": [
+          "イオリ"
+        ],
+        "active_concept_ids": [
+          287,
+          776
+        ]
+      },
+      {
+        "normalized_alias": "イロハ",
+        "aliases": [
+          "イロハ"
+        ],
+        "active_concept_ids": [
+          290,
+          741
+        ]
+      },
+      {
+        "normalized_alias": "ウタハ",
+        "aliases": [
+          "ウタハ"
+        ],
+        "active_concept_ids": [
+          311,
+          716
+        ]
+      },
+      {
+        "normalized_alias": "エイミ",
+        "aliases": [
+          "エイミ"
+        ],
+        "active_concept_ids": [
+          225,
+          765
+        ]
+      },
+      {
+        "normalized_alias": "オリュンポス号",
+        "aliases": [
+          "オリュンポス号"
+        ],
+        "active_concept_ids": [
+          154,
+          205
+        ]
+      },
+      {
+        "normalized_alias": "カヤ",
+        "aliases": [
+          "カヤ"
+        ],
+        "active_concept_ids": [
+          640,
+          655
+        ]
+      },
+      {
+        "normalized_alias": "カヨコ",
+        "aliases": [
+          "カヨコ"
+        ],
+        "active_concept_ids": [
+          291,
+          753
+        ]
+      },
+      {
+        "normalized_alias": "クズノハ",
+        "aliases": [
+          "クズノハ"
+        ],
+        "active_concept_ids": [
+          704,
+          737
+        ]
+      },
+      {
+        "normalized_alias": "コトリ",
+        "aliases": [
+          "コトリ"
+        ],
+        "active_concept_ids": [
+          309,
+          780
+        ]
+      },
+      {
+        "normalized_alias": "ジェネラル",
+        "aliases": [
+          "ジェネラル"
+        ],
+        "active_concept_ids": [
+          660,
+          670
+        ]
+      },
+      {
+        "normalized_alias": "セイア",
+        "aliases": [
+          "セイア"
+        ],
+        "active_concept_ids": [
+          581,
+          785
+        ]
+      },
+      {
+        "normalized_alias": "ダイビング部",
+        "aliases": [
+          "ダイビング部"
+        ],
+        "active_concept_ids": [
+          156,
+          210
+        ]
+      },
+      {
+        "normalized_alias": "ツルギ",
+        "aliases": [
+          "ツルギ"
+        ],
+        "active_concept_ids": [
+          708,
+          766
+        ]
+      },
+      {
+        "normalized_alias": "ナギサ",
+        "aliases": [
+          "ナギサ"
+        ],
+        "active_concept_ids": [
+          232,
+          784
+        ]
+      },
+      {
+        "normalized_alias": "ノア",
+        "aliases": [
+          "ノア"
+        ],
+        "active_concept_ids": [
+          215,
+          726
+        ]
+      },
+      {
+        "normalized_alias": "ヒナ",
+        "aliases": [
+          "ヒナ"
+        ],
+        "active_concept_ids": [
+          71,
+          774
+        ]
+      },
+      {
+        "normalized_alias": "ヒフミ",
+        "aliases": [
+          "ヒフミ"
+        ],
+        "active_concept_ids": [
+          69,
+          628
+        ]
+      },
+      {
+        "normalized_alias": "プレジデント",
+        "aliases": [
+          "プレジデント"
+        ],
+        "active_concept_ids": [
+          659,
+          671
+        ]
+      },
+      {
+        "normalized_alias": "ベアトリーチェ",
+        "aliases": [
+          "ベアトリーチェ"
+        ],
+        "active_concept_ids": [
+          32,
+          641
+        ]
+      },
+      {
+        "normalized_alias": "ホシノ",
+        "aliases": [
+          "ホシノ"
+        ],
+        "active_concept_ids": [
+          63,
+          752
+        ]
+      },
+      {
+        "normalized_alias": "マコト",
+        "aliases": [
+          "マコト"
+        ],
+        "active_concept_ids": [
+          100,
+          740
+        ]
+      },
+      {
+        "normalized_alias": "ミスター・オーウェル",
+        "aliases": [
+          "ミスター・オーウェル"
+        ],
+        "active_concept_ids": [
+          133,
+          145
+        ]
+      },
+      {
+        "normalized_alias": "ユズ",
+        "aliases": [
+          "ユズ"
+        ],
+        "active_concept_ids": [
+          219,
+          778
+        ]
+      },
+      {
+        "normalized_alias": "リン",
+        "aliases": [
+          "リン"
+        ],
+        "active_concept_ids": [
+          77,
+          590,
+          643,
+          678,
+          747
+        ]
+      },
+      {
+        "normalized_alias": "七度ユキノ",
+        "aliases": [
+          "七度ユキノ"
+        ],
+        "active_concept_ids": [
+          192,
+          237
+        ]
+      },
+      {
+        "normalized_alias": "亚子",
+        "aliases": [
+          "亚子"
+        ],
+        "active_concept_ids": [
+          286,
+          775
+        ]
+      },
+      {
+        "normalized_alias": "伊织",
+        "aliases": [
+          "伊织"
+        ],
+        "active_concept_ids": [
+          287,
+          776
+        ]
+      },
+      {
+        "normalized_alias": "先生",
+        "aliases": [
+          "先生"
+        ],
+        "active_concept_ids": [
+          18,
+          586,
+          736
+        ]
+      },
+      {
+        "normalized_alias": "扇喜アオイ",
+        "aliases": [
+          "扇喜アオイ"
+        ],
+        "active_concept_ids": [
+          78,
+          644
+        ]
+      },
+      {
+        "normalized_alias": "日奈",
+        "aliases": [
+          "日奈"
+        ],
+        "active_concept_ids": [
+          71,
+          774
+        ]
+      },
+      {
+        "normalized_alias": "时",
+        "aliases": [
+          "时"
+        ],
+        "active_concept_ids": [
+          115,
+          229
+        ]
+      },
+      {
+        "normalized_alias": "明楽カレン",
+        "aliases": [
+          "明楽カレン"
+        ],
+        "active_concept_ids": [
+          180,
+          523
+        ]
+      },
+      {
+        "normalized_alias": "星野",
+        "aliases": [
+          "星野"
+        ],
+        "active_concept_ids": [
+          63,
+          752
+        ]
+      },
+      {
+        "normalized_alias": "林",
+        "aliases": [
+          "林"
+        ],
+        "active_concept_ids": [
+          678,
+          747
+        ]
+      },
+      {
+        "normalized_alias": "柚子",
+        "aliases": [
+          "柚子"
+        ],
+        "active_concept_ids": [
+          219,
+          778
+        ]
+      },
+      {
+        "normalized_alias": "梯昴",
+        "aliases": [
+          "梯昴"
+        ],
+        "active_concept_ids": [
+          357,
+          418
+        ]
+      },
+      {
+        "normalized_alias": "海路みなと",
+        "aliases": [
+          "海路みなと"
+        ],
+        "active_concept_ids": [
+          206,
+          543
+        ]
+      },
+      {
+        "normalized_alias": "渚",
+        "aliases": [
+          "渚"
+        ],
+        "active_concept_ids": [
+          232,
+          784
+        ]
+      },
+      {
+        "normalized_alias": "爱丽丝",
+        "aliases": [
+          "爱丽丝"
+        ],
+        "active_concept_ids": [
+          73,
+          781
+        ]
+      },
+      {
+        "normalized_alias": "白子",
+        "aliases": [
+          "白子"
+        ],
+        "active_concept_ids": [
+          65,
+          436
+        ]
+      },
+      {
+        "normalized_alias": "老师",
+        "aliases": [
+          "老师"
+        ],
+        "active_concept_ids": [
+          18,
+          586
+        ]
+      },
+      {
+        "normalized_alias": "艾米",
+        "aliases": [
+          "艾米"
+        ],
+        "active_concept_ids": [
+          225,
+          765
+        ]
+      },
+      {
+        "normalized_alias": "阿比多斯沙漠",
+        "aliases": [
+          "阿比多斯沙漠"
+        ],
+        "active_concept_ids": [
+          592,
+          750
+        ]
+      },
+      {
+        "normalized_alias": "降旗マユミ",
+        "aliases": [
+          "降旗マユミ"
+        ],
+        "active_concept_ids": [
+          159,
+          179
+        ]
+      },
+      {
+        "normalized_alias": "鬼方カヨコ",
+        "aliases": [
+          "鬼方カヨコ"
+        ],
+        "active_concept_ids": [
+          291,
+          325
+        ]
+      },
+      {
+        "normalized_alias": "鹤城",
+        "aliases": [
+          "鹤城"
+        ],
+        "active_concept_ids": [
+          708,
+          766
+        ]
+      },
+      {
+        "normalized_alias": "나츠",
+        "aliases": [
+          "나츠"
+        ],
+        "active_concept_ids": [
+          624,
+          630
+        ]
+      },
+      {
+        "normalized_alias": "노아",
+        "aliases": [
+          "노아"
+        ],
+        "active_concept_ids": [
+          215,
+          726
+        ]
+      },
+      {
+        "normalized_alias": "선생님",
+        "aliases": [
+          "선생님"
+        ],
+        "active_concept_ids": [
+          586,
+          736
+        ]
+      },
+      {
+        "normalized_alias": "아이리",
+        "aliases": [
+          "아이리"
+        ],
+        "active_concept_ids": [
+          625,
+          632
+        ]
+      },
+      {
+        "normalized_alias": "아즈사",
+        "aliases": [
+          "아즈사"
+        ],
+        "active_concept_ids": [
+          612,
+          626
+        ]
+      },
+      {
+        "normalized_alias": "이치카",
+        "aliases": [
+          "이치카"
+        ],
+        "active_concept_ids": [
+          617,
+          634
+        ]
+      },
+      {
+        "normalized_alias": "코유키",
+        "aliases": [
+          "코유키"
+        ],
+        "active_concept_ids": [
+          722,
+          725
+        ]
+      },
+      {
+        "normalized_alias": "하나코",
+        "aliases": [
+          "하나코"
+        ],
+        "active_concept_ids": [
+          621,
+          627
+        ]
+      },
+      {
+        "normalized_alias": "히후미",
+        "aliases": [
+          "히후미"
+        ],
+        "active_concept_ids": [
+          613,
+          628
+        ]
+      }
+    ],
+    "concept_output_issues": [
+      {
+        "concept_id": 155,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "萨米 / サミー / Sammy"
+      },
+      {
+        "concept_id": 156,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "奥德赛潜水部 / ダイビング部 / Diving Club"
+      },
+      {
+        "concept_id": 157,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "SRT / ORCA小队"
+      },
+      {
+        "concept_id": 158,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "格黑娜复兴委员会 / ゲヘナ再興委員会"
+      },
+      {
+        "concept_id": 417,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "立木舞爱 / 立木マイア"
+      },
+      {
+        "concept_id": 418,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "梯昴 / 梯スバル"
+      },
+      {
+        "concept_id": 581,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "セイア / Seia"
+      },
+      {
+        "concept_id": 582,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "名もなき神 / 无名之神"
+      },
+      {
+        "concept_id": 586,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "老师 / Sensei"
+      },
+      {
+        "concept_id": 590,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "リン / Rin"
+      },
+      {
+        "concept_id": 601,
+        "reason": "model_meta_commentary",
+        "marker": "此处修正",
+        "canonical_name": "佩罗罗奇诺"
+      },
+      {
+        "concept_id": 607,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "樱子 / Sakurako"
+      },
+      {
+        "concept_id": 610,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "未花 / Mika"
+      },
+      {
+        "concept_id": 611,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "佩罗罗吉拉 / Perorodzilla"
+      },
+      {
+        "concept_id": 612,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "梓 / Azusa"
+      },
+      {
+        "concept_id": 613,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "日富美 / Hifumi"
+      },
+      {
+        "concept_id": 617,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "一花 / Ichika"
+      },
+      {
+        "concept_id": 620,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "蒂凡尼 / Tea Party"
+      },
+      {
+        "concept_id": 621,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "花子 / Hanako"
+      },
+      {
+        "concept_id": 622,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "绫子 / Atsuko"
+      },
+      {
+        "concept_id": 624,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "夏 / Natsu"
+      },
+      {
+        "concept_id": 625,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "艾莉 / Airi"
+      },
+      {
+        "concept_id": 626,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "梓 / アズサ / Azusa"
+      },
+      {
+        "concept_id": 627,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "花子 / ハナコ / Hanako"
+      },
+      {
+        "concept_id": 628,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "日富美 / ヒフミ / Hifumi"
+      },
+      {
+        "concept_id": 630,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "夏 / ナツ / Natsu"
+      },
+      {
+        "concept_id": 631,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "和纱 / カズサ / Kazusa"
+      },
+      {
+        "concept_id": 632,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "爱理 / アイリ / Airi"
+      },
+      {
+        "concept_id": 634,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "一花 / イチカ / Ichika"
+      },
+      {
+        "concept_id": 638,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "老师 / シャーレの先生"
+      },
+      {
+        "concept_id": 640,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "卡雅 / カヤ / Kaya"
+      },
+      {
+        "concept_id": 641,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "贝阿特丽切 / ベアトリーチェ / Beatrice"
+      },
+      {
+        "concept_id": 643,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "凛 / リン / Rin"
+      },
+      {
+        "concept_id": 644,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "扇喜葵 / 扇喜アオイ / Aoi"
+      },
+      {
+        "concept_id": 725,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "小雪 / コユキ / Koyuki / 코유키"
+      },
+      {
+        "concept_id": 726,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "诺亚 / ノア / Noa / 노아"
+      },
+      {
+        "concept_id": 736,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "老师 / 先生 / Sensei / 선생님"
+      },
+      {
+        "concept_id": 737,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "空野 / クズノハ"
+      },
+      {
+        "concept_id": 740,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "真琴 / マコト / Makoto / 마코토"
+      },
+      {
+        "concept_id": 741,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "伊吕波 / イロハ / Iroha / 이로하"
+      },
+      {
+        "concept_id": 747,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "林 / リン / Rin"
+      },
+      {
+        "concept_id": 748,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "步 / アユム / Ayumu"
+      },
+      {
+        "concept_id": 749,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "桃香 / モモカ / Momoka"
+      },
+      {
+        "concept_id": 751,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "绫音 / アヤネ / Ayane"
+      },
+      {
+        "concept_id": 752,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "星野 / ホシノ / Hoshino"
+      },
+      {
+        "concept_id": 753,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "佳代子 / カヨコ / Kayoko"
+      },
+      {
+        "concept_id": 754,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "爱露 / アル / Aru"
+      },
+      {
+        "concept_id": 756,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "崎 / キサキ / Kisaki"
+      },
+      {
+        "concept_id": 757,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "流美 / ルミ / Rumi"
+      },
+      {
+        "concept_id": 758,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "纱绫 / サヤ / Saya"
+      },
+      {
+        "concept_id": 760,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "切里诺 / チェリノ / Cherino"
+      },
+      {
+        "concept_id": 761,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "巴 / トモエ / Tomoe"
+      },
+      {
+        "concept_id": 762,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "和香 / ノドカ / Nodoka"
+      },
+      {
+        "concept_id": 763,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "实里 / ミノリ / Minori"
+      },
+      {
+        "concept_id": 765,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "艾米 / エイミ / Eimi"
+      },
+      {
+        "concept_id": 766,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "鹤城 / ツルギ / Tsurugi"
+      },
+      {
+        "concept_id": 767,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "茜 / アカネ / Akane"
+      },
+      {
+        "concept_id": 768,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "花凛 / カリン / Karin"
+      },
+      {
+        "concept_id": 769,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "果穗 / カホ / Kaho"
+      },
+      {
+        "concept_id": 770,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "静子 / シズコ / Shizuko"
+      },
+      {
+        "concept_id": 772,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "海香 / ウミカ / Umika"
+      },
+      {
+        "concept_id": 774,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "日奈 / ヒナ / Hina"
+      },
+      {
+        "concept_id": 775,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "亚子 / アコ / Ako"
+      },
+      {
+        "concept_id": 776,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "伊织 / イオリ / Iori"
+      },
+      {
+        "concept_id": 778,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "柚子 / ユズ / Yuzu"
+      },
+      {
+        "concept_id": 780,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "琴里 / コトリ / Kotori"
+      },
+      {
+        "concept_id": 781,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "爱丽丝 / アリス / Aris"
+      },
+      {
+        "concept_id": 784,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "渚 / ナギサ / Nagisa"
+      },
+      {
+        "concept_id": 785,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "圣亚 / セイア / Seia"
+      }
+    ]
+  },
+  "temporal_cycles": {
+    "00_覆盖范围与版本边界.txt": {
+      "episode_count": 5,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "01_世界观与核心设定.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "02_学院与势力事实.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "03_核心角色事实.txt": {
+      "episode_count": 10,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "04_角色百科与别名.txt": {
+      "episode_count": 27,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "05_角色交流与对话摘要.txt": {
+      "episode_count": 17,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "06_细节问答与别名索引.txt": {
+      "episode_count": 20,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "07_角色关系与组织百科.txt": {
+      "episode_count": 27,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "08_常用角色百科补充.txt": {
+      "episode_count": 23,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt": {
+      "episode_count": 40,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "100_第二部_序章.txt": {
+      "episode_count": 6,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "101_第二部vol0_連邦生徒会編.txt": {
+      "episode_count": 12,
+      "temporal_edge_count": 7,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "102_第二部volex2_ロア追跡編.txt": {
+      "episode_count": 11,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "103_第二部vol1_炎と影編.txt": {
+      "episode_count": 16,
+      "temporal_edge_count": 13,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "104_第二部vol2_オデュッセイア編.txt": {
+      "episode_count": 13,
+      "temporal_edge_count": 4,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "105_第二部_角色与势力.txt": {
+      "episode_count": 14,
+      "temporal_edge_count": 3,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "106_第二部_推测与事实边界.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "107_第二部_关联短篇与活动.txt": {
+      "episode_count": 10,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "10_序章.txt": {
+      "episode_count": 5,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "11_vol1_对策委员会篇.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 4,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "12_格黑娜与千年角色百科扩展.txt": {
+      "episode_count": 39,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "13_其他学园与常用角色百科.txt": {
+      "episode_count": 39,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "14_世界设定与主线细节问答扩展.txt": {
+      "episode_count": 27,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "20_vol2_发条花舞曲篇.txt": {
+      "episode_count": 5,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "30_vol3_伊甸园条约篇.txt": {
+      "episode_count": 6,
+      "temporal_edge_count": 3,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "40_vol4_卡班诺的兔子篇.txt": {
+      "episode_count": 4,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "50_volf_所有奇迹的起点.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "60_vol5_百花缭乱篇.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "70_volex_德卡格拉马顿篇.txt": {
+      "episode_count": 12,
+      "temporal_edge_count": 11,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "80_vol6_過ぎ去りし刻のオラトリオ.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "90_推测与考据.txt": {
+      "episode_count": 8,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "91_时间线与事实边界.txt": {
+      "episode_count": 8,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "92_重要活动事实摘要.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "93_好感剧情使用边界.txt": {
+      "episode_count": 6,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "主线剧情_最終編_第1章.txt": {
+      "episode_count": 50,
+      "temporal_edge_count": 52,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "主线剧情_最終編_第2章.txt": {
+      "episode_count": 43,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "__global__": {
+      "episode_count": 567,
+      "temporal_edge_count": 262,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    }
+  },
+  "negative_associations": 70,
+  "duplicate_episode_pairs": []
+}

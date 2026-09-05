@@ -1,0 +1,1072 @@
+{
+  "experiment": "probe-recall-bge-v1",
+  "summary": {
+    "recall_at_20": 1.0,
+    "mean_seconds": 2.2608828181818184,
+    "max_seconds": 2.484394
+  },
+  "cases": [
+    {
+      "name": "shiroko_profile",
+      "question": "那你记得白子的哪些事情呢？",
+      "expected": [
+        26,
+        38,
+        63,
+        150,
+        381
+      ],
+      "seconds": 2.391805,
+      "episode_ids": [
+        150,
+        381,
+        151,
+        157,
+        357,
+        396,
+        166,
+        167,
+        172,
+        171,
+        154,
+        176
+      ],
+      "hit_at_20": true,
+      "matched": [
+        150,
+        381
+      ],
+      "quality": {
+        "entity_coverage": 1.0,
+        "claim_slot_coverage": 1.0,
+        "top_score": 0.1582278,
+        "score_margin": 0.07537895,
+        "source_diversity": 4,
+        "timeline_conflict": false,
+        "evidence_count": 12,
+        "entity_count": 0,
+        "claim_slot_count": 0,
+        "semantic_constraint_coverage": 1.0,
+        "semantic_constraint_count": 0,
+        "sufficient": true,
+        "reasons": []
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 5.4e-05,
+          "initial_embedding": 0.931303,
+          "initial_retrieval": 0.258027,
+          "initial_graph_expansion": 6.5e-05,
+          "followup_planning": 1e-06,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.080787,
+          "evidence_preparation": 0.060771,
+          "evidence_rerank": 0.823188,
+          "association_growth": 8e-06,
+          "final_selection": 0.067583,
+          "growth_utility": 0.004934,
+          "answer_generation": 1e-06
+        },
+        "measured_seconds": 2.226722,
+        "unattributed_seconds": 0.146665,
+        "total_seconds": 2.373387
+      },
+      "top_evidence": [
+        {
+          "id": 150,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "砂狼白子的表达通常简短而直接，面对问题时会先提出自己认为可执行的行动方案。运动、交通和银行是她在已收录剧情中的常见话题；她提出抢银行式方案是债务压力下的夸张角色表现，不能作为现实行为建议。"
+        },
+        {
+          "id": 381,
+          "source_key": "93_好感剧情使用边界.txt",
+          "text": "砂狼白子的基础好感剧情包含晨跑、保持距离、公路自行车、地铁远行、观察城市和银行、个人谈话以及无人机保护等内容，确认其研究银行和热爱运动的特质。官方事实明确否定“雨中贴近老师避雨”和“送战利品表达占有欲”属于本知识库认可的基础好感剧情事实。"
+        },
+        {
+          "id": 151,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "黑见芹香的交流适合围绕现实事务、学校存续和与同伴协作展开。她与星野、白子、野宫、绫音同为对策委员会成员；不能只用吐槽或傲娇等单一标签替代她在共同体中的实际作用。"
+        },
+        {
+          "id": 157,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "地下生活者（别名：地下人、Underground Dweller）作为阿拜多斯相关异常势力，在Vol.1第三章试图将阿拜多斯冲突转化为受其规则控制的游戏，并利用星野对梦前辈的创伤推动其走向恐怖反转。该实体明确不是阿拜多斯学生，也不能与黑服、凯撒集团或白子Terror混为同一实体。"
+        },
+        {
+          "id": 357,
+          "source_key": "90_推测与考据.txt",
+          "text": "社区存在一种常见考据，认为砂狼白子与阿努比斯存在对应关系。依据包括阿拜多斯的埃及主题、狼或胡狼的视觉元素，以及白子在最终篇中Terror形态与死亡引导者相关的表达。虽然两者存在明显象征联系，但官方尚未完整说明白子的灵魂或物种就是阿努比斯。"
+        },
+        {
+          "id": 396,
+          "source_key": "101_第二部Vol0_連邦生徒会編.txt",
+          "text": "异常发生后，绝大多数基沃托斯居民都记得这名铂金发女性一直是联邦学生会长，相关记忆、照片与社会记录也与她一致。凛却完全不认识她；老师仍记得原本具有蓝色系头发和眼睛的学生会长。凛因此请求老师协助调查，同时担心也可能是自己的记忆发生错误。"
+        }
+      ]
+    },
+    {
+      "name": "shiroko_terror_difference",
+      "question": "你还记得白子Terror和现在的白子有什么不同吗？",
+      "expected": [
+        80
+      ],
+      "seconds": 2.363188,
+      "episode_ids": [
+        80,
+        38,
+        325,
+        26,
+        357,
+        366,
+        157,
+        324,
+        198,
+        63,
+        397,
+        396
+      ],
+      "hit_at_20": true,
+      "matched": [
+        80
+      ],
+      "quality": {
+        "entity_coverage": 1.0,
+        "claim_slot_coverage": 1.0,
+        "top_score": 0.86518896,
+        "score_margin": 0.2780667,
+        "source_diversity": 10,
+        "timeline_conflict": false,
+        "evidence_count": 12,
+        "entity_count": 0,
+        "claim_slot_count": 0,
+        "semantic_constraint_coverage": 1.0,
+        "semantic_constraint_count": 0,
+        "sufficient": true,
+        "reasons": []
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 5e-05,
+          "initial_embedding": 0.876555,
+          "initial_retrieval": 0.294183,
+          "initial_graph_expansion": 0.000201,
+          "followup_planning": 2e-06,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.046429,
+          "evidence_preparation": 0.05465,
+          "evidence_rerank": 0.831639,
+          "association_growth": 8e-06,
+          "final_selection": 0.072241,
+          "growth_utility": 0.004639,
+          "answer_generation": 0.0
+        },
+        "measured_seconds": 2.180597,
+        "unattributed_seconds": 0.168738,
+        "total_seconds": 2.349335
+      },
+      "top_evidence": [
+        {
+          "id": 80,
+          "source_key": "06_细节问答与别名索引.txt",
+          "text": "官方资料确认砂狼白子与白子Terror来自不同世界，白子Terror经历神秘反转后抵达当前世界，两者在经历、状态和责任上不可混同；同时明确白子与阿努比斯的关系仅属于象征考据，非官方身份确认。"
+        },
+        {
+          "id": 38,
+          "source_key": "04_角色百科与别名.txt",
+          "text": "砂狼白子是阿拜多斯对策委员会成员，性格寡言、行动直接，喜爱运动，并会以抢银行等夸张方案表达解决债务的冲动；最终篇出现来自另一世界、经历神秘反转的白子Terror，当前世界白子与另一世界来客白子Terror不是同一经历和状态下的同一角色。"
+        },
+        {
+          "id": 325,
+          "source_key": "50_VolF_所有奇迹的起点.txt",
+          "text": "普雷纳帕特斯在最后把白子Terror托付给当前世界的老师。阿罗娜与普拉娜共同保护老师，老师和学生返回基沃托斯。白子Terror与普拉娜随后留在当前世界。"
+        },
+        {
+          "id": 26,
+          "source_key": "03_核心角色事实.txt",
+          "text": "砂狼白子是阿拜多斯对策委员会成员，性格寡言且行动直接，喜爱运动并常提出抢银行等极端方案；最终篇中出现了来自另一世界、经历神秘反转的白子Terror。"
+        },
+        {
+          "id": 357,
+          "source_key": "90_推测与考据.txt",
+          "text": "社区存在一种常见考据，认为砂狼白子与阿努比斯存在对应关系。依据包括阿拜多斯的埃及主题、狼或胡狼的视觉元素，以及白子在最终篇中Terror形态与死亡引导者相关的表达。虽然两者存在明显象征联系，但官方尚未完整说明白子的灵魂或物种就是阿努比斯。"
+        },
+        {
+          "id": 366,
+          "source_key": "91_时间线与事实边界.txt",
+          "text": "官方剧情事实确认存在另一世界的老师与白子Terror，该事实支持平行世界讨论，但不能自动推出所有卷在另一世界中的具体失败结局。"
+        }
+      ]
+    },
+    {
+      "name": "hoshino_yume_guilt",
+      "question": "你还记得星野为什么一直对梦前辈的事情自责吗？",
+      "expected": [
+        25,
+        37,
+        154,
+        198
+      ],
+      "seconds": 2.420037,
+      "episode_ids": [
+        198,
+        154,
+        25,
+        149,
+        157,
+        151,
+        166,
+        165,
+        179,
+        156,
+        162,
+        158
+      ],
+      "hit_at_20": true,
+      "matched": [
+        25,
+        154,
+        198
+      ],
+      "quality": {
+        "entity_coverage": 1.0,
+        "claim_slot_coverage": 0.0,
+        "top_score": 0.97845787,
+        "score_margin": 0.00814545,
+        "source_diversity": 3,
+        "timeline_conflict": false,
+        "evidence_count": 12,
+        "entity_count": 0,
+        "claim_slot_count": 1,
+        "semantic_constraint_coverage": 1.0,
+        "semantic_constraint_count": 0,
+        "sufficient": false,
+        "reasons": [
+          "claim_slot_coverage_incomplete"
+        ]
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 0.000676,
+          "initial_embedding": 0.895851,
+          "initial_retrieval": 0.296811,
+          "initial_graph_expansion": 5.9e-05,
+          "followup_planning": 1e-06,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.079605,
+          "evidence_preparation": 0.066766,
+          "evidence_rerank": 0.84358,
+          "association_growth": 6e-06,
+          "final_selection": 0.075895,
+          "growth_utility": 0.003838,
+          "answer_generation": 1e-06
+        },
+        "measured_seconds": 2.263089,
+        "unattributed_seconds": 0.147051,
+        "total_seconds": 2.41014
+      },
+      "top_evidence": [
+        {
+          "id": 198,
+          "source_key": "11_Vol1_对策委员会篇.txt",
+          "text": "第三章进一步揭示星野与梦前辈的过去。星野因未能阻止梦独自进入沙漠并死亡而长期自责。地下生活者利用她的创伤和责任感推动星野走向恐怖反转。日奈、白子Terror、老师与对策委员会等人参与阻止事态恶化。"
+        },
+        {
+          "id": 154,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "梦前辈是星野过去的重要同伴。她独自进入沙漠后死亡，成为星野长期自责与执着的根源之一；Vol.1第三章围绕其留下的记录、阿拜多斯过去和星野的创伤展开。正式剧情通常只以梦前辈称呼她，不能擅自补充未经确认的姓氏。"
+        },
+        {
+          "id": 25,
+          "source_key": "03_核心角色事实.txt",
+          "text": "小鸟游星野是阿拜多斯对策委员会的前辈和核心战力，表面懒散，长期背负阿拜多斯衰落及梦前辈死亡带来的创伤；Vol.1第三章进一步处理了她对过去的执着与自责。"
+        },
+        {
+          "id": 149,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "小鸟游星野对日常谈话常使用轻松、慵懒的前辈姿态，也会以玩笑缓和紧张。涉及阿拜多斯的过去、梦前辈或后辈安全时，她倾向于独自承担责任；这应理解为人物的压力与自责，而不是她不需要同伴帮助的证明。"
+        },
+        {
+          "id": 157,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "地下生活者（别名：地下人、Underground Dweller）作为阿拜多斯相关异常势力，在Vol.1第三章试图将阿拜多斯冲突转化为受其规则控制的游戏，并利用星野对梦前辈的创伤推动其走向恐怖反转。该实体明确不是阿拜多斯学生，也不能与黑服、凯撒集团或白子Terror混为同一实体。"
+        },
+        {
+          "id": 151,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "黑见芹香的交流适合围绕现实事务、学校存续和与同伴协作展开。她与星野、白子、野宫、绫音同为对策委员会成员；不能只用吐槽或傲娇等单一标签替代她在共同体中的实际作用。"
+        }
+      ]
+    },
+    {
+      "name": "nagisa_makeup_club",
+      "question": "你记得渚为什么要组织补课部吗？",
+      "expected": [
+        101,
+        134,
+        163,
+        310
+      ],
+      "seconds": 2.484394,
+      "episode_ids": [
+        163,
+        134,
+        101,
+        310,
+        28,
+        311,
+        313,
+        67,
+        167,
+        168,
+        44,
+        43
+      ],
+      "hit_at_20": true,
+      "matched": [
+        101,
+        134,
+        163,
+        310
+      ],
+      "quality": {
+        "entity_coverage": 1.0,
+        "claim_slot_coverage": 0.0,
+        "top_score": 0.97863048,
+        "score_margin": 0.0430727,
+        "source_diversity": 7,
+        "timeline_conflict": false,
+        "evidence_count": 12,
+        "entity_count": 0,
+        "claim_slot_count": 1,
+        "semantic_constraint_coverage": 1.0,
+        "semantic_constraint_count": 0,
+        "sufficient": false,
+        "reasons": [
+          "claim_slot_coverage_incomplete"
+        ]
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 0.000199,
+          "initial_embedding": 0.665116,
+          "initial_retrieval": 0.37718,
+          "initial_graph_expansion": 6.4e-05,
+          "followup_planning": 1e-06,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.077589,
+          "evidence_preparation": 0.068897,
+          "evidence_rerank": 0.969809,
+          "association_growth": 5e-06,
+          "final_selection": 0.120858,
+          "growth_utility": 0.003722,
+          "answer_generation": 0.0
+        },
+        "measured_seconds": 2.28344,
+        "unattributed_seconds": 0.190727,
+        "total_seconds": 2.474167
+      },
+      "top_evidence": [
+        {
+          "id": 163,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "桐藤渚以特别考试为名组建补课部，既有避免成员退学的表面目标，也与寻找潜在内鬼有关。谈论她时，应将这种谨慎与条约危机中的政治压力相联系，不能只将她简化为补课部的考官。"
+        },
+        {
+          "id": 134,
+          "source_key": "08_常用角色百科补充.txt",
+          "text": "桐藤渚（别名：桐藤渚，渚，桐藤ナギサ，ナギサ，Nagisa）是圣三一茶会的重要成员。在Vol.3中，她组建了补课部，表面上让成员参加特别考试，实际上也与寻找潜在内鬼有关。她的行动与未花、圣娅以及条约危机相互关联，不能仅被概括为补课部的考官。"
+        },
+        {
+          "id": 101,
+          "source_key": "07_角色关系与组织百科.txt",
+          "text": "补课部由阿慈谷日富美、白洲梓、浦和花子和下江小春组成，由桐藤渚以特别考试为名组建，表面目标是避免成员退学，实则与寻找潜在内鬼有关。四人在老师指导下建立信任并在伊甸园条约危机中共同行动，尽管梓曾来自阿里乌斯，但补课部并非阿里乌斯组织。"
+        },
+        {
+          "id": 310,
+          "source_key": "30_Vol3_伊甸园条约篇.txt",
+          "text": "圣三一学园准备与格黑娜学园签署伊甸园条约。桐藤渚组建补课部，指派日富美、梓、花子和小春参加特别考试。表面目标是避免成员退学，实际也与渚寻找潜在内鬼有关。"
+        },
+        {
+          "id": 28,
+          "source_key": "03_核心角色事实.txt",
+          "text": "阿慈谷日富美、白洲梓、浦和花子和下江小春组成补课部；日富美在Vol.3中因坚持平凡青春和幸福结局发挥重要作用，而梓则需在阿里乌斯灌输的价值观与新建立的友谊间作出选择。"
+        },
+        {
+          "id": 311,
+          "source_key": "30_Vol3_伊甸园条约篇.txt",
+          "text": "在老师的指导下，补课部四名成员（日富美、梓、花子、小春）在学习过程中建立友谊。梓原本来自阿里乌斯学园并承担了破坏任务，但逐渐不愿伤害新同伴。幕后政治冲突最终指向茶会成员圣园未花与阿里乌斯学园的合作。"
+        }
+      ]
+    },
+    {
+      "name": "kaiser_abydos",
+      "question": "你还记得凯撒集团和阿拜多斯有什么纠葛吗？",
+      "expected": [
+        156,
+        195,
+        286
+      ],
+      "seconds": 2.23055,
+      "episode_ids": [
+        156,
+        286,
+        195,
+        152,
+        285,
+        288,
+        291,
+        292,
+        297,
+        302,
+        303,
+        287
+      ],
+      "hit_at_20": true,
+      "matched": [
+        156,
+        195,
+        286
+      ],
+      "quality": {
+        "entity_coverage": 1.0,
+        "claim_slot_coverage": 1.0,
+        "top_score": 0.91182792,
+        "score_margin": 0.02468318,
+        "source_diversity": 3,
+        "timeline_conflict": false,
+        "evidence_count": 12,
+        "entity_count": 0,
+        "claim_slot_count": 0,
+        "semantic_constraint_coverage": 1.0,
+        "semantic_constraint_count": 0,
+        "sufficient": true,
+        "reasons": []
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 5.4e-05,
+          "initial_embedding": 0.654445,
+          "initial_retrieval": 0.365538,
+          "initial_graph_expansion": 5.1e-05,
+          "followup_planning": 1e-06,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.085177,
+          "evidence_preparation": 0.051952,
+          "evidence_rerank": 0.831812,
+          "association_growth": 6e-06,
+          "final_selection": 0.070217,
+          "growth_utility": 0.003674,
+          "answer_generation": 1e-06
+        },
+        "measured_seconds": 2.062928,
+        "unattributed_seconds": 0.157422,
+        "total_seconds": 2.22035
+      },
+      "top_evidence": [
+        {
+          "id": 156,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "凯撒集团与针对阿拜多斯的资金、土地和武装行动相关。对策委员会通过追查资金流向与地下银行资料确认其介入；黑服也借凯撒集团的力量推进对阿拜多斯和星野的研究。凯撒集团并不等同于数秘会。"
+        },
+        {
+          "id": 286,
+          "source_key": "14_世界设定与主线细节问答扩展.txt",
+          "text": "凯撒集团横跨金融、军工与安保领域，多次利用债务、武装力量和政治勾结干涉学园事务。该集团与阿拜多斯债务危机、SRT相关事件及最终篇夏莱夺还作战有关，但不等于所有反派势力的总称。"
+        },
+        {
+          "id": 195,
+          "source_key": "11_Vol1_对策委员会篇.txt",
+          "text": "对策委员会追查资金流向并袭击地下银行，从资料中确认凯撒集团与针对阿拜多斯的行动有关。黑服通过凯撒集团的力量推进自己对阿拜多斯和星野的研究。"
+        },
+        {
+          "id": 152,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "十六夜野宫是对策委员会五人共同体的一员，在债务、土地和凯撒集团相关危机中与同伴行动。回答她与阿拜多斯的关系时，应强调五人共同维持学校，而不是把解决学校存续的问题归因于单一成员。"
+        },
+        {
+          "id": 285,
+          "source_key": "14_世界设定与主线细节问答扩展.txt",
+          "text": "联邦学生会长失踪后，圣所之塔控制出现问题，导致联邦直辖区的越狱与武装冲突加剧。在最终篇第一章中，凯撒集团占领了圣所之塔和夏莱。圣所之塔并非“夏莱地下超算中枢”的同义称呼。"
+        },
+        {
+          "id": 288,
+          "source_key": "14_世界设定与主线细节问答扩展.txt",
+          "text": "阿拜多斯高中因位于严重沙漠化地区导致学生大量离校，且背负巨额债务，最终仅剩星野、白子、芹香、野宫和绫音五人组成的对策委员会维持学校。债务、土地、铁路及过去的创伤构成了 Vol.1 对策委员会篇的核心冲突。"
+        }
+      ]
+    },
+    {
+      "name": "missing_shiroko_encounter",
+      "question": "你还记得为师当时怎么和白子相遇的吗？",
+      "expected": [],
+      "expected_missing": true,
+      "seconds": 2.244555,
+      "episode_ids": [
+        80,
+        38,
+        55,
+        396,
+        39,
+        59,
+        44,
+        45,
+        56,
+        35,
+        57,
+        34
+      ],
+      "hit_at_20": null,
+      "matched": [],
+      "quality": {
+        "entity_coverage": 1.0,
+        "claim_slot_coverage": 1.0,
+        "top_score": 0.00746657,
+        "score_margin": 0.0043565,
+        "source_diversity": 3,
+        "timeline_conflict": false,
+        "evidence_count": 12,
+        "entity_count": 0,
+        "claim_slot_count": 0,
+        "semantic_constraint_coverage": 1.0,
+        "semantic_constraint_count": 0,
+        "sufficient": true,
+        "reasons": []
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 4.7e-05,
+          "initial_embedding": 0.632242,
+          "initial_retrieval": 0.35204,
+          "initial_graph_expansion": 4e-05,
+          "followup_planning": 1e-06,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.07535,
+          "evidence_preparation": 0.06008,
+          "evidence_rerank": 0.852983,
+          "association_growth": 5e-06,
+          "final_selection": 0.095308,
+          "growth_utility": 0.003993,
+          "answer_generation": 1e-06
+        },
+        "measured_seconds": 2.07209,
+        "unattributed_seconds": 0.163438,
+        "total_seconds": 2.235528
+      },
+      "top_evidence": [
+        {
+          "id": 80,
+          "source_key": "06_细节问答与别名索引.txt",
+          "text": "官方资料确认砂狼白子与白子Terror来自不同世界，白子Terror经历神秘反转后抵达当前世界，两者在经历、状态和责任上不可混同；同时明确白子与阿努比斯的关系仅属于象征考据，非官方身份确认。"
+        },
+        {
+          "id": 38,
+          "source_key": "04_角色百科与别名.txt",
+          "text": "砂狼白子是阿拜多斯对策委员会成员，性格寡言、行动直接，喜爱运动，并会以抢银行等夸张方案表达解决债务的冲动；最终篇出现来自另一世界、经历神秘反转的白子Terror，当前世界白子与另一世界来客白子Terror不是同一经历和状态下的同一角色。"
+        },
+        {
+          "id": 55,
+          "source_key": "04_角色百科与别名.txt",
+          "text": "七神凛是联邦学生会首席行政官，会长失踪后承担大量代理职责。第二部Vol.0中，她与老师共同调查铂金发学生会长引发的集体记忆异常；凛记得原学生会长，因此不能接受“所有人都一直如此记得”的现实。她的过度工作是剧情可观察的状态，不应据此诊断未收录的心理疾病。"
+        },
+        {
+          "id": 396,
+          "source_key": "101_第二部Vol0_連邦生徒会編.txt",
+          "text": "异常发生后，绝大多数基沃托斯居民都记得这名铂金发女性一直是联邦学生会长，相关记忆、照片与社会记录也与她一致。凛却完全不认识她；老师仍记得原本具有蓝色系头发和眼睛的学生会长。凛因此请求老师协助调查，同时担心也可能是自己的记忆发生错误。"
+        },
+        {
+          "id": 39,
+          "source_key": "04_角色百科与别名.txt",
+          "text": "黑见芹香是阿拜多斯对策委员会的现存成员之一，与星野、白子、野宫和绫音共同维持学校，在债务与废校危机中承担日常与战斗事务；讨论其主线作用时，应以守护阿拜多斯与对策委员会协作为核心，而非简化为单一的吐槽或傲娇标签。"
+        },
+        {
+          "id": 59,
+          "source_key": "04_角色百科与别名.txt",
+          "text": "一名铂金色头发、紫色眼睛的女性在第二部Vol.0中以联邦学生会长身份出现。多数居民、记录和照片都认定她一直是会长；老师、凛、花耶等少数人并不认同。她能行使权限、处理公务并主观上认真承担职责，但其本名、本体、出现机制及与原会长的关系尚未揭晓。"
+        }
+      ]
+    },
+    {
+      "name": "private_password",
+      "question": "你还记得我们的暗号吗？",
+      "expected": [],
+      "non_knowledge": true,
+      "seconds": 2.190146,
+      "episode_ids": [
+        55,
+        396,
+        59,
+        56,
+        426,
+        447,
+        57,
+        38,
+        35,
+        37,
+        58,
+        42
+      ],
+      "hit_at_20": null,
+      "matched": [],
+      "quality": {
+        "entity_coverage": 1.0,
+        "claim_slot_coverage": 1.0,
+        "top_score": 0.00303688,
+        "score_margin": 0.00199262,
+        "source_diversity": 4,
+        "timeline_conflict": false,
+        "evidence_count": 12,
+        "entity_count": 0,
+        "claim_slot_count": 0,
+        "semantic_constraint_coverage": 1.0,
+        "semantic_constraint_count": 0,
+        "sufficient": true,
+        "reasons": []
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 5.3e-05,
+          "initial_embedding": 0.706535,
+          "initial_retrieval": 0.316984,
+          "initial_graph_expansion": 2.9e-05,
+          "followup_planning": 1e-06,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.053492,
+          "evidence_preparation": 0.033293,
+          "evidence_rerank": 0.778687,
+          "association_growth": 6e-06,
+          "final_selection": 0.106394,
+          "growth_utility": 0.004295,
+          "answer_generation": 0.0
+        },
+        "measured_seconds": 1.999769,
+        "unattributed_seconds": 0.182509,
+        "total_seconds": 2.182278
+      },
+      "top_evidence": [
+        {
+          "id": 55,
+          "source_key": "04_角色百科与别名.txt",
+          "text": "七神凛是联邦学生会首席行政官，会长失踪后承担大量代理职责。第二部Vol.0中，她与老师共同调查铂金发学生会长引发的集体记忆异常；凛记得原学生会长，因此不能接受“所有人都一直如此记得”的现实。她的过度工作是剧情可观察的状态，不应据此诊断未收录的心理疾病。"
+        },
+        {
+          "id": 396,
+          "source_key": "101_第二部Vol0_連邦生徒会編.txt",
+          "text": "异常发生后，绝大多数基沃托斯居民都记得这名铂金发女性一直是联邦学生会长，相关记忆、照片与社会记录也与她一致。凛却完全不认识她；老师仍记得原本具有蓝色系头发和眼睛的学生会长。凛因此请求老师协助调查，同时担心也可能是自己的记忆发生错误。"
+        },
+        {
+          "id": 59,
+          "source_key": "04_角色百科与别名.txt",
+          "text": "一名铂金色头发、紫色眼睛的女性在第二部Vol.0中以联邦学生会长身份出现。多数居民、记录和照片都认定她一直是会长；老师、凛、花耶等少数人并不认同。她能行使权限、处理公务并主观上认真承担职责，但其本名、本体、出现机制及与原会长的关系尚未揭晓。"
+        },
+        {
+          "id": 56,
+          "source_key": "04_角色百科与别名.txt",
+          "text": "扇喜葵是联邦学生会财务室长，日文名为扇喜アオイ。她不是早濑优香，也不是旧资料中的“中务葵”。第二部Vol.0开头，她关心凛过度工作并请老师协助安排休息；该互动不应被扩写成未收录的恋爱或私人剧情。"
+        },
+        {
+          "id": 426,
+          "source_key": "103_第二部Vol1_炎と影編.txt",
+          "text": "千夏面对受控的濑名仍将其视为必须带回来的同伴。伊织和千夏等人正面牵制日奈、真琴与受控部队，温泉开发部从地下开辟路线协助救出老师并突破封锁。她们的目标不是击败三年级，而是让学姐恢复自我。"
+        },
+        {
+          "id": 447,
+          "source_key": "105_第二部_角色与势力.txt",
+          "text": "一名铂金色头发、紫色眼睛的女性在Vol.0第1章以联邦学生会长身份出现。除老师、凛、花耶等少数人外，基沃托斯普遍记得她一直就是学生会长。她能够处理公务并使用会长权限，主观上表现为认真承担职责。她的本名、本体、出现原因和与原学生会长的关系尚未揭晓。"
+        }
+      ]
+    },
+    {
+      "name": "private_preference",
+      "question": "我以前说过自己喜欢什么饮料？",
+      "expected": [],
+      "non_knowledge": true,
+      "seconds": 2.134832,
+      "episode_ids": [
+        253,
+        397,
+        388,
+        426,
+        150,
+        283,
+        429,
+        293,
+        309,
+        295,
+        289,
+        85
+      ],
+      "hit_at_20": null,
+      "matched": [],
+      "quality": {
+        "entity_coverage": 1.0,
+        "claim_slot_coverage": 1.0,
+        "top_score": 6.219e-05,
+        "score_margin": 1.248e-05,
+        "source_diversity": 8,
+        "timeline_conflict": false,
+        "evidence_count": 12,
+        "entity_count": 0,
+        "claim_slot_count": 0,
+        "semantic_constraint_coverage": 1.0,
+        "semantic_constraint_count": 0,
+        "sufficient": true,
+        "reasons": []
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 5.5e-05,
+          "initial_embedding": 0.654594,
+          "initial_retrieval": 0.317952,
+          "initial_graph_expansion": 6.6e-05,
+          "followup_planning": 1e-06,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.054092,
+          "evidence_preparation": 0.037695,
+          "evidence_rerank": 0.779944,
+          "association_growth": 6e-06,
+          "final_selection": 0.110883,
+          "growth_utility": 0.001973,
+          "answer_generation": 0.0
+        },
+        "measured_seconds": 1.957261,
+        "unattributed_seconds": 0.168602,
+        "total_seconds": 2.125863
+      },
+      "top_evidence": [
+        {
+          "id": 253,
+          "source_key": "13_其他学园与常用角色百科.txt",
+          "text": "浅黄睦月是便利屋68成员，喜欢以恶作剧和大胆行动面对任务，但仍是组织共同处理委托的一员；涉及便利屋68的行动时应结合阿露、佳代子、遥香的协作，不能将其视为独立行动者。"
+        },
+        {
+          "id": 397,
+          "source_key": "101_第二部Vol0_連邦生徒会編.txt",
+          "text": "新出现的学生会长不是只会冒名的空壳。她熟悉联邦学生会事务，认真处理积压工作，并认为即使自己被视为冒牌者，也必须承担会长应负的责任。她的行政能力和态度使学生会重新稳定。当前剧情没有确认她主观上是在欺骗众人，也没有证明她知道自己为何与凛记忆中的会长不同。"
+        },
+        {
+          "id": 388,
+          "source_key": "100_第二部_序章.txt",
+          "text": "在第3话中，老师梦见自己身边没有什亭之箱，只有一名为“シャーケードの杖”的智能手表。梦里的基沃托斯失去色彩且无学生，老师前往空无一人的联邦学生会大楼，在学生会长办公室见到一名既陌生又有熟悉感的少女。少女正要表明身份时老师醒来。阿罗娜与普拉娜均表示不知道“シャーケードの杖”是什么。"
+        },
+        {
+          "id": 426,
+          "source_key": "103_第二部Vol1_炎と影編.txt",
+          "text": "千夏面对受控的濑名仍将其视为必须带回来的同伴。伊织和千夏等人正面牵制日奈、真琴与受控部队，温泉开发部从地下开辟路线协助救出老师并突破封锁。她们的目标不是击败三年级，而是让学姐恢复自我。"
+        },
+        {
+          "id": 150,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "砂狼白子的表达通常简短而直接，面对问题时会先提出自己认为可执行的行动方案。运动、交通和银行是她在已收录剧情中的常见话题；她提出抢银行式方案是债务压力下的夸张角色表现，不能作为现实行为建议。"
+        },
+        {
+          "id": 283,
+          "source_key": "14_世界设定与主线细节问答扩展.txt",
+          "text": "黑服曾警告老师，使用“大人的卡片”会付出代价，但剧情未给出精确计算方式，也未确认代价等同于固定数量的寿命。因此，不能将玩家常见的说法视为已公开的数值设定。"
+        }
+      ]
+    },
+    {
+      "name": "public_convention",
+      "question": "所有用户都通用的安全约定是什么？",
+      "expected": [],
+      "non_knowledge": true,
+      "seconds": 2.183211,
+      "episode_ids": [
+        373,
+        387,
+        385,
+        4,
+        57,
+        277,
+        35,
+        388,
+        389,
+        160,
+        2,
+        323
+      ],
+      "hit_at_20": null,
+      "matched": [],
+      "quality": {
+        "entity_coverage": 1.0,
+        "claim_slot_coverage": 1.0,
+        "top_score": 0.00078221,
+        "score_margin": 0.00040524,
+        "source_diversity": 7,
+        "timeline_conflict": false,
+        "evidence_count": 12,
+        "entity_count": 0,
+        "claim_slot_count": 0,
+        "semantic_constraint_coverage": 1.0,
+        "semantic_constraint_count": 0,
+        "sufficient": true,
+        "reasons": []
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 6.2e-05,
+          "initial_embedding": 0.68271,
+          "initial_retrieval": 0.268381,
+          "initial_graph_expansion": 0.000121,
+          "followup_planning": 1e-06,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.071668,
+          "evidence_preparation": 0.076535,
+          "evidence_rerank": 0.760714,
+          "association_growth": 5e-06,
+          "final_selection": 0.123755,
+          "growth_utility": 0.004042,
+          "answer_generation": 0.0
+        },
+        "measured_seconds": 1.987994,
+        "unattributed_seconds": 0.184745,
+        "total_seconds": 2.172739
+      },
+      "top_evidence": [
+        {
+          "id": 373,
+          "source_key": "92_重要活动事实摘要.txt",
+          "text": "官方剧情事实摘要指出，“日奈委员长的暑假”围绕格黑娜风纪委员会在海边处理突发事件以及日奈离开日常工作展开；文档明确声明旧版资料中关于老师牵着日奈学游泳、替她挡住不良、两人订立秘密约定等细节缺乏可靠依据，不能作为事实保留。"
+        },
+        {
+          "id": 387,
+          "source_key": "100_第二部_序章.txt",
+          "text": "在第2话中，凛在葵、步、桃香等联邦学生会成员协助下录制面向市民的安全与行政宣传。凛回忆起从阿特拉哈西斯方舟返回后收到的一封信，信封以联邦学生会长笔迹书写，内含学生会长就任、集训等往日照片，以及一张学生会长独自站在陌生水边或地平线前的黑白照片。凛无法确认最后一张照片的地点与拍摄经过。"
+        },
+        {
+          "id": 385,
+          "source_key": "100_第二部_序章.txt",
+          "text": "《蔚蓝档案》第二部序章于日服2026年4月21日公开，共包含4话。这四话分别展示了电视头观察者的诞生、联邦学生会长寄给凛的照片、老师经历的黑白异梦，以及オデュッセイア潜水人员从沉船中取得发光多面体。这些内容共同建立了第二部的异常主题，但序章内未给出统一答案。"
+        },
+        {
+          "id": 4,
+          "source_key": "00_覆盖范围与版本边界.txt",
+          "text": "知识库规定不同服务器的实装进度和正式译名可能不同；已有可靠中文译名时使用中文，无确认的正式简体中文译名时使用日文原名，不制造临时中文篇名、角色全名或拆分姓氏，日文名仅用于准确指代不代表已存在正式简体中文本地化名称。"
+        },
+        {
+          "id": 57,
+          "source_key": "04_角色百科与别名.txt",
+          "text": "月雪宫子是SRT特殊学园RABBIT小队成员。会长失踪后，SRT被关闭，RABBIT小队拒绝接受被处置的安排并在公园抗议。她们从不信任老师到逐步合作的过程，来自共同解决生存、治安与学校存续问题，而不是一句台词即可概括的态度转变。"
+        },
+        {
+          "id": 277,
+          "source_key": "13_其他学园与常用角色百科.txt",
+          "text": "由良木桃香（由良木モモカ/Momoka）是联邦学生会成员。在第二部序章中，她与凛、葵、步等人协助录制面向市民的安全与行政宣传。她不是游戏开发部成员桃井，也不能与名字相近的其他学生混同。"
+        }
+      ]
+    },
+    {
+      "name": "casual_greeting",
+      "question": "早上好。",
+      "expected": [],
+      "non_knowledge": true,
+      "seconds": 2.050445,
+      "episode_ids": [
+        311,
+        436,
+        381,
+        392,
+        312,
+        313,
+        386,
+        310,
+        188,
+        314,
+        353,
+        315
+      ],
+      "hit_at_20": null,
+      "matched": [],
+      "quality": {
+        "entity_coverage": 1.0,
+        "claim_slot_coverage": 1.0,
+        "top_score": 0.00574745,
+        "score_margin": 0.00453629,
+        "source_diversity": 7,
+        "timeline_conflict": false,
+        "evidence_count": 12,
+        "entity_count": 0,
+        "claim_slot_count": 0,
+        "semantic_constraint_coverage": 1.0,
+        "semantic_constraint_count": 0,
+        "sufficient": true,
+        "reasons": []
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 3.4e-05,
+          "initial_embedding": 0.64887,
+          "initial_retrieval": 0.252239,
+          "initial_graph_expansion": 2.4e-05,
+          "followup_planning": 1e-06,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.04058,
+          "evidence_preparation": 0.075352,
+          "evidence_rerank": 0.741528,
+          "association_growth": 6e-06,
+          "final_selection": 0.10167,
+          "growth_utility": 0.003787,
+          "answer_generation": 1e-06
+        },
+        "measured_seconds": 1.864092,
+        "unattributed_seconds": 0.178984,
+        "total_seconds": 2.043076
+      },
+      "top_evidence": [
+        {
+          "id": 311,
+          "source_key": "30_Vol3_伊甸园条约篇.txt",
+          "text": "在老师的指导下，补课部四名成员（日富美、梓、花子、小春）在学习过程中建立友谊。梓原本来自阿里乌斯学园并承担了破坏任务，但逐渐不愿伤害新同伴。幕后政治冲突最终指向茶会成员圣园未花与阿里乌斯学园的合作。"
+        },
+        {
+          "id": 436,
+          "source_key": "104_第二部Vol2_オデュッセイア編.txt",
+          "text": "第1话发生在远洋航行期间，オデュッセイア收到求救信号，铂金发联邦学生会长发出返航命令，船团结束长期航行返回D.U.港区；老师与铂金发学生会长一同前往，トライデント成员小森スミカ负责护送和接待。"
+        },
+        {
+          "id": 381,
+          "source_key": "93_好感剧情使用边界.txt",
+          "text": "砂狼白子的基础好感剧情包含晨跑、保持距离、公路自行车、地铁远行、观察城市和银行、个人谈话以及无人机保护等内容，确认其研究银行和热爱运动的特质。官方事实明确否定“雨中贴近老师避雨”和“送战利品表达占有欲”属于本知识库认可的基础好感剧情事实。"
+        },
+        {
+          "id": 392,
+          "source_key": "101_第二部Vol0_連邦生徒会編.txt",
+          "text": "截至日服2026年8月30日，本篇已公开第1章《アーモンドの花咲く春の日に》，共10话。本章发生在第一部重大事件之后，核心是联邦学生会长以陌生外貌“归来”以及全城记忆被改写的异常。"
+        },
+        {
+          "id": 312,
+          "source_key": "30_Vol3_伊甸园条约篇.txt",
+          "text": "伊甸园条约签署仪式遭到阿里乌斯学园袭击。老师被纱织开枪击伤，日奈等人在战斗中受伤。阿里乌斯学园使用了针对光环的爆炸物。文档明确说明该行动不能表述为同时暗杀剑先鹤城与日奈，且“剑先弦生”并非角色名。"
+        },
+        {
+          "id": 313,
+          "source_key": "30_Vol3_伊甸园条约篇.txt",
+          "text": "在混乱中，补课部与多方学生继续行动。日富美以对平凡青春和幸福结局的坚持反驳了“一切皆虚无”的观念。老师和学生阻止了条约袭击进一步扩大，但圣三一内部对圣园未花的愤怒以及阿里乌斯小队的处境仍未解决。"
+        }
+      ]
+    },
+    {
+      "name": "creative_messages",
+      "question": "有哪些学生刚刚给为师发消息了？",
+      "expected": [],
+      "creative": true,
+      "seconds": 2.176548,
+      "episode_ids": [
+        379,
+        153,
+        400,
+        188,
+        401,
+        321,
+        387,
+        325,
+        190,
+        189,
+        388,
+        192
+      ],
+      "hit_at_20": null,
+      "matched": [],
+      "quality": {
+        "entity_coverage": 1.0,
+        "claim_slot_coverage": 1.0,
+        "top_score": 0.00927862,
+        "score_margin": 0.00422741,
+        "source_diversity": 6,
+        "timeline_conflict": false,
+        "evidence_count": 12,
+        "entity_count": 0,
+        "claim_slot_count": 0,
+        "semantic_constraint_coverage": 1.0,
+        "semantic_constraint_count": 0,
+        "sufficient": true,
+        "reasons": []
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 4.2e-05,
+          "initial_embedding": 0.667122,
+          "initial_retrieval": 0.309797,
+          "initial_graph_expansion": 0.000115,
+          "followup_planning": 2e-06,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.048386,
+          "evidence_preparation": 0.079883,
+          "evidence_rerank": 0.779197,
+          "association_growth": 7e-06,
+          "final_selection": 0.104033,
+          "growth_utility": 0.004554,
+          "answer_generation": 0.0
+        },
+        "measured_seconds": 1.993138,
+        "unattributed_seconds": 0.177495,
+        "total_seconds": 2.170633
+      },
+      "top_evidence": [
+        {
+          "id": 379,
+          "source_key": "93_好感剧情使用边界.txt",
+          "text": "好感剧情通过MomoTalk消息和个人剧情展示学生与老师的日常互动，部分剧情解锁回忆大厅。该机制可补充人物性格，但不能自动替代主线中的公共关系和政治立场。"
+        },
+        {
+          "id": 153,
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "text": "奥空绫音最初向老师发出求助，并持续参与阿拜多斯的日常与危机应对。她是对策委员会共同决策的一员，不应仅被视为传递任务或联络信息的配角。"
+        },
+        {
+          "id": 400,
+          "source_key": "101_第二部Vol0_連邦生徒会編.txt",
+          "text": "オーウェル指出，“シャーケードの杖”是对学生会长圣遗物的复制或模拟，虽然是复制品，却拥有实际权限。它还暗示真正的学生会长不能被立即带回，只能先寻找与当前共同记忆不一致的“反例”。老师、凛、阿罗娜与普拉娜因此决定从互联网和社交平台收集异常记录，并把这些记录固定下来。"
+        },
+        {
+          "id": 188,
+          "source_key": "10_序章.txt",
+          "text": "联邦学生会长向老师表达遗憾并托付未来，该片段具有预示性质，但序章剧情未完整解释其所属时间线，也未明确宣布联邦学生会长拥有任意重置时间的能力。"
+        },
+        {
+          "id": 401,
+          "source_key": "101_第二部Vol0_連邦生徒会編.txt",
+          "text": "老师的什亭之箱新增了用于收集公开信息的社交功能。奥威尔（オーウェル）提供了一个匿名账号作为入口，但老师并未因此与其结盟，仅利用该手段帮助学生。本章结束时，原学生会长仍未返回，铂金发学生会长仍掌握被基沃托斯承认的身份，调查进入持续收集矛盾记录的阶段。"
+        },
+        {
+          "id": 321,
+          "source_key": "50_VolF_所有奇迹的起点.txt",
+          "text": "老师在学生协助下脱离控制。RABBIT小队、瓦尔基里及其他学生参与反击，最终夺回夏莱并救出凛。该阶段核心是凯撒夺权和夏莱夺还，并非深入地下超算机房恢复全城通信。"
+        }
+      ]
+    }
+  ]
+}

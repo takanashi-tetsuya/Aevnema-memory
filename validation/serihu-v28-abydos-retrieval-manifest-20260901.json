@@ -1,0 +1,26 @@
+{
+  "description": "Focused evidence-anchored acceptance questions for the local-gap-repair pilot.",
+  "questions": [
+    {
+      "id": "abydos_land_owner",
+      "question": "阿比多斯土地交易的主体是谁，为什么只有学生会能进行这种交易？",
+      "expected_episode_matchers": [
+        {"source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt", "all_terms": ["議決権"]},
+        {"source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt", "all_terms": ["取引の主体", "前生徒会"]}
+      ]
+    },
+    {
+      "id": "two_fools",
+      "question": "芹香如何吐槽阿比多斯前学生会，星野又怎样回忆当时的两个人？",
+      "expected_episode_matchers": [
+        {"source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt", "all_terms": ["校内随一のバカ"]},
+        {"source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt", "all_terms": ["おバカさん二人"]}
+      ]
+    },
+    {
+      "id": "shiroko_bag",
+      "question": "白子为什么翻星野的包，并想把发现先告诉谁？",
+      "expected_episode_matchers": [{"source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt", "all_terms": ["バッグ", "隠し事"]}]
+    }
+  ]
+}

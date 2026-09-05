@@ -1,0 +1,2561 @@
+{
+  "domain": "knowledge",
+  "mode": "fast",
+  "identity": {
+    "platform": "diagnostic",
+    "platform_user_id": "local-test"
+  },
+  "error": "",
+  "domains": [
+    "knowledge"
+  ],
+  "repeat": 1,
+  "timings_seconds": [
+    12.066892
+  ],
+  "context": "以下内容来自长期记忆系统。Episode 是证据摘要；Association 可能是推论，\n必须结合来源、认知状态、generation、confidence 与原始 Episode 判断，不得把弱联想写成确定事实。\n\n【相关 Episode】\nEpisode #95 | source=06_细节问答与别名索引.txt | story_time=当前剧情阶段 | origin=importer | epistemic_status=speculative | generation=1 | note=文档明确标注为低置信度推测，指出剧情未展示相关事实。\n关于联邦学生会长是否确认重置过无限次时间，或阿罗娜是否为她的分身，目前没有确认。序章托付、最终篇平行世界与外观相似可形成社区理论，但剧情未展示会长发动时间重置，也未确认阿罗娜与会长身份相同。\nEpisode #188 | source=10_序章.txt | story_time=故事开场 | origin=source | epistemic_status=asserted | generation=0 | note=文档陈述了片段性质及未明确的事实边界。\n联邦学生会长向老师表达遗憾并托付未来，该片段具有预示性质，但序章剧情未完整解释其所属时间线，也未明确宣布联邦学生会长拥有任意重置时间的能力。\nEpisode #78 | source=06_细节问答与别名索引.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 明确记录官方纠正信息\n官方资料确认联邦学生会财务室长为扇喜葵（扇喜アオイ/Aoi），并明确纠正旧知识库中将角色误称为“中务葵”的错误，指出“中务葵”不能作为角色名或别名使用。\nEpisode #79 | source=06_细节问答与别名索引.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 明确区分象征对应与官方身份确认\n官方资料澄清小鸟游星野与荷鲁斯的关系：阿拜多斯的主题、命名和剧情象征支持两者存在较强的考据对应，但并未宣布星野是荷鲁斯的直接转世、神话本体或物种。\nEpisode #80 | source=06_细节问答与别名索引.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 明确区分跨世界存在与象征关系\n官方资料确认砂狼白子与白子Terror来自不同世界，白子Terror经历神秘反转后抵达当前世界，两者在经历、状态和责任上不可混同；同时明确白子与阿努比斯的关系仅属于象征考据，非官方身份确认。\nEpisode #81 | source=06_细节问答与别名索引.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 明确区分玩家评价与官方设定\n官方资料澄清空崎日奈虽战斗能力极强且长期承担格黑娜治安压力，但“全基沃托斯绝对第一战力”并非官方正式排名，玩家评价不能等同于明确设定。\nEpisode #82 | source=06_细节问答与别名索引.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 明确描述 Key 的回归与状态变化\n官方资料确认 Key（天童爱丽丝的另一个意识体）在 Vol.2 后并未被简单彻底删除，在德卡格拉马顿篇中，Key 重新以独立意识活动，逐渐拥有机械身体，并与爱丽丝建立了能够共同作战的姐妹关系。\nEpisode #83 | source=06_细节问答与别名索引.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 明确区分当前动机与过去责任\n官方资料澄清锭前纱织向老师求助是为了拯救亚津子，表明她开始拒绝继续服从贝阿朵莉切的控制；但这一行为并不代表她过去的责任被免除，老师帮助她们也不等于否认她们过去行为造成的后果。\nEpisode #84 | source=06_细节问答与别名索引.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 明确区分联邦学生会内部职责及跨作品混淆\n官方资料确认在联邦学生会中，七神凛担任首席行政官，在会长失踪后承担大量代理职责；扇喜葵担任财务室长，两人职责不同，且扇喜葵不能与早濑优香混同。\nEpisode #85 | source=06_细节问答与别名索引.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 明确拒绝简单同一性假设\n官方资料澄清ミスター・オーウェ尔（奥威尔先生）与复制画、戈尔孔达、弗朗西斯的变化连续相关，并以“ミスター・オーウェル”重新定义自己，不能将其简单压缩为未经限定的“完全同一人物”。\nEpisode #86 | source=06_细节问答与别名索引.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 明确描述学园运作模式与核心实体\n官方资料说明奥德赛海洋高等学校（オデュッセイア海洋高等学校）以大型船团作为学园与生活空间，长期在海上航行；其运作模式相当于学生会的アイランド以旗舰オリュンポス号为核心，负责船团整体方向。\nEpisode #87 | source=06_细节问答与别名索引.txt | story_time=玩具球漂流发生时 | origin=source | epistemic_status=asserted | generation=0 | note=明确否定萨米发送求救信号，澄清信号来源是玩具球而非萨米操作设备。\n萨米（サミー）的玩具球落海漂流至外界，被铂金发联邦学生会长视为船团可能需要援助的信号；明确萨米本人并未主动向D.U.发送无线电求救。\nEpisode #88 | source=06_细节问答与别名索引.txt | story_time=当前剧情阶段 | origin=source | epistemic_status=speculative | generation=0 | note=文档明确说明这是中低置信度推测，缺乏直接证据和成员对应表。\n奥德赛潜水部（ダイビング部）具备呼号式协作、制式装备和水下特种行动能力，这些特征支持其可能是SRT的ORCA小队的推测；但主线与活动均未直接公布两者为同一组织，也未提供完整成员对应表。\nEpisode #89 | source=06_细节问答与别名索引.txt | story_time=复兴委员会事件期间 | origin=source | epistemic_status=asserted | generation=0 | note=明确区分了被利用成员与核心策划者，否定了全员旧部的说法。\n格黑娜复兴委员会成员并非全是雷帝旧部。降旗マユミ和明楽カレン在不知情下被五十嵐ショコ利用，发现真相后亲手制止了她；マユミ的改革愿望并不等同于支持洗脑与战争。\nEpisode #90 | source=06_细节问答与别名索引.txt | story_time=2026年8月30日 | origin=source | epistemic_status=asserted | generation=0 | note=基于文档明确的时间点和未公开内容状态。\n截至2026年8月30日，奥德赛篇（第二部Vol.2）第1章前篇仅公开8话，核心矛盾围绕老猫サミー的照护、航海禁忌与船团治理选择展开；最终决定、发光多面体用途及后篇结局尚未公开，矛盾未完结。\nEpisode #91 | source=06_细节问答与别名索引.txt | story_time=当前剧情阶段 | origin=source | epistemic_status=asserted | generation=0 | note=确认了外界认可与内部质疑并存的状态，明确排除了对具体身份的断言。\n新出现的铂金发联邦学生会长被世界普遍承认为会长，能够使用权限并认真处理公务，但老师、凛和花耶等人不认可其身份；目前无法断言她是克隆人、反派、原会长的另一人格或装置制造实体。\nEpisode #92 | source=06_细节问答与别名索引.txt | story_time=Lore追踪第1章期间 | origin=source | epistemic_status=asserted | generation=0 | note=否定了单一中暑解释，确认了异常实体的存在。\nLore追踪第1章中的白色人影并非单纯的中暑幻觉。虽然高温与中暑解释了怪谈的警示意义和部分症状，但异常实体、结晶碎片内部的影像与受害者同步恢复的现象无法由普通中暑完整解释。\nEpisode #93 | source=06_细节问答与别名索引.txt | story_time=Vol.Final第一章 | origin=source | epistemic_status=asserted | generation=0 | note=明确区分了第一章与第二章的核心事件。\nVol.Final第一章的核心事件是凯撒集团趁混乱夺权，占领夏莱与圣所之塔并控制联邦学生会人员；随后老师脱离控制，学生夺回夏莱并救出凛。虚妄圣所攻略和大规模联合战属于第二章核心。\nEpisode #94 | source=06_细节问答与别名索引.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0 | note=说明了知识库对好感剧情内容的保存范围和限制。\n当前知识库仅保存少量经核验的角色好感剧情主题概括，不保存逐字台词，也未收录所有角色的逐话好感剧情；因此不能逐字引用或根据角色性格补写约会、告白、牵手、独占欲或完整对白内容。\nEpisode #96 | source=06_细节问答与别名索引.txt | story_time=当前 | origin=importer | epistemic_status=speculative | generation=1 | note=明确区分了已知事实（Lore碎片）与推测（发光多面体功能）。\nLore碎片内部可见异常景象是事实，但发光多面体目前仅确认外观异常，尚未确认其能像Lore碎片一样保存异常影像；二者是否相关属于低置信度推测。\nEpisode #97 | source=06_细节问答与别名索引.txt | origin=importer | epistemic_status=speculative | generation=1 | note=导入文档明确标记为推测\n社区观点资料明确指出，玩家对角色的称呼如“重女”“妈妈”“女儿”“猩猩”“打工皇帝”“柜子精”等属于社区用语，仅可用于解释二创或玩家文化，不能作为证明角色在正式剧情中具备病娇、亲属、恋爱或职业身份的证据。\nEpisode #326 | source=50_VolF_所有奇迹的起点.txt | story_time=最终篇 | origin=source | epistemic_status=asserted | generation=0\n最终篇证实平行世界与普雷纳帕特斯的存在，但没有直接证实联邦学生会长可以任意重置时间线，也没有证实序章已经发生过无数次循环。\nEpisode #359 | source=90_推测与考据.txt | origin=importer | epistemic_status=speculative | generation=1 | note=内容源自社区理论推测，证据强度低。\n存在一种低置信度理论认为联邦学生会长在经历失败后重置了时间，并将希望托付给当前老师。支持该理论的线索包括序章的托付、最终篇的平行世界及失败可能性；反对点在于剧情未明确展示她发动时间重置，也未说明序章对话必然发生在普雷纳帕特斯所在世界。\nEpisode #189 | source=10_序章.txt | story_time=故事开场 | origin=source | epistemic_status=asserted | generation=0 | note=文档直接陈述了事件发生及背景状况。\n老师在联邦学生会设施中醒来，首席行政官七神凛向其说明当前情况：联邦学生会长失踪，圣所之塔控制出现问题，越狱者和武装人员导致联邦直辖区陷入混乱。\nEpisode #192 | source=10_序章.txt | story_time=无 | origin=source | epistemic_status=asserted | generation=0 | note=文档明确界定了序章所能证明和不能证明的内容范围。\n序章剧情支持‘联邦学生会长预见过失败可能并将改变结局的希望托付给老师’这一说法，但序章本身不能单独证明她经历了无数轮循环、完整重置世界，或阿罗娜是其数据化分身。\nEpisode #275 | source=13_其他学园与常用角色百科.txt | story_time=会长失踪后 | origin=source | epistemic_status=asserted | generation=0\n联邦学生会负责跨学园行政事务与公共基础设施协调。会长失踪后，其权限和治安体系出现重大空缺，凛等成员承担了大量代理工作。联邦学生会与夏莱在行政上有关联，但夏莱并非联邦学生会本身。\nEpisode #387 | source=100_第二部_序章.txt | story_time=第2话 | origin=source | epistemic_status=asserted | generation=0\n在第2话中，凛在葵、步、桃香等联邦学生会成员协助下录制面向市民的安全与行政宣传。凛回忆起从阿特拉哈西斯方舟返回后收到的一封信，信封以联邦学生会长笔迹书写，内含学生会长就任、集训等往日照片，以及一张学生会长独自站在陌生水边或地平线前的黑白照片。凛无法确认最后一张照片的地点与拍摄经过。\nEpisode #7 | source=01_世界观与核心设定.txt | story_time=联邦学生会长失踪后 | origin=source | epistemic_status=asserted | generation=0\n联邦学生会长失踪后，联邦学生会无法完整行使原有权限，基沃托斯的行政与治安迅速陷入混乱。老师受联邦学生会长安排来到基沃托斯，担任联邦搜查社夏莱的顾问。\nEpisode #299 | source=14_世界设定与主线细节问答扩展.txt | origin=source | epistemic_status=reported | generation=0 | note=Source 22 中未标注发言者，内容基于问答记录中的回答，属于对游戏机制的陈述。\n在第二部Vol.0「联邦学生会篇」中，FruLink是老师利用什亭之箱收集公开信息的社交功能，用于寻找与“铂金发学生会长一直存在”这一共同现实相矛盾的记录。单个匿名帖子可提供线索，但不自动等同于官方旁白的确认。\nEpisode #390 | source=100_第二部_序章.txt | story_time=序章结束时 | origin=source | epistemic_status=asserted | generation=0\n序章中出现的黑白照片、黑白梦境、シャーケードの杖、陌生少女和发光多面体均为已发生的事实。然而，它们是否由同一力量造成、照片是否来自其他世界、少女是否就是后来出现的联邦学生会长、ダイビング部是否隶属旧SRT的潜伏单位，这些关联均未在序章中得到完整确认。\n\n【相关 Concept】\nConcept #16 | 联邦学生会长：联邦学生会的前任领导者，其失踪导致行政混乱\nConcept #18 | 老师：受联邦学生会长安排来到基沃托斯担任夏莱顾问的人物\nConcept #165 | Lore碎片：包含异常景象和影像的碎片，其内部影像能与受害者同步恢复，是确认异常实体存在的证据。\nConcept #17 | 夏莱：独立于单一学园的联邦社团，老师担任顾问\nConcept #32 | 贝阿朵莉切：数秘会成员之一\nConcept #59 | 凯撒集团：横跨金融、军工与安保领域的大型企业集团，多次干涉学园事务\nConcept #63 | 小鸟游星野：阿拜多斯对策委员会的前辈和核心战力，表面懒散，长期背负阿拜多斯衰落及梦前辈死亡带来的创伤\nConcept #65 | 砂狼白子：阿拜多斯对策委员会成员，性格寡言且行动直接，喜爱运动并常提出抢银行等极端方案\nConcept #66 | 白子Terror：来自另一世界、经历神秘反转的砂狼白子\nConcept #71 | 空崎日奈：格黑娜风纪委员会委员长，承担大量治安与行政压力且战斗能力很强\nConcept #73 | 天童爱丽丝：游戏开发部成员，与无名诸神技术有关，核心冲突在于能否以自己建立的身份选择成为勇者\nConcept #76 | 锭前纱织：阿里乌斯小队成员，曾射伤老师，后为拯救亚津子向老师求助\nConcept #77 | 七神凛：联邦学生会首席行政官，在会长失踪后承担大量代理职责\nConcept #78 | 扇喜葵：财务室长，日文名写作“扇喜アオイ”，并非早濑优香\nConcept #107 | Key：与天童爱丽丝有关的系统人格，后获得独立意识与机械身体，成为姐妹关系。\nConcept #121 | 秤亚津子：阿里乌斯小队成员，曾被贝阿朵莉切试图利用完成仪式，后在纱织求助下获救。\nConcept #130 | 铂金发联邦学生会长：第二部Vol.0中出现的铂金色头发、紫色眼睛的女性，多数居民认定其一直存在，但少数人（老师、凛等）不认同。\nConcept #145 | 奥威尔先生：第二部观察者，交流围绕影像、媒介、符号、复制品与被社会接受的现实展开，提供观察角度和追踪方法，但不等于无条件帮助。\nConcept #146 | 戈尔孔达：与奥威尔先生存在连续变化相关关系的实体，用于描述其身份或关联的特定概念。\nConcept #147 | 弗朗西斯：与奥威尔先生存在连续变化相关关系的实体，用于描述其身份或关联的特定概念。\n\n【Association 联想路径】\nAssociation #1932 | generation=2 | confidence=0.900 | Episode 326 指出没有直接证实联邦学生会长可以任意重置时间线，这与 Episode 95 中关于目前未确认会长是否确认重置过无限次时间或阿罗娜为其分身的推测内容一致。\nAssociation #2198 | generation=2 | confidence=0.880 | 当前片段（359）与候选片段（95）均讨论联邦学生会长是否重置时间以及阿罗娜是否为分身的问题，两者都指出目前剧情未确认这些事实，属于低置信度的社区理论推测。\nAssociation #50 | generation=1 | confidence=0.900 | 老师是夏莱社团的顾问，受联邦学生会长安排来到基沃托斯。\nAssociation #345 | generation=1 | confidence=0.850 | 原学生会长被铂金发联邦学生会长取代或混淆，两者存在语义关联。\nAssociation #2439 | generation=1 | confidence=0.820 | 普通学生 群体将 铂金发联邦学生会长 视为原会长，这与多数居民的认知一致。\nAssociation #1934 | generation=1 | confidence=0.900 | Episode 326 指出没有证实序章已经发生过无数次循环，这与 Episode 188 中陈述的序章剧情未明确宣布联邦学生会长拥有任意重置时间的能力的内容一致。\nAssociation #344 | generation=1 | confidence=0.850 | 铂金发联邦学生会长引发了集体记忆异常现象，两者存在语义关联。\nAssociation #1146 | generation=1 | confidence=0.600 | '联邦直辖区'（274）的混乱状态与'联邦学生会长'（16）的失踪有关，但两者并非同一对象。\nAssociation #51 | generation=1 | confidence=0.850 | 老师是受联邦学生会长安排来到基沃托斯担任夏莱顾问的人物。\nAssociation #2435 | generation=1 | confidence=0.900 | 联邦学生会长 (铂金发女性) 与 铂金发联邦学生会长 指向同一对象，即第二部Vol.0中出现的铂金色头发、紫色眼睛的女性。\nAssociatio\n[长期记忆上下文因长度限制已截断]",
+  "result": {
+    "question": "联邦学生会长是否已经确认重置过无限次时间？",
+    "intent": {
+      "language": "zh",
+      "target_entities": [
+        "联邦学生会长"
+      ],
+      "search_queries": [
+        "联邦学生会长是谁",
+        "联邦学生会长重置过时间吗",
+        "联邦学生会长重置过无限次时间吗",
+        "联邦学生会长确认过重置过无限次时间吗"
+      ],
+      "requested_relation": "确认重置过无限次时间",
+      "temporal_constraint": "None",
+      "causal_constraint": "None",
+      "answer_shape": "binary",
+      "uncertainty_required": false
+    },
+    "followup_search_queries": [],
+    "atomic_anchor_episode_ids": [
+      95,
+      188,
+      326,
+      359,
+      91,
+      390,
+      299,
+      192,
+      78,
+      189,
+      275,
+      84,
+      7
+    ],
+    "candidate_episode_ids": [
+      95,
+      188,
+      326,
+      78,
+      359,
+      91,
+      79,
+      390,
+      299,
+      80,
+      192,
+      189,
+      81,
+      275,
+      84,
+      82,
+      7,
+      83,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      92,
+      93,
+      94,
+      96,
+      97,
+      387,
+      397,
+      361,
+      285,
+      385,
+      392,
+      447,
+      59,
+      55,
+      396,
+      316,
+      403,
+      320,
+      393,
+      395,
+      50,
+      318,
+      284,
+      32,
+      402,
+      38,
+      5,
+      29,
+      3,
+      382,
+      56,
+      60,
+      322,
+      444,
+      321,
+      446,
+      445,
+      442,
+      439,
+      21,
+      324,
+      53,
+      26,
+      173,
+      410,
+      35,
+      77,
+      276,
+      31,
+      419,
+      450,
+      71,
+      74,
+      451,
+      415,
+      407,
+      72,
+      47,
+      2,
+      356,
+      408,
+      399,
+      357,
+      340,
+      424,
+      438,
+      325,
+      122,
+      400,
+      37,
+      68,
+      1,
+      121,
+      386,
+      378,
+      464
+    ],
+    "reranked_episode_ids": [
+      95,
+      326,
+      188,
+      359,
+      192,
+      390,
+      387,
+      91,
+      299,
+      275,
+      7,
+      84,
+      189,
+      78,
+      87,
+      93,
+      94,
+      80,
+      96,
+      90,
+      97,
+      81,
+      82,
+      86,
+      83,
+      85,
+      89,
+      92,
+      79,
+      88
+    ],
+    "episode_ids": [
+      95,
+      188,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      96,
+      97,
+      326,
+      359,
+      189,
+      192,
+      275,
+      387,
+      7,
+      299,
+      390
+    ],
+    "concept_ids": [
+      16,
+      18,
+      165,
+      17,
+      32,
+      59,
+      63,
+      65,
+      66,
+      71,
+      73,
+      76,
+      77,
+      78,
+      107,
+      121,
+      130,
+      145,
+      146,
+      147
+    ],
+    "association_ids": [
+      1932,
+      2198,
+      50,
+      345,
+      2439,
+      1934,
+      344,
+      1146,
+      51,
+      2435,
+      2436,
+      49,
+      335,
+      503,
+      1640,
+      26,
+      1122,
+      1127,
+      1138,
+      1902,
+      2359,
+      2175,
+      485,
+      473
+    ],
+    "new_association_ids": [],
+    "reinforced_association_ids": [],
+    "growth_utility_gate": {
+      "enabled": true,
+      "retained_created_ids": [],
+      "retained_reinforced_ids": [],
+      "removed_created_ids": [],
+      "restored_reinforced_ids": [],
+      "premise_closure_ids": []
+    },
+    "growth_counterfactual_utility": {
+      "enabled": true,
+      "scope": "query_batch",
+      "changed_association_ids": [],
+      "changed_path_ids": [],
+      "additional_episode_ids": [],
+      "displaced_episode_ids": [],
+      "additional_source_keys": [],
+      "displaced_source_keys": [],
+      "evidence_gain_count": 0,
+      "causal_utility_observed": false,
+      "persistable_changed_ids": []
+    },
+    "evidence_episodes": [
+      {
+        "id": 95,
+        "score": 0.9986321863532066,
+        "text": "关于联邦学生会长是否确认重置过无限次时间，或阿罗娜是否为她的分身，目前没有确认。序章托付、最终篇平行世界与外观相似可形成社区理论，但剧情未展示会长发动时间重置，也未确认阿罗娜与会长身份相同。",
+        "participants": [
+          "联邦学生会长",
+          "阿罗娜"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 1,
+        "story_time_text": "当前剧情阶段",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1,
+        "epistemic_note": "文档明确标注为低置信度推测，指出剧情未展示相关事实。"
+      },
+      {
+        "id": 188,
+        "score": 0.9834309163680455,
+        "text": "联邦学生会长向老师表达遗憾并托付未来，该片段具有预示性质，但序章剧情未完整解释其所属时间线，也未明确宣布联邦学生会长拥有任意重置时间的能力。",
+        "participants": [
+          "联邦学生会长",
+          "老师"
+        ],
+        "source_key": "10_序章.txt",
+        "segment_index": 0,
+        "story_time_text": "故事开场",
+        "story_order": null,
+        "timeline_scope": "10_序章.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "文档陈述了片段性质及未明确的事实边界。"
+      },
+      {
+        "id": 78,
+        "score": 0.9487005770355462,
+        "text": "官方资料确认联邦学生会财务室长为扇喜葵（扇喜アオイ/Aoi），并明确纠正旧知识库中将角色误称为“中务葵”的错误，指出“中务葵”不能作为角色名或别名使用。",
+        "participants": [
+          "扇喜葵 / 扇喜アオイ / Aoi / 财务室长",
+          "中务葵 (被纠正的错误名称)"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 明确记录官方纠正信息"
+      },
+      {
+        "id": 79,
+        "score": 0.9487005770355462,
+        "text": "官方资料澄清小鸟游星野与荷鲁斯的关系：阿拜多斯的主题、命名和剧情象征支持两者存在较强的考据对应，但并未宣布星野是荷鲁斯的直接转世、神话本体或物种。",
+        "participants": [
+          "小鸟游星野 / 小鳥遊ホシノ / Hoshino / 星野",
+          "荷鲁斯 / Horus"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 明确区分象征对应与官方身份确认"
+      },
+      {
+        "id": 80,
+        "score": 0.9487005770355462,
+        "text": "官方资料确认砂狼白子与白子Terror来自不同世界，白子Terror经历神秘反转后抵达当前世界，两者在经历、状态和责任上不可混同；同时明确白子与阿努比斯的关系仅属于象征考据，非官方身份确认。",
+        "participants": [
+          "砂狼白子 / 砂狼シロコ / Shiroko / 白子",
+          "白子Terror",
+          "阿努比斯 / Anubis"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 明确区分跨世界存在与象征关系"
+      },
+      {
+        "id": 81,
+        "score": 0.9487005770355462,
+        "text": "官方资料澄清空崎日奈虽战斗能力极强且长期承担格黑娜治安压力，但“全基沃托斯绝对第一战力”并非官方正式排名，玩家评价不能等同于明确设定。",
+        "participants": [
+          "空崎日奈 / 空崎ヒナ / Hina / 日奈"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 明确区分玩家评价与官方设定"
+      },
+      {
+        "id": 82,
+        "score": 0.9487005770355462,
+        "text": "官方资料确认 Key（天童爱丽丝的另一个意识体）在 Vol.2 后并未被简单彻底删除，在德卡格拉马顿篇中，Key 重新以独立意识活动，逐渐拥有机械身体，并与爱丽丝建立了能够共同作战的姐妹关系。",
+        "participants": [
+          "天童爱丽丝 / 天童アリス / Aris / Alice / 爱丽丝",
+          "Key / ケイ / 凯伊 / 凯"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 明确描述 Key 的回归与状态变化"
+      },
+      {
+        "id": 83,
+        "score": 0.9487005770355462,
+        "text": "官方资料澄清锭前纱织向老师求助是为了拯救亚津子，表明她开始拒绝继续服从贝阿朵莉切的控制；但这一行为并不代表她过去的责任被免除，老师帮助她们也不等于否认她们过去行为造成的后果。",
+        "participants": [
+          "锭前纱织 / 錠前サオリ / Saori / 纱织",
+          "秤亚津子 / 秤アツコ / Atsuko / 亚津子",
+          "贝阿朵莉切 (被提及的控制者)"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 明确区分当前动机与过去责任"
+      },
+      {
+        "id": 84,
+        "score": 0.9487005770355462,
+        "text": "官方资料确认在联邦学生会中，七神凛担任首席行政官，在会长失踪后承担大量代理职责；扇喜葵担任财务室长，两人职责不同，且扇喜葵不能与早濑优香混同。",
+        "participants": [
+          "七神凛 / 七神リン / Rin / 凛",
+          "扇喜葵 / 扇喜アオイ / Aoi / 葵",
+          "早濑优香 (被提及的混淆对象)"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 明确区分联邦学生会内部职责及跨作品混淆"
+      },
+      {
+        "id": 85,
+        "score": 0.9487005770355462,
+        "text": "官方资料澄清ミスター・オーウェ尔（奥威尔先生）与复制画、戈尔孔达、弗朗西斯的变化连续相关，并以“ミスター・オーウェル”重新定义自己，不能将其简单压缩为未经限定的“完全同一人物”。",
+        "participants": [
+          "ミスター・オーウェル / 奥威尔 / 奥威尔先生 / Mr. Orwell / Orwell",
+          "戈尔孔达",
+          "弗朗西斯"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 明确拒绝简单同一性假设"
+      },
+      {
+        "id": 86,
+        "score": 0.9487005770355462,
+        "text": "官方资料说明奥德赛海洋高等学校（オデュッセイア海洋高等学校）以大型船团作为学园与生活空间，长期在海上航行；其运作模式相当于学生会的アイランド以旗舰オリュンポス号为核心，负责船团整体方向。",
+        "participants": [
+          "奥德赛海洋高等学校 / オデュッセイア海洋高等学校 / Odysseia / Odyssey",
+          "アイランド (学生会相关实体)",
+          "オリュンポス号 (旗舰)"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 明确描述学园运作模式与核心实体"
+      },
+      {
+        "id": 87,
+        "score": 0.9487005770355462,
+        "text": "萨米（サミー）的玩具球落海漂流至外界，被铂金发联邦学生会长视为船团可能需要援助的信号；明确萨米本人并未主动向D.U.发送无线电求救。",
+        "participants": [
+          "萨米 / サミー / Sammy",
+          "铂金发联邦学生会长"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 1,
+        "story_time_text": "玩具球漂流发生时",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "明确否定萨米发送求救信号，澄清信号来源是玩具球而非萨米操作设备。"
+      },
+      {
+        "id": 88,
+        "score": 0.9487005770355462,
+        "text": "奥德赛潜水部（ダイビング部）具备呼号式协作、制式装备和水下特种行动能力，这些特征支持其可能是SRT的ORCA小队的推测；但主线与活动均未直接公布两者为同一组织，也未提供完整成员对应表。",
+        "participants": [
+          "奥德赛潜水部 / ダイビング部 / Diving Club",
+          "SRT / ORCA小队"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 1,
+        "story_time_text": "当前剧情阶段",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "speculative",
+        "generation": 0,
+        "epistemic_note": "文档明确说明这是中低置信度推测，缺乏直接证据和成员对应表。"
+      },
+      {
+        "id": 89,
+        "score": 0.9487005770355462,
+        "text": "格黑娜复兴委员会成员并非全是雷帝旧部。降旗マユミ和明楽カレン在不知情下被五十嵐ショコ利用，发现真相后亲手制止了她；マユミ的改革愿望并不等同于支持洗脑与战争。",
+        "participants": [
+          "格黑娜复兴委员会 / ゲヘナ再興委員会",
+          "降旗マユミ",
+          "明楽カレン",
+          "五十嵐ショコ"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 1,
+        "story_time_text": "复兴委员会事件期间",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "明确区分了被利用成员与核心策划者，否定了全员旧部的说法。"
+      },
+      {
+        "id": 90,
+        "score": 0.9487005770355462,
+        "text": "截至2026年8月30日，奥德赛篇（第二部Vol.2）第1章前篇仅公开8话，核心矛盾围绕老猫サミー的照护、航海禁忌与船团治理选择展开；最终决定、发光多面体用途及后篇结局尚未公开，矛盾未完结。",
+        "participants": [
+          "老猫サミー",
+          "船团"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 1,
+        "story_time_text": "2026年8月30日",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "基于文档明确的时间点和未公开内容状态。"
+      },
+      {
+        "id": 91,
+        "score": 0.9487005770355462,
+        "text": "新出现的铂金发联邦学生会长被世界普遍承认为会长，能够使用权限并认真处理公务，但老师、凛和花耶等人不认可其身份；目前无法断言她是克隆人、反派、原会长的另一人格或装置制造实体。",
+        "participants": [
+          "铂金发联邦学生会长",
+          "老师",
+          "凛",
+          "花耶"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 1,
+        "story_time_text": "当前剧情阶段",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "确认了外界认可与内部质疑并存的状态，明确排除了对具体身份的断言。"
+      },
+      {
+        "id": 92,
+        "score": 0.9487005770355462,
+        "text": "Lore追踪第1章中的白色人影并非单纯的中暑幻觉。虽然高温与中暑解释了怪谈的警示意义和部分症状，但异常实体、结晶碎片内部的影像与受害者同步恢复的现象无法由普通中暑完整解释。",
+        "participants": [
+          "白色人影",
+          "受害者"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 1,
+        "story_time_text": "Lore追踪第1章期间",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "否定了单一中暑解释，确认了异常实体的存在。"
+      },
+      {
+        "id": 93,
+        "score": 0.9487005770355462,
+        "text": "Vol.Final第一章的核心事件是凯撒集团趁混乱夺权，占领夏莱与圣所之塔并控制联邦学生会人员；随后老师脱离控制，学生夺回夏莱并救出凛。虚妄圣所攻略和大规模联合战属于第二章核心。",
+        "participants": [
+          "凯撒集团",
+          "老师",
+          "学生",
+          "凛",
+          "联邦学生会人员"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 1,
+        "story_time_text": "Vol.Final第一章",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "明确区分了第一章与第二章的核心事件。"
+      },
+      {
+        "id": 94,
+        "score": 0.9487005770355462,
+        "text": "当前知识库仅保存少量经核验的角色好感剧情主题概括，不保存逐字台词，也未收录所有角色的逐话好感剧情；因此不能逐字引用或根据角色性格补写约会、告白、牵手、独占欲或完整对白内容。",
+        "participants": [
+          "知识库",
+          "角色"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "说明了知识库对好感剧情内容的保存范围和限制。"
+      },
+      {
+        "id": 96,
+        "score": 0.9487005770355462,
+        "text": "Lore碎片内部可见异常景象是事实，但发光多面体目前仅确认外观异常，尚未确认其能像Lore碎片一样保存异常影像；二者是否相关属于低置信度推测。",
+        "participants": [
+          "发光多面体",
+          "Lore碎片"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1,
+        "epistemic_note": "明确区分了已知事实（Lore碎片）与推测（发光多面体功能）。"
+      },
+      {
+        "id": 97,
+        "score": 0.9487005770355462,
+        "text": "社区观点资料明确指出，玩家对角色的称呼如“重女”“妈妈”“女儿”“猩猩”“打工皇帝”“柜子精”等属于社区用语，仅可用于解释二创或玩家文化，不能作为证明角色在正式剧情中具备病娇、亲属、恋爱或职业身份的证据。",
+        "participants": [
+          "社区观点资料"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 2,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1,
+        "epistemic_note": "导入文档明确标记为推测"
+      },
+      {
+        "id": 326,
+        "score": 0.9416078752719805,
+        "text": "最终篇证实平行世界与普雷纳帕特斯的存在，但没有直接证实联邦学生会长可以任意重置时间线，也没有证实序章已经发生过无数次循环。",
+        "participants": [
+          "联邦学生会长",
+          "平行世界居民",
+          "普雷纳帕特斯"
+        ],
+        "source_key": "50_VolF_所有奇迹的起点.txt",
+        "segment_index": 0,
+        "story_time_text": "最终篇",
+        "story_order": null,
+        "timeline_scope": "50_volf_所有奇迹的起点.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 359,
+        "score": 0.9229659181704599,
+        "text": "存在一种低置信度理论认为联邦学生会长在经历失败后重置了时间，并将希望托付给当前老师。支持该理论的线索包括序章的托付、最终篇的平行世界及失败可能性；反对点在于剧情未明确展示她发动时间重置，也未说明序章对话必然发生在普雷纳帕特斯所在世界。",
+        "participants": [
+          "联邦学生会长",
+          "老师",
+          "普雷纳帕特斯"
+        ],
+        "source_key": "90_推测与考据.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "90_推测与考据.txt",
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1,
+        "epistemic_note": "内容源自社区理论推测，证据强度低。"
+      },
+      {
+        "id": 189,
+        "score": 0.907944952261005,
+        "text": "老师在联邦学生会设施中醒来，首席行政官七神凛向其说明当前情况：联邦学生会长失踪，圣所之塔控制出现问题，越狱者和武装人员导致联邦直辖区陷入混乱。",
+        "participants": [
+          "老师",
+          "七神凛",
+          "联邦学生会长"
+        ],
+        "source_key": "10_序章.txt",
+        "segment_index": 0,
+        "story_time_text": "故事开场",
+        "story_order": null,
+        "timeline_scope": "10_序章.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "文档直接陈述了事件发生及背景状况。"
+      },
+      {
+        "id": 192,
+        "score": 0.9010683267417364,
+        "text": "序章剧情支持‘联邦学生会长预见过失败可能并将改变结局的希望托付给老师’这一说法，但序章本身不能单独证明她经历了无数轮循环、完整重置世界，或阿罗娜是其数据化分身。",
+        "participants": [
+          "联邦学生会长",
+          "老师",
+          "阿罗娜"
+        ],
+        "source_key": "10_序章.txt",
+        "segment_index": 0,
+        "story_time_text": "无",
+        "story_order": null,
+        "timeline_scope": "10_序章.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "文档明确界定了序章所能证明和不能证明的内容范围。"
+      },
+      {
+        "id": 275,
+        "score": 0.8971394352416564,
+        "text": "联邦学生会负责跨学园行政事务与公共基础设施协调。会长失踪后，其权限和治安体系出现重大空缺，凛等成员承担了大量代理工作。联邦学生会与夏莱在行政上有关联，但夏莱并非联邦学生会本身。",
+        "participants": [
+          "联邦学生会",
+          "会长",
+          "凛",
+          "夏莱"
+        ],
+        "source_key": "13_其他学园与常用角色百科.txt",
+        "segment_index": 3,
+        "story_time_text": "会长失踪后",
+        "story_order": null,
+        "timeline_scope": "13_其他学园与常用角色百科.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 387,
+        "score": 0.8558062426720943,
+        "text": "在第2话中，凛在葵、步、桃香等联邦学生会成员协助下录制面向市民的安全与行政宣传。凛回忆起从阿特拉哈西斯方舟返回后收到的一封信，信封以联邦学生会长笔迹书写，内含学生会长就任、集训等往日照片，以及一张学生会长独自站在陌生水边或地平线前的黑白照片。凛无法确认最后一张照片的地点与拍摄经过。",
+        "participants": [
+          "凛",
+          "葵",
+          "步",
+          "桃香",
+          "联邦学生会长"
+        ],
+        "source_key": "100_第二部_序章.txt",
+        "segment_index": 0,
+        "story_time_text": "第2话",
+        "story_order": null,
+        "timeline_scope": "100_第二部_序章.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 7,
+        "score": 0.8335280316939951,
+        "text": "联邦学生会长失踪后，联邦学生会无法完整行使原有权限，基沃托斯的行政与治安迅速陷入混乱。老师受联邦学生会长安排来到基沃托斯，担任联邦搜查社夏莱的顾问。",
+        "participants": [
+          "联邦学生会长",
+          "联邦学生会",
+          "基沃托斯",
+          "老师",
+          "夏莱"
+        ],
+        "source_key": "01_世界观与核心设定.txt",
+        "segment_index": 0,
+        "story_time_text": "联邦学生会长失踪后",
+        "story_order": null,
+        "timeline_scope": "01_世界观与核心设定.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 299,
+        "score": 0.5763749520239358,
+        "text": "在第二部Vol.0「联邦学生会篇」中，FruLink是老师利用什亭之箱收集公开信息的社交功能，用于寻找与“铂金发学生会长一直存在”这一共同现实相矛盾的记录。单个匿名帖子可提供线索，但不自动等同于官方旁白的确认。",
+        "participants": [
+          "第二部Vol.0联邦学生会編",
+          "Vol.0",
+          "联邦学生会篇",
+          "連邦生徒会編",
+          "FruLink",
+          "シャーケードの杖",
+          "联邦学生会",
+          "老师",
+          "什亭之箱",
+          "铂金发学生会长"
+        ],
+        "source_key": "14_世界设定与主线细节问答扩展.txt",
+        "segment_index": 2,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "reported",
+        "generation": 0,
+        "epistemic_note": "Source 22 中未标注发言者，内容基于问答记录中的回答，属于对游戏机制的陈述。"
+      },
+      {
+        "id": 390,
+        "score": 0.497645183239952,
+        "text": "序章中出现的黑白照片、黑白梦境、シャーケードの杖、陌生少女和发光多面体均为已发生的事实。然而，它们是否由同一力量造成、照片是否来自其他世界、少女是否就是后来出现的联邦学生会长、ダイビング部是否隶属旧SRT的潜伏单位，这些关联均未在序章中得到完整确认。",
+        "participants": [
+          "联邦学生会长",
+          "ダイビング部",
+          "旧SRT"
+        ],
+        "source_key": "100_第二部_序章.txt",
+        "segment_index": 0,
+        "story_time_text": "序章结束时",
+        "story_order": null,
+        "timeline_scope": "100_第二部_序章.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      }
+    ],
+    "evidence_concepts": [
+      {
+        "id": 16,
+        "score": 1.0,
+        "canonical_name": "联邦学生会长",
+        "description": "联邦学生会的前任领导者，其失踪导致行政混乱"
+      },
+      {
+        "id": 18,
+        "score": 0.7941204649671968,
+        "canonical_name": "老师",
+        "description": "受联邦学生会长安排来到基沃托斯担任夏莱顾问的人物"
+      },
+      {
+        "id": 165,
+        "score": 0.7734139149195736,
+        "canonical_name": "Lore碎片",
+        "description": "包含异常景象和影像的碎片，其内部影像能与受害者同步恢复，是确认异常实体存在的证据。"
+      },
+      {
+        "id": 17,
+        "score": 0.7660757159562036,
+        "canonical_name": "夏莱",
+        "description": "独立于单一学园的联邦社团，老师担任顾问"
+      },
+      {
+        "id": 32,
+        "score": 0.7660757159562036,
+        "canonical_name": "贝阿朵莉切",
+        "description": "数秘会成员之一"
+      },
+      {
+        "id": 59,
+        "score": 0.7660757159562036,
+        "canonical_name": "凯撒集团",
+        "description": "横跨金融、军工与安保领域的大型企业集团，多次干涉学园事务"
+      },
+      {
+        "id": 63,
+        "score": 0.7660757159562036,
+        "canonical_name": "小鸟游星野",
+        "description": "阿拜多斯对策委员会的前辈和核心战力，表面懒散，长期背负阿拜多斯衰落及梦前辈死亡带来的创伤"
+      },
+      {
+        "id": 65,
+        "score": 0.7660757159562036,
+        "canonical_name": "砂狼白子",
+        "description": "阿拜多斯对策委员会成员，性格寡言且行动直接，喜爱运动并常提出抢银行等极端方案"
+      },
+      {
+        "id": 66,
+        "score": 0.7660757159562036,
+        "canonical_name": "白子Terror",
+        "description": "来自另一世界、经历神秘反转的砂狼白子"
+      },
+      {
+        "id": 71,
+        "score": 0.7660757159562036,
+        "canonical_name": "空崎日奈",
+        "description": "格黑娜风纪委员会委员长，承担大量治安与行政压力且战斗能力很强"
+      },
+      {
+        "id": 73,
+        "score": 0.7660757159562036,
+        "canonical_name": "天童爱丽丝",
+        "description": "游戏开发部成员，与无名诸神技术有关，核心冲突在于能否以自己建立的身份选择成为勇者"
+      },
+      {
+        "id": 76,
+        "score": 0.7660757159562036,
+        "canonical_name": "锭前纱织",
+        "description": "阿里乌斯小队成员，曾射伤老师，后为拯救亚津子向老师求助"
+      },
+      {
+        "id": 77,
+        "score": 0.7660757159562036,
+        "canonical_name": "七神凛",
+        "description": "联邦学生会首席行政官，在会长失踪后承担大量代理职责"
+      },
+      {
+        "id": 78,
+        "score": 0.7660757159562036,
+        "canonical_name": "扇喜葵",
+        "description": "财务室长，日文名写作“扇喜アオイ”，并非早濑优香"
+      },
+      {
+        "id": 107,
+        "score": 0.7660757159562036,
+        "canonical_name": "Key",
+        "description": "与天童爱丽丝有关的系统人格，后获得独立意识与机械身体，成为姐妹关系。"
+      },
+      {
+        "id": 121,
+        "score": 0.7660757159562036,
+        "canonical_name": "秤亚津子",
+        "description": "阿里乌斯小队成员，曾被贝阿朵莉切试图利用完成仪式，后在纱织求助下获救。"
+      },
+      {
+        "id": 130,
+        "score": 0.7660757159562036,
+        "canonical_name": "铂金发联邦学生会长",
+        "description": "第二部Vol.0中出现的铂金色头发、紫色眼睛的女性，多数居民认定其一直存在，但少数人（老师、凛等）不认同。"
+      },
+      {
+        "id": 145,
+        "score": 0.7660757159562036,
+        "canonical_name": "奥威尔先生",
+        "description": "第二部观察者，交流围绕影像、媒介、符号、复制品与被社会接受的现实展开，提供观察角度和追踪方法，但不等于无条件帮助。"
+      },
+      {
+        "id": 146,
+        "score": 0.7660757159562036,
+        "canonical_name": "戈尔孔达",
+        "description": "与奥威尔先生存在连续变化相关关系的实体，用于描述其身份或关联的特定概念。"
+      },
+      {
+        "id": 147,
+        "score": 0.7660757159562036,
+        "canonical_name": "弗朗西斯",
+        "description": "与奥威尔先生存在连续变化相关关系的实体，用于描述其身份或关联的特定概念。"
+      }
+    ],
+    "association_paths": [
+      {
+        "association_id": 1932,
+        "from": [
+          "episode",
+          95
+        ],
+        "to": [
+          "episode",
+          326
+        ],
+        "relation_type": "semantic",
+        "relation_key": "related_to",
+        "relation_text": "Episode 326 指出没有直接证实联邦学生会长可以任意重置时间线，这与 Episode 95 中关于目前未确认会长是否确认重置过无限次时间或阿罗娜为其分身的推测内容一致。",
+        "polarity": 1,
+        "weight": 0.9005822336673737,
+        "confidence": 0.9,
+        "generation": 2,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6880030598235494,
+        "query_relevance": 0.457922,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 2198,
+        "from": [
+          "episode",
+          95
+        ],
+        "to": [
+          "episode",
+          359
+        ],
+        "relation_type": "semantic",
+        "relation_key": "semantic",
+        "relation_text": "当前片段（359）与候选片段（95）均讨论联邦学生会长是否重置时间以及阿罗娜是否为分身的问题，两者都指出目前剧情未确认这些事实，属于低置信度的社区理论推测。",
+        "polarity": 1,
+        "weight": 0.8843358104913559,
+        "confidence": 0.88,
+        "generation": 2,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6605784005182606,
+        "query_relevance": 0.242146,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 50,
+        "from": [
+          "concept",
+          17
+        ],
+        "to": [
+          "concept",
+          18
+        ],
+        "relation_type": "semantic",
+        "relation_key": "member_of",
+        "relation_text": "老师是夏莱社团的顾问，受联邦学生会长安排来到基沃托斯。",
+        "polarity": 1,
+        "weight": 0.91,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.45330806821347447,
+        "query_relevance": 0.218154,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 345,
+        "from": [
+          "concept",
+          130
+        ],
+        "to": [
+          "concept",
+          131
+        ],
+        "relation_type": "semantic",
+        "relation_key": "replaced_by",
+        "relation_text": "原学生会长被铂金发联邦学生会长取代或混淆，两者存在语义关联。",
+        "polarity": 1,
+        "weight": 0.8590593796968462,
+        "confidence": 0.85,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.40415844408716306,
+        "query_relevance": 0.215821,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 2439,
+        "from": [
+          "concept",
+          130
+        ],
+        "to": [
+          "concept",
+          496
+        ],
+        "relation_type": "semantic",
+        "relation_key": "believes_in_candidate",
+        "relation_text": "普通学生 群体将 铂金发联邦学生会长 视为原会长，这与多数居民的认知一致。",
+        "polarity": 1,
+        "weight": 0.8249989961385729,
+        "confidence": 0.82,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.3744353296684473,
+        "query_relevance": 0.209246,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1934,
+        "from": [
+          "episode",
+          188
+        ],
+        "to": [
+          "episode",
+          326
+        ],
+        "relation_type": "semantic",
+        "relation_key": "related_to",
+        "relation_text": "Episode 326 指出没有证实序章已经发生过无数次循环，这与 Episode 188 中陈述的序章剧情未明确宣布联邦学生会长拥有任意重置时间的能力的内容一致。",
+        "polarity": 1,
+        "weight": 0.8963120317459107,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.674317636489663,
+        "query_relevance": 0.208568,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 344,
+        "from": [
+          "concept",
+          130
+        ],
+        "to": [
+          "concept",
+          123
+        ],
+        "relation_type": "semantic",
+        "relation_key": "causes",
+        "relation_text": "铂金发联邦学生会长引发了集体记忆异常现象，两者存在语义关联。",
+        "polarity": 1,
+        "weight": 0.8585573148727419,
+        "confidence": 0.85,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.40392223953258094,
+        "query_relevance": 0.207184,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1146,
+        "from": [
+          "concept",
+          16
+        ],
+        "to": [
+          "concept",
+          274
+        ],
+        "relation_type": "semantic",
+        "relation_key": "affected_by_candidate",
+        "relation_text": "'联邦直辖区'（274）的混乱状态与'联邦学生会长'（16）的失踪有关，但两者并非同一对象。",
+        "polarity": 1,
+        "weight": 0.738501062989235,
+        "confidence": 0.6,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.37663554212450984,
+        "query_relevance": 0.207184,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 51,
+        "from": [
+          "concept",
+          16
+        ],
+        "to": [
+          "concept",
+          18
+        ],
+        "relation_type": "semantic",
+        "relation_key": "appointed_by",
+        "relation_text": "老师是受联邦学生会长安排来到基沃托斯担任夏莱顾问的人物。",
+        "polarity": 1,
+        "weight": 0.869997913837433,
+        "confidence": 0.85,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.6285734927475453,
+        "query_relevance": 0.203237,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 2435,
+        "from": [
+          "concept",
+          130
+        ],
+        "to": [
+          "concept",
+          492
+        ],
+        "relation_type": "identity",
+        "relation_key": "same_as_candidate",
+        "relation_text": "联邦学生会长 (铂金发女性) 与 铂金发联邦学生会长 指向同一对象，即第二部Vol.0中出现的铂金色头发、紫色眼睛的女性。",
+        "polarity": 1,
+        "weight": 0.9002801901102067,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.44846623497771126,
+        "query_relevance": 0.189442,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 2436,
+        "from": [
+          "concept",
+          130
+        ],
+        "to": [
+          "concept",
+          493
+        ],
+        "relation_type": "semantic",
+        "relation_key": "believes_in_candidate",
+        "relation_text": "基沃托斯居民 多数认定 铂金发联邦学生会长 一直存在，但这一认知与少数人（老师、凛等）的看法冲突。",
+        "polarity": 1,
+        "weight": 0.816111816763878,
+        "confidence": 0.8,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.36136759082141406,
+        "query_relevance": 0.189442,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 49,
+        "from": [
+          "concept",
+          16
+        ],
+        "to": [
+          "concept",
+          17
+        ],
+        "relation_type": "semantic",
+        "relation_key": "successor_to",
+        "relation_text": "夏莱是独立于单一学园的联邦社团，在联邦学生会长失踪后，老师担任其顾问以维持运作。",
+        "polarity": 1,
+        "weight": 0.8299979138374329,
+        "confidence": 0.8,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.5643985814094544,
+        "query_relevance": 0.182125,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 335,
+        "from": [
+          "concept",
+          78
+        ],
+        "to": [
+          "concept",
+          125
+        ],
+        "relation_type": "semantic",
+        "relation_key": "leader_of",
+        "relation_text": "扇喜葵是联邦学生会财务室的室长，但两者不是同一对象。",
+        "polarity": 1,
+        "weight": 0.8966965025663376,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.4466810542331047,
+        "query_relevance": 0.173489,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 503,
+        "from": [
+          "concept",
+          163
+        ],
+        "to": [
+          "concept",
+          131
+        ],
+        "relation_type": "semantic",
+        "relation_key": "related_to",
+        "relation_text": "花耶不认可新出现的铂金发联邦学生会长身份，该身份与原学生会长存在取代或混淆关系，两者存在语义关联。",
+        "polarity": 1,
+        "weight": 0.8168051052093507,
+        "confidence": 0.75,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.3390699124078338,
+        "query_relevance": 0.167531,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1640,
+        "from": [
+          "episode",
+          84
+        ],
+        "to": [
+          "episode",
+          275
+        ],
+        "relation_type": "semantic",
+        "relation_key": "member_of",
+        "relation_text": "七神凛在会长失踪后担任联邦学生会首席行政官并承担代理职责，属于联邦学生会体系。",
+        "polarity": 1,
+        "weight": 0.8967613703012467,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6508298925430046,
+        "query_relevance": 0.165699,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 26,
+        "from": [
+          "concept",
+          16
+        ],
+        "to": [
+          "episode",
+          7
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“联邦学生会长”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.369898,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1122,
+        "from": [
+          "concept",
+          16
+        ],
+        "to": [
+          "episode",
+          188
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“联邦学生会长”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.369898,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1127,
+        "from": [
+          "concept",
+          16
+        ],
+        "to": [
+          "episode",
+          189
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“联邦学生会长”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.369898,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1138,
+        "from": [
+          "concept",
+          16
+        ],
+        "to": [
+          "episode",
+          192
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“联邦学生会长”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.369898,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1902,
+        "from": [
+          "concept",
+          16
+        ],
+        "to": [
+          "episode",
+          326
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“联邦学生会长”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.369898,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 2359,
+        "from": [
+          "concept",
+          16
+        ],
+        "to": [
+          "episode",
+          387
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“联邦学生会长”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.369898,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 2175,
+        "from": [
+          "concept",
+          16
+        ],
+        "to": [
+          "episode",
+          359
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“联邦学生会长”",
+        "polarity": 1,
+        "weight": 0.8582200000000002,
+        "confidence": 0.85,
+        "generation": 1,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.62006395,
+        "query_relevance": 0.369898,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 485,
+        "from": [
+          "concept",
+          16
+        ],
+        "to": [
+          "episode",
+          95
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“联邦学生会长”",
+        "polarity": 1,
+        "weight": 0.6283000000000001,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.4806495000000001,
+        "query_relevance": 0.369898,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 473,
+        "from": [
+          "episode",
+          91
+        ],
+        "to": [
+          "concept",
+          130
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“铂金发联邦学生会长”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.7660757159562036,
+        "query_relevance": 0.31545,
+        "path_class": "structural_involves"
+      }
+    ],
+    "chronology_notes": [
+      "以下 Episode 没有已确认 story_order：[95, 188, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 96, 97, 326, 359, 189, 192, 275, 387, 7, 299, 390]"
+    ],
+    "source_key_cohort": {
+      "enabled": true,
+      "supported_source_keys": [
+        "06_细节问答与别名索引.txt",
+        "10_序章.txt"
+      ],
+      "added_episode_ids": [
+        79,
+        88,
+        97
+      ],
+      "boosted_episode_ids": [
+        78,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        96
+      ],
+      "skipped_source_keys": []
+    },
+    "rerank_trace": {
+      "enabled": true,
+      "backend": "cross_encoder",
+      "model": "Pro/BAAI/bge-reranker-v2-m3",
+      "candidate_episode_ids": [
+        95,
+        188,
+        326,
+        78,
+        359,
+        91,
+        79,
+        390,
+        299,
+        80,
+        192,
+        189,
+        81,
+        275,
+        84,
+        82,
+        7,
+        83,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        92,
+        93,
+        94,
+        96,
+        97,
+        387,
+        397,
+        361,
+        285,
+        385,
+        392,
+        447,
+        59,
+        55,
+        396,
+        316,
+        403,
+        320,
+        393,
+        395,
+        50,
+        318,
+        284,
+        32,
+        402,
+        38,
+        5,
+        29,
+        3,
+        382,
+        56,
+        60,
+        322,
+        444,
+        321,
+        446,
+        445,
+        442,
+        439,
+        21,
+        324,
+        53,
+        26,
+        173,
+        410,
+        35,
+        77,
+        276,
+        31,
+        419,
+        450,
+        71,
+        74,
+        451,
+        415,
+        407,
+        72,
+        47,
+        2,
+        356,
+        408,
+        399,
+        357,
+        340,
+        424,
+        438,
+        325,
+        122,
+        400,
+        37,
+        68,
+        1,
+        121,
+        386,
+        378,
+        464
+      ],
+      "rerank_input_episode_ids": [
+        95,
+        188,
+        326,
+        78,
+        359,
+        91,
+        79,
+        390,
+        299,
+        80,
+        192,
+        189,
+        81,
+        275,
+        84,
+        82,
+        7,
+        83,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        92,
+        93,
+        94,
+        96,
+        97,
+        387
+      ],
+      "precompression": {
+        "enabled": true,
+        "pool_limit": 100,
+        "configured_limit": 24,
+        "effective_limit": 30,
+        "pool_count": 100,
+        "rerank_input_count": 30,
+        "dropped_count": 70,
+        "decisions": [
+          {
+            "episode_id": 95,
+            "pool_rank": 1,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 188,
+            "pool_rank": 2,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 326,
+            "pool_rank": 3,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 78,
+            "pool_rank": 4,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 359,
+            "pool_rank": 5,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 91,
+            "pool_rank": 6,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 79,
+            "pool_rank": 7,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 390,
+            "pool_rank": 8,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 299,
+            "pool_rank": 9,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 80,
+            "pool_rank": 10,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 192,
+            "pool_rank": 11,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 189,
+            "pool_rank": 12,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 81,
+            "pool_rank": 13,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 275,
+            "pool_rank": 14,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 84,
+            "pool_rank": 15,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 82,
+            "pool_rank": 16,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 7,
+            "pool_rank": 17,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 83,
+            "pool_rank": 18,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 85,
+            "pool_rank": 19,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 86,
+            "pool_rank": 20,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 87,
+            "pool_rank": 21,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 88,
+            "pool_rank": 22,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 89,
+            "pool_rank": 23,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 90,
+            "pool_rank": 24,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 92,
+            "pool_rank": 25,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 93,
+            "pool_rank": 26,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 94,
+            "pool_rank": 27,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 96,
+            "pool_rank": 28,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 97,
+            "pool_rank": 29,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 387,
+            "pool_rank": 30,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 397,
+            "pool_rank": 31,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 361,
+            "pool_rank": 32,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 285,
+            "pool_rank": 33,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 385,
+            "pool_rank": 34,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 392,
+            "pool_rank": 35,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 447,
+            "pool_rank": 36,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 59,
+            "pool_rank": 37,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 55,
+            "pool_rank": 38,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 396,
+            "pool_rank": 39,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 316,
+            "pool_rank": 40,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 403,
+            "pool_rank": 41,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 320,
+            "pool_rank": 42,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 393,
+            "pool_rank": 43,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 395,
+            "pool_rank": 44,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 50,
+            "pool_rank": 45,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 318,
+            "pool_rank": 46,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 284,
+            "pool_rank": 47,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 32,
+            "pool_rank": 48,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 402,
+            "pool_rank": 49,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 38,
+            "pool_rank": 50,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 5,
+            "pool_rank": 51,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 29,
+            "pool_rank": 52,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 3,
+            "pool_rank": 53,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 382,
+            "pool_rank": 54,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 56,
+            "pool_rank": 55,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 60,
+            "pool_rank": 56,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 322,
+            "pool_rank": 57,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 444,
+            "pool_rank": 58,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 321,
+            "pool_rank": 59,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 446,
+            "pool_rank": 60,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 445,
+            "pool_rank": 61,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 442,
+            "pool_rank": 62,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 439,
+            "pool_rank": 63,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 21,
+            "pool_rank": 64,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 324,
+            "pool_rank": 65,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 53,
+            "pool_rank": 66,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 26,
+            "pool_rank": 67,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 173,
+            "pool_rank": 68,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 410,
+            "pool_rank": 69,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 35,
+            "pool_rank": 70,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 77,
+            "pool_rank": 71,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 276,
+            "pool_rank": 72,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 31,
+            "pool_rank": 73,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 419,
+            "pool_rank": 74,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 450,
+            "pool_rank": 75,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 71,
+            "pool_rank": 76,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 74,
+            "pool_rank": 77,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 451,
+            "pool_rank": 78,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 415,
+            "pool_rank": 79,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 407,
+            "pool_rank": 80,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 72,
+            "pool_rank": 81,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 47,
+            "pool_rank": 82,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 2,
+            "pool_rank": 83,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 356,
+            "pool_rank": 84,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 408,
+            "pool_rank": 85,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 399,
+            "pool_rank": 86,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 357,
+            "pool_rank": 87,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 340,
+            "pool_rank": 88,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 424,
+            "pool_rank": 89,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 438,
+            "pool_rank": 90,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 325,
+            "pool_rank": 91,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 122,
+            "pool_rank": 92,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 400,
+            "pool_rank": 93,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 37,
+            "pool_rank": 94,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 68,
+            "pool_rank": 95,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 1,
+            "pool_rank": 96,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 121,
+            "pool_rank": 97,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 386,
+            "pool_rank": 98,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 378,
+            "pool_rank": 99,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 464,
+            "pool_rank": 100,
+            "kept": false,
+            "reason": "dropped_budget"
+          }
+        ]
+      },
+      "atomic_queries": [
+        "联邦学生会长是否已经确认重置过无限次时间？",
+        "联邦学生会长是谁",
+        "联邦学生会长重置过时间吗",
+        "联邦学生会长重置过无限次时间吗",
+        "联邦学生会长确认过重置过无限次时间吗"
+      ],
+      "expanded_atomic_query_count": 5,
+      "atomic_queries_truncated": false,
+      "input_hash": "d4104ab28236cdc72ef15eb364499f66ab586cdcc627c4c318bcc01af909cb92",
+      "cache_hit": false,
+      "paragraph_context_episode_count": 0,
+      "paragraph_context_ids": [],
+      "required_evidence_floor_ids": [],
+      "atomic_evidence_floor_ids": [],
+      "answer_slot_anchor_ids": [],
+      "answer_slot_neighbor_floor_ids": [],
+      "rerank_candidate_text_chars": 2625,
+      "initial_prompt_chars": 0,
+      "coverage_prompt_chars": 0,
+      "review_mode": "cross_encoder",
+      "review_level": "cross_encoder",
+      "coverage_audit_performed": false,
+      "compressor_performed": false,
+      "cross_encoder_ranked_episode_ids": [
+        95,
+        326,
+        188,
+        359,
+        192,
+        390,
+        387,
+        91,
+        299,
+        275,
+        7,
+        84,
+        189,
+        78,
+        87,
+        93,
+        94,
+        80,
+        96,
+        90,
+        97,
+        81,
+        82,
+        86,
+        83,
+        85,
+        89,
+        92,
+        79,
+        88
+      ],
+      "cross_encoder_scores": [
+        0.99885654,
+        0.99359423,
+        0.97603488,
+        0.9647705,
+        0.9439618,
+        0.27900046,
+        0.24444503,
+        0.24011581,
+        0.15940851,
+        0.08333614,
+        0.06071483,
+        0.03921216,
+        0.03776996,
+        0.01995363,
+        0.01490185,
+        0.00337529,
+        0.00069103,
+        0.0005633,
+        0.00032527,
+        0.00031378,
+        0.00019864,
+        0.00015258,
+        0.00013047,
+        0.0001099,
+        5.253e-05,
+        5.186e-05,
+        3.907e-05,
+        2.519e-05,
+        1.963e-05,
+        1.724e-05
+      ],
+      "required_evidence_floor_replacements": [],
+      "atomic_evidence_floor_replacements": [],
+      "final_episode_ids": [
+        95,
+        326,
+        188,
+        359,
+        192,
+        390,
+        387,
+        91,
+        299,
+        275,
+        7,
+        84,
+        189,
+        78,
+        87,
+        93,
+        94,
+        80,
+        96,
+        90,
+        97,
+        81,
+        82,
+        86,
+        83,
+        85,
+        89,
+        92,
+        79,
+        88
+      ],
+      "deterministic_evidence_floor": {
+        "enabled": false,
+        "constraint_slots": [],
+        "whole_question_sparse_ids": [],
+        "atomic_floor_ids": [],
+        "selected_episode_ids": [],
+        "planned_episode_ids": [],
+        "candidate_missing_episode_ids": []
+      },
+      "constraint_candidate_ids": []
+    },
+    "retrieval_intensity": "standard",
+    "rerank_policy": "cross_encoder_standard",
+    "rerank_execution": {
+      "status": "completed",
+      "attempted": true,
+      "backend": "cross_encoder",
+      "model": "Pro/BAAI/bge-reranker-v2-m3",
+      "review_level": "cross_encoder",
+      "cache_hit": false,
+      "error": "",
+      "fallback_used": false
+    },
+    "evidence_slot_trace": {
+      "final_episode_ids": [
+        7,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        188,
+        189,
+        192,
+        275,
+        299,
+        326,
+        359,
+        387,
+        390
+      ],
+      "deterministic": {
+        "enabled": false,
+        "constraint_slots": [],
+        "whole_question_sparse_ids": [],
+        "atomic_floor_ids": [],
+        "selected_episode_ids": [],
+        "planned_episode_ids": [],
+        "candidate_missing_episode_ids": [],
+        "final_matched_episode_ids": [],
+        "missing_floor_episode_ids": []
+      },
+      "coverage_slots": []
+    },
+    "timings": {
+      "version": "query-stage-timing-v1",
+      "phases_seconds": {
+        "intent_parse": 6.71649,
+        "initial_embedding": 0.809236,
+        "initial_retrieval": 0.378702,
+        "initial_graph_expansion": 0.414372,
+        "followup_planning": 0.000894,
+        "followup_embedding": 0.0,
+        "followup_retrieval": 0.0,
+        "followup_graph_expansion": 0.0,
+        "source_cohort": 0.463295,
+        "evidence_preparation": 0.035681,
+        "evidence_rerank": 0.983017,
+        "association_growth": 9e-06,
+        "final_selection": 2.206964,
+        "growth_utility": 0.017037,
+        "answer_generation": 1e-06
+      },
+      "measured_seconds": 12.025698,
+      "unattributed_seconds": 0.036495,
+      "total_seconds": 12.062193
+    },
+    "service_cache_hit": false
+  }
+}

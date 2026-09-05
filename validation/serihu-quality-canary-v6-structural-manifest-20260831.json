@@ -1,0 +1,90 @@
+{
+  "config": {
+    "target_chars": 6000,
+    "max_chars": 8000,
+    "overlap_chars": 800,
+    "minimum_blocks": 2,
+    "reference_max_blocks": 10
+  },
+  "input_root": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/serihu-corpus-20260831",
+  "output_root": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/serihu-quality-canary-v6-structural-corpus-20260831",
+  "available_segments": 1563,
+  "selected_segments": 5,
+  "segments": [
+    {
+      "source_key": "主线剧情_最終編_第1章.txt",
+      "segment_index": 0,
+      "chars": 4621,
+      "speaker_count": 13,
+      "heading_count": 5,
+      "quote_count": 48,
+      "scene_score": 53,
+      "attribution_score": 72,
+      "strata": [
+        "regression_anchor"
+      ],
+      "canary_file": "000__主线剧情_最終編_第1章__segment-0000.txt",
+      "canary_record": null
+    },
+    {
+      "source_key": "主线剧情_最終編_第2章.txt",
+      "segment_index": 1,
+      "chars": 6070,
+      "speaker_count": 39,
+      "heading_count": 5,
+      "quote_count": 24,
+      "scene_score": 79,
+      "attribution_score": 176,
+      "strata": [
+        "scene_switch"
+      ],
+      "canary_file": "001__主线剧情_最終編_第2章__segment-0001.txt",
+      "canary_record": null
+    },
+    {
+      "source_key": "主线剧情_最終編_第4章.txt",
+      "segment_index": 1,
+      "chars": 4058,
+      "speaker_count": 41,
+      "heading_count": 4,
+      "quote_count": 34,
+      "scene_score": 73,
+      "attribution_score": 184,
+      "strata": [
+        "attribution"
+      ],
+      "canary_file": "002__主线剧情_最終編_第4章__segment-0001.txt",
+      "canary_record": null
+    },
+    {
+      "source_key": "主线剧情_第1篇_対策委員会編_第2章.txt",
+      "segment_index": 5,
+      "chars": 7330,
+      "speaker_count": 11,
+      "heading_count": 6,
+      "quote_count": 2,
+      "scene_score": 59,
+      "attribution_score": 46,
+      "strata": [
+        "long"
+      ],
+      "canary_file": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "canary_record": null
+    },
+    {
+      "source_key": "主线剧情_第3篇_エデン条約編_第4章.txt",
+      "segment_index": 24,
+      "chars": 1896,
+      "speaker_count": 5,
+      "heading_count": 3,
+      "quote_count": 2,
+      "scene_score": 29,
+      "attribution_score": 22,
+      "strata": [
+        "ordinary"
+      ],
+      "canary_file": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+      "canary_record": null
+    }
+  ]
+}

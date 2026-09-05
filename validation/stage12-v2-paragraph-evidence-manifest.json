@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "kind": "paragraph_mechanism",
+  "questions": {
+    "paragraph_gap_01": {
+      "required_episode_groups": [
+        [
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ]
+      ],
+      "required_sources": [
+        "main/33030.json"
+      ],
+      "answer": "用“那个那个，等一下啦”这句话打断了花子。",
+      "evidence_quote": "speaker: 미카 비무장\nzh-CN: 那个那个，等一下啦。",
+      "paragraph_id": 75,
+      "source_id": 8,
+      "maximum_episode_similarity": 0.5016581416130066
+    },
+    "paragraph_gap_02": {
+      "required_episode_groups": [
+        [
+          337,
+          338,
+          339
+        ]
+      ],
+      "required_sources": [
+        "main/33070.json"
+      ],
+      "answer": "日向在询问时语气结巴，并且伴随着咳嗽。",
+      "evidence_quote": "老、老师……咳咳，咳咳……您还好吧？",
+      "paragraph_id": 528,
+      "source_id": 67,
+      "maximum_episode_similarity": 0.5037646889686584
+    },
+    "paragraph_gap_03": {
+      "required_episode_groups": [
+        [
+          88,
+          89,
+          90,
+          91
+        ]
+      ],
+      "required_sources": [
+        "main/33050.json"
+      ],
+      "answer": "生徒会（或学生会）",
+      "evidence_quote": "是的！总之就是说“不太感兴趣”！",
+      "paragraph_id": 159,
+      "source_id": 18,
+      "maximum_episode_similarity": 0.5169973373413086
+    },
+    "paragraph_gap_04": {
+      "required_episode_groups": [
+        [
+          241,
+          242,
+          243
+        ]
+      ],
+      "required_sources": [
+        "event/10038/1003805.json"
+      ],
+      "answer": "老师表示理解，并说“原来如此，所以才会叫我来啊。”",
+      "evidence_quote": "[s]“原来如此，所以才会叫我来啊。”",
+      "paragraph_id": 368,
+      "source_id": 46,
+      "maximum_episode_similarity": 0.5319233536720276
+    },
+    "paragraph_gap_05": {
+      "required_episode_groups": [
+        [
+          252,
+          253,
+          254
+        ]
+      ],
+      "required_sources": [
+        "main/31060.json"
+      ],
+      "answer": "花子询问是否可以称呼梓为“小梓”。",
+      "evidence_quote": "那么，我可以叫你小梓吗？",
+      "paragraph_id": 391,
+      "source_id": 49,
+      "maximum_episode_similarity": 0.5466683506965637
+    },
+    "paragraph_gap_06": {
+      "required_episode_groups": [
+        [
+          275,
+          276,
+          277,
+          278,
+          279
+        ]
+      ],
+      "required_sources": [
+        "main/31090.json"
+      ],
+      "answer": "伊甸条约将防止两个学园之间发生全面战争。",
+      "evidence_quote": "如此一来，两个学院之间就不会再发生全面战争。",
+      "paragraph_id": 428,
+      "source_id": 54,
+      "maximum_episode_similarity": 0.5638523697853088
+    },
+    "paragraph_gap_07": {
+      "required_episode_groups": [
+        [
+          148,
+          149
+        ]
+      ],
+      "required_sources": [
+        "main/33190.json"
+      ],
+      "answer": "她说了“日富、美……？”",
+      "evidence_quote": "speaker: 아즈사 부상\nzh-CN: 日富、美……？",
+      "paragraph_id": 248,
+      "source_id": 29,
+      "maximum_episode_similarity": 0.5738219022750854
+    },
+    "paragraph_gap_08": {
+      "required_episode_groups": [
+        [
+          143,
+          144,
+          145,
+          146,
+          147
+        ]
+      ],
+      "required_sources": [
+        "main/33060.json"
+      ],
+      "answer": "染上战火与灰烬的那天（1）",
+      "evidence_quote": "下一话;染上战火与灰烬的那天（1）",
+      "paragraph_id": 245,
+      "source_id": 28,
+      "maximum_episode_similarity": 0.5905240774154663
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "purpose": "第二阶段三题正式导入范围；由 18 文件规模预检收缩为直接证据与必要桥接文件",
+  "database": "validation/ba-stage2-direct-k4.db",
+  "prompt_version": "v2.9_growth_evidence_guard",
+  "import_profile": {
+    "prepare_workers": 8,
+    "relation_batch_size": 24,
+    "episode_relation_candidate_k": 4,
+    "embedding_dtype": "float32"
+  },
+  "preflight": {
+    "files": 7,
+    "source_segments": 47,
+    "segment_target_chars": 6000,
+    "segment_max_chars": 8000,
+    "segment_overlap_chars": 800
+  },
+  "files": [
+    "main/31010.json",
+    "main/33030.json",
+    "main/33050.json",
+    "main/33060.json",
+    "main/33190.json",
+    "favor/10000/100002.json",
+    "event/10038/1003805.json"
+  ],
+  "coverage": {
+    "duty_paradise_paradox": ["main/31010.json", "main/33030.json"],
+    "aru_problem_solver_kaiser": ["favor/10000/100002.json", "main/33190.json"],
+    "shanhaijing_trinity_hospitality": [
+      "event/10038/1003805.json",
+      "main/33050.json",
+      "main/33060.json",
+      "main/33190.json"
+    ]
+  },
+  "scaling_probe": {
+    "database": "validation/ba-stage2-scaling-probe-k7.db",
+    "files_completed": ["main/31010.json", "main/31030.json"],
+    "sources": 9,
+    "episodes": 38,
+    "associations": 239,
+    "temporal_associations": 76,
+    "elapsed": "18m13s",
+    "finding": "k=7 产生稠密候选和长关系提示；正式批次改用 k=4。"
+  }
+}

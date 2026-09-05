@@ -1,0 +1,2097 @@
+{
+  "created_at": "2026-09-01T00:00:25.677551+00:00",
+  "checkpoint": false,
+  "configuration": {
+    "input": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/base-retrieval-online-all7-v22-stability-repeat.json",
+    "input_sha256": "09e0a0c95906814750c5d89986b6b4c4ec6e3f1141a7109400556caefb78caf7",
+    "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-stage22-frozen-20260901.db",
+    "database_sha256": "9d196eca642fb296bb47a966639c17d76c71a0b335ac28d4f5e401aee1c4dbc3",
+    "manifest": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/stage4-network-evidence-manifest.json",
+    "manifest_sha256": "2ef7d812f040a20b1305e1bace453e8ec1246310d15da3746d22d41cbc806264",
+    "question_ids": [
+      "eden_obligation_to_new_institution"
+    ],
+    "repeats": 1,
+    "workers": 1,
+    "review_mode": "strict",
+    "graph_max_hops": 0,
+    "growth_max_rounds": 0,
+    "paragraph_enabled": false,
+    "rerank_backend": "llm",
+    "candidate_pool": "frozen_from_input",
+    "selected_top_k": 20
+  },
+  "summary": {
+    "expected_repeats": 1,
+    "completed_runs": 1,
+    "question_count": 1,
+    "candidate_recall_at_100_mean": 1.0,
+    "candidate_recall_at_100_minimum": 1.0,
+    "selected_recall_at_20_mean": 1.0,
+    "selected_recall_at_20_median": 1.0,
+    "selected_recall_at_20_minimum": 1.0,
+    "runs_above_95_percent": 1,
+    "run_pass_rate": 1.0,
+    "unstable_required_slot_count": 0,
+    "required_slot_count": 7,
+    "unstable_required_slot_rate": 0.0,
+    "coverage_vote_disagreement_count": 1,
+    "estimated_model_calls": 3,
+    "latency_seconds_mean": 151.381251,
+    "latency_seconds_p95": 151.381251,
+    "questions": [
+      {
+        "question_id": "eden_obligation_to_new_institution",
+        "question": "请只依据已导入的剧情文件，重建“老师的义务”如何从圣娅在故事开端提出的伦理要求，发展到古圣堂废墟上“新的伊甸条约机构”这一制度性宣言。回答必须依次说明：圣娅提出的义务及乐园问题、老师后来关于信任学生的立场、原伊甸条约机构原本要解决什么、古圣堂与戒律守护者的历史作用、谁凭什么解释老师能够代理发起人，以及两个伊甸条约机构并存后现场发生了什么。请明确区分原文事实、跨片段推论和文本没有确定的部分；不要把“出现两个 ETO”写成守护者已经明确服从新 ETO。",
+        "completed_repeats": 1,
+        "expected_repeats": 1,
+        "recall_at_20_mean": 1.0,
+        "recall_at_20_minimum": 1.0,
+        "recall_at_20_maximum": 1.0,
+        "runs_above_threshold": 1,
+        "run_pass_rate": 1.0,
+        "latency_seconds_mean": 151.381251,
+        "latency_seconds_p95": 151.381251,
+        "groups": [
+          {
+            "group_index": 0,
+            "alternatives": [
+              7
+            ],
+            "candidate_available_in_all_runs": true,
+            "hit_count": 1,
+            "observation_count": 1,
+            "hit_rate": 1.0,
+            "missed_repeat_indices": [],
+            "initial_coverage_vote_rate": 1.0,
+            "independent_coverage_vote_rate": 1.0,
+            "coverage_vote_disagreement_rate": 0.0
+          },
+          {
+            "group_index": 1,
+            "alternatives": [
+              67,
+              68
+            ],
+            "candidate_available_in_all_runs": true,
+            "hit_count": 1,
+            "observation_count": 1,
+            "hit_rate": 1.0,
+            "missed_repeat_indices": [],
+            "initial_coverage_vote_rate": 1.0,
+            "independent_coverage_vote_rate": 1.0,
+            "coverage_vote_disagreement_rate": 0.0
+          },
+          {
+            "group_index": 2,
+            "alternatives": [
+              84
+            ],
+            "candidate_available_in_all_runs": true,
+            "hit_count": 1,
+            "observation_count": 1,
+            "hit_rate": 1.0,
+            "missed_repeat_indices": [],
+            "initial_coverage_vote_rate": 1.0,
+            "independent_coverage_vote_rate": 0.0,
+            "coverage_vote_disagreement_rate": 1.0
+          },
+          {
+            "group_index": 3,
+            "alternatives": [
+              121,
+              122,
+              123,
+              124
+            ],
+            "candidate_available_in_all_runs": true,
+            "hit_count": 1,
+            "observation_count": 1,
+            "hit_rate": 1.0,
+            "missed_repeat_indices": [],
+            "initial_coverage_vote_rate": 1.0,
+            "independent_coverage_vote_rate": 1.0,
+            "coverage_vote_disagreement_rate": 0.0
+          },
+          {
+            "group_index": 4,
+            "alternatives": [
+              197,
+              198
+            ],
+            "candidate_available_in_all_runs": true,
+            "hit_count": 1,
+            "observation_count": 1,
+            "hit_rate": 1.0,
+            "missed_repeat_indices": [],
+            "initial_coverage_vote_rate": 1.0,
+            "independent_coverage_vote_rate": 1.0,
+            "coverage_vote_disagreement_rate": 0.0
+          },
+          {
+            "group_index": 5,
+            "alternatives": [
+              199
+            ],
+            "candidate_available_in_all_runs": true,
+            "hit_count": 1,
+            "observation_count": 1,
+            "hit_rate": 1.0,
+            "missed_repeat_indices": [],
+            "initial_coverage_vote_rate": 1.0,
+            "independent_coverage_vote_rate": 1.0,
+            "coverage_vote_disagreement_rate": 0.0
+          },
+          {
+            "group_index": 6,
+            "alternatives": [
+              203
+            ],
+            "candidate_available_in_all_runs": true,
+            "hit_count": 1,
+            "observation_count": 1,
+            "hit_rate": 1.0,
+            "missed_repeat_indices": [],
+            "initial_coverage_vote_rate": 1.0,
+            "independent_coverage_vote_rate": 1.0,
+            "coverage_vote_disagreement_rate": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  "runs": [
+    {
+      "question_id": "eden_obligation_to_new_institution",
+      "question": "请只依据已导入的剧情文件，重建“老师的义务”如何从圣娅在故事开端提出的伦理要求，发展到古圣堂废墟上“新的伊甸条约机构”这一制度性宣言。回答必须依次说明：圣娅提出的义务及乐园问题、老师后来关于信任学生的立场、原伊甸条约机构原本要解决什么、古圣堂与戒律守护者的历史作用、谁凭什么解释老师能够代理发起人，以及两个伊甸条约机构并存后现场发生了什么。请明确区分原文事实、跨片段推论和文本没有确定的部分；不要把“出现两个 ETO”写成守护者已经明确服从新 ETO。",
+      "repeat_index": 1,
+      "elapsed_seconds": 151.381251,
+      "candidate_episode_ids": [
+        199,
+        84,
+        7,
+        123,
+        203,
+        3,
+        276,
+        275,
+        197,
+        5,
+        274,
+        67,
+        90,
+        1,
+        77,
+        198,
+        83,
+        200,
+        6,
+        2,
+        241,
+        196,
+        78,
+        121,
+        300,
+        272,
+        201,
+        235,
+        30,
+        4,
+        304,
+        124,
+        66,
+        58,
+        150,
+        74,
+        86,
+        89,
+        336,
+        205,
+        85,
+        273,
+        130,
+        139,
+        280,
+        115,
+        195,
+        39,
+        20,
+        119,
+        243,
+        71,
+        28,
+        122,
+        320,
+        88,
+        283,
+        104,
+        59,
+        22,
+        207,
+        302,
+        314,
+        103,
+        301,
+        271,
+        324,
+        69,
+        120,
+        329,
+        305,
+        68,
+        204,
+        57,
+        102,
+        75,
+        299,
+        76,
+        105,
+        278,
+        70,
+        62,
+        218,
+        91,
+        316,
+        81,
+        82,
+        80,
+        87,
+        31,
+        303,
+        277,
+        109,
+        326,
+        237,
+        65,
+        126,
+        127,
+        335,
+        19
+      ],
+      "selected_episode_ids": [
+        7,
+        3,
+        5,
+        67,
+        1,
+        272,
+        77,
+        123,
+        124,
+        199,
+        197,
+        198,
+        203,
+        84,
+        200,
+        201,
+        78,
+        121,
+        4,
+        6
+      ],
+      "score": {
+        "selected_hit_count": 7,
+        "required_group_count": 7,
+        "recall_at_20": 1.0,
+        "candidate_hit_count": 7,
+        "candidate_recall_at_100": 1.0,
+        "coverage_vote_disagreement_count": 1,
+        "estimated_model_calls": 3,
+        "groups": [
+          {
+            "group_index": 0,
+            "alternatives": [
+              7
+            ],
+            "candidate_available": true,
+            "candidate_matches": [
+              7
+            ],
+            "selected": true,
+            "selected_matches": [
+              7
+            ],
+            "first_rank": 1,
+            "initial_coverage_vote": true,
+            "independent_coverage_vote": true,
+            "coverage_vote_disagreement": false
+          },
+          {
+            "group_index": 1,
+            "alternatives": [
+              67,
+              68
+            ],
+            "candidate_available": true,
+            "candidate_matches": [
+              67,
+              68
+            ],
+            "selected": true,
+            "selected_matches": [
+              67
+            ],
+            "first_rank": 4,
+            "initial_coverage_vote": true,
+            "independent_coverage_vote": true,
+            "coverage_vote_disagreement": false
+          },
+          {
+            "group_index": 2,
+            "alternatives": [
+              84
+            ],
+            "candidate_available": true,
+            "candidate_matches": [
+              84
+            ],
+            "selected": true,
+            "selected_matches": [
+              84
+            ],
+            "first_rank": 14,
+            "initial_coverage_vote": true,
+            "independent_coverage_vote": false,
+            "coverage_vote_disagreement": true
+          },
+          {
+            "group_index": 3,
+            "alternatives": [
+              121,
+              122,
+              123,
+              124
+            ],
+            "candidate_available": true,
+            "candidate_matches": [
+              123,
+              121,
+              124,
+              122
+            ],
+            "selected": true,
+            "selected_matches": [
+              123,
+              124,
+              121
+            ],
+            "first_rank": 8,
+            "initial_coverage_vote": true,
+            "independent_coverage_vote": true,
+            "coverage_vote_disagreement": false
+          },
+          {
+            "group_index": 4,
+            "alternatives": [
+              197,
+              198
+            ],
+            "candidate_available": true,
+            "candidate_matches": [
+              197,
+              198
+            ],
+            "selected": true,
+            "selected_matches": [
+              197,
+              198
+            ],
+            "first_rank": 11,
+            "initial_coverage_vote": true,
+            "independent_coverage_vote": true,
+            "coverage_vote_disagreement": false
+          },
+          {
+            "group_index": 5,
+            "alternatives": [
+              199
+            ],
+            "candidate_available": true,
+            "candidate_matches": [
+              199
+            ],
+            "selected": true,
+            "selected_matches": [
+              199
+            ],
+            "first_rank": 10,
+            "initial_coverage_vote": true,
+            "independent_coverage_vote": true,
+            "coverage_vote_disagreement": false
+          },
+          {
+            "group_index": 6,
+            "alternatives": [
+              203
+            ],
+            "candidate_available": true,
+            "candidate_matches": [
+              203
+            ],
+            "selected": true,
+            "selected_matches": [
+              203
+            ],
+            "first_rank": 13,
+            "initial_coverage_vote": true,
+            "independent_coverage_vote": true,
+            "coverage_vote_disagreement": false
+          }
+        ]
+      },
+      "rerank_trace": {
+        "enabled": true,
+        "backend": "llm",
+        "model": "deepseek-ai/DeepSeek-V3.2",
+        "candidate_episode_ids": [
+          199,
+          7,
+          3,
+          84,
+          197,
+          67,
+          123,
+          5,
+          1,
+          203,
+          77,
+          198,
+          276,
+          200,
+          241,
+          275,
+          6,
+          274,
+          90,
+          83,
+          121,
+          2,
+          201,
+          78,
+          196,
+          4,
+          66,
+          300,
+          74,
+          336,
+          272,
+          124,
+          273,
+          235,
+          280,
+          58,
+          30,
+          39,
+          205,
+          304,
+          243,
+          122,
+          150,
+          283,
+          22,
+          86,
+          314,
+          115,
+          89,
+          271,
+          120,
+          85,
+          68,
+          104,
+          130,
+          139,
+          195,
+          20,
+          119,
+          71,
+          28,
+          320,
+          88,
+          59,
+          207,
+          302,
+          103,
+          301,
+          324,
+          69,
+          329,
+          305,
+          204,
+          57,
+          102,
+          75,
+          299,
+          76,
+          105,
+          278,
+          70,
+          62,
+          218,
+          91,
+          316,
+          81,
+          82,
+          80,
+          87,
+          31,
+          303,
+          277,
+          109,
+          326,
+          237,
+          65,
+          126,
+          127,
+          335,
+          19
+        ],
+        "rerank_input_episode_ids": [
+          199,
+          7,
+          3,
+          84,
+          197,
+          67,
+          123,
+          5,
+          1,
+          203,
+          77,
+          198,
+          276,
+          200,
+          241,
+          275,
+          6,
+          274,
+          90,
+          83,
+          121,
+          2,
+          201,
+          78,
+          196,
+          4,
+          66,
+          300,
+          74,
+          336,
+          272,
+          124,
+          273,
+          235,
+          280,
+          58,
+          30,
+          39,
+          205,
+          304,
+          243,
+          122,
+          150,
+          283,
+          22,
+          86,
+          314,
+          115,
+          89,
+          271,
+          120,
+          85,
+          68,
+          104,
+          130,
+          139,
+          195,
+          20,
+          119,
+          71,
+          28,
+          320,
+          88,
+          59,
+          207,
+          302,
+          103,
+          301,
+          324,
+          69,
+          329,
+          305,
+          204,
+          57,
+          102,
+          75,
+          299,
+          76,
+          105,
+          278,
+          70,
+          62,
+          218,
+          91,
+          316,
+          81,
+          82,
+          80,
+          87,
+          31,
+          303,
+          277,
+          109,
+          326,
+          237,
+          65,
+          126,
+          127,
+          335,
+          19
+        ],
+        "precompression": {
+          "enabled": false,
+          "pool_limit": 100,
+          "configured_limit": 100,
+          "effective_limit": 100,
+          "pool_count": 100,
+          "rerank_input_count": 100,
+          "dropped_count": 0,
+          "decisions": [
+            {
+              "episode_id": 199,
+              "pool_rank": 1,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 7,
+              "pool_rank": 2,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 3,
+              "pool_rank": 3,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 84,
+              "pool_rank": 4,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 197,
+              "pool_rank": 5,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 67,
+              "pool_rank": 6,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 123,
+              "pool_rank": 7,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 5,
+              "pool_rank": 8,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 1,
+              "pool_rank": 9,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 203,
+              "pool_rank": 10,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 77,
+              "pool_rank": 11,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 198,
+              "pool_rank": 12,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 276,
+              "pool_rank": 13,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 200,
+              "pool_rank": 14,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 241,
+              "pool_rank": 15,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 275,
+              "pool_rank": 16,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 6,
+              "pool_rank": 17,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 274,
+              "pool_rank": 18,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 90,
+              "pool_rank": 19,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 83,
+              "pool_rank": 20,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 121,
+              "pool_rank": 21,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 2,
+              "pool_rank": 22,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 201,
+              "pool_rank": 23,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 78,
+              "pool_rank": 24,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 196,
+              "pool_rank": 25,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 4,
+              "pool_rank": 26,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 66,
+              "pool_rank": 27,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 300,
+              "pool_rank": 28,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 74,
+              "pool_rank": 29,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 336,
+              "pool_rank": 30,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 272,
+              "pool_rank": 31,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 124,
+              "pool_rank": 32,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 273,
+              "pool_rank": 33,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 235,
+              "pool_rank": 34,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 280,
+              "pool_rank": 35,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 58,
+              "pool_rank": 36,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 30,
+              "pool_rank": 37,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 39,
+              "pool_rank": 38,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 205,
+              "pool_rank": 39,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 304,
+              "pool_rank": 40,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 243,
+              "pool_rank": 41,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 122,
+              "pool_rank": 42,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 150,
+              "pool_rank": 43,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 283,
+              "pool_rank": 44,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 22,
+              "pool_rank": 45,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 86,
+              "pool_rank": 46,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 314,
+              "pool_rank": 47,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 115,
+              "pool_rank": 48,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 89,
+              "pool_rank": 49,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 271,
+              "pool_rank": 50,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 120,
+              "pool_rank": 51,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 85,
+              "pool_rank": 52,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 68,
+              "pool_rank": 53,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 104,
+              "pool_rank": 54,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 130,
+              "pool_rank": 55,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 139,
+              "pool_rank": 56,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 195,
+              "pool_rank": 57,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 20,
+              "pool_rank": 58,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 119,
+              "pool_rank": 59,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 71,
+              "pool_rank": 60,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 28,
+              "pool_rank": 61,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 320,
+              "pool_rank": 62,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 88,
+              "pool_rank": 63,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 59,
+              "pool_rank": 64,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 207,
+              "pool_rank": 65,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 302,
+              "pool_rank": 66,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 103,
+              "pool_rank": 67,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 301,
+              "pool_rank": 68,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 324,
+              "pool_rank": 69,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 69,
+              "pool_rank": 70,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 329,
+              "pool_rank": 71,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 305,
+              "pool_rank": 72,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 204,
+              "pool_rank": 73,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 57,
+              "pool_rank": 74,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 102,
+              "pool_rank": 75,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 75,
+              "pool_rank": 76,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 299,
+              "pool_rank": 77,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 76,
+              "pool_rank": 78,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 105,
+              "pool_rank": 79,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 278,
+              "pool_rank": 80,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 70,
+              "pool_rank": 81,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 62,
+              "pool_rank": 82,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 218,
+              "pool_rank": 83,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 91,
+              "pool_rank": 84,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 316,
+              "pool_rank": 85,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 81,
+              "pool_rank": 86,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 82,
+              "pool_rank": 87,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 80,
+              "pool_rank": 88,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 87,
+              "pool_rank": 89,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 31,
+              "pool_rank": 90,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 303,
+              "pool_rank": 91,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 277,
+              "pool_rank": 92,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 109,
+              "pool_rank": 93,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 326,
+              "pool_rank": 94,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 237,
+              "pool_rank": 95,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 65,
+              "pool_rank": 96,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 126,
+              "pool_rank": 97,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 127,
+              "pool_rank": 98,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 335,
+              "pool_rank": 99,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 19,
+              "pool_rank": 100,
+              "kept": true,
+              "reason": "global_rank"
+            }
+          ]
+        },
+        "atomic_queries": [
+          "请只依据已导入的剧情文件，重建“老师的义务”如何从圣娅在故事开端提出的伦理要求，发展到古圣堂废墟上“新的伊甸条约机构”这一制度性宣言。回答必须依次说明：圣娅提出的义务及乐园问题、老师后来关于信任学生的立场、原伊甸条约机构原本要解决什么、古圣堂与戒律守护者的历史作用、谁凭什么解释老师能够代理发起人，以及两个伊甸条约机构并存后现场发生了什么。请明确区分原文事实、跨片段推论和文本没有确定的部分；不要把“出现两个 ETO”写成守护者已经明确服从新 ETO。",
+          "圣娅、老师、原伊甸条约机构、古圣堂：回答必须依次说明：圣娅提出的义务及乐园问题（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：老师后来关于信任学生的立场（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：原伊甸条约机构原本要解决什么（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：古圣堂与戒律守护者的历史作用（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：谁凭什么解释老师能够代理发起人，以及两个伊甸条约机构并存后现场发生了什么（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：请明确区分原文事实（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：跨片段推论和文本没有确定的部分（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：原伊甸条约机构（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：古圣堂：回答必须依次说明：圣娅提出的义务及乐园问题（独立证据槽，不能由同列另一条件替代）（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：古圣堂：老师后来关于信任学生的立场（独立证据槽，不能由同列另一条件替代）（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：古圣堂：原伊甸条约机构原本要解决什么（独立证据槽，不能由同列另一条件替代）（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：古圣堂：古圣堂与戒律守护者的历史作用（独立证据槽，不能由同列另一条件替代）（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：古圣堂：谁凭什么解释老师能够代理发起人，以及两个伊甸条约机构并存后现场发生了什么（独立证据槽，不能由同列另一条件替代）（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：古圣堂：请明确区分原文事实（独立证据槽，不能由同列另一条件替代）（独立证据槽，不能由同列另一条件替代）",
+          "圣娅、老师、原伊甸条约机构、古圣堂：古圣堂：跨片段推论和文本没有确定的部分（独立证据槽，不能由同列另一条件替代）（独立证据槽，不能由同列另一条件替代）",
+          "圣娅在故事开端提出了什么伦理要求",
+          "圣娅提出的伦理要求中关于老师的义务是什么",
+          "圣娅提出的伦理要求中关于乐园的问题是什么",
+          "老师后来关于信任学生的立场是什么",
+          "原伊甸条约机构原本要解决什么问题",
+          "古圣堂的历史作用是什么",
+          "戒律守护者的历史作用是什么",
+          "谁解释老师能够代理发起人",
+          "解释老师能够代理发起人的依据是什么",
+          "两个伊甸条约机构并存后现场发生了什么",
+          "两个伊甸条约机构并存后现场发生了什么具体事件",
+          "两个伊甸条约机构并存后现场发生了什么冲突或互动",
+          "圣娅在故事开端提出的伦理要求中，关于老师的义务具体是什么",
+          "圣娅在故事开端提出的伦理要求中，关于乐园的问题具体是什么",
+          "老师后来关于信任学生的立场具体是什么",
+          "原伊甸条约机构原本要解决的具体问题是什么",
+          "古圣堂的历史作用具体是什么",
+          "戒律守护者的历史作用具体是什么"
+        ],
+        "expanded_atomic_query_count": 34,
+        "atomic_queries_truncated": false,
+        "input_hash": "0889232ed55beadea55df3adc080c8705d271b4fac575bcc80fe9c593b8fea22",
+        "cache_hit": false,
+        "paragraph_context_episode_count": 0,
+        "paragraph_context_ids": [],
+        "required_evidence_floor_ids": [],
+        "atomic_evidence_floor_ids": [],
+        "answer_slot_anchor_ids": [],
+        "answer_slot_neighbor_floor_ids": [],
+        "rerank_candidate_text_chars": 8487,
+        "initial_prompt_chars": 43468,
+        "coverage_prompt_chars": 42661,
+        "review_mode": "strict",
+        "review_level": "strict",
+        "review_reasons": [
+          "configured_strict"
+        ],
+        "coverage_audit_performed": true,
+        "compressor_performed": true,
+        "initial": {
+          "coverage": [
+            {
+              "query": "圣娅在故事开端提出的伦理要求中，关于老师的义务具体是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                7
+              ],
+              "reason": "Episode 7 中圣娅请求老师不要背过身或移开视线，要一直看到故事最后，并认为这是老师做出某种‘选择’后应尽的义务。"
+            },
+            {
+              "query": "圣娅在故事开端提出的伦理要求中，关于乐园的问题具体是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                3,
+                5
+              ],
+              "reason": "Episode 3 和 5 共同证明圣娅提出了《七大古则》第五条关于‘乐园’的问题：‘能否证明，确实存在抵达乐园之人？’，并阐述了其证明悖论。"
+            },
+            {
+              "query": "老师后来关于信任学生的立场是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                67
+              ],
+              "reason": "Episode 67 中未标注发言者（老师）明确阐述其立场：如果老师不相信学生，就什么都无从开始；因为自己是大人，所以想要相信大家。"
+            },
+            {
+              "query": "原伊甸条约机构原本要解决什么问题",
+              "mode": "alternatives",
+              "episode_ids": [
+                1,
+                84,
+                272
+              ],
+              "reason": "Episode 1 说明条约旨在结束长期敌对、建立信任；Episode 84 和 272 补充说明其将创立机构以共同解决纷争、介入并解决争端。"
+            },
+            {
+              "query": "古圣堂的历史作用是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                77,
+                121,
+                123
+              ],
+              "reason": "Episode 77 和 121 证明古圣堂是历史上举办‘第一次公会议’的场所，后被选为签订仪式地点；Episode 123 补充其与戒律守护者的关联。"
+            },
+            {
+              "query": "戒律守护者的历史作用是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                123,
+                78,
+                124
+              ],
+              "reason": "Episode 123 和 124 明确解释戒律守护者是执行惩罚、被赋予‘制约’责任的武力集团（尤斯缇娜圣徒会），是修女会的前身。Episode 78 说明该组织已消失。"
+            },
+            {
+              "query": "谁解释老师能够代理发起人",
+              "mode": "alternatives",
+              "episode_ids": [
+                199
+              ],
+              "reason": "Episode 199 中圣娅推测并解释老师利用了联邦学生会长设立的‘夏莱’权限，代理了原本应由联邦学生会长担任的伊甸条约发起人角色。"
+            },
+            {
+              "query": "解释老师能够代理发起人的依据是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                199
+              ],
+              "reason": "Episode 199 中圣娅推测的依据是老师利用了‘夏莱’这个超法规机构的权限。"
+            },
+            {
+              "query": "两个伊甸条约机构并存后现场发生了什么具体事件",
+              "mode": "alternatives",
+              "episode_ids": [
+                197,
+                198,
+                203
+              ],
+              "reason": "Episode 197 和 198 记录了在古圣堂废墟上宣告‘新的伊甸条约机构’；Episode 203 记录了日和观察到因出现两个ETO而现场陷入混乱，戒律要求帮助ETO但不知该帮哪个。"
+            },
+            {
+              "query": "请明确区分原文事实",
+              "mode": "alternatives",
+              "episode_ids": [
+                7,
+                3,
+                5,
+                67,
+                1,
+                84,
+                272,
+                77,
+                121,
+                123,
+                78,
+                124,
+                199,
+                197,
+                198,
+                203
+              ],
+              "reason": "以上ID均来自source，epistemic_status为asserted，是原文直接陈述的事实证据，可用于区分原文事实部分。"
+            },
+            {
+              "query": "跨片段推论和文本没有确定的部分",
+              "mode": "alternatives",
+              "episode_ids": [
+                199,
+                200,
+                201
+              ],
+              "reason": "Episode 199 中圣娅的推测（‘认为’、‘推测’），以及 Episode 200 和 201 中圣娅的结论和指责，属于角色推测或解读，可作为跨片段推论或文本未明确确定之处的证据边界。"
+            }
+          ],
+          "missing_aspects": []
+        },
+        "coverage_audit": {
+          "coverage": [
+            {
+              "query": "圣娅在故事开端向老师提出的伦理要求：老师应尽的义务是不要背过身或移开视线，要一直看到故事最后。",
+              "mode": "alternatives",
+              "episode_ids": [
+                7
+              ],
+              "reason": "Episode 7 直接陈述了圣娅对老师提出的要求，即老师做出了某种‘选择’后应尽的义务是‘不要背过身或移开视线，要一直看到最后’。"
+            },
+            {
+              "query": "圣娅提出的伦理要求中关于乐园的问题：她引述《七大古则》第五条，询问‘能否证明，确实存在抵达乐园之人？’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                3
+              ],
+              "reason": "Episode 3 直接记录了圣娅向老师提出的关于‘乐园’的第五则古则问题。"
+            },
+            {
+              "query": "圣娅对乐园问题的进一步阐述：她解释第五则古则涉及无法证明的命题，即抵达乐园之人无法在乐园之外被观测或证明其存在，并质疑无法证明的真实是否没有价值。",
+              "mode": "alternatives",
+              "episode_ids": [
+                5
+              ],
+              "reason": "Episode 5 直接记录了圣娅对第五则古则含义的阐述，包括其证明悖论和对价值的质疑。"
+            },
+            {
+              "query": "老师后来关于信任学生的立场：如果老师不相信学生，就什么都无从开始；因为自己是大人，所以想要相信大家。",
+              "mode": "alternatives",
+              "episode_ids": [
+                67
+              ],
+              "reason": "Episode 67 直接记录了未标注发言者（老师）关于信任学生的信念陈述。"
+            },
+            {
+              "query": "原伊甸条约机构原本要解决的问题：解决圣三一和格黑娜之间的长期敌对和纷争，建立信任与和平。",
+              "mode": "alternatives",
+              "episode_ids": [
+                1
+              ],
+              "reason": "Episode 1 直接说明了伊甸条约旨在结束长期敌对、建立信任、取代憎恶。"
+            },
+            {
+              "query": "原伊甸条约机构的具体运作方式：建立一个由双方核心成员全部出席的中立机构，在双方产生纠纷时介入并解决争端。",
+              "mode": "alternatives",
+              "episode_ids": [
+                272
+              ],
+              "reason": "Episode 272 直接说明了原伊甸条约机构（ETO）的核心是建立中立机构以解决争端。"
+            },
+            {
+              "query": "古圣堂的历史作用：是圣三一历史上举办‘第一次公会议’的场所。",
+              "mode": "alternatives",
+              "episode_ids": [
+                77
+              ],
+              "reason": "Episode 77 直接陈述了古圣堂是举办第一次公会议的场所。"
+            },
+            {
+              "query": "戒律守护者的历史作用：是圣三一用来处理违背约定者的武力集团，负责执行约定违反时的惩罚，即‘尤斯缇娜圣徒会’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                123
+              ],
+              "reason": "Episode 123 直接解释了戒律守护者的定义、责任和历史名称（尤斯缇娜圣徒会）。"
+            },
+            {
+              "query": "戒律守护者的后继者：修女会是历史上尤斯缇娜圣徒会的后继者。",
+              "mode": "alternatives",
+              "episode_ids": [
+                124
+              ],
+              "reason": "Episode 124 直接确认了修女会是尤斯缇娜圣徒会的前身/后继者。"
+            },
+            {
+              "query": "谁解释老师能够代理发起人：圣娅推测老师代理了原本应由联邦学生会长担任的伊甸条约发起人角色。",
+              "mode": "alternatives",
+              "episode_ids": [
+                199
+              ],
+              "reason": "Episode 199 直接记录了圣娅推测老师代理了发起人角色。"
+            },
+            {
+              "query": "解释老师能够代理发起人的依据：圣娅推测老师利用了联邦学生会长设立的超法规机构‘夏莱’的权限。",
+              "mode": "alternatives",
+              "episode_ids": [
+                199
+              ],
+              "reason": "Episode 199 直接记录了圣娅推测老师代理发起人的依据是‘夏莱’的权限。"
+            },
+            {
+              "query": "两个伊甸条约机构并存后现场发生了什么：日和观察到现场陷入混乱，因为戒律要求帮助伊甸条约机构，但现在却出现了两个ETO，让她不知所措。",
+              "mode": "alternatives",
+              "episode_ids": [
+                203
+              ],
+              "reason": "Episode 203 直接描述了日和因出现两个ETO而感到混乱和不知所措。"
+            },
+            {
+              "query": "新的伊甸条约机构宣言的现场：一个未标注发言者在曾是古圣堂的废墟上，向聚集的条约相关方宣告‘我们是，新的伊甸条约机构’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                197,
+                198
+              ],
+              "reason": "Episode 197 和 198 直接记录了‘新的伊甸条约机构’的宣言现场和地点。"
+            },
+            {
+              "query": "圣娅对老师行为的解读：她认为老师是在歪曲契约、曲解条款，以捏造出符合自己心意的结果，是用‘大人’的方式来对付‘大人’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                200,
+                201
+              ],
+              "reason": "Episode 200 和 201 直接记录了圣娅对老师行为动机和方式的解读与指责。"
+            },
+            {
+              "query": "原文事实：圣娅提出了老师的义务和乐园问题（Ep 7, 3, 5）；老师表达了信任学生的立场（Ep 67）；原ETO旨在解决圣三一与格黑娜的敌对与纷争（Ep 1, 272）；古圣堂是第一次公会议场所（Ep 77）；戒律守护者是尤斯缇娜圣徒会（Ep 123）；圣娅推测老师代理发起人（Ep 199）；新ETO宣言（Ep 197, 198）；两个ETO并存导致混乱（Ep 203）。",
+              "mode": "joint",
+              "episode_ids": [
+                7,
+                3,
+                5,
+                67,
+                1,
+                272,
+                77,
+                123,
+                199,
+                197,
+                198,
+                203
+              ],
+              "reason": "这些Episode分别直接记录了问题中要求区分的各个‘原文事实’部分，没有进行推论。"
+            },
+            {
+              "query": "跨片段推论和文本没有确定的部分：例如，老师具体如何利用‘夏莱’权限代理发起人的操作细节、‘新的伊甸条约机构’的具体章程和权力、戒律守护者（尤斯缇娜圣徒会）是否明确服从新ETO（文本未确定，日和只提到戒律要求帮助ETO，但出现两个导致混乱）、圣娅的‘乐园’问题与伊甸条约‘乐园’隐喻之间的直接因果联系（文本有暗示但未明确论证）、老师从‘应尽的义务’到‘信任学生’立场的内在思想发展过程等。",
+              "mode": "alternatives",
+              "episode_ids": [],
+              "reason": "候选Episode中未提供直接证据来界定哪些是明确的‘跨片段推论’或‘文本没有确定的部分’。这是一个需要基于所有已知事实进行逻辑区分的元判断，而非一个可由单一Episode证明的独立事实槽。因此，此槽位无法由现有Episode覆盖，应归入missing_aspects。"
+            }
+          ],
+          "missing_aspects": [
+            "跨片段推论和文本没有确定的部分的具体界定和列举（例如，老师代理发起人的具体操作细节、新ETO的具体章程、守护者是否服从新ETO的明确陈述、圣娅的乐园问题与条约隐喻的直接因果论证、老师思想发展过程等）。此部分需要综合分析所有事实并做出判断，无法由单个Episode直接证明。"
+          ]
+        },
+        "independent_coverage": {
+          "coverage": [
+            {
+              "query": "圣娅在故事开端向老师提出的伦理要求：老师应尽的义务是不要背过身或移开视线，要一直看到故事最后。",
+              "mode": "alternatives",
+              "episode_ids": [
+                7
+              ],
+              "reason": "Episode 7 直接陈述了圣娅对老师提出的要求，即老师做出了某种‘选择’后应尽的义务是‘不要背过身或移开视线，要一直看到最后’。"
+            },
+            {
+              "query": "圣娅提出的伦理要求中关于乐园的问题：她引述《七大古则》第五条，询问‘能否证明，确实存在抵达乐园之人？’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                3
+              ],
+              "reason": "Episode 3 直接记录了圣娅向老师提出的关于‘乐园’的第五则古则问题。"
+            },
+            {
+              "query": "圣娅对乐园问题的进一步阐述：她解释第五则古则涉及无法证明的命题，即抵达乐园之人无法在乐园之外被观测或证明其存在，并质疑无法证明的真实是否没有价值。",
+              "mode": "alternatives",
+              "episode_ids": [
+                5
+              ],
+              "reason": "Episode 5 直接记录了圣娅对第五则古则含义的阐述，包括其证明悖论和对价值的质疑。"
+            },
+            {
+              "query": "老师后来关于信任学生的立场：如果老师不相信学生，就什么都无从开始；因为自己是大人，所以想要相信大家。",
+              "mode": "alternatives",
+              "episode_ids": [
+                67
+              ],
+              "reason": "Episode 67 直接记录了未标注发言者（老师）关于信任学生的信念陈述。"
+            },
+            {
+              "query": "原伊甸条约机构原本要解决的问题：解决圣三一和格黑娜之间的长期敌对和纷争，建立信任与和平。",
+              "mode": "alternatives",
+              "episode_ids": [
+                1
+              ],
+              "reason": "Episode 1 直接说明了伊甸条约旨在结束长期敌对、建立信任、取代憎恶。"
+            },
+            {
+              "query": "原伊甸条约机构的具体运作方式：建立一个由双方核心成员全部出席的中立机构，在双方产生纠纷时介入并解决争端。",
+              "mode": "alternatives",
+              "episode_ids": [
+                272
+              ],
+              "reason": "Episode 272 直接说明了原伊甸条约机构（ETO）的核心是建立中立机构以解决争端。"
+            },
+            {
+              "query": "古圣堂的历史作用：是圣三一历史上举办‘第一次公会议’的场所。",
+              "mode": "alternatives",
+              "episode_ids": [
+                77
+              ],
+              "reason": "Episode 77 直接陈述了古圣堂是举办第一次公会议的场所。"
+            },
+            {
+              "query": "戒律守护者的历史作用：是圣三一用来处理违背约定者的武力集团，负责执行约定违反时的惩罚，即‘尤斯缇娜圣徒会’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                123
+              ],
+              "reason": "Episode 123 直接解释了戒律守护者的定义、责任和历史名称（尤斯缇娜圣徒会）。"
+            },
+            {
+              "query": "戒律守护者的后继者：修女会是历史上尤斯缇娜圣徒会的后继者。",
+              "mode": "alternatives",
+              "episode_ids": [
+                124
+              ],
+              "reason": "Episode 124 直接确认了修女会是尤斯缇娜圣徒会的前身/后继者。"
+            },
+            {
+              "query": "谁解释老师能够代理发起人：圣娅推测老师代理了原本应由联邦学生会长担任的伊甸条约发起人角色。",
+              "mode": "alternatives",
+              "episode_ids": [
+                199
+              ],
+              "reason": "Episode 199 直接记录了圣娅推测老师代理了发起人角色。"
+            },
+            {
+              "query": "解释老师能够代理发起人的依据：圣娅推测老师利用了联邦学生会长设立的超法规机构‘夏莱’的权限。",
+              "mode": "alternatives",
+              "episode_ids": [
+                199
+              ],
+              "reason": "Episode 199 直接记录了圣娅推测老师代理发起人的依据是‘夏莱’的权限。"
+            },
+            {
+              "query": "两个伊甸条约机构并存后现场发生了什么：日和观察到现场陷入混乱，因为戒律要求帮助伊甸条约机构，但现在却出现了两个ETO，让她不知所措。",
+              "mode": "alternatives",
+              "episode_ids": [
+                203
+              ],
+              "reason": "Episode 203 直接描述了日和因出现两个ETO而感到混乱和不知所措。"
+            },
+            {
+              "query": "新的伊甸条约机构宣言的现场：一个未标注发言者在曾是古圣堂的废墟上，向聚集的条约相关方宣告‘我们是，新的伊甸条约机构’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                197,
+                198
+              ],
+              "reason": "Episode 197 和 198 直接记录了‘新的伊甸条约机构’的宣言现场和地点。"
+            },
+            {
+              "query": "圣娅对老师行为的解读：她认为老师是在歪曲契约、曲解条款，以捏造出符合自己心意的结果，是用‘大人’的方式来对付‘大人’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                200,
+                201
+              ],
+              "reason": "Episode 200 和 201 直接记录了圣娅对老师行为动机和方式的解读与指责。"
+            },
+            {
+              "query": "原文事实：圣娅提出了老师的义务和乐园问题（Ep 7, 3, 5）；老师表达了信任学生的立场（Ep 67）；原ETO旨在解决圣三一与格黑娜的敌对与纷争（Ep 1, 272）；古圣堂是第一次公会议场所（Ep 77）；戒律守护者是尤斯缇娜圣徒会（Ep 123）；圣娅推测老师代理发起人（Ep 199）；新ETO宣言（Ep 197, 198）；两个ETO并存导致混乱（Ep 203）。",
+              "mode": "joint",
+              "episode_ids": [
+                7,
+                3,
+                5,
+                67,
+                1,
+                272,
+                77,
+                123,
+                199,
+                197,
+                198,
+                203
+              ],
+              "reason": "这些Episode分别直接记录了问题中要求区分的各个‘原文事实’部分，没有进行推论。"
+            },
+            {
+              "query": "跨片段推论和文本没有确定的部分：例如，老师具体如何利用‘夏莱’权限代理发起人的操作细节、‘新的伊甸条约机构’的具体章程和权力、戒律守护者（尤斯缇娜圣徒会）是否明确服从新ETO（文本未确定，日和只提到戒律要求帮助ETO，但出现两个导致混乱）、圣娅的‘乐园’问题与伊甸条约‘乐园’隐喻之间的直接因果联系（文本有暗示但未明确论证）、老师从‘应尽的义务’到‘信任学生’立场的内在思想发展过程等。",
+              "mode": "alternatives",
+              "episode_ids": [],
+              "reason": "候选Episode中未提供直接证据来界定哪些是明确的‘跨片段推论’或‘文本没有确定的部分’。这是一个需要基于所有已知事实进行逻辑区分的元判断，而非一个可由单一Episode证明的独立事实槽。因此，此槽位无法由现有Episode覆盖，应归入missing_aspects。"
+            }
+          ],
+          "missing_aspects": [
+            "跨片段推论和文本没有确定的部分的具体界定和列举（例如，老师代理发起人的具体操作细节、新ETO的具体章程、守护者是否服从新ETO的明确陈述、圣娅的乐园问题与条约隐喻的直接因果论证、老师思想发展过程等）。此部分需要综合分析所有事实并做出判断，无法由单个Episode直接证明。"
+          ]
+        },
+        "merged_coverage": {
+          "coverage": [
+            {
+              "query": "圣娅在故事开端提出的伦理要求中，关于老师的义务具体是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                7
+              ],
+              "reason": "Episode 7 中圣娅请求老师不要背过身或移开视线，要一直看到故事最后，并认为这是老师做出某种‘选择’后应尽的义务。"
+            },
+            {
+              "query": "圣娅在故事开端向老师提出的伦理要求：老师应尽的义务是不要背过身或移开视线，要一直看到故事最后。",
+              "mode": "alternatives",
+              "episode_ids": [
+                7
+              ],
+              "reason": "Episode 7 直接陈述了圣娅对老师提出的要求，即老师做出了某种‘选择’后应尽的义务是‘不要背过身或移开视线，要一直看到最后’。"
+            },
+            {
+              "query": "圣娅在故事开端提出的伦理要求中，关于乐园的问题具体是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                3,
+                5
+              ],
+              "reason": "Episode 3 和 5 共同证明圣娅提出了《七大古则》第五条关于‘乐园’的问题：‘能否证明，确实存在抵达乐园之人？’，并阐述了其证明悖论。"
+            },
+            {
+              "query": "圣娅提出的伦理要求中关于乐园的问题：她引述《七大古则》第五条，询问‘能否证明，确实存在抵达乐园之人？’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                3
+              ],
+              "reason": "Episode 3 直接记录了圣娅向老师提出的关于‘乐园’的第五则古则问题。"
+            },
+            {
+              "query": "老师后来关于信任学生的立场是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                67
+              ],
+              "reason": "Episode 67 中未标注发言者（老师）明确阐述其立场：如果老师不相信学生，就什么都无从开始；因为自己是大人，所以想要相信大家。"
+            },
+            {
+              "query": "圣娅对乐园问题的进一步阐述：她解释第五则古则涉及无法证明的命题，即抵达乐园之人无法在乐园之外被观测或证明其存在，并质疑无法证明的真实是否没有价值。",
+              "mode": "alternatives",
+              "episode_ids": [
+                5
+              ],
+              "reason": "Episode 5 直接记录了圣娅对第五则古则含义的阐述，包括其证明悖论和对价值的质疑。"
+            },
+            {
+              "query": "原伊甸条约机构原本要解决什么问题",
+              "mode": "alternatives",
+              "episode_ids": [
+                1,
+                84,
+                272
+              ],
+              "reason": "Episode 1 说明条约旨在结束长期敌对、建立信任；Episode 84 和 272 补充说明其将创立机构以共同解决纷争、介入并解决争端。"
+            },
+            {
+              "query": "老师后来关于信任学生的立场：如果老师不相信学生，就什么都无从开始；因为自己是大人，所以想要相信大家。",
+              "mode": "alternatives",
+              "episode_ids": [
+                67
+              ],
+              "reason": "Episode 67 直接记录了未标注发言者（老师）关于信任学生的信念陈述。"
+            },
+            {
+              "query": "古圣堂的历史作用是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                77,
+                121,
+                123
+              ],
+              "reason": "Episode 77 和 121 证明古圣堂是历史上举办‘第一次公会议’的场所，后被选为签订仪式地点；Episode 123 补充其与戒律守护者的关联。"
+            },
+            {
+              "query": "原伊甸条约机构原本要解决的问题：解决圣三一和格黑娜之间的长期敌对和纷争，建立信任与和平。",
+              "mode": "alternatives",
+              "episode_ids": [
+                1
+              ],
+              "reason": "Episode 1 直接说明了伊甸条约旨在结束长期敌对、建立信任、取代憎恶。"
+            },
+            {
+              "query": "戒律守护者的历史作用是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                123,
+                78,
+                124
+              ],
+              "reason": "Episode 123 和 124 明确解释戒律守护者是执行惩罚、被赋予‘制约’责任的武力集团（尤斯缇娜圣徒会），是修女会的前身。Episode 78 说明该组织已消失。"
+            },
+            {
+              "query": "原伊甸条约机构的具体运作方式：建立一个由双方核心成员全部出席的中立机构，在双方产生纠纷时介入并解决争端。",
+              "mode": "alternatives",
+              "episode_ids": [
+                272
+              ],
+              "reason": "Episode 272 直接说明了原伊甸条约机构（ETO）的核心是建立中立机构以解决争端。"
+            },
+            {
+              "query": "谁解释老师能够代理发起人",
+              "mode": "alternatives",
+              "episode_ids": [
+                199
+              ],
+              "reason": "Episode 199 中圣娅推测并解释老师利用了联邦学生会长设立的‘夏莱’权限，代理了原本应由联邦学生会长担任的伊甸条约发起人角色。"
+            },
+            {
+              "query": "古圣堂的历史作用：是圣三一历史上举办‘第一次公会议’的场所。",
+              "mode": "alternatives",
+              "episode_ids": [
+                77
+              ],
+              "reason": "Episode 77 直接陈述了古圣堂是举办第一次公会议的场所。"
+            },
+            {
+              "query": "解释老师能够代理发起人的依据是什么",
+              "mode": "alternatives",
+              "episode_ids": [
+                199
+              ],
+              "reason": "Episode 199 中圣娅推测的依据是老师利用了‘夏莱’这个超法规机构的权限。"
+            },
+            {
+              "query": "戒律守护者的历史作用：是圣三一用来处理违背约定者的武力集团，负责执行约定违反时的惩罚，即‘尤斯缇娜圣徒会’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                123
+              ],
+              "reason": "Episode 123 直接解释了戒律守护者的定义、责任和历史名称（尤斯缇娜圣徒会）。"
+            },
+            {
+              "query": "两个伊甸条约机构并存后现场发生了什么具体事件",
+              "mode": "alternatives",
+              "episode_ids": [
+                197,
+                198,
+                203
+              ],
+              "reason": "Episode 197 和 198 记录了在古圣堂废墟上宣告‘新的伊甸条约机构’；Episode 203 记录了日和观察到因出现两个ETO而现场陷入混乱，戒律要求帮助ETO但不知该帮哪个。"
+            },
+            {
+              "query": "戒律守护者的后继者：修女会是历史上尤斯缇娜圣徒会的后继者。",
+              "mode": "alternatives",
+              "episode_ids": [
+                124
+              ],
+              "reason": "Episode 124 直接确认了修女会是尤斯缇娜圣徒会的前身/后继者。"
+            },
+            {
+              "query": "请明确区分原文事实",
+              "mode": "alternatives",
+              "episode_ids": [
+                7,
+                3,
+                5,
+                67,
+                1,
+                84,
+                272,
+                77,
+                121,
+                123,
+                78,
+                124,
+                199,
+                197,
+                198,
+                203
+              ],
+              "reason": "以上ID均来自source，epistemic_status为asserted，是原文直接陈述的事实证据，可用于区分原文事实部分。"
+            },
+            {
+              "query": "谁解释老师能够代理发起人：圣娅推测老师代理了原本应由联邦学生会长担任的伊甸条约发起人角色。",
+              "mode": "alternatives",
+              "episode_ids": [
+                199
+              ],
+              "reason": "Episode 199 直接记录了圣娅推测老师代理了发起人角色。"
+            },
+            {
+              "query": "跨片段推论和文本没有确定的部分",
+              "mode": "alternatives",
+              "episode_ids": [
+                199,
+                200,
+                201
+              ],
+              "reason": "Episode 199 中圣娅的推测（‘认为’、‘推测’），以及 Episode 200 和 201 中圣娅的结论和指责，属于角色推测或解读，可作为跨片段推论或文本未明确确定之处的证据边界。"
+            },
+            {
+              "query": "解释老师能够代理发起人的依据：圣娅推测老师利用了联邦学生会长设立的超法规机构‘夏莱’的权限。",
+              "mode": "alternatives",
+              "episode_ids": [
+                199
+              ],
+              "reason": "Episode 199 直接记录了圣娅推测老师代理发起人的依据是‘夏莱’的权限。"
+            },
+            {
+              "query": "两个伊甸条约机构并存后现场发生了什么：日和观察到现场陷入混乱，因为戒律要求帮助伊甸条约机构，但现在却出现了两个ETO，让她不知所措。",
+              "mode": "alternatives",
+              "episode_ids": [
+                203
+              ],
+              "reason": "Episode 203 直接描述了日和因出现两个ETO而感到混乱和不知所措。"
+            },
+            {
+              "query": "新的伊甸条约机构宣言的现场：一个未标注发言者在曾是古圣堂的废墟上，向聚集的条约相关方宣告‘我们是，新的伊甸条约机构’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                197,
+                198
+              ],
+              "reason": "Episode 197 和 198 直接记录了‘新的伊甸条约机构’的宣言现场和地点。"
+            },
+            {
+              "query": "圣娅对老师行为的解读：她认为老师是在歪曲契约、曲解条款，以捏造出符合自己心意的结果，是用‘大人’的方式来对付‘大人’。",
+              "mode": "alternatives",
+              "episode_ids": [
+                200,
+                201
+              ],
+              "reason": "Episode 200 和 201 直接记录了圣娅对老师行为动机和方式的解读与指责。"
+            },
+            {
+              "query": "原文事实：圣娅提出了老师的义务和乐园问题（Ep 7, 3, 5）；老师表达了信任学生的立场（Ep 67）；原ETO旨在解决圣三一与格黑娜的敌对与纷争（Ep 1, 272）；古圣堂是第一次公会议场所（Ep 77）；戒律守护者是尤斯缇娜圣徒会（Ep 123）；圣娅推测老师代理发起人（Ep 199）；新ETO宣言（Ep 197, 198）；两个ETO并存导致混乱（Ep 203）。",
+              "mode": "joint",
+              "episode_ids": [
+                7,
+                3,
+                5,
+                67,
+                1,
+                272,
+                77,
+                123,
+                199,
+                197,
+                198,
+                203
+              ],
+              "reason": "这些Episode分别直接记录了问题中要求区分的各个‘原文事实’部分，没有进行推论。"
+            },
+            {
+              "query": "跨片段推论和文本没有确定的部分：例如，老师具体如何利用‘夏莱’权限代理发起人的操作细节、‘新的伊甸条约机构’的具体章程和权力、戒律守护者（尤斯缇娜圣徒会）是否明确服从新ETO（文本未确定，日和只提到戒律要求帮助ETO，但出现两个导致混乱）、圣娅的‘乐园’问题与伊甸条约‘乐园’隐喻之间的直接因果联系（文本有暗示但未明确论证）、老师从‘应尽的义务’到‘信任学生’立场的内在思想发展过程等。",
+              "mode": "alternatives",
+              "episode_ids": [],
+              "reason": "候选Episode中未提供直接证据来界定哪些是明确的‘跨片段推论’或‘文本没有确定的部分’。这是一个需要基于所有已知事实进行逻辑区分的元判断，而非一个可由单一Episode证明的独立事实槽。因此，此槽位无法由现有Episode覆盖，应归入missing_aspects。"
+            }
+          ],
+          "missing_aspects": [
+            "跨片段推论和文本没有确定的部分的具体界定和列举（例如，老师代理发起人的具体操作细节、新ETO的具体章程、守护者是否服从新ETO的明确陈述、圣娅的乐园问题与条约隐喻的直接因果论证、老师思想发展过程等）。此部分需要综合分析所有事实并做出判断，无法由单个Episode直接证明。"
+          ]
+        },
+        "shortlist_episode_ids": [
+          7,
+          3,
+          67,
+          5,
+          1,
+          77,
+          123,
+          272,
+          199,
+          197,
+          124,
+          203,
+          200,
+          84,
+          121,
+          78,
+          198,
+          201,
+          276,
+          241,
+          275,
+          6,
+          274,
+          90,
+          83,
+          2,
+          196,
+          4,
+          66,
+          300,
+          74,
+          336,
+          273,
+          235,
+          280,
+          58,
+          30,
+          39,
+          205,
+          304,
+          243,
+          122,
+          150,
+          283,
+          22,
+          86,
+          314,
+          115
+        ],
+        "audit": {
+          "valid": true,
+          "final_episode_ids": [
+            7,
+            3,
+            5,
+            67,
+            1,
+            272,
+            77,
+            123,
+            124,
+            199,
+            197,
+            198,
+            203,
+            84,
+            200,
+            201,
+            78,
+            121,
+            4,
+            6
+          ],
+          "replacements": [],
+          "missing_aspects": [
+            "跨片段推论和文本没有确定的部分的具体界定和列举（例如，老师代理发起人的具体操作细节、新ETO的具体章程、守护者是否服从新ETO的明确陈述、圣娅的乐园问题与条约隐喻的直接因果论证、老师思想发展过程等）。此部分需要综合分析所有事实并做出判断，无法由单个Episode直接证明。"
+          ]
+        },
+        "coverage_enforced_replacements": [],
+        "required_evidence_floor_replacements": [],
+        "atomic_evidence_floor_replacements": [],
+        "final_episode_ids": [
+          7,
+          3,
+          5,
+          67,
+          1,
+          272,
+          77,
+          123,
+          124,
+          199,
+          197,
+          198,
+          203,
+          84,
+          200,
+          201,
+          78,
+          121,
+          4,
+          6
+        ]
+      },
+      "log_path": "validation/rerank-stability-canary-20260901-logs/rerank-stability-eden_obligation_to_new_institution-r01-20260831T235754.281886Z-7cf5cea7.jsonl"
+    }
+  ]
+}

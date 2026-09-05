@@ -1,0 +1,32 @@
+[
+  {
+    "id": "remedial-club-cause",
+    "label": "补课部真正原因",
+    "question": "补课部真正原因是什么？请给出与内鬼、叛徒有关的直接证据。",
+    "key_evidence_terms": ["补课部", "内鬼", "叛徒"]
+  },
+  {
+    "id": "paradise-paradox-crisis",
+    "label": "乐园悖论提出者与危机",
+    "question": "谁提出了乐园悖论？它对应的危机是什么？请给出直接证据。",
+    "key_evidence_terms": ["乐园悖论", "圣亚", "悖论"]
+  },
+  {
+    "id": "mika-arius-coup",
+    "label": "未花与阿里乌斯／政变",
+    "question": "未花与阿里乌斯是什么关系？这与政变有什么关联？请给出直接证据。",
+    "key_evidence_terms": ["阿里乌斯", "未花", "政变"]
+  },
+  {
+    "id": "ancient-cathedral-attack",
+    "label": "古圣堂袭击",
+    "question": "古圣堂袭击是如何发生的？请给出涉及巡航导弹、阿里乌斯和未花的直接证据。",
+    "key_evidence_terms": ["巡航导弹", "阿里乌斯", "未花"]
+  },
+  {
+    "id": "couples-menu-president-codename",
+    "label": "情侣专用菜单→社长→代号",
+    "question": "点了情侣专用菜单的社长是谁？她与浮士德代号有什么关系？请给出直接证据。",
+    "key_evidence_terms": ["情侣专用菜单", "阿鲁", "浮士德"]
+  }
+]

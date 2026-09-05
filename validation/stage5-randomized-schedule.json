@@ -1,0 +1,96 @@
+{
+  "version": "stage5-causality-v1",
+  "seed": 20260826,
+  "blocks": [
+    {
+      "block": 1,
+      "q2_arm_order": [
+        "P",
+        "M",
+        "T",
+        "C"
+      ]
+    },
+    {
+      "block": 2,
+      "q2_arm_order": [
+        "M",
+        "T",
+        "P",
+        "C"
+      ]
+    },
+    {
+      "block": 3,
+      "q2_arm_order": [
+        "T",
+        "C",
+        "P",
+        "M"
+      ]
+    },
+    {
+      "block": 4,
+      "q2_arm_order": [
+        "T",
+        "M",
+        "P",
+        "C"
+      ]
+    },
+    {
+      "block": 5,
+      "q2_arm_order": [
+        "T",
+        "P",
+        "M",
+        "C"
+      ]
+    },
+    {
+      "block": 6,
+      "q2_arm_order": [
+        "P",
+        "C",
+        "T",
+        "M"
+      ]
+    },
+    {
+      "block": 7,
+      "q2_arm_order": [
+        "P",
+        "C",
+        "T",
+        "M"
+      ]
+    },
+    {
+      "block": 8,
+      "q2_arm_order": [
+        "T",
+        "M",
+        "P",
+        "C"
+      ]
+    },
+    {
+      "block": 9,
+      "q2_arm_order": [
+        "T",
+        "M",
+        "C",
+        "P"
+      ]
+    },
+    {
+      "block": 10,
+      "q2_arm_order": [
+        "C",
+        "P",
+        "M",
+        "T"
+      ]
+    }
+  ]
+}

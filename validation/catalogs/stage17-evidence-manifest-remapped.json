@@ -1,0 +1,1148 @@
+{
+  "version": "stage14-combined-evidence-v1-remapped-v2",
+  "frozen_at": "2026-08-28T11:14:12.052492+00:00",
+  "question_count": 23,
+  "questions": {
+    "eden_obligation_to_new_institution": {
+      "required_episode_groups": [
+        [
+          117,
+          120,
+          121
+        ],
+        [
+          1296,
+          1426,
+          1431,
+          1432,
+          1433,
+          1434
+        ],
+        [
+          1407,
+          1460,
+          1461
+        ],
+        [
+          1502,
+          1503,
+          1504,
+          1505,
+          1506,
+          1507,
+          1509
+        ],
+        [
+          165,
+          166,
+          167
+        ],
+        [
+          167,
+          168,
+          179
+        ],
+        [
+          144,
+          166,
+          181
+        ]
+      ],
+      "required_sources": [
+        "main/31010.json",
+        "main/33030.json",
+        "main/33050.json",
+        "main/33060.json",
+        "main/33190.json"
+      ],
+      "required_terms": [
+        "圣娅",
+        "老师",
+        "伊甸条约机构",
+        "夏莱"
+      ],
+      "required_term_groups": [
+        [
+          "事实",
+          "原文",
+          "文本明确"
+        ],
+        [
+          "推论",
+          "推断",
+          "综合"
+        ],
+        [
+          "未知",
+          "不能确定",
+          "未明确",
+          "无法确定"
+        ]
+      ]
+    },
+    "old_cathedral_symbol_infrastructure_and_limits": {
+      "required_episode_groups": [
+        [
+          304,
+          305,
+          306
+        ],
+        [
+          1449,
+          1450,
+          1451,
+          1452,
+          1453,
+          1455
+        ],
+        [
+          1502,
+          1503,
+          1504
+        ],
+        [
+          1504,
+          1505,
+          1506
+        ],
+        [
+          1518,
+          1519,
+          1520,
+          1538
+        ],
+        [
+          1481,
+          1484,
+          1531
+        ],
+        [
+          1544,
+          1545,
+          1546
+        ],
+        [
+          165,
+          166,
+          167,
+          168,
+          179
+        ]
+      ],
+      "required_sources": [
+        "main/31090.json",
+        "main/33050.json",
+        "main/33060.json",
+        "main/33070.json",
+        "main/33190.json"
+      ],
+      "required_terms": [
+        "古圣堂",
+        "阿里乌斯",
+        "地下墓穴",
+        "伊甸条约"
+      ],
+      "required_term_groups": [
+        [
+          "事实",
+          "原文",
+          "文本明确"
+        ],
+        [
+          "推测",
+          "推论",
+          "推断"
+        ],
+        [
+          "未知",
+          "未明确",
+          "不能确定",
+          "无法确定"
+        ]
+      ]
+    },
+    "arius_two_patrons_and_control_boundaries": {
+      "required_episode_groups": [
+        [
+          1160,
+          1166,
+          1167,
+          1168,
+          1181
+        ],
+        [
+          1153,
+          1157,
+          1166,
+          1167,
+          1168,
+          1179,
+          1181
+        ],
+        [
+          1489,
+          1490,
+          1491,
+          1493
+        ],
+        [
+          1490,
+          1492,
+          1493
+        ],
+        [
+          1490,
+          1492,
+          1493
+        ],
+        [
+          1493,
+          1494,
+          1495,
+          1527
+        ],
+        [
+          1282,
+          1290,
+          1291
+        ],
+        [
+          1493,
+          1529,
+          1530,
+          1535,
+          1536,
+          1545
+        ]
+      ],
+      "required_sources": [
+        "main/32170.json",
+        "main/33070.json",
+        "main/33030.json"
+      ],
+      "required_terms": [
+        "未花",
+        "真琴",
+        "阿里乌斯",
+        "格黑娜"
+      ],
+      "required_term_groups": [
+        [
+          "事实",
+          "原文",
+          "文本明确"
+        ],
+        [
+          "推论",
+          "推断",
+          "综合"
+        ],
+        [
+          "不能",
+          "未知",
+          "未明确",
+          "无法确定"
+        ]
+      ]
+    },
+    "mika_motive_epistemic_four_layers": {
+      "required_episode_groups": [
+        [
+          46,
+          47,
+          116,
+          117
+        ],
+        [
+          1292,
+          1296,
+          1297,
+          1298,
+          1299,
+          1301,
+          1356,
+          1371,
+          1372,
+          1388,
+          1411
+        ],
+        [
+          1360,
+          1361,
+          1370,
+          1371,
+          1421
+        ],
+        [
+          1293,
+          1298,
+          1370,
+          1372,
+          1374
+        ],
+        [
+          1298,
+          1300,
+          1372,
+          1388,
+          1389,
+          1409,
+          1410,
+          1411
+        ],
+        [
+          1286,
+          1370,
+          1374,
+          1413,
+          1414,
+          1415,
+          1417,
+          1422
+        ],
+        [
+          1427,
+          1428,
+          1429,
+          1430
+        ],
+        [
+          1157,
+          1160,
+          1161,
+          1162,
+          1165,
+          1166,
+          1167,
+          1168,
+          1179,
+          1181
+        ]
+      ],
+      "required_sources": [
+        "main/31010.json",
+        "main/33030.json",
+        "main/32170.json"
+      ],
+      "required_terms": [
+        "未花",
+        "花子",
+        "乐园",
+        "阿里乌斯"
+      ],
+      "required_term_groups": [
+        [
+          "事实",
+          "直接",
+          "原文"
+        ],
+        [
+          "推测",
+          "推论",
+          "分析"
+        ],
+        [
+          "否认",
+          "修正",
+          "反驳"
+        ],
+        [
+          "未知",
+          "无法证明",
+          "不能确定",
+          "未明确"
+        ]
+      ]
+    },
+    "hifumi_azusa_identity_coalition_and_declaration": {
+      "required_episode_groups": [
+        [
+          255,
+          256,
+          257
+        ],
+        [
+          255,
+          256,
+          260,
+          261,
+          270
+        ],
+        [
+          2,
+          11,
+          12,
+          14,
+          15,
+          146
+        ],
+        [
+          12,
+          13,
+          14,
+          15
+        ],
+        [
+          13,
+          26,
+          27,
+          91,
+          92,
+          93,
+          94,
+          96,
+          160
+        ],
+        [
+          16,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          182
+        ],
+        [
+          151,
+          152,
+          159,
+          160,
+          161,
+          162
+        ],
+        [
+          165,
+          166,
+          167,
+          168,
+          179
+        ]
+      ],
+      "required_sources": [
+        "main/31060.json",
+        "main/33060.json",
+        "main/33190.json"
+      ],
+      "required_terms": [
+        "日富美",
+        "梓",
+        "浮士德",
+        "阿里乌斯",
+        "伊甸条约机构"
+      ],
+      "required_term_groups": [
+        [
+          "事实",
+          "原文",
+          "文本明确"
+        ],
+        [
+          "推论",
+          "推断",
+          "综合"
+        ],
+        [
+          "不能",
+          "未知",
+          "未明确",
+          "无法确定"
+        ]
+      ]
+    },
+    "hina_public_duty_personal_exhaustion_and_teacher_response": {
+      "required_episode_groups": [
+        [
+          1441,
+          1512,
+          1513,
+          1514
+        ],
+        [
+          1481,
+          1484,
+          1485,
+          1486,
+          1487,
+          1488,
+          1531
+        ],
+        [
+          107,
+          108,
+          110
+        ],
+        [
+          101,
+          102,
+          103,
+          104,
+          106,
+          109,
+          112,
+          140
+        ],
+        [
+          101,
+          103,
+          104,
+          106,
+          109
+        ],
+        [
+          101,
+          106,
+          107,
+          110,
+          111
+        ],
+        [
+          101,
+          102,
+          103,
+          105,
+          112,
+          140,
+          141,
+          142,
+          143
+        ],
+        [
+          117,
+          120,
+          121
+        ],
+        [
+          104,
+          162,
+          183
+        ]
+      ],
+      "required_sources": [
+        "main/31010.json",
+        "main/33060.json",
+        "main/33070.json",
+        "main/33190.json"
+      ],
+      "required_terms": [
+        "日奈",
+        "星野",
+        "老师",
+        "义务"
+      ],
+      "required_term_groups": [
+        [
+          "事实",
+          "原文",
+          "文本明确"
+        ],
+        [
+          "推论",
+          "推断",
+          "综合"
+        ],
+        [
+          "不能",
+          "未知",
+          "未明确",
+          "无法确定"
+        ]
+      ]
+    },
+    "kisaki_mika_governance_analogy_with_boundary": {
+      "required_episode_groups": [
+        [
+          1933,
+          1934,
+          1935,
+          1936,
+          1937,
+          1938
+        ],
+        [
+          1932,
+          1942,
+          1943,
+          1944,
+          1945,
+          1946,
+          1947
+        ],
+        [
+          1950,
+          1951,
+          1952,
+          1955,
+          1956
+        ],
+        [
+          1955,
+          1956,
+          1973
+        ],
+        [
+          1956,
+          1958,
+          1959,
+          1973
+        ],
+        [
+          1160,
+          1161,
+          1162,
+          1165,
+          1166,
+          1167,
+          1181
+        ],
+        [
+          1153,
+          1155,
+          1156,
+          1157,
+          1181
+        ],
+        [
+          1153,
+          1157,
+          1166,
+          1167,
+          1168,
+          1179,
+          1181
+        ]
+      ],
+      "required_sources": [
+        "event/10038/1003805.json",
+        "main/32170.json"
+      ],
+      "required_terms": [
+        "妃咲",
+        "未花",
+        "月影祭",
+        "格黑娜",
+        "阿里乌斯"
+      ],
+      "required_term_groups": [
+        [
+          "相似",
+          "共同",
+          "都"
+        ],
+        [
+          "差异",
+          "不同",
+          "相反"
+        ],
+        [
+          "类比",
+          "推论",
+          "推断"
+        ],
+        [
+          "没有直接",
+          "不能证明",
+          "未知",
+          "无直接因果"
+        ]
+      ]
+    },
+    "paragraph_gap_01": {
+      "required_episode_groups": [
+        [
+          1292,
+          1293,
+          1296,
+          1298,
+          1361,
+          1370,
+          1371,
+          1372,
+          1373,
+          1374,
+          1387,
+          1411,
+          1412
+        ]
+      ],
+      "required_sources": [
+        "main/33030.json"
+      ],
+      "answer": "用“那个那个，等一下啦”这句话打断了花子。",
+      "evidence_quote": "speaker: 미카 비무장\nzh-CN: 那个那个，等一下啦。",
+      "paragraph_id": 75,
+      "source_id": 8,
+      "maximum_episode_similarity": 0.5016581416130066
+    },
+    "paragraph_gap_02": {
+      "required_episode_groups": [
+        [
+          1447,
+          1483,
+          1529,
+          1531,
+          1534,
+          1535,
+          1536,
+          1543
+        ]
+      ],
+      "required_sources": [
+        "main/33070.json"
+      ],
+      "answer": "日向在询问时语气结巴，并且伴随着咳嗽。",
+      "evidence_quote": "老、老师……咳咳，咳咳……您还好吧？",
+      "paragraph_id": 528,
+      "source_id": 67,
+      "maximum_episode_similarity": 0.5037646889686584
+    },
+    "paragraph_gap_03": {
+      "required_episode_groups": [
+        [
+          1460,
+          1469,
+          1470,
+          1471,
+          1472,
+          1473,
+          1474,
+          1523
+        ]
+      ],
+      "required_sources": [
+        "main/33050.json"
+      ],
+      "answer": "生徒会（或学生会）",
+      "evidence_quote": "是的！总之就是说“不太感兴趣”！",
+      "paragraph_id": 159,
+      "source_id": 18,
+      "maximum_episode_similarity": 0.5169973373413086
+    },
+    "paragraph_gap_04": {
+      "required_episode_groups": [
+        [
+          1955,
+          1956,
+          1958,
+          1959,
+          1973
+        ]
+      ],
+      "required_sources": [
+        "event/10038/1003805.json"
+      ],
+      "answer": "老师表示理解，并说“原来如此，所以才会叫我来啊。”",
+      "evidence_quote": "[s]“原来如此，所以才会叫我来啊。”",
+      "paragraph_id": 368,
+      "source_id": 46,
+      "maximum_episode_similarity": 0.5319233536720276
+    },
+    "paragraph_gap_05": {
+      "required_episode_groups": [
+        [
+          252,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          272
+        ]
+      ],
+      "required_sources": [
+        "main/31060.json"
+      ],
+      "answer": "花子询问是否可以称呼梓为“小梓”。",
+      "evidence_quote": "那么，我可以叫你小梓吗？",
+      "paragraph_id": 391,
+      "source_id": 49,
+      "maximum_episode_similarity": 0.5466683506965637
+    },
+    "paragraph_gap_06": {
+      "required_episode_groups": [
+        [
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309,
+          310,
+          312,
+          314
+        ]
+      ],
+      "required_sources": [
+        "main/31090.json"
+      ],
+      "answer": "伊甸条约将防止两个学园之间发生全面战争。",
+      "evidence_quote": "如此一来，两个学院之间就不会再发生全面战争。",
+      "paragraph_id": 428,
+      "source_id": 54,
+      "maximum_episode_similarity": 0.5638523697853088
+    },
+    "paragraph_gap_07": {
+      "required_episode_groups": [
+        [
+          1,
+          2,
+          11,
+          16,
+          144,
+          146
+        ]
+      ],
+      "required_sources": [
+        "main/33190.json"
+      ],
+      "answer": "她说了“日富、美……？”",
+      "evidence_quote": "speaker: 아즈사 부상\nzh-CN: 日富、美……？",
+      "paragraph_id": 248,
+      "source_id": 29,
+      "maximum_episode_similarity": 0.5738219022750854
+    },
+    "paragraph_gap_08": {
+      "required_episode_groups": [
+        [
+          1442,
+          1517,
+          1519,
+          1520,
+          1538,
+          1539,
+          1540,
+          1541,
+          1542
+        ]
+      ],
+      "required_sources": [
+        "main/33060.json"
+      ],
+      "answer": "染上战火与灰烬的那天（1）",
+      "evidence_quote": "下一话;染上战火与灰烬的那天（1）",
+      "paragraph_id": 245,
+      "source_id": 28,
+      "maximum_episode_similarity": 0.5905240774154663
+    },
+    "concept_bridge_01_catacomb_rumor_to_infiltration": {
+      "required_episode_groups": [
+        [
+          1504,
+          1505,
+          1506
+        ],
+        [
+          1544,
+          1545,
+          1546
+        ]
+      ],
+      "required_sources": [
+        "main/33060.json",
+        "main/33070.json"
+      ],
+      "answer": "仪式前的说法是地下墓穴长达数十公里，在第一次公会议记录中也看不到尽头；袭击后日向推测阿里乌斯可能经由该墓穴从地下潜入。",
+      "bridge_concept_id": 149,
+      "bridge_concept": "古圣堂地下墓穴",
+      "evidence_boundary": "前者是传闻，后者仍是日向的现场推测，不能升级为已确认路线。"
+    },
+    "concept_bridge_02_world_truth_assertion_and_rebuttal": {
+      "required_episode_groups": [
+        [
+          144,
+          145,
+          146,
+          1516,
+          1517,
+          1519
+        ],
+        [
+          146,
+          149,
+          150,
+          182
+        ]
+      ],
+      "required_sources": [
+        "main/33060.json",
+        "main/33190.json"
+      ],
+      "answer": "阿里乌斯一方把充满杀意、憎恨且努力徒劳的世界称作真相；日富美反对把杀意、憎恨和虚无强加给别人。",
+      "bridge_concept_id": 170,
+      "bridge_concept": "世界的真相"
+    },
+    "concept_bridge_03_mika_betrayal_three_views": {
+      "required_episode_groups": [
+        [
+          1161,
+          1162,
+          1165
+        ],
+        [
+          1370,
+          1374,
+          1413
+        ],
+        [
+          1431,
+          1432,
+          1433
+        ]
+      ],
+      "required_sources": [
+        "main/32170.json",
+        "main/33030.json"
+      ],
+      "answer": "未花因排斥格黑娜而断言对方必会背叛；后来承认自己背叛朋友与伙伴；老师则认为背叛必有原因，不先相信学生就无从开始。",
+      "bridge_concept_id": 84,
+      "bridge_concept": "背叛"
+    },
+    "concept_bridge_04_hatred_political_chain": {
+      "required_episode_groups": [
+        [
+          1160,
+          1166,
+          1181
+        ],
+        [
+          144,
+          145,
+          146,
+          1493,
+          1530,
+          1545
+        ],
+        [
+          146,
+          149,
+          150,
+          182
+        ]
+      ],
+      "required_sources": [
+        "main/32170.json",
+        "main/33070.json",
+        "main/33190.json"
+      ],
+      "answer": "未花把共同憎恨格黑娜当作接近阿里乌斯的基础；纱织要求两校为阿里乌斯的长期憎恨付出代价；日富美反驳把憎恨和虚无当作世界真相。",
+      "bridge_concept_id": 367,
+      "bridge_concept": "憎恨"
+    },
+    "concept_bridge_05_paradise_proof_to_trust": {
+      "required_episode_groups": [
+        [
+          46,
+          47,
+          116
+        ],
+        [
+          1427,
+          1428,
+          1430
+        ]
+      ],
+      "required_sources": [
+        "main/31010.json",
+        "main/33030.json"
+      ],
+      "answer": "抵达真正乐园者不会离开，因此无法在乐园外观测并证明乐园；后续提出在无法证明时选择相信乐园与他人。",
+      "bridge_concept_id": 9,
+      "bridge_concept": "乐园"
+    },
+    "concept_bridge_06_pain_before_and_during_assault": {
+      "required_episode_groups": [
+        [
+          1516,
+          1517,
+          1520
+        ],
+        [
+          1485,
+          1487,
+          1488
+        ]
+      ],
+      "required_sources": [
+        "main/33060.json",
+        "main/33070.json"
+      ],
+      "answer": "准备阶段日和预期大家接下来都会痛苦但无可奈何；袭击中她因奉命不能放日奈通过，而日奈受伤仍要求她让开，所以感叹此事痛苦。",
+      "bridge_concept_id": 258,
+      "bridge_concept": "痛苦"
+    },
+    "concept_bridge_07_cathedral_repair_boundary_and_route": {
+      "required_episode_groups": [
+        [
+          1502,
+          1503,
+          1504,
+          1505,
+          1506
+        ],
+        [
+          1544,
+          1545,
+          1546
+        ]
+      ],
+      "required_sources": [
+        "main/33060.json",
+        "main/33070.json"
+      ],
+      "answer": "整修仅限仪式场所，地下仍是废墟且传闻有巨大墓穴；后来日向以地下墓穴推测阿里乌斯的潜入路线。",
+      "bridge_concept_ids": [
+        132,
+        149
+      ],
+      "bridge_concepts": [
+        "古圣堂大厅",
+        "古圣堂地下墓穴"
+      ],
+      "evidence_boundary": "地下路线是推测而非已确认事实。"
+    },
+    "concept_bridge_08_mika_fear_and_trust_response": {
+      "required_episode_groups": [
+        [
+          1161,
+          1162,
+          1165
+        ],
+        [
+          1289,
+          1431,
+          1432,
+          1433
+        ]
+      ],
+      "required_sources": [
+        "main/32170.json",
+        "main/33030.json"
+      ],
+      "answer": "未花认定格黑娜必然背叛并以此反对条约；老师认为即使可能遭背叛，背叛也有原因，而且不相信学生就无从开始。",
+      "bridge_concept_id": 84,
+      "bridge_concept": "背叛"
+    }
+  },
+  "provenance": {
+    "eden_obligation_to_new_institution": {
+      "kind": "network",
+      "questions": "validation\\evaluation-questions-stage4-network.json",
+      "evidence": "validation\\stage4-network-evidence-manifest.json"
+    },
+    "old_cathedral_symbol_infrastructure_and_limits": {
+      "kind": "network",
+      "questions": "validation\\evaluation-questions-stage4-network.json",
+      "evidence": "validation\\stage4-network-evidence-manifest.json"
+    },
+    "arius_two_patrons_and_control_boundaries": {
+      "kind": "network",
+      "questions": "validation\\evaluation-questions-stage4-network.json",
+      "evidence": "validation\\stage4-network-evidence-manifest.json"
+    },
+    "mika_motive_epistemic_four_layers": {
+      "kind": "network",
+      "questions": "validation\\evaluation-questions-stage4-network.json",
+      "evidence": "validation\\stage4-network-evidence-manifest.json"
+    },
+    "hifumi_azusa_identity_coalition_and_declaration": {
+      "kind": "network",
+      "questions": "validation\\evaluation-questions-stage4-network.json",
+      "evidence": "validation\\stage4-network-evidence-manifest.json"
+    },
+    "hina_public_duty_personal_exhaustion_and_teacher_response": {
+      "kind": "network",
+      "questions": "validation\\evaluation-questions-stage4-network.json",
+      "evidence": "validation\\stage4-network-evidence-manifest.json"
+    },
+    "kisaki_mika_governance_analogy_with_boundary": {
+      "kind": "network",
+      "questions": "validation\\evaluation-questions-stage4-network.json",
+      "evidence": "validation\\stage4-network-evidence-manifest.json"
+    },
+    "paragraph_gap_01": {
+      "kind": "paragraph_mechanism",
+      "questions": "validation\\evaluation-questions-stage12-v2-paragraph.json",
+      "evidence": "validation\\stage12-v2-paragraph-evidence-manifest.json"
+    },
+    "paragraph_gap_02": {
+      "kind": "paragraph_mechanism",
+      "questions": "validation\\evaluation-questions-stage12-v2-paragraph.json",
+      "evidence": "validation\\stage12-v2-paragraph-evidence-manifest.json"
+    },
+    "paragraph_gap_03": {
+      "kind": "paragraph_mechanism",
+      "questions": "validation\\evaluation-questions-stage12-v2-paragraph.json",
+      "evidence": "validation\\stage12-v2-paragraph-evidence-manifest.json"
+    },
+    "paragraph_gap_04": {
+      "kind": "paragraph_mechanism",
+      "questions": "validation\\evaluation-questions-stage12-v2-paragraph.json",
+      "evidence": "validation\\stage12-v2-paragraph-evidence-manifest.json"
+    },
+    "paragraph_gap_05": {
+      "kind": "paragraph_mechanism",
+      "questions": "validation\\evaluation-questions-stage12-v2-paragraph.json",
+      "evidence": "validation\\stage12-v2-paragraph-evidence-manifest.json"
+    },
+    "paragraph_gap_06": {
+      "kind": "paragraph_mechanism",
+      "questions": "validation\\evaluation-questions-stage12-v2-paragraph.json",
+      "evidence": "validation\\stage12-v2-paragraph-evidence-manifest.json"
+    },
+    "paragraph_gap_07": {
+      "kind": "paragraph_mechanism",
+      "questions": "validation\\evaluation-questions-stage12-v2-paragraph.json",
+      "evidence": "validation\\stage12-v2-paragraph-evidence-manifest.json"
+    },
+    "paragraph_gap_08": {
+      "kind": "paragraph_mechanism",
+      "questions": "validation\\evaluation-questions-stage12-v2-paragraph.json",
+      "evidence": "validation\\stage12-v2-paragraph-evidence-manifest.json"
+    },
+    "concept_bridge_01_catacomb_rumor_to_infiltration": {
+      "kind": "concept_bridge_mechanism",
+      "questions": "validation\\evaluation-questions-stage13-concept.json",
+      "evidence": "validation\\stage13-concept-evidence-manifest.json"
+    },
+    "concept_bridge_02_world_truth_assertion_and_rebuttal": {
+      "kind": "concept_bridge_mechanism",
+      "questions": "validation\\evaluation-questions-stage13-concept.json",
+      "evidence": "validation\\stage13-concept-evidence-manifest.json"
+    },
+    "concept_bridge_03_mika_betrayal_three_views": {
+      "kind": "concept_bridge_mechanism",
+      "questions": "validation\\evaluation-questions-stage13-concept.json",
+      "evidence": "validation\\stage13-concept-evidence-manifest.json"
+    },
+    "concept_bridge_04_hatred_political_chain": {
+      "kind": "concept_bridge_mechanism",
+      "questions": "validation\\evaluation-questions-stage13-concept.json",
+      "evidence": "validation\\stage13-concept-evidence-manifest.json"
+    },
+    "concept_bridge_05_paradise_proof_to_trust": {
+      "kind": "concept_bridge_mechanism",
+      "questions": "validation\\evaluation-questions-stage13-concept.json",
+      "evidence": "validation\\stage13-concept-evidence-manifest.json"
+    },
+    "concept_bridge_06_pain_before_and_during_assault": {
+      "kind": "concept_bridge_mechanism",
+      "questions": "validation\\evaluation-questions-stage13-concept.json",
+      "evidence": "validation\\stage13-concept-evidence-manifest.json"
+    },
+    "concept_bridge_07_cathedral_repair_boundary_and_route": {
+      "kind": "concept_bridge_mechanism",
+      "questions": "validation\\evaluation-questions-stage13-concept.json",
+      "evidence": "validation\\stage13-concept-evidence-manifest.json"
+    },
+    "concept_bridge_08_mika_fear_and_trust_response": {
+      "kind": "concept_bridge_mechanism",
+      "questions": "validation\\evaluation-questions-stage13-concept.json",
+      "evidence": "validation\\stage13-concept-evidence-manifest.json"
+    }
+  },
+  "database": "C:\\Users\\Admin\\PycharmProjects\\PythonProject\\validation\\evaluation-stage17-full-rebuild\\assets-v3-throughput\\graph.db",
+  "remapped_from_database": "C:\\Users\\Admin\\PycharmProjects\\PythonProject\\validation\\evaluation-stage14-expanded-corpus\\assets-v1\\graph.db"
+}

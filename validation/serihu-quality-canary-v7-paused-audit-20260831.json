@@ -1,0 +1,82 @@
+{
+  "database": "/mnt/c/Users/Admin/Documents/chat_bot/data/knowledge/serihu-quality-canary-v7-secondpass-grounded-20260831.db",
+  "counts": {
+    "sources": 0,
+    "episodes": 0,
+    "concepts": 0,
+    "associations": 0
+  },
+  "embedding_blob_lengths": {
+    "episode": [],
+    "concept": [],
+    "paragraph": []
+  },
+  "integrity": {
+    "schema_version": 8,
+    "expected_schema_version": 8,
+    "sqlite": "ok",
+    "foreign_key_issues": [],
+    "orphan_association_ids": [],
+    "concepts_without_episode_links": [],
+    "embedding_issues": [],
+    "empty_content_issues": [],
+    "json_payload_issues": [],
+    "fts_count_issues": [],
+    "sources_without_episodes": [],
+    "reference_coverage_issues": [],
+    "explicit_evidence_boundary_issues": [],
+    "explicit_evidence_mapping_ambiguities": [],
+    "association_generation_issues": [],
+    "noncompleted_runs": [
+      {
+        "id": 1,
+        "status": "running"
+      }
+    ],
+    "noncompleted_tasks": [
+      {
+        "id": 1,
+        "run_id": 1,
+        "source_key": "002__主线剧情_最終編_第4章__segment-0001.txt",
+        "segment_index": 0,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      }
+    ]
+  },
+  "segment_reconciliation": null,
+  "tasks": [
+    {
+      "stage": "pass1",
+      "status": "running",
+      "count": 1
+    }
+  ],
+  "episodes_per_source": {
+    "sources_with_episodes": 0,
+    "minimum": 0,
+    "mean": 0,
+    "maximum": 0,
+    "counts": null
+  },
+  "association_types": {},
+  "quality": {
+    "concept_alias_collisions": [],
+    "concept_output_issues": [],
+    "participant_grounding_issues": [],
+    "participant_completeness_issues": []
+  },
+  "temporal_cycles": {
+    "__global__": {
+      "episode_count": 0,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    }
+  },
+  "negative_associations": 0,
+  "duplicate_episode_pairs": []
+}

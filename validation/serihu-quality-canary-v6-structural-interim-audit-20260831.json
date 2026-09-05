@@ -1,0 +1,142 @@
+{
+  "database": "/mnt/c/Users/Admin/Documents/chat_bot/data/knowledge/serihu-quality-canary-v6-structural-20260831.db",
+  "counts": {
+    "sources": 3,
+    "episodes": 45,
+    "concepts": 84,
+    "associations": 132
+  },
+  "embedding_blob_lengths": {
+    "episode": [
+      4096
+    ],
+    "concept": [
+      4096
+    ],
+    "paragraph": []
+  },
+  "integrity": {
+    "schema_version": 8,
+    "expected_schema_version": 8,
+    "sqlite": "ok",
+    "foreign_key_issues": [],
+    "orphan_association_ids": [],
+    "concepts_without_episode_links": [],
+    "embedding_issues": [],
+    "empty_content_issues": [],
+    "json_payload_issues": [],
+    "fts_count_issues": [],
+    "sources_without_episodes": [],
+    "reference_coverage_issues": [],
+    "explicit_evidence_boundary_issues": [],
+    "explicit_evidence_mapping_ambiguities": [],
+    "association_generation_issues": [],
+    "noncompleted_runs": [
+      {
+        "id": 1,
+        "status": "running"
+      }
+    ],
+    "noncompleted_tasks": [
+      {
+        "id": 4,
+        "run_id": 1,
+        "source_key": "002__主线剧情_最終編_第4章__segment-0001.txt",
+        "segment_index": 0,
+        "stage": "pass1",
+        "status": "running",
+        "error_summary": null
+      }
+    ]
+  },
+  "segment_reconciliation": null,
+  "tasks": [
+    {
+      "stage": "pass1",
+      "status": "completed",
+      "count": 3
+    },
+    {
+      "stage": "pass1",
+      "status": "running",
+      "count": 1
+    }
+  ],
+  "episodes_per_source": {
+    "sources_with_episodes": 3,
+    "minimum": 6,
+    "mean": 15.0,
+    "maximum": 24,
+    "counts": null
+  },
+  "association_types": {
+    "semantic": 132
+  },
+  "quality": {
+    "concept_alias_collisions": [],
+    "concept_output_issues": [],
+    "participant_grounding_issues": [],
+    "participant_completeness_issues": [
+      {
+        "episode_id": 10,
+        "source_id": 1,
+        "speaker_label": "先生(老师/Sensei/선생님)",
+        "matched_text": [
+          "老师"
+        ]
+      },
+      {
+        "episode_id": 13,
+        "source_id": 1,
+        "speaker_label": "リン",
+        "matched_text": [
+          "リン"
+        ]
+      },
+      {
+        "episode_id": 35,
+        "source_id": 2,
+        "speaker_label": "アコ(亚子/Ako/아코)",
+        "matched_text": [
+          "亚子"
+        ]
+      },
+      {
+        "episode_id": 37,
+        "source_id": 2,
+        "speaker_label": "ミカ(未花/Mika/미카)",
+        "matched_text": [
+          "ミカ"
+        ]
+      }
+    ]
+  },
+  "temporal_cycles": {
+    "000__主线剧情_最終編_第1章__segment-0000.txt": {
+      "episode_count": 15,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "001__主线剧情_最終編_第2章__segment-0001.txt": {
+      "episode_count": 30,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "__global__": {
+      "episode_count": 45,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    }
+  },
+  "negative_associations": 0,
+  "duplicate_episode_pairs": []
+}

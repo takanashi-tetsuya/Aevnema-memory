@@ -1,0 +1,137 @@
+{
+  "story_root": "C:\\Users\\Admin\\Documents\\train_assets\\blue-archive\\apps\\blue-archive-story-viewer\\public\\story",
+  "config": {
+    "target_chars": 6000,
+    "max_chars": 8000,
+    "overlap_chars": 800
+  },
+  "totals": {
+    "files": 564,
+    "parsed_files": 564,
+    "blocks": 38514,
+    "segments": 1598,
+    "bytes": 36613023,
+    "empty_files": 0,
+    "parse_failures": 0,
+    "oversize_segments": 28
+  },
+  "categories": {
+    "event": {
+      "files": 7,
+      "blocks": 909,
+      "segments": 37,
+      "bytes": 1040478
+    },
+    "favor": {
+      "files": 480,
+      "blocks": 31408,
+      "segments": 1174,
+      "bytes": 28812600
+    },
+    "main": {
+      "files": 77,
+      "blocks": 6197,
+      "segments": 387,
+      "bytes": 6759945
+    }
+  },
+  "language_blocks": {
+    "ja": 38510,
+    "zh-CN": 38374,
+    "zh-TW": 11963,
+    "th": 9838,
+    "en": 9836
+  },
+  "segment_length": {
+    "min": 226,
+    "mean": 4943.72,
+    "p50": 5213,
+    "p95": 7816,
+    "p99": 8026,
+    "max": 8071
+  },
+  "empty_file_samples": [],
+  "failures": [],
+  "oversize_samples": [
+    {
+      "source_key": "favor/10014/100143.json",
+      "length": 8011
+    },
+    {
+      "source_key": "favor/10020/100202.json",
+      "length": 8033
+    },
+    {
+      "source_key": "favor/10020/100203.json",
+      "length": 8010
+    },
+    {
+      "source_key": "favor/10021/100216.json",
+      "length": 8031
+    },
+    {
+      "source_key": "favor/10024/100242.json",
+      "length": 8034
+    },
+    {
+      "source_key": "favor/10028/100285.json",
+      "length": 8039
+    },
+    {
+      "source_key": "favor/10029/100292.json",
+      "length": 8011
+    },
+    {
+      "source_key": "favor/10035/100352.json",
+      "length": 8004
+    },
+    {
+      "source_key": "favor/10035/100355.json",
+      "length": 8039
+    },
+    {
+      "source_key": "favor/10050/100502.json",
+      "length": 8026
+    },
+    {
+      "source_key": "favor/10063/100636.json",
+      "length": 8016
+    },
+    {
+      "source_key": "favor/10077/100775.json",
+      "length": 8033
+    },
+    {
+      "source_key": "favor/10086/100862.json",
+      "length": 8035
+    },
+    {
+      "source_key": "favor/10095/100952.json",
+      "length": 8048
+    },
+    {
+      "source_key": "favor/10105/101052.json",
+      "length": 8028
+    },
+    {
+      "source_key": "favor/10106/101066.json",
+      "length": 8044
+    },
+    {
+      "source_key": "favor/20033/200335.json",
+      "length": 8011
+    },
+    {
+      "source_key": "favor/23008/230082.json",
+      "length": 8015
+    },
+    {
+      "source_key": "main/31090.json",
+      "length": 8059
+    },
+    {
+      "source_key": "main/31150.json",
+      "length": 8071
+    }
+  ]
+}

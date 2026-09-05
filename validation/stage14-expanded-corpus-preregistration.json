@@ -1,0 +1,69 @@
+{
+  "version": "stage14-expanded-corpus-preregistration-v1",
+  "frozen_before_import": true,
+  "purpose": "在约十倍 Episode 规模和更强语义干扰下，先检验不依赖图遍历与查询期增长边的基础召回，再有条件地检验 Paragraph 与细粒度 Concept。",
+  "corpus_policy": {
+    "main": "全部文件",
+    "event": "全部文件",
+    "favor": "每个直接角色目录选择按文件名排序后的中位文件",
+    "forced": "保留基线数据库涉及的全部 source_key",
+    "reason": "主线和活动提供密集同主题干扰；每角色一个好感文件增加人物与日常语义覆盖，同时控制首次扩容成本。"
+  },
+  "primary_question_sets": [
+    {
+      "questions": "validation/evaluation-questions-stage4-network.json",
+      "evidence": "validation/stage4-network-evidence-manifest.json",
+      "count": 7
+    },
+    {
+      "questions": "validation/evaluation-questions-stage12-v2-paragraph.json",
+      "evidence": "validation/stage12-v2-paragraph-evidence-manifest.json",
+      "count": 8
+    },
+    {
+      "questions": "validation/evaluation-questions-stage13-concept.json",
+      "evidence": "validation/stage13-concept-evidence-manifest.json",
+      "count": 8
+    }
+  ],
+  "base_retrieval": {
+    "embedding_dtype": "float32",
+    "dense_episode": true,
+    "dense_concept": true,
+    "sparse_episode": true,
+    "sparse_source": true,
+    "candidate_top_k": 100,
+    "selected_top_k": 20,
+    "graph_max_hops": 0,
+    "growth_max_rounds": 0,
+    "paragraph_enabled": false,
+    "concept_profile": "conservative",
+    "answer_generation": false
+  },
+  "expanded_import_policy": {
+    "direct_episode_concept_edges": true,
+    "episode_episode_inference_edges": "deferred after the first five newly imported files",
+    "concept_concept_inference_edges": "deferred after the first five newly imported files",
+    "reason": "Primary Stage14 retrieval fixes graph_max_hops=0, so inferred edges cannot affect its outcome. Deferring them removes a large irrelevant LLM cost while preserving Episodes, Concepts, embeddings and direct evidence links.",
+    "scope_limit": "This database is a base-retrieval stress asset, not a complete expanded association-graph asset. Any later graph-growth experiment must backfill or build a separately frozen graph copy."
+  },
+  "reported_metrics": [
+    "Candidate Recall@100 micro and per question",
+    "Selected Recall@20 micro and per question",
+    "required evidence rank movement relative to the 342-Episode baseline",
+    "latency and candidate-channel composition",
+    "failures by source file and extraction stage"
+  ],
+  "mechanism_trigger": {
+    "condition": "至少一个问题的 Candidate Recall@100 小于 1.0",
+    "paragraph": "只在存在候选缺口时，建立 Paragraph 检索副本并比较缺口证据是否被召回。",
+    "concept": "只在缺口与人物、别名、组织或抽象概念桥接有关时，建立细粒度 Concept 副本并比较。",
+    "no_trigger": "若 23 题 Candidate Recall@100 全部为 1.0，不花费额外 API 调用制造无信息量消融。"
+  },
+  "interpretation_limits": [
+    "增长边数量不是评测指标；只比较它是否使正确证据或答案受益。",
+    "旧证据 Episode ID 因从基线数据库追加导入而保持不变。",
+    "本阶段扩大的是语义干扰规模，不代表百万 Episode 的性能外推。",
+    "若 Selected Recall 降低但 Candidate Recall 不降，问题属于重排压缩而非基础召回。"
+  ]
+}

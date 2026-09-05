@@ -1,0 +1,376 @@
+{
+  "database": "C:\\Users\\Admin\\Documents\\chat_bot\\data\\knowledge\\serihu-large-pilot-optimized-20260831.db",
+  "counts": {
+    "sources": 72,
+    "episodes": 523,
+    "concepts": 701,
+    "associations": 3230
+  },
+  "embedding_blob_lengths": {
+    "episode": [
+      4096
+    ],
+    "concept": [
+      4096
+    ],
+    "paragraph": []
+  },
+  "integrity": {
+    "schema_version": 8,
+    "expected_schema_version": 8,
+    "sqlite": "ok",
+    "foreign_key_issues": [],
+    "orphan_association_ids": [],
+    "concepts_without_episode_links": [],
+    "embedding_issues": [],
+    "empty_content_issues": [],
+    "json_payload_issues": [],
+    "fts_count_issues": [],
+    "sources_without_episodes": [],
+    "reference_coverage_issues": [],
+    "explicit_evidence_boundary_issues": [],
+    "explicit_evidence_mapping_ambiguities": [],
+    "association_generation_issues": [],
+    "noncompleted_runs": [],
+    "noncompleted_tasks": []
+  },
+  "segment_reconciliation": {
+    "supported_files": 35,
+    "expected_segments": 72,
+    "actual_segments": 72,
+    "roots": [
+      {
+        "root": "C:\\Users\\Admin\\Documents\\blue_archive_main_story\\production_kb",
+        "supported_files": 34,
+        "expected_segments": 63
+      },
+      {
+        "root": "C:\\Users\\Admin\\PycharmProjects\\PythonProject\\validation\\serihu-large-pilot-corpus-20260831",
+        "supported_files": 1,
+        "expected_segments": 9
+      }
+    ],
+    "source_key_collisions": [],
+    "missing_segments": [],
+    "unexpected_segments": []
+  },
+  "tasks": [
+    {
+      "stage": "pass1",
+      "status": "completed",
+      "count": 72
+    },
+    {
+      "stage": "pass2",
+      "status": "completed",
+      "count": 18
+    }
+  ],
+  "episodes_per_source": {
+    "sources_with_episodes": 72,
+    "minimum": 1,
+    "mean": 7.26,
+    "maximum": 10,
+    "counts": null
+  },
+  "association_types": {
+    "semantic": 2755,
+    "temporal": 265,
+    "interpersonal": 15,
+    "co_occurrence": 72,
+    "identity": 76,
+    "causal": 47
+  },
+  "temporal_cycles": {
+    "00_覆盖范围与版本边界.txt": {
+      "episode_count": 5,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "01_世界观与核心设定.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "02_学院与势力事实.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "03_核心角色事实.txt": {
+      "episode_count": 10,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "04_角色百科与别名.txt": {
+      "episode_count": 27,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "05_角色交流与对话摘要.txt": {
+      "episode_count": 17,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "06_细节问答与别名索引.txt": {
+      "episode_count": 20,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "07_角色关系与组织百科.txt": {
+      "episode_count": 27,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "08_常用角色百科补充.txt": {
+      "episode_count": 23,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt": {
+      "episode_count": 40,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "100_第二部_序章.txt": {
+      "episode_count": 6,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "101_第二部vol0_連邦生徒会編.txt": {
+      "episode_count": 12,
+      "temporal_edge_count": 7,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "102_第二部volex2_ロア追跡編.txt": {
+      "episode_count": 11,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "103_第二部vol1_炎と影編.txt": {
+      "episode_count": 16,
+      "temporal_edge_count": 13,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "104_第二部vol2_オデュッセイア編.txt": {
+      "episode_count": 13,
+      "temporal_edge_count": 4,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "105_第二部_角色与势力.txt": {
+      "episode_count": 14,
+      "temporal_edge_count": 3,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "106_第二部_推测与事实边界.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "107_第二部_关联短篇与活动.txt": {
+      "episode_count": 10,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "10_序章.txt": {
+      "episode_count": 5,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "11_vol1_对策委员会篇.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 4,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "12_格黑娜与千年角色百科扩展.txt": {
+      "episode_count": 39,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "13_其他学园与常用角色百科.txt": {
+      "episode_count": 39,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "14_世界设定与主线细节问答扩展.txt": {
+      "episode_count": 27,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "20_vol2_发条花舞曲篇.txt": {
+      "episode_count": 5,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "30_vol3_伊甸园条约篇.txt": {
+      "episode_count": 6,
+      "temporal_edge_count": 3,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "40_vol4_卡班诺的兔子篇.txt": {
+      "episode_count": 4,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "50_volf_所有奇迹的起点.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "60_vol5_百花缭乱篇.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "70_volex_德卡格拉马顿篇.txt": {
+      "episode_count": 12,
+      "temporal_edge_count": 11,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "80_vol6_過ぎ去りし刻のオラトリオ.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "90_推测与考据.txt": {
+      "episode_count": 8,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "91_时间线与事实边界.txt": {
+      "episode_count": 8,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "92_重要活动事实摘要.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "93_好感剧情使用边界.txt": {
+      "episode_count": 6,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "主线剧情_最終編_第1章.txt": {
+      "episode_count": 49,
+      "temporal_edge_count": 36,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "__global__": {
+      "episode_count": 523,
+      "temporal_edge_count": 261,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    }
+  },
+  "negative_associations": 63,
+  "duplicate_episode_pairs": []
+}

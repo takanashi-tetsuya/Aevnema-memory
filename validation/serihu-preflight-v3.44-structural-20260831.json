@@ -1,0 +1,42 @@
+{
+  "input_root": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/serihu-corpus-20260831",
+  "config": {
+    "target_chars": 6000,
+    "max_chars": 8000,
+    "overlap_chars": 800
+  },
+  "totals": {
+    "files": 180,
+    "parsed_files": 180,
+    "unsupported_files": 0,
+    "blocks": 2574,
+    "segments": 1563,
+    "bytes": 8792248,
+    "empty_files": 0,
+    "parse_failures": 0,
+    "oversize_segments": 0
+  },
+  "categories": {
+    "root": {
+      "files": 180,
+      "blocks": 2574,
+      "segments": 1563,
+      "bytes": 8792248
+    }
+  },
+  "language_blocks": {
+    "unknown": 2574
+  },
+  "segment_length": {
+    "min": 133,
+    "mean": 2443.12,
+    "p50": 2212,
+    "p95": 5098,
+    "p99": 6092,
+    "max": 7330
+  },
+  "empty_file_samples": [],
+  "unsupported_file_samples": [],
+  "failures": [],
+  "oversize_samples": []
+}

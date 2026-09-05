@@ -1,0 +1,64 @@
+{
+  "version": "stage9-association-cue-transfer-v1",
+  "purpose": "用不复述增长问题的抽象迁移查询，验证 query 是否能直接召回已审计 Association 文本，再回溯原本遗漏的 Episode 端点。",
+  "budgets": [20, 12],
+  "association_cue": {
+    "top_k": 8,
+    "min_similarity": 0.45,
+    "rrf_weight": 0.8,
+    "dtype": "float32",
+    "persistence": "RAM only"
+  },
+  "arms": {
+    "A0": "graph_max_hops=0，Association cue 关闭",
+    "G": "graph_max_hops=3，仅从基础召回端点遍历，Association cue 关闭",
+    "S": "graph_max_hops=3，允许直接向量检索 Association.relation_text",
+    "SM": "与 S 相同，但遮掉该主题前置问题创建/强化的目标学习边"
+  },
+  "acceptance": {
+    "causal_utility": "S 必须实际命中目标 delta 中的边，且相对 SM 净提高 required-group recall",
+    "non_regression": "S 的 required-group recall 不得低于 G",
+    "default_budget": 20,
+    "diagnostic_budget": 12
+  },
+  "families": [
+    {
+      "id": "hina_transfer",
+      "database": "validation/evaluation-stage8-association-utility/pilot-v1/hina_teacher_duty_bridge/T/graph.db",
+      "delta": "validation/evaluation-stage8-association-utility/pilot-v1/hina_teacher_duty_bridge/learned-association-delta.json",
+      "questions": [
+        {
+          "id": "adult_duty_is_not_forcing_exhausted_student",
+          "question": "请从已导入的记忆中找出最符合这一模式的完整经历：一个承担责任的大人面对已经竭尽全力、甚至想退出的学生时，没有强迫她继续，而是承认她的努力、接过后续问题，使她后来重新选择行动。说明人物、过程与这件事如何体现大人的责任，并区分原文事实和主题推论。",
+          "required_episode_groups": [[173], [175], [179, 182], [185, 188], [7, 67, 205]],
+          "required_sources": ["main/31010.json", "main/33190.json"]
+        },
+        {
+          "id": "recognition_need_to_recovered_agency",
+          "question": "哪一组跨片段记忆可以说明：长期承担公共职责的人，其真正缺口可能不是更多命令，而是努力被看见、疲惫被允许；支持者接过责任后，她又恢复了自主行动？请给出证据链，并明确这是一种有证据支持的综合理解，不是机械因果。",
+          "required_episode_groups": [[173, 179], [182], [175], [188], [67, 205]],
+          "required_sources": ["main/33030.json", "main/33190.json"]
+        }
+      ]
+    },
+    {
+      "id": "governance_transfer",
+      "database": "validation/evaluation-stage8-association-utility/pilot-v1/kisaki_mika_governance_bridge/T/graph.db",
+      "delta": "validation/evaluation-stage8-association-utility/pilot-v1/kisaki_mika_governance_bridge/learned-association-delta.json",
+      "questions": [
+        {
+          "id": "absorb_anxiety_or_break_continuity",
+          "question": "请从不同剧情中找出两种面对组织内部不安的治理模式：一种承认顾虑，却把顾虑转化为维持共同仪式和制度连续性的理由；另一种为了改变内部权力格局，主动借助外部力量打破连续性。指出双方人物、具体行动与差异，并明确这只是结构类比。",
+          "required_episode_groups": [[241], [243, 244], [308, 309], [313], [237, 238, 239]],
+          "required_sources": ["event/10038/1003805.json", "main/32170.json"]
+        },
+        {
+          "id": "same_pressure_opposite_use_of_outsiders",
+          "question": "同样面对内部反对声音和外部影响，哪位领导者选择让共同传统照常延续，哪位政治人物则把外部敌对集团当成重组内部秩序的工具？请重建两条决策链，比较她们如何处理内部压力和外来力量，不能写成两人互相影响。",
+          "required_episode_groups": [[241], [244], [307, 308, 309], [313], [237, 238, 239]],
+          "required_sources": ["event/10038/1003805.json", "main/32170.json"]
+        }
+      ]
+    }
+  ]
+}

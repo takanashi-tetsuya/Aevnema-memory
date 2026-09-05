@@ -1,0 +1,51 @@
+{
+  "version": "stage11-paragraph-concept-v1",
+  "purpose": "在成熟 Dense+Sparse+静态图基线上，以配对四臂和独立查询规划重复验证 Paragraph 与 fine-grained Concept 是否产生稳定证据召回收益。",
+  "assets": "validation/evaluation-stage11-paragraph-concepts/assets-v3/asset-report.json",
+  "repeats": 3,
+  "selected_budgets": [20, 12],
+  "question_sets": [
+    {
+      "kind": "network",
+      "questions": "validation/evaluation-questions-stage4-network.json",
+      "criteria": "validation/stage4-network-evidence-manifest.json",
+      "selection": "all"
+    },
+    {
+      "kind": "scope_control",
+      "questions": "validation/stage10-multitheme-hard-negative-manifest.json",
+      "criteria": "same_file",
+      "selection": "hard_negative"
+    }
+  ],
+  "retrieval": {
+    "embedding_dtype": "float32",
+    "sparse_enabled": true,
+    "graph_max_hops": 3,
+    "growth_max_rounds": 0,
+    "association_cue_enabled": false,
+    "rerank_enabled": true,
+    "answer_episode_limit": 20
+  },
+  "arms": {
+    "A": "Paragraph 关闭，原保守 Concept 数据",
+    "P": "只启用 Paragraph，Concept 数据与 A 完全相同",
+    "C": "Paragraph 关闭，使用 fine-grained Concept augmentation 数据",
+    "PC": "同时使用与 P 等量的 Paragraph 和与 C 完全相同的 Concept 数据"
+  },
+  "pairing": "每个问题每次重复只生成一次 QueryIntent、原子查询、follow-up 查询及其 float32 embedding；四臂重新运行自己的检索、图展开和 rerank。",
+  "primary_outcome": "各臂相对 A 的 required Episode group Selected Recall@20 配对差值",
+  "secondary_outcomes": [
+    "Selected Recall@12 前缀压力测试",
+    "Rerank Candidate@100 recall",
+    "无 LLM rerank 的固定计划证据选择",
+    "Paragraph 命中、Source 内 Episode 展开和最终保留 provenance",
+    "新增 Concept 是否成为 seed，以及是否带来 A 中没有的最终 Episode"
+  ],
+  "stability_rule": {
+    "per_question": "同一问题同一预算至少 2/3 次配对差值大于 0，且 0/3 次小于 0",
+    "mechanism": "至少两个不同 network 问题满足 per_question；network 总体平均差值大于 0；scope_control 不得出现稳定负回归",
+    "combined": "PC 单独报告，不得用 PC 的收益替代 P 或 C 各自的因果判断"
+  },
+  "edge_count_policy": "Concept/Association 增量数量只用于质量和规模审计，不作为收益指标"
+}

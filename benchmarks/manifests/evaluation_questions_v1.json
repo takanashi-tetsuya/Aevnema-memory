@@ -1,0 +1,32 @@
+[
+  {
+    "id": "first_meeting",
+    "question": "日奈与星野第一次见面的完整情况是什么？请区分其实见过、知道对方存在、建立联系和正式认识。",
+    "expected_capability": "实际故事时间排序与相遇阶段区分"
+  },
+  {
+    "id": "hoshino_history",
+    "question": "小鸟游星野在游戏中的个人经历是什么样的？请按实际发生时间整理。",
+    "expected_capability": "跨Episode聚合与倒叙还原"
+  },
+  {
+    "id": "yume_death",
+    "question": "阿拜多斯学生会会长梦前辈最终是怎么死的？请区分明确事实和不同猜测。",
+    "expected_capability": "不确定性、支持证据与假说整理"
+  },
+  {
+    "id": "shiroko_recall",
+    "question": "白子想起来被前辈们救助的场景时，为什么会想起这段经历？",
+    "expected_capability": "情绪或创伤触发的自主Association"
+  },
+  {
+    "id": "hina_intervention",
+    "question": "日奈为什么要阻止星野去沙漠？请展示中间的人物和因果联系。",
+    "expected_capability": "多跳人物关系和间接因果"
+  },
+  {
+    "id": "rio_return",
+    "question": "莉音会长被千禧年驱逐后，有没有回来过？",
+    "expected_capability": "跨主线与活动剧情的状态变化"
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "version": "stage13-evidence-context-concept-utility-v1",
+  "purpose": "以严格配对精排验证 Paragraph 原文上下文与 Concept 图效用门。",
+  "assets": "validation/evaluation-stage13-evidence-context-concept-utility/assets-v1/asset-report.json",
+  "preregistration": "validation/stage13-mechanism-preregistration.json",
+  "repeats": 3,
+  "selected_budgets": [20, 12, 8],
+  "question_sets": [
+    {
+      "kind": "paragraph_context_mechanism",
+      "questions": "validation/evaluation-questions-stage12-v2-paragraph.json",
+      "criteria": "validation/stage12-v2-paragraph-evidence-manifest.json",
+      "selection": "all"
+    },
+    {
+      "kind": "concept_bridge_mechanism",
+      "questions": "validation/evaluation-questions-stage13-concept.json",
+      "criteria": "validation/stage13-concept-evidence-manifest.json",
+      "selection": "all"
+    },
+    {
+      "kind": "network",
+      "questions": "validation/evaluation-questions-stage4-network.json",
+      "criteria": "validation/stage4-network-evidence-manifest.json",
+      "selection": "all"
+    },
+    {
+      "kind": "scope_control",
+      "questions": "validation/stage10-multitheme-hard-negative-manifest.json",
+      "criteria": "same_file",
+      "selection": "hard_negative"
+    }
+  ],
+  "retrieval": {
+    "embedding_dtype": "float32",
+    "sparse_enabled": true,
+    "graph_max_hops": 3,
+    "growth_max_rounds": 0,
+    "association_cue_enabled": false,
+    "rerank_enabled": true,
+    "answer_episode_limit": 20,
+    "identical_rerank_input_reuse": true
+  },
+  "arms": {
+    "A": "成熟基线：Paragraph 关闭、保守 Concept。",
+    "P": "候选图与 A 相同，只给精排器补充查询命中的 Source 原文 Paragraph。",
+    "C": "仅保留细粒度抽取对既有 Concept 的复用边；Concept 向量种子至少可达两个 Episode。",
+    "PC": "同时启用 P 与 C。"
+  },
+  "question_freeze": "本清单与证据 ID 在任何 Stage 13 A/P/C/PC 检索之前冻结。"
+}

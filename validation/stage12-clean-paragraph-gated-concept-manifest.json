@@ -1,0 +1,69 @@
+{
+  "version": "stage12-clean-paragraph-gated-concept-v2",
+  "purpose": "验证清洗后的 recall-only Paragraph 与先发现、后审慎晋升的细粒度 Concept 是否带来稳定召回收益，同时确认成熟基线能力不退化。",
+  "assets": "validation/evaluation-stage12-clean-paragraph-gated-concept/assets-v2/asset-report.json",
+  "preregistration": "validation/stage12-mechanism-preregistration.json",
+  "repeats": 3,
+  "selected_budgets": [20, 12],
+  "question_sets": [
+    {
+      "kind": "paragraph_mechanism",
+      "questions": "validation/evaluation-questions-stage12-v2-paragraph.json",
+      "criteria": "validation/stage12-v2-paragraph-evidence-manifest.json",
+      "selection": "all"
+    },
+    {
+      "kind": "concept_mechanism",
+      "questions": "validation/evaluation-questions-stage12-v2-concept.json",
+      "criteria": "validation/stage12-v2-concept-evidence-manifest.json",
+      "selection": "all"
+    },
+    {
+      "kind": "network",
+      "questions": "validation/evaluation-questions-stage4-network.json",
+      "criteria": "validation/stage4-network-evidence-manifest.json",
+      "selection": "all"
+    },
+    {
+      "kind": "scope_control",
+      "questions": "validation/stage10-multitheme-hard-negative-manifest.json",
+      "criteria": "same_file",
+      "selection": "hard_negative"
+    }
+  ],
+  "retrieval": {
+    "embedding_dtype": "float32",
+    "sparse_enabled": true,
+    "paragraph_recall_only": true,
+    "graph_max_hops": 3,
+    "growth_max_rounds": 0,
+    "association_cue_enabled": false,
+    "rerank_enabled": true,
+    "answer_episode_limit": 20
+  },
+  "arms": {
+    "A": "Paragraph 关闭，原保守 Concept 数据",
+    "P": "仅增加清洗后的 recall-only Paragraph；不得提升或重排 A 已有候选",
+    "C": "Paragraph 关闭；增加经过 LLM admission gate 的细粒度 Concept",
+    "PC": "同时使用 P 的 Paragraph 与 C 的门控 Concept"
+  },
+  "pairing": "每个问题每次重复只生成一次 QueryIntent、原子查询、follow-up 查询及其 float32 embedding；四臂重新执行各自检索、图展开与 rerank。",
+  "primary_outcome": "机制题中对应单项处理臂相对 A 的 required Episode group Selected Recall@20 配对差值。",
+  "secondary_outcomes": [
+    "Selected Recall@12 前缀压力测试",
+    "Rerank Candidate@100 recall",
+    "无 LLM rerank 的固定计划结果",
+    "Paragraph 新增候选的 provenance 与不重排不变量",
+    "晋升 Concept 的 seed/path 归因",
+    "network 与 scope_control 的非退化结果"
+  ],
+  "stability_rule": {
+    "per_question": "同一问题同一预算至少 2/3 次配对差值大于 0，且 0/3 次小于 0。",
+    "paragraph_mechanism": "P 在至少两个不同 Paragraph 机制题满足 per_question，且该题集总体平均差值大于 0。",
+    "concept_mechanism": "C 在至少两个不同 Concept 机制题满足 per_question，且该题集总体平均差值大于 0。",
+    "nonregression": "network 与 scope_control 不得出现稳定负回归，两个题集总体平均差值均不得小于 0。",
+    "combined": "PC 仅报告交互效应，不得替代 P 或 C 的单项因果结论。"
+  },
+  "question_freeze": "本清单在任何 A/P/C/PC 处理臂检索之前冻结；正式结果不得用于修改机制题。",
+  "edge_count_policy": "Concept/Association 数量仅用于质量和规模审计，不作为收益指标。"
+}

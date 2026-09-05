@@ -1,0 +1,147 @@
+{
+  "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/serihu-ab-v23-short-source-evidence-pilot-20260831.db",
+  "counts": {
+    "sources": 2,
+    "episodes": 18,
+    "concepts": 47,
+    "associations": 72
+  },
+  "embedding_blob_lengths": {
+    "episode": [
+      4096
+    ],
+    "concept": [
+      4096
+    ],
+    "paragraph": []
+  },
+  "integrity": {
+    "schema_version": 9,
+    "expected_schema_version": 9,
+    "sqlite": "ok",
+    "foreign_key_issues": [],
+    "orphan_association_ids": [],
+    "concepts_without_episode_links": [],
+    "embedding_issues": [],
+    "empty_content_issues": [],
+    "json_payload_issues": [],
+    "fts_count_issues": [],
+    "sources_without_episodes": [],
+    "reference_coverage_issues": [],
+    "explicit_evidence_boundary_issues": [],
+    "explicit_evidence_mapping_ambiguities": [],
+    "association_generation_issues": [],
+    "episode_evidence_issues": [],
+    "noncompleted_runs": [
+      {
+        "id": 1,
+        "status": "partial"
+      }
+    ],
+    "noncompleted_tasks": [
+      {
+        "id": 3,
+        "run_id": 1,
+        "source_key": "001__主线剧情_最終編_第2章__segment-0001.txt",
+        "segment_index": 2,
+        "stage": "pass1",
+        "status": "failed",
+        "error_summary": "single-pass Episode extraction failed: episode 1: evidence span 0 is out of range; episode participant evidence grounding: candidate 1 contains a name absent from its evidence_spans: フブキ(吹雪/Fubuki/후부키)"
+      }
+    ]
+  },
+  "segment_reconciliation": {
+    "supported_files": 5,
+    "expected_segments": 7,
+    "actual_segments": 2,
+    "roots": [
+      {
+        "root": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/serihu-quality-canary-v6-structural-corpus-20260831",
+        "supported_files": 5,
+        "expected_segments": 7
+      }
+    ],
+    "source_key_collisions": [],
+    "missing_segments": [
+      [
+        "000__主线剧情_最終編_第1章__segment-0000.txt",
+        0
+      ],
+      [
+        "002__主线剧情_最終編_第4章__segment-0001.txt",
+        0
+      ],
+      [
+        "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+        0
+      ],
+      [
+        "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+        1
+      ],
+      [
+        "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt",
+        0
+      ]
+    ],
+    "unexpected_segments": []
+  },
+  "tasks": [
+    {
+      "stage": "pass1",
+      "status": "completed",
+      "count": 2
+    },
+    {
+      "stage": "pass1",
+      "status": "failed",
+      "count": 1
+    }
+  ],
+  "episodes_per_source": {
+    "sources_with_episodes": 2,
+    "minimum": 8,
+    "mean": 9.0,
+    "maximum": 10,
+    "counts": null
+  },
+  "association_types": {
+    "semantic": 72
+  },
+  "quality": {
+    "concept_alias_collisions": [],
+    "concept_output_issues": [],
+    "participant_grounding_issues": [],
+    "participant_completeness_issues": [
+      {
+        "episode_id": 18,
+        "source_id": 2,
+        "speaker_label": "ミカ(未花/Mika/미카)",
+        "matched_text": [
+          "ミカ"
+        ]
+      }
+    ],
+    "evidence_participant_grounding_issues": []
+  },
+  "temporal_cycles": {
+    "001__主线剧情_最終編_第2章__segment-0001.txt": {
+      "episode_count": 18,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "__global__": {
+      "episode_count": 18,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    }
+  },
+  "negative_associations": 0,
+  "duplicate_episode_pairs": []
+}

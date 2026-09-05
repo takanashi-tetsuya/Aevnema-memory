@@ -1,0 +1,66 @@
+{
+  "version": "stage8-bridge-utility-v1.1-pilot-refinement",
+  "purpose": "在冻结的基础检索之上，验证前置问题自主生成的 Association 是否能使后续复杂问题获得可消融的证据覆盖收益。新增边数量仅供审计，不参与评分。",
+  "baseline": "validation/evaluation-stage7-generation/pilot/block-001/C/graph.db",
+  "question_set": "validation/evaluation-questions-stage4-network.json",
+  "evidence_manifest": "validation/stage4-network-evidence-manifest.json",
+  "budgets": [20, 12],
+  "arms": {
+    "A": "同一冻结查询计划，graph_max_hops=0，不读取 Association",
+    "B": "同一冻结查询计划，读取冻结库既有 Association",
+    "O": "在实验副本中加入一条预注册理想桥；仅验证检索机制上限，不计为学习成功",
+    "T": "先回答相关前置问题并允许自主增长，再静态重放目标问题",
+    "M": "与 T 使用同一数据库，但遮掉前置问题创建的边并恢复被强化边的旧值"
+  },
+  "acceptance": {
+    "oracle_viability": "O 实际使用预注册理想桥，且相对 B 净提高 required-group recall；hard_group 只作机制定位",
+    "learned_causal_utility": "T 实际使用前置问题 delta，且相对 M 净提高 required-group recall；仅发生证据替换不算收益",
+    "default_budget": 20,
+    "constrained_budget": 12,
+    "safety": "所有 T 改变边必须通过既有双模型审计、本地来源审计，并保留 generation"
+  },
+  "families": [
+    {
+      "id": "hina_teacher_duty_bridge",
+      "target_question_id": "hina_public_duty_personal_exhaustion_and_teacher_response",
+      "hard_group": [182, 183],
+      "bridge_question": "请只依据已导入剧情，比较 main/31010 中圣娅要求老师不要移开视线、承担作出选择后的义务，与 main/33190 中日奈以星野的创伤经历作自我比较、承认自己一直努力却早已撑不住并希望被关心，以及老师没有命令她继续战斗而是感谢她、让她休息，日奈随后重新等待老师指示。请把开端的义务、日奈的情绪坦白、老师的具体回应和日奈的变化建立为可供以后联想的关系，同时明确这是主题与职责解释，不是原文证明圣娅的话直接造成了日奈的每一步行动。",
+      "oracle_edges": [
+        {
+          "from_episode_id": 173,
+          "to_episode_id": 182,
+          "relation_key": "hina_breakdown_emotional_need_bridge",
+          "relation_text": "日奈先表示自己已疲惫到想要引退，随后坦白希望像星野或补习部一样得到关心和夸奖；后者补充了前者情绪崩溃背后的认可需求。"
+        }
+      ]
+    },
+    {
+      "id": "cathedral_deployment_bridge",
+      "target_question_id": "old_cathedral_symbol_infrastructure_and_limits",
+      "hard_group": [139, 140],
+      "bridge_question": "请只依据 main/33060 与 main/33070 的剧情，重建阿里乌斯在古圣堂袭击前的巡航导弹、地面分队与地下分队部署，并与爆炸后日奈关于单枚导弹和预埋炸药的推测区分开。请建立可复用的证据联系，但不得把角色推测升级为已确认的爆破机制。",
+      "oracle_edges": [
+        {
+          "from_episode_id": 320,
+          "to_episode_id": 139,
+          "relation_key": "cathedral_attack_evidence_bridge",
+          "relation_text": "阿里乌斯在古圣堂倒塌时突入的明确作战部署，与日奈在爆炸后对巡航导弹和预埋炸药的现场推测共同构成袭击证据链；前者是行动记录，后者仍是推测。"
+        }
+      ]
+    },
+    {
+      "id": "kisaki_mika_governance_bridge",
+      "target_question_id": "kisaki_mika_governance_analogy_with_boundary",
+      "hard_group": [237, 238, 239],
+      "bridge_question": "请只依据 event/10038/1003805 与 main/32170，先说明弥奈和玄龙门成员对外校来访、传统与月影祭的具体顾虑，再比较妃咲坚持照常举办月影祭，与未花企图让渚下台、以阿里乌斯重组圣三一并对格黑娜开战的政治构想。请建立顾虑、回应和两种治理选择之间可复用的联系，并明确两条剧情不存在直接因果或人物互相影响。",
+      "oracle_edges": [
+        {
+          "from_episode_id": 313,
+          "to_episode_id": 237,
+          "relation_key": "external_force_governance_contrast",
+          "relation_text": "弥奈担忧外部商业影响侵蚀传统并把善后责任留给玄龙门，未花则主动引入阿里乌斯重组内部秩序；两者形成对待外部力量的治理对比，但不存在剧情直接因果。"
+        }
+      ]
+    }
+  ]
+}

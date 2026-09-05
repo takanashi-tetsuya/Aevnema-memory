@@ -1,0 +1,2585 @@
+{
+  "domain": "knowledge",
+  "mode": "fast",
+  "identity": {
+    "platform": "diagnostic",
+    "platform_user_id": "local-test"
+  },
+  "error": "",
+  "domains": [
+    "knowledge"
+  ],
+  "repeat": 1,
+  "timings_seconds": [
+    16.824654
+  ],
+  "context": "以下内容来自长期记忆系统。Episode 是证据摘要；Association 可能是推论，\n必须结合来源、认知状态、generation、confidence 与原始 Episode 判断，不得把弱联想写成确定事实。\n\n【相关 Episode】\nEpisode #34 | source=04_角色百科与别名.txt | origin=source | epistemic_status=asserted | generation=0\n老师是玩家视点角色与联邦搜查社夏莱的顾问，主要作用为跨学园协调、判断局势并支持学生，而非以个人武力替代学生行动；老师没有学生光环，面对武器伤害时需要学生保护，且不能无条件命令所有学园或独自解决一切危机。\nEpisode #482 | source=主线剧情_第0篇_プロローグ_第1章.txt | story_time=当前故事时间 | origin=source | epistemic_status=asserted | generation=0\n七神凛向刚苏醒的“老师”自我介绍，说明自己是基沃托斯联邦学生会干部，并告知老师是被召唤来担任“法外机构”沙勒（Shale）顾问的。此时，优香、千夏、莲见、铃美等来自各学园的代表赶到，指责联邦学生会会长失踪导致城市陷入混乱（如风车发电厂关闭、停学学生脱逃、不良袭击、非法武器流通等）。凛宣布会长行踪不明，联邦学生会已失去行政控制权，并提议由老师担任“Fixer”（调停者/代理人）来恢复秩序。\nEpisode #483 | source=主线剧情_第0篇_プロローグ_第1章.txt | story_time=当前故事时间 | origin=source | epistemic_status=asserted | generation=0\n凛向众人解释沙勒（Shale）是连邦学生会设立的超法规机构，拥有在无限制区域进行战斗的权限，其部室位于约30公里外的外郭地区。此时莫莫卡（Momoka）通过通讯告知凛，沙勒部室正被从矫正局脱逃的停学学生（由若藻领导）及当地不良分子占领，现场已变成战场。凛虽因通讯中断而短暂动摇，但随即表示需要各学园代表协助夺回部室以恢复基沃托斯的正常化。\nEpisode #484 | source=主线剧情_第0篇_プロローグ_第1章.txt | story_time=当前故事时间 | origin=source | epistemic_status=asserted | generation=0\n众人准备前往沙勒部室，途中遭遇若藻（Wakamo）及其率领的脱逃学生与不良分子的袭击。若藻自述是百鬼夜行联合学院停学后从矫正局脱狱的危险人物，并明确表示要破坏沙勒部室，因为听说那里有联邦学生会重视的东西。优香在战斗中因对方使用非法JHP子弹而受伤，莲见强调保护老师是首要任务，千夏指出老师来自基沃托斯之外，生命受到威胁的风险更高。老师提出指挥作战，莲见表示同意并请求老师指挥。\nEpisode #485 | source=主线剧情_第0篇_プロローグ_第1章.txt | story_time=当前故事时间 | origin=source | epistemic_status=asserted | generation=0\n众人抵达沙勒部室附近，凛确认引发骚乱的若藻身份为百鬼夜行联合学院停学后从矫正局脱狱的学生，警告众人其危险性。若藻现身，表示联邦学生会并未到场，并因听说建筑内有重要物品而决定将其破坏，表现出对战斗的期待。\nEpisode #98 | source=07_角色关系与组织百科.txt | origin=source | epistemic_status=asserted | generation=0\n夏莱（联邦搜查社夏莱）作为独立于单一学园的联邦直属社团成立，由老师担任顾问。该组织拥有跨学园接受委托、协调各方及指挥学生行动的权限，虽与联邦学生会有行政关联但并非其本身，且老师无法无条件命令任何学园或组织。\nEpisode #93 | source=06_细节问答与别名索引.txt | story_time=Vol.Final第一章 | origin=source | epistemic_status=asserted | generation=0 | note=明确区分了第一章与第二章的核心事件。\nVol.Final第一章的核心事件是凯撒集团趁混乱夺权，占领夏莱与圣所之塔并控制联邦学生会人员；随后老师脱离控制，学生夺回夏莱并救出凛。虚妄圣所攻略和大规模联合战属于第二章核心。\nEpisode #321 | source=50_VolF_所有奇迹的起点.txt | story_time=第1章：夏莱夺还作战期间 | origin=source | epistemic_status=asserted | generation=0\n老师在学生协助下脱离控制。RABBIT小队、瓦尔基里及其他学生参与反击，最终夺回夏莱并救出凛。该阶段核心是凯撒夺权和夏莱夺还，并非深入地下超算机房恢复全城通信。\nEpisode #284 | source=14_世界设定与主线细节问答扩展.txt | origin=source | epistemic_status=asserted | generation=0\n联邦学生会负责跨学园行政与基础设施协调。夏莱是独立于单一学园的联邦社团，老师作为顾问可跨学园协调委托。夏莱拥有较高权限，但不是联邦学生会本身，也不表示老师能无条件命令所有学生。\nEpisode #289 | source=14_世界设定与主线细节问答扩展.txt | story_time=Vol.1 对策委员会篇期间 | origin=source | epistemic_status=asserted | generation=0 | note=Source 描述星野牺牲尝试及救援结果，债务未全消。\n为保护后辈，星野曾试图接受让自己离开学校的交易，但被老师和其他对策委员会成员拒绝，并在其他学生帮助下被救回，然而债务并未因此全部消失。这一事件发生在 Vol.1 对策委员会篇期间。\nEpisode #398 | source=101_第二部Vol0_連邦生徒会編.txt | story_time=调查期间 | origin=source | epistemic_status=asserted | generation=0\n老师与凛秘密走访D.U.。普通学生、自治学园代表和执勤人员普遍把铂金发女性视为原本的学生会长。克洛诺斯记者风卷舞提供了关键线索：另有一人声称原来的学生会长拥有水蓝色头发和眼睛。老师与凛由此找到电视头形象的神秘观察者。\nEpisode #189 | source=10_序章.txt | story_time=故事开场 | origin=source | epistemic_status=asserted | generation=0 | note=文档直接陈述了事件发生及背景状况。\n老师在联邦学生会设施中醒来，首席行政官七神凛向其说明当前情况：联邦学生会长失踪，圣所之塔控制出现问题，越狱者和武装人员导致联邦直辖区陷入混乱。\nEpisode #7 | source=01_世界观与核心设定.txt | story_time=联邦学生会长失踪后 | origin=source | epistemic_status=asserted | generation=0\n联邦学生会长失踪后，联邦学生会无法完整行使原有权限，基沃托斯的行政与治安迅速陷入混乱。老师受联邦学生会长安排来到基沃托斯，担任联邦搜查社夏莱的顾问。\nEpisode #24 | source=03_核心角色事实.txt | origin=source | epistemic_status=asserted | generation=0\n老师是玩家视点角色及夏莱顾问，其核心特点并非个人武力，而是愿意相信学生、承担成人责任，并在学生犯错或陷入危机时保留其重新选择的机会。\nEpisode #313 | source=30_Vol3_伊甸园条约篇.txt | story_time=第3章 | origin=source | epistemic_status=asserted | generation=0\n在混乱中，补课部与多方学生继续行动。日富美以对平凡青春和幸福结局的坚持反驳了“一切皆虚无”的观念。老师和学生阻止了条约袭击进一步扩大，但圣三一内部对圣园未花的愤怒以及阿里乌斯小队的处境仍未解决。\nEpisode #377 | source=92_重要活动事实摘要.txt | origin=source | epistemic_status=asserted | generation=0\n官方剧情事实摘要指出，温泉乡、便利屋68新年、若藻周年、红冬革命、百鬼夜行祭典和山海经相关活动主要用于扩展对应学园与角色日常；文档声明具体先后关系应根据角色当时状态判断，不能仅凭活动上线日期生成绝对剧情年表。\nEpisode #293 | source=14_世界设定与主线细节问答扩展.txt | story_time=Vol.4 卡班诺的兔子篇期间 | origin=source | epistemic_status=asserted | generation=0 | note=Source 说明 SRT 关闭原因及 RABBIT 小队的抗议与理念重塑。\nSRT 原本直属联邦学生会长并承担高风险治安行动，在会长失踪后被决定关闭。RABBIT 小队拒绝接受处置和并入瓦尔基里的未来，在公园扎营抗议，并在老师协助下重新理解自己的正义与 SRT 理念。\nEpisode #400 | source=101_第二部Vol0_連邦生徒会編.txt | story_time=听完オーウェ尔解释后 | origin=source | epistemic_status=reported | generation=0 | note=关于“シャーケードの杖”性质及行动决定的依据源自オーウェ尔的说法\nオーウェル指出，“シャーケードの杖”是对学生会长圣遗物的复制或模拟，虽然是复制品，却拥有实际权限。它还暗示真正的学生会长不能被立即带回，只能先寻找与当前共同记忆不一致的“反例”。老师、凛、阿罗娜与普拉娜因此决定从互联网和社交平台收集异常记录，并把这些记录固定下来。\nEpisode #55 | source=04_角色百科与别名.txt | story_time=第二部Vol.0 | origin=source | epistemic_status=asserted | generation=0\n七神凛是联邦学生会首席行政官，会长失踪后承担大量代理职责。第二部Vol.0中，她与老师共同调查铂金发学生会长引发的集体记忆异常；凛记得原学生会长，因此不能接受“所有人都一直如此记得”的现实。她的过度工作是剧情可观察的状态，不应据此诊断未收录的心理疾病。\nEpisode #464 | source=106_第二部_推测与事实边界.txt | origin=importer | epistemic_status=speculative | generation=1 | note=文档提出该推测，并明确指出了当前剧情未确认的事实。\n据文档推测，原学生会长可能被隔离在另一个信息层、记忆世界或其他现实，依据是序章照片中的陌生水边、老师的黑白梦和 Vol.0 对“反例”的搜索。文档强调，剧情尚未确认她仍以实体形式生活在某处，也不能确认照片是她从另一世界寄出。\nEpisode #285 | source=14_世界设定与主线细节问答扩展.txt | story_time=最终篇第一章 | origin=source | epistemic_status=asserted | generation=0\n联邦学生会长失踪后，圣所之塔控制出现问题，导致联邦直辖区的越狱与武装冲突加剧。在最终篇第一章中，凯撒集团占领了圣所之塔和夏莱。圣所之塔并非“夏莱地下超算中枢”的同义称呼。\nEpisode #322 | source=50_VolF_所有奇迹的起点.txt | story_time=第2章：虚妄圣所攻略战期间 | origin=source | epistemic_status=asserted | generation=0\n夏莱夺回后，天空发生异变，多座虚妄圣所出现。不同学园组成联合战线，对抗与既有强敌相对应的色彩化威胁。老师和联邦学生会协调跨学园行动。该阶段核心为虚妄圣所及大规模联合战，不能提前混写成第1章开场。\nEpisode #320 | source=50_VolF_所有奇迹的起点.txt | story_time=第1章：夏莱夺还作战期间 | origin=source | epistemic_status=asserted | generation=0\n联邦学生会因关于基沃托斯危机的警告召开会议。凯撒集团趁政治与行政混乱发动行动，占领圣所之塔和夏莱，并控制包括凛在内的联邦学生会人员。老师一度被凯撒扣押。\nEpisode #367 | source=91_时间线与事实边界.txt | story_time=最终篇之后 | origin=source | epistemic_status=asserted | generation=0\n官方剧情事实确认Vol.1第三章和Vol.4第二章均发生在最终篇之后；Vol.5和Vol.6属于最终篇后继续扩展各学园问题的主线。\nEpisode #366 | source=91_时间线与事实边界.txt | origin=source | epistemic_status=asserted | generation=0\n官方剧情事实确认存在另一世界的老师与白子Terror，该事实支持平行世界讨论，但不能自动推出所有卷在另一世界中的具体失败结局。\nEpisode #440 | source=104_第二部Vol2_オデュッセイア編.txt | story_time=本章前篇 | origin=source | epistemic_status=asserted | generation=0\n学生因サミー问题形成分歧：一方强调其长期陪伴与精神支持不应被驱离，另一方强调不能忽视实际风险；舰长ミナ托迟迟无法作出决定，使该问题成为治理方式的考验。\nEpisode #73 | source=05_角色交流与对话摘要.txt | story_time=第二部 | origin=source | epistemic_status=asserted | generation=0\n七神凛（别名：凛，七神リン，リン，Rin）作为联邦学生会成员，其交流常围绕行政责任、危机处理与对联邦学生会秩序的维护。在第二部中，她面对记忆异常时会怀疑自己的判断，并坚持调查矛盾记录。文档明确禁止将她的过劳状态延伸为未经收录的私密心理诊断。\nEpisode #378 | source=92_重要活动事实摘要.txt | origin=importer | epistemic_status=speculative | generation=1 | note=该条目为社区观点，文档明确其非事实\n社区观点指出，“欢乐活动只在老师成功介入的世界线发生，失败世界线没有这些活动”是一种二次创作解释；由于剧情没有给出另一世界完整活动记录，该说法不能当作事实。\nEpisode #78 | source=06_细节问答与别名索引.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 明确记录官方纠正信息\n官方资料确认联邦学生会财务室长为扇喜葵（扇喜アオイ/Aoi），并明确纠正旧知识库中将角色误称为“中务葵”的错误，指出“中务葵”不能作为角色名或别名使用。\nEpisode #309 | source=20_Vol2_发条花舞曲篇.txt | story_time=第2章 | origin=source | epistemic_status=asserted | generation=0\n爱丽丝最终以自己建立的意志回应同伴，游戏开发部重新接纳她。莉音的判断方式和隐瞒行为受到质疑，她随后离开公众视野。Key并非简单被彻底删除，其与爱丽丝的关系仍是后续设定的一部分。\n\n【相关 Concept】\nConcept #585 | 沙勒部室：沙勒机构的部室，位于约30公里外的外郭地区，正被脱逃学生和不良分子占领。\nConcept #586 | 莫莫卡：通过通讯向凛报告沙勒部室被占领情况的人。\nConcept #587 | 矫正局：关押停学学生的机构，有学生从其中脱逃。\nConcept #454 | 若藻：参与周年活动的角色，其日常通过相关活动扩展\nConcept #588 | 百鬼夜行联合学院：若藻曾就读的学园，她因停学而被关入矫正局。\nConcept #589 | JHP子弹：非法子弹，在袭击中被使用并导致优香受伤。\nConcept #18 | 老师：受联邦学生会长安排来到基沃托斯担任夏莱顾问的人物\nConcept #77 | 七神凛：联邦学生会首席行政官，在会长失踪后承担大量代理职责\nConcept #583 | 基沃托斯联邦学生会：基沃托斯的行政机构，因会长失踪而失去行政控制权，导致城市陷入混乱。\nConcept #584 | 沙勒：基沃托斯联邦学生会设立的超法规机构，拥有在无限制区域进行战斗的权限，老师被召唤来担任其顾问。\nConcept #382 | 虚妄圣所：夏莱夺回后天空异变中出现的多座异常地点\nConcept #383 | 色彩化威胁：与虚妄圣所相关的、需要跨学园联合对抗的异常威胁\nConcept #384 | 跨学园联合战线：为对抗色彩化威胁而由不同学园组成的临时军事/行动联盟\nConcept #127 | RABBIT小队：SRT特殊学园的小队，在SRT关闭后拒绝被处置并抗议，后与老师合作解决生存问题。\nConcept #191 | 瓦尔基里：RABBIT小队拒绝被并入的未来组织。\nConcept #381 | 夏莱夺还：由学生协助老师夺回被凯撒集团占领的夏莱的行动阶段\nConcept #17 | 夏莱：独立于单一学园的联邦社团，老师担任顾问\nConcept #59 | 凯撒集团：横跨金融、军工与安保领域的大型企业集团，多次干涉学园事务\nConcept #166 | 联邦学生会人员：在Vol.Final第一章中被凯撒集团控制的人员，后由学生夺回夏莱并救出相关人质。\nConcept #167 | 圣所之塔：Vol.Final第一章中被凯撒集团占领的关键地点。\n\n【Association 联想路径】\nAssociation #2969 | generation=1 | confidence=0.900 | Episode 483 发生在 Episode 482 之后，因为 Episode 482 是老师苏醒和凛介绍沙勒的初始场景，而 Episode 483 是随后莫莫卡通讯告知沙勒部室被占领并决定夺回的具体行动。\nAssociation #2971 | generation=1 | confidence=0.850 | Episode 484 发生在 Episode 482 之后，因为 Episode 482 是故事开场的介绍，而 Episode 484 是后续前往沙勒部室途中的战斗事件。\nAssociation #2972 | generation=1 | confidence=0.900 | Episode 485 发生在 Episode 484 之后，因为 Episode 484 是途中遭遇袭击，而 Episode 485 是众人抵达沙勒部室附近并确认若藻身份后的对峙场景。\nAssociation #2970 | generation=1 | confidence=0.900 | Episode 484 发生在 Episode 483 之后，因为 Episode 483 是决定前往沙勒部室并得知被占领，而 Episode 484 是众人实际前往途中遭遇袭击并开始战斗。\nAssociation #2296 | generation=2 | confidence=0.800 | Episode 378 指出‘欢乐活动只在老师成功介入的世界线发生’是二次创作解释，而 Episode 366 确认存在另一世界的老师与白子 Terror，支持平行世界讨论但不能推出具体失败结局，两者在平行世界设定上存在语义关联。\nAssociation #49 | generation=1 | confidence=0.800 | 夏莱是独立于单一学园的联邦社团，在联邦学生会长失踪后，老师担任其顾问以维持运作。\nAssociation #338 | generation=1 | confidence=0.850 | RABBIT小队是SRT特殊学园的一部分，两者存在语义关联。\nAssociation #698 | generation=1 | confidence=0.800 | current 描述的夏莱组织包含 candidate 中提到的老师作为其顾问。\nAssociation #2958 | generation=0 | confidence=1.000 | 该 Episode 涉及概念“沙勒部室”\nAss\n[长期记忆上下文因长度限制已截断]",
+  "result": {
+    "question": "沙勒部室为什么需要老师与各学园代表协助夺回？",
+    "intent": {
+      "language": "zh",
+      "target_entities": [
+        "沙勒部室"
+      ],
+      "search_queries": [
+        "沙勒部室是什么组织",
+        "沙勒部室被谁夺走了",
+        "沙勒部室为什么需要夺回",
+        "沙勒部室夺回行动需要老师协助的原因",
+        "沙勒部室夺回行动需要各学园代表协助的原因",
+        "沙勒部室夺回行动中老师的具体角色",
+        "沙勒部室夺回行动中各学园代表的具体角色",
+        "沙勒部室夺回行动面临的困难",
+        "沙勒部室夺回行动的计划或策略"
+      ],
+      "requested_relation": "需要老师与各学园代表协助夺回的原因",
+      "temporal_constraint": "None",
+      "causal_constraint": "为什么需要协助",
+      "answer_shape": "原因列举",
+      "uncertainty_required": false
+    },
+    "followup_search_queries": [],
+    "atomic_anchor_episode_ids": [
+      483,
+      285,
+      321,
+      484,
+      289,
+      398,
+      485,
+      322,
+      400,
+      482,
+      24,
+      284,
+      93,
+      98,
+      378,
+      34,
+      367,
+      78,
+      293,
+      309,
+      440,
+      366,
+      313
+    ],
+    "candidate_episode_ids": [
+      483,
+      285,
+      321,
+      484,
+      289,
+      398,
+      482,
+      485,
+      322,
+      93,
+      400,
+      24,
+      189,
+      284,
+      98,
+      55,
+      378,
+      34,
+      73,
+      367,
+      78,
+      320,
+      293,
+      309,
+      377,
+      440,
+      366,
+      464,
+      313,
+      7,
+      8,
+      10,
+      32,
+      84,
+      91,
+      147,
+      153,
+      188,
+      190,
+      191,
+      192,
+      193,
+      280,
+      316,
+      338,
+      342,
+      343,
+      348,
+      349,
+      351,
+      352,
+      353,
+      354,
+      385,
+      387,
+      388,
+      393,
+      405,
+      421,
+      425,
+      442,
+      444,
+      61,
+      299,
+      305,
+      402,
+      376,
+      57,
+      113,
+      114,
+      137,
+      138,
+      139,
+      317,
+      319,
+      22,
+      111,
+      152,
+      156,
+      195,
+      275,
+      286,
+      318,
+      337,
+      394,
+      414,
+      104,
+      136,
+      75,
+      21,
+      99,
+      194,
+      87,
+      426,
+      59,
+      323,
+      83,
+      298,
+      369,
+      3
+    ],
+    "reranked_episode_ids": [
+      483,
+      484,
+      34,
+      482,
+      485,
+      321,
+      322,
+      98,
+      24,
+      93,
+      320,
+      284,
+      289,
+      398,
+      7,
+      189,
+      313,
+      377,
+      293,
+      400,
+      55,
+      464,
+      285,
+      367,
+      366,
+      440,
+      73,
+      378,
+      78,
+      309
+    ],
+    "episode_ids": [
+      34,
+      482,
+      483,
+      484,
+      485,
+      98,
+      93,
+      321,
+      284,
+      289,
+      398,
+      189,
+      7,
+      24,
+      313,
+      377,
+      293,
+      400,
+      55,
+      464,
+      285,
+      322,
+      320,
+      367,
+      366,
+      440,
+      73,
+      378,
+      78,
+      309
+    ],
+    "concept_ids": [
+      585,
+      586,
+      587,
+      454,
+      588,
+      589,
+      18,
+      77,
+      583,
+      584,
+      382,
+      383,
+      384,
+      127,
+      191,
+      381,
+      17,
+      59,
+      166,
+      167
+    ],
+    "association_ids": [
+      2969,
+      2971,
+      2972,
+      2970,
+      2296,
+      49,
+      338,
+      698,
+      2958,
+      2955,
+      2957,
+      2280,
+      2817,
+      574,
+      180,
+      28,
+      138,
+      1125,
+      1672,
+      1892,
+      2973,
+      50,
+      1905,
+      1923
+    ],
+    "new_association_ids": [],
+    "reinforced_association_ids": [],
+    "growth_utility_gate": {
+      "enabled": true,
+      "retained_created_ids": [],
+      "retained_reinforced_ids": [],
+      "removed_created_ids": [],
+      "restored_reinforced_ids": [],
+      "premise_closure_ids": []
+    },
+    "growth_counterfactual_utility": {
+      "enabled": true,
+      "scope": "query_batch",
+      "changed_association_ids": [],
+      "changed_path_ids": [],
+      "additional_episode_ids": [],
+      "displaced_episode_ids": [],
+      "additional_source_keys": [],
+      "displaced_source_keys": [],
+      "evidence_gain_count": 0,
+      "causal_utility_observed": false,
+      "persistable_changed_ids": []
+    },
+    "evidence_episodes": [
+      {
+        "id": 34,
+        "score": 0.5257015247222835,
+        "text": "老师是玩家视点角色与联邦搜查社夏莱的顾问，主要作用为跨学园协调、判断局势并支持学生，而非以个人武力替代学生行动；老师没有学生光环，面对武器伤害时需要学生保护，且不能无条件命令所有学园或独自解决一切危机。",
+        "participants": [
+          "老师"
+        ],
+        "source_key": "04_角色百科与别名.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "04_角色百科与别名.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 482,
+        "score": 0.9484954434931278,
+        "text": "七神凛向刚苏醒的“老师”自我介绍，说明自己是基沃托斯联邦学生会干部，并告知老师是被召唤来担任“法外机构”沙勒（Shale）顾问的。此时，优香、千夏、莲见、铃美等来自各学园的代表赶到，指责联邦学生会会长失踪导致城市陷入混乱（如风车发电厂关闭、停学学生脱逃、不良袭击、非法武器流通等）。凛宣布会长行踪不明，联邦学生会已失去行政控制权，并提议由老师担任“Fixer”（调停者/代理人）来恢复秩序。",
+        "participants": [
+          "七神凛 / Rin / 린",
+          "老师 / Sensei / 선생님",
+          "优香 / Yuuka / 유우카",
+          "千夏 / Chinatsu / 치나츠",
+          "莲见 / Hasumi / 하스미",
+          "铃美 / Suzumi / 스즈미"
+        ],
+        "source_key": "主线剧情_第0篇_プロローグ_第1章.txt",
+        "segment_index": 0,
+        "story_time_text": "当前故事时间",
+        "story_order": null,
+        "timeline_scope": "主线剧情_第0篇_プロローグ_第1章.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 483,
+        "score": 0.9984162563085556,
+        "text": "凛向众人解释沙勒（Shale）是连邦学生会设立的超法规机构，拥有在无限制区域进行战斗的权限，其部室位于约30公里外的外郭地区。此时莫莫卡（Momoka）通过通讯告知凛，沙勒部室正被从矫正局脱逃的停学学生（由若藻领导）及当地不良分子占领，现场已变成战场。凛虽因通讯中断而短暂动摇，但随即表示需要各学园代表协助夺回部室以恢复基沃托斯的正常化。",
+        "participants": [
+          "七神凛 / Rin / 린",
+          "老师 / Sensei / 선생님",
+          "优香 / Yuuka / 유우카",
+          "千夏 / Chinatsu / 치나츠",
+          "莲见 / Hasumi / 하스미",
+          "莫莫卡 / Momoka / 모모카"
+        ],
+        "source_key": "主线剧情_第0篇_プロローグ_第1章.txt",
+        "segment_index": 0,
+        "story_time_text": "当前故事时间",
+        "story_order": null,
+        "timeline_scope": "主线剧情_第0篇_プロローグ_第1章.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 484,
+        "score": 0.9731474002108873,
+        "text": "众人准备前往沙勒部室，途中遭遇若藻（Wakamo）及其率领的脱逃学生与不良分子的袭击。若藻自述是百鬼夜行联合学院停学后从矫正局脱狱的危险人物，并明确表示要破坏沙勒部室，因为听说那里有联邦学生会重视的东西。优香在战斗中因对方使用非法JHP子弹而受伤，莲见强调保护老师是首要任务，千夏指出老师来自基沃托斯之外，生命受到威胁的风险更高。老师提出指挥作战，莲见表示同意并请求老师指挥。",
+        "participants": [
+          "七神凛 / Rin / 린",
+          "老师 / Sensei / 선생님",
+          "优香 / Yuuka / 유우카",
+          "千夏 / Chinatsu / 치나츠",
+          "莲见 / Hasumi / 하스미",
+          "若藻 / Wakamo / 와카모"
+        ],
+        "source_key": "主线剧情_第0篇_プロローグ_第1章.txt",
+        "segment_index": 0,
+        "story_time_text": "当前故事时间",
+        "story_order": null,
+        "timeline_scope": "主线剧情_第0篇_プロローグ_第1章.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 485,
+        "score": 0.9484954434931278,
+        "text": "众人抵达沙勒部室附近，凛确认引发骚乱的若藻身份为百鬼夜行联合学院停学后从矫正局脱狱的学生，警告众人其危险性。若藻现身，表示联邦学生会并未到场，并因听说建筑内有重要物品而决定将其破坏，表现出对战斗的期待。",
+        "participants": [
+          "七神凛 / Rin / 린",
+          "若藻 / Wakamo / 와카모",
+          "老师 / Sensei / 선생님",
+          "优香 / Yuuka / 유우카"
+        ],
+        "source_key": "主线剧情_第0篇_プロローグ_第1章.txt",
+        "segment_index": 0,
+        "story_time_text": "当前故事时间",
+        "story_order": null,
+        "timeline_scope": "主线剧情_第0篇_プロローグ_第1章.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 98,
+        "score": 0.5298749782565679,
+        "text": "夏莱（联邦搜查社夏莱）作为独立于单一学园的联邦直属社团成立，由老师担任顾问。该组织拥有跨学园接受委托、协调各方及指挥学生行动的权限，虽与联邦学生会有行政关联但并非其本身，且老师无法无条件命令任何学园或组织。",
+        "participants": [
+          "夏莱 / シャーレ / Schale",
+          "老师",
+          "联邦学生会"
+        ],
+        "source_key": "07_角色关系与组织百科.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "07_角色关系与组织百科.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 93,
+        "score": 0.7441153903588692,
+        "text": "Vol.Final第一章的核心事件是凯撒集团趁混乱夺权，占领夏莱与圣所之塔并控制联邦学生会人员；随后老师脱离控制，学生夺回夏莱并救出凛。虚妄圣所攻略和大规模联合战属于第二章核心。",
+        "participants": [
+          "凯撒集团",
+          "老师",
+          "学生",
+          "凛",
+          "联邦学生会人员"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 1,
+        "story_time_text": "Vol.Final第一章",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "明确区分了第一章与第二章的核心事件。"
+      },
+      {
+        "id": 321,
+        "score": 0.7811945214251211,
+        "text": "老师在学生协助下脱离控制。RABBIT小队、瓦尔基里及其他学生参与反击，最终夺回夏莱并救出凛。该阶段核心是凯撒夺权和夏莱夺还，并非深入地下超算机房恢复全城通信。",
+        "participants": [
+          "老师",
+          "RABBIT小队",
+          "瓦尔基里",
+          "凛",
+          "凯撒集团"
+        ],
+        "source_key": "50_VolF_所有奇迹的起点.txt",
+        "segment_index": 0,
+        "story_time_text": "第1章：夏莱夺还作战期间",
+        "story_order": null,
+        "timeline_scope": "50_volf_所有奇迹的起点.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 284,
+        "score": 0.41242432735398693,
+        "text": "联邦学生会负责跨学园行政与基础设施协调。夏莱是独立于单一学园的联邦社团，老师作为顾问可跨学园协调委托。夏莱拥有较高权限，但不是联邦学生会本身，也不表示老师能无条件命令所有学生。",
+        "participants": [
+          "联邦学生会 / 連邦生徒会 / General Student Council / GSC",
+          "夏莱",
+          "老师"
+        ],
+        "source_key": "14_世界设定与主线细节问答扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 289,
+        "score": 0.5257015247222835,
+        "text": "为保护后辈，星野曾试图接受让自己离开学校的交易，但被老师和其他对策委员会成员拒绝，并在其他学生帮助下被救回，然而债务并未因此全部消失。这一事件发生在 Vol.1 对策委员会篇期间。",
+        "participants": [
+          "星野",
+          "老师",
+          "对策委员会成员",
+          "其他学生"
+        ],
+        "source_key": "14_世界设定与主线细节问答扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "Vol.1 对策委员会篇期间",
+        "story_order": null,
+        "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 描述星野牺牲尝试及救援结果，债务未全消。"
+      },
+      {
+        "id": 398,
+        "score": 0.20525664868154625,
+        "text": "老师与凛秘密走访D.U.。普通学生、自治学园代表和执勤人员普遍把铂金发女性视为原本的学生会长。克洛诺斯记者风卷舞提供了关键线索：另有一人声称原来的学生会长拥有水蓝色头发和眼睛。老师与凛由此找到电视头形象的神秘观察者。",
+        "participants": [
+          "老师",
+          "凛",
+          "风卷舞",
+          "电视头观察者",
+          "普通学生",
+          "自治学园代表",
+          "执勤人员"
+        ],
+        "source_key": "101_第二部Vol0_連邦生徒会編.txt",
+        "segment_index": 0,
+        "story_time_text": "调查期间",
+        "story_order": null,
+        "timeline_scope": "101_第二部vol0_連邦生徒会編.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 189,
+        "score": 0.6537529673144319,
+        "text": "老师在联邦学生会设施中醒来，首席行政官七神凛向其说明当前情况：联邦学生会长失踪，圣所之塔控制出现问题，越狱者和武装人员导致联邦直辖区陷入混乱。",
+        "participants": [
+          "老师",
+          "七神凛",
+          "联邦学生会长"
+        ],
+        "source_key": "10_序章.txt",
+        "segment_index": 0,
+        "story_time_text": "故事开场",
+        "story_order": null,
+        "timeline_scope": "10_序章.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "文档直接陈述了事件发生及背景状况。"
+      },
+      {
+        "id": 7,
+        "score": 0.5257015247222835,
+        "text": "联邦学生会长失踪后，联邦学生会无法完整行使原有权限，基沃托斯的行政与治安迅速陷入混乱。老师受联邦学生会长安排来到基沃托斯，担任联邦搜查社夏莱的顾问。",
+        "participants": [
+          "联邦学生会长",
+          "联邦学生会",
+          "基沃托斯",
+          "老师",
+          "夏莱"
+        ],
+        "source_key": "01_世界观与核心设定.txt",
+        "segment_index": 0,
+        "story_time_text": "联邦学生会长失踪后",
+        "story_order": null,
+        "timeline_scope": "01_世界观与核心设定.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 24,
+        "score": 0.5257015247222835,
+        "text": "老师是玩家视点角色及夏莱顾问，其核心特点并非个人武力，而是愿意相信学生、承担成人责任，并在学生犯错或陷入危机时保留其重新选择的机会。",
+        "participants": [
+          "老师"
+        ],
+        "source_key": "03_核心角色事实.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "03_核心角色事实.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 313,
+        "score": 0.17600387358930553,
+        "text": "在混乱中，补课部与多方学生继续行动。日富美以对平凡青春和幸福结局的坚持反驳了“一切皆虚无”的观念。老师和学生阻止了条约袭击进一步扩大，但圣三一内部对圣园未花的愤怒以及阿里乌斯小队的处境仍未解决。",
+        "participants": [
+          "老师",
+          "日富美",
+          "圣园未花",
+          "阿里乌斯小队"
+        ],
+        "source_key": "30_Vol3_伊甸园条约篇.txt",
+        "segment_index": 0,
+        "story_time_text": "第3章",
+        "story_order": null,
+        "timeline_scope": "30_vol3_伊甸园条约篇.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 377,
+        "score": 0.5393648178069466,
+        "text": "官方剧情事实摘要指出，温泉乡、便利屋68新年、若藻周年、红冬革命、百鬼夜行祭典和山海经相关活动主要用于扩展对应学园与角色日常；文档声明具体先后关系应根据角色当时状态判断，不能仅凭活动上线日期生成绝对剧情年表。",
+        "participants": [
+          "温泉乡",
+          "便利屋68",
+          "若藻",
+          "红冬",
+          "百鬼夜行祭典参与者",
+          "山海经相关角色"
+        ],
+        "source_key": "92_重要活动事实摘要.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "92_重要活动事实摘要.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 293,
+        "score": 0.44019086853836903,
+        "text": "SRT 原本直属联邦学生会长并承担高风险治安行动，在会长失踪后被决定关闭。RABBIT 小队拒绝接受处置和并入瓦尔基里的未来，在公园扎营抗议，并在老师协助下重新理解自己的正义与 SRT 理念。",
+        "participants": [
+          "SRT",
+          "联邦学生会长",
+          "RABBIT 小队",
+          "瓦尔基里",
+          "老师"
+        ],
+        "source_key": "14_世界设定与主线细节问答扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "Vol.4 卡班诺的兔子篇期间",
+        "story_order": null,
+        "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 说明 SRT 关闭原因及 RABBIT 小队的抗议与理念重塑。"
+      },
+      {
+        "id": 400,
+        "score": 0.35290214031295003,
+        "text": "オーウェル指出，“シャーケードの杖”是对学生会长圣遗物的复制或模拟，虽然是复制品，却拥有实际权限。它还暗示真正的学生会长不能被立即带回，只能先寻找与当前共同记忆不一致的“反例”。老师、凛、阿罗娜与普拉娜因此决定从互联网和社交平台收集异常记录，并把这些记录固定下来。",
+        "participants": [
+          "ミスター・オーウェル",
+          "老师",
+          "凛",
+          "阿罗娜",
+          "普拉娜"
+        ],
+        "source_key": "101_第二部Vol0_連邦生徒会編.txt",
+        "segment_index": 0,
+        "story_time_text": "听完オーウェ尔解释后",
+        "story_order": null,
+        "timeline_scope": "101_第二部vol0_連邦生徒会編.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "reported",
+        "generation": 0,
+        "epistemic_note": "关于“シャーケードの杖”性质及行动决定的依据源自オーウェ尔的说法"
+      },
+      {
+        "id": 55,
+        "score": 0.5884263303968494,
+        "text": "七神凛是联邦学生会首席行政官，会长失踪后承担大量代理职责。第二部Vol.0中，她与老师共同调查铂金发学生会长引发的集体记忆异常；凛记得原学生会长，因此不能接受“所有人都一直如此记得”的现实。她的过度工作是剧情可观察的状态，不应据此诊断未收录的心理疾病。",
+        "participants": [
+          "七神凛",
+          "老师",
+          "原学生会长",
+          "铂金发联邦学生会长"
+        ],
+        "source_key": "04_角色百科与别名.txt",
+        "segment_index": 2,
+        "story_time_text": "第二部Vol.0",
+        "story_order": null,
+        "timeline_scope": "04_角色百科与别名.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 464,
+        "score": 0.5305158439486876,
+        "text": "据文档推测，原学生会长可能被隔离在另一个信息层、记忆世界或其他现实，依据是序章照片中的陌生水边、老师的黑白梦和 Vol.0 对“反例”的搜索。文档强调，剧情尚未确认她仍以实体形式生活在某处，也不能确认照片是她从另一世界寄出。",
+        "participants": [
+          "原学生会长",
+          "老师"
+        ],
+        "source_key": "106_第二部_推测与事实边界.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "106_第二部_推测与事实边界.txt",
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1,
+        "epistemic_note": "文档提出该推测，并明确指出了当前剧情未确认的事实。"
+      },
+      {
+        "id": 285,
+        "score": 0.5473154980233611,
+        "text": "联邦学生会长失踪后，圣所之塔控制出现问题，导致联邦直辖区的越狱与武装冲突加剧。在最终篇第一章中，凯撒集团占领了圣所之塔和夏莱。圣所之塔并非“夏莱地下超算中枢”的同义称呼。",
+        "participants": [
+          "联邦学生会长",
+          "圣所之塔 / サンクトゥムタワー / Sanctum Tower",
+          "凯撒集团",
+          "夏莱"
+        ],
+        "source_key": "14_世界设定与主线细节问答扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "最终篇第一章",
+        "story_order": null,
+        "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 322,
+        "score": 0.7982195036114931,
+        "text": "夏莱夺回后，天空发生异变，多座虚妄圣所出现。不同学园组成联合战线，对抗与既有强敌相对应的色彩化威胁。老师和联邦学生会协调跨学园行动。该阶段核心为虚妄圣所及大规模联合战，不能提前混写成第1章开场。",
+        "participants": [
+          "老师",
+          "联邦学生会",
+          "不同学园学生",
+          "色彩化威胁"
+        ],
+        "source_key": "50_VolF_所有奇迹的起点.txt",
+        "segment_index": 0,
+        "story_time_text": "第2章：虚妄圣所攻略战期间",
+        "story_order": null,
+        "timeline_scope": "50_volf_所有奇迹的起点.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 320,
+        "score": 0.5855616822543032,
+        "text": "联邦学生会因关于基沃托斯危机的警告召开会议。凯撒集团趁政治与行政混乱发动行动，占领圣所之塔和夏莱，并控制包括凛在内的联邦学生会人员。老师一度被凯撒扣押。",
+        "participants": [
+          "凯撒集团",
+          "凛",
+          "老师",
+          "联邦学生会"
+        ],
+        "source_key": "50_VolF_所有奇迹的起点.txt",
+        "segment_index": 0,
+        "story_time_text": "第1章：夏莱夺还作战期间",
+        "story_order": null,
+        "timeline_scope": "50_volf_所有奇迹的起点.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 367,
+        "score": 0.2265277680211068,
+        "text": "官方剧情事实确认Vol.1第三章和Vol.4第二章均发生在最终篇之后；Vol.5和Vol.6属于最终篇后继续扩展各学园问题的主线。",
+        "participants": [
+          "《蔚蓝档案》"
+        ],
+        "source_key": "91_时间线与事实边界.txt",
+        "segment_index": 0,
+        "story_time_text": "最终篇之后",
+        "story_order": null,
+        "timeline_scope": "91_时间线与事实边界.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 366,
+        "score": 0.22941630781280326,
+        "text": "官方剧情事实确认存在另一世界的老师与白子Terror，该事实支持平行世界讨论，但不能自动推出所有卷在另一世界中的具体失败结局。",
+        "participants": [
+          "老师",
+          "白子"
+        ],
+        "source_key": "91_时间线与事实边界.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "91_时间线与事实边界.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 440,
+        "score": 0.12992948304028787,
+        "text": "学生因サミー问题形成分歧：一方强调其长期陪伴与精神支持不应被驱离，另一方强调不能忽视实际风险；舰长ミナ托迟迟无法作出决定，使该问题成为治理方式的考验。",
+        "participants": [
+          "??? (发言者)"
+        ],
+        "source_key": "104_第二部Vol2_オデュッセイア編.txt",
+        "segment_index": 0,
+        "story_time_text": "本章前篇",
+        "story_order": null,
+        "timeline_scope": "104_第二部vol2_オデュッセイア編.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 73,
+        "score": 0.5881033236251617,
+        "text": "七神凛（别名：凛，七神リン，リン，Rin）作为联邦学生会成员，其交流常围绕行政责任、危机处理与对联邦学生会秩序的维护。在第二部中，她面对记忆异常时会怀疑自己的判断，并坚持调查矛盾记录。文档明确禁止将她的过劳状态延伸为未经收录的私密心理诊断。",
+        "participants": [
+          "七神凛 / 七神リン / リン / Rin"
+        ],
+        "source_key": "05_角色交流与对话摘要.txt",
+        "segment_index": 1,
+        "story_time_text": "第二部",
+        "story_order": null,
+        "timeline_scope": "05_角色交流与对话摘要.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 378,
+        "score": 0.5305158439486876,
+        "text": "社区观点指出，“欢乐活动只在老师成功介入的世界线发生，失败世界线没有这些活动”是一种二次创作解释；由于剧情没有给出另一世界完整活动记录，该说法不能当作事实。",
+        "participants": [
+          "社区"
+        ],
+        "source_key": "92_重要活动事实摘要.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "92_重要活动事实摘要.txt",
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1,
+        "epistemic_note": "该条目为社区观点，文档明确其非事实"
+      },
+      {
+        "id": 78,
+        "score": 0.2356656444403442,
+        "text": "官方资料确认联邦学生会财务室长为扇喜葵（扇喜アオイ/Aoi），并明确纠正旧知识库中将角色误称为“中务葵”的错误，指出“中务葵”不能作为角色名或别名使用。",
+        "participants": [
+          "扇喜葵 / 扇喜アオイ / Aoi / 财务室长",
+          "中务葵 (被纠正的错误名称)"
+        ],
+        "source_key": "06_细节问答与别名索引.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "06_细节问答与别名索引.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source 明确记录官方纠正信息"
+      },
+      {
+        "id": 309,
+        "score": 0.09412477235289554,
+        "text": "爱丽丝最终以自己建立的意志回应同伴，游戏开发部重新接纳她。莉音的判断方式和隐瞒行为受到质疑，她随后离开公众视野。Key并非简单被彻底删除，其与爱丽丝的关系仍是后续设定的一部分。",
+        "participants": [
+          "爱丽丝",
+          "游戏开发部",
+          "调月莉音",
+          "Key"
+        ],
+        "source_key": "20_Vol2_发条花舞曲篇.txt",
+        "segment_index": 0,
+        "story_time_text": "第2章",
+        "story_order": null,
+        "timeline_scope": "20_vol2_发条花舞曲篇.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      }
+    ],
+    "evidence_concepts": [
+      {
+        "id": 585,
+        "score": 1.0,
+        "canonical_name": "沙勒部室",
+        "description": "沙勒机构的部室，位于约30公里外的外郭地区，正被脱逃学生和不良分子占领。"
+      },
+      {
+        "id": 586,
+        "score": 0.8062211269691587,
+        "canonical_name": "莫莫卡",
+        "description": "通过通讯向凛报告沙勒部室被占领情况的人。"
+      },
+      {
+        "id": 587,
+        "score": 0.8062211269691587,
+        "canonical_name": "矫正局",
+        "description": "关押停学学生的机构，有学生从其中脱逃。"
+      },
+      {
+        "id": 454,
+        "score": 0.7858165256702917,
+        "canonical_name": "若藻",
+        "description": "参与周年活动的角色，其日常通过相关活动扩展"
+      },
+      {
+        "id": 588,
+        "score": 0.7858165256702917,
+        "canonical_name": "百鬼夜行联合学院",
+        "description": "若藻曾就读的学园，她因停学而被关入矫正局。"
+      },
+      {
+        "id": 589,
+        "score": 0.7858165256702917,
+        "canonical_name": "JHP子弹",
+        "description": "非法子弹，在袭击中被使用并导致优香受伤。"
+      },
+      {
+        "id": 18,
+        "score": 0.7659100706207008,
+        "canonical_name": "老师",
+        "description": "受联邦学生会长安排来到基沃托斯担任夏莱顾问的人物"
+      },
+      {
+        "id": 77,
+        "score": 0.7659100706207008,
+        "canonical_name": "七神凛",
+        "description": "联邦学生会首席行政官，在会长失踪后承担大量代理职责"
+      },
+      {
+        "id": 583,
+        "score": 0.7659100706207008,
+        "canonical_name": "基沃托斯联邦学生会",
+        "description": "基沃托斯的行政机构，因会长失踪而失去行政控制权，导致城市陷入混乱。"
+      },
+      {
+        "id": 584,
+        "score": 0.7659100706207008,
+        "canonical_name": "沙勒",
+        "description": "基沃托斯联邦学生会设立的超法规机构，拥有在无限制区域进行战斗的权限，老师被召唤来担任其顾问。"
+      },
+      {
+        "id": 382,
+        "score": 0.6445622491662808,
+        "canonical_name": "虚妄圣所",
+        "description": "夏莱夺回后天空异变中出现的多座异常地点"
+      },
+      {
+        "id": 383,
+        "score": 0.6445622491662808,
+        "canonical_name": "色彩化威胁",
+        "description": "与虚妄圣所相关的、需要跨学园联合对抗的异常威胁"
+      },
+      {
+        "id": 384,
+        "score": 0.6445622491662808,
+        "canonical_name": "跨学园联合战线",
+        "description": "为对抗色彩化威胁而由不同学园组成的临时军事/行动联盟"
+      },
+      {
+        "id": 127,
+        "score": 0.6308145760507854,
+        "canonical_name": "RABBIT小队",
+        "description": "SRT特殊学园的小队，在SRT关闭后拒绝被处置并抗议，后与老师合作解决生存问题。"
+      },
+      {
+        "id": 191,
+        "score": 0.6308145760507854,
+        "canonical_name": "瓦尔基里",
+        "description": "RABBIT小队拒绝被并入的未来组织。"
+      },
+      {
+        "id": 381,
+        "score": 0.6308145760507854,
+        "canonical_name": "夏莱夺还",
+        "description": "由学生协助老师夺回被凯撒集团占领的夏莱的行动阶段"
+      },
+      {
+        "id": 17,
+        "score": 0.600873177714787,
+        "canonical_name": "夏莱",
+        "description": "独立于单一学园的联邦社团，老师担任顾问"
+      },
+      {
+        "id": 59,
+        "score": 0.600873177714787,
+        "canonical_name": "凯撒集团",
+        "description": "横跨金融、军工与安保领域的大型企业集团，多次干涉学园事务"
+      },
+      {
+        "id": 166,
+        "score": 0.600873177714787,
+        "canonical_name": "联邦学生会人员",
+        "description": "在Vol.Final第一章中被凯撒集团控制的人员，后由学生夺回夏莱并救出相关人质。"
+      },
+      {
+        "id": 167,
+        "score": 0.600873177714787,
+        "canonical_name": "圣所之塔",
+        "description": "Vol.Final第一章中被凯撒集团占领的关键地点。"
+      }
+    ],
+    "association_paths": [
+      {
+        "association_id": 2969,
+        "from": [
+          "episode",
+          483
+        ],
+        "to": [
+          "episode",
+          482
+        ],
+        "relation_type": "temporal",
+        "relation_key": "before",
+        "relation_text": "Episode 483 发生在 Episode 482 之后，因为 Episode 482 是老师苏醒和凛介绍沙勒的初始场景，而 Episode 483 是随后莫莫卡通讯告知沙勒部室被占领并决定夺回的具体行动。",
+        "polarity": 1,
+        "weight": 0.8962081229686738,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6845134006408912,
+        "query_relevance": 0.119488,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 2971,
+        "from": [
+          "episode",
+          484
+        ],
+        "to": [
+          "episode",
+          482
+        ],
+        "relation_type": "temporal",
+        "relation_key": "before",
+        "relation_text": "Episode 484 发生在 Episode 482 之后，因为 Episode 482 是故事开场的介绍，而 Episode 484 是后续前往沙勒部室途中的战斗事件。",
+        "polarity": 1,
+        "weight": 0.8533257406949999,
+        "confidence": 0.85,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.5999724721002916,
+        "query_relevance": 0.112112,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 2972,
+        "from": [
+          "episode",
+          484
+        ],
+        "to": [
+          "episode",
+          485
+        ],
+        "relation_type": "temporal",
+        "relation_key": "before",
+        "relation_text": "Episode 485 发生在 Episode 484 之后，因为 Episode 484 是途中遭遇袭击，而 Episode 485 是众人抵达沙勒部室附近并确认若藻身份后的对峙场景。",
+        "polarity": 1,
+        "weight": 0.9008593624830247,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6706517441153346,
+        "query_relevance": 0.099307,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 2970,
+        "from": [
+          "episode",
+          483
+        ],
+        "to": [
+          "episode",
+          484
+        ],
+        "relation_type": "temporal",
+        "relation_key": "before",
+        "relation_text": "Episode 484 发生在 Episode 483 之后，因为 Episode 483 是决定前往沙勒部室并得知被占领，而 Episode 484 是众人实际前往途中遭遇袭击并开始战斗。",
+        "polarity": 1,
+        "weight": 0.8955476737022401,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6840089571285742,
+        "query_relevance": 0.097092,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 2296,
+        "from": [
+          "episode",
+          378
+        ],
+        "to": [
+          "episode",
+          366
+        ],
+        "relation_type": "semantic",
+        "relation_key": "semantic",
+        "relation_text": "Episode 378 指出‘欢乐活动只在老师成功介入的世界线发生’是二次创作解释，而 Episode 366 确认存在另一世界的老师与白子 Terror，支持平行世界讨论但不能推出具体失败结局，两者在平行世界设定上存在语义关联。",
+        "polarity": 1,
+        "weight": 0.8171616423130037,
+        "confidence": 0.8,
+        "generation": 2,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.212986999531756,
+        "query_relevance": 0.042133,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 49,
+        "from": [
+          "concept",
+          17
+        ],
+        "to": [
+          "concept",
+          16
+        ],
+        "relation_type": "semantic",
+        "relation_key": "successor_to",
+        "relation_text": "夏莱是独立于单一学园的联邦社团，在联邦学生会长失踪后，老师担任其顾问以维持运作。",
+        "polarity": 1,
+        "weight": 0.8299979138374329,
+        "confidence": 0.8,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.28826217374283425,
+        "query_relevance": 0.039421,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 338,
+        "from": [
+          "concept",
+          127
+        ],
+        "to": [
+          "concept",
+          54
+        ],
+        "relation_type": "semantic",
+        "relation_key": "part_of",
+        "relation_text": "RABBIT小队是SRT特殊学园的一部分，两者存在语义关联。",
+        "polarity": 1,
+        "weight": 0.8566313189268113,
+        "confidence": 0.85,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.33185811762059897,
+        "query_relevance": 0.027875,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 698,
+        "from": [
+          "episode",
+          98
+        ],
+        "to": [
+          "episode",
+          34
+        ],
+        "relation_type": "semantic",
+        "relation_key": "has_member",
+        "relation_text": "current 描述的夏莱组织包含 candidate 中提到的老师作为其顾问。",
+        "polarity": 1,
+        "weight": 0.7764891946315767,
+        "confidence": 0.8,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.27978069268286937,
+        "query_relevance": 0.025976,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 2958,
+        "from": [
+          "concept",
+          585
+        ],
+        "to": [
+          "episode",
+          483
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“沙勒部室”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.231125,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 2955,
+        "from": [
+          "episode",
+          482
+        ],
+        "to": [
+          "concept",
+          18
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“老师”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.7659100706207008,
+        "query_relevance": 0.056614,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 2957,
+        "from": [
+          "episode",
+          482
+        ],
+        "to": [
+          "concept",
+          584
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“沙勒”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.7659100706207008,
+        "query_relevance": 0.056614,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 2280,
+        "from": [
+          "concept",
+          18
+        ],
+        "to": [
+          "episode",
+          378
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“老师”",
+        "polarity": 1,
+        "weight": 0.9587000000000001,
+        "confidence": 1.0,
+        "generation": 1,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.5305158439486876,
+        "query_relevance": 0.056614,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 2817,
+        "from": [
+          "concept",
+          18
+        ],
+        "to": [
+          "episode",
+          464
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“老师”",
+        "polarity": 1,
+        "weight": 0.9587000000000001,
+        "confidence": 1.0,
+        "generation": 1,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.5305158439486876,
+        "query_relevance": 0.056614,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 574,
+        "from": [
+          "concept",
+          18
+        ],
+        "to": [
+          "episode",
+          98
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“老师”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.5257015247222835,
+        "query_relevance": 0.056614,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 180,
+        "from": [
+          "concept",
+          18
+        ],
+        "to": [
+          "episode",
+          34
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“老师”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.5257015247222835,
+        "query_relevance": 0.056614,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 28,
+        "from": [
+          "concept",
+          18
+        ],
+        "to": [
+          "episode",
+          7
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“老师”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.5257015247222835,
+        "query_relevance": 0.056614,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 138,
+        "from": [
+          "concept",
+          18
+        ],
+        "to": [
+          "episode",
+          24
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“老师”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.5257015247222835,
+        "query_relevance": 0.056614,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1125,
+        "from": [
+          "concept",
+          18
+        ],
+        "to": [
+          "episode",
+          189
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“老师”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.5257015247222835,
+        "query_relevance": 0.056614,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1672,
+        "from": [
+          "concept",
+          18
+        ],
+        "to": [
+          "episode",
+          289
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“老师”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.5257015247222835,
+        "query_relevance": 0.056614,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1892,
+        "from": [
+          "episode",
+          322
+        ],
+        "to": [
+          "concept",
+          384
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“跨学园联合战线”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.6445622491662808,
+        "query_relevance": 0.037743,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 2973,
+        "from": [
+          "episode",
+          483
+        ],
+        "to": [
+          "episode",
+          485
+        ],
+        "relation_type": "temporal",
+        "relation_key": "before",
+        "relation_text": "Episode 485 发生在 Episode 483 之后，因为 Episode 483 是得知部室被占领，而 Episode 485 是抵达现场后的具体对峙。",
+        "polarity": 1,
+        "weight": 0.8572199118137361,
+        "confidence": 0.85,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6183605082720443,
+        "query_relevance": 0.025008,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 50,
+        "from": [
+          "concept",
+          17
+        ],
+        "to": [
+          "concept",
+          18
+        ],
+        "relation_type": "semantic",
+        "relation_key": "member_of",
+        "relation_text": "老师是夏莱社团的顾问，受联邦学生会长安排来到基沃托斯。",
+        "polarity": 1,
+        "weight": 0.91,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.35555318326622665,
+        "query_relevance": 0.02361,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1905,
+        "from": [
+          "concept",
+          383
+        ],
+        "to": [
+          "concept",
+          384
+        ],
+        "relation_type": "semantic",
+        "relation_key": "semantic",
+        "relation_text": "跨学园联合战线是为了对抗色彩化威胁而组成的联盟，两者存在对抗关系。",
+        "polarity": 1,
+        "weight": 0.8652138006687166,
+        "confidence": 0.85,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.34248778068757374,
+        "query_relevance": 0.021398,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1923,
+        "from": [
+          "episode",
+          322
+        ],
+        "to": [
+          "episode",
+          321
+        ],
+        "relation_type": "temporal",
+        "relation_key": "before",
+        "relation_text": "Episode 322 描述的夏莱夺回后天空异变及虚妄圣所出现发生在 Episode 321 描述的夏莱夺还作战期间之后。",
+        "polarity": 1,
+        "weight": 0.9192400183677674,
+        "confidence": 0.95,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.5925074137627812,
+        "query_relevance": 0.020847,
+        "path_class": "informative"
+      }
+    ],
+    "chronology_notes": [
+      "以下 Episode 没有已确认 story_order：[34, 482, 483, 484, 485, 98, 93, 321, 284, 289, 398, 189, 7, 24, 313, 377, 293, 400, 55, 464, 285, 322, 320, 367, 366, 440, 73, 378, 78, 309]"
+    ],
+    "source_key_cohort": {
+      "enabled": true,
+      "supported_source_keys": [
+        "主线剧情_第0篇_プロローグ_第1章.txt",
+        "14_世界设定与主线细节问答扩展.txt",
+        "50_VolF_所有奇迹的起点.txt",
+        "101_第二部Vol0_連邦生徒会編.txt",
+        "06_细节问答与别名索引.txt",
+        "91_时间线与事实边界.txt"
+      ],
+      "added_episode_ids": [],
+      "boosted_episode_ids": [
+        482,
+        485
+      ],
+      "skipped_source_keys": []
+    },
+    "rerank_trace": {
+      "enabled": true,
+      "backend": "cross_encoder",
+      "model": "Pro/BAAI/bge-reranker-v2-m3",
+      "candidate_episode_ids": [
+        483,
+        285,
+        321,
+        484,
+        289,
+        398,
+        482,
+        485,
+        322,
+        93,
+        400,
+        24,
+        189,
+        284,
+        98,
+        55,
+        378,
+        34,
+        73,
+        367,
+        78,
+        320,
+        293,
+        309,
+        377,
+        440,
+        366,
+        464,
+        313,
+        7,
+        8,
+        10,
+        32,
+        84,
+        91,
+        147,
+        153,
+        188,
+        190,
+        191,
+        192,
+        193,
+        280,
+        316,
+        338,
+        342,
+        343,
+        348,
+        349,
+        351,
+        352,
+        353,
+        354,
+        385,
+        387,
+        388,
+        393,
+        405,
+        421,
+        425,
+        442,
+        444,
+        61,
+        299,
+        305,
+        402,
+        376,
+        57,
+        113,
+        114,
+        137,
+        138,
+        139,
+        317,
+        319,
+        22,
+        111,
+        152,
+        156,
+        195,
+        275,
+        286,
+        318,
+        337,
+        394,
+        414,
+        104,
+        136,
+        75,
+        21,
+        99,
+        194,
+        87,
+        426,
+        59,
+        323,
+        83,
+        298,
+        369,
+        3
+      ],
+      "rerank_input_episode_ids": [
+        483,
+        285,
+        321,
+        484,
+        289,
+        398,
+        482,
+        485,
+        322,
+        93,
+        400,
+        24,
+        189,
+        284,
+        98,
+        55,
+        378,
+        34,
+        73,
+        367,
+        78,
+        320,
+        293,
+        309,
+        377,
+        440,
+        366,
+        464,
+        313,
+        7
+      ],
+      "precompression": {
+        "enabled": true,
+        "pool_limit": 100,
+        "configured_limit": 24,
+        "effective_limit": 30,
+        "pool_count": 100,
+        "rerank_input_count": 30,
+        "dropped_count": 70,
+        "decisions": [
+          {
+            "episode_id": 483,
+            "pool_rank": 1,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 285,
+            "pool_rank": 2,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 321,
+            "pool_rank": 3,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 484,
+            "pool_rank": 4,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 289,
+            "pool_rank": 5,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 398,
+            "pool_rank": 6,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 482,
+            "pool_rank": 7,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 485,
+            "pool_rank": 8,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 322,
+            "pool_rank": 9,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 93,
+            "pool_rank": 10,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 400,
+            "pool_rank": 11,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 24,
+            "pool_rank": 12,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 189,
+            "pool_rank": 13,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 284,
+            "pool_rank": 14,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 98,
+            "pool_rank": 15,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 55,
+            "pool_rank": 16,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 378,
+            "pool_rank": 17,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 34,
+            "pool_rank": 18,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 73,
+            "pool_rank": 19,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 367,
+            "pool_rank": 20,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 78,
+            "pool_rank": 21,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 320,
+            "pool_rank": 22,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 293,
+            "pool_rank": 23,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 309,
+            "pool_rank": 24,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 377,
+            "pool_rank": 25,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 440,
+            "pool_rank": 26,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 366,
+            "pool_rank": 27,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 464,
+            "pool_rank": 28,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 313,
+            "pool_rank": 29,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 7,
+            "pool_rank": 30,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 8,
+            "pool_rank": 31,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 10,
+            "pool_rank": 32,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 32,
+            "pool_rank": 33,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 84,
+            "pool_rank": 34,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 91,
+            "pool_rank": 35,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 147,
+            "pool_rank": 36,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 153,
+            "pool_rank": 37,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 188,
+            "pool_rank": 38,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 190,
+            "pool_rank": 39,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 191,
+            "pool_rank": 40,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 192,
+            "pool_rank": 41,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 193,
+            "pool_rank": 42,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 280,
+            "pool_rank": 43,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 316,
+            "pool_rank": 44,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 338,
+            "pool_rank": 45,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 342,
+            "pool_rank": 46,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 343,
+            "pool_rank": 47,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 348,
+            "pool_rank": 48,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 349,
+            "pool_rank": 49,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 351,
+            "pool_rank": 50,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 352,
+            "pool_rank": 51,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 353,
+            "pool_rank": 52,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 354,
+            "pool_rank": 53,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 385,
+            "pool_rank": 54,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 387,
+            "pool_rank": 55,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 388,
+            "pool_rank": 56,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 393,
+            "pool_rank": 57,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 405,
+            "pool_rank": 58,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 421,
+            "pool_rank": 59,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 425,
+            "pool_rank": 60,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 442,
+            "pool_rank": 61,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 444,
+            "pool_rank": 62,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 61,
+            "pool_rank": 63,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 299,
+            "pool_rank": 64,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 305,
+            "pool_rank": 65,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 402,
+            "pool_rank": 66,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 376,
+            "pool_rank": 67,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 57,
+            "pool_rank": 68,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 113,
+            "pool_rank": 69,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 114,
+            "pool_rank": 70,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 137,
+            "pool_rank": 71,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 138,
+            "pool_rank": 72,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 139,
+            "pool_rank": 73,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 317,
+            "pool_rank": 74,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 319,
+            "pool_rank": 75,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 22,
+            "pool_rank": 76,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 111,
+            "pool_rank": 77,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 152,
+            "pool_rank": 78,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 156,
+            "pool_rank": 79,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 195,
+            "pool_rank": 80,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 275,
+            "pool_rank": 81,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 286,
+            "pool_rank": 82,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 318,
+            "pool_rank": 83,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 337,
+            "pool_rank": 84,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 394,
+            "pool_rank": 85,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 414,
+            "pool_rank": 86,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 104,
+            "pool_rank": 87,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 136,
+            "pool_rank": 88,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 75,
+            "pool_rank": 89,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 21,
+            "pool_rank": 90,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 99,
+            "pool_rank": 91,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 194,
+            "pool_rank": 92,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 87,
+            "pool_rank": 93,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 426,
+            "pool_rank": 94,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 59,
+            "pool_rank": 95,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 323,
+            "pool_rank": 96,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 83,
+            "pool_rank": 97,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 298,
+            "pool_rank": 98,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 369,
+            "pool_rank": 99,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 3,
+            "pool_rank": 100,
+            "kept": false,
+            "reason": "dropped_budget"
+          }
+        ]
+      },
+      "atomic_queries": [
+        "沙勒部室为什么需要老师与各学园代表协助夺回？",
+        "沙勒部室是什么组织",
+        "沙勒部室被谁夺走了",
+        "沙勒部室为什么需要夺回",
+        "沙勒部室夺回行动需要老师协助的原因",
+        "沙勒部室夺回行动需要各学园代表协助的原因",
+        "沙勒部室夺回行动中老师的具体角色",
+        "沙勒部室夺回行动中各学园代表的具体角色",
+        "沙勒部室夺回行动面临的困难",
+        "沙勒部室夺回行动的计划或策略"
+      ],
+      "expanded_atomic_query_count": 10,
+      "atomic_queries_truncated": false,
+      "input_hash": "0df44792769d2a4963930fc170038e2d2342cd52f57405b82e8d39bf683d262e",
+      "cache_hit": false,
+      "paragraph_context_episode_count": 0,
+      "paragraph_context_ids": [],
+      "required_evidence_floor_ids": [],
+      "atomic_evidence_floor_ids": [],
+      "answer_slot_anchor_ids": [],
+      "answer_slot_neighbor_floor_ids": [],
+      "rerank_candidate_text_chars": 3013,
+      "initial_prompt_chars": 0,
+      "coverage_prompt_chars": 0,
+      "review_mode": "cross_encoder",
+      "review_level": "cross_encoder",
+      "coverage_audit_performed": false,
+      "compressor_performed": false,
+      "cross_encoder_ranked_episode_ids": [
+        483,
+        484,
+        34,
+        482,
+        485,
+        321,
+        322,
+        98,
+        24,
+        93,
+        320,
+        284,
+        289,
+        398,
+        7,
+        189,
+        313,
+        377,
+        293,
+        400,
+        55,
+        464,
+        285,
+        367,
+        366,
+        440,
+        73,
+        378,
+        78,
+        309
+      ],
+      "cross_encoder_scores": [
+        0.99741298,
+        0.80294424,
+        0.72431833,
+        0.66671628,
+        0.43265185,
+        0.38682213,
+        0.2935141,
+        0.25238916,
+        0.10898425,
+        0.08386494,
+        0.052928,
+        0.03355385,
+        0.01713605,
+        0.01006131,
+        0.0042895,
+        0.00359249,
+        0.00309631,
+        0.00288871,
+        0.00251343,
+        0.00137368,
+        0.0012538,
+        0.00106316,
+        0.00084101,
+        0.00081531,
+        0.00070289,
+        0.00047142,
+        0.0004153,
+        0.00037857,
+        0.00010519,
+        9.842e-05
+      ],
+      "required_evidence_floor_replacements": [],
+      "atomic_evidence_floor_replacements": [],
+      "final_episode_ids": [
+        483,
+        484,
+        34,
+        482,
+        485,
+        321,
+        322,
+        98,
+        24,
+        93,
+        320,
+        284,
+        289,
+        398,
+        7,
+        189,
+        313,
+        377,
+        293,
+        400,
+        55,
+        464,
+        285,
+        367,
+        366,
+        440,
+        73,
+        378,
+        78,
+        309
+      ],
+      "deterministic_evidence_floor": {
+        "enabled": false,
+        "constraint_slots": [],
+        "whole_question_sparse_ids": [],
+        "atomic_floor_ids": [],
+        "selected_episode_ids": [],
+        "planned_episode_ids": [],
+        "candidate_missing_episode_ids": []
+      },
+      "constraint_candidate_ids": []
+    },
+    "retrieval_intensity": "standard",
+    "rerank_policy": "cross_encoder_standard",
+    "rerank_execution": {
+      "status": "completed",
+      "attempted": true,
+      "backend": "cross_encoder",
+      "model": "Pro/BAAI/bge-reranker-v2-m3",
+      "review_level": "cross_encoder",
+      "cache_hit": false,
+      "error": "",
+      "fallback_used": false
+    },
+    "evidence_slot_trace": {
+      "final_episode_ids": [
+        7,
+        24,
+        34,
+        55,
+        73,
+        78,
+        93,
+        98,
+        189,
+        284,
+        285,
+        289,
+        293,
+        309,
+        313,
+        320,
+        321,
+        322,
+        366,
+        367,
+        377,
+        378,
+        398,
+        400,
+        440,
+        464,
+        482,
+        483,
+        484,
+        485
+      ],
+      "deterministic": {
+        "enabled": false,
+        "constraint_slots": [],
+        "whole_question_sparse_ids": [],
+        "atomic_floor_ids": [],
+        "selected_episode_ids": [],
+        "planned_episode_ids": [],
+        "candidate_missing_episode_ids": [],
+        "final_matched_episode_ids": [],
+        "missing_floor_episode_ids": []
+      },
+      "coverage_slots": []
+    },
+    "timings": {
+      "version": "query-stage-timing-v1",
+      "phases_seconds": {
+        "intent_parse": 10.471352,
+        "initial_embedding": 0.96386,
+        "initial_retrieval": 0.665757,
+        "initial_graph_expansion": 0.36496,
+        "followup_planning": 0.000724,
+        "followup_embedding": 0.0,
+        "followup_retrieval": 0.0,
+        "followup_graph_expansion": 0.0,
+        "source_cohort": 0.380692,
+        "evidence_preparation": 0.042743,
+        "evidence_rerank": 0.94337,
+        "association_growth": 7e-06,
+        "final_selection": 2.936657,
+        "growth_utility": 0.019433,
+        "answer_generation": 2e-06
+      },
+      "measured_seconds": 16.789557,
+      "unattributed_seconds": 0.030082,
+      "total_seconds": 16.819639
+    },
+    "service_cache_hit": false
+  }
+}

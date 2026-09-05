@@ -1,0 +1,197 @@
+{
+  "config": {
+    "target_chars": 6000,
+    "max_chars": 8000,
+    "overlap_chars": 800,
+    "minimum_blocks": 2,
+    "reference_max_blocks": 10
+  },
+  "input_root": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/serihu-corpus-20260831",
+  "output_root": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/serihu-quality-canary-v5c-corpus-20260831",
+  "available_segments": 787,
+  "selected_segments": 13,
+  "segments": [
+    {
+      "source_key": "主线剧情_最終編_第1章.txt",
+      "segment_index": 0,
+      "chars": 6598,
+      "speaker_count": 24,
+      "heading_count": 6,
+      "quote_count": 52,
+      "scene_score": 72,
+      "attribution_score": 116,
+      "strata": [
+        "regression_anchor"
+      ],
+      "canary_file": "000__主线剧情_最終編_第1章__segment-0000.txt"
+    },
+    {
+      "source_key": "活动剧情_event_821.txt",
+      "segment_index": 0,
+      "chars": 5731,
+      "speaker_count": 30,
+      "heading_count": 19,
+      "quote_count": 20,
+      "scene_score": 182,
+      "attribution_score": 140,
+      "strata": [
+        "scene_switch"
+      ],
+      "canary_file": "001__活动剧情_event_821__segment-0000.txt"
+    },
+    {
+      "source_key": "主线剧情_最終編_第2章.txt",
+      "segment_index": 5,
+      "chars": 7094,
+      "speaker_count": 73,
+      "heading_count": 11,
+      "quote_count": 38,
+      "scene_score": 161,
+      "attribution_score": 312,
+      "strata": [
+        "scene_switch"
+      ],
+      "canary_file": "002__主线剧情_最終編_第2章__segment-0005.txt"
+    },
+    {
+      "source_key": "主线剧情_最終編_第2章.txt",
+      "segment_index": 6,
+      "chars": 7409,
+      "speaker_count": 53,
+      "heading_count": 9,
+      "quote_count": 28,
+      "scene_score": 125,
+      "attribution_score": 232,
+      "strata": [
+        "scene_switch"
+      ],
+      "canary_file": "003__主线剧情_最終編_第2章__segment-0006.txt"
+    },
+    {
+      "source_key": "主线剧情_最終編_第3章.txt",
+      "segment_index": 11,
+      "chars": 7093,
+      "speaker_count": 49,
+      "heading_count": 7,
+      "quote_count": 30,
+      "scene_score": 105,
+      "attribution_score": 216,
+      "strata": [
+        "attribution"
+      ],
+      "canary_file": "004__主线剧情_最終編_第3章__segment-0011.txt"
+    },
+    {
+      "source_key": "主线剧情_最終編_第4章.txt",
+      "segment_index": 0,
+      "chars": 7109,
+      "speaker_count": 48,
+      "heading_count": 6,
+      "quote_count": 68,
+      "scene_score": 96,
+      "attribution_score": 212,
+      "strata": [
+        "attribution"
+      ],
+      "canary_file": "005__主线剧情_最終編_第4章__segment-0000.txt"
+    },
+    {
+      "source_key": "主线剧情_最終編_第2章.txt",
+      "segment_index": 1,
+      "chars": 6516,
+      "speaker_count": 47,
+      "heading_count": 6,
+      "quote_count": 30,
+      "scene_score": 95,
+      "attribution_score": 208,
+      "strata": [
+        "attribution"
+      ],
+      "canary_file": "006__主线剧情_最終編_第2章__segment-0001.txt"
+    },
+    {
+      "source_key": "活动剧情_event_803.txt",
+      "segment_index": 5,
+      "chars": 7999,
+      "speaker_count": 13,
+      "heading_count": 8,
+      "quote_count": 50,
+      "scene_score": 77,
+      "attribution_score": 72,
+      "strata": [
+        "long"
+      ],
+      "canary_file": "007__活动剧情_event_803__segment-0005.txt"
+    },
+    {
+      "source_key": "主线剧情_第5篇_百花繚乱編_第1章.txt",
+      "segment_index": 7,
+      "chars": 7996,
+      "speaker_count": 19,
+      "heading_count": 8,
+      "quote_count": 12,
+      "scene_score": 83,
+      "attribution_score": 88,
+      "strata": [
+        "long"
+      ],
+      "canary_file": "008__主线剧情_第5篇_百花繚乱編_第1章__segment-0007.txt"
+    },
+    {
+      "source_key": "主线剧情_第3篇_エデン条約編_第1章.txt",
+      "segment_index": 1,
+      "chars": 7996,
+      "speaker_count": 12,
+      "heading_count": 6,
+      "quote_count": 38,
+      "scene_score": 60,
+      "attribution_score": 68,
+      "strata": [
+        "long"
+      ],
+      "canary_file": "009__主线剧情_第3篇__条約編_第1章__segment-0001.txt"
+    },
+    {
+      "source_key": "活动剧情_event_807.txt",
+      "segment_index": 0,
+      "chars": 860,
+      "speaker_count": 5,
+      "heading_count": 3,
+      "quote_count": 2,
+      "scene_score": 29,
+      "attribution_score": 22,
+      "strata": [
+        "ordinary"
+      ],
+      "canary_file": "010__活动剧情_event_807__segment-0000.txt"
+    },
+    {
+      "source_key": "好感剧情_セナ.txt",
+      "segment_index": 1,
+      "chars": 3782,
+      "speaker_count": 6,
+      "heading_count": 4,
+      "quote_count": 0,
+      "scene_score": 38,
+      "attribution_score": 24,
+      "strata": [
+        "ordinary"
+      ],
+      "canary_file": "011__好感剧情____segment-0001.txt"
+    },
+    {
+      "source_key": "好感剧情_アコ.txt",
+      "segment_index": 1,
+      "chars": 3777,
+      "speaker_count": 6,
+      "heading_count": 4,
+      "quote_count": 6,
+      "scene_score": 38,
+      "attribution_score": 30,
+      "strata": [
+        "ordinary"
+      ],
+      "canary_file": "012__好感剧情____segment-0001.txt"
+    }
+  ]
+}

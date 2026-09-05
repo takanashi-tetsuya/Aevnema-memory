@@ -1,0 +1,121 @@
+{
+  "description": "Stable evidence-anchored extraction and dense-retrieval acceptance questions for the five-file import canary.",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "是谁提议星野先去找老师帮忙寻找白子？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["シロコ", "一緒に、先生に会いに行きましょう"]}]
+    },
+    {
+      "id": "q02",
+      "question": "圣塔被毁以后，凛为什么认为夏莱成了唯一的希望？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["サンクトゥムタワー", "シャーレ"]}]
+    },
+    {
+      "id": "q03",
+      "question": "Who arrived after Sensei called her, while warning that she was not an expert?",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["一番乗り", "専門家"]}]
+    },
+    {
+      "id": "q04",
+      "question": "优香提交了什么，亚子到达后又询问了什么？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["現状を分析したレポート", "先生はどちら"]}]
+    },
+    {
+      "id": "q05",
+      "question": "花子怎样鼓励因为白子失踪而悲伤的绫音？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["ハナコ", "もっと自信を"]}]
+    },
+    {
+      "id": "q06",
+      "question": "老师在D.U.忙什么，凛准备等老师回来后做什么？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["D.U.全域", "会議室"]}]
+    },
+    {
+      "id": "q07",
+      "question": "修女会古书中的‘色彩’被描述成什么样的存在？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["所有している古書", "狂気"]}]
+    },
+    {
+      "id": "q08",
+      "question": "圣亚预知梦里的巨塔、黑光和世界终结是怎样的景象？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["黒い光", "世界が終焉"]}]
+    },
+    {
+      "id": "q09",
+      "question": "圣亚认为百鬼夜行的哪位大预言者可能知道更多？妮娅随后想做什么？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["クズノハ", "ニヤ"]}]
+    },
+    {
+      "id": "q10",
+      "question": "虚妄圣所多久后到达临界点，一共有几处，哪一处能量最大？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["計6か所", "2週間"]}]
+    },
+    {
+      "id": "q11",
+      "question": "虚妄のサンクトゥムの守護者には、どんな過去の怪異が凝縮されている？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["デカグラマトン", "Divi:Sion"]}]
+    },
+    {
+      "id": "q12",
+      "question": "除了击败各地守护者，作战还必须解决哪些避难和治安问题？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["避難先", "治安維持"]}]
+    },
+    {
+      "id": "q13",
+      "question": "渚、未花和圣亚对各自治区治安维持作出了什么承诺？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["ナギサ", "ミカ", "セイア"]}]
+    },
+    {
+      "id": "q14",
+      "question": "格黑娜自治区防卫、风纪委员会护卫和救急医学部支援分别由谁承担？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["救急医学部", "風紀委員"]}]
+    },
+    {
+      "id": "q15",
+      "question": "红冬、百鬼夜行、修行部和祭典运营委员会分别怎样支援避难？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["レッドウィンター", "お祭り運営委員会"]}]
+    },
+    {
+      "id": "q16",
+      "question": "D.U.区域由谁负责避难？粮食或避难场所不足时可以找哪个商会？",
+      "expected_episode_matchers": [{"source_key": "001__主线剧情_最終編_第2章__segment-0001.txt", "all_terms": ["玄武商会", "D.U.エリア"]}]
+    },
+    {
+      "id": "q17",
+      "question": "葛叶说圣亚要摆脱色彩侵蚀必须付出什么代价？",
+      "expected_episode_matchers": [{"source_key": "000__主线剧情_最終編_第1章__segment-0000.txt", "all_terms": ["クズノハ", "本質を1つ手放"]}]
+    },
+    {
+      "id": "q18",
+      "question": "理央怎样暂时阻止方舟，为什么这还不能真正解决问题？",
+      "expected_episode_matchers": [{"source_key": "002__主线剧情_最終編_第4章__segment-0001.txt", "all_terms": ["多次元解釈", "強制的にウトナピシュティム"]}]
+    },
+    {
+      "id": "q19",
+      "question": "阿比多斯土地交易的主体是谁，为什么只有学生会能进行这种交易？",
+      "expected_episode_matchers": [
+        {"source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt", "all_terms": ["議決権"]},
+        {"source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt", "all_terms": ["取引の主体", "前生徒会"]}
+      ]
+    },
+    {
+      "id": "q20",
+      "question": "芹香如何吐槽阿比多斯前学生会，星野又怎样回忆当时的两个人？",
+      "expected_episode_matchers": [
+        {"source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt", "all_terms": ["校内随一のバカ"]},
+        {"source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt", "all_terms": ["おバカさん二人"]}
+      ]
+    },
+    {
+      "id": "q21",
+      "question": "白子为什么翻星野的包，并想把发现先告诉谁？",
+      "expected_episode_matchers": [{"source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt", "all_terms": ["バッグ", "隠し事"]}]
+    },
+    {
+      "id": "q22",
+      "question": "未花为什么让老师先走，她准备独自做什么？",
+      "expected_episode_matchers": [{"source_key": "004__主线剧情_第3篇__条約編_第4章__segment-0024.txt", "all_terms": ["悪役", "あの子たちを救って"]}]
+    }
+  ]
+}

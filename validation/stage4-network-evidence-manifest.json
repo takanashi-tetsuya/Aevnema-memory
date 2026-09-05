@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "purpose": "第四阶段网络级深度联想评测：题目设计各需串联七至九组独立 Episode 证据，检验多跳联想、冲突证词、制度/人物/事件边界和查询期图增长；组数不是图边增长指标。",
+  "database": "validation/ba-stage3-deep-v37.db",
+  "question_set": "validation/evaluation-questions-stage4-network.json",
+  "corpus_boundary": {
+    "allowed_source_keys": [
+      "event/10038/1003805.json",
+      "favor/10000/100002.json",
+      "main/31010.json",
+      "main/31060.json",
+      "main/31090.json",
+      "main/32170.json",
+      "main/33030.json",
+      "main/33050.json",
+      "main/33060.json",
+      "main/33070.json",
+      "main/33190.json"
+    ],
+    "rule": "答案中的剧情事实必须能回溯至 allowed_source_keys 内的 Episode；问题、题解和评分器都不得以作品外知识补全空白。"
+  },
+  "difficulty_target": {
+    "previous_stage_required_evidence_groups": 3,
+    "network_stage_required_evidence_groups": "7-9",
+    "target_ratio": "至少约 2x",
+    "interpretation": "这是出题时对理论证据连接数量的复杂度目标；实际运行中的新增/强化边数量不属于任何评测指标。"
+  },
+  "global_answer_contract": {
+    "must_separate": ["原文事实", "综合推论", "文本未知或仅为推测"],
+    "must_name_source_keys": true,
+    "must_not_use_external_lore": true,
+    "must_not_upgrade_hypothesis_to_fact": true,
+    "must_not_upgrade_political_context_to_specific_event_mechanism": true
+  },
+  "questions": {
+    "eden_obligation_to_new_institution": {
+      "required_episode_groups": [[7], [67, 68], [84], [121, 122, 123, 124], [197, 198], [199], [203]],
+      "required_sources": ["main/31010.json", "main/33030.json", "main/33050.json", "main/33060.json", "main/33190.json"],
+      "required_terms": ["圣娅", "老师", "伊甸条约机构", "夏莱"],
+      "required_term_groups": [["事实", "原文", "文本明确"], ["推论", "推断", "综合"], ["未知", "不能确定", "未明确", "无法确定"]]
+    },
+    "old_cathedral_symbol_infrastructure_and_limits": {
+      "required_episode_groups": [[274, 275], [76, 77, 78], [121], [122], [139, 140], [320], [341], [197, 199]],
+      "required_sources": ["main/31090.json", "main/33050.json", "main/33060.json", "main/33070.json", "main/33190.json"],
+      "required_terms": ["古圣堂", "阿里乌斯", "地下墓穴", "伊甸条约"],
+      "required_term_groups": [["事实", "原文", "文本明确"], ["推测", "推论", "推断"], ["未知", "未明确", "不能确定", "无法确定"]]
+    },
+    "arius_two_patrons_and_control_boundaries": {
+      "required_episode_groups": [[305, 306, 307], [308, 309, 313], [325, 326], [327], [328], [329, 330], [14], [332, 333]],
+      "required_sources": ["main/32170.json", "main/33070.json", "main/33030.json"],
+      "required_terms": ["未花", "真琴", "阿里乌斯", "格黑娜"],
+      "required_term_groups": [["事实", "原文", "文本明确"], ["推论", "推断", "综合"], ["不能", "未知", "未明确", "无法确定"]]
+    },
+    "mika_motive_epistemic_four_layers": {
+      "required_episode_groups": [[3, 4, 5], [20, 23, 24, 25, 35, 36], [30, 31, 32], [33, 37], [43, 44, 47], [49, 50, 53], [62, 63, 64, 65], [302, 305, 307, 309, 313]],
+      "required_sources": ["main/31010.json", "main/33030.json", "main/32170.json"],
+      "required_terms": ["未花", "花子", "乐园", "阿里乌斯"],
+      "required_term_groups": [["事实", "直接", "原文"], ["推测", "推论", "分析"], ["否认", "修正", "反驳"], ["未知", "无法证明", "不能确定", "未明确"]]
+    },
+    "hifumi_azusa_identity_coalition_and_declaration": {
+      "required_episode_groups": [[250, 251, 252], [263, 264], [150, 151, 152], [154, 155], [161, 168, 169], [189, 190, 191], [194, 195], [197, 198, 199]],
+      "required_sources": ["main/31060.json", "main/33060.json", "main/33190.json"],
+      "required_terms": ["日富美", "梓", "浮士德", "阿里乌斯", "伊甸条约机构"],
+      "required_term_groups": [["事实", "原文", "文本明确"], ["推论", "推断", "综合"], ["不能", "未知", "未明确", "无法确定"]]
+    },
+    "hina_public_duty_personal_exhaustion_and_teacher_response": {
+      "required_episode_groups": [[129, 130, 131], [320, 321, 322, 323], [176, 177, 178], [173, 174, 175], [179, 180, 181], [182, 183], [185, 186, 187, 188], [7], [205]],
+      "required_sources": ["main/31010.json", "main/33060.json", "main/33070.json", "main/33190.json"],
+      "required_terms": ["日奈", "星野", "老师", "义务"],
+      "required_term_groups": [["事实", "原文", "文本明确"], ["推论", "推断", "综合"], ["不能", "未知", "未明确", "无法确定"]]
+    },
+    "kisaki_mika_governance_analogy_with_boundary": {
+      "required_episode_groups": [[218, 219, 220], [229, 231, 232, 233], [237, 238, 239], [241], [243, 244], [302, 305, 306], [295, 296, 297], [308, 309, 313]],
+      "required_sources": ["event/10038/1003805.json", "main/32170.json"],
+      "required_terms": ["妃咲", "未花", "月影祭", "格黑娜", "阿里乌斯"],
+      "required_term_groups": [["相似", "共同", "都"], ["差异", "不同", "相反"], ["类比", "推论", "推断"], ["没有直接", "不能证明", "未知", "无直接因果"]]
+    }
+  },
+  "execution_protocol": {
+    "modes": ["vector_only", "graph_static", "graph_growing"],
+    "phase_1": "每题使用新的评测副本单独运行，先定位召回/推理/增长问题。",
+    "phase_2": "七题按固定顺序在同一 graph_growing 副本连续运行，检查新边是否被后题复用。",
+    "phase_3": "至少三种问题顺序重跑连续增长，以暴露路径依赖、边爆炸和错误强化。",
+    "phase_4": "人工逐条复核所有新建/强化边的 claim_level、evidence_json、audit_json 和最终答案路径。"
+  },
+  "acceptance": {
+    "hard": [
+      "required_episode_groups 记录精确 Episode 召回覆盖，作为诊断值；Source 摘录可能提供同一原文证据，因此该 ID 覆盖不单独决定整题通过",
+      "required_sources 记录预设跨文件证据覆盖，作为诊断值；同一事实可能在允许语料的其他文件中被完整重述",
+      "末次 answer audit 为 valid",
+      "答案必须包含 required_terms；事实、推论/分析与未知边界由 Source 原文增强后的答案审计判定，required_term_groups 仅作格式诊断",
+      "vector_only 不使用 Association；graph_static 使用既有 Association；graph_growing 的变化边必须被实际答案路径使用",
+      "不得在 allowed_source_keys 之外引入剧情事实"
+    ],
+    "growth_safety_checks_not_quantity_metrics": [
+      "如发生新增或强化，关系必须带 dual_accepted、两端 evidence_json 和 audit_json",
+      "如发生新增或强化，变化边必须进入当前或后续答案路径才视为有用",
+      "严重越界边（错误身份、虚构具体机制、推测升级为事实）为 0",
+      "不统计、不要求、不建议任何新增或强化边数量"
+    ]
+  }
+}

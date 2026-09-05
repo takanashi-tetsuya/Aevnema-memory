@@ -1,0 +1,42 @@
+{
+  "input_root": "C:\\Users\\Admin\\Documents\\blue_archive_main_story\\production_kb",
+  "config": {
+    "target_chars": 6000,
+    "max_chars": 8000,
+    "overlap_chars": 800
+  },
+  "totals": {
+    "files": 34,
+    "parsed_files": 34,
+    "unsupported_files": 0,
+    "blocks": 506,
+    "segments": 63,
+    "bytes": 199418,
+    "empty_files": 0,
+    "parse_failures": 0,
+    "oversize_segments": 0
+  },
+  "categories": {
+    "root": {
+      "files": 34,
+      "blocks": 506,
+      "segments": 63,
+      "bytes": 199418
+    }
+  },
+  "language_blocks": {
+    "unknown": 506
+  },
+  "segment_length": {
+    "min": 153,
+    "mean": 1475.32,
+    "p50": 1580,
+    "p95": 2319,
+    "p99": 2591,
+    "max": 2634
+  },
+  "empty_file_samples": [],
+  "unsupported_file_samples": [],
+  "failures": [],
+  "oversize_samples": []
+}

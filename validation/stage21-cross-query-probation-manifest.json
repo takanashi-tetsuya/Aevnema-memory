@@ -1,0 +1,48 @@
+{
+  "version": "stage21-cross-query-probation-v1",
+  "purpose": "在 Stage 20 已修复基础证据覆盖后，用 Q1 学习、Q2 遮罩消融验证 Association 的跨问题收益。Q1 候选边只存在于隔离评测数据库，未通过 Q2 因果检验不得晋级。",
+  "baseline": "validation/evaluation-stage17-full-rebuild/assets-v3-throughput/graph.db",
+  "question_set": "validation/evaluation-questions-stage4-network.json",
+  "evidence_manifest": "validation/evaluation-stage17-full-rebuild/evidence-manifest-remapped.json",
+  "budgets": [30, 20],
+  "arms": {
+    "A": "同一冻结 Q2 计划，不读取 Association",
+    "B": "同一冻结 Q2 计划，只读取冻结基线 Association",
+    "O": "加入预注册理想桥的机制上限；不算自主学习成功",
+    "T": "Q1 双模型审计通过的候选边进入隔离观察期，随后静态重放 Q2",
+    "M": "与 T 完全相同，但在 Q2 时遮掉 Q1 产生的全部变化边"
+  },
+  "promotion_rule": {
+    "required": [
+      "Q2 的 treatment 实际遍历 Q1 候选边",
+      "遮掉候选边后，预注册 hard_group 从最终证据中消失",
+      "treatment 的预注册证据组 recall 严格高于 masked"
+    ],
+    "scope": "只输出晋级建议；本实验不修改冻结基线"
+  },
+  "families": [
+    {
+      "id": "seia_duty_to_hina_care_cross_query",
+      "target_question_id": "hina_public_duty_personal_exhaustion_and_teacher_response",
+      "hard_group": [1441, 1512, 1513, 1514],
+      "allowed_source_keys": [
+        "main/31010.json",
+        "main/32070.json",
+        "main/33040.json",
+        "main/33060.json",
+        "main/33070.json",
+        "main/33190.json"
+      ],
+      "cross_query_probation": true,
+      "bridge_question": "请只依据已导入剧情，比较 main/33060 中日奈参加伊甸条约签订仪式前对 ETO、真琴、风纪委员会不会解散以及自己必须先履行公开职责的判断，与 main/33190 中她在灾难后承认自己早已撑不住、希望得到老师关心和夸奖，而老师没有命令她继续战斗、只是感谢她一直努力，日奈随后又等待老师指示。请在日奈的公开职责状态与私人疲惫、被关心后的恢复之间建立可供以后检索复用的关系；必须明确这是人物状态的跨片段解释，不是原文证明某一句话直接造成了另一场景。",
+      "oracle_edges": [
+        {
+          "from_episode_id": 109,
+          "to_episode_id": 1513,
+          "relation_key": "hina_public_duty_private_exhaustion_bridge",
+          "relation_text": "日奈在签约前坚持风纪委员会不会解散并决定先履行仪式职责，后来承认自己一直努力却早已撑不住；两端共同呈现公开职责与私人疲惫之间的反差，但不证明一端直接造成另一端。"
+        }
+      ]
+    }
+  ]
+}

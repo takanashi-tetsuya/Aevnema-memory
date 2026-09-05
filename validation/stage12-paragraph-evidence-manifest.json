@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "kind": "paragraph_mechanism",
+  "questions": {
+    "paragraph_gap_01": {
+      "required_episode_groups": [
+        [
+          340,
+          341,
+          342
+        ]
+      ],
+      "required_sources": [
+        "main/33070.json"
+      ],
+      "answer": "鹤城让莲实冷静下来。",
+      "evidence_quote": "zh-CN: 冷静。",
+      "paragraph_id": 539,
+      "source_id": 68,
+      "maximum_episode_similarity": 0.49646681547164917
+    },
+    "paragraph_gap_02": {
+      "required_episode_groups": [
+        [
+          88,
+          89,
+          90,
+          91
+        ]
+      ],
+      "required_sources": [
+        "main/33050.json"
+      ],
+      "answer": "凛",
+      "evidence_quote": "#na;린;더 이상의 질문은 받지 않겠습니다.]",
+      "paragraph_id": 159,
+      "source_id": 18,
+      "maximum_episode_similarity": 0.49795693159103394
+    },
+    "paragraph_gap_03": {
+      "required_episode_groups": [
+        [
+          192,
+          193,
+          194
+        ]
+      ],
+      "required_sources": [
+        "main/33190.json"
+      ],
+      "answer": "努力会得到应有的回报。",
+      "evidence_quote": "努力会得到应有的回报",
+      "paragraph_id": 310,
+      "source_id": 37,
+      "maximum_episode_similarity": 0.5069488286972046
+    },
+    "paragraph_gap_04": {
+      "required_episode_groups": [
+        [
+          241,
+          242,
+          243
+        ]
+      ],
+      "required_sources": [
+        "event/10038/1003805.json"
+      ],
+      "answer": "弥奈的心情变得稍微轻松了一些。",
+      "evidence_quote": "……感觉稍微轻松些了。",
+      "paragraph_id": 368,
+      "source_id": 46,
+      "maximum_episode_similarity": 0.5370974540710449
+    },
+    "paragraph_gap_05": {
+      "required_episode_groups": [
+        [
+          269,
+          270,
+          271,
+          272
+        ]
+      ],
+      "required_sources": [
+        "main/31090.json"
+      ],
+      "answer": "她称呼老师为“老师”。",
+      "evidence_quote": "어서오세요. 선생님.",
+      "paragraph_id": 410,
+      "source_id": 52,
+      "maximum_episode_similarity": 0.5575395822525024
+    },
+    "paragraph_gap_06": {
+      "required_episode_groups": [
+        [
+          23,
+          24,
+          25,
+          26
+        ]
+      ],
+      "required_sources": [
+        "main/33030.json"
+      ],
+      "answer": "未花说，因为她们终究只是“他人”，所以不可能真正了解对方。",
+      "evidence_quote": "……「私たちは他人だから」。ね、分かるわけないじゃん？",
+      "paragraph_id": 60,
+      "source_id": 6,
+      "maximum_episode_similarity": 0.5636816024780273
+    },
+    "paragraph_gap_07": {
+      "required_episode_groups": [
+        [
+          252,
+          253,
+          254
+        ]
+      ],
+      "required_sources": [
+        "main/31060.json"
+      ],
+      "answer": "花子询问是否可以称呼梓为“小梓”。",
+      "evidence_quote": "那么，我可以叫你小梓吗？",
+      "paragraph_id": 391,
+      "source_id": 49,
+      "maximum_episode_similarity": 0.5663719177246094
+    },
+    "paragraph_gap_08": {
+      "required_episode_groups": [
+        [
+          108,
+          109,
+          110
+        ]
+      ],
+      "required_sources": [
+        "main/33060.json"
+      ],
+      "answer": "她还有其他的任务需要完成。",
+      "evidence_quote": "那个，我还有别的任务所以……",
+      "paragraph_id": 195,
+      "source_id": 22,
+      "maximum_episode_similarity": 0.575475811958313
+    }
+  }
+}

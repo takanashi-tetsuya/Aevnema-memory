@@ -1,0 +1,150 @@
+{
+  "database": "C:\\Users\\Admin\\PycharmProjects\\PythonProject\\validation\\serihu-full-safeparallel-candidate-20260831.db",
+  "source_key": "主线剧情_最終編_第1章.txt",
+  "segment_index": 8,
+  "model": "deepseek-ai/DeepSeek-V3.2",
+  "mode": "independent_extraction",
+  "before": [
+    {
+      "text": "黑服向马埃斯特罗确认观测到的六个能量是否为“色彩”，并指出因凯撒擅自行动及“箱舟”被观测，原本不感兴趣的“不可思议”现在变得重要。黑服表示若目标非“箱舟”则不再关注，并决定推进自身计划。马埃斯特罗提及通过复制完成的圣徒交游，戈尔孔达则指出怪谈图书馆和游乐园魔术师尚未完成。黑服提及德卡格拉玛顿的预言者已死，并提到逼近的“色彩”和即将复活的“无名司祭”。随后，凯撒的特种部队向将军报告位置，宫子宣布将突入夏莱大楼。",
+      "participants": [
+        "马埃斯特罗 / Maestro / 마에스트로",
+        "黑服 / Black Suit / 검은 양복",
+        "凯撒 / Kaiser / 카이저",
+        "戈尔孔达 / Golconda / 골콘다",
+        "将军 / General / 장군",
+        "凯撒的特种部队员 A / Kaiser's Special Forces A / 카이저의 특수부대원 A",
+        "凯撒的特种部队员 B / Kaiser's Special Forces B / 카이저의 특수부대원 B",
+        "凯撒的特种部队员 C / Kaiser's Special Forces C / 카이저의 특수부대원 C",
+        "宫子 / Miyako / 미야코"
+      ],
+      "event_type": "战略讨论与行动部署",
+      "location_text": "未明确具体地点（对话场景）",
+      "story_time_text": "当前时间",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "asserted",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "桃香成功恢复了D.U.全域的通信网与行政系统，阿罗娜报告通信恢复并发现大量未接来电。FOX小队（雪乃、尼科）确认处理完成并撤退，雪乃表示因夏莱的帮助才成功。PMC干部下令撤退并确认情况。随后，老师认出弗朗西斯，弗朗西斯宣称“戈尔孔达”已不存在，自己名为“弗朗西斯”，并宣告以“学园与青春”为体裁的旧故事已被颠覆、解体，新的非故事结局即将开始。老师随后请求阿罗娜联系“大家”。",
+      "participants": [
+        "桃香 / Momoka / 모모카",
+        "阿鲁姆 / Ayumu / 아유무",
+        "阿罗娜 / Arona / 아로나",
+        "林 / Rin / 린",
+        "PMC干部 / PMC Executive / PMC 간부",
+        "总统 / President / 프레지던트",
+        "雪乃 / Yukino / 유키노",
+        "尼科 / Nico / 니코",
+        "老师 / Sensei / 선생님",
+        "弗朗西斯 / Francis / 프란시스"
+      ],
+      "event_type": "系统恢复与叙事基调转变",
+      "location_text": "未明确具体地点（对话场景）",
+      "story_time_text": "当前时间",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "asserted",
+      "generation": 0,
+      "epistemic_note": ""
+    }
+  ],
+  "after": [
+    {
+      "text": "在某个地点，黑服向マエストロ和ゴルコンダ报告，观测到了六个能量信号，可能是“色彩”，但尚不确定。黑服提到，由于カイザー的擅自行动，以及“箱舟”被观测到，情况发生了变化。他确认那并非“箱舟”，因此不再是他们关心的重点，并提议继续推进他们自己的计划。マエストロ和ゴルコンダ随后讨论了他们各自项目的进展状况，包括通过“复制”完成的圣徒交谊会第一期、刚起步的怪谈无限图书馆，以及阿米尤斯公园的魔术师还需要时间。黑服则提到了デカグラマトン，其预言者留下了理解者“ビナー”和审判者“ケセド”，而デカグラマトン本人选择了死亡。黑服本想确认这是否再现了神圣再临“パルーシア”，但表示时间不够了。他提到了正在逼近的“色彩”和即将复活的“无名司祭”。ゴルコンダ感叹基沃托斯中众多神秘正在消失，黑服则回应说，即使是那些明灭，也曾是他们探求的一部分。",
+      "participants": [
+        "マエストロ",
+        "黑服(黑服/Black Suit/검은 양복)",
+        "ゴルコンダ"
+      ],
+      "event_type": "秘密会议与情报交换",
+      "location_text": "",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "在D.U.，モモカ成功恢复了全域的通信网络和行政系统。アロナ向老师报告通信恢复，并惊呼收到了海量信息，包括250个未接来电。リン对此表示惊讶。在场的PMC干部见状，下令暂时撤退以确认情况。プレジデント沉默不语。ユキノ报告FOX1任务完成，ニコ询问FOX3情况，ユキノ推测可能得到了シャーレ的帮助，并计划等防衛室長醒来后询问。ユキノ提议撤退，因为カイザ尔的奇袭打乱了计划。リン向老师报告情况。",
+      "participants": [
+        "モモカ",
+        "アユム",
+        "アロナ(阿罗娜/Arona/아로나)",
+        "リン",
+        "PMC幹部",
+        "プレジデント",
+        "ユキノ",
+        "ニコ",
+        "先生(老师/Sensei/선생님)"
+      ],
+      "event_type": "通信恢复与战场撤退",
+      "location_text": "D.U.",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "老师询问对方是否是ゴルコンダ。对方自称“フランシス”，并宣告ゴルコンダ已不存在。フランシス对老师说，过去的故事因其高举一种类型、因其是故事，所以老师是无敌的。但现在，这个故事已被颠覆。其脉络、构成、类型、意图、解释……全部被破坏，意义相互纠缠、混合、搅拌。フランシ斯告诉老师，可以忘记迄今为止的所有故事。如果接下来发生在老师身上的事情不再是故事，那么学园与青春的故事就已落幕。在被颠覆、解体的类型中，老师的价值将动摇、坠落、变得近乎虚无。フランシ斯宣布，现在要开始的，不是故事。他表示，既然如此，就守望这一切吧——走向绝望，迎来破局，然后奔向结局的终章！",
+      "participants": [
+        "先生(老师/Sensei/선생님)",
+        "フランシス"
+      ],
+      "event_type": "身份宣告与故事终结的宣告",
+      "location_text": "",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "在フランシ斯离开后，アロナ困惑地向老师询问刚才发生的事。老师请求アロナ帮忙联系“大家”。アロナ起初不确定“大家”具体指谁，老师再次强调是“大家”。アロナ最终设法完成了联络，但对后续发展感到担忧。老师感谢了アロナ，并说只要这次也一起跨越难关就没问题。",
+      "participants": [
+        "アロナ(阿罗娜/Arona/아로나)",
+        "先生(老师/Sensei/선생님)"
+      ],
+      "event_type": "联络请求与安抚",
+      "location_text": "",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "在另一个地点，ジェネラル命令SOF报告情况。カイザー特殊部队的成员オスカー1、オスカー2、オスカー3分别报告待命或已就位。随后，ミヤコ宣布将突入シャーレ的建筑，并下令行动。",
+      "participants": [
+        "ジェネラル",
+        "カイザーの特殊部隊員A",
+        "カイザーの特殊部隊員B",
+        "カイザーの特殊部隊員C",
+        "ミヤコ(宫子/Miyako/미야코)"
+      ],
+      "event_type": "军事行动命令与突入准备",
+      "location_text": "シャーレ建筑附近",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    }
+  ],
+  "errors": []
+}

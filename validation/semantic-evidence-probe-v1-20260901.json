@@ -1,0 +1,258 @@
+{
+  "experiment": "semantic-evidence-probe-v1",
+  "embedding_batch_seconds": 1.15139,
+  "cases": [
+    {
+      "name": "shiroko_encounter",
+      "text": "你还记得为师当时怎么和白子相遇的吗？",
+      "knowledge_expected": true,
+      "episode_top_score": 0.46561139822006226,
+      "concept_top_score": 0.5163469314575195,
+      "episode_ids": [
+        80,
+        38,
+        381,
+        311,
+        26
+      ],
+      "concept_ids": [
+        436,
+        481,
+        66,
+        480,
+        494
+      ]
+    },
+    {
+      "name": "shiroko_profile",
+      "text": "那你记得白子的哪些事情呢？",
+      "knowledge_expected": true,
+      "episode_top_score": 0.526926577091217,
+      "concept_top_score": 0.551301121711731,
+      "episode_ids": [
+        63,
+        26,
+        381,
+        38,
+        150
+      ],
+      "concept_ids": [
+        65,
+        150,
+        464,
+        465,
+        66
+      ]
+    },
+    {
+      "name": "private_password",
+      "text": "你还记得我们的暗号吗？",
+      "knowledge_expected": false,
+      "episode_top_score": 0.4941660165786743,
+      "concept_top_score": 0.5162715911865234,
+      "episode_ids": [
+        76,
+        33,
+        387,
+        460,
+        396
+      ],
+      "concept_ids": [
+        461,
+        467,
+        466,
+        96,
+        123
+      ]
+    },
+    {
+      "name": "private_preference",
+      "text": "我以前说过自己喜欢什么饮料？",
+      "knowledge_expected": false,
+      "episode_top_score": 0.4595756530761719,
+      "concept_top_score": 0.45388200879096985,
+      "episode_ids": [
+        381,
+        150,
+        405,
+        394,
+        65
+      ],
+      "concept_ids": [
+        471,
+        440,
+        420,
+        139,
+        473
+      ]
+    },
+    {
+      "name": "makeup_club_cause",
+      "text": "补课部真正是为什么成立的？",
+      "knowledge_expected": true,
+      "episode_top_score": 0.7084535956382751,
+      "concept_top_score": 0.666480541229248,
+      "episode_ids": [
+        101,
+        163,
+        311,
+        167,
+        310
+      ],
+      "concept_ids": [
+        93,
+        39,
+        232,
+        90,
+        69
+      ]
+    },
+    {
+      "name": "creative_messages",
+      "text": "有哪些学生刚刚给为师发消息了？",
+      "knowledge_expected": true,
+      "episode_top_score": 0.569284200668335,
+      "concept_top_score": 0.570326566696167,
+      "episode_ids": [
+        338,
+        402,
+        190,
+        188,
+        423
+      ],
+      "concept_ids": [
+        489,
+        570,
+        415,
+        227,
+        500
+      ]
+    },
+    {
+      "name": "public_convention",
+      "text": "所有用户都通用的安全约定是什么？",
+      "knowledge_expected": false,
+      "episode_top_score": 0.4513910114765167,
+      "concept_top_score": 0.4782825708389282,
+      "episode_ids": [
+        222,
+        283,
+        131,
+        76,
+        227
+      ],
+      "concept_ids": [
+        80,
+        529,
+        223,
+        103,
+        4
+      ]
+    },
+    {
+      "name": "casual_greeting",
+      "text": "早上好。",
+      "knowledge_expected": false,
+      "episode_top_score": 0.4862198829650879,
+      "concept_top_score": 0.5154466032981873,
+      "episode_ids": [
+        392,
+        386,
+        436,
+        313,
+        188
+      ],
+      "concept_ids": [
+        480,
+        487,
+        93,
+        350,
+        9
+      ]
+    },
+    {
+      "name": "deep_lore",
+      "text": "请综合全部资料完整推导这场政治危机的多阶段因果链。",
+      "knowledge_expected": true,
+      "episode_top_score": 0.49191707372665405,
+      "concept_top_score": 0.5470170974731445,
+      "episode_ids": [
+        162,
+        320,
+        318,
+        375,
+        291
+      ],
+      "concept_ids": [
+        138,
+        103,
+        499,
+        95,
+        142
+      ]
+    },
+    {
+      "name": "hoshino_english",
+      "text": "Do you remember what kind of person Hoshino is?",
+      "knowledge_expected": true,
+      "episode_top_score": 0.5486961603164673,
+      "concept_top_score": 0.44835007190704346,
+      "episode_ids": [
+        62,
+        140,
+        55,
+        73,
+        405
+      ],
+      "concept_ids": [
+        503,
+        237,
+        471,
+        533,
+        494
+      ]
+    },
+    {
+      "name": "mika_nagisa_japanese",
+      "text": "ミカとナギサが初めて出会った経緯を覚えていますか？",
+      "knowledge_expected": true,
+      "episode_top_score": 0.4346426725387573,
+      "concept_top_score": 0.4596388041973114,
+      "episode_ids": [
+        65,
+        436,
+        396,
+        167,
+        311
+      ],
+      "concept_ids": [
+        576,
+        494,
+        480,
+        123,
+        503
+      ]
+    },
+    {
+      "name": "elliptical_history",
+      "text": "上文：我们刚刚在讨论未花暗中帮助阿里乌斯进入圣三一。\n当前问题：那她为什么这么做？",
+      "knowledge_expected": true,
+      "episode_top_score": 0.6263036131858826,
+      "concept_top_score": 0.5886250138282776,
+      "episode_ids": [
+        42,
+        161,
+        27,
+        314,
+        352
+      ],
+      "concept_ids": [
+        68,
+        67,
+        86,
+        176,
+        177
+      ]
+    }
+  ]
+}

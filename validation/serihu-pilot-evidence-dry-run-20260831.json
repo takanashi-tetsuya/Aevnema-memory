@@ -1,0 +1,362 @@
+{
+  "database": "C:\\Users\\Admin\\Documents\\chat_bot\\data\\knowledge\\serihu-pilot-candidate-20260831.db",
+  "applied": false,
+  "source_ids": [
+    12,
+    13,
+    16,
+    37,
+    46,
+    48,
+    57,
+    61,
+    63
+  ],
+  "episode_ids": [
+    95,
+    96,
+    97,
+    124,
+    303,
+    304,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    378,
+    442,
+    462,
+    463,
+    464,
+    465,
+    466,
+    467,
+    468,
+    469,
+    470,
+    480
+  ],
+  "ambiguous_source_ids": [],
+  "meta_episode_ids": [],
+  "orphaned_concept_ids": [],
+  "episode_repairs": [
+    {
+      "id": 95,
+      "source_id": 12,
+      "source_key": "06_细节问答与别名索引.txt",
+      "reference_type": "推测",
+      "text": "关于联邦学生会长是否确认重置过无限次时间，或阿罗娜是否为她的分身，目前没有确认。序章托付、最终篇平行世界与外观相似可形成社区理论，但剧情未展示会长发动时间重置，也未确认阿罗娜与会长身份相同。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 96,
+      "source_id": 12,
+      "source_key": "06_细节问答与别名索引.txt",
+      "reference_type": "推测",
+      "text": "Lore碎片内部可见异常景象是事实，但发光多面体目前仅确认外观异常，尚未确认其能像Lore碎片一样保存异常影像；二者是否相关属于低置信度推测。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 97,
+      "source_id": 13,
+      "source_key": "06_细节问答与别名索引.txt",
+      "reference_type": "社区观点",
+      "text": "社区观点资料明确指出，玩家对角色的称呼如“重女”“妈妈”“女儿”“猩猩”“打工皇帝”“柜子精”等属于社区用语，仅可用于解释二创或玩家文化，不能作为证明角色在正式剧情中具备病娇、亲属、恋爱或职业身份的证据。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 124,
+      "source_id": 16,
+      "source_key": "07_角色关系与组织百科.txt",
+      "reference_type": "关系推论",
+      "text": "基于呼号式协作、制式装备和水下特种行动能力，存在“潜水部可能与SRT特殊学园的ORCA小队有关”的推测。但主线与活动均未直接公布“潜水部就是ORCA小队”，也没有完整成员对应表，因此不能将该推测作为组织同一性或成员身份的事实回答。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 303,
+      "source_id": 37,
+      "source_key": "14_世界设定与主线细节问答扩展.txt",
+      "reference_type": "剧情解读",
+      "text": "《蔚蓝档案》主线中“老师的责任”通常被解读为：老师在危机中相信学生仍能做出选择，提供支持并承担作为大人的后果，而不是代替学生决定一切。这一主题在Vol.1、Vol.3、最终篇及阿里乌斯相关剧情中可观察到，并非适用于每次事件的机械公式。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 304,
+      "source_id": 37,
+      "source_key": "14_世界设定与主线细节问答扩展.txt",
+      "reference_type": "社区观点",
+      "text": "关于角色神话原型的确认，不能仅凭翅膀、角、武器或校名直接确认。虽然此类线索可以支持玩家考据，但不同角色的证据强度不同。除非主线明确说明，否则应将原型对应表视为社区解读而非官方身份设定。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 356,
+      "source_id": 46,
+      "source_key": "90_推测与考据.txt",
+      "reference_type": "推测",
+      "text": "社区存在一种常见考据，认为小鸟游星野与埃及神话中的荷鲁斯存在对应关系。该观点依据阿拜多斯的埃及主题、星野武器与眼睛相关的命名、以及剧情中出现的荷鲁斯称号及象征。虽然文本依据较强，但官方并未明确宣布星野是神话人物荷鲁斯的直接转世。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 357,
+      "source_id": 46,
+      "source_key": "90_推测与考据.txt",
+      "reference_type": "推测",
+      "text": "社区存在一种常见考据，认为砂狼白子与阿努比斯存在对应关系。依据包括阿拜多斯的埃及主题、狼或胡狼的视觉元素，以及白子在最终篇中Terror形态与死亡引导者相关的表达。虽然两者存在明显象征联系，但官方尚未完整说明白子的灵魂或物种就是阿努比斯。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 358,
+      "source_id": 46,
+      "source_key": "90_推测与考据.txt",
+      "reference_type": "推测",
+      "text": "社区考据中常将未花与米迦勒、日奈与巴尔等角色对应，依据通常来自姓名、武器、翅膀、角、学校宗教主题或角色位置。这些线索可支持象征解读，但证据强度不一。文档强调不应将此类角色原型表直接视为官方设定。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 359,
+      "source_id": 46,
+      "source_key": "90_推测与考据.txt",
+      "reference_type": "推测",
+      "text": "存在一种低置信度理论认为联邦学生会长在经历失败后重置了时间，并将希望托付给当前老师。支持该理论的线索包括序章的托付、最终篇的平行世界及失败可能性；反对点在于剧情未明确展示她发动时间重置，也未说明序章对话必然发生在普雷纳帕特斯所在世界。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 360,
+      "source_id": 46,
+      "source_key": "90_推测与考据.txt",
+      "reference_type": "推测",
+      "text": "社区存在一种低置信度的扩展理论，声称基沃托斯已经循环无数次，且玩家所在世界是唯一真结局。现有剧情不足以证明循环次数，也无法证明只有一条世界线能得到好结局。该说法适合用于讨论二次创作和宿命论，但不适合作为官方事实回答。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 361,
+      "source_id": 46,
+      "source_key": "90_推测与考据.txt",
+      "reference_type": "推测",
+      "text": "因阿罗娜与联邦学生会长在外观、声音和叙事位置上存在相似点，社区出现了阿罗娜是会长分身、备份或另一形态的理论。然而，剧情尚未给出足以确认两者身份相同的结论。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 362,
+      "source_id": 46,
+      "source_key": "90_推测与考据.txt",
+      "reference_type": "推测",
+      "text": "有人推测基沃托斯是人工世界，依据是其具有异常地理、古代技术、神话符号和外部观察者等特征。这些现象虽能支持基沃托斯是人工环境、档案系统或模拟世界的讨论，但也可能由作品的幻想世界规则解释，目前不能认定基沃托斯是电脑模拟。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 363,
+      "source_id": 46,
+      "source_key": "90_推测与考据.txt",
+      "reference_type": "推测",
+      "text": "词源学上，Kivotos与希腊语中“箱、方舟”相关，什亭之箱也借用了圣经语汇，这一联系较明确。但由此进一步推导基沃托斯一定是逃避末日的人造方舟，仍属于解释而非已揭晓的世界真相。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 378,
+      "source_id": 48,
+      "source_key": "92_重要活动事实摘要.txt",
+      "reference_type": "社区观点",
+      "text": "社区观点指出，“欢乐活动只在老师成功介入的世界线发生，失败世界线没有这些活动”是一种二次创作解释；由于剧情没有给出另一世界完整活动记录，该说法不能当作事实。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 442,
+      "source_id": 57,
+      "source_key": "104_第二部Vol2_オデュッセイア編.txt",
+      "reference_type": "剧情解读",
+      "text": "老师将漂流玩具球理解为サミー和オデュッセイア困境的偶然传递，这属于人物赋予事件的意义，可用于理解照护、传统和求助主题，但不能证明サミー具有预知能力或玩具球受异常力量操纵。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 462,
+      "source_id": 61,
+      "source_key": "106_第二部_推测与事实边界.txt",
+      "reference_type": "推测",
+      "text": "据文档推测，第二部的共同主题可能涉及“媒介、叙事和共同认知”，依据是 Vol.0 的集体记忆改写、「ロア追跡編」中的异常实体、格黑娜旧广播的认知控制和オデュッセイア禁忌都涉及信息影响现实，且多条故事线反复出现认知异常。文档同时指出，目前不能断言所有事件由同一装置或同一幕后人物造成。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 463,
+      "source_id": 61,
+      "source_key": "106_第二部_推测与事实边界.txt",
+      "reference_type": "推测",
+      "text": "据文档推测，铂金发学生会长可能是由圣遗物复制、模拟或固定在现实中的形象，依据是シャーケード的杖启动、世界短暂变成黑白与该会长出现紧密相邻。反对意见指出，オーウェル仅用“复制品”说明关系，未给出生成过程，也未确认装置是唯一原因。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 464,
+      "source_id": 61,
+      "source_key": "106_第二部_推测与事实边界.txt",
+      "reference_type": "推测",
+      "text": "据文档推测，原学生会长可能被隔离在另一个信息层、记忆世界或其他现实，依据是序章照片中的陌生水边、老师的黑白梦和 Vol.0 对“反例”的搜索。文档强调，剧情尚未确认她仍以实体形式生活在某处，也不能确认照片是她从另一世界寄出。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 465,
+      "source_id": 61,
+      "source_key": "106_第二部_推测与事实边界.txt",
+      "reference_type": "推测",
+      "text": "据文档提出弱推测，ダイビング部取得的发光多面体与白色人影消失后留下的结晶可能相关，依据是二者都具有异常发光或透明固体的视觉特征。文档指出，现有剧情仅明确说明 Lore 碎片内部能看见异常景象，未说明发光多面体也能保存影像，且两者的材质、来源、用途和能力均未确认。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 466,
+      "source_id": 61,
+      "source_key": "106_第二部_推测与事实边界.txt",
+      "reference_type": "推测",
+      "text": "据文档推测，ダイビング部成员可能与旧 SRT“ORCA 小队”有关，依据是她们表现出的呼号式协作、制式装备、水下特种行动能力，以及第二部不同线路中 SRT 与オデュッセイア被并置描写的方式。文档指出，这些线索主要来自角色呈现和叙事关联，主线及活动均未直接公布该身份，也没有建立完整的成员对应表，因此只能使用“疑似”“可能”。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 467,
+      "source_id": 61,
+      "source_key": "106_第二部_推测与事实边界.txt",
+      "reference_type": "推测",
+      "text": "据文档推测，伊吹可能拥有某种权限、能力或被雷帝计划影响，依据是格黑娜篇把伊吹称作雷帝遗产。文档指出，当前没有足够证据确认伊吹是雷帝转世、克隆体、亲属或人格容器，也不能据此把她视为反派。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 468,
+      "source_id": 61,
+      "source_key": "106_第二部_推测与事实边界.txt",
+      "reference_type": "推测",
+      "text": "据文档推测，五十嵐ショウコ供述的“嵐”和霞怀疑的“残滓”可能存在合作、上下级、分支或同一组织的不同称呼关系，依据是两者都与雷帝旧势力相关。文档指出，两条信息来自不同角色，目前不能合并为同一已确认势力。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 469,
+      "source_id": 61,
+      "source_key": "106_第二部_推测与事实边界.txt",
+      "reference_type": "推测",
+      "text": "据文档推测，船员共同相信的禁忌将产生 Lore 异常，依据是オデュッセイア以禁忌处理航海风险，且第二部反复描写都市传说获得现实形态。文档指出，第 1 章前篇只展示传统、事故经验和サミー争议，没有证明禁忌已经创造怪物或直接改变现实。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 470,
+      "source_id": 61,
+      "source_key": "106_第二部_推测与事实边界.txt",
+      "reference_type": "推测",
+      "text": "据文档推测，護守ナナミ可能是“七囚人”的常见候选，依据是她是从矫正机关脱逃、具有独特称号且领导大型海盗团的强力逃犯，这些特征与七囚人的叙事位置相似。文档指出，当前材料仍未给出明确的“七囚人”认证。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    },
+    {
+      "id": 480,
+      "source_id": 63,
+      "source_key": "107_第二部_关联短篇与活动.txt",
+      "reference_type": "推测边界",
+      "text": "资料分析指出，活动与人物资料强化了ダイビング部（潜水部）可能与旧SRT有关的线索，但并未直接确认“ダイビング部就是ORCA小队”。相关判断仍属于有依据的推测，不能因短篇同时更新而提升为官方确认。",
+      "before": {
+        "evidence_origin": "importer",
+        "epistemic_status": "speculative",
+        "generation": 1
+      }
+    }
+  ],
+  "episode_updates": 0,
+  "association_updates": []
+}

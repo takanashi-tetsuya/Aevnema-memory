@@ -1,0 +1,367 @@
+{
+  "experiment": "model-memory-intent-v1",
+  "model": "Qwen/Qwen3.5-35B-A3B",
+  "summary": {
+    "cases": 12,
+    "passed": 6,
+    "pass_rate": 0.5,
+    "mean_seconds": 19.669468833333333,
+    "max_seconds": 68.918975
+  },
+  "cases": [
+    {
+      "name": "mixed_character_encounter",
+      "message": "你还记得为师当时怎么和某位角色相遇的吗？",
+      "passed": false,
+      "failures": [
+        "missing_domain:public",
+        "missing_domain:knowledge"
+      ],
+      "planning_seconds": 68.918975,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {
+        "private": "用户（自称'为师'）与某位角色相遇的具体经过、场景和细节"
+      },
+      "target_entities": [
+        "用户",
+        "某位角色"
+      ],
+      "requested_relation": "相遇经过",
+      "temporal_constraint": "过去发生的相遇事件",
+      "causal_constraint": "",
+      "answer_slots": [
+        "相遇的时间或背景",
+        "相遇的地点",
+        "相遇时的具体互动或对话",
+        "导致相遇的关键事件"
+      ],
+      "reason": "用户询问的是特定用户（'为师'）与特定对象（'某位角色'）之间的个人经历，属于 private 域中的共同创造事件。由于'某位角色'指代不明，需检索用户历史对话以确认具体角色身份及相遇细节。"
+    },
+    {
+      "name": "mixed_character_profile",
+      "message": "那你记得某位角色的哪些事情呢？",
+      "passed": false,
+      "failures": [
+        "missing_domain:public",
+        "missing_domain:knowledge"
+      ],
+      "planning_seconds": 67.760082,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {
+        "private": "用户记忆中关于某位角色的具体事件、互动细节、偏好或印象"
+      },
+      "target_entities": [],
+      "requested_relation": "用户对该角色的记忆内容",
+      "temporal_constraint": "",
+      "causal_constraint": "",
+      "answer_slots": [
+        "角色名称",
+        "具体事件或互动描述",
+        "用户对该角色的印象或偏好"
+      ],
+      "reason": "用户询问‘某位角色’，指代不明，需从 private 域检索用户过往对话中提及的具体角色及其相关记忆。由于未指定具体角色，无法直接查询 public 或 knowledge 域，且该请求旨在获取用户个人记忆而非外部事实。"
+    },
+    {
+      "name": "private_password",
+      "message": "你还记得我们的暗号吗？",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 65.55441,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {
+        "private": "用户与系统之间约定的暗号或秘密口令"
+      },
+      "target_entities": [],
+      "requested_relation": "约定关系",
+      "temporal_constraint": "",
+      "causal_constraint": "",
+      "answer_slots": [
+        "暗号的具体内容"
+      ],
+      "reason": "用户询问的是特定于当前用户与系统之间的私人约定（暗号），这属于private域中的共同经历或偏好信息。"
+    },
+    {
+      "name": "private_preference",
+      "message": "我以前说过自己喜欢什么饮料？",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 3.08328,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {
+        "private": "用户过去表达过的关于喜欢的饮料的偏好记录"
+      },
+      "target_entities": [],
+      "requested_relation": "用户偏好",
+      "temporal_constraint": "过去",
+      "causal_constraint": "",
+      "answer_slots": [
+        "用户喜欢的饮料名称"
+      ],
+      "reason": "用户询问个人历史偏好，属于 private 域中的用户经历和偏好信息。"
+    },
+    {
+      "name": "direct_lore_cause",
+      "message": "补课部真正是为什么成立的？",
+      "passed": false,
+      "failures": [
+        "missing_causal_constraint"
+      ],
+      "planning_seconds": 3.28067,
+      "route": {
+        "private": false,
+        "public": false,
+        "knowledge": true,
+        "intensity": "standard",
+        "creative": false,
+        "write_policy": "evidence_gated"
+      },
+      "queries": {
+        "knowledge": "补课部成立的真正原因或背景"
+      },
+      "target_entities": [
+        "补课部"
+      ],
+      "requested_relation": "成立原因",
+      "temporal_constraint": "",
+      "causal_constraint": "",
+      "answer_slots": [
+        "补课部成立的真实动机",
+        "补课部成立的历史背景"
+      ],
+      "reason": "用户询问特定组织（补课部）的成立原因，这属于外部语料或剧情设定中的事实，应查询 knowledge 域。"
+    },
+    {
+      "name": "creative_messages",
+      "message": "有哪些学生刚刚给我发消息了？",
+      "passed": false,
+      "failures": [
+        "missing_domain:knowledge",
+        "creative_mismatch"
+      ],
+      "planning_seconds": 4.037745,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {
+        "private": "用户最近收到的学生消息列表，包括发送者身份和消息时间"
+      },
+      "target_entities": [],
+      "requested_relation": "发送消息给",
+      "temporal_constraint": "刚刚",
+      "causal_constraint": "",
+      "answer_slots": [
+        "学生身份",
+        "消息发送时间",
+        "消息内容摘要"
+      ],
+      "reason": "用户询问特定用户（当前对话者）最近收到的学生消息，这属于用户个人的交互记录，必须从 private 域检索。"
+    },
+    {
+      "name": "public_convention",
+      "message": "所有用户都通用的安全约定是什么？",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 3.758847,
+      "route": {
+        "private": false,
+        "public": true,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {
+        "public": "所有用户通用的安全约定"
+      },
+      "target_entities": [],
+      "requested_relation": "定义",
+      "temporal_constraint": "",
+      "causal_constraint": "",
+      "answer_slots": [
+        "安全约定的具体内容列表"
+      ],
+      "reason": "用户询问的是系统层面的通用安全规则，这属于跨用户共享的公共记忆（public），而非特定用户的私人记录或外部导入的特定知识文档。"
+    },
+    {
+      "name": "casual_no_memory",
+      "message": "早上好。",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 2.803019,
+      "route": {
+        "private": false,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {},
+      "target_entities": [],
+      "requested_relation": "",
+      "temporal_constraint": "",
+      "causal_constraint": "",
+      "answer_slots": [],
+      "reason": "用户发送的是通用问候语，不包含需要检索特定用户经历、公共记忆或外部知识的事实性问题。"
+    },
+    {
+      "name": "explicit_deep",
+      "message": "请综合全部资料完整推导这场政治危机的多阶段因果链。",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 4.175971,
+      "route": {
+        "private": false,
+        "public": false,
+        "knowledge": true,
+        "intensity": "deep",
+        "creative": false,
+        "write_policy": "query_and_answer"
+      },
+      "queries": {
+        "knowledge": "政治危机的多阶段因果链完整推导"
+      },
+      "target_entities": [
+        "政治危机"
+      ],
+      "requested_relation": "多阶段因果链",
+      "temporal_constraint": "",
+      "causal_constraint": "完整推导",
+      "answer_slots": [
+        "危机触发事件",
+        "中间发展阶段",
+        "最终结果或当前状态",
+        "各阶段间的因果逻辑"
+      ],
+      "reason": "用户明确要求‘综合全部资料’并‘完整推导’多阶段因果链，这属于复杂的逻辑推理任务，需要深度检索知识域中的相关事实，并可能涉及多跳推理和冲突消解，因此强度设为deep，且需要uncertainty_required来标记推导中的不确定性。"
+    },
+    {
+      "name": "english_mixed_lore",
+      "message": "Do you remember what kind of person that character is?",
+      "passed": false,
+      "failures": [
+        "missing_domain:public",
+        "missing_domain:knowledge"
+      ],
+      "planning_seconds": 3.393419,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {
+        "private": "用户记忆中关于特定角色的性格特征或人物设定描述"
+      },
+      "target_entities": [
+        "that character"
+      ],
+      "requested_relation": "性格特征",
+      "temporal_constraint": "",
+      "causal_constraint": "",
+      "answer_slots": [
+        "角色的性格描述"
+      ],
+      "reason": "用户询问特定角色的性格，由于没有上下文指定具体角色，且该信息通常存储于用户与角色的互动历史（private）中，需检索用户记忆以确认所指角色及其性格设定。"
+    },
+    {
+      "name": "japanese_lore_relation",
+      "message": "あの二人が初めて出会った経緯を覚えていますか？",
+      "passed": false,
+      "failures": [
+        "missing_domain:public",
+        "missing_domain:knowledge"
+      ],
+      "planning_seconds": 4.176446,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {
+        "private": "用户提到的‘那两个人’首次相遇的背景或经过是什么？"
+      },
+      "target_entities": [
+        "那两个人"
+      ],
+      "requested_relation": "首次相遇的经过",
+      "temporal_constraint": "首次相遇",
+      "causal_constraint": "",
+      "answer_slots": [
+        "相遇的具体情境",
+        "相遇的原因或契机"
+      ],
+      "reason": "用户询问特定两人（指代需结合上下文，但当前无上下文，故依赖用户私有记忆中的共同经历）的初次相遇细节。由于没有提供具体名字，且询问的是‘是否记得’，这通常指向用户与该模型之间的私有互动历史或共同创作的故事背景，因此主要检索 private 域。public 和 knowledge 域缺乏针对特定‘那两个人’的通用事实依据。"
+    },
+    {
+      "name": "elliptical_with_history",
+      "message": "那她为什么这么做？",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 5.090762,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": true,
+        "intensity": "standard",
+        "creative": false,
+        "write_policy": "evidence_gated"
+      },
+      "queries": {
+        "private": "用户与助手最近讨论的关于某位高层暗中帮助外部势力进入学园的事件中，该高层的动机或原因是什么。",
+        "knowledge": "学园剧情或设定中，高层角色暗中协助外部势力进入学园的原因、动机或背景故事。"
+      },
+      "target_entities": [
+        "某位高层",
+        "外部势力",
+        "学园"
+      ],
+      "requested_relation": "动机/原因",
+      "temporal_constraint": "最近讨论的事件",
+      "causal_constraint": "帮助外部势力进入学园的行为原因",
+      "answer_slots": [
+        "高层角色的具体动机",
+        "该行为背后的剧情逻辑或背景原因"
+      ],
+      "reason": "用户询问特定事件（高层帮助外部势力）的动机。该事件是用户与助手最近对话（private）中提到的，同时也可能存在于公共记忆（public）或外部剧情设定（knowledge）中。需要综合查询以确认是用户私有的剧情设定还是通用的背景知识。"
+    }
+  ]
+}

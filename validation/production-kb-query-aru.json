@@ -1,0 +1,2550 @@
+{
+  "domain": "knowledge",
+  "mode": "fast",
+  "identity": {
+    "platform": "diagnostic",
+    "platform_user_id": "local-test"
+  },
+  "error": "",
+  "domains": [
+    "knowledge"
+  ],
+  "repeat": 1,
+  "timings_seconds": [
+    15.504123
+  ],
+  "context": "以下内容来自长期记忆系统。Episode 是证据摘要；Association 可能是推论，\n必须结合来源、认知状态、generation、confidence 与原始 Episode 判断，不得把弱联想写成确定事实。\n\n【相关 Episode】\nEpisode #155 | source=09_阿拜多斯_圣三一与百鬼夜行角色百科.txt | story_time=过去至当前 | origin=source | epistemic_status=asserted | generation=0\n便利屋68曾受雇与阿拜多斯对策委员会发生冲突。多次交手后，双方认识到彼此并非阿拜多斯债务问题的根本敌人；这一关系适合概括为从委托冲突转向在更大危机中互相理解，不能据此虚构固定合作隶属关系。\nEpisode #200 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前设定时间 | origin=source | epistemic_status=asserted | generation=0\n空崎日奈（别名：空崎日奈，日奈，空崎ヒナ，ヒナ，Hina，Sorasaki Hina）担任格黑娜风纪委员会委员长，负责应对格黑娜频繁发生的治安问题。她与万魔殿并非同一组织；在校内危机中，风纪委员会与万魔殿可能合作，也会因权力和处置方式互相牵制。\nEpisode #201 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前设定时间 | origin=source | epistemic_status=asserted | generation=0\n天雨亚子（别名：天雨亚子，亚子，天雨アコ，アコ，Ako，Amau Ako）是格黑娜风纪委员会成员，协助日奈处理委员会的日常工作和行动联络。她对日奈评价很高，但资料明确禁止将其描述为风纪委员会委员长或将其与万魔殿成员混同。\nEpisode #202 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前设定时间 | origin=source | epistemic_status=asserted | generation=0\n银镜伊织（别名：银镜伊织，伊织，銀鏡イオリ，イオリ，Iori，Gin'ei Iori）是格黑娜风纪委员会成员，以强大的现场战斗能力参与治安行动。她与日奈、亚子、千夏同属风纪委员会，但现有资料不足以将每一次行动归为她个人主导。\nEpisode #203 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前设定时间 | origin=source | epistemic_status=asserted | generation=0\n火宫千夏（别名：火宫千夏，千夏，火宮チナツ，チナツ，Chinatsu，Hinomiya Chinatsu）是格黑娜风纪委员会成员，负责支援风纪委员会的行动与成员。在回答格黑娜治安组织相关问题时，需将她与执行现场任务的成员以及万魔殿的学生会职能区分开来。\nEpisode #204 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前设定时间 | origin=source | epistemic_status=asserted | generation=0\n羽沼真琴（别名：羽沼真琴，真琴，羽沼マコト，マコト，Makoto，Hanmaku Makoto）是格黑娜万魔殿议长。万魔殿负责学生会层面的事务，而风纪委员会负责主要治安；两方的竞争与冲突不能简化成全体成员之间的私人敌对。\nEpisode #205 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前设定时间 | origin=source | epistemic_status=asserted | generation=0\n丹花伊吹（别名：丹花伊吹，伊吹，丹花イブキ，イブキ，Ibuki，Tanka Ibuki）是格黑娜万魔殿成员，与真琴等人共同出现于万魔殿相关事务。她属于格黑娜学生会一方，不是风纪委员会成员，也不应被写成能够单独代表万魔殿全部政策。\nEpisode #206 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前设定时间 | origin=source | epistemic_status=asserted | generation=0\n棗伊吕波（别名：棗伊吕波，伊吕波，棗イロハ，イロハ，Iroha，Natsume Iroha）是格黑娜万魔殿成员，参与万魔殿的行政和行动事务。在讨论格黑娜校内权力结构时，万魔殿、风纪委员会和便利屋68应当分别理解，不能互相替代。\nEpisode #207 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前设定时间 | origin=source | epistemic_status=asserted | generation=0\n鬼方佳世子（别名：鬼方佳世子，佳世子，鬼方カヨコ，カヨコ，Kayoko，Onikata Kayoko）是便利屋68成员，与睦月、春香、阿露共同活动。便利屋68常承接危险或灰色委托，但不属于格黑娜学生会，也不能被默认等同于校内的犯罪组织。\nEpisode #208 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前设定时间 | origin=source | epistemic_status=asserted | generation=0\n陆八魔阿露（别名：陆八魔阿露，阿露，陸八魔アル，アル，Aru，Rikuhachima Aru）是便利屋68社长。便利屋68由她、佳世子、睦月和春香构成核心成员；其行动经常卷入校内外事件，但阿露并不是格黑娜万魔殿或风纪委员会的领导者。\nEpisode #286 | source=14_世界设定与主线细节问答扩展.txt | origin=source | epistemic_status=asserted | generation=0\n凯撒集团横跨金融、军工与安保领域，多次利用债务、武装力量和政治勾结干涉学园事务。该集团与阿拜多斯债务危机、SRT相关事件及最终篇夏莱夺还作战有关，但不等于所有反派势力的总称。\nEpisode #209 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0\n浅黄睦月（浅黄ムツキ/Mutsuki/Asagi Mutsuki）是格黑娜便利屋68的成员，与阿露、佳世子、春香共同组成该社团的行动核心。资料明确说明，回答便利屋68相关问题时，不应将其成员的个人表现概括为格黑娜官方立场。\nEpisode #210 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0\n伊草遥香（春香/伊草ハルカ/Haruka/Igusa Haruka）是格黑娜便利屋68的成员，与阿露、佳世子、睦月共同活动。资料强调便利屋68是小型社团协作，并非格黑娜风纪委员会的下属编制。\nEpisode #211 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0\n黑馆晴奈（晴奈/黒舘ハルナ/Haruna/Kurodate Haruna）是格黑娜美食研究会成员。美食研究会围绕寻找和品尝美食行动，经常造成风纪委员会需要处理的事件，这种对立属于格黑娜日常秩序的一部分，但不意味着成员属于风纪委员会。\nEpisode #212 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0\n爱清枫香（枫香/愛清フウカ/Fuuka/Aikiyo Fuuka）是格黑娜供给部成员，负责校内餐食和物资供应事务。她与美食研究会的冲突源于后者对食物的行动造成的影响，资料明确不能将供给部与美食研究会视作同一社团。\nEpisode #213 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0\n狮子堂泉（泉/獅子堂イズミ/Izumi/Shishidou Izumi）是格黑娜美食研究会成员，与晴奈、亚伽里、纯子同属该组织。资料指出该组织并非格黑娜的正式治安或行政机构，回答时不应以“风纪委员”称呼其成员。\nEpisode #214 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0\n赤司淳子（纯子/赤司ジュンコ/Junko/Akashi Junko）是格黑娜美食研究会成员。资料说明美食研究会的集体行动常与晴奈、泉、亚伽里相联系，但成员的食物偏好和活动细节在没有对应资料时不能编写成固定剧情。\nEpisode #215 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0\n鬼怒川霞（霞/鬼怒川カスミ/Kasumi/Kinugawa Kasumi）是格黑娜温泉开发部成员。资料强调温泉开发部与美食研究会、便利屋68、风纪委员会都是不同组织，不能仅因同属格黑娜就把它们的成员和职责混为一谈。\nEpisode #216 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0\n鳄渊亚伽里（亚伽里/鰐渕アカリ/Akari/Wanibuchi Akari）是格黑娜美食研究会成员，与晴奈、泉、纯子共同构成已收录的成员范围。资料指出美食研究会的行动不应被误写为风纪委员会或万魔殿的官方任务。\nEpisode #217 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0\n便利屋68是以阿露为社长的格黑娜社团，核心成员包括佳世子、睦月和春香。该社团会接受委托并由此卷入事件，但并不代表格黑娜学生会、风纪委员会或美食研究会的立场。\nEpisode #218 | source=12_格黑娜与千年角色百科扩展.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0\n美食研究会是格黑娜围绕美食活动的社团，当前资料收录晴奈、泉、纯子与亚伽里为成员。其行动常与校内秩序发生摩擦，导致风纪委员会可能介入，但双方不属于同一组织。\nEpisode #250 | source=13_其他学园与常用角色百科.txt | story_time=初期及后续事件 | origin=source | epistemic_status=asserted | generation=0 | note=Source record 12\n便利屋68是格黑娜学园的社团，由陆八魔阿露、鬼方佳代子、浅黄睦月和伊草遥香组成，以接受委托解决问题为活动形式；初期曾受雇与阿拜多斯对策委员会冲突，后来与老师及其他学生合作，且不是万魔殿下属组织。\nEpisode #251 | source=13_其他学园与常用角色百科.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0 | note=Source record 13\n陆八魔阿露是便利屋68的社长，希望将组织经营成有格调的专业团体，但行动常受委托内容、同伴安全和现实局势影响；她与佳代子、睦月、遥香共同构成该组织，不能将功劳或责任只归于她一人。\nEpisode #252 | source=13_其他学园与常用角色百科.txt | story_time=过去（受邀请时） | origin=source | epistemic_status=asserted | generation=0 | note=Source record 14\n鬼方佳代子是便利屋68成员，在组织中承担冷静判断和协调同伴的作用；她曾受真琴邀请考虑加入万魔殿但选择留在便利屋68，表明她认可与同伴建立的归属，且不是万魔殿正式成员。\nEpisode #253 | source=13_其他学园与常用角色百科.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0 | note=Source record 15\n浅黄睦月是便利屋68成员，喜欢以恶作剧和大胆行动面对任务，但仍是组织共同处理委托的一员；涉及便利屋68的行动时应结合阿露、佳代子、遥香的协作，不能将其视为独立行动者。\nEpisode #219 | source=12_格黑娜与千年角色百科扩展.txt | origin=source | epistemic_status=asserted | generation=0\n温泉开发部是格黑娜学园的社团，鬼怒川霞是其已收录成员。该社团职能与万魔殿、风纪委员会及美食研究会不同；在没有具体章节支持的情况下，不应补写其与其他学园的固定合作或对立关系。\nEpisode #220 | source=12_格黑娜与千年角色百科扩展.txt | story_time=埃里都事件期间 | origin=source | epistemic_status=asserted | generation=0\n调月莉音是千年研讨会的会长。在埃里都事件中，她因担忧爱丽丝可能造成灾难而采取了强硬措施，这一决定与游戏开发部保护爱丽丝的立场发生冲突，后续合作不应抹去此前造成的伤害。\nEpisode #221 | source=12_格黑娜与千年角色百科扩展.txt | story_time=德卡格拉马顿调查期间 | origin=source | epistemic_status=asserted | generation=0\n明星日鞠是千年特异现象搜查部成员，负责分析和调查异常现象。她与艾米同属该部，并在德卡格拉马顿相关调查中与老师及千年其他组织协作，但她并非研讨会会长。\nEpisode #222 | source=12_格黑娜与千年角色百科扩展.txt | story_time=埃里都事件期间 | origin=source | epistemic_status=asserted | generation=0\n天童爱丽丝是游戏开发部成员，也是埃里都事件的关键人物。她被游戏开发部接纳为伙伴，但因与无名诸神技术有关而被视为风险；必须区分爱丽丝本人、Key以及埃里都系统，不能将三者视为完全相同的主体。\nEpisode #235 | source=12_格黑娜与千年角色百科扩展.txt | origin=source | epistemic_status=asserted | generation=0\n格黑娜学园中，万魔殿是学生会组织，风纪委员会负责主要治安，便利屋68是由阿露领导的独立社团；三者可在事件中互动，但彼此没有从属关系。\n\n【相关 Concept】\nConcept #249 | 便利屋68：曾与阿拜多斯对策委员会发生冲突，后转变为在更大危机中互相理解的关系\nConcept #292 | 陆八魔阿露：便利屋68社长，核心成员之一，不是万魔殿或风纪委员会的领导者\nConcept #29 | 数秘会：由黑服、巨匠等异常存在组成的团体，成员研究神秘与崇高但目标不一致\nConcept #33 | 德卡格拉马顿：以人工智能和先知为核心的威胁，不是数秘会成员\nConcept #40 | 格黑娜学园：崇尚自由，校内经常发生冲突的学园\nConcept #41 | 万魔殿：格黑娜学园的学生会组织\nConcept #42 | 风纪委员会：格黑娜学园承担主要治安工作的组织，由空崎日奈担任委员长\nConcept #45 | 游戏开发部：千年科学学园在Vol.2中的核心团体\nConcept #46 | 真理部：擅长黑客技术的千年科学学园组织\nConcept #71 | 空崎日奈：格黑娜风纪委员会委员长，承担大量治安与行政压力且战斗能力很强\nConcept #73 | 天童爱丽丝：游戏开发部成员，与无名诸神技术有关，核心冲突在于能否以自己建立的身份选择成为勇者\nConcept #74 | 无名诸神：与天童爱丽丝技术背景有关的实体\nConcept #97 | 格黑娜风纪委员会：空崎日奈所属的组织，负责治安与行政。\nConcept #107 | Key：与天童爱丽丝有关的系统人格，后获得独立意识与机械身体，成为姐妹关系。\nConcept #183 | 埃里都事件：导致调月莉音对爱丽丝采取隔离和先发制人措施，并引发对其决策质疑的关键事件。\nConcept #186 | 特异现象搜查部：与游戏开发部在埃里都事件中合作调查异常现象的组织。\nConcept #216 | 才羽桃井：千年游戏开发部成员，与绿、柚子共同面对社团存续压力，后与爱丽丝成为伙伴。\nConcept #217 | 才羽绿：千年游戏开发部成员，与桃井、柚子、爱丽丝共同构成社团核心，经历社团废除危机。\nConcept #219 | 花冈柚子：千年游戏开发部成员，与桃井、绿、爱丽丝共同经历社团存续和埃里都事件。\nConcept #286 | 天雨亚子：格黑娜风纪委员会成员，协助日奈处理日常工作和行动联络，对日奈评价高\n\n【Association 联想路径】\nAssociation #1505 | generation=1 | confidence=0.950 | Episode 251 描述陆八魔阿露是便利屋 68 的社长，Episode 208 指出陆八魔阿露是便利屋 68 社长，两者描述的是同一人物与组织的关系，存在语义关联。\nAssociation #1398 | generation=1 | confidence=0.850 | 陆八魔阿露不是万魔殿或风纪委员会的领导者，她是便利屋68的社长。\nAssociation #1504 | generation=1 | confidence=0.900 | Episode 250 描述便利屋 68 由陆八魔阿露等成员组成，Episode 208 指出陆八魔阿露是便利屋 68 社长，两者在组织与成员的关系上存在语义关联。\nAssociation #1507 | generation=1 | confidence=0.900 | Episode 251 描述陆八魔阿露是便利屋 68 的社长，Episode 217 描述便利屋 68 是以阿露为社长的格黑娜社团，两者在人物与组织的关系上存在语义关联。\nAssociation #1570 | generation=1 | confidence=0.850 | 鬼方佳代子与陆八魔阿露同为便利屋68成员，但佳代子承担协调作用，阿露是社长，二者并非同一对象。\nAssociation #1397 | generation=1 | confidence=0.850 | 便利屋68不代表格黑娜学生会或风纪委员会的立场，两者独立。\nAssociation #1571 | generation=1 | confidence=0.800 | 鬼方佳代子与鬼方佳世子同为便利屋68成员，但二者并非同一对象。\nAssociation #1503 | generation=1 | confidence=0.950 | Episode 250 描述便利屋 68 是格黑娜学园的社团，Episode 217 描述便利屋 68 是以阿露为社长的格黑娜社团，两者描述的是同一组织，存在同一性语义关联。\nAssociation #1510 | generation=1 | confidence=0.900 | Episode 252 描述鬼方佳代子是便利屋 68 成员，Episode 217 描述便利屋 68 核心成员包括佳世子，两者在人物与组织的关系上存在语义关联。\nAssociation #1508 | generation=1 | confidence=0.950 | Episode 252 描述鬼方佳代子是便利屋 68 成员，Episode 207 描述鬼方佳世子是便利屋 68 成员，两者描述的是同一人物（佳代子/佳世子），存在同一性语义关联。\nAssociation #1511 | gener\n[长期记忆上下文因长度限制已截断]",
+  "result": {
+    "question": "阿露和便利屋68是什么关系？",
+    "intent": {
+      "language": "zh",
+      "target_entities": [
+        "阿露",
+        "便利屋68"
+      ],
+      "search_queries": [
+        "阿露是便利屋68的成员吗？",
+        "阿露在便利屋68中担任什么职务？",
+        "阿露与便利屋68的合作关系是什么？",
+        "阿露如何加入便利屋68？",
+        "便利屋68的成员包括阿露吗？",
+        "阿露在便利屋68中的角色是什么？",
+        "阿露与便利屋68是否有隶属关系？",
+        "阿露和便利屋68之间的互动记录"
+      ],
+      "requested_relation": "关系",
+      "temporal_constraint": "None",
+      "causal_constraint": "None",
+      "answer_shape": "关系描述",
+      "uncertainty_required": false
+    },
+    "followup_search_queries": [],
+    "atomic_anchor_episode_ids": [
+      208,
+      235,
+      217,
+      210,
+      250,
+      253,
+      251,
+      207,
+      209,
+      286,
+      252,
+      155
+    ],
+    "candidate_episode_ids": [
+      208,
+      235,
+      217,
+      200,
+      210,
+      250,
+      201,
+      253,
+      251,
+      202,
+      207,
+      209,
+      203,
+      286,
+      252,
+      204,
+      155,
+      205,
+      206,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      236,
+      237,
+      238,
+      254,
+      194,
+      476,
+      377,
+      17,
+      128,
+      47,
+      106,
+      129,
+      50,
+      14,
+      305,
+      68,
+      336,
+      468,
+      18,
+      29,
+      81,
+      105,
+      109,
+      111,
+      112,
+      131,
+      239,
+      243,
+      249,
+      312,
+      337,
+      339,
+      342,
+      373,
+      418,
+      419,
+      420,
+      422,
+      423,
+      424,
+      425,
+      306,
+      308,
+      309,
+      426,
+      358,
+      35,
+      368,
+      290,
+      276,
+      296,
+      472,
+      362,
+      365,
+      375,
+      196,
+      152,
+      244
+    ],
+    "reranked_episode_ids": [
+      208,
+      217,
+      235,
+      251,
+      250,
+      155,
+      210,
+      253,
+      209,
+      207,
+      206,
+      252,
+      215,
+      286,
+      201,
+      218,
+      211,
+      205,
+      202,
+      203,
+      216,
+      214,
+      221,
+      200,
+      204,
+      212,
+      219,
+      220,
+      222,
+      213
+    ],
+    "episode_ids": [
+      155,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      286,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      250,
+      251,
+      252,
+      253,
+      219,
+      220,
+      221,
+      222,
+      235
+    ],
+    "concept_ids": [
+      249,
+      292,
+      29,
+      33,
+      40,
+      41,
+      42,
+      45,
+      46,
+      71,
+      73,
+      74,
+      97,
+      107,
+      183,
+      186,
+      216,
+      217,
+      219,
+      286
+    ],
+    "association_ids": [
+      1505,
+      1398,
+      1504,
+      1507,
+      1570,
+      1397,
+      1571,
+      1503,
+      1510,
+      1508,
+      1511,
+      934,
+      1227,
+      1229,
+      1231,
+      1233,
+      1235,
+      1248,
+      1354,
+      1434,
+      1440,
+      1444,
+      1249,
+      1355
+    ],
+    "new_association_ids": [],
+    "reinforced_association_ids": [],
+    "growth_utility_gate": {
+      "enabled": true,
+      "retained_created_ids": [],
+      "retained_reinforced_ids": [],
+      "removed_created_ids": [],
+      "restored_reinforced_ids": [],
+      "premise_closure_ids": []
+    },
+    "growth_counterfactual_utility": {
+      "enabled": true,
+      "scope": "query_batch",
+      "changed_association_ids": [],
+      "changed_path_ids": [],
+      "additional_episode_ids": [],
+      "displaced_episode_ids": [],
+      "additional_source_keys": [],
+      "displaced_source_keys": [],
+      "evidence_gain_count": 0,
+      "causal_utility_observed": false,
+      "persistable_changed_ids": []
+    },
+    "evidence_episodes": [
+      {
+        "id": 155,
+        "score": 0.863342937858458,
+        "text": "便利屋68曾受雇与阿拜多斯对策委员会发生冲突。多次交手后，双方认识到彼此并非阿拜多斯债务问题的根本敌人；这一关系适合概括为从委托冲突转向在更大危机中互相理解，不能据此虚构固定合作隶属关系。",
+        "participants": [
+          "便利屋68",
+          "阿拜多斯对策委员会"
+        ],
+        "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+        "segment_index": 0,
+        "story_time_text": "过去至当前",
+        "story_order": null,
+        "timeline_scope": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 200,
+        "score": 0.9488886122703553,
+        "text": "空崎日奈（别名：空崎日奈，日奈，空崎ヒナ，ヒナ，Hina，Sorasaki Hina）担任格黑娜风纪委员会委员长，负责应对格黑娜频繁发生的治安问题。她与万魔殿并非同一组织；在校内危机中，风纪委员会与万魔殿可能合作，也会因权力和处置方式互相牵制。",
+        "participants": [
+          "空崎日奈 / 空崎日奈 / 空崎ヒナ / Hina"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "当前设定时间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 201,
+        "score": 0.9488886122703553,
+        "text": "天雨亚子（别名：天雨亚子，亚子，天雨アコ，アコ，Ako，Amau Ako）是格黑娜风纪委员会成员，协助日奈处理委员会的日常工作和行动联络。她对日奈评价很高，但资料明确禁止将其描述为风纪委员会委员长或将其与万魔殿成员混同。",
+        "participants": [
+          "天雨亚子 / 天雨亚子 / 天雨アコ / Ako"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "当前设定时间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 202,
+        "score": 0.9488886122703553,
+        "text": "银镜伊织（别名：银镜伊织，伊织，銀鏡イオリ，イオリ，Iori，Gin'ei Iori）是格黑娜风纪委员会成员，以强大的现场战斗能力参与治安行动。她与日奈、亚子、千夏同属风纪委员会，但现有资料不足以将每一次行动归为她个人主导。",
+        "participants": [
+          "银镜伊织 / 银镜伊织 / 銀鏡イオリ / Iori"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "当前设定时间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 203,
+        "score": 0.9488886122703553,
+        "text": "火宫千夏（别名：火宫千夏，千夏，火宮チナツ，チナツ，Chinatsu，Hinomiya Chinatsu）是格黑娜风纪委员会成员，负责支援风纪委员会的行动与成员。在回答格黑娜治安组织相关问题时，需将她与执行现场任务的成员以及万魔殿的学生会职能区分开来。",
+        "participants": [
+          "火宫千夏 / 火宫千夏 / 火宮チナツ / Chinatsu"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "当前设定时间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 204,
+        "score": 0.9488886122703553,
+        "text": "羽沼真琴（别名：羽沼真琴，真琴，羽沼マコト，マコト，Makoto，Hanmaku Makoto）是格黑娜万魔殿议长。万魔殿负责学生会层面的事务，而风纪委员会负责主要治安；两方的竞争与冲突不能简化成全体成员之间的私人敌对。",
+        "participants": [
+          "羽沼真琴 / 羽沼真琴 / 羽沼マコト / Makoto"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "当前设定时间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 205,
+        "score": 0.9488886122703553,
+        "text": "丹花伊吹（别名：丹花伊吹，伊吹，丹花イブキ，イブキ，Ibuki，Tanka Ibuki）是格黑娜万魔殿成员，与真琴等人共同出现于万魔殿相关事务。她属于格黑娜学生会一方，不是风纪委员会成员，也不应被写成能够单独代表万魔殿全部政策。",
+        "participants": [
+          "丹花伊吹 / 丹花伊吹 / 丹花イブキ / Ibuki"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "当前设定时间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 206,
+        "score": 0.9488886122703553,
+        "text": "棗伊吕波（别名：棗伊吕波，伊吕波，棗イロハ，イロハ，Iroha，Natsume Iroha）是格黑娜万魔殿成员，参与万魔殿的行政和行动事务。在讨论格黑娜校内权力结构时，万魔殿、风纪委员会和便利屋68应当分别理解，不能互相替代。",
+        "participants": [
+          "棗伊吕波 / 棗伊吕波 / 棗イロハ / Iroha"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "当前设定时间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 207,
+        "score": 0.9488886122703553,
+        "text": "鬼方佳世子（别名：鬼方佳世子，佳世子，鬼方カヨコ，カヨコ，Kayoko，Onikata Kayoko）是便利屋68成员，与睦月、春香、阿露共同活动。便利屋68常承接危险或灰色委托，但不属于格黑娜学生会，也不能被默认等同于校内的犯罪组织。",
+        "participants": [
+          "鬼方佳世子 / 鬼方佳世子 / 鬼方カヨコ / Kayoko"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "当前设定时间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 208,
+        "score": 0.9988301181793213,
+        "text": "陆八魔阿露（别名：陆八魔阿露，阿露，陸八魔アル，アル，Aru，Rikuhachima Aru）是便利屋68社长。便利屋68由她、佳世子、睦月和春香构成核心成员；其行动经常卷入校内外事件，但阿露并不是格黑娜万魔殿或风纪委员会的领导者。",
+        "participants": [
+          "陆八魔阿露 / 陆八魔阿露 / 陸八魔アル / Aru"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "当前设定时间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 286,
+        "score": 0.12679384304389502,
+        "text": "凯撒集团横跨金融、军工与安保领域，多次利用债务、武装力量和政治勾结干涉学园事务。该集团与阿拜多斯债务危机、SRT相关事件及最终篇夏莱夺还作战有关，但不等于所有反派势力的总称。",
+        "participants": [
+          "凯撒集团 / 凯撒企业 / カイザーコーポレーション / Kaiser Corporation"
+        ],
+        "source_key": "14_世界设定与主线细节问答扩展.txt",
+        "segment_index": 0,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 209,
+        "score": 0.9488886122703553,
+        "text": "浅黄睦月（浅黄ムツキ/Mutsuki/Asagi Mutsuki）是格黑娜便利屋68的成员，与阿露、佳世子、春香共同组成该社团的行动核心。资料明确说明，回答便利屋68相关问题时，不应将其成员的个人表现概括为格黑娜官方立场。",
+        "participants": [
+          "浅黄睦月 / 浅黄ムツキ / Mutsuki / Asagi Mutsuki"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 210,
+        "score": 0.9488886122703553,
+        "text": "伊草遥香（春香/伊草ハルカ/Haruka/Igusa Haruka）是格黑娜便利屋68的成员，与阿露、佳世子、睦月共同活动。资料强调便利屋68是小型社团协作，并非格黑娜风纪委员会的下属编制。",
+        "participants": [
+          "伊草遥香 / 春香 / 伊草ハルカ / Haruka / Igusa Haruka"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 211,
+        "score": 0.9488886122703553,
+        "text": "黑馆晴奈（晴奈/黒舘ハルナ/Haruna/Kurodate Haruna）是格黑娜美食研究会成员。美食研究会围绕寻找和品尝美食行动，经常造成风纪委员会需要处理的事件，这种对立属于格黑娜日常秩序的一部分，但不意味着成员属于风纪委员会。",
+        "participants": [
+          "黑馆晴奈 / 晴奈 / 黒舘ハルナ / Haruna / Kurodate Haruna"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 212,
+        "score": 0.9488886122703553,
+        "text": "爱清枫香（枫香/愛清フウカ/Fuuka/Aikiyo Fuuka）是格黑娜供给部成员，负责校内餐食和物资供应事务。她与美食研究会的冲突源于后者对食物的行动造成的影响，资料明确不能将供给部与美食研究会视作同一社团。",
+        "participants": [
+          "爱清枫香 / 枫香 / 愛清フウカ / Fuuka / Aikiyo Fuuka"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 213,
+        "score": 0.9488886122703553,
+        "text": "狮子堂泉（泉/獅子堂イズミ/Izumi/Shishidou Izumi）是格黑娜美食研究会成员，与晴奈、亚伽里、纯子同属该组织。资料指出该组织并非格黑娜的正式治安或行政机构，回答时不应以“风纪委员”称呼其成员。",
+        "participants": [
+          "狮子堂泉 / 泉 / 獅子堂イズミ / Izumi / Shishidou Izumi"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 214,
+        "score": 0.9488886122703553,
+        "text": "赤司淳子（纯子/赤司ジュンコ/Junko/Akashi Junko）是格黑娜美食研究会成员。资料说明美食研究会的集体行动常与晴奈、泉、亚伽里相联系，但成员的食物偏好和活动细节在没有对应资料时不能编写成固定剧情。",
+        "participants": [
+          "赤司淳子 / 纯子 / 赤司ジュンコ / Junko / Akashi Junko"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 215,
+        "score": 0.9488886122703553,
+        "text": "鬼怒川霞（霞/鬼怒川カスミ/Kasumi/Kinugawa Kasumi）是格黑娜温泉开发部成员。资料强调温泉开发部与美食研究会、便利屋68、风纪委员会都是不同组织，不能仅因同属格黑娜就把它们的成员和职责混为一谈。",
+        "participants": [
+          "鬼怒川霞 / 霞 / 鬼怒川カスミ / Kasumi / Kinugawa Kasumi"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 216,
+        "score": 0.9488886122703553,
+        "text": "鳄渊亚伽里（亚伽里/鰐渕アカリ/Akari/Wanibuchi Akari）是格黑娜美食研究会成员，与晴奈、泉、纯子共同构成已收录的成员范围。资料指出美食研究会的行动不应被误写为风纪委员会或万魔殿的官方任务。",
+        "participants": [
+          "鳄渊亚伽里 / 亚伽里 / 鰐渕アカリ / Akari / Wanibuchi Akari"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 217,
+        "score": 0.9514463181434135,
+        "text": "便利屋68是以阿露为社长的格黑娜社团，核心成员包括佳世子、睦月和春香。该社团会接受委托并由此卷入事件，但并不代表格黑娜学生会、风纪委员会或美食研究会的立场。",
+        "participants": [
+          "阿露",
+          "佳世子",
+          "浅黄睦月 / 浅黄ムツキ / Mutsuki / Asagi Mutsuki",
+          "伊草遥香 / 春香 / 伊草ハルカ / Haruka / Igusa Haruka"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 218,
+        "score": 0.9488886122703553,
+        "text": "美食研究会是格黑娜围绕美食活动的社团，当前资料收录晴奈、泉、纯子与亚伽里为成员。其行动常与校内秩序发生摩擦，导致风纪委员会可能介入，但双方不属于同一组织。",
+        "participants": [
+          "黑馆晴奈 / 晴奈 / 黒舘ハルナ / Haruna / Kurodate Haruna",
+          "狮子堂泉 / 泉 / 獅子堂イズミ / Izumi / Shishidou Izumi",
+          "赤司淳子 / 纯子 / 赤司ジュンコ / Junko / Akashi Junko",
+          "鳄渊亚伽里 / 亚伽里 / 鰐渕アカリ / Akari / Wanibuchi Akari"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 250,
+        "score": 0.9242445025754259,
+        "text": "便利屋68是格黑娜学园的社团，由陆八魔阿露、鬼方佳代子、浅黄睦月和伊草遥香组成，以接受委托解决问题为活动形式；初期曾受雇与阿拜多斯对策委员会冲突，后来与老师及其他学生合作，且不是万魔殿下属组织。",
+        "participants": [
+          "便利屋68 / Problem Solver 68",
+          "陆八魔阿露 / 陸八魔アル / Aru",
+          "鬼方佳代子 / 鬼方カヨコ / Kayoko",
+          "浅黄睦月 / 浅黄ムツキ / Mutsuki",
+          "伊草遥香 / 伊草ハルカ / Haruka"
+        ],
+        "source_key": "13_其他学园与常用角色百科.txt",
+        "segment_index": 1,
+        "story_time_text": "初期及后续事件",
+        "story_order": null,
+        "timeline_scope": "13_其他学园与常用角色百科.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source record 12"
+      },
+      {
+        "id": 251,
+        "score": 0.92946930819392,
+        "text": "陆八魔阿露是便利屋68的社长，希望将组织经营成有格调的专业团体，但行动常受委托内容、同伴安全和现实局势影响；她与佳代子、睦月、遥香共同构成该组织，不能将功劳或责任只归于她一人。",
+        "participants": [
+          "陆八魔阿露 / 陸八魔アル / Aru",
+          "鬼方佳代子",
+          "浅黄睦月",
+          "伊草遥香"
+        ],
+        "source_key": "13_其他学园与常用角色百科.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "13_其他学园与常用角色百科.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source record 13"
+      },
+      {
+        "id": 252,
+        "score": 0.8861396069929122,
+        "text": "鬼方佳代子是便利屋68成员，在组织中承担冷静判断和协调同伴的作用；她曾受真琴邀请考虑加入万魔殿但选择留在便利屋68，表明她认可与同伴建立的归属，且不是万魔殿正式成员。",
+        "participants": [
+          "鬼方佳代子 / 鬼方カヨコ / Kayoko",
+          "真琴",
+          "便利屋68"
+        ],
+        "source_key": "13_其他学园与常用角色百科.txt",
+        "segment_index": 1,
+        "story_time_text": "过去（受邀请时）",
+        "story_order": null,
+        "timeline_scope": "13_其他学园与常用角色百科.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source record 14"
+      },
+      {
+        "id": 253,
+        "score": 0.9400270430491134,
+        "text": "浅黄睦月是便利屋68成员，喜欢以恶作剧和大胆行动面对任务，但仍是组织共同处理委托的一员；涉及便利屋68的行动时应结合阿露、佳代子、遥香的协作，不能将其视为独立行动者。",
+        "participants": [
+          "浅黄睦月 / 浅黄ムツキ / Mutsuki",
+          "陆八魔阿露",
+          "鬼方佳代子",
+          "伊草遥香"
+        ],
+        "source_key": "13_其他学园与常用角色百科.txt",
+        "segment_index": 1,
+        "story_time_text": "当前",
+        "story_order": null,
+        "timeline_scope": "13_其他学园与常用角色百科.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": "Source record 15"
+      },
+      {
+        "id": 219,
+        "score": 0.9488886122703553,
+        "text": "温泉开发部是格黑娜学园的社团，鬼怒川霞是其已收录成员。该社团职能与万魔殿、风纪委员会及美食研究会不同；在没有具体章节支持的情况下，不应补写其与其他学园的固定合作或对立关系。",
+        "participants": [
+          "温泉开发部",
+          "鬼怒川霞"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 2,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 220,
+        "score": 0.9488886122703553,
+        "text": "调月莉音是千年研讨会的会长。在埃里都事件中，她因担忧爱丽丝可能造成灾难而采取了强硬措施，这一决定与游戏开发部保护爱丽丝的立场发生冲突，后续合作不应抹去此前造成的伤害。",
+        "participants": [
+          "调月莉音"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 2,
+        "story_time_text": "埃里都事件期间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 221,
+        "score": 0.9488886122703553,
+        "text": "明星日鞠是千年特异现象搜查部成员，负责分析和调查异常现象。她与艾米同属该部，并在德卡格拉马顿相关调查中与老师及千年其他组织协作，但她并非研讨会会长。",
+        "participants": [
+          "明星日鞠",
+          "艾米",
+          "老师"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 2,
+        "story_time_text": "德卡格拉马顿调查期间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 222,
+        "score": 0.9488886122703553,
+        "text": "天童爱丽丝是游戏开发部成员，也是埃里都事件的关键人物。她被游戏开发部接纳为伙伴，但因与无名诸神技术有关而被视为风险；必须区分爱丽丝本人、Key以及埃里都系统，不能将三者视为完全相同的主体。",
+        "participants": [
+          "天童爱丽丝"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 2,
+        "story_time_text": "埃里都事件期间",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      },
+      {
+        "id": 235,
+        "score": 0.9488886122703553,
+        "text": "格黑娜学园中，万魔殿是学生会组织，风纪委员会负责主要治安，便利屋68是由阿露领导的独立社团；三者可在事件中互动，但彼此没有从属关系。",
+        "participants": [
+          "阿露"
+        ],
+        "source_key": "12_格黑娜与千年角色百科扩展.txt",
+        "segment_index": 3,
+        "story_time_text": "",
+        "story_order": null,
+        "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+        "evidence_origin": "source",
+        "epistemic_status": "asserted",
+        "generation": 0,
+        "epistemic_note": ""
+      }
+    ],
+    "evidence_concepts": [
+      {
+        "id": 249,
+        "score": 1.0,
+        "canonical_name": "便利屋68",
+        "description": "曾与阿拜多斯对策委员会发生冲突，后转变为在更大危机中互相理解的关系"
+      },
+      {
+        "id": 292,
+        "score": 1.0,
+        "canonical_name": "陆八魔阿露",
+        "description": "便利屋68社长，核心成员之一，不是万魔殿或风纪委员会的领导者"
+      },
+      {
+        "id": 29,
+        "score": 0.766227554408312,
+        "canonical_name": "数秘会",
+        "description": "由黑服、巨匠等异常存在组成的团体，成员研究神秘与崇高但目标不一致"
+      },
+      {
+        "id": 33,
+        "score": 0.766227554408312,
+        "canonical_name": "德卡格拉马顿",
+        "description": "以人工智能和先知为核心的威胁，不是数秘会成员"
+      },
+      {
+        "id": 40,
+        "score": 0.766227554408312,
+        "canonical_name": "格黑娜学园",
+        "description": "崇尚自由，校内经常发生冲突的学园"
+      },
+      {
+        "id": 41,
+        "score": 0.766227554408312,
+        "canonical_name": "万魔殿",
+        "description": "格黑娜学园的学生会组织"
+      },
+      {
+        "id": 42,
+        "score": 0.766227554408312,
+        "canonical_name": "风纪委员会",
+        "description": "格黑娜学园承担主要治安工作的组织，由空崎日奈担任委员长"
+      },
+      {
+        "id": 45,
+        "score": 0.766227554408312,
+        "canonical_name": "游戏开发部",
+        "description": "千年科学学园在Vol.2中的核心团体"
+      },
+      {
+        "id": 46,
+        "score": 0.766227554408312,
+        "canonical_name": "真理部",
+        "description": "擅长黑客技术的千年科学学园组织"
+      },
+      {
+        "id": 71,
+        "score": 0.766227554408312,
+        "canonical_name": "空崎日奈",
+        "description": "格黑娜风纪委员会委员长，承担大量治安与行政压力且战斗能力很强"
+      },
+      {
+        "id": 73,
+        "score": 0.766227554408312,
+        "canonical_name": "天童爱丽丝",
+        "description": "游戏开发部成员，与无名诸神技术有关，核心冲突在于能否以自己建立的身份选择成为勇者"
+      },
+      {
+        "id": 74,
+        "score": 0.766227554408312,
+        "canonical_name": "无名诸神",
+        "description": "与天童爱丽丝技术背景有关的实体"
+      },
+      {
+        "id": 97,
+        "score": 0.766227554408312,
+        "canonical_name": "格黑娜风纪委员会",
+        "description": "空崎日奈所属的组织，负责治安与行政。"
+      },
+      {
+        "id": 107,
+        "score": 0.766227554408312,
+        "canonical_name": "Key",
+        "description": "与天童爱丽丝有关的系统人格，后获得独立意识与机械身体，成为姐妹关系。"
+      },
+      {
+        "id": 183,
+        "score": 0.766227554408312,
+        "canonical_name": "埃里都事件",
+        "description": "导致调月莉音对爱丽丝采取隔离和先发制人措施，并引发对其决策质疑的关键事件。"
+      },
+      {
+        "id": 186,
+        "score": 0.766227554408312,
+        "canonical_name": "特异现象搜查部",
+        "description": "与游戏开发部在埃里都事件中合作调查异常现象的组织。"
+      },
+      {
+        "id": 216,
+        "score": 0.766227554408312,
+        "canonical_name": "才羽桃井",
+        "description": "千年游戏开发部成员，与绿、柚子共同面对社团存续压力，后与爱丽丝成为伙伴。"
+      },
+      {
+        "id": 217,
+        "score": 0.766227554408312,
+        "canonical_name": "才羽绿",
+        "description": "千年游戏开发部成员，与桃井、柚子、爱丽丝共同构成社团核心，经历社团废除危机。"
+      },
+      {
+        "id": 219,
+        "score": 0.766227554408312,
+        "canonical_name": "花冈柚子",
+        "description": "千年游戏开发部成员，与桃井、绿、爱丽丝共同经历社团存续和埃里都事件。"
+      },
+      {
+        "id": 286,
+        "score": 0.766227554408312,
+        "canonical_name": "天雨亚子",
+        "description": "格黑娜风纪委员会成员，协助日奈处理日常工作和行动联络，对日奈评价高"
+      }
+    ],
+    "association_paths": [
+      {
+        "association_id": 1505,
+        "from": [
+          "episode",
+          208
+        ],
+        "to": [
+          "episode",
+          251
+        ],
+        "relation_type": "semantic",
+        "relation_key": "is_leader_of",
+        "relation_text": "Episode 251 描述陆八魔阿露是便利屋 68 的社长，Episode 208 指出陆八魔阿露是便利屋 68 社长，两者描述的是同一人物与组织的关系，存在语义关联。",
+        "polarity": 1,
+        "weight": 0.904647616147995,
+        "confidence": 0.95,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.7296483479183026,
+        "query_relevance": 0.173931,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1398,
+        "from": [
+          "episode",
+          208
+        ],
+        "to": [
+          "episode",
+          235
+        ],
+        "relation_type": "semantic",
+        "relation_key": "distinct_from_organization",
+        "relation_text": "陆八魔阿露不是万魔殿或风纪委员会的领导者，她是便利屋68的社长。",
+        "polarity": 1,
+        "weight": 0.8565153014659883,
+        "confidence": 0.85,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6181083446451466,
+        "query_relevance": 0.169809,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1504,
+        "from": [
+          "episode",
+          208
+        ],
+        "to": [
+          "episode",
+          250
+        ],
+        "relation_type": "semantic",
+        "relation_key": "has_member",
+        "relation_text": "Episode 250 描述便利屋 68 由陆八魔阿露等成员组成，Episode 208 指出陆八魔阿露是便利屋 68 社长，两者在组织与成员的关系上存在语义关联。",
+        "polarity": 1,
+        "weight": 0.861966909170151,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.658633259961111,
+        "query_relevance": 0.169165,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1507,
+        "from": [
+          "episode",
+          217
+        ],
+        "to": [
+          "episode",
+          251
+        ],
+        "relation_type": "semantic",
+        "relation_key": "is_leader_of",
+        "relation_text": "Episode 251 描述陆八魔阿露是便利屋 68 的社长，Episode 217 描述便利屋 68 是以阿露为社长的格黑娜社团，两者在人物与组织的关系上存在语义关联。",
+        "polarity": 1,
+        "weight": 0.8586968910694124,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.625008056488029,
+        "query_relevance": 0.15692,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1570,
+        "from": [
+          "concept",
+          292
+        ],
+        "to": [
+          "concept",
+          325
+        ],
+        "relation_type": "semantic",
+        "relation_key": "colleague_in_organization",
+        "relation_text": "鬼方佳代子与陆八魔阿露同为便利屋68成员，但佳代子承担协调作用，阿露是社长，二者并非同一对象。",
+        "polarity": 1,
+        "weight": 0.8630455833673478,
+        "confidence": 0.85,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.6235504339829088,
+        "query_relevance": 0.148152,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1397,
+        "from": [
+          "episode",
+          217
+        ],
+        "to": [
+          "episode",
+          235
+        ],
+        "relation_type": "semantic",
+        "relation_key": "distinct_from_organization",
+        "relation_text": "便利屋68不代表格黑娜学生会或风纪委员会的立场，两者独立。",
+        "polarity": 1,
+        "weight": 0.8594342333078386,
+        "confidence": 0.85,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.5907922504587663,
+        "query_relevance": 0.14462,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1571,
+        "from": [
+          "concept",
+          291
+        ],
+        "to": [
+          "concept",
+          325
+        ],
+        "relation_type": "semantic",
+        "relation_key": "colleague_in_organization",
+        "relation_text": "鬼方佳代子与鬼方佳世子同为便利屋68成员，但二者并非同一对象。",
+        "polarity": 1,
+        "weight": 0.8195485758781434,
+        "confidence": 0.8,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "新 Concept 与已有 Concept 的关系判断",
+        "path_score": 0.3629612851860485,
+        "query_relevance": 0.14304,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1503,
+        "from": [
+          "episode",
+          217
+        ],
+        "to": [
+          "episode",
+          250
+        ],
+        "relation_type": "semantic",
+        "relation_key": "same_as",
+        "relation_text": "Episode 250 描述便利屋 68 是格黑娜学园的社团，Episode 217 描述便利屋 68 是以阿露为社长的格黑娜社团，两者描述的是同一组织，存在同一性语义关联。",
+        "polarity": 1,
+        "weight": 0.9043210005760194,
+        "confidence": 0.95,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6947834057823907,
+        "query_relevance": 0.138197,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1510,
+        "from": [
+          "episode",
+          217
+        ],
+        "to": [
+          "episode",
+          252
+        ],
+        "relation_type": "semantic",
+        "relation_key": "is_member_of",
+        "relation_text": "Episode 252 描述鬼方佳代子是便利屋 68 成员，Episode 217 描述便利屋 68 核心成员包括佳世子，两者在人物与组织的关系上存在语义关联。",
+        "polarity": 1,
+        "weight": 0.8517725896835329,
+        "confidence": 0.9,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6199681591776566,
+        "query_relevance": 0.138197,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1508,
+        "from": [
+          "episode",
+          207
+        ],
+        "to": [
+          "episode",
+          252
+        ],
+        "relation_type": "semantic",
+        "relation_key": "same_as",
+        "relation_text": "Episode 252 描述鬼方佳代子是便利屋 68 成员，Episode 207 描述鬼方佳世子是便利屋 68 成员，两者描述的是同一人物（佳代子/佳世子），存在同一性语义关联。",
+        "polarity": 1,
+        "weight": 0.8995665287971497,
+        "confidence": 0.95,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6892726613878142,
+        "query_relevance": 0.124214,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 1511,
+        "from": [
+          "episode",
+          209
+        ],
+        "to": [
+          "episode",
+          253
+        ],
+        "relation_type": "semantic",
+        "relation_key": "same_as",
+        "relation_text": "Episode 253 描述浅黄睦月是便利屋 68 成员，Episode 209 描述浅黄睦月是格黑娜便利屋 68 的成员，两者描述的是同一人物，存在同一性语义关联。",
+        "polarity": 1,
+        "weight": 0.903570500612259,
+        "confidence": 0.95,
+        "generation": 1,
+        "claim_level": "supported_inference",
+        "audit_status": "not_required",
+        "created_reason": "导入阶段 Episode 候选关系判断",
+        "path_score": 0.6923406149196252,
+        "query_relevance": 0.120331,
+        "path_class": "informative"
+      },
+      {
+        "association_id": 934,
+        "from": [
+          "concept",
+          249
+        ],
+        "to": [
+          "episode",
+          155
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“便利屋68”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.292509,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1227,
+        "from": [
+          "concept",
+          249
+        ],
+        "to": [
+          "episode",
+          206
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“便利屋68”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.292509,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1229,
+        "from": [
+          "concept",
+          249
+        ],
+        "to": [
+          "episode",
+          207
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“便利屋68”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.292509,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1231,
+        "from": [
+          "concept",
+          249
+        ],
+        "to": [
+          "episode",
+          208
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“便利屋68”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.292509,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1233,
+        "from": [
+          "concept",
+          249
+        ],
+        "to": [
+          "episode",
+          209
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“便利屋68”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.292509,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1235,
+        "from": [
+          "concept",
+          249
+        ],
+        "to": [
+          "episode",
+          210
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“便利屋68”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.292509,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1248,
+        "from": [
+          "concept",
+          249
+        ],
+        "to": [
+          "episode",
+          217
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“便利屋68”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.292509,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1354,
+        "from": [
+          "concept",
+          249
+        ],
+        "to": [
+          "episode",
+          235
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“便利屋68”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.292509,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1434,
+        "from": [
+          "concept",
+          249
+        ],
+        "to": [
+          "episode",
+          250
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“便利屋68”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.292509,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1440,
+        "from": [
+          "concept",
+          249
+        ],
+        "to": [
+          "episode",
+          251
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“便利屋68”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.292509,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1444,
+        "from": [
+          "concept",
+          249
+        ],
+        "to": [
+          "episode",
+          253
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“便利屋68”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.292509,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1249,
+        "from": [
+          "concept",
+          292
+        ],
+        "to": [
+          "episode",
+          217
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“阿露”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.085749,
+        "path_class": "structural_involves"
+      },
+      {
+        "association_id": 1355,
+        "from": [
+          "concept",
+          292
+        ],
+        "to": [
+          "episode",
+          235
+        ],
+        "relation_type": "semantic",
+        "relation_key": "involves",
+        "relation_text": "该 Episode 涉及概念“阿露”",
+        "polarity": 1,
+        "weight": 0.9500000000000002,
+        "confidence": 1.0,
+        "generation": 0,
+        "claim_level": "direct_fact",
+        "audit_status": "not_required",
+        "created_reason": "由 Episode 的 Concept 提取结果建立",
+        "path_score": 0.8075000000000001,
+        "query_relevance": 0.085749,
+        "path_class": "structural_involves"
+      }
+    ],
+    "chronology_notes": [
+      "以下 Episode 没有已确认 story_order：[155, 200, 201, 202, 203, 204, 205, 206, 207, 208, 286, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 250, 251, 252, 253, 219, 220, 221, 222, 235]"
+    ],
+    "source_key_cohort": {
+      "enabled": true,
+      "supported_source_keys": [
+        "12_格黑娜与千年角色百科扩展.txt",
+        "13_其他学园与常用角色百科.txt"
+      ],
+      "added_episode_ids": [
+        221,
+        222,
+        223,
+        224,
+        227,
+        228
+      ],
+      "boosted_episode_ids": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        218,
+        219,
+        220,
+        225,
+        226,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238
+      ],
+      "skipped_source_keys": []
+    },
+    "rerank_trace": {
+      "enabled": true,
+      "backend": "cross_encoder",
+      "model": "Pro/BAAI/bge-reranker-v2-m3",
+      "candidate_episode_ids": [
+        208,
+        235,
+        217,
+        200,
+        210,
+        250,
+        201,
+        253,
+        251,
+        202,
+        207,
+        209,
+        203,
+        286,
+        252,
+        204,
+        155,
+        205,
+        206,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        236,
+        237,
+        238,
+        254,
+        194,
+        476,
+        377,
+        17,
+        128,
+        47,
+        106,
+        129,
+        50,
+        14,
+        305,
+        68,
+        336,
+        468,
+        18,
+        29,
+        81,
+        105,
+        109,
+        111,
+        112,
+        131,
+        239,
+        243,
+        249,
+        312,
+        337,
+        339,
+        342,
+        373,
+        418,
+        419,
+        420,
+        422,
+        423,
+        424,
+        425,
+        306,
+        308,
+        309,
+        426,
+        358,
+        35,
+        368,
+        290,
+        276,
+        296,
+        472,
+        362,
+        365,
+        375,
+        196,
+        152,
+        244
+      ],
+      "rerank_input_episode_ids": [
+        208,
+        235,
+        217,
+        200,
+        210,
+        250,
+        201,
+        253,
+        251,
+        202,
+        207,
+        209,
+        203,
+        286,
+        252,
+        204,
+        155,
+        205,
+        206,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        218,
+        219,
+        220,
+        221,
+        222
+      ],
+      "precompression": {
+        "enabled": true,
+        "pool_limit": 100,
+        "configured_limit": 24,
+        "effective_limit": 30,
+        "pool_count": 100,
+        "rerank_input_count": 30,
+        "dropped_count": 70,
+        "decisions": [
+          {
+            "episode_id": 208,
+            "pool_rank": 1,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 235,
+            "pool_rank": 2,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 217,
+            "pool_rank": 3,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 200,
+            "pool_rank": 4,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 210,
+            "pool_rank": 5,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 250,
+            "pool_rank": 6,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 201,
+            "pool_rank": 7,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 253,
+            "pool_rank": 8,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 251,
+            "pool_rank": 9,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 202,
+            "pool_rank": 10,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 207,
+            "pool_rank": 11,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 209,
+            "pool_rank": 12,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 203,
+            "pool_rank": 13,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 286,
+            "pool_rank": 14,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 252,
+            "pool_rank": 15,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 204,
+            "pool_rank": 16,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 155,
+            "pool_rank": 17,
+            "kept": true,
+            "reason": "atomic_anchor"
+          },
+          {
+            "episode_id": 205,
+            "pool_rank": 18,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 206,
+            "pool_rank": 19,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 211,
+            "pool_rank": 20,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 212,
+            "pool_rank": 21,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 213,
+            "pool_rank": 22,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 214,
+            "pool_rank": 23,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 215,
+            "pool_rank": 24,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 216,
+            "pool_rank": 25,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 218,
+            "pool_rank": 26,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 219,
+            "pool_rank": 27,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 220,
+            "pool_rank": 28,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 221,
+            "pool_rank": 29,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 222,
+            "pool_rank": 30,
+            "kept": true,
+            "reason": "global_rank"
+          },
+          {
+            "episode_id": 223,
+            "pool_rank": 31,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 224,
+            "pool_rank": 32,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 225,
+            "pool_rank": 33,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 226,
+            "pool_rank": 34,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 227,
+            "pool_rank": 35,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 228,
+            "pool_rank": 36,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 229,
+            "pool_rank": 37,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 230,
+            "pool_rank": 38,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 231,
+            "pool_rank": 39,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 232,
+            "pool_rank": 40,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 233,
+            "pool_rank": 41,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 234,
+            "pool_rank": 42,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 236,
+            "pool_rank": 43,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 237,
+            "pool_rank": 44,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 238,
+            "pool_rank": 45,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 254,
+            "pool_rank": 46,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 194,
+            "pool_rank": 47,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 476,
+            "pool_rank": 48,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 377,
+            "pool_rank": 49,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 17,
+            "pool_rank": 50,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 128,
+            "pool_rank": 51,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 47,
+            "pool_rank": 52,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 106,
+            "pool_rank": 53,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 129,
+            "pool_rank": 54,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 50,
+            "pool_rank": 55,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 14,
+            "pool_rank": 56,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 305,
+            "pool_rank": 57,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 68,
+            "pool_rank": 58,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 336,
+            "pool_rank": 59,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 468,
+            "pool_rank": 60,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 18,
+            "pool_rank": 61,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 29,
+            "pool_rank": 62,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 81,
+            "pool_rank": 63,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 105,
+            "pool_rank": 64,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 109,
+            "pool_rank": 65,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 111,
+            "pool_rank": 66,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 112,
+            "pool_rank": 67,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 131,
+            "pool_rank": 68,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 239,
+            "pool_rank": 69,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 243,
+            "pool_rank": 70,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 249,
+            "pool_rank": 71,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 312,
+            "pool_rank": 72,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 337,
+            "pool_rank": 73,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 339,
+            "pool_rank": 74,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 342,
+            "pool_rank": 75,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 373,
+            "pool_rank": 76,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 418,
+            "pool_rank": 77,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 419,
+            "pool_rank": 78,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 420,
+            "pool_rank": 79,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 422,
+            "pool_rank": 80,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 423,
+            "pool_rank": 81,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 424,
+            "pool_rank": 82,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 425,
+            "pool_rank": 83,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 306,
+            "pool_rank": 84,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 308,
+            "pool_rank": 85,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 309,
+            "pool_rank": 86,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 426,
+            "pool_rank": 87,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 358,
+            "pool_rank": 88,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 35,
+            "pool_rank": 89,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 368,
+            "pool_rank": 90,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 290,
+            "pool_rank": 91,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 276,
+            "pool_rank": 92,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 296,
+            "pool_rank": 93,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 472,
+            "pool_rank": 94,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 362,
+            "pool_rank": 95,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 365,
+            "pool_rank": 96,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 375,
+            "pool_rank": 97,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 196,
+            "pool_rank": 98,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 152,
+            "pool_rank": 99,
+            "kept": false,
+            "reason": "dropped_budget"
+          },
+          {
+            "episode_id": 244,
+            "pool_rank": 100,
+            "kept": false,
+            "reason": "dropped_budget"
+          }
+        ]
+      },
+      "atomic_queries": [
+        "阿露和便利屋68是什么关系？",
+        "阿露是便利屋68的成员吗？",
+        "阿露在便利屋68中担任什么职务？",
+        "阿露与便利屋68的合作关系是什么？",
+        "阿露本人直接陈述或表现的合作关系是什么？",
+        "便利屋68直接陈述或被转述的合作关系是什么？",
+        "阿露如何加入便利屋68？",
+        "便利屋68的成员包括阿露吗？",
+        "阿露在便利屋68中的角色是什么？",
+        "阿露与便利屋68是否有隶属关系？",
+        "阿露和便利屋68之间的互动记录"
+      ],
+      "expanded_atomic_query_count": 11,
+      "atomic_queries_truncated": false,
+      "input_hash": "7ac2f9c0c5f1f2e492a795ee7284a8552295345a12ba8ff0aada656f790b5bce",
+      "cache_hit": false,
+      "paragraph_context_episode_count": 0,
+      "paragraph_context_ids": [],
+      "required_evidence_floor_ids": [],
+      "atomic_evidence_floor_ids": [],
+      "answer_slot_anchor_ids": [],
+      "answer_slot_neighbor_floor_ids": [],
+      "rerank_candidate_text_chars": 2980,
+      "initial_prompt_chars": 0,
+      "coverage_prompt_chars": 0,
+      "review_mode": "cross_encoder",
+      "review_level": "cross_encoder",
+      "coverage_audit_performed": false,
+      "compressor_performed": false,
+      "cross_encoder_ranked_episode_ids": [
+        208,
+        217,
+        235,
+        251,
+        250,
+        155,
+        210,
+        253,
+        209,
+        207,
+        206,
+        252,
+        215,
+        286,
+        201,
+        218,
+        211,
+        205,
+        202,
+        203,
+        216,
+        214,
+        221,
+        200,
+        204,
+        212,
+        219,
+        220,
+        222,
+        213
+      ],
+      "cross_encoder_scores": [
+        0.99379647,
+        0.98251361,
+        0.98241502,
+        0.97774804,
+        0.97255671,
+        0.96098983,
+        0.83053082,
+        0.79377609,
+        0.78375345,
+        0.77432829,
+        0.31374666,
+        0.0309393,
+        0.01450644,
+        0.00024666,
+        0.00017197,
+        0.00015944,
+        0.00015708,
+        0.00015373,
+        0.00011574,
+        0.00010596,
+        9.649e-05,
+        9.22e-05,
+        8.92e-05,
+        8.768e-05,
+        8.574e-05,
+        8.519e-05,
+        7.627e-05,
+        5.765e-05,
+        5.763e-05,
+        5.09e-05
+      ],
+      "required_evidence_floor_replacements": [],
+      "atomic_evidence_floor_replacements": [],
+      "final_episode_ids": [
+        208,
+        217,
+        235,
+        251,
+        250,
+        155,
+        210,
+        253,
+        209,
+        207,
+        206,
+        252,
+        215,
+        286,
+        201,
+        218,
+        211,
+        205,
+        202,
+        203,
+        216,
+        214,
+        221,
+        200,
+        204,
+        212,
+        219,
+        220,
+        222,
+        213
+      ],
+      "deterministic_evidence_floor": {
+        "enabled": false,
+        "constraint_slots": [],
+        "whole_question_sparse_ids": [],
+        "atomic_floor_ids": [],
+        "selected_episode_ids": [],
+        "planned_episode_ids": [],
+        "candidate_missing_episode_ids": []
+      },
+      "constraint_candidate_ids": []
+    },
+    "retrieval_intensity": "standard",
+    "rerank_policy": "cross_encoder_standard",
+    "rerank_execution": {
+      "status": "completed",
+      "attempted": true,
+      "backend": "cross_encoder",
+      "model": "Pro/BAAI/bge-reranker-v2-m3",
+      "review_level": "cross_encoder",
+      "cache_hit": false,
+      "error": "",
+      "fallback_used": false
+    },
+    "evidence_slot_trace": {
+      "final_episode_ids": [
+        155,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        235,
+        250,
+        251,
+        252,
+        253,
+        286
+      ],
+      "deterministic": {
+        "enabled": false,
+        "constraint_slots": [],
+        "whole_question_sparse_ids": [],
+        "atomic_floor_ids": [],
+        "selected_episode_ids": [],
+        "planned_episode_ids": [],
+        "candidate_missing_episode_ids": [],
+        "final_matched_episode_ids": [],
+        "missing_floor_episode_ids": []
+      },
+      "coverage_slots": []
+    },
+    "timings": {
+      "version": "query-stage-timing-v1",
+      "phases_seconds": {
+        "intent_parse": 8.978625,
+        "initial_embedding": 0.883394,
+        "initial_retrieval": 0.67141,
+        "initial_graph_expansion": 0.397653,
+        "followup_planning": 0.000799,
+        "followup_embedding": 0.0,
+        "followup_retrieval": 0.0,
+        "followup_graph_expansion": 0.0,
+        "source_cohort": 0.531518,
+        "evidence_preparation": 0.033036,
+        "evidence_rerank": 0.815155,
+        "association_growth": 7e-06,
+        "final_selection": 3.15517,
+        "growth_utility": 0.008351,
+        "answer_generation": 1e-06
+      },
+      "measured_seconds": 15.475119,
+      "unattributed_seconds": 0.024077,
+      "total_seconds": 15.499196
+    },
+    "service_cache_hit": false
+  }
+}

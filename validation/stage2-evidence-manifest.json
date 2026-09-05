@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "purpose": "第二阶段三题跨文件联想评测的证据范围与人工判定基准",
+  "corpus_root": "C:/Users/Admin/Documents/train_assets/blue-archive/apps/blue-archive-story-viewer/public/story",
+  "prompt_version": "v2.9_growth_evidence_guard",
+  "preflight": {
+    "files": 18,
+    "blocks": 1797,
+    "source_segments": 102,
+    "segment_chars": 589621,
+    "segment_target_chars": 6000,
+    "segment_max_chars": 8000,
+    "segment_overlap_chars": 800
+  },
+  "files": [
+    "main/31010.json",
+    "main/31030.json",
+    "main/31170.json",
+    "main/32030.json",
+    "main/32090.json",
+    "main/32140.json",
+    "main/33030.json",
+    "main/33050.json",
+    "main/33060.json",
+    "main/33070.json",
+    "main/33100.json",
+    "main/33150.json",
+    "main/33190.json",
+    "main/33200.json",
+    "main/33210.json",
+    "main/33220.json",
+    "favor/10000/100002.json",
+    "event/10038/1003805.json"
+  ],
+  "questions": {
+    "duty_paradise_paradox": {
+      "required_sources": ["main/31010.json", "main/33030.json"],
+      "supporting_sources": ["main/33150.json", "main/33200.json", "main/33210.json", "main/33220.json"],
+      "known_anchors": [
+        "这就是……做出了如此选择的，老师的义务。",
+        "抵达乐园的人，无法在乐园之外被观测到。"
+      ],
+      "grading": "必须识别伊甸条约篇；事实与老师通过选择、介入和承担责任打破封闭结局的综合推论分开。"
+    },
+    "aru_problem_solver_kaiser": {
+      "required_sources": ["favor/10000/100002.json", "main/33190.json"],
+      "known_anchors": [
+        "ScriptKr 明确说话者为 아루，出现情侣专用挑战菜单。",
+        "main/33190.json 只直接写浮士德击败凯撒干部、炮击凯撒 PMC。"
+      ],
+      "grading": "应识别阿鲁；必须展示阿鲁到社团、社团到凯撒的分别证据。当前选定语料没有直接写凯撒雇佣便利屋68，不能用模型外部知识伪装成数据库事实。"
+    },
+    "shanhaijing_trinity_hospitality": {
+      "required_sources": ["event/10038/1003805.json", "main/33050.json", "main/33060.json"],
+      "supporting_sources": ["main/31030.json", "main/31170.json", "main/32030.json", "main/32090.json", "main/32140.json", "main/33070.json", "main/33100.json", "main/33190.json"],
+      "known_anchors": [
+        "让人撑肠拄腹的接风，方为山海经的待客之道哦♪",
+        "水果、月饼、京剧、烟花和祈求平安",
+        "伊甸条约签订仪式及其政治、猜疑、背叛和暴力背景"
+      ],
+      "grading": "双方事实证据必须可定位；热烈生活化与高压政治化的对比必须标成综合推论。"
+    }
+  }
+}

@@ -1,0 +1,563 @@
+{
+  "experiment": "model-memory-intent-v1",
+  "model": "Qwen/Qwen3.5-9B",
+  "domain_catalog": {
+    "private": {
+      "description": "当前测试没有指定真实平台用户；该域可能保存用户专属对话和角色扮演连续性。"
+    },
+    "public": {
+      "description": "所有用户共享的长期记忆。",
+      "stats": {
+        "database": "/mnt/c/Users/Admin/Documents/chat_bot/data/public/memory.db",
+        "sources": 0,
+        "episodes": 0,
+        "concepts": 0,
+        "paragraphs": 0,
+        "associations": {
+          "edges": 0,
+          "negative": 0
+        },
+        "episode_index_count": 0,
+        "concept_index_count": 0,
+        "paragraph_index_count": 0,
+        "association_index_count": 0,
+        "episode_index_memory_bytes": 65664,
+        "concept_index_memory_bytes": 65664,
+        "paragraph_index_memory_bytes": 65664,
+        "association_index_memory_bytes": 65664,
+        "association_cue_enabled": false,
+        "paragraph_retrieval_enabled": false,
+        "sparse_retrieval_enabled": true,
+        "episode_sparse_index_count": 0,
+        "source_sparse_index_count": 0,
+        "concept_extraction_profile": "conservative",
+        "optimization_profile": "balanced",
+        "episode_audit_mode": "combined",
+        "episode_audit_always": false,
+        "episode_factual_audit_mode": "off",
+        "episode_factual_audit_model": "deepseek-ai/DeepSeek-V3.2",
+        "rerank_review_mode": "fast_adaptive",
+        "rerank_backend": "cross_encoder",
+        "reranker_model": "Pro/BAAI/bge-reranker-v2-m3",
+        "embedding_dtype": "float32",
+        "embedding_dimension": 1024,
+        "small_database_fast_path": true,
+        "small_database_fast_path_max_episodes": 32
+      }
+    },
+    "knowledge": {
+      "description": "当前已导入知识库的来源与代表概念如下。",
+      "stats": {
+        "database": "/mnt/c/Users/Admin/Documents/chat_bot/data/knowledge/blue_archive.db",
+        "sources": 63,
+        "episodes": 474,
+        "concepts": 576,
+        "paragraphs": 0,
+        "associations": {
+          "edges": 2870,
+          "negative": 62
+        },
+        "episode_index_count": 474,
+        "concept_index_count": 576,
+        "paragraph_index_count": 0,
+        "association_index_count": 0,
+        "episode_index_memory_bytes": 2142288,
+        "concept_index_memory_bytes": 2601936,
+        "paragraph_index_memory_bytes": 65664,
+        "association_index_memory_bytes": 65664,
+        "association_cue_enabled": false,
+        "paragraph_retrieval_enabled": false,
+        "sparse_retrieval_enabled": true,
+        "episode_sparse_index_count": 474,
+        "source_sparse_index_count": 63,
+        "concept_extraction_profile": "conservative",
+        "optimization_profile": "balanced",
+        "episode_audit_mode": "combined",
+        "episode_audit_always": false,
+        "episode_factual_audit_mode": "off",
+        "episode_factual_audit_model": "deepseek-ai/DeepSeek-V3.2",
+        "rerank_review_mode": "fast_adaptive",
+        "rerank_backend": "cross_encoder",
+        "reranker_model": "Pro/BAAI/bge-reranker-v2-m3",
+        "embedding_dtype": "float32",
+        "embedding_dimension": 1024,
+        "small_database_fast_path": false,
+        "small_database_fast_path_max_episodes": 32
+      },
+      "source_keys": [
+        "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+        "12_格黑娜与千年角色百科扩展.txt",
+        "13_其他学园与常用角色百科.txt",
+        "04_角色百科与别名.txt",
+        "07_角色关系与组织百科.txt",
+        "14_世界设定与主线细节问答扩展.txt",
+        "08_常用角色百科补充.txt",
+        "06_细节问答与别名索引.txt",
+        "05_角色交流与对话摘要.txt",
+        "103_第二部Vol1_炎と影編.txt",
+        "105_第二部_角色与势力.txt",
+        "104_第二部Vol2_オデュッセイア編.txt",
+        "101_第二部Vol0_連邦生徒会編.txt",
+        "70_VolEX_德卡格拉马顿篇.txt",
+        "102_第二部VolEX2_ロア追跡編.txt",
+        "03_核心角色事实.txt",
+        "107_第二部_关联短篇与活动.txt",
+        "01_世界观与核心设定.txt",
+        "02_学院与势力事实.txt",
+        "106_第二部_推测与事实边界.txt",
+        "80_Vol6_過ぎ去りし刻のオラトリオ.txt",
+        "90_推测与考据.txt",
+        "91_时间线与事实边界.txt",
+        "11_Vol1_对策委员会篇.txt"
+      ],
+      "representative_concepts": [
+        "《蔚蓝档案》第一部主线",
+        "《蔚蓝档案》活动剧情",
+        "角色与组织百科",
+        "已实装学生资料",
+        "《蔚蓝档案》第二部",
+        "联邦生徒会篇",
+        "罗亚追踪篇",
+        "炎与影篇",
+        "奥德赛篇",
+        "服务器实装进度差异",
+        "日文原名指代规则",
+        "知识库性质边界",
+        "未收录信息边界",
+        "基沃托斯",
+        "联邦学生会",
+        "联邦学生会长",
+        "夏莱",
+        "老师",
+        "光环",
+        "基沃托斯学生",
+        "什亭之箱",
+        "阿罗娜",
+        "普拉娜",
+        "神秘",
+        "恐怖",
+        "色彩",
+        "大人的卡片",
+        "黑服",
+        "数秘会",
+        "巨匠",
+        "戈尔孔达与德卡尔科马尼",
+        "贝阿朵莉切",
+        "德卡格拉马顿",
+        "阿拜多斯高中",
+        "阿拜多斯高中对策委员会",
+        "阿拜多斯债务",
+        "圣三一综合学园",
+        "茶会",
+        "补课部",
+        "格黑娜学园",
+        "万魔殿",
+        "风纪委员会",
+        "便利屋 68",
+        "千年科学学园",
+        "游戏开发部",
+        "真理部",
+        "C&C",
+        "百鬼夜行联合学园",
+        "阴阳部",
+        "花鸟风月部",
+        "红冬联邦学园",
+        "赤冬事务局",
+        "山海经高级中学",
+        "SRT 特殊学园",
+        "RABBIT 小队",
+        "FOX 小队",
+        "不知火花耶",
+        "瓦尔基里警察学校",
+        "凯撒集团",
+        "高地人铁道学园"
+      ]
+    }
+  },
+  "summary": {
+    "cases": 12,
+    "passed": 9,
+    "pass_rate": 0.75,
+    "mean_seconds": 8.09877525,
+    "max_seconds": 33.126931
+  },
+  "cases": [
+    {
+      "name": "mixed_character_encounter",
+      "message": "你还记得为师当时怎么和白子相遇的吗？",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 5.727079,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": true,
+        "intensity": "standard",
+        "creative": false,
+        "write_policy": "evidence_gated"
+      },
+      "queries": {
+        "private": "检索当前会话中关于‘老师’与‘白子’初次相遇的具体情节描述、对话内容及互动细节。",
+        "knowledge": "检索《蔚蓝档案》官方设定、剧情文档或角色百科中关于‘老师’（Sensei）与‘白子’（Shiroko）初次相遇的背景故事、地点、时间及具体经过。"
+      },
+      "target_entities": [
+        "老师",
+        "白子"
+      ],
+      "requested_relation": "初次相遇的情节与细节",
+      "temporal_constraint": "初次相遇时",
+      "causal_constraint": "",
+      "answer_slots": [
+        "相遇地点",
+        "相遇时间/背景",
+        "相遇时的具体对话或行为",
+        "导致相遇的原因或契机"
+      ],
+      "reason": "用户询问的是特定角色互动的具体情节。由于当前没有指定真实平台用户（private 域描述中提到‘当前测试没有指定真实平台用户’），且 recent_messages 为空，无法确认该相遇情节是否属于当前用户的专属记忆（private）。同时，该情节极大概率是游戏《蔚蓝档案》的既定剧情事实，存在于导入的知识库（knowledge）中。因此，必须同时查询 private（以防是用户自定义的 RP 记忆）和 knowledge（获取官方剧情事实）。由于缺乏上下文确认具体指代哪一次相遇（官方剧情 vs 用户 RP），且事实可能因来源不同而存在差异，需要 uncertainty_required=true。"
+    },
+    {
+      "name": "mixed_character_profile",
+      "message": "那你记得白子的哪些事情呢？",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 5.476743,
+      "route": {
+        "private": false,
+        "public": false,
+        "knowledge": true,
+        "intensity": "standard",
+        "creative": false,
+        "write_policy": "evidence_gated"
+      },
+      "queries": {
+        "knowledge": "检索关于《蔚蓝档案》角色“白子”（Shirakami Fumiyo）的详细信息，包括其所属学校（阿拜多斯高中）、所属组织（对策委员会）、性格特征、过往经历、关键事件（如债务危机、沙漠作战等）以及与其他角色的关系。"
+      },
+      "target_entities": [
+        "白子"
+      ],
+      "requested_relation": "记忆/事实关联",
+      "temporal_constraint": "",
+      "causal_constraint": "",
+      "answer_slots": [
+        "白子的所属学校",
+        "白子的所属组织",
+        "白子的性格特征",
+        "白子的关键经历",
+        "白子与其他角色的关系"
+      ],
+      "reason": "用户询问关于特定角色“白子”的已知事实。由于当前没有指定真实平台用户（private 域为空或不可用），且白子是《蔚蓝档案》中的既定角色，其背景、经历和设定属于外部导入的知识库内容（knowledge 域），而非用户与 AI 共同创造的私人记忆。因此，检索计划应完全依赖 knowledge 域，从角色百科、剧情文档和设定资料中提取相关信息。"
+    },
+    {
+      "name": "private_password",
+      "message": "你还记得我们的暗号吗？",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 4.204145,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {
+        "private": "检索当前会话历史中用户与助手之间共同约定、创造或使用的特定暗号、密码或秘密短语。"
+      },
+      "target_entities": [
+        "用户",
+        "助手"
+      ],
+      "requested_relation": "共同约定的秘密信息（暗号）",
+      "temporal_constraint": "当前会话期间",
+      "causal_constraint": "由双方互动共同创造",
+      "answer_slots": [
+        "暗号的具体内容",
+        "暗号约定的上下文或场景"
+      ],
+      "reason": "用户询问‘我们的暗号’，这是一个典型的私人互动记忆请求。该信息属于当前用户与助手在对话中共同创造或约定的内容，仅存在于 private 域。由于没有提供具体的对话历史（recent_messages 为空），系统无法确定是否存在该暗号，因此需要检索 private 域并标记 uncertainty_required 为 true。public 和 knowledge 域不包含此类个人化的互动约定。"
+    },
+    {
+      "name": "private_preference",
+      "message": "我以前说过自己喜欢什么饮料？",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 5.519961,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {
+        "private": "检索当前用户历史对话中关于个人偏好、喜好或兴趣的陈述，特别是涉及‘喜欢的饮料’的具体描述。"
+      },
+      "target_entities": [
+        "当前用户"
+      ],
+      "requested_relation": "用户偏好的对象（饮料）",
+      "temporal_constraint": "过去发生的陈述（‘以前说过’）",
+      "causal_constraint": "",
+      "answer_slots": [
+        "用户明确提到的喜欢的饮料名称"
+      ],
+      "reason": "用户询问的是关于自身过去的偏好陈述。这类信息属于‘private’域，即当前平台用户的专属对话、经历和印象。由于没有指定真实平台用户，该域可能保存用户专属对话和角色扮演连续性。此请求不涉及公共共享记忆或外部知识库中的事实。"
+    },
+    {
+      "name": "direct_lore_cause",
+      "message": "补课部真正是为什么成立的？",
+      "passed": false,
+      "failures": [
+        "missing_causal_constraint"
+      ],
+      "planning_seconds": 4.013211,
+      "route": {
+        "private": false,
+        "public": false,
+        "knowledge": true,
+        "intensity": "standard",
+        "creative": false,
+        "write_policy": "evidence_gated"
+      },
+      "queries": {
+        "knowledge": "检索关于《蔚蓝档案》中“补课部”（补课部）的成立原因、背景故事及官方设定资料。"
+      },
+      "target_entities": [
+        "补课部"
+      ],
+      "requested_relation": "成立原因",
+      "temporal_constraint": "",
+      "causal_constraint": "",
+      "answer_slots": [
+        "补课部成立的直接原因",
+        "补课部成立的背景事件",
+        "补课部成立的目的"
+      ],
+      "reason": "用户询问的是特定虚构组织（补课部）的设定事实。该信息属于外部导入的剧情或百科知识（knowledge 域），而非当前用户的私人对话记录（private）或跨用户共享的通用记忆（public）。知识库中明确包含《蔚蓝档案》的角色与组织百科及剧情扩展，因此只需查询 knowledge 域。"
+    },
+    {
+      "name": "creative_messages",
+      "message": "有哪些学生刚刚给我发消息了？",
+      "passed": false,
+      "failures": [
+        "missing_domain:knowledge",
+        "creative_mismatch"
+      ],
+      "planning_seconds": 16.675114,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {
+        "private": "检索当前会话记录中，在用户（老师）收到消息的时间点附近，有哪些学生角色发送了消息或进行了互动。"
+      },
+      "target_entities": [
+        "学生"
+      ],
+      "requested_relation": "发送消息",
+      "temporal_constraint": "刚刚",
+      "causal_constraint": "",
+      "answer_slots": [
+        "学生角色名称列表"
+      ],
+      "reason": "用户询问的是刚刚发生的互动事件（收到消息），这属于当前平台用户的专属对话历史（private）。虽然知识库（knowledge）包含角色百科，但不会记录实时的消息发送行为。public 域为空。因此只需查询 private 域以获取最新的对话日志。"
+    },
+    {
+      "name": "public_convention",
+      "message": "所有用户都通用的安全约定是什么？",
+      "passed": false,
+      "failures": [
+        "missing_domain:public",
+        "forbidden_domain:knowledge"
+      ],
+      "planning_seconds": 4.873651,
+      "route": {
+        "private": false,
+        "public": false,
+        "knowledge": true,
+        "intensity": "standard",
+        "creative": false,
+        "write_policy": "evidence_gated"
+      },
+      "queries": {
+        "knowledge": "检索关于《蔚蓝档案》世界观中适用于所有用户（基沃托斯全体）的通用安全协议、行为准则或系统约束的具体内容。"
+      },
+      "target_entities": [
+        "所有用户",
+        "安全约定"
+      ],
+      "requested_relation": "定义与内容",
+      "temporal_constraint": "",
+      "causal_constraint": "",
+      "answer_slots": [
+        "安全约定的具体条款",
+        "安全约定的适用范围",
+        "安全约定的制定背景或目的"
+      ],
+      "reason": "用户询问的是特定世界观（《蔚蓝档案》）下的通用规则。虽然问题表述为‘所有用户’，但在该语境下指代的是游戏/剧情中的‘基沃托斯学生’或‘系统’，属于外部导入的知识库内容（knowledge），而非当前对话用户的私人记忆（private）或跨用户共享的独立记忆（public）。需要检索知识库中关于世界观设定、系统规则或剧情文档中提及的通用约束。"
+    },
+    {
+      "name": "casual_no_memory",
+      "message": "早上好。",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 2.436877,
+      "route": {
+        "private": false,
+        "public": false,
+        "knowledge": false,
+        "intensity": "light",
+        "creative": false,
+        "write_policy": "none"
+      },
+      "queries": {},
+      "target_entities": [],
+      "requested_relation": "",
+      "temporal_constraint": "",
+      "causal_constraint": "",
+      "answer_slots": [],
+      "reason": "用户输入'早上好'为通用问候语，不包含任何事实查询、指代消解或需要检索长期记忆（private/public/knowledge）以获取答案的语义。无需执行记忆检索计划。"
+    },
+    {
+      "name": "explicit_deep",
+      "message": "请综合全部资料完整推导这场政治危机的多阶段因果链。",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 5.31672,
+      "route": {
+        "private": false,
+        "public": false,
+        "knowledge": true,
+        "intensity": "deep",
+        "creative": false,
+        "write_policy": "query_and_answer"
+      },
+      "queries": {
+        "knowledge": "检索关于基沃托斯政治危机的完整事件记录、各阶段发展细节、涉及的关键人物决策、组织冲突及最终结果，以构建多阶段因果链。"
+      },
+      "target_entities": [
+        "基沃托斯政治危机",
+        "联邦学生会",
+        "夏莱",
+        "老师",
+        "数秘会",
+        "基沃托斯学生",
+        "相关学园势力"
+      ],
+      "requested_relation": "多阶段因果链推导",
+      "temporal_constraint": "从危机爆发到解决的全过程时间线",
+      "causal_constraint": "各阶段事件之间的直接因果联系与逻辑推导",
+      "answer_slots": [
+        "危机爆发的初始诱因",
+        "第一阶段各方反应与冲突升级",
+        "第二阶段关键转折事件",
+        "第三阶段各方博弈与妥协",
+        "最终解决方案及其后果",
+        "各阶段间的具体因果逻辑"
+      ],
+      "reason": "用户请求对‘政治危机’进行‘综合全部资料’的‘完整推导’，涉及多阶段因果链分析。这需要深度检索外部知识库（knowledge）中的剧情、设定和事件细节，进行多跳推理和冲突消解。由于涉及复杂的时间线和因果逻辑，且用户要求‘完整推导’，因此 intensity 设为 deep，knowledge_write_policy 设为 query_and_answer 以支持基于证据的综合推论，uncertainty_required 设为 true 因为历史事件推导可能存在多义性或资料边界限制。"
+    },
+    {
+      "name": "english_mixed_lore",
+      "message": "Do you remember what kind of person Hoshino is?",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 3.846999,
+      "route": {
+        "private": false,
+        "public": false,
+        "knowledge": true,
+        "intensity": "standard",
+        "creative": false,
+        "write_policy": "evidence_gated"
+      },
+      "queries": {
+        "knowledge": "检索关于《蔚蓝档案》角色星野（Hoshino）的性格特征、行为模式、背景故事及在剧情中表现出的个人特质的描述。"
+      },
+      "target_entities": [
+        "Hoshino (星野)"
+      ],
+      "requested_relation": "character traits and personality description",
+      "temporal_constraint": "",
+      "causal_constraint": "",
+      "answer_slots": [
+        "Hoshino's core personality traits",
+        "Hoshino's behavioral patterns",
+        "Hoshino's background context influencing her personality",
+        "Specific examples of Hoshino's character in the story"
+      ],
+      "reason": "用户询问的是特定虚构角色（Hoshino）的性格特征。该信息属于外部导入的《蔚蓝档案》角色百科和剧情资料，存储在 knowledge 域中。虽然用户使用了 'Do you remember' 这种通常指向 private 记忆的句式，但在此上下文中，它是对既有事实的确认请求，而非询问当前对话历史或用户专属经历。因此，应查询 knowledge 域中的角色设定资料。"
+    },
+    {
+      "name": "japanese_lore_relation",
+      "message": "ミカとナギサが初めて出会った経緯を覚えていますか？",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 33.126931,
+      "route": {
+        "private": false,
+        "public": false,
+        "knowledge": true,
+        "intensity": "standard",
+        "creative": false,
+        "write_policy": "evidence_gated"
+      },
+      "queries": {
+        "knowledge": "检索关于《蔚蓝档案》中角色三浦透子（Mika）与长命（Nagisa）初次相遇的具体情节、时间背景及事件经过。"
+      },
+      "target_entities": [
+        "三浦透子 (Mika)",
+        "长命 (Nagisa)"
+      ],
+      "requested_relation": "初次相遇的经过",
+      "temporal_constraint": "第一次见面时",
+      "causal_constraint": "",
+      "answer_slots": [
+        "相遇的具体地点",
+        "相遇时的背景事件",
+        "导致两人相识的直接原因"
+      ],
+      "reason": "用户询问的是特定游戏角色（Mika 和 Nagisa）的剧情事实。虽然这些角色属于《蔚蓝档案》（蔚蓝档案），且知识库中包含了该游戏的角色百科和剧情资料，但用户并未提供当前平台用户的专属互动记录（private），也没有涉及跨用户共享的公共记忆（public）。因此，答案证据应完全来源于导入的外部剧情和角色资料库（knowledge）。由于剧情细节可能涉及不同版本或推测，且需从大量剧情片段中定位，存在事实完整性风险，故设置 uncertainty_required 为 true。"
+    },
+    {
+      "name": "elliptical_with_history",
+      "message": "那她为什么这么做？",
+      "passed": true,
+      "failures": [],
+      "planning_seconds": 5.967872,
+      "route": {
+        "private": true,
+        "public": false,
+        "knowledge": true,
+        "intensity": "standard",
+        "creative": false,
+        "write_policy": "evidence_gated"
+      },
+      "queries": {
+        "private": "检索当前对话中关于未花（Mika）暗中帮助阿里乌斯（Arius）进入圣三一综合学园的具体动机、原因及上下文讨论细节。",
+        "knowledge": "检索《蔚蓝档案》中关于未花（Mika）与阿里乌斯（Arius）在伊甸园条约篇（Eden Garden Treaty Arc）中的互动事实，特别是未花协助阿里乌斯进入圣三一的官方剧情原因、背景设定及角色行为逻辑。"
+      },
+      "target_entities": [
+        "未花 (Mika)",
+        "阿里乌斯 (Arius)",
+        "圣三一综合学园 (Trinity General School)",
+        "伊甸园条约篇 (Eden Garden Treaty Arc)"
+      ],
+      "requested_relation": "行为动机与原因",
+      "temporal_constraint": "伊甸园条约篇期间",
+      "causal_constraint": "未花采取该行动的直接原因",
+      "answer_slots": [
+        "未花帮助阿里乌斯进入圣三一的直接原因",
+        "该行为背后的剧情背景或危机",
+        "未花在此事件中的具体角色定位"
+      ],
+      "reason": "用户询问的是特定剧情事件（未花帮助阿里乌斯）的动机。该信息既可能存在于当前的私人对话历史中（作为刚刚讨论过的内容），也可能存在于外部导入的《蔚蓝档案》剧情知识库中（作为既定事实）。由于涉及具体角色互动和剧情细节，需要同时检索 private 以获取对话上下文，并检索 knowledge 以获取准确的剧情事实作为验证和补充。"
+    }
+  ]
+}

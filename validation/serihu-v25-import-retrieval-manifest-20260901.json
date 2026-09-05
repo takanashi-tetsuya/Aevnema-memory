@@ -1,0 +1,85 @@
+{
+  "description": "Frozen no-growth dense-retrieval acceptance questions for the v25 import pilot.",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "是谁提议星野先去找老师帮忙寻找白子？",
+      "expected_episode_ids": [1]
+    },
+    {
+      "id": "q02",
+      "question": "圣塔被毁以后，凛为什么认为夏莱成了唯一的希望？",
+      "expected_episode_ids": [2]
+    },
+    {
+      "id": "q03",
+      "question": "Who arrived after Sensei called her, while warning that she was not an expert?",
+      "expected_episode_ids": [3]
+    },
+    {
+      "id": "q04",
+      "question": "优香提交了什么，亚子到达后又询问了什么？",
+      "expected_episode_ids": [4]
+    },
+    {
+      "id": "q05",
+      "question": "花子怎样鼓励因为白子失踪而悲伤的绫音？",
+      "expected_episode_ids": [5]
+    },
+    {
+      "id": "q06",
+      "question": "老师在D.U.忙什么，凛准备等老师回来后做什么？",
+      "expected_episode_ids": [6]
+    },
+    {
+      "id": "q07",
+      "question": "修女会古书中的‘色彩’被描述成什么样的存在？",
+      "expected_episode_ids": [7]
+    },
+    {
+      "id": "q08",
+      "question": "圣亚预知梦里的巨塔、黑光和世界终结是怎样的景象？",
+      "expected_episode_ids": [8]
+    },
+    {
+      "id": "q09",
+      "question": "圣亚认为百鬼夜行的哪位大预言者可能知道更多？尼亚随后想做什么？",
+      "expected_episode_ids": [9]
+    },
+    {
+      "id": "q10",
+      "question": "虚妄圣所多久后到达临界点，一共有几处，哪一处能量最大？",
+      "expected_episode_ids": [10]
+    },
+    {
+      "id": "q11",
+      "question": "虚妄のサンクトゥムの守護者には、どんな過去の怪異が凝縮されている？",
+      "expected_episode_ids": [11]
+    },
+    {
+      "id": "q12",
+      "question": "除了击败各地守护者，作战还必须解决哪些避难和治安问题？",
+      "expected_episode_ids": [12]
+    },
+    {
+      "id": "q13",
+      "question": "渚、未花和圣亚对各自治区治安维持作出了什么承诺？",
+      "expected_episode_ids": [13]
+    },
+    {
+      "id": "q14",
+      "question": "格黑娜自治区防卫、风纪委员会护卫和救急医学部支援分别由谁承担？",
+      "expected_episode_ids": [14]
+    },
+    {
+      "id": "q15",
+      "question": "红冬、百鬼夜行、修行部和祭典运营委员会分别怎样支援避难？",
+      "expected_episode_ids": [15]
+    },
+    {
+      "id": "q16",
+      "question": "D.U.区域由谁负责避难？粮食或避难场所不足时可以找哪个商会？",
+      "expected_episode_ids": [16]
+    }
+  ]
+}

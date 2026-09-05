@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "associative-memory-demo"
+version = "0.1.0"
+description = "Growing episodic/concept associative memory demo"
+license = "AGPL-3.0-or-later"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+    "requests>=2.32",
+]
+
+[project.scripts]
+memory-demo = "memory_demo.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+memory_demo = ["schema.sql"]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "src"]
+testpaths = ["tests"]
+norecursedirs = ["_archive", "validation", "logs", "database"]

@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "kind": "concept_bridge_mechanism",
+  "questions": {
+    "concept_bridge_01_catacomb_rumor_to_infiltration": {
+      "required_episode_groups": [[122], [341]],
+      "required_sources": ["main/33060.json", "main/33070.json"],
+      "answer": "仪式前的说法是地下墓穴长达数十公里，在第一次公会议记录中也看不到尽头；袭击后日向推测阿里乌斯可能经由该墓穴从地下潜入。",
+      "bridge_concept_id": 149,
+      "bridge_concept": "古圣堂地下墓穴",
+      "evidence_boundary": "前者是传闻，后者仍是日向的现场推测，不能升级为已确认路线。"
+    },
+    "concept_bridge_02_world_truth_assertion_and_rebuttal": {
+      "required_episode_groups": [[138, 189], [191, 192]],
+      "required_sources": ["main/33060.json", "main/33190.json"],
+      "answer": "阿里乌斯一方把充满杀意、憎恨且努力徒劳的世界称作真相；日富美反对把杀意、憎恨和虚无强加给别人。",
+      "bridge_concept_id": 170,
+      "bridge_concept": "世界的真相"
+    },
+    "concept_bridge_03_mika_betrayal_three_views": {
+      "required_episode_groups": [[302], [49], [67]],
+      "required_sources": ["main/32170.json", "main/33030.json"],
+      "answer": "未花因排斥格黑娜而断言对方必会背叛；后来承认自己背叛朋友与伙伴；老师则认为背叛必有原因，不先相信学生就无从开始。",
+      "bridge_concept_id": 84,
+      "bridge_concept": "背叛"
+    },
+    "concept_bridge_04_hatred_political_chain": {
+      "required_episode_groups": [[305], [333, 189], [191, 192]],
+      "required_sources": ["main/32170.json", "main/33070.json", "main/33190.json"],
+      "answer": "未花把共同憎恨格黑娜当作接近阿里乌斯的基础；纱织要求两校为阿里乌斯的长期憎恨付出代价；日富美反驳把憎恨和虚无当作世界真相。",
+      "bridge_concept_id": 367,
+      "bridge_concept": "憎恨"
+    },
+    "concept_bridge_05_paradise_proof_to_trust": {
+      "required_episode_groups": [[4], [65]],
+      "required_sources": ["main/31010.json", "main/33030.json"],
+      "answer": "抵达真正乐园者不会离开，因此无法在乐园外观测并证明乐园；后续提出在无法证明时选择相信乐园与他人。",
+      "bridge_concept_id": 9,
+      "bridge_concept": "乐园"
+    },
+    "concept_bridge_06_pain_before_and_during_assault": {
+      "required_episode_groups": [[136], [323]],
+      "required_sources": ["main/33060.json", "main/33070.json"],
+      "answer": "准备阶段日和预期大家接下来都会痛苦但无可奈何；袭击中她因奉命不能放日奈通过，而日奈受伤仍要求她让开，所以感叹此事痛苦。",
+      "bridge_concept_id": 258,
+      "bridge_concept": "痛苦"
+    },
+    "concept_bridge_07_cathedral_repair_boundary_and_route": {
+      "required_episode_groups": [[121, 122], [341]],
+      "required_sources": ["main/33060.json", "main/33070.json"],
+      "answer": "整修仅限仪式场所，地下仍是废墟且传闻有巨大墓穴；后来日向以地下墓穴推测阿里乌斯的潜入路线。",
+      "bridge_concept_ids": [132, 149],
+      "bridge_concepts": ["古圣堂大厅", "古圣堂地下墓穴"],
+      "evidence_boundary": "地下路线是推测而非已确认事实。"
+    },
+    "concept_bridge_08_mika_fear_and_trust_response": {
+      "required_episode_groups": [[302], [66, 67]],
+      "required_sources": ["main/32170.json", "main/33030.json"],
+      "answer": "未花认定格黑娜必然背叛并以此反对条约；老师认为即使可能遭背叛，背叛也有原因，而且不相信学生就无从开始。",
+      "bridge_concept_id": 84,
+      "bridge_concept": "背叛"
+    }
+  }
+}

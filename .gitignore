@@ -1,0 +1,46 @@
+# Local secrets and machine-specific configuration.
+.env
+.env.*
+!.env.example
+
+# Python caches and environments.
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# IDE and operating-system files.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Runtime databases, logs, smoke runs, and local archives.
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.jsonl
+logs/
+smoke/
+_archive/
+
+# Validation outputs can be large and machine-specific. Keep only small,
+# reviewable JSON fixtures/catalogs under version control.
+validation/*
+!validation/*.json
+!validation/catalogs/
+!validation/catalogs/*.json
+
+# Temporary exports.
+*.tmp
+*.bak

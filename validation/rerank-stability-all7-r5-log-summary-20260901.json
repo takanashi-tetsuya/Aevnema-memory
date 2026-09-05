@@ -1,0 +1,394 @@
+{
+  "inputs": [
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-arius_two_patrons_and_control_boundaries-r01-20260901T000756.334680Z-6e29fdc8.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-arius_two_patrons_and_control_boundaries-r02-20260901T000825.509032Z-6fd8de92.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-arius_two_patrons_and_control_boundaries-r03-20260901T000831.056518Z-fb893140.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-arius_two_patrons_and_control_boundaries-r04-20260901T000841.159597Z-a813aef2.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-arius_two_patrons_and_control_boundaries-r05-20260901T000932.448937Z-20ab6839.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-eden_obligation_to_new_institution-r01-20260901T000422.459933Z-57881639.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-eden_obligation_to_new_institution-r02-20260901T000422.399206Z-6fba5b99.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-eden_obligation_to_new_institution-r03-20260901T000422.453817Z-2507cb9f.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-eden_obligation_to_new_institution-r04-20260901T000422.461514Z-a103dd9b.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-eden_obligation_to_new_institution-r05-20260901T000422.454818Z-0bce84d4.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hifumi_azusa_identity_coalition_and_declaration-r01-20260901T001213.034739Z-c75e846d.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hifumi_azusa_identity_coalition_and_declaration-r02-20260901T001229.118520Z-81dac466.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hifumi_azusa_identity_coalition_and_declaration-r03-20260901T001242.479730Z-50b3eed1.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hifumi_azusa_identity_coalition_and_declaration-r04-20260901T001331.154087Z-87804d2f.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hifumi_azusa_identity_coalition_and_declaration-r05-20260901T001338.913650Z-bb1f5bcb.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hina_public_duty_personal_exhaustion_and_teacher_response-r01-20260901T001418.752763Z-a9900c61.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hina_public_duty_personal_exhaustion_and_teacher_response-r02-20260901T001428.359868Z-b8fc32ab.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hina_public_duty_personal_exhaustion_and_teacher_response-r03-20260901T001442.267987Z-336b5c90.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hina_public_duty_personal_exhaustion_and_teacher_response-r04-20260901T001541.420075Z-eaf199c0.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hina_public_duty_personal_exhaustion_and_teacher_response-r05-20260901T001610.919460Z-7c8b2ab3.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-kisaki_mika_governance_analogy_with_boundary-r01-20260901T001634.716643Z-f23425ac.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-kisaki_mika_governance_analogy_with_boundary-r02-20260901T001647.904004Z-bcd5fbdb.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-kisaki_mika_governance_analogy_with_boundary-r03-20260901T001722.803796Z-3d5a434d.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-kisaki_mika_governance_analogy_with_boundary-r04-20260901T001805.323547Z-5c6e8616.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-kisaki_mika_governance_analogy_with_boundary-r05-20260901T001833.662000Z-3a0eed30.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-mika_motive_epistemic_four_layers-r01-20260901T001033.333994Z-217c2499.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-mika_motive_epistemic_four_layers-r02-20260901T001101.455436Z-0f007691.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-mika_motive_epistemic_four_layers-r03-20260901T001110.063266Z-fa8be234.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-mika_motive_epistemic_four_layers-r04-20260901T001140.017709Z-c2d0d58b.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-mika_motive_epistemic_four_layers-r05-20260901T001201.377426Z-749e7345.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-old_cathedral_symbol_infrastructure_and_limits-r01-20260901T000617.127342Z-34c2c529.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-old_cathedral_symbol_infrastructure_and_limits-r02-20260901T000643.448119Z-52bb7efb.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-old_cathedral_symbol_infrastructure_and_limits-r03-20260901T000656.011204Z-45e8d991.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-old_cathedral_symbol_infrastructure_and_limits-r04-20260901T000703.445192Z-24d5bd68.jsonl",
+    "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-old_cathedral_symbol_infrastructure_and_limits-r05-20260901T000732.820405Z-4a531f89.jsonl"
+  ],
+  "files": [
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-arius_two_patrons_and_control_boundaries-r01-20260901T000756.334680Z-6e29fdc8.jsonl",
+      "bytes": 257444,
+      "events": 7,
+      "started_at": "2026-09-01T00:07:56.339645+00:00",
+      "finished_at": "2026-09-01T00:10:33.230209+00:00",
+      "duration_seconds": 156.891
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-arius_two_patrons_and_control_boundaries-r02-20260901T000825.509032Z-6fd8de92.jsonl",
+      "bytes": 249579,
+      "events": 7,
+      "started_at": "2026-09-01T00:08:25.513972+00:00",
+      "finished_at": "2026-09-01T00:11:01.371548+00:00",
+      "duration_seconds": 155.858
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-arius_two_patrons_and_control_boundaries-r03-20260901T000831.056518Z-fb893140.jsonl",
+      "bytes": 258851,
+      "events": 7,
+      "started_at": "2026-09-01T00:08:31.061073+00:00",
+      "finished_at": "2026-09-01T00:11:39.929646+00:00",
+      "duration_seconds": 188.869
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-arius_two_patrons_and_control_boundaries-r04-20260901T000841.159597Z-a813aef2.jsonl",
+      "bytes": 252317,
+      "events": 7,
+      "started_at": "2026-09-01T00:08:41.164211+00:00",
+      "finished_at": "2026-09-01T00:11:09.979422+00:00",
+      "duration_seconds": 148.815
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-arius_two_patrons_and_control_boundaries-r05-20260901T000932.448937Z-20ab6839.jsonl",
+      "bytes": 250397,
+      "events": 7,
+      "started_at": "2026-09-01T00:09:32.453930+00:00",
+      "finished_at": "2026-09-01T00:12:01.278757+00:00",
+      "duration_seconds": 148.825
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-eden_obligation_to_new_institution-r01-20260901T000422.459933Z-57881639.jsonl",
+      "bytes": 264435,
+      "events": 7,
+      "started_at": "2026-09-01T00:04:22.466577+00:00",
+      "finished_at": "2026-09-01T00:07:03.367843+00:00",
+      "duration_seconds": 160.901
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-eden_obligation_to_new_institution-r02-20260901T000422.399206Z-6fba5b99.jsonl",
+      "bytes": 250119,
+      "events": 7,
+      "started_at": "2026-09-01T00:04:22.403357+00:00",
+      "finished_at": "2026-09-01T00:06:43.373089+00:00",
+      "duration_seconds": 140.97
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-eden_obligation_to_new_institution-r03-20260901T000422.453817Z-2507cb9f.jsonl",
+      "bytes": 273954,
+      "events": 7,
+      "started_at": "2026-09-01T00:04:22.460595+00:00",
+      "finished_at": "2026-09-01T00:07:32.745366+00:00",
+      "duration_seconds": 190.285
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-eden_obligation_to_new_institution-r04-20260901T000422.461514Z-a103dd9b.jsonl",
+      "bytes": 262899,
+      "events": 7,
+      "started_at": "2026-09-01T00:04:22.467011+00:00",
+      "finished_at": "2026-09-01T00:06:55.934561+00:00",
+      "duration_seconds": 153.468
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-eden_obligation_to_new_institution-r05-20260901T000422.454818Z-0bce84d4.jsonl",
+      "bytes": 243462,
+      "events": 7,
+      "started_at": "2026-09-01T00:04:22.462412+00:00",
+      "finished_at": "2026-09-01T00:06:16.511227+00:00",
+      "duration_seconds": 114.049
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hifumi_azusa_identity_coalition_and_declaration-r01-20260901T001213.034739Z-c75e846d.jsonl",
+      "bytes": 246047,
+      "events": 7,
+      "started_at": "2026-09-01T00:12:13.039771+00:00",
+      "finished_at": "2026-09-01T00:14:18.642831+00:00",
+      "duration_seconds": 125.603
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hifumi_azusa_identity_coalition_and_declaration-r02-20260901T001229.118520Z-81dac466.jsonl",
+      "bytes": 251578,
+      "events": 7,
+      "started_at": "2026-09-01T00:12:29.122734+00:00",
+      "finished_at": "2026-09-01T00:14:42.167254+00:00",
+      "duration_seconds": 133.045
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hifumi_azusa_identity_coalition_and_declaration-r03-20260901T001242.479730Z-50b3eed1.jsonl",
+      "bytes": 240808,
+      "events": 7,
+      "started_at": "2026-09-01T00:12:42.485945+00:00",
+      "finished_at": "2026-09-01T00:14:28.265048+00:00",
+      "duration_seconds": 105.779
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hifumi_azusa_identity_coalition_and_declaration-r04-20260901T001331.154087Z-87804d2f.jsonl",
+      "bytes": 265943,
+      "events": 7,
+      "started_at": "2026-09-01T00:13:31.158980+00:00",
+      "finished_at": "2026-09-01T00:16:10.819392+00:00",
+      "duration_seconds": 159.66
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hifumi_azusa_identity_coalition_and_declaration-r05-20260901T001338.913650Z-bb1f5bcb.jsonl",
+      "bytes": 249181,
+      "events": 7,
+      "started_at": "2026-09-01T00:13:38.918579+00:00",
+      "finished_at": "2026-09-01T00:15:41.322644+00:00",
+      "duration_seconds": 122.404
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hina_public_duty_personal_exhaustion_and_teacher_response-r01-20260901T001418.752763Z-a9900c61.jsonl",
+      "bytes": 252067,
+      "events": 7,
+      "started_at": "2026-09-01T00:14:18.758231+00:00",
+      "finished_at": "2026-09-01T00:16:34.618168+00:00",
+      "duration_seconds": 135.86
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hina_public_duty_personal_exhaustion_and_teacher_response-r02-20260901T001428.359868Z-b8fc32ab.jsonl",
+      "bytes": 250119,
+      "events": 7,
+      "started_at": "2026-09-01T00:14:28.365694+00:00",
+      "finished_at": "2026-09-01T00:16:47.807163+00:00",
+      "duration_seconds": 139.441
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hina_public_duty_personal_exhaustion_and_teacher_response-r03-20260901T001442.267987Z-336b5c90.jsonl",
+      "bytes": 259269,
+      "events": 7,
+      "started_at": "2026-09-01T00:14:42.273357+00:00",
+      "finished_at": "2026-09-01T00:17:22.710218+00:00",
+      "duration_seconds": 160.437
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hina_public_duty_personal_exhaustion_and_teacher_response-r04-20260901T001541.420075Z-eaf199c0.jsonl",
+      "bytes": 255421,
+      "events": 7,
+      "started_at": "2026-09-01T00:15:41.424705+00:00",
+      "finished_at": "2026-09-01T00:18:05.228049+00:00",
+      "duration_seconds": 143.803
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-hina_public_duty_personal_exhaustion_and_teacher_response-r05-20260901T001610.919460Z-7c8b2ab3.jsonl",
+      "bytes": 249514,
+      "events": 7,
+      "started_at": "2026-09-01T00:16:10.927227+00:00",
+      "finished_at": "2026-09-01T00:18:33.555205+00:00",
+      "duration_seconds": 142.628
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-kisaki_mika_governance_analogy_with_boundary-r01-20260901T001634.716643Z-f23425ac.jsonl",
+      "bytes": 262137,
+      "events": 7,
+      "started_at": "2026-09-01T00:16:34.721545+00:00",
+      "finished_at": "2026-09-01T00:19:05.844746+00:00",
+      "duration_seconds": 151.123
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-kisaki_mika_governance_analogy_with_boundary-r02-20260901T001647.904004Z-bcd5fbdb.jsonl",
+      "bytes": 262965,
+      "events": 7,
+      "started_at": "2026-09-01T00:16:47.908641+00:00",
+      "finished_at": "2026-09-01T00:19:06.194242+00:00",
+      "duration_seconds": 138.286
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-kisaki_mika_governance_analogy_with_boundary-r03-20260901T001722.803796Z-3d5a434d.jsonl",
+      "bytes": 265350,
+      "events": 7,
+      "started_at": "2026-09-01T00:17:22.808176+00:00",
+      "finished_at": "2026-09-01T00:19:54.742651+00:00",
+      "duration_seconds": 151.934
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-kisaki_mika_governance_analogy_with_boundary-r04-20260901T001805.323547Z-5c6e8616.jsonl",
+      "bytes": 264722,
+      "events": 7,
+      "started_at": "2026-09-01T00:18:05.327981+00:00",
+      "finished_at": "2026-09-01T00:20:39.428177+00:00",
+      "duration_seconds": 154.1
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-kisaki_mika_governance_analogy_with_boundary-r05-20260901T001833.662000Z-3a0eed30.jsonl",
+      "bytes": 273075,
+      "events": 7,
+      "started_at": "2026-09-01T00:18:33.668402+00:00",
+      "finished_at": "2026-09-01T00:21:26.100565+00:00",
+      "duration_seconds": 172.432
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-mika_motive_epistemic_four_layers-r01-20260901T001033.333994Z-217c2499.jsonl",
+      "bytes": 213780,
+      "events": 7,
+      "started_at": "2026-09-01T00:10:33.340135+00:00",
+      "finished_at": "2026-09-01T00:12:12.948533+00:00",
+      "duration_seconds": 99.608
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-mika_motive_epistemic_four_layers-r02-20260901T001101.455436Z-0f007691.jsonl",
+      "bytes": 214568,
+      "events": 7,
+      "started_at": "2026-09-01T00:11:01.459926+00:00",
+      "finished_at": "2026-09-01T00:12:29.023431+00:00",
+      "duration_seconds": 87.564
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-mika_motive_epistemic_four_layers-r03-20260901T001110.063266Z-fa8be234.jsonl",
+      "bytes": 215472,
+      "events": 7,
+      "started_at": "2026-09-01T00:11:10.069723+00:00",
+      "finished_at": "2026-09-01T00:12:42.396809+00:00",
+      "duration_seconds": 92.327
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-mika_motive_epistemic_four_layers-r04-20260901T001140.017709Z-c2d0d58b.jsonl",
+      "bytes": 220107,
+      "events": 7,
+      "started_at": "2026-09-01T00:11:40.022023+00:00",
+      "finished_at": "2026-09-01T00:13:38.810310+00:00",
+      "duration_seconds": 118.788
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-mika_motive_epistemic_four_layers-r05-20260901T001201.377426Z-749e7345.jsonl",
+      "bytes": 212040,
+      "events": 7,
+      "started_at": "2026-09-01T00:12:01.382982+00:00",
+      "finished_at": "2026-09-01T00:13:31.058107+00:00",
+      "duration_seconds": 89.675
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-old_cathedral_symbol_infrastructure_and_limits-r01-20260901T000617.127342Z-34c2c529.jsonl",
+      "bytes": 230640,
+      "events": 7,
+      "started_at": "2026-09-01T00:06:17.132547+00:00",
+      "finished_at": "2026-09-01T00:07:56.241291+00:00",
+      "duration_seconds": 99.109
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-old_cathedral_symbol_infrastructure_and_limits-r02-20260901T000643.448119Z-52bb7efb.jsonl",
+      "bytes": 229144,
+      "events": 7,
+      "started_at": "2026-09-01T00:06:43.452483+00:00",
+      "finished_at": "2026-09-01T00:08:25.425809+00:00",
+      "duration_seconds": 101.973
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-old_cathedral_symbol_infrastructure_and_limits-r03-20260901T000656.011204Z-45e8d991.jsonl",
+      "bytes": 231783,
+      "events": 7,
+      "started_at": "2026-09-01T00:06:56.016371+00:00",
+      "finished_at": "2026-09-01T00:08:30.972974+00:00",
+      "duration_seconds": 94.957
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-old_cathedral_symbol_infrastructure_and_limits-r04-20260901T000703.445192Z-24d5bd68.jsonl",
+      "bytes": 230823,
+      "events": 7,
+      "started_at": "2026-09-01T00:07:03.450075+00:00",
+      "finished_at": "2026-09-01T00:08:41.072055+00:00",
+      "duration_seconds": 97.622
+    },
+    {
+      "file": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/rerank-stability-all7-r5-20260901-logs/rerank-stability-old_cathedral_symbol_infrastructure_and_limits-r05-20260901T000732.820405Z-4a531f89.jsonl",
+      "bytes": 227642,
+      "events": 7,
+      "started_at": "2026-09-01T00:07:32.824429+00:00",
+      "finished_at": "2026-09-01T00:09:32.367446+00:00",
+      "duration_seconds": 119.543
+    }
+  ],
+  "totals": {
+    "bytes": 8637652,
+    "events": 245,
+    "parse_errors": 0,
+    "started_at": "2026-09-01T00:04:22.403357+00:00",
+    "finished_at": "2026-09-01T00:21:26.100565+00:00",
+    "duration_seconds": 1023.697
+  },
+  "event_counts": {
+    "llm_request": 105,
+    "llm_response": 105,
+    "evidence_reranked": 35
+  },
+  "models": {
+    "deepseek-ai/DeepSeek-V3.2": 105
+  },
+  "request_outcome_counts": {
+    "requests": 105,
+    "responses_or_errors": 105,
+    "requests_without_logged_outcome": 0,
+    "responses_with_usage": 105
+  },
+  "token_usage": {
+    "total": {
+      "prompt_tokens": 1776500,
+      "completion_tokens": 105788,
+      "total_tokens": 1882288
+    },
+    "by_category": {
+      "other_chat": {
+        "prompt_tokens": 1776500,
+        "completion_tokens": 105788,
+        "total_tokens": 1882288
+      }
+    },
+    "by_model": {
+      "deepseek-ai/DeepSeek-V3.2": {
+        "prompt_tokens": 1776500,
+        "completion_tokens": 105788,
+        "total_tokens": 1882288
+      }
+    }
+  },
+  "request_duration_seconds": {
+    "other_chat": {
+      "count": 105,
+      "minimum": 6.097,
+      "p50": 45.478,
+      "p95": 85.454,
+      "maximum": 112.597
+    }
+  },
+  "prompt_characters": {
+    "other_chat": {
+      "count": 105,
+      "minimum": 23414.0,
+      "p50": 43193.0,
+      "p95": 45193.0,
+      "maximum": 45734.0
+    }
+  },
+  "retry_delay_seconds": {
+    "count": 0,
+    "minimum": null,
+    "p50": null,
+    "p95": null,
+    "maximum": null
+  },
+  "http_error_codes": {},
+  "validation_failed_by_stage": {},
+  "fallbacks": 0,
+  "top_error_messages": [],
+  "parse_error_details": []
+}

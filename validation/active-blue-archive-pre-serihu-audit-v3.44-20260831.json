@@ -1,0 +1,1153 @@
+{
+  "database": "/mnt/c/Users/Admin/Documents/chat_bot/data/knowledge/blue_archive.db",
+  "counts": {
+    "sources": 63,
+    "episodes": 474,
+    "concepts": 576,
+    "associations": 2870
+  },
+  "embedding_blob_lengths": {
+    "episode": [
+      4096
+    ],
+    "concept": [
+      4096
+    ],
+    "paragraph": []
+  },
+  "integrity": {
+    "schema_version": 8,
+    "expected_schema_version": 8,
+    "sqlite": "ok",
+    "foreign_key_issues": [],
+    "orphan_association_ids": [],
+    "concepts_without_episode_links": [],
+    "embedding_issues": [],
+    "empty_content_issues": [],
+    "json_payload_issues": [],
+    "fts_count_issues": [],
+    "sources_without_episodes": [],
+    "reference_coverage_issues": [],
+    "explicit_evidence_boundary_issues": [],
+    "explicit_evidence_mapping_ambiguities": [],
+    "association_generation_issues": [],
+    "noncompleted_runs": [],
+    "noncompleted_tasks": []
+  },
+  "segment_reconciliation": null,
+  "tasks": [
+    {
+      "stage": "pass1",
+      "status": "completed",
+      "count": 63
+    },
+    {
+      "stage": "pass2",
+      "status": "completed",
+      "count": 18
+    }
+  ],
+  "episodes_per_source": {
+    "sources_with_episodes": 63,
+    "minimum": 1,
+    "mean": 7.52,
+    "maximum": 10,
+    "counts": null
+  },
+  "association_types": {
+    "semantic": 2513,
+    "temporal": 199,
+    "interpersonal": 14,
+    "co_occurrence": 72,
+    "identity": 62,
+    "causal": 10
+  },
+  "quality": {
+    "concept_alias_collisions": [
+      {
+        "normalized_alias": "diving club",
+        "aliases": [
+          "Diving Club"
+        ],
+        "active_concept_ids": [
+          156,
+          210
+        ]
+      },
+      {
+        "normalized_alias": "fox小队",
+        "aliases": [
+          "FOX小队"
+        ],
+        "active_concept_ids": [
+          189,
+          503
+        ]
+      },
+      {
+        "normalized_alias": "kayoko",
+        "aliases": [
+          "Kayoko"
+        ],
+        "active_concept_ids": [
+          291,
+          325
+        ]
+      },
+      {
+        "normalized_alias": "orwell",
+        "aliases": [
+          "Orwell"
+        ],
+        "active_concept_ids": [
+          145,
+          518
+        ]
+      },
+      {
+        "normalized_alias": "アイランド",
+        "aliases": [
+          "アイランド"
+        ],
+        "active_concept_ids": [
+          153,
+          204
+        ]
+      },
+      {
+        "normalized_alias": "オリュンポス号",
+        "aliases": [
+          "オリュンポス号"
+        ],
+        "active_concept_ids": [
+          154,
+          205
+        ]
+      },
+      {
+        "normalized_alias": "ダイビング部",
+        "aliases": [
+          "ダイビング部"
+        ],
+        "active_concept_ids": [
+          156,
+          210
+        ]
+      },
+      {
+        "normalized_alias": "ミスター・オーウェル",
+        "aliases": [
+          "ミスター・オーウェル"
+        ],
+        "active_concept_ids": [
+          133,
+          145
+        ]
+      },
+      {
+        "normalized_alias": "七度ユキノ",
+        "aliases": [
+          "七度ユキノ"
+        ],
+        "active_concept_ids": [
+          192,
+          237
+        ]
+      },
+      {
+        "normalized_alias": "时",
+        "aliases": [
+          "时"
+        ],
+        "active_concept_ids": [
+          115,
+          229
+        ]
+      },
+      {
+        "normalized_alias": "明楽カレン",
+        "aliases": [
+          "明楽カレン"
+        ],
+        "active_concept_ids": [
+          180,
+          523
+        ]
+      },
+      {
+        "normalized_alias": "梯昴",
+        "aliases": [
+          "梯昴"
+        ],
+        "active_concept_ids": [
+          357,
+          418
+        ]
+      },
+      {
+        "normalized_alias": "海路みなと",
+        "aliases": [
+          "海路みなと"
+        ],
+        "active_concept_ids": [
+          206,
+          543
+        ]
+      },
+      {
+        "normalized_alias": "白子",
+        "aliases": [
+          "白子"
+        ],
+        "active_concept_ids": [
+          65,
+          436
+        ]
+      },
+      {
+        "normalized_alias": "降旗マユミ",
+        "aliases": [
+          "降旗マユミ"
+        ],
+        "active_concept_ids": [
+          159,
+          179
+        ]
+      },
+      {
+        "normalized_alias": "鬼方カヨコ",
+        "aliases": [
+          "鬼方カヨコ"
+        ],
+        "active_concept_ids": [
+          291,
+          325
+        ]
+      }
+    ],
+    "concept_output_issues": [
+      {
+        "concept_id": 155,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "萨米 / サミー / Sammy"
+      },
+      {
+        "concept_id": 156,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "奥德赛潜水部 / ダイビング部 / Diving Club"
+      },
+      {
+        "concept_id": 157,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "SRT / ORCA小队"
+      },
+      {
+        "concept_id": 158,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "格黑娜复兴委员会 / ゲヘナ再興委員会"
+      },
+      {
+        "concept_id": 417,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "立木舞爱 / 立木マイア"
+      },
+      {
+        "concept_id": 418,
+        "reason": "alias_chain_in_canonical_name",
+        "canonical_name": "梯昴 / 梯スバル"
+      }
+    ],
+    "participant_grounding_issues": [
+      {
+        "episode_id": 15,
+        "source_id": 3,
+        "participant": "阿拜多斯高中对策委员会"
+      },
+      {
+        "episode_id": 17,
+        "source_id": 3,
+        "participant": "便利屋 68"
+      },
+      {
+        "episode_id": 21,
+        "source_id": 3,
+        "participant": "SRT 特殊学园"
+      },
+      {
+        "episode_id": 21,
+        "source_id": 3,
+        "participant": "RABBIT 小队"
+      },
+      {
+        "episode_id": 21,
+        "source_id": 3,
+        "participant": "FOX 小队"
+      },
+      {
+        "episode_id": 78,
+        "source_id": 11,
+        "participant": "中务葵 (被纠正的错误名称)"
+      },
+      {
+        "episode_id": 83,
+        "source_id": 11,
+        "participant": "贝阿朵莉切 (被提及的控制者)"
+      },
+      {
+        "episode_id": 84,
+        "source_id": 11,
+        "participant": "早濑优香 (被提及的混淆对象)"
+      },
+      {
+        "episode_id": 86,
+        "source_id": 11,
+        "participant": "奥德赛海洋高等学校 / オデュッセイア海洋高等学校 / Odysseia / Odyssey"
+      },
+      {
+        "episode_id": 86,
+        "source_id": 11,
+        "participant": "アイランド (学生会相关实体)"
+      },
+      {
+        "episode_id": 89,
+        "source_id": 12,
+        "participant": "五十嵐ショコ"
+      },
+      {
+        "episode_id": 97,
+        "source_id": 13,
+        "participant": "社区观点资料"
+      },
+      {
+        "episode_id": 101,
+        "source_id": 14,
+        "participant": "补课部 / 補習授業部 / Make-Up Work Club"
+      },
+      {
+        "episode_id": 104,
+        "source_id": 14,
+        "participant": "阿里乌斯学生"
+      },
+      {
+        "episode_id": 107,
+        "source_id": 15,
+        "participant": "降旗マユミ / 降旗真由美"
+      },
+      {
+        "episode_id": 107,
+        "source_id": 15,
+        "participant": "明楽カレン / 明乐卡莲"
+      },
+      {
+        "episode_id": 107,
+        "source_id": 15,
+        "participant": "五十嵐ショウコ / 五十岚翔子"
+      },
+      {
+        "episode_id": 109,
+        "source_id": 15,
+        "participant": "特异现象搜查部成员"
+      },
+      {
+        "episode_id": 110,
+        "source_id": 15,
+        "participant": "C&C成员"
+      },
+      {
+        "episode_id": 110,
+        "source_id": 15,
+        "participant": "游戏开发部成员"
+      },
+      {
+        "episode_id": 110,
+        "source_id": 15,
+        "participant": "特异现象搜查部成员"
+      },
+      {
+        "episode_id": 112,
+        "source_id": 15,
+        "participant": "真理部成员"
+      },
+      {
+        "episode_id": 112,
+        "source_id": 15,
+        "participant": "游戏开发部成员"
+      },
+      {
+        "episode_id": 112,
+        "source_id": 15,
+        "participant": "C&C成员"
+      },
+      {
+        "episode_id": 120,
+        "source_id": 16,
+        "participant": "奥德赛海洋高等学校 / オデュッセイア海洋高等学校 / Odysseia"
+      },
+      {
+        "episode_id": 120,
+        "source_id": 16,
+        "participant": "奥林波斯号 / オリュンポス号"
+      },
+      {
+        "episode_id": 196,
+        "source_id": 26,
+        "participant": "阿拜多斯学生"
+      },
+      {
+        "episode_id": 293,
+        "source_id": 36,
+        "participant": "RABBIT 小队"
+      },
+      {
+        "episode_id": 312,
+        "source_id": 39,
+        "participant": "阿里乌斯学园成员"
+      },
+      {
+        "episode_id": 322,
+        "source_id": 41,
+        "participant": "不同学园学生"
+      },
+      {
+        "episode_id": 323,
+        "source_id": 41,
+        "participant": "不同主线角色"
+      },
+      {
+        "episode_id": 326,
+        "source_id": 41,
+        "participant": "平行世界居民"
+      },
+      {
+        "episode_id": 376,
+        "source_id": 48,
+        "participant": "虚妄圣所攻略战参与者"
+      },
+      {
+        "episode_id": 377,
+        "source_id": 48,
+        "participant": "百鬼夜行祭典参与者"
+      },
+      {
+        "episode_id": 377,
+        "source_id": 48,
+        "participant": "山海经相关角色"
+      },
+      {
+        "episode_id": 382,
+        "source_id": 49,
+        "participant": "知识库系统"
+      },
+      {
+        "episode_id": 383,
+        "source_id": 49,
+        "participant": "知识库系统"
+      },
+      {
+        "episode_id": 385,
+        "source_id": 50,
+        "participant": "オデュッセイア潜水人员"
+      },
+      {
+        "episode_id": 388,
+        "source_id": 50,
+        "participant": "联邦学生会长（梦中少女）"
+      },
+      {
+        "episode_id": 389,
+        "source_id": 50,
+        "participant": "オデュッセイア海洋高等学校ダイビング部成员"
+      },
+      {
+        "episode_id": 395,
+        "source_id": 51,
+        "participant": "什亭之箱系统"
+      },
+      {
+        "episode_id": 401,
+        "source_id": 52,
+        "participant": "奥威尔 / オーウェル"
+      },
+      {
+        "episode_id": 403,
+        "source_id": 52,
+        "participant": "奥威尔 / オーウェル"
+      },
+      {
+        "episode_id": 405,
+        "source_id": 53,
+        "participant": "老师 / 先生 / 先生 / Sensei"
+      },
+      {
+        "episode_id": 406,
+        "source_id": 53,
+        "participant": "FOX小队 / FOX小隊 / FOX小隊 / FOX Squad"
+      },
+      {
+        "episode_id": 407,
+        "source_id": 53,
+        "participant": "FOX小队 / FOX小隊 / FOX小隊 / FOX Squad"
+      },
+      {
+        "episode_id": 408,
+        "source_id": 53,
+        "participant": "老师 / 先生 / 先生 / Sensei"
+      },
+      {
+        "episode_id": 408,
+        "source_id": 53,
+        "participant": "FOX小队 / FOX小隊 / FOX小隊 / FOX Squad"
+      },
+      {
+        "episode_id": 409,
+        "source_id": 53,
+        "participant": "老师 / 先生 / 先生 / Sensei"
+      },
+      {
+        "episode_id": 409,
+        "source_id": 53,
+        "participant": "铂金发学生会长 / 金髪学生会長 / 金髪学生会長 / Blonde Student Council President"
+      },
+      {
+        "episode_id": 409,
+        "source_id": 53,
+        "participant": "FOX小队 / FOX小隊 / FOX小隊 / FOX Squad"
+      },
+      {
+        "episode_id": 410,
+        "source_id": 53,
+        "participant": "铂金发学生会长 / 金髪学生会長 / 金髪学生会長 / Blonde Student Council President"
+      },
+      {
+        "episode_id": 410,
+        "source_id": 53,
+        "participant": "FOX小队 / FOX小隊 / FOX小隊 / FOX Squad"
+      },
+      {
+        "episode_id": 411,
+        "source_id": 53,
+        "participant": "FOX小队 / FOX小隊 / FOX小隊 / FOX Squad"
+      },
+      {
+        "episode_id": 411,
+        "source_id": 53,
+        "participant": "老师 / 先生 / 先生 / Sensei"
+      },
+      {
+        "episode_id": 411,
+        "source_id": 53,
+        "participant": "犯罪团伙 / 犯罪グループ / 犯罪グループ / Criminal Gang"
+      },
+      {
+        "episode_id": 412,
+        "source_id": 53,
+        "participant": "老师 / 先生 / 先生 / Sensei"
+      },
+      {
+        "episode_id": 412,
+        "source_id": 53,
+        "participant": "FOX小队 / FOX小隊 / FOX小隊 / FOX Squad"
+      },
+      {
+        "episode_id": 413,
+        "source_id": 53,
+        "participant": "FOX小队 / FOX小隊 / FOX小隊 / FOX Squad"
+      },
+      {
+        "episode_id": 415,
+        "source_id": 54,
+        "participant": "オーウェ尔"
+      },
+      {
+        "episode_id": 419,
+        "source_id": 55,
+        "participant": "降旗マユミ / 降旗真由美"
+      },
+      {
+        "episode_id": 419,
+        "source_id": 55,
+        "participant": "明楽カレン / 明乐香莲"
+      },
+      {
+        "episode_id": 419,
+        "source_id": 55,
+        "participant": "五十嵐ショウコ / 五十岚翔子"
+      },
+      {
+        "episode_id": 419,
+        "source_id": 55,
+        "participant": "格黑娜再兴委员会"
+      },
+      {
+        "episode_id": 420,
+        "source_id": 55,
+        "participant": "格黑娜再兴委员会"
+      },
+      {
+        "episode_id": 421,
+        "source_id": 55,
+        "participant": "降旗マユミ / 降旗真由美"
+      },
+      {
+        "episode_id": 421,
+        "source_id": 55,
+        "participant": "明楽カレン / 明乐香莲"
+      },
+      {
+        "episode_id": 421,
+        "source_id": 55,
+        "participant": "五十嵐ショウコ / 五十岚翔子"
+      },
+      {
+        "episode_id": 421,
+        "source_id": 55,
+        "participant": "格黑娜再兴委员会"
+      },
+      {
+        "episode_id": 422,
+        "source_id": 55,
+        "participant": "五十嵐ショウコ / 五十岚翔子"
+      },
+      {
+        "episode_id": 422,
+        "source_id": 55,
+        "participant": "格黑娜再兴委员会"
+      },
+      {
+        "episode_id": 423,
+        "source_id": 55,
+        "participant": "格黑娜三年级学生"
+      },
+      {
+        "episode_id": 424,
+        "source_id": 55,
+        "participant": "降旗マユミ / 降旗真由美"
+      },
+      {
+        "episode_id": 424,
+        "source_id": 55,
+        "participant": "明楽カレン / 明乐香莲"
+      },
+      {
+        "episode_id": 424,
+        "source_id": 55,
+        "participant": "五十嵐ショウコ / 五十岚翔子"
+      },
+      {
+        "episode_id": 425,
+        "source_id": 55,
+        "participant": "格黑娜未受影响学生"
+      },
+      {
+        "episode_id": 426,
+        "source_id": 56,
+        "participant": "温泉开发部成员"
+      },
+      {
+        "episode_id": 428,
+        "source_id": 56,
+        "participant": "马由美"
+      },
+      {
+        "episode_id": 428,
+        "source_id": 56,
+        "participant": "卡莲"
+      },
+      {
+        "episode_id": 428,
+        "source_id": 56,
+        "participant": "受控三年级学生"
+      },
+      {
+        "episode_id": 429,
+        "source_id": 56,
+        "participant": "马由美"
+      },
+      {
+        "episode_id": 429,
+        "source_id": 56,
+        "participant": "卡莲"
+      },
+      {
+        "episode_id": 430,
+        "source_id": 56,
+        "participant": "嵐组织"
+      },
+      {
+        "episode_id": 430,
+        "source_id": 56,
+        "participant": "残滓组织"
+      },
+      {
+        "episode_id": 432,
+        "source_id": 56,
+        "participant": "马由美"
+      },
+      {
+        "episode_id": 432,
+        "source_id": 56,
+        "participant": "嵐组织"
+      },
+      {
+        "episode_id": 434,
+        "source_id": 57,
+        "participant": "??? (发言者)"
+      },
+      {
+        "episode_id": 435,
+        "source_id": 57,
+        "participant": "??? (发言者)"
+      },
+      {
+        "episode_id": 436,
+        "source_id": 57,
+        "participant": "??? (发言者)"
+      },
+      {
+        "episode_id": 437,
+        "source_id": 57,
+        "participant": "??? (发言者)"
+      },
+      {
+        "episode_id": 438,
+        "source_id": 57,
+        "participant": "??? (发言者)"
+      },
+      {
+        "episode_id": 439,
+        "source_id": 57,
+        "participant": "??? (发言者)"
+      },
+      {
+        "episode_id": 440,
+        "source_id": 57,
+        "participant": "??? (发言者)"
+      },
+      {
+        "episode_id": 441,
+        "source_id": 57,
+        "participant": "??? (发言者)"
+      },
+      {
+        "episode_id": 442,
+        "source_id": 57,
+        "participant": "??? (发言者)"
+      },
+      {
+        "episode_id": 447,
+        "source_id": 59,
+        "participant": "铂金发联邦学生会长 / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 448,
+        "source_id": 59,
+        "participant": "ミスター・オーウェ尔 / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 449,
+        "source_id": 59,
+        "participant": "七度ユキノ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 449,
+        "source_id": 59,
+        "participant": "吉野ニコ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 449,
+        "source_id": 59,
+        "participant": "高倉クルミ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 449,
+        "source_id": 59,
+        "participant": "天神山オトギ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 450,
+        "source_id": 59,
+        "participant": "降旗マユミ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 450,
+        "source_id": 59,
+        "participant": "五十嵐ショウコ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 450,
+        "source_id": 59,
+        "participant": "明楽カレン / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 451,
+        "source_id": 59,
+        "participant": "明楽カレン / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 451,
+        "source_id": 59,
+        "participant": "五十嵐ショウコ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 451,
+        "source_id": 59,
+        "participant": "降旗マユミ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 452,
+        "source_id": 59,
+        "participant": "五十嵐ショウコ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 452,
+        "source_id": 59,
+        "participant": "降旗マユミ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 452,
+        "source_id": 59,
+        "participant": "真琴 / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 453,
+        "source_id": 59,
+        "participant": "五十嵐ショウコ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 454,
+        "source_id": 59,
+        "participant": "海路ミナト / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 454,
+        "source_id": 59,
+        "participant": "灯下アミ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 455,
+        "source_id": 59,
+        "participant": "小森スミカ / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 455,
+        "source_id": 59,
+        "participant": "铂金发联邦学生会长 / ko原始标记 / ja别名 / en别名"
+      },
+      {
+        "episode_id": 457,
+        "source_id": 60,
+        "participant": "未命名队伍"
+      },
+      {
+        "episode_id": 466,
+        "source_id": 61,
+        "participant": "旧 SRT"
+      },
+      {
+        "episode_id": 466,
+        "source_id": 61,
+        "participant": "ORCA 小队"
+      },
+      {
+        "episode_id": 471,
+        "source_id": 62,
+        "participant": "文件《蔚蓝档案》第二部关联短篇与活动.txt"
+      },
+      {
+        "episode_id": 474,
+        "source_id": 62,
+        "participant": "NK-Ultra 事件"
+      },
+      {
+        "episode_id": 476,
+        "source_id": 62,
+        "participant": "便利屋 68"
+      }
+    ],
+    "participant_completeness_issues": []
+  },
+  "temporal_cycles": {
+    "00_覆盖范围与版本边界.txt": {
+      "episode_count": 5,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "01_世界观与核心设定.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "02_学院与势力事实.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "03_核心角色事实.txt": {
+      "episode_count": 10,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "04_角色百科与别名.txt": {
+      "episode_count": 27,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "05_角色交流与对话摘要.txt": {
+      "episode_count": 17,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "06_细节问答与别名索引.txt": {
+      "episode_count": 20,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "07_角色关系与组织百科.txt": {
+      "episode_count": 27,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "08_常用角色百科补充.txt": {
+      "episode_count": 23,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt": {
+      "episode_count": 40,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "100_第二部_序章.txt": {
+      "episode_count": 6,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "101_第二部vol0_連邦生徒会編.txt": {
+      "episode_count": 12,
+      "temporal_edge_count": 7,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "102_第二部volex2_ロア追跡編.txt": {
+      "episode_count": 11,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "103_第二部vol1_炎と影編.txt": {
+      "episode_count": 16,
+      "temporal_edge_count": 13,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "104_第二部vol2_オデュッセイア編.txt": {
+      "episode_count": 13,
+      "temporal_edge_count": 4,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "105_第二部_角色与势力.txt": {
+      "episode_count": 14,
+      "temporal_edge_count": 3,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "106_第二部_推测与事实边界.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "107_第二部_关联短篇与活动.txt": {
+      "episode_count": 10,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "10_序章.txt": {
+      "episode_count": 5,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "11_vol1_对策委员会篇.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 4,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "12_格黑娜与千年角色百科扩展.txt": {
+      "episode_count": 39,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "13_其他学园与常用角色百科.txt": {
+      "episode_count": 39,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "14_世界设定与主线细节问答扩展.txt": {
+      "episode_count": 27,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "20_vol2_发条花舞曲篇.txt": {
+      "episode_count": 5,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "30_vol3_伊甸园条约篇.txt": {
+      "episode_count": 6,
+      "temporal_edge_count": 3,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "40_vol4_卡班诺的兔子篇.txt": {
+      "episode_count": 4,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "50_volf_所有奇迹的起点.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 2,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "60_vol5_百花缭乱篇.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "70_volex_德卡格拉马顿篇.txt": {
+      "episode_count": 12,
+      "temporal_edge_count": 11,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "80_vol6_過ぎ去りし刻のオラトリオ.txt": {
+      "episode_count": 9,
+      "temporal_edge_count": 1,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "90_推测与考据.txt": {
+      "episode_count": 8,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "91_时间线与事实边界.txt": {
+      "episode_count": 8,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "92_重要活动事实摘要.txt": {
+      "episode_count": 7,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "93_好感剧情使用边界.txt": {
+      "episode_count": 6,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "__global__": {
+      "episode_count": 474,
+      "temporal_edge_count": 194,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    }
+  },
+  "negative_associations": 62,
+  "duplicate_episode_pairs": []
+}

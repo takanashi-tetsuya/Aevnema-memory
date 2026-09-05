@@ -1,0 +1,34 @@
+{
+  "version": "stage8-answer-utility-v1",
+  "source_generation2_output": "validation/evaluation-stage8-association-utility/generation2-pilot-v1",
+  "source_stage8_manifest": "validation/stage8-association-utility-manifest.json",
+  "budget": 20,
+  "repeats": 3,
+  "purpose": "固定完全相同的 Episode 证据，只消融 generation>=2 的 Association 文本，检验增长边作为可复用推理是否改善最终答案。",
+  "judges": [
+    "deepseek-ai/DeepSeek-V3.2",
+    "zai-org/GLM-4.5V"
+  ],
+  "families": {
+    "hina_teacher_duty_bridge": {
+      "target_question_id": "hina_public_duty_personal_exhaustion_and_teacher_response",
+      "rubric": [
+        "交代日奈在公开职责、ETO/真琴判断与古圣堂战斗处境中的坚持。",
+        "交代日奈以星野的经历作自我比较，并区分引用比较与已证明的直接因果。",
+        "串联日奈承认早已撑不住、渴望关心与夸奖，老师感谢、准许休息并主动承担后续。",
+        "解释日奈后来重新等待老师指示的变化，但不把老师回应写成机械决定论。",
+        "把故事开端与结尾的老师义务、相信并支持学生梦想，具体联系到非命令式回应。"
+      ]
+    },
+    "kisaki_mika_governance_bridge": {
+      "target_question_id": "kisaki_mika_governance_analogy_with_boundary",
+      "rubric": [
+        "具体说明玄龙门内部对外校来访、玄武商会商业化、传统与组织威严的顾虑。",
+        "说明妃咲知晓并吸收顾虑，却以照常举办月影祭来维持传统和制度连续性。",
+        "说明未花要让渚下台、借阿里乌斯重组圣三一并走向对格黑娜战争的构想。",
+        "清楚比较两条路线面对内部不安和外部力量时的共同点与根本差异。",
+        "明确这是跨剧情治理类比，不存在人物互相影响或直接因果。"
+      ]
+    }
+  }
+}

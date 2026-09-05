@@ -1,0 +1,2698 @@
+{
+  "created_at": "2026-09-01T00:03:51.082922+00:00",
+  "input": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/base-retrieval-online-all7-v22-stability-repeat.json",
+  "input_sha256": "09e0a0c95906814750c5d89986b6b4c4ec6e3f1141a7109400556caefb78caf7",
+  "search_root": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs",
+  "candidate_id_count": 290,
+  "database_count": 235,
+  "exact_match_count": 159,
+  "exact_matches": [
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage10-multitheme-hard-negatives/pilot-v1/arius_as_unreliable_political_instrument/T/graph.db",
+      "bytes": 9330688,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ed831b520c9fbc46e5b1074b885a9350cddf21a7d6d1c1eb0171d21cb33fa530"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage10-multitheme-hard-negatives/pilot-v1/cathedral_deployment_and_inference_boundary/T/graph.db",
+      "bytes": 9314304,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ffeaa0b8dd44e34a33061c845d49bb9b980a904dd9e7b1233bc616951f76cd7e"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage10-multitheme-hard-negatives/pilot-v1/ethical_obligation_to_new_eto/T/graph.db",
+      "bytes": 9306112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "6ba194b7aaf5eb56a9bb391639d177c6ba3e9355690d5ab39d432084da97d123"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage10-multitheme-hard-negatives/pilot-v1/hifumi_identity_coalition_and_declaration/T/graph.db",
+      "bytes": 9297920,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "bc4280b7f9d492f586887a84a6bb0403e9c51ac229d11b5b054f7e7302618965"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage10-multitheme-hard-negatives/pilot-v1/mika_motive_and_epistemic_limits/T/graph.db",
+      "bytes": 9318400,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ad73a390d4359d5d534d8edc1a06f749e18e2487d69271e4e83023d0d15b7833"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v2/A/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v2/C/graph.db",
+      "bytes": 9428992,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "69d3090d661c50e043a517afa51558f724d2894f9c3d77e886b68966fc42cf5e"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v2/P/graph.db",
+      "bytes": 13594624,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "2731255650aa2b1d4723bac98597b11ee14ec05eac2d56099471fdbd1d340dc8"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v3/A/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v3/C/graph.db",
+      "bytes": 10182656,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "85dfe810adf5657cbb87f2d5e461ce66d9f4f1a3eb60b8fab0a0a38763d0b2e8"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v3/P/graph.db",
+      "bytes": 13594624,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "257767d3c2660d693a1686ff53d58c764ad9199b3b83a9954e26183a3765acf8"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v3/PC/graph.db",
+      "bytes": 14499840,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "f445c744594c6fd24e3984a1357d57135a3a10d4ada7dd6a3e78518528a15208"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets/A/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets/C/graph.db",
+      "bytes": 9342976,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "89f7c9a7b28467f4eab6ec82b3c4cee3f23f04a2105f5edc9f113edc458da698"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets/P/graph.db",
+      "bytes": 13594624,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "dd49119f158758265bfba2674435ccb2befe8b3fd99650099b8fa5ea9396aeb2"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v1/A/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v1/C/graph.db",
+      "bytes": 9461760,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "579515ca2608ffcd5c631f61dc1f6174e422c6c93f9d30199f78c75d93bee854"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v1/P/graph.db",
+      "bytes": 13594624,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "28af65cec77ccb434e6cd50457600f726f1eb4144a903a4588894bc1d31948d4"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v1/PC/graph.db",
+      "bytes": 13778944,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "0407b1095e01171bfe1cfa2e8679b597897e172d7ed129ccfd102cf04e914150"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v2/A/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v2/C/graph.db",
+      "bytes": 9461760,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "b0414bf89f39fb4616c29778f74c1743b8ee31ef5b89b2bfd1b07e593aa1952b"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v2/P/graph.db",
+      "bytes": 13594624,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "d74028c72714e2b8532205bb8cbd050ca27f4ab8ea3fd4d40b152dc4b72b011e"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v2/PC/graph.db",
+      "bytes": 13778944,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "e7fb66df29a0d33a649764ce2b94182586950366e23a81241cc09894e8cae053"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage13-evidence-context-concept-utility/assets-v1/A/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage13-evidence-context-concept-utility/assets-v1/C/graph.db",
+      "bytes": 9461760,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "c50bdae633d0c48ed9afc64271ca1dfab9eb4766e44408814150bdbe287a6164"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage13-evidence-context-concept-utility/assets-v1/P/graph.db",
+      "bytes": 13594624,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "f2b19ca996a19d2bee2ee4c74d951818499711891a986dd2a9734b5d515eb64c"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage13-evidence-context-concept-utility/assets-v1/PC/graph.db",
+      "bytes": 13778944,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "7d08c61ab8f421f15ca46f43a8d40153778e73beb2c07c10834a02866ed50890"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage14-expanded-corpus/assets-v1/graph.db",
+      "bytes": 78372864,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "65c46fded85be998caf14d1967af5582b7f915a1403a58349500fd88b904945d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage14-expanded-corpus/tier-me-C-reuse/graph.db",
+      "bytes": 46321664,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "68f15a0825614ea50caed41d9cda45d75290a8606856a2d1e3fa22ae54ca3744"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage14-expanded-corpus/tier-me-C/graph.db",
+      "bytes": 46321664,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4b53253198d821df8936f7dc053b565fc56e38945cabe0b9bb3de5c98c40b114"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage14-expanded-corpus/tier-me-P/graph.db",
+      "bytes": 68050944,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "d52208a72fecb50b64130559b8cdce54d45c3b9ba8ee67d3f66a9410f67cf820"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage14-expanded-corpus/tier-me/graph.db",
+      "bytes": 46321664,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4b838977b0e397d5addea9f5a28e9391fe021c5b9dc903f331473459e29ca47d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage14-expanded-corpus/tier-mef/graph.db",
+      "bytes": 78372864,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "59951ed7596b03f4a475cbf2386ed63bbd64957233a505cc98f82d8c62edff4e"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v310-q3/graph_growing.db",
+      "bytes": 5185536,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "9103037a54644328b99d0653e00b0f2d10c35063b30491f282c6f6b8df520cfd"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v311/graph_growing.db",
+      "bytes": 5210112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "60750917050365fb4d9199ed52e16a74c391fe8bd0b98587b750784931de1873"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v311/graph_static.db",
+      "bytes": 5193728,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "6d4350e03b7cf8e9ddbcafc75bffe475ad78083c9c53f3c3f1f822beeeee84d4"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v311/vector_only.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ee67b59ece364b620958af0722a2c6b2ac70926a1caad7bab12c4e9aa7c93a52"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v312/graph_static.db",
+      "bytes": 5193728,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "24070633a86897cf63842c506c7ef6afac4023046c304ab162432fdcb18939e4"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v312/vector_only.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ee67b59ece364b620958af0722a2c6b2ac70926a1caad7bab12c4e9aa7c93a52"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v313/graph_growing.db",
+      "bytes": 5169152,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "c43965aa880329d6f60b0487f3b3b362b9cafe70d82f265ec195b309ccdd8d57"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v313/graph_static.db",
+      "bytes": 5197824,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "491865a92780d241221b5558a3069596f733a4369d2884e3b795699ff4eb5333"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v313/vector_only.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ee67b59ece364b620958af0722a2c6b2ac70926a1caad7bab12c4e9aa7c93a52"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v314/graph_static.db",
+      "bytes": 5189632,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ca495cdde1b563b3ba1da51bdf2d746cc0b4d316e7d0204a48457b8c165459e9"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v314/vector_only.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ee67b59ece364b620958af0722a2c6b2ac70926a1caad7bab12c4e9aa7c93a52"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v37-q3/graph_growing.db",
+      "bytes": 5181440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "bc99a3c11fe4c301290badc52aeb443b238d4730972e5b24bdab37c563c500e3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v38-q3/graph_growing.db",
+      "bytes": 5177344,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "f2151abddd6e277830d73c5c7a7244e8f1dcec03f2998ded459861e2af5a974c"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-deep-v39-q3/graph_growing.db",
+      "bytes": 5177344,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "5b75d59fb1446d1ac8df8580240655fbfaf7a0a73c193e1c8381809b4e8b0932"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-full-v320/graph_growing.db",
+      "bytes": 5242880,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "6bad4f1a4e8d73f94ba662208ff506a8fb38be4c1892882a92a056f726557a0a"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-full-v320/graph_static.db",
+      "bytes": 5201920,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "54af3d83568b8ea44a0640dd6301027bd8cb7b831efc90203935d5c8277cc3b2"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-full-v320/vector_only.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v315/graph_growing.db",
+      "bytes": 5185536,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "759df8de1f1e6ee6265f3b3b40f2a93091fa21fd3a8cc2968d71b62a4c342a71"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v315/graph_static.db",
+      "bytes": 5181440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "32778a67b4092ec1f56b0df6f23529f81ecc828d896687e8a8f8b8836d1b7e2b"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v315/vector_only.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ee67b59ece364b620958af0722a2c6b2ac70926a1caad7bab12c4e9aa7c93a52"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v316/graph_growing.db",
+      "bytes": 5177344,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ec6667638ae9459b4455f9af8ddd1a4f6db76bd83e2485d6a80f21a3a9af343a"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v316/graph_static.db",
+      "bytes": 5177344,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "a117a6556c2b005fe479443f5bf2d35fe4327492b2ae2f2c2dca0a14e80f058e"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v316/vector_only.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "db35e29834ce4e0f7c5d1c45898b082e61a7ccbfa1343a3d836aacb6b35303be"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v317/graph_growing.db",
+      "bytes": 5181440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "c1b3c058f99bbc052cd5c36e011bfcd23301c7a3e2887aaa8e47c26c6d8a4626"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v317/graph_static.db",
+      "bytes": 5181440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "3ed7d854f42def9cfaa7e4f603ddb837b3ea6baf914a62fcae14a04ab6e88ea6"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v317/vector_only.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "db35e29834ce4e0f7c5d1c45898b082e61a7ccbfa1343a3d836aacb6b35303be"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v318-growing/graph_growing.db",
+      "bytes": 5177344,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "1dfe4be384e0f162175138895e7a2753bbe0fec30e542ffc9afeb38d5a9d5ef3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v319-growing/graph_growing.db",
+      "bytes": 5185536,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "d0689222eda0c0996f94760dcd094399d6c29e5eef19c597c782a9dd651ebe2e"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage3-q3-v320-growing/graph_growing.db",
+      "bytes": 5185536,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "3605b7e0786bba9e293b556f7a8060cbf30dd119c52ce34524a78745ecf9eb34"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage4-network-v320-retrieval/graph_static.db",
+      "bytes": 5222400,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "08967a074ccfd46ea433fb1b76dfaa8843d6bd0c222630a8259cb9e5ea5a34cd"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage4-network-v320-retrieval/vector_only.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage4-network-v321-growing-interleaved/graph_growing.db",
+      "bytes": 5435392,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb9024a6ccc563ea773f6825a607c05e973985f5cbedb77fed145bdd9f4471ba"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage4-network-v321-growing-original/graph_growing.db",
+      "bytes": 5419008,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "2852632dd26891aea34c614b5633d1067c64087b4654ece9c83b3ce6db061894"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage4-network-v321-growing-reverse/graph_growing.db",
+      "bytes": 5419008,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "7522beb63478e219c1d8f975260fd94bfdc76f9700683ed84b056a8307e0da14"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage4-network-v321-static/graph_static.db",
+      "bytes": 5214208,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "e99d1bb52af1a2e928273c60e05218ebe3a779e20093ca339c928e400aa436f8"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage4-network-v321-vector/vector_only.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-001/C/graph.db",
+      "bytes": 5193728,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "3f9fa91e1e0ab2d9b531f9afd8cb9a1da505f6471f4169711811256546a3e977"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-001/M/graph.db",
+      "bytes": 5201920,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "500b433076074664fcceae0b2bb39621100ce8ba3a8604ecebf239989f1c9d1e"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-001/P/graph.db",
+      "bytes": 5230592,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "6a27c59f6bd9d8cd3cbbb08c0e0979e4d3ff9c390708736249d37dfe556335d3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-001/T/graph.db",
+      "bytes": 5206016,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "dee6f1046ffcc418ff56d054eb1b8af1a4c94ee341e764a36b10bf57b8a356e9"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-001/replay-planner/graph.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-002/C/graph.db",
+      "bytes": 5193728,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "672022cbdf5a76e4f572cccc04aaa5a39cf6bfd199b0ebe94f52f481b70790a2"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-002/M/graph.db",
+      "bytes": 5210112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "32c638518d7062cf4711f8641771f87da0ca9cfa3fcbe8b2c465f725b83c50ec"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-002/P/graph.db",
+      "bytes": 5201920,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "8e947e4456301acea4dc30b3e023e9185f43848bdcdb5b5fb0b8d9bac0778101"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-002/T/graph.db",
+      "bytes": 5214208,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "e4c0e5ea41cc8340938f23248c6adcaa80508489442375f90d5179bd220f39a6"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-002/replay-planner/graph.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-003/C/graph.db",
+      "bytes": 5181440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "d8defe3006e83c057216f1f51bcf47e0b94aaff7296cc683dfe1f3b5753f0f0b"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-003/M/graph.db",
+      "bytes": 5206016,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ffc082c6fe12027e23eb2ce34657feffb60017cbc432818c156a6c6422c0d72b"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-003/P/graph.db",
+      "bytes": 5230592,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "131a636e46b4d29dec39c6d8759a8fd902e9051efa43d0055bcf74071f4a8d13"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-003/T/graph.db",
+      "bytes": 5214208,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "56217355803c4acd186681d0ff1c3c75771deb753e6124ada271a346c66a792c"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-003/replay-planner/graph.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-004/C/graph.db",
+      "bytes": 5185536,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "9fffb5f88cd3d6d56f9e2d717405a7fc707f049b5ecf9804d3e0aff3c84a034c"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-004/M/graph.db",
+      "bytes": 5214208,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "673a75c95706be52b74585ac7a1bcc8196c274d4c15f5a57104509ec1f1a16dc"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-004/P/graph.db",
+      "bytes": 5230592,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "95f91e29c4147f3728eae3b0fc0c141f1fda846dd48b3974f71188a8f06018ea"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-004/T/graph.db",
+      "bytes": 5218304,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "c7314941916a1dbc6de84db620fc9d5e09c3544eb6a210c248db54b73dc61362"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-004/replay-planner/graph.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-005/C/graph.db",
+      "bytes": 5189632,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "8de228a1043008ddde42cff2eb3e5980bbe1a2f6efaa31fab0af89ea9846a1cf"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-005/M/graph.db",
+      "bytes": 5210112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "f23eefa7daea40f04eecc825322e3843ad38754455800954886e2e6e678d1813"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-005/P/graph.db",
+      "bytes": 5226496,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "c3f01c4454d5a1446cc17f3add4f35de2935a410e18c26892e43217c90320355"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-005/T/graph.db",
+      "bytes": 5218304,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "2e14342f2cf6192f2e6fdcb00d1ed052a75385172afc1ea2fe7677c57dfc085d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-005/replay-planner/graph.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-006/C/graph.db",
+      "bytes": 5181440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "e5b19e65af44b42605f4d1fadb4e25cdf2d4d10c3cebdd5179fbc6a6ffa2ed87"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-006/M/graph.db",
+      "bytes": 5210112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "2902639588ce1b5f3809a2cd730b816af70d9c41fa112be4ecc8a44f374698ed"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-006/P/graph.db",
+      "bytes": 5218304,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "312228fc603b309aa09797c8713c4a0ca0c4d0952882cd57d5c0b7ac723171c1"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-006/T/graph.db",
+      "bytes": 5214208,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "13297b7d51e4889d0a8238086553ee92eae8ac2ee5419042626d67a6e9c870a7"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-006/replay-planner/graph.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-007/C/graph.db",
+      "bytes": 5189632,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "76fb575f2ced2db95f9adaa7c38df5020a7a3b8a0d4c733351a9edd79025cec5"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-007/M/graph.db",
+      "bytes": 5214208,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fbabbb229670c1c0cd040d71994e5b29becfad55d373e08b9a3118131ee7afd8"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-007/P/graph.db",
+      "bytes": 5226496,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "a97bbf928ce89d430fc1a232f2b0871ecd13e6e9ef93c2b5d56d839624c33250"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-007/T/graph.db",
+      "bytes": 5218304,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "6361d52e50aea1f1636cdedcd7f08803ddd01e5325521e79a4410444b0bbd6f9"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-007/replay-planner/graph.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-008/C/graph.db",
+      "bytes": 5185536,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4a5fd9107964f1a6ad618c720ec4c5d84ac648a6fd27810698b9791c681dbe13"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-008/M/graph.db",
+      "bytes": 5218304,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "3f36871dbfbdc34da73d1a29da3b08a397137383029a06aaa54fdb4f0278429d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-008/P/graph.db",
+      "bytes": 5218304,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ce4e19ea025e27b269b58abda01b4b0955654979a74189b4f500316384931fae"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-008/T/graph.db",
+      "bytes": 5226496,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "c41e4897a3082b25c912a03bb8a7131e2b768406844c890298f8652b7a065410"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-008/replay-planner/graph.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-009/C/graph.db",
+      "bytes": 5181440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "40e93a83d42a7306c1a8a0a0bc09c03959da3e4b6fbbe1d870f23d9395908354"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-009/M/graph.db",
+      "bytes": 5210112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "6947a083bb1fba5e7b4634e1731220ebdcb15fd4c3b7abe52e18af963726de38"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-009/P/graph.db",
+      "bytes": 5230592,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ef7cb9c9c7d1e03d91e79a23e0455d6674cdfe461f475183f537b88c2e458d07"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-009/T/graph.db",
+      "bytes": 5210112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4bef38bb5a756d3fc1b2d6f2cfb62b3e8bd7bb1270b3eb2665d9a71d8a39403f"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-009/replay-planner/graph.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-010/C/graph.db",
+      "bytes": 5181440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "6b643b70ac65136928609624d36eb954d5a50802afafc75d76fa7a52cac35395"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-010/M/graph.db",
+      "bytes": 5177344,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "94e2159c63428dd2b23784fe912a10f0e1cc975ae79eb82dca1074b0ef033c0c"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-010/P/graph.db",
+      "bytes": 5214208,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "8766c59c9d9c7fa7817dc1beb1c8e8325dc356346b2ae2b102cac67523be8279"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-010/T/graph.db",
+      "bytes": 5185536,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4ec7ed9dc5fa662c01337ad8fe754c51c777d11ad8c2af682cafee2beb6f79e5"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/official/block-010/replay-planner/graph.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/pilot/block-001/C/graph.db",
+      "bytes": 5185536,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "257ed98fa47c320eef47eaa585ee550d6efa4bd65cf6302b03f34d88f76331ca"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/pilot/block-001/M/graph.db",
+      "bytes": 5210112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4add1ee2904f9ddffea0d64cbc7d9969328e4b38f80075367e9132ea228cfb91"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/pilot/block-001/P/graph.db",
+      "bytes": 5222400,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "cde4c55aa02609e6e1bb2d22738c391a53ee2d4ee7611f631ef03da03b78bb55"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/pilot/block-001/T/graph.db",
+      "bytes": 5218304,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "226399e95b04d17354945fb1ea16a958b255b3b117e7fefd4a943dcaea9a6cb6"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage5-causality/pilot/block-001/replay-planner/graph.db",
+      "bytes": 5165056,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "fb7c23061328ebd3d5caebe1e99e7058dc0a3264f8fe952ad43814215378021d"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage7-generation/pilot/block-001/C/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "8543fd74fd65e8a9c747f659e7146684ffa32b3b1442afc8a6fe8b3a1020c3f8"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage7-generation/pilot/block-001/M/graph.db",
+      "bytes": 5275648,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "67cdc20cf4468c5ce27377d97c971d3e9d3adb78320b855cadcb5d108c66d9d2"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage7-generation/pilot/block-001/P/graph.db",
+      "bytes": 5283840,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "5c84c42656532744a2d0e75275c8a41dc114094524d252cbc7a2d177954c711e"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage7-generation/pilot/block-001/T/graph.db",
+      "bytes": 5279744,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "9bb1dd067f42fa4368f6e7404940816fc2e4a0f1b94ad0ce23774248d001a532"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage7-generation/pilot/block-001/replay-planner/graph.db",
+      "bytes": 5242880,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "b3c857e1771787175c7ce04793e20b2ab89315a35048b26903c3a107f9c6f22a"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/generation2-pilot-v1/hina_teacher_duty_bridge/T2/graph.db",
+      "bytes": 9342976,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "bc49a238b1c450b6caebc975bbafa6b90e4ced77a6ad44cd0ecdead0adb08414"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/generation2-pilot-v1/kisaki_mika_governance_bridge/T2/graph.db",
+      "bytes": 9322496,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "a3fb0b3e70634f900952d284662381573e8768d2bc51a3eb0f3415d131623e61"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/pilot-v1/cathedral_deployment_bridge/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/pilot-v1/cathedral_deployment_bridge/O/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "e7c49fdf6969094ac56e08ce4f46224b0288d54978d93c63cd446116173239ee"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/pilot-v1/hina_teacher_duty_bridge/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/pilot-v1/hina_teacher_duty_bridge/O/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "0c7339b35e6e8a50849f20f0e5342114500c1fae6c45b50f1d377c24c21247ec"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/pilot-v1/hina_teacher_duty_bridge/T/graph.db",
+      "bytes": 9306112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "e52e5cc6f5cafbbe46e11aa7fef0cc714841decf1070d086550b8ad3cfa96de6"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/pilot-v1/kisaki_mika_governance_bridge/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/pilot-v1/kisaki_mika_governance_bridge/O/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "678c26cafa7d9ecdedd01037884215ee6c9e4b0eb0268488c97d6e40aedb784b"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/pilot-v1/kisaki_mika_governance_bridge/T/graph.db",
+      "bytes": 9297920,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "25b389f8c93b9dc341f624ff93df8cda578296992aae07afaba54094f5930396"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/hina_teacher_duty_bridge/repeat-01/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/hina_teacher_duty_bridge/repeat-01/T/graph.db",
+      "bytes": 9306112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "b0c153386a1fbaf50be34950d4e1c5062d19f553f5d2888855522a2d5a1f0141"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/hina_teacher_duty_bridge/repeat-02/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/hina_teacher_duty_bridge/repeat-02/T/graph.db",
+      "bytes": 9306112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "b0c153386a1fbaf50be34950d4e1c5062d19f553f5d2888855522a2d5a1f0141"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/hina_teacher_duty_bridge/repeat-03/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/hina_teacher_duty_bridge/repeat-03/T/graph.db",
+      "bytes": 9306112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "b0c153386a1fbaf50be34950d4e1c5062d19f553f5d2888855522a2d5a1f0141"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/hina_teacher_duty_bridge/repeat-04/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/hina_teacher_duty_bridge/repeat-04/T/graph.db",
+      "bytes": 9306112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "b0c153386a1fbaf50be34950d4e1c5062d19f553f5d2888855522a2d5a1f0141"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/hina_teacher_duty_bridge/repeat-05/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/hina_teacher_duty_bridge/repeat-05/T/graph.db",
+      "bytes": 9306112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "b0c153386a1fbaf50be34950d4e1c5062d19f553f5d2888855522a2d5a1f0141"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/kisaki_mika_governance_bridge/repeat-01/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/kisaki_mika_governance_bridge/repeat-01/T/graph.db",
+      "bytes": 9297920,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "050ef26f5b5992ba4215a15bda3590f5bd089bea41645e9000a5418bea460de7"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/kisaki_mika_governance_bridge/repeat-02/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/kisaki_mika_governance_bridge/repeat-02/T/graph.db",
+      "bytes": 9297920,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "050ef26f5b5992ba4215a15bda3590f5bd089bea41645e9000a5418bea460de7"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/kisaki_mika_governance_bridge/repeat-03/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/kisaki_mika_governance_bridge/repeat-03/T/graph.db",
+      "bytes": 9297920,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "050ef26f5b5992ba4215a15bda3590f5bd089bea41645e9000a5418bea460de7"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/kisaki_mika_governance_bridge/repeat-04/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/kisaki_mika_governance_bridge/repeat-04/T/graph.db",
+      "bytes": 9297920,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "050ef26f5b5992ba4215a15bda3590f5bd089bea41645e9000a5418bea460de7"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/kisaki_mika_governance_bridge/repeat-05/B/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage8-association-utility/repeated-v1/kisaki_mika_governance_bridge/repeat-05/T/graph.db",
+      "bytes": 9297920,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "050ef26f5b5992ba4215a15bda3590f5bd089bea41645e9000a5418bea460de7"
+    }
+  ],
+  "best_matches": [
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage10-multitheme-hard-negatives/pilot-v1/arius_as_unreliable_political_instrument/T/graph.db",
+      "bytes": 9330688,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ed831b520c9fbc46e5b1074b885a9350cddf21a7d6d1c1eb0171d21cb33fa530"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage10-multitheme-hard-negatives/pilot-v1/cathedral_deployment_and_inference_boundary/T/graph.db",
+      "bytes": 9314304,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ffeaa0b8dd44e34a33061c845d49bb9b980a904dd9e7b1233bc616951f76cd7e"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage10-multitheme-hard-negatives/pilot-v1/ethical_obligation_to_new_eto/T/graph.db",
+      "bytes": 9306112,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "6ba194b7aaf5eb56a9bb391639d177c6ba3e9355690d5ab39d432084da97d123"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage10-multitheme-hard-negatives/pilot-v1/hifumi_identity_coalition_and_declaration/T/graph.db",
+      "bytes": 9297920,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "bc4280b7f9d492f586887a84a6bb0403e9c51ac229d11b5b054f7e7302618965"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage10-multitheme-hard-negatives/pilot-v1/mika_motive_and_epistemic_limits/T/graph.db",
+      "bytes": 9318400,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "ad73a390d4359d5d534d8edc1a06f749e18e2487d69271e4e83023d0d15b7833"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v2/A/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v2/C/graph.db",
+      "bytes": 9428992,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "69d3090d661c50e043a517afa51558f724d2894f9c3d77e886b68966fc42cf5e"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v2/P/graph.db",
+      "bytes": 13594624,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "2731255650aa2b1d4723bac98597b11ee14ec05eac2d56099471fdbd1d340dc8"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v3/A/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v3/C/graph.db",
+      "bytes": 10182656,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "85dfe810adf5657cbb87f2d5e461ce66d9f4f1a3eb60b8fab0a0a38763d0b2e8"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v3/P/graph.db",
+      "bytes": 13594624,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "257767d3c2660d693a1686ff53d58c764ad9199b3b83a9954e26183a3765acf8"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets-v3/PC/graph.db",
+      "bytes": 14499840,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "f445c744594c6fd24e3984a1357d57135a3a10d4ada7dd6a3e78518528a15208"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets/A/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets/C/graph.db",
+      "bytes": 9342976,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "89f7c9a7b28467f4eab6ec82b3c4cee3f23f04a2105f5edc9f113edc458da698"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage11-paragraph-concepts/assets/P/graph.db",
+      "bytes": 13594624,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "dd49119f158758265bfba2674435ccb2befe8b3fd99650099b8fa5ea9396aeb2"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v1/A/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v1/C/graph.db",
+      "bytes": 9461760,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "579515ca2608ffcd5c631f61dc1f6174e422c6c93f9d30199f78c75d93bee854"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v1/P/graph.db",
+      "bytes": 13594624,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "28af65cec77ccb434e6cd50457600f726f1eb4144a903a4588894bc1d31948d4"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v1/PC/graph.db",
+      "bytes": 13778944,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "0407b1095e01171bfe1cfa2e8679b597897e172d7ed129ccfd102cf04e914150"
+    },
+    {
+      "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/_archive/generated-20260830/validation-runs/evaluation-stage12-clean-paragraph-gated-concept/assets-v2/A/graph.db",
+      "bytes": 9277440,
+      "alignment": {
+        "candidate_id_count": 290,
+        "candidate_ids_present": 290,
+        "missing_candidate_ids": [],
+        "evidence_fingerprint_count": 112,
+        "evidence_text_mismatch_count": 0,
+        "evidence_text_mismatches": [],
+        "passed": true
+      },
+      "error": null,
+      "sha256": "4c90da77d8a924fb7f2540d47dcd7ad5130d6cac02e61dd8389249290e829ab3"
+    }
+  ]
+}

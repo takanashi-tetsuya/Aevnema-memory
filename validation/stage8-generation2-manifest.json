@@ -1,0 +1,18 @@
+{
+  "version": "stage8-generation2-pilot-v1",
+  "source_stage8_manifest": "validation/stage8-association-utility-manifest.json",
+  "source_pilot": "validation/evaluation-stage8-association-utility/pilot-v1",
+  "purpose": "连续三问探针：Q1 已形成 generation 1；Q2 必须显式复用可见 Association 前提形成 generation 2；Q3 只遮罩 generation 2 变化边，检验其独立净效益。",
+  "families": [
+    {
+      "id": "hina_teacher_duty_bridge",
+      "consolidation_question": "请在已有 Association 的基础上继续整理日奈这段记忆。此前已经建立了‘日奈的情感需求得到老师非命令式回应’以及‘老师回应与日奈重新等待指示之间的主题联系’。请优先把这些可见 Association 作为 premise_association_ids，而不是把所有 Episode 重新并列成无前提的一层推论；进一步说明这条‘表达个人极限与需求—得到大人的关心—重新行动’的链条，怎样具体体现帮助、相信并支持学生是大人的义务。任何新关系仍须说明它是跨片段综合推论，不是原文证明老师的回应机械地造成日奈每一步行动。",
+      "target_question_id": "hina_public_duty_personal_exhaustion_and_teacher_response"
+    },
+    {
+      "id": "kisaki_mika_governance_bridge",
+      "consolidation_question": "请在已有 Association 的基础上继续整理山海经与圣三一的治理对比。此前已经建立了‘弥奈对外部商业影响和传统责任的顾虑，与未花主动引入阿里乌斯重组秩序之间的对比’，以及‘妃咲维持常态与未花颠覆秩序之间的治理对比’。请优先引用这些可见关系的 premise_association_ids，在此前关系之上形成可复用的第二层综合：面对内部不安与外部力量，妃咲路线为何是吸收顾虑后维持制度连续性，而未花路线为何是借外力打破制度连续性。必须明确这只是跨剧情类比，不存在人物影响或直接因果。",
+      "target_question_id": "kisaki_mika_governance_analogy_with_boundary"
+    }
+  ]
+}

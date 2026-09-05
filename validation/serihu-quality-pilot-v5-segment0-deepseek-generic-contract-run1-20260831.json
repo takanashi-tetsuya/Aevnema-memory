@@ -1,0 +1,380 @@
+{
+  "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/serihu-quality-pilot-v3-20260831.db",
+  "source_key": "主线剧情_最終編_第1章.txt",
+  "segment_index": 0,
+  "model": "deepseek-ai/DeepSeek-V3.2",
+  "mode": "independent_extraction",
+  "candidate_report": null,
+  "candidate_list_key": null,
+  "before": [
+    {
+      "text": "赛亚（セイア）在意识模糊中醒来，询问身处何地。黑野（クズノハ）指出赛亚曾遭遇名为「色彩」的来自基沃托斯外的灾祸，但赛亚并未直接接触色彩，而是通过「白昼梦」和「仪式」间接窥见，因此身体未完全异化但正在被侵蚀。贝阿特丽切（ベアトリーチェ）解释赛亚是被卷入仪式导致存在如灯火般显眼。黑野表示无法阻止侵蚀，除非赛亚放弃构成自身的本质之一作为代价，并提议引导赛亚。",
+      "participants": [
+        "赛亚 / セイア / Seia",
+        "黑野 / クズノハ / Kuzunoha",
+        "贝阿特丽切 / ベアトリーチェ / Beatrice"
+      ],
+      "event_type": "遭遇灾祸与代价交易提议",
+      "location_text": "未知地点",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 0.9,
+      "evidence_origin": "source",
+      "epistemic_status": "reported",
+      "generation": 0,
+      "epistemic_note": "事件细节基于黑野和贝阿特丽切的陈述，关于色彩的本质和赛亚的遭遇状态为角色所述。"
+    },
+    {
+      "text": "黑服（黒服）向马埃斯特罗（マエストロ）和戈尔孔达（ゴルコンダ）解释「名无之神」与「无名司祭」的历史，指出他们曾崇拜太古神秘并制造过奥帕斯（如巡航导弹），虽已消失但技术仍被交易。随后，黑服提到「箱舟」被观测到，并推测若箱舟是包含所有神秘的抽象概念，则其出现意味着旧时代司祭的兵器和遗产重现，且沙勒（シャーレ）未能确保基沃托斯最高神秘。",
+      "participants": [
+        "黑服 / 黒服 / Black Suit / 검은 양복",
+        "马埃斯特罗 / マエストロ / Maestro",
+        "戈尔孔达 / ゴルコンダ / Golconda"
+      ],
+      "event_type": "神秘组织历史与箱舟观测报告",
+      "location_text": "未知地点",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 0.85,
+      "evidence_origin": "source",
+      "epistemic_status": "reported",
+      "generation": 0,
+      "epistemic_note": "黑服关于箱舟是抽象概念及司祭遗产重现的推论基于其发言，部分为推测性质。"
+    },
+    {
+      "text": "马埃斯特罗承认仪式旨在利用色彩力量将自己变得伟大，贝阿特丽切斥责其傲慢。贝阿特丽切随后宣布色彩已经发现了此地，并明确表示是她向色彩传递了信息。",
+      "participants": [
+        "马埃斯特罗 / マエストロ / Maestro",
+        "贝阿特丽切 / ベアトリーチェ / Beatrice",
+        "戈尔孔达 / ゴルコンダ / Golconda",
+        "黑服 / 黒服 / Black Suit / 검은 양복"
+      ],
+      "event_type": "仪式目的揭露与色彩被引来的确认",
+      "location_text": "未知地点",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 0.95,
+      "evidence_origin": "source",
+      "epistemic_status": "reported",
+      "generation": 0,
+      "epistemic_note": "贝阿特丽切声称是她让色彩发现此地，属于角色直接陈述。"
+    },
+    {
+      "text": "阿罗娜（アロナ）询问老师（先生）是否做了噩梦，老师描述了赛亚在黑白世界中向自己举枪的预知梦。赛亚表示自己的未来视已丧失，但确认该梦与「基沃托斯的终焉」有关。老师询问未来何时发生，赛亚表示不知。",
+      "participants": [
+        "阿罗娜 / アロナ / Arona",
+        "老师 / 先生 / Sensei / 선생님",
+        "赛亚 / セイア / Seia"
+      ],
+      "event_type": "预知梦分享与终焉关联确认",
+      "location_text": "未知地点",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 0.9,
+      "evidence_origin": "source",
+      "epistemic_status": "reported",
+      "generation": 0,
+      "epistemic_note": "赛亚关于未来视丧失及梦与终焉关联的陈述基于其本人说法。"
+    },
+    {
+      "text": "老师向联邦学生会会长凛（リン）告知预知梦及终焉的担忧。凛起初表示缺乏证据且时间未定，但考虑到老师是会长指名的人，且老师特意来访，决定帮忙调查。她承诺检查联邦学生会记录及百鬼夜行自治区名簿，但表示需要证据才能说服其他学生会，并约定稍后联系。",
+      "participants": [
+        "老师 / 先生 / Sensei / 선생님",
+        "凛 / リン / Rin"
+      ],
+      "event_type": "向凛通报预知梦并寻求协助",
+      "location_text": "未知地点",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 0.95,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": "对话内容直接呈现，凛的调查决定基于其陈述。"
+    },
+    {
+      "text": "PMC士兵在凯撒PMC的坐标下发现了一个约135m×23m×13m的结构体，立即向将军报告并通知联邦学生会防卫室。",
+      "participants": [
+        "PMC士兵",
+        "PMC干部"
+      ],
+      "event_type": "PMC发现未知结构体",
+      "location_text": "凯撒PMC相关坐标",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": "直接基于PMC士兵和干部的对话记录。"
+    },
+    {
+      "text": "白子（シロコ）、星野（ホシノ）、绫音（アヤネ）、芹香（セリカ）、野宫（ノノミ）讨论凯撒PMC在阿比多斯沙漠附近的异常大规模移动。众人决定联系老师，但得知老师最近很忙且刚联系过白子。最终绫音决定主动联系老师。",
+      "participants": [
+        "白子 / シロコ / Shiroko",
+        "星野 / ホシノ / Hoshino",
+        "绫音 / アヤネ / Ayane",
+        "芹香 / セリカ / Serika",
+        "野宫 / ノノミ / Nonomi"
+      ],
+      "event_type": "讨论PMC动向并决定联系老师",
+      "location_text": "阿比多斯沙漠附近",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 0.95,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": "基于角色间的对话内容。"
+    },
+    {
+      "text": "绿（ミドリ）和桃（モモイ）讨论她们正在制作的「剑与魔法RPG」中主角乘坐宇宙战舰的设定，桃认为合理，绿表示困惑。柚子（ユズ）表示不觉得不好。爱丽丝（アリス）随后加入，表示支持「宇宙勇者」的设定。",
+      "participants": [
+        "绿 / ミドリ / Midori",
+        "桃 / モモイ / Momoi",
+        "柚子 / ユズ / Yuzu",
+        "爱丽丝 / アリス / Aris"
+      ],
+      "event_type": "讨论RPG游戏设定",
+      "location_text": "未知地点",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 0.95,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": "基于角色间的对话内容。"
+    },
+    {
+      "text": "爱丽丝（アリス）回到众人身边，表示她进行了简单的身体检查和医疗检查，结果显示没有异常。",
+      "participants": [
+        "爱丽丝 / アリス / Aris"
+      ],
+      "event_type": "爱丽丝报告检查结果",
+      "location_text": "未知地点",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 0.95,
+      "evidence_origin": "source",
+      "epistemic_status": "reported",
+      "generation": 0,
+      "epistemic_note": "爱丽丝陈述检查结果，基于其发言。"
+    }
+  ],
+  "after": [
+    {
+      "text": "在某个地点，セイア与クズノハ相遇。セイア似乎刚经历过某种异常事件，身体不适。クズノハ判断セイア遭遇了“色彩”，这是一种来自基沃托斯之外的古老灾祸，对基沃托斯居民是致命的毒药，会扭曲个体的本质。但セイア并非直接接触，而是被卷入某个“仪式”，通过“白日梦”间接窥见了“色彩”，因此暂时保持了意识。クズノハ告知セイア，侵蚀无法长久阻止，但提出一个解决方案：放弃构成其本质的一部分作为代价，即可摆脱侵蚀，但代价是“不再是现在的自己”。セイア没有其他选择，准备接受。此时，黑服、マエストロ、ゴルコンダ、ベアトリーチェ等人出现。",
+      "participants": [
+        "セイア",
+        "クズノハ",
+        "黑服",
+        "マエストロ",
+        "ゴルコンダ",
+        "ベアトリーチェ"
+      ],
+      "event_type": "遭遇与危机揭示",
+      "location_text": "",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "黑服向在场者解释“无名之神”与“无名的司祭”。据黑服陈述，“无名之神”是类似大地、海洋、天灾等自古存在的“神秘”或“恐怖”，而“无名的司祭”是崇拜它们的人。黑服提到，这些被淘汰的旧时代人对现代基沃托斯并不友好，他们虽然消失了，但其技术（如巡航导弹等“遗物”）仍留存在此地并被高价交易。",
+      "participants": [
+        "黑服",
+        "マエストロ",
+        "ゴルコンダ",
+        "ベアトリーチェ",
+        "セイア",
+        "クズノハ"
+      ],
+      "event_type": "背景信息阐述",
+      "location_text": "",
+      "story_time_text": "据黑服陈述的过去",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "reported",
+      "generation": 0,
+      "epistemic_note": "黑服的陈述"
+    },
+    {
+      "text": "ゴルコンダ报告观测到了“方舟”，虽然只有一瞬。マエストロ质疑“方舟”是否是可感知的概念。黑服表示自己曾认为“方舟”是物质存在，并让凯撒集团调查阿比多斯沙漠但一无所获。黑服推测，如果“方舟”是集合所有神秘的抽象概念，那么一系列异常事件——本应消失的“无名的司祭”士兵和遗产再次被观测、夏莱的出现、未能确保基沃托斯最高神秘、以及“方舟”的观测——都意味着计划因不可控变量而严重偏离了轨道。",
+      "participants": [
+        "ゴルコンダ",
+        "マエストロ",
+        "黑服",
+        "ベアトリーチェ"
+      ],
+      "event_type": "情报报告与推测",
+      "location_text": "",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 0.9,
+      "evidence_origin": "source",
+      "epistemic_status": "mixed",
+      "generation": 1,
+      "epistemic_note": "ゴルコンダ的报告为observed，黑服的推测为speculative"
+    },
+    {
+      "text": "マエストロ指出仪式是为了接触“色彩”。ゴルコンダ纠正说更准确是为了利用其力量。マエストロ赞同，并讽刺有人想利用“色彩”的力量将自己塑造成伟大存在。ベアトリーチェ警告マエストロ注意言辞，并批评了在场艺术家的傲慢。在ゴルコンダ和ベアトリーチェ的短暂争执后，ベアトリーチェ宣布“色彩”已经发现了此处，并更准确地说是她自己告知了“色彩”。此消息令マエストロ、ゴルコンダ和黑服震惊。",
+      "participants": [
+        "マエストロ",
+        "ゴルコンダ",
+        "ベアトリーチェ",
+        "黑服"
+      ],
+      "event_type": "冲突揭露与背叛",
+      "location_text": "",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "场景切换。アロナ（阿罗娜）关心老师（Sensei）的状况，询问是否又做了那个梦。老师对アロナ进行了身体检查，提及她曾被枪击，但アロナ表示自己没事，一切安好，并安慰老师那只是个噩梦。",
+      "participants": [
+        "アロナ",
+        "老师"
+      ],
+      "event_type": "日常互动与关心",
+      "location_text": "",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "セイア向老师描述了她看到的预知梦：一个所有色彩褪去的黑白世界，一个扭曲的ヘイロー少女用枪指着老师。セイア不清楚为何老师会看到和她相同的预知梦，但确认老师已在梦中与她多次邂逅。老师询问那个未来何时发生，セイア表示自己的未来视已经丧失，但确定这与之前告知的“基沃托斯的终焉”有关。",
+      "participants": [
+        "セイア",
+        "老师",
+        "アロナ"
+      ],
+      "event_type": "预知梦分享",
+      "location_text": "",
+      "story_time_text": "据セイア描述的梦境",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "reported",
+      "generation": 0,
+      "epistemic_note": "セイア的陈述"
+    },
+    {
+      "text": "老师决定将“终焉”的预知告知联邦学生会。アロナ有些担心联邦学生会的リン（凛）是否会相信。老师认为リン会相信。老师随后联系了リン，向她讲述了关于“终焉”的预知梦。リン起初表现出怀疑，因为缺乏具体证据和时间点。",
+      "participants": [
+        "老师",
+        "アロナ",
+        "リン"
+      ],
+      "event_type": "情报传达与初步反应",
+      "location_text": "",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "リン最终表示，出于对联邦学生会长（指任命老师的人）的道义，她会去查阅联邦学生会的记录、数据以及百鬼夜行自治区的名册，以寻找线索。但她强调说服其他学生会需要证据，且自己无法在此事上花费太多时间，承诺稍后会联系老师。随后リン因有事离开。",
+      "participants": [
+        "リン",
+        "老师"
+      ],
+      "event_type": "承诺调查",
+      "location_text": "",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "在阿比多斯沙漠，凯撒PMC的士兵报告在指定坐标发现了一个约135m×23m×13m的结构体。PMC干部确认后，紧急命令向“将军”报告，并通知联邦学生会防卫室。",
+      "participants": [
+        "PMC兵士",
+        "PMC幹部"
+      ],
+      "event_type": "重大发现报告",
+      "location_text": "阿比多斯沙漠",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "阿比多斯对策委员会的シロコ（白子）观察到凯撒PMC以空前规模向沙漠移动。ホシノ（星野）、アヤネ（绫音）、セリカ（芹香）、ノノミ（野宫）讨论此事，セリカ对凯撒在他人自治区随意行动感到愤怒。シロコ提议偷偷去看看，但被ノノミ和ホシノ以那是凯撒地盘为由劝阻。ノノミ提议向老师咨询，アヤネ起初犹豫，但在セリカ和ノノミ的劝说下，决定由アヤネ联系老师。シロコ提到老师最近刚联系过她，但内容无关紧要。",
+      "participants": [
+        "シロコ",
+        "ホシノ",
+        "アヤネ",
+        "セリカ",
+        "ノノミ"
+      ],
+      "event_type": "学生讨论与决策",
+      "location_text": "阿比多斯",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "在游戏开发部，ミドリ（绿）和モモイ（桃）就她们正在制作的“剑与魔法的RPG”发生争执，因为モモイ让主人公乘坐宇宙战舰对抗宇宙海盗。ユズ（柚子）怯生生地表示不坏，アリス（爱丽丝）回归后也盛赞“宇宙勇者”的创意。",
+      "participants": [
+        "ミドリ",
+        "モモイ",
+        "ユズ",
+        "アリス"
+      ],
+      "event_type": "日常争执",
+      "location_text": "游戏开发部",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    },
+    {
+      "text": "アリス（爱丽丝）回到游戏开发部，告知大家她进行了简单的身体检查和医疗检查，结果没有异常。",
+      "participants": [
+        "アリス",
+        "ミドリ",
+        "モモイ",
+        "ユズ"
+      ],
+      "event_type": "日常报告",
+      "location_text": "游戏开发部",
+      "story_time_text": "",
+      "timeline_scope": "主线剧情_最終編_第1章.txt",
+      "confidence": 1.0,
+      "evidence_origin": "source",
+      "epistemic_status": "observed",
+      "generation": 0,
+      "epistemic_note": ""
+    }
+  ],
+  "errors": []
+}

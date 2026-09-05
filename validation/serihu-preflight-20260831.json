@@ -1,0 +1,48 @@
+{
+  "input_root": "C:\\Users\\Admin\\Documents\\blue_archive_main_story\\serihu",
+  "config": {
+    "target_chars": 6000,
+    "max_chars": 8000,
+    "overlap_chars": 800
+  },
+  "totals": {
+    "files": 181,
+    "parsed_files": 181,
+    "unsupported_files": 0,
+    "blocks": 2591,
+    "segments": 788,
+    "bytes": 8795211,
+    "empty_files": 0,
+    "parse_failures": 0,
+    "oversize_segments": 0
+  },
+  "categories": {
+    "root": {
+      "files": 180,
+      "blocks": 2574,
+      "segments": 787,
+      "bytes": 8792248
+    },
+    "台词库审计结果_20260830": {
+      "files": 1,
+      "blocks": 17,
+      "segments": 1,
+      "bytes": 2963
+    }
+  },
+  "language_blocks": {
+    "unknown": 2591
+  },
+  "segment_length": {
+    "min": 436,
+    "mean": 6050.75,
+    "p50": 6446,
+    "p95": 7800,
+    "p99": 7946,
+    "max": 7999
+  },
+  "empty_file_samples": [],
+  "unsupported_file_samples": [],
+  "failures": [],
+  "oversize_samples": []
+}

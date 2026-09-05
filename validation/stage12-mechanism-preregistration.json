@@ -1,0 +1,64 @@
+{
+  "version": "stage12-clean-recall-gated-concept-v1",
+  "frozen_before_treatment_evaluation": true,
+  "purpose": "分别验证清洗后的 recall-only Paragraph 与积极发现/谨慎晋升 Concept 是否在其目标缺口上产生稳定收益，同时保持 Stage 11 网络题与范围控制题非回归。",
+  "embedding_dtype": "float32",
+  "arms": {
+    "A": "Paragraph 关闭，保守 Concept 基线",
+    "P": "清洗 Paragraph embedding，Paragraph 仅追加基线遗漏候选，不改变已有 Episode 得分或原子锚点",
+    "C": "Paragraph 关闭，fine_grained 发现结果经过 durable Concept LLM 准入门",
+    "PC": "同时使用与 P 相同的 Paragraph 和与 C 相同的 Concept 数据"
+  },
+  "paragraph_challenge_construction": {
+    "selection_before_retrieval_evaluation": true,
+    "candidate_unit": "Paragraph",
+    "ranking": "按 Paragraph embedding 与同 Source Episode embedding 的最大 cosine 从低到高排序，再按 source_key、paragraph_index、id 打破平局",
+    "deduplication": "每个 source_key 最多一题",
+    "target_count": 8,
+    "eligibility": [
+      "清洗后 Paragraph 至少 200 字",
+      "包含可由 Source 原文明示回答的剧情事实",
+      "该事实没有被同 Source Episode 摘要逐字完整保留",
+      "排除只有格式、别名表、预告标题或无语义感叹的片段"
+    ],
+    "question_generation": "依据 Paragraph 与同 Source Episode 摘要生成自然语言改写问题；问题不得复制主要答案短语，必须输出原文证据摘录；模型不得使用作品外知识",
+    "ground_truth": "该 Source 下的 Episode 作为 source-closure Episode group，答案事实必须能回溯到冻结 Paragraph/Source 原文"
+  },
+  "concept_challenge_construction": {
+    "selection_before_retrieval_evaluation": true,
+    "candidate_unit": "经准入门新晋升且不是 reuse 的 Concept",
+    "ranking": "优先跨 Episode/Source 重复，其次按准入 confidence、与已有 Concept 的语义新颖度、concept id 排序",
+    "deduplication": "每个主要 source_key 最多两题",
+    "target_count": 8,
+    "eligibility": [
+      "至少连接一个直接证据 Episode",
+      "不是人物服装/临时状态变体，不是一次性动作或完整句子改写",
+      "问题能使用描述或别名自然询问，不依赖数据库内部名称",
+      "答案只能使用关联 Episode 与 Source 原文"
+    ],
+    "ground_truth": "所有直接 involves 该 Concept 的 Episode 构成等价证据组"
+  },
+  "frozen_query_protocol": {
+    "planning_repeats": 3,
+    "pairing": "同一题同一重复的 QueryIntent、查询文本和 float32 embedding 在四臂间共享",
+    "primary_budget": 20,
+    "pressure_budget": 12,
+    "growth_edges": false,
+    "association_cues": false,
+    "graph_max_hops": 3
+  },
+  "success_gates": {
+    "per_question_stable_positive": "至少 2/3 次配对差值 > 0，且 0/3 次 < 0",
+    "paragraph_mechanism": "至少两个 Paragraph 挑战题稳定增加候选覆盖，且至少两个稳定增加最终 Top-20 覆盖",
+    "concept_mechanism": "至少两个 Concept 挑战题稳定增加候选覆盖，且至少两个稳定增加最终 Top-20 覆盖",
+    "existing_network_non_regression": "Stage 11 七个网络题不得出现 stable_negative；总体平均差值不得小于 0",
+    "scope_control_non_regression": "五个范围控制题不得出现 stable_negative",
+    "mechanism_attribution": "收益必须能由新增 Paragraph provenance 或新晋升 Concept 路径解释",
+    "combined_arm": "PC 单独报告，不能代替 P 或 C 各自通过"
+  },
+  "anti_bias_rules": [
+    "问题和证据清单一旦冻结，不因 A/P/C/PC 结果修改",
+    "机制挑战集用于证明目标机制可工作；既有网络题用于估计部署非回归，两者不得混成一个平均数",
+    "新增 Concept/Association 数量只作资产审计，不是成功指标"
+  ]
+}

@@ -1,0 +1,1092 @@
+{
+  "database": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/current-dehardcode-import-smoke-20260901.db",
+  "counts": {
+    "sources": 2,
+    "episodes": 12,
+    "concepts": 16,
+    "associations": 28
+  },
+  "embedding_blob_lengths": {
+    "episode": [
+      4096
+    ],
+    "concept": [
+      4096
+    ],
+    "paragraph": []
+  },
+  "integrity": {
+    "schema_version": 9,
+    "expected_schema_version": 9,
+    "sqlite": "ok",
+    "foreign_key_issues": [],
+    "orphan_association_ids": [],
+    "concepts_without_episode_links": [],
+    "embedding_issues": [],
+    "empty_content_issues": [],
+    "json_payload_issues": [],
+    "fts_count_issues": [],
+    "sources_without_episodes": [],
+    "reference_coverage_issues": [],
+    "explicit_evidence_boundary_issues": [],
+    "explicit_evidence_mapping_ambiguities": [],
+    "association_generation_issues": [],
+    "episode_evidence_issues": [],
+    "noncompleted_runs": [],
+    "noncompleted_tasks": []
+  },
+  "segment_reconciliation": {
+    "supported_files": 1,
+    "expected_segments": 2,
+    "actual_segments": 2,
+    "roots": [
+      {
+        "root": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/serihu-quality-v32-abydos-audit-corpus-20260901",
+        "supported_files": 1,
+        "expected_segments": 2
+      }
+    ],
+    "source_key_collisions": [],
+    "missing_segments": [],
+    "unexpected_segments": []
+  },
+  "tasks": [
+    {
+      "stage": "pass1",
+      "status": "completed",
+      "count": 2
+    }
+  ],
+  "episodes_per_source": {
+    "sources_with_episodes": 2,
+    "minimum": 4,
+    "mean": 6.0,
+    "maximum": 8,
+    "counts": [
+      8,
+      4
+    ]
+  },
+  "association_types": {
+    "semantic": 28
+  },
+  "quality": {
+    "concept_alias_collisions": [],
+    "concept_output_issues": [],
+    "participant_grounding_issues": [],
+    "participant_completeness_issues": [],
+    "evidence_participant_grounding_issues": [],
+    "cross_source_evidence_duplicates": [],
+    "episode_evidence_coverage_issues": []
+  },
+  "temporal_cycles": {
+    "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt": {
+      "episode_count": 12,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    },
+    "__global__": {
+      "episode_count": 12,
+      "temporal_edge_count": 0,
+      "has_cycle": false,
+      "cycle_or_blocked_episode_ids": [],
+      "non_ordering_temporal_edge_ids": [],
+      "skipped_temporal_edge_ids": []
+    }
+  },
+  "negative_associations": 0,
+  "duplicate_episode_pairs": [],
+  "associations": [
+    {
+      "id": 1,
+      "from_type": "episode",
+      "from_id": 1,
+      "to_type": "concept",
+      "to_id": 1,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“阿比多斯自治区”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 2,
+      "from_type": "episode",
+      "from_id": 1,
+      "to_type": "concept",
+      "to_id": 2,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“凯撒集团”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 3,
+      "from_type": "episode",
+      "from_id": 1,
+      "to_type": "concept",
+      "to_id": 3,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“阿比多斯前学生会”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 4,
+      "from_type": "episode",
+      "from_id": 2,
+      "to_type": "concept",
+      "to_id": 4,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“アヤネ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 5,
+      "from_type": "episode",
+      "from_id": 3,
+      "to_type": "concept",
+      "to_id": 5,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ホシノ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 6,
+      "from_type": "episode",
+      "from_id": 4,
+      "to_type": "concept",
+      "to_id": 5,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ホシノ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 7,
+      "from_type": "episode",
+      "from_id": 4,
+      "to_type": "concept",
+      "to_id": 6,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“阿比多斯对策委员会”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 8,
+      "from_type": "episode",
+      "from_id": 5,
+      "to_type": "concept",
+      "to_id": 2,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“凯撒集团”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 9,
+      "from_type": "episode",
+      "from_id": 5,
+      "to_type": "concept",
+      "to_id": 7,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“阿比多斯学校债务”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 10,
+      "from_type": "episode",
+      "from_id": 6,
+      "to_type": "concept",
+      "to_id": 8,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“凯撒贷款陷阱”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 11,
+      "from_type": "episode",
+      "from_id": 7,
+      "to_type": "concept",
+      "to_id": 2,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“凯撒集团”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 12,
+      "from_type": "episode",
+      "from_id": 7,
+      "to_type": "concept",
+      "to_id": 9,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“头盔团”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 13,
+      "from_type": "episode",
+      "from_id": 8,
+      "to_type": "concept",
+      "to_id": 10,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“ヒナ”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 1,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 14,
+      "from_type": "episode",
+      "from_id": 8,
+      "to_type": "concept",
+      "to_id": 11,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“阿比多斯沙漠”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 1,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 15,
+      "from_type": "episode",
+      "from_id": 9,
+      "to_type": "concept",
+      "to_id": 4,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“绫音”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 16,
+      "from_type": "episode",
+      "from_id": 9,
+      "to_type": "concept",
+      "to_id": 12,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“白子”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 17,
+      "from_type": "episode",
+      "from_id": 9,
+      "to_type": "concept",
+      "to_id": 13,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“芹香”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 18,
+      "from_type": "episode",
+      "from_id": 9,
+      "to_type": "concept",
+      "to_id": 5,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“星野”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 19,
+      "from_type": "episode",
+      "from_id": 9,
+      "to_type": "concept",
+      "to_id": 14,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“格黑娜风纪委员长”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 20,
+      "from_type": "episode",
+      "from_id": 10,
+      "to_type": "concept",
+      "to_id": 12,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“白子”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 21,
+      "from_type": "episode",
+      "from_id": 10,
+      "to_type": "concept",
+      "to_id": 15,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“老师”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 22,
+      "from_type": "episode",
+      "from_id": 11,
+      "to_type": "concept",
+      "to_id": 12,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“白子”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 23,
+      "from_type": "episode",
+      "from_id": 11,
+      "to_type": "concept",
+      "to_id": 15,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“老师”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 24,
+      "from_type": "episode",
+      "from_id": 11,
+      "to_type": "concept",
+      "to_id": 5,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“星野”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 25,
+      "from_type": "episode",
+      "from_id": 11,
+      "to_type": "concept",
+      "to_id": 16,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“风纪委员会”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 26,
+      "from_type": "episode",
+      "from_id": 12,
+      "to_type": "concept",
+      "to_id": 15,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“老师”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 27,
+      "from_type": "episode",
+      "from_id": 12,
+      "to_type": "concept",
+      "to_id": 12,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“白子”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    },
+    {
+      "id": 28,
+      "from_type": "episode",
+      "from_id": 12,
+      "to_type": "concept",
+      "to_id": 5,
+      "relation_type": "semantic",
+      "relation_key": "involves",
+      "relation_text": "该 Episode 涉及概念“星野”",
+      "polarity": 1,
+      "weight": 0.9500000000000002,
+      "confidence": 1.0,
+      "generation": 0,
+      "evidence_count": 1,
+      "evidence_json": "[]",
+      "audit_json": "[]",
+      "created_reason": "由 Episode 的 Concept 提取结果建立"
+    }
+  ],
+  "episodes": [
+    {
+      "id": 1,
+      "source_id": 1,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "アヤネ（绫音）透露，阿比多斯自治区的土地，包括已经沙漠化的原校舍周边数千万坪荒地以及尚未沙漠化的市内建筑和土地，其所有权几乎都已转移到凯撒集团（カイザーコーポレーション）手中。目前仅剩用作本馆的校舍及周边部分地区所有权尚未移交。她指出交易主体是阿比多斯的前学生会，交易在学生会解散后已停止。ノノミ（野宫）质疑为何学校自治区土地能被交易。ホシノ（星野）指出学校资产决议权在学生会，只有学生会可能进行此类交易。セリカ（芹香）质问前学生会为何将学校土地卖给凯撒集团。",
+      "participants_json": "[\"アヤネ / 绫音 / Ayane / 아야네\", \"ノノミ / 野宫 / Nonomi / 노노미\", \"ホシノ / 星野 / Hoshino / 호시노\", \"セリカ / 芹香 / Serika / 세리카\", \"シロコ / 白子 / Shiroko / 시로코\"]",
+      "event_type": "信息揭露与讨论",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85,
+      "evidence_quotes_json": "[\"ノノミ(野宫/Nonomi/노노미): カイザーコンストラクション……カイザーコーポレーションの系列ですか……！？\\nノノミ(野宫/Nonomi/노노미): アビドスの自治区を、カイザーコーポレーションが所有している……！？\\nシロコ(白子/Shiroko/시로코): ……柴関ラーメンも？\\nアヤネ(绫音/Ayane/아야네): 大将は、元々もうお店を畳むことを決めていたそうです……いつかは起きるはずのことだった、と……。\\nセリカ(芹香/Serika/세리카): ……。\\nシロコ(白子/Shiroko/시로코): ……！？\\nホシノ(星野/Hoshino/호시노): どういうこと……！？\\nノノミ(野宫/Nonomi/노노미): そんな、柴関ラーメンが……。\\nアヤネ(绫音/Ayane/아야네): ……すでに砂漠になってしまった、本来のアビドス高校本館と、その周辺数千万坪の荒れ地。\\nアヤネ(绫音/Ayane/아야네): そしてまだ砂漠化が進んでない、市内の建物や土地まで……。\\nアヤネ(绫音/Ayane/아야네): 所有権がまだ渡ってないのは、今は本館として使っているこの校舎と、周辺の一部の地域だけでした……。\\nノノミ(野宫/Nonomi/노노미): で、ですが、どうしてこんなことに？学校の自治区の土地を取引だなんて、普通できるはずが……。\\nノノミ(野宫/Nonomi/노노미): いったい誰が、こんなことを……。\\nホシノ(星野/Hoshino/호시노): ……アビドスの生徒会、でしょ。\\nシロコ(白子/Shiroko/시로코): ……！\\nホシノ(星野/Hoshino/호시노): 学校の資産の議決権は、生徒会にある。それが可能なのは普通に考えて、その学校の生徒会だけ。\\nアヤネ(绫音/Ayane/아야네): ……はい、その通りです。取引の主体は、アビドスの前生徒会でした。\\nノノミ(野宫/Nonomi/노노미): そんな……アビドスの生徒会は、もう2年前に無くなったはずでは……。\\nアヤネ(绫音/Ayane/아야네): ……はい。ですので、生徒会が無くなってからは、取引は行われていません。\\nホシノ(星野/Hoshino/호시노): そっか、2年前……。\\nセリカ(芹香/Serika/세리카): 何をやってんのよ、その生徒会のやつらは！！\\nセリカ(芹香/Serika/세리카): 学校の土地を売る？それもカイザーコーポレーションなんかに！？\\nセリカ(芹香/Serika/세리카): 学校の主体は生徒でしょ！？どうしてそんなこと……っ！！\\nホシノ(星野/Hoshino/호시노): ……。\\nノノミ(野宫/Nonomi/노노미): こんな大ごとに、ずっと私たちは気づかないまま……。\"]",
+      "evidence_spans_json": "[[9, 33]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    },
+    {
+      "id": 2,
+      "source_id": 1,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "アヤネ（绫音）自责地说，因为学校自治区属于学校是过于理所当然的常识，所以大家只顾着关注债务，没能早点察觉土地被出售的事情。她表示如果自己能更早注意到就好了。",
+      "participants_json": "[\"アヤネ / 绫音 / Ayane / 아야네\"]",
+      "event_type": "自责与反思",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 1.0,
+      "evidence_quotes_json": "[\"アヤネ(绫音/Ayane/아야네): ……それぞれの学校の自治区は、学校のもの。余りにも当たり前の常識です。当たり前すぎて、借金の方にばかり気を取られて、気づくことが出来ませんでした。\\nアヤネ(绫音/Ayane/아야네): 私が、もう少し早く気付いていたら……。\"]",
+      "evidence_spans_json": "[[34, 35]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    },
+    {
+      "id": 3,
+      "source_id": 1,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "ホシノ（星野）安慰アヤネ，说这不是她该在意的事，因为土地交易发生在アヤネ入学之前，甚至是在对策委员会成立之前。",
+      "participants_json": "[\"ホシノ / 星野 / Hoshino / 호시노\", \"アヤネ\"]",
+      "event_type": "安慰与澄清时间线",
+      "story_time_text": "アヤネ入学及对策委员会成立之前",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 1.0,
+      "evidence_quotes_json": "[\"ホシノ(星野/Hoshino/호시노): ……ううん、それはアヤネちゃんが気にすることじゃないよ。\\nホシノ(星野/Hoshino/호시노): これはアヤネちゃんが入学するよりも前の……いや、対策委員会ができるよりも前のことなんだから。\"]",
+      "evidence_spans_json": "[[36, 37]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    },
+    {
+      "id": 4,
+      "source_id": 1,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "ノノミ（野宫）和セリカ（芹香）得知ホシノ（星野）曾是阿比多斯的学生会成员，并担任副会长。ホシノ回忆道，她加入学生会时，在校生已不足百人，教职员工已无，课程早已中断，学生会室像仓库，没有正式交接文件。她描述最后的学生会只有新任学生会长和她两人，会长是个鲁莽的笨蛋，而她自己是性格不好的新生，一切都很混乱。シロコ（白子）指出ホシノ在学生会解散后创立对策委员会功不可没，并表达了对她的尊敬。",
+      "participants_json": "[\"ノノミ / 野宫 / Nonomi / 노노미\", \"セリカ / 芹香 / Serika / 세리카\", \"アヤネ / 绫音 / Ayane / 아야네\", \"ホシノ / 星野 / Hoshino / 호시노\", \"シロコ / 白子 / Shiroko / 시로코\", \"先生 / 老师 / Sensei / 선생님\"]",
+      "event_type": "背景回忆与角色互动",
+      "story_time_text": "约两年前",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85,
+      "evidence_quotes_json": "[\"シロコ(白子/Shiroko/시로코): ……ホシノ先輩、何か知ってるの？\\nノノミ(野宫/Nonomi/노노미): あ、そうです！ホシノ先輩も、アビドスの生徒会でしたよね？\\nセリカ(芹香/Serika/세리카): え？そ、そうだったの！？\\nアヤネ(绫音/Ayane/아야네): それに……最後の生徒会の、副会長だったと聞きました。\\nホシノ(星野/Hoshino/호시노): ……うへ～、まあそんなこともあったねえ。2年も前のことだし、そもそも私もその辺の生徒会の先輩たちとは、実際に関わりは無くってさー。\\nホシノ(星野/Hoshino/호시노): 私が生徒会に入った時には、もう生徒会の人たちはほとんど辞めちゃってたから。\\nホシノ(星野/Hoshino/호시노): その時はもう在校生も二桁になってたし、教職員もいない。授業なんてものは、もうとっくの昔に途絶えてた。\\nホシノ(星野/Hoshino/호시노): 生徒会室も、そうと言われなければただの倉庫にしか見えないところだったし、引継ぎ書類なんて立派なものは一枚も無かった。ちょうど砂漠化を避けようとして、学校の建物を何度も移してた時期だったってこともあってね。\\n[record: 2]\\n[speaker_raw: ???]\\nunknown: ホシノ(星野/Hoshino/호시노): そもそも最後の生徒会って言ったって、新任の生徒会長と私の二人だけだったし。\\n[record: 3]\\n[speaker_raw: ???]\\nunknown: ホシノ(星野/Hoshino/호시노): ……その生徒会長は無鉄砲で、会長なのに校内でも随一のバカで……私の方だって、嫌な性格の新入生でさ。\\nホシノ(星野/Hoshino/호시노): いや～……何もかもめちゃくちゃだったよ。\\nセリカ(芹香/Serika/세리카): 校内随一のバカが生徒会長……？何それ、どんな生徒会よ……？\\nアヤネ(绫音/Ayane/아야네): そもそも、セリカちゃんも成績はそんなに……。\\nセリカ(芹香/Serika/세리카): わ、分かってるってば！！どうして急に私の成績の話になるわけ！？一応ツッコんでおいただけじゃん！？\\nホシノ(星野/Hoshino/호시노): うへ～、いやいや、正にその通りだよ。生徒会なんて肩書だけで、おバカさん二人が集まっただけだったからね。\\nホシノ(星野/Hoshino/호시노): 何の間違いだか、生徒会なんかに入っちゃって……いや～、あの時はあちこちに行ったり来たりだったねぇ。\\nセリカ(芹香/Serika/세리카): ホシノ先輩……。\\nシロコ(白子/Shiroko/시로코): ……ホシノ先輩が責任を感じることじゃない。\\nシロコ(白子/Shiroko/시로코): 昔の事情は知らないけど、実際に生徒会が解散になった後……アビドスに対策委員会ができたのは、間違いなくホシノ先輩のおかげ。\\nホシノ(星野/Hoshino/호시노): う、うん……？\\nシロコ(白子/Shiroko/시로코): ……ホシノ先輩は怠け者だし、色々とはぐらかしてばっかりだけど、大事な瞬間には絶対に誰よりも前に立ってる。\\nホシノ(星野/Hoshino/호시노): ……うへ～、そうだっけ？よく覚えてな――\\n先生(老师/Sensei/선생님): そうだったね、いつも絶対に先陣を切る。\\nセリカ(芹香/Serika/세리카): 私、それ初耳なんだけど！？何で教えてくれなかったの！？\\nシロコ(白子/Shiroko/시로코): ホシノ先輩は色々とダメなところもあるけど、尊敬はしてる。\\nセリカ(芹香/Serika/세리카): それって褒め言葉なの？悪口なの……？\\nホシノ(星野/Hoshino/호시노): ど、どうしたのシロコちゃん！？急にそんな青春っぽい台詞を……！おじさんこういう雰囲気、ちょっと苦手なんだけど！？\\nシロコ(白子/Shiroko/시로코): ……や、なんとなく、言っておこうかなって思って。\\nホシノ(星野/Hoshino/호시노): え、えぇ……？\\nシロコ(白子/Shiroko/시로코): ……。\"]",
+      "evidence_spans_json": "[[38, 71]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    },
+    {
+      "id": 5,
+      "source_id": 1,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "ノノミ（野宫）询问为何前学生会将土地卖给凯撒集团。シロコ（白子）推测可能暗中勾结。アヤネ（绫音）认为并非如此。ホシノ（星野）推测前学生会可能是为了偿还学校债务才出售土地。アヤネ证实当时学校债务已非常庞大，但即便如此，阿比多斯的土地也卖不出高价，不足以减少债务。ノノミ提出这可能导致了反复卖地的恶性循环。先生（老师）指出阿比多斯可能陷入了恶劣的陷阱。シロコ指出向阿比多斯放贷的也是凯撒集团。",
+      "participants_json": "[\"ノノミ / 野宫 / Nonomi / 노노미\", \"シロコ / 白子 / Shiroko / 시로코\", \"アヤネ / 绫音 / Ayane / 아야네\", \"ホシノ / 星野 / Hoshino / 호시노\", \"先生 / 老师 / Sensei / 선생님\"]",
+      "event_type": "分析与推测",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85,
+      "evidence_quotes_json": "[\"ノノミ(野宫/Nonomi/노노미): ……では、どうして前の生徒会は、カイザーコーポレーションにアビドスの土地を売ったんでしょうか？\\nシロコ(白子/Shiroko/시로코): 実は裏で手を組んでたとか。\\nアヤネ(绫音/Ayane/아야네): いえ……それは違うと思います。\\nホシノ(星野/Hoshino/호시노): そうだね～。私もしっかり関わってないからただの推測だけど……ちゃんと学校のためを思って、色々と頑張ってた人たちだったんじゃないかなーって思ってる。\\nホシノ(星野/Hoshino/호시노): 多分、最初は借金を返そうとして……って感じなんだろうな～。\\nノノミ(野宫/Nonomi/노노미): 借金のために、土地を……。\\nアヤネ(绫音/Ayane/아야네): はい、私もそう思います。当時すでに学校の借金は、かなり膨れ上がった状態でした。\\nアヤネ(绫音/Ayane/아야네): ただ、それでもこのアビドスの土地に高値が付くはずもなく、少なくとも借金自体を減らすには至らなかった……。\\nノノミ(野宫/Nonomi/노노미): それで、繰り返し土地を売ってしまう負の循環に……ということでしょうか。\\nセリカ(芹香/Serika/세리카): 何それ、なんかおかしくない？最初からどうしようもないっていうか……。\\n先生(老师/Sensei/선생님): ……そういう手口も、あるよね。\\nセリカ(芹香/Serika/세리카): え？どういうこと？\\n先生(老师/Sensei/선생님): アビドスは、悪質な罠に嵌められたのかもしれない。\\nセリカ(芹香/Serika/세리카): え、え？\\nホシノ(星野/Hoshino/호시노): あ～……\\nホシノ(星野/Hoshino/호시노): なるほど、そっか。\\nシロコ(白子/Shiroko/시로코): ……アビドスにお金を貸したのも、カイザーコーポレーション。\\nアヤネ(绫音/Ayane/아야네): ……！！\\nノノミ(野宫/Nonomi/노노미): ということは……\\n[record: 4]\\n[speaker_raw: ???]\\nunknown: シロコ(白子/Shiroko/시로코): カイザーローンが、学校の手に負えないぐらいのお金を貸して、利子だけでも払ってもらうために土地を売るよう仕向ける。\"]",
+      "evidence_spans_json": "[[72, 93]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    },
+    {
+      "id": 6,
+      "source_id": 1,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "シロコ（白子）描述了凯撒贷款的陷阱模式：凯撒贷款向学校提供无法负担的巨额贷款，然后诱导学校出售土地来支付利息。アヤネ（绫音）说，凯撒最初可能以出售无用的沙漠或荒地为诱饵，学校因缺乏积极反对理由而同意，但低价售地并未减少债务，只是不断失去土地。ホシノ（星野）推测这可能是一个策划已久、规模庞大的陷阱，可能始于数十年前。セリカ（芹香）指责凯撒集团玩弄阿比多斯，并指责前学生会的无能。先生（老师）让セリカ冷静，指出错误在于欺骗者而非受骗者。ホシノ说陷入困境的人更容易走投无路并做出任何事情。",
+      "participants_json": "[\"シロコ / 白子 / Shiroko / 시로코\", \"アヤネ / 绫音 / Ayane / 아야네\", \"ノノミ / 野宫 / Nonomi / 노노미\", \"ホシノ / 星野 / Hoshino / 호시노\", \"セリカ / 芹香 / Serika / 세리카\", \"先生 / 老师 / Sensei / 선생님\"]",
+      "event_type": "陷阱模式分析与情绪反应",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85,
+      "evidence_quotes_json": "[\"unknown: シロコ(白子/Shiroko/시로코): カイザーローンが、学校の手に負えないぐらいのお金を貸して、利子だけでも払ってもらうために土地を売るよう仕向ける。\\nアヤネ(绫音/Ayane/아야네): はい。きっと最初は、要らない砂漠や荒廃した土地でも売ったらと、甘言を弄したのでしょう。\\nアヤネ(绫音/Ayane/아야네): どうせ砂漠と化した使い道のない土地、その提案を断る積極的な理由もなく……\\nアヤネ(绫音/Ayane/아야네): ですが、同時にそんな安値で売ったところで借金が減るわけでもなく、土地を取られる一方で……\\nノノミ(野宫/Nonomi/노노미): アビドスにお金を貸した時点で、こうなるように全てを……。\\nホシノ(星野/Hoshino/호시노): だいぶ前から計画してた罠だったのかもね。それこそ、何十年も前から……。\\nホシノ(星野/Hoshino/호시노): それくらい、規模の大きな計画だったのかも……。\\nセリカ(芹香/Serika/세리카): なにそれ！？ただただカイザーコーポレーションのやつらに弄ばれてるだけじゃん！\\nセリカ(芹香/Serika/세리카): 生徒会のやつら、どんだけ無能なわけ！？こんな詐欺みたいなやり方に、騙されてさえいなければ……！\\n先生(老师/Sensei/선생님): セリカ、落ち着いて。\\nセリカ(芹香/Serika/세리카): 先生……？\\n先生(老师/Sensei/선생님): 悪いのは騙されることより、騙すことだと思うよ。\\nセリカ(芹香/Serika/세리카): ……。\\nホシノ(星野/Hoshino/호시노): ……。\\nセリカ(芹香/Serika/세리카): ……わ、私も分かってるわよ！た、たまにゲルマニウムのブレスレットとか買ったりするし、下手したらここの誰よりも分かってる！悪いのは騙した方だってことは！\\nセリカ(芹香/Serika/세리카): 悔しい、どうして……。\\nセリカ(芹香/Serika/세리카): ただでさえ苦しんでるアビドスに、どうしてこんなひどいことを……。\\n先生(老师/Sensei/선생님): ……。\\nシロコ(白子/Shiroko/시로코): ……。\\nノノミ(野宫/Nonomi/노노미): ……。\\nホシノ(星野/Hoshino/호시노): ……苦しんでる人たちって、切羽詰まりやすくなっちゃうからね～。\\nホシノ(星野/Hoshino/호시노): 切羽詰まると、人は何でもやっちゃうものなんだよ……。\\nホシノ(星野/Hoshino/호시노): ま、よくある話だけどね。ただそれだけだと思うよ、セリカちゃん。\\nアヤネ(绫音/Ayane/아야네): 学校の借金、このアビドスが陥ってる状況、そして私たちが先生と一緒に見つけ出してきた幾つかの糸口。\"]",
+      "evidence_spans_json": "[[93, 116]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    },
+    {
+      "id": 7,
+      "source_id": 1,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "アヤネ（绫音）说学校债务、阿比多斯的现状以及他们与老师找到的几个突破口正逐渐联系起来。她说凯撒集团在学生会消失后无法再购买土地，因此雇佣头盔团企图夺取这“最后的土地”——学校本身。她说凯撒的目标是土地而非金钱。ノノミ（野宫）表示同意，但提出疑问：为何要夺取已几乎全是荒地和沙漠的阿比多斯自治区土地？アヤネ也认为难以看出其中有何巨大利益。",
+      "participants_json": "[\"アヤネ / 绫音 / Ayane / 아야네\", \"ノノミ / 野宫 / Nonomi / 노노미\", \"先生(老师/Sensei/선생님)\"]",
+      "event_type": "结论与遗留疑问",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85,
+      "evidence_quotes_json": "[\"アヤネ(绫音/Ayane/아야네): 学校の借金、このアビドスが陥ってる状況、そして私たちが先生と一緒に見つけ出してきた幾つかの糸口。\\nアヤネ(绫音/Ayane/아야네): 全てが少しずつ、繋がり始めている気がします。\\nアヤネ(绫音/Ayane/아야네): カイザーコーポレーションは、アビドスの生徒会が消えてしまってから土地を購入する方法が無くなり……\\nアヤネ(绫音/Ayane/아야네): まだ手に入れていない「最後の土地」であるこの学校を奪うために、ヘルメット団を雇用していた……！\\nアヤネ(绫音/Ayane/아야네): カイザーコーポレーションの狙いはお金ではなく土地だった、という結論で良いと思います！\\nノノミ(野宫/Nonomi/노노미): ですね、バッチリかと。そうなると、次の疑問が出てきますが……どうして土地なんでしょうか？\\nノノミ(野宫/Nonomi/노노미): アビドス自治区は、もうほとんどが荒れ地と砂漠、砂まみれの廃墟になっているのに……。\\nアヤネ(绫音/Ayane/아야네): 確かに……こんな土地を奪ったところで、何か大きな利益があるとは思えませんが……。\\n先生(老师/Sensei/선생님): 砂漠といえば、ちょっと耳に入れたいことが……。\"]",
+      "evidence_spans_json": "[[116, 124]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    },
+    {
+      "id": 8,
+      "source_id": 1,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 0,
+      "text": "先生（老师）提到有关于沙漠的信息，并转述了ヒナ（日奈）提供的情报。パンデモニウム・ソサエティーティーパーティー都不知道的信息，但认为应该告知老师：在阿比多斯被遗弃的沙漠里，凯撒集团正在策划着什么。ホシノ（星野）、シロコ（白子）和ノノミ（野宫）重复了关键信息。",
+      "participants_json": "[\"先生 / 老师 / Sensei / 선생님\", \"ヒナ / 日奈 / Hina / 히나\", \"ホシノ / 星野 / Hoshino / 호시노\", \"シロコ / 白子 / Shiroko / 시로코\", \"ノノミ / 野宫 / Nonomi / 노노미\"]",
+      "event_type": "新情报揭露",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85,
+      "evidence_quotes_json": "[\"先生(老师/Sensei/선생님): 砂漠といえば、ちょっと耳に入れたいことが……。\\nシロコ(白子/Shiroko/시로코): ……先生？\\n先生(老师/Sensei/선생님): ヒナから聞いた情報を話す。\\nヒナ(日奈/Hina/히나): ……シャーレの先生。\\nヒナ(日奈/Hina/히나): これはまだ万魔殿も、（パンデモニウム・ソサエティー）ティーパーティーも知らない情報だけど。\\nヒナ(日奈/Hina/히나): ……あなたには知らせておいた方が良いかもしれない。\\nヒナ(日奈/Hina/히나): アビドスの捨てられた砂漠……あそこで、カイザーコーポレーションが何かを企んでる。\\nホシノ(星野/Hoshino/호시노): アビドスの砂漠で……\\nシロコ(白子/Shiroko/시로코): カイザーコーポレーションが……\\nノノミ(野宫/Nonomi/노노미): 何かを企んでる……？\"]",
+      "evidence_spans_json": "[[124, 133]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    },
+    {
+      "id": 9,
+      "source_id": 2,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 1,
+      "text": "绫音、白子和芹香对格黑娜风纪委员长和老师的事情感到困惑，芹香提议直接去确认。星野说芹香说了很好的话，并开玩笑说芹香成长得如此茁壮，自己作为妈妈很开心，快要哭了，还索要纸巾。芹香对星野营造的氛围感到困惑和不满。绫音尴尬地笑了笑，然后说芹香说得对。",
+      "participants_json": "[\"アヤネ / 绫音 / Ayane / 아야네\", \"シロコ / 白子 / Shiroko / 시로코\", \"セリカ / 芹香 / Serika / 세리카\", \"ホシノ / 星野 / Hoshino / 호시노\"]",
+      "event_type": "对话与提议",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85,
+      "evidence_quotes_json": "[\"unknown: アヤネ(绫音/Ayane/아야네): そ、そんなことをどうして、ゲヘナの風紀委員長が……。\\nシロコ(白子/Shiroko/시로코): それに、どうして先生に……？\\nセリカ(芹香/Serika/세리카): ああもう、そんな難しいことを考えるより、先にやることがあるでしょ！\\nセリカ(芹香/Serika/세리카): 何が何だか分からないけど、この目で直接確かめた方が早いって！\\nシロコ(白子/Shiroko/시로코): ……ん、そうだね。\\nホシノ(星野/Hoshino/호시노): ……いや～、セリカちゃん良いこと言うねえ。こんなにたくましく育ってママは嬉しいよ、泣いちゃいそう。ティッシュちょうだい。\\nセリカ(芹香/Serika/세리카): な、何よこの雰囲気！？私がまともなこと言ったらおかしいわけ！？\\nアヤネ(绫音/Ayane/아야네): あ、あはは、\\nアヤネ(绫音/Ayane/아야네): そんなことは……ですが、セリカちゃんの言う通りです。\"]",
+      "evidence_spans_json": "[[5, 13]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    },
+    {
+      "id": 10,
+      "source_id": 2,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 1,
+      "text": "白子请求在出发前与老师单独谈谈。老师跟随白子离开。",
+      "participants_json": "[\"シロコ / 白子 / Shiroko / 시로코\", \"先生 / 老师 / Sensei / 선생님\"]",
+      "event_type": "请求与行动",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 1.0,
+      "evidence_quotes_json": "[\"シロコ(白子/Shiroko/시로코): ……先生。\\nシロコ(白子/Shiroko/시로코): 出発する前に、ちょっと時間が欲しい。\\nシロコ(白子/Shiroko/시로코): ……相談したいことがあって。\\n先生(老师/Sensei/선생님): シロコについて行く。\\nシロコ(白子/Shiroko/시로코): ……。\"]",
+      "evidence_spans_json": "[[14, 18]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    },
+    {
+      "id": 11,
+      "source_id": 2,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 1,
+      "text": "白子交给老师一件从星野前辈包里找到的东西，并解释她因为星野长时间离席且在被风纪委员会逼入绝境时仍未出现而感到怀疑，所以搜查了星野的包。白子承认这是错误行为，并做好了被老师和星野责备的准备。",
+      "participants_json": "[\"シロコ / 白子 / Shiroko / 시로코\", \"先生 / 老师 / Sensei / 선생님\"]",
+      "event_type": "转交物品与坦白",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 1.0,
+      "evidence_quotes_json": "[\"シロコ(白子/Shiroko/시로코): ……これ。\\n先生(老师/Sensei/선생님): シロコから何かを受け取る。\\nシロコ(白子/Shiroko/시로코): ……ホシノ先輩のバッグの中から見つけたの。\\nシロコ(白子/Shiroko/시로코): ……ん。\\nシロコ(白子/Shiroko/시로코): 書かれてる通りの意味だと思う。\\nシロコ(白子/Shiroko/시로코): 先生以外には誰にも見せてないし、言ってもないけど……そもそもバッグを漁ったこと自体、ホシノ先輩にはバレてる気がする。\\n先生(老师/Sensei/선생님): シロコは、どうして……？\\nシロコ(白子/Shiroko/시로코): ……ホシノ先輩があそこまで長い時間席を外すなんてこと、今までに無かった。それに、風紀委員会からあんなに追い詰められるまで、先輩が来ないなんて。\\nシロコ(白子/Shiroko/시로코): それがどうしても引っかかって……先輩のバッグを漁ってみたら出てきたの。\\nシロコ(白子/Shiroko/시로코): ……ごめん、悪いことなのは分かってる。ホシノ先輩からはもちろん、生徒として、先生にも怒られても仕方ない。\"]",
+      "evidence_spans_json": "[[19, 28]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    },
+    {
+      "id": 12,
+      "source_id": 2,
+      "source_key": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "segment_index": 1,
+      "text": "老师表示还有很多事情不清楚，提议暂时保密。白子认为星野前辈在隐瞒什么。",
+      "participants_json": "[\"先生 / 老师 / Sensei / 선생님\", \"シロコ / 白子 / Shiroko / 시로코\"]",
+      "event_type": "商议与推测",
+      "story_time_text": "",
+      "story_order": null,
+      "timeline_scope": "003__主线剧情_第1篇_対策委員会編_第2章__segment-0005.txt",
+      "confidence": 0.85,
+      "evidence_quotes_json": "[\"先生(老师/Sensei/선생님): ……まだ、分かってないことが多すぎるから。 / とりあえず保留で。一旦これは秘密にしておこうか。\\nシロコ(白子/Shiroko/시로코): ……うん。先生も分かってると思うけど……ホシノ先輩、何か隠し事をしてる。\\nシロコ(白子/Shiroko/시로코): ……うん。先生も分かってると思うけど……ホシノ先輩、何か隠し事をしてる。\"]",
+      "evidence_spans_json": "[[29, 31]]",
+      "evidence_basis": "reasoning_view_nonempty_lines_v1"
+    }
+  ],
+  "concepts": [
+    {
+      "id": 1,
+      "canonical_name": "阿比多斯自治区",
+      "description": "一个学校自治区，其大部分土地所有权已转移给凯撒集团，仅剩校舍及周边部分地区未移交。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "阿比多斯自治区",
+          "language": "canonical"
+        },
+        {
+          "alias": "アビドス自治区",
+          "language": "ja"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "canonical_name": "凯撒集团",
+      "description": "一个企业集团，已获得阿比多斯自治区大部分土地的所有权。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "凯撒集团",
+          "language": "canonical"
+        },
+        {
+          "alias": "カイザーコーポレーション",
+          "language": "ja"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "canonical_name": "阿比多斯前学生会",
+      "description": "阿比多斯学校的前学生自治组织，拥有学校资产决议权，曾将学校土地出售给凯撒集团。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "阿比多斯前学生会",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "canonical_name": "アヤネ",
+      "description": "阿比多斯对策委员会成员，因未能及早察觉学校土地被出售而感到自责。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "アヤネ",
+          "language": "canonical"
+        },
+        {
+          "alias": "绫音",
+          "language": "zh"
+        },
+        {
+          "alias": "Ayane",
+          "language": "en"
+        },
+        {
+          "alias": "아야네",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "canonical_name": "ホシノ",
+      "description": "阿比多斯对策委员会成员，安慰アヤネ，指出土地交易发生在她入学之前。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "ホシノ",
+          "language": "canonical"
+        },
+        {
+          "alias": "星野",
+          "language": "zh"
+        },
+        {
+          "alias": "Hoshino",
+          "language": "en"
+        },
+        {
+          "alias": "호시노",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "canonical_name": "阿比多斯对策委员会",
+      "description": "由ホシノ在学生会解散后创立的组织。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "阿比多斯对策委员会",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "canonical_name": "阿比多斯学校债务",
+      "description": "阿比多斯学校背负的庞大债务，推测是前学生会出售土地的原因。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "阿比多斯学校债务",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "canonical_name": "凯撒贷款陷阱",
+      "description": "凯撒集团向学校提供无法负担的巨额贷款，然后诱导学校出售土地来支付利息的模式。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "凯撒贷款陷阱",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "canonical_name": "头盔团",
+      "description": "被凯撒集团雇佣，企图夺取阿比多斯学校土地的团体。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "头盔团",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "canonical_name": "ヒナ",
+      "description": "向老师提供了关于凯撒集团在阿比多斯沙漠中策划某事的情报。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "ヒナ",
+          "language": "canonical"
+        },
+        {
+          "alias": "日奈",
+          "language": "zh"
+        },
+        {
+          "alias": "Hina",
+          "language": "en"
+        },
+        {
+          "alias": "히나",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "canonical_name": "阿比多斯沙漠",
+      "description": "阿比多斯被遗弃的沙漠区域，凯撒集团正在其中策划某事。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "阿比多斯沙漠",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "canonical_name": "白子",
+      "description": "对格黑娜风纪委员长和老师的事情感到困惑。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "白子",
+          "language": "canonical"
+        },
+        {
+          "alias": "シロコ",
+          "language": "ja"
+        },
+        {
+          "alias": "Shiroko",
+          "language": "en"
+        },
+        {
+          "alias": "시로코",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "canonical_name": "芹香",
+      "description": "对格黑娜风纪委员长和老师的事情感到困惑，提议直接去确认。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "芹香",
+          "language": "canonical"
+        },
+        {
+          "alias": "セリカ",
+          "language": "ja"
+        },
+        {
+          "alias": "Serika",
+          "language": "en"
+        },
+        {
+          "alias": "세리카",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "canonical_name": "格黑娜风纪委员长",
+      "description": "一个让绫音、白子和芹香感到困惑的人物。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "格黑娜风纪委员长",
+          "language": "canonical"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "canonical_name": "老师",
+      "description": "接受了白子单独谈话的请求，并跟随其离开。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "老师",
+          "language": "canonical"
+        },
+        {
+          "alias": "先生",
+          "language": "ja"
+        },
+        {
+          "alias": "Sensei",
+          "language": "en"
+        },
+        {
+          "alias": "선생님",
+          "language": "ko"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "canonical_name": "风纪委员会",
+      "description": "一个曾将某人（可能指星野或其同伴）逼入绝境的组织。",
+      "confidence": 1.0,
+      "status": "active",
+      "aliases": [
+        {
+          "alias": "风纪委员会",
+          "language": "canonical"
+        }
+      ]
+    }
+  ]
+}

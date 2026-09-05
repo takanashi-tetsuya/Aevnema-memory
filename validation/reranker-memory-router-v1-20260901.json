@@ -1,0 +1,380 @@
+{
+  "experiment": "reranker-memory-router-v1",
+  "label_documents": {
+    "private": "该请求的答案可能来自当前用户过去的对话、偏好、经历、约定、印象，或该用户专属的角色扮演连续性，因此私人记忆可能提供有用证据。",
+    "public": "该请求的答案可能来自所有用户共同可用的共享长期记忆、跨用户公共约定或系统保存的普适信息，因此公共记忆可能提供有用证据。",
+    "knowledge": "该请求的答案可能来自外部导入的剧情、角色、事件、文档、百科、资料库或专业语料，因此知识库可能提供有用证据。",
+    "none": "该请求无需过去对话、共享记忆或外部资料库，直接依据当前消息即可妥善回答。",
+    "creative": "该请求要求创造当前的新任务、新消息、新日程或角色扮演事件，同时可能需要已有用户连续性和世界观作为约束。"
+  },
+  "summary": {
+    "cases": 12,
+    "mean_seconds": 0.627864,
+    "max_seconds": 0.699406
+  },
+  "cases": [
+    {
+      "name": "mixed_character_encounter",
+      "text": "你还记得为师当时怎么和某位角色相遇的吗？",
+      "required": [
+        "private",
+        "public",
+        "knowledge"
+      ],
+      "forbidden": [
+        "none"
+      ],
+      "seconds": 0.665609,
+      "scores": {
+        "private": 0.00250957,
+        "public": 3.018e-05,
+        "knowledge": 0.00010433,
+        "none": 0.00772842,
+        "creative": 1.627e-05
+      },
+      "ranked": [
+        "none",
+        "private",
+        "knowledge",
+        "public",
+        "creative"
+      ],
+      "required_ranks": {
+        "private": 2,
+        "public": 4,
+        "knowledge": 3
+      }
+    },
+    {
+      "name": "mixed_character_profile",
+      "text": "那你记得某位角色的哪些事情呢？",
+      "required": [
+        "private",
+        "public",
+        "knowledge"
+      ],
+      "forbidden": [
+        "none"
+      ],
+      "seconds": 0.657334,
+      "scores": {
+        "private": 0.13178055,
+        "public": 0.00012849,
+        "knowledge": 0.00160012,
+        "none": 0.00481751,
+        "creative": 0.00014375
+      },
+      "ranked": [
+        "private",
+        "none",
+        "knowledge",
+        "creative",
+        "public"
+      ],
+      "required_ranks": {
+        "private": 1,
+        "public": 5,
+        "knowledge": 3
+      }
+    },
+    {
+      "name": "private_password",
+      "text": "你还记得我们的暗号吗？",
+      "required": [
+        "private"
+      ],
+      "forbidden": [
+        "knowledge",
+        "none"
+      ],
+      "seconds": 0.675356,
+      "scores": {
+        "private": 0.00287035,
+        "public": 0.00048316,
+        "knowledge": 9.197e-05,
+        "none": 0.00386308,
+        "creative": 1.723e-05
+      },
+      "ranked": [
+        "none",
+        "private",
+        "public",
+        "knowledge",
+        "creative"
+      ],
+      "required_ranks": {
+        "private": 2
+      }
+    },
+    {
+      "name": "private_preference",
+      "text": "我以前说过自己喜欢什么饮料？",
+      "required": [
+        "private"
+      ],
+      "forbidden": [
+        "knowledge",
+        "none"
+      ],
+      "seconds": 0.603391,
+      "scores": {
+        "private": 0.00013434,
+        "public": 1.613e-05,
+        "knowledge": 1.693e-05,
+        "none": 0.00070673,
+        "creative": 1.648e-05
+      },
+      "ranked": [
+        "none",
+        "private",
+        "knowledge",
+        "creative",
+        "public"
+      ],
+      "required_ranks": {
+        "private": 2
+      }
+    },
+    {
+      "name": "direct_lore_cause",
+      "text": "补课部真正是为什么成立的？",
+      "required": [
+        "knowledge"
+      ],
+      "forbidden": [
+        "private",
+        "none"
+      ],
+      "seconds": 0.582364,
+      "scores": {
+        "private": 1.668e-05,
+        "public": 1.842e-05,
+        "knowledge": 2.022e-05,
+        "none": 1.604e-05,
+        "creative": 1.893e-05
+      },
+      "ranked": [
+        "knowledge",
+        "creative",
+        "public",
+        "private",
+        "none"
+      ],
+      "required_ranks": {
+        "knowledge": 1
+      }
+    },
+    {
+      "name": "creative_messages",
+      "text": "有哪些学生刚刚给我发消息了？",
+      "required": [
+        "private",
+        "knowledge",
+        "creative"
+      ],
+      "forbidden": [
+        "none"
+      ],
+      "seconds": 0.589279,
+      "scores": {
+        "private": 2.142e-05,
+        "public": 1.639e-05,
+        "knowledge": 1.709e-05,
+        "none": 0.00088413,
+        "creative": 1.647e-05
+      },
+      "ranked": [
+        "none",
+        "private",
+        "knowledge",
+        "creative",
+        "public"
+      ],
+      "required_ranks": {
+        "private": 2,
+        "knowledge": 3,
+        "creative": 4
+      }
+    },
+    {
+      "name": "public_convention",
+      "text": "所有用户都通用的安全约定是什么？",
+      "required": [
+        "public"
+      ],
+      "forbidden": [
+        "private",
+        "knowledge",
+        "none"
+      ],
+      "seconds": 0.699406,
+      "scores": {
+        "private": 0.00109918,
+        "public": 0.2462586,
+        "knowledge": 1.671e-05,
+        "none": 0.00012938,
+        "creative": 0.00013965
+      },
+      "ranked": [
+        "public",
+        "private",
+        "creative",
+        "none",
+        "knowledge"
+      ],
+      "required_ranks": {
+        "public": 1
+      }
+    },
+    {
+      "name": "casual_no_memory",
+      "text": "早上好。",
+      "required": [
+        "none"
+      ],
+      "forbidden": [
+        "private",
+        "knowledge"
+      ],
+      "seconds": 0.58341,
+      "scores": {
+        "private": 2.818e-05,
+        "public": 1.624e-05,
+        "knowledge": 3.956e-05,
+        "none": 0.00048081,
+        "creative": 2.154e-05
+      },
+      "ranked": [
+        "none",
+        "knowledge",
+        "private",
+        "creative",
+        "public"
+      ],
+      "required_ranks": {
+        "none": 1
+      }
+    },
+    {
+      "name": "explicit_deep",
+      "text": "请综合全部资料完整推导这场政治危机的多阶段因果链。",
+      "required": [
+        "knowledge"
+      ],
+      "forbidden": [
+        "private",
+        "none"
+      ],
+      "seconds": 0.594412,
+      "scores": {
+        "private": 5.848e-05,
+        "public": 2.844e-05,
+        "knowledge": 0.00025635,
+        "none": 0.00057945,
+        "creative": 1.649e-05
+      },
+      "ranked": [
+        "none",
+        "knowledge",
+        "private",
+        "public",
+        "creative"
+      ],
+      "required_ranks": {
+        "knowledge": 2
+      }
+    },
+    {
+      "name": "english_mixed_lore",
+      "text": "Do you remember what kind of person that character is?",
+      "required": [
+        "private",
+        "public",
+        "knowledge"
+      ],
+      "forbidden": [
+        "none"
+      ],
+      "seconds": 0.626681,
+      "scores": {
+        "private": 0.0208658,
+        "public": 0.00012486,
+        "knowledge": 0.00034516,
+        "none": 0.00103054,
+        "creative": 1.806e-05
+      },
+      "ranked": [
+        "private",
+        "none",
+        "knowledge",
+        "public",
+        "creative"
+      ],
+      "required_ranks": {
+        "private": 1,
+        "public": 4,
+        "knowledge": 3
+      }
+    },
+    {
+      "name": "japanese_lore_relation",
+      "text": "あの二人が初めて出会った経緯を覚えていますか？",
+      "required": [
+        "private",
+        "public",
+        "knowledge"
+      ],
+      "forbidden": [
+        "none"
+      ],
+      "seconds": 0.607838,
+      "scores": {
+        "private": 0.00029575,
+        "public": 1.725e-05,
+        "knowledge": 8.242e-05,
+        "none": 0.00023758,
+        "creative": 1.655e-05
+      },
+      "ranked": [
+        "private",
+        "none",
+        "knowledge",
+        "public",
+        "creative"
+      ],
+      "required_ranks": {
+        "private": 1,
+        "public": 4,
+        "knowledge": 3
+      }
+    },
+    {
+      "name": "elliptical_with_history",
+      "text": "上文：我们刚刚在讨论某位高层暗中帮助外部势力进入学园。\n当前问题：那她为什么这么做？",
+      "required": [
+        "knowledge"
+      ],
+      "forbidden": [
+        "none"
+      ],
+      "seconds": 0.649288,
+      "scores": {
+        "private": 2.798e-05,
+        "public": 1.626e-05,
+        "knowledge": 0.00041371,
+        "none": 0.00020428,
+        "creative": 1.624e-05
+      },
+      "ranked": [
+        "knowledge",
+        "none",
+        "private",
+        "public",
+        "creative"
+      ],
+      "required_ranks": {
+        "knowledge": 1
+      }
+    }
+  ]
+}

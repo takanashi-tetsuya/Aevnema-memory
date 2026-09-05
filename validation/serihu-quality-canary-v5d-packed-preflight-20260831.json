@@ -1,0 +1,42 @@
+{
+  "input_root": "/mnt/c/Users/Admin/PycharmProjects/PythonProject/validation/serihu-quality-canary-v5d-packed-corpus-20260831",
+  "config": {
+    "target_chars": 6000,
+    "max_chars": 8000,
+    "overlap_chars": 800
+  },
+  "totals": {
+    "files": 1,
+    "parsed_files": 1,
+    "unsupported_files": 0,
+    "blocks": 47,
+    "segments": 17,
+    "bytes": 191756,
+    "empty_files": 0,
+    "parse_failures": 0,
+    "oversize_segments": 0
+  },
+  "categories": {
+    "root": {
+      "files": 1,
+      "blocks": 47,
+      "segments": 17,
+      "bytes": 191756
+    }
+  },
+  "language_blocks": {
+    "unknown": 47
+  },
+  "segment_length": {
+    "min": 5693,
+    "mean": 6608.41,
+    "p50": 6538,
+    "p95": 7563,
+    "p99": 7800,
+    "max": 7800
+  },
+  "empty_file_samples": [],
+  "unsupported_file_samples": [],
+  "failures": [],
+  "oversize_samples": []
+}

@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "purpose": "第三阶段三道深度联想题的固定原文证据、跨文件闭环与自动评测口径",
+  "database": "validation/ba-stage3-deep-v37.db",
+  "database_schema_version": 2,
+  "database_sha256": "7f94a12d70fe69a54b0efa85f2bfa639c1d8380c03a705de9599ccc32ea44ea9",
+  "prompt_version": "v3.20_structured_growth_provenance",
+  "embedding_dtype": "float32",
+  "base_database": "validation/ba-stage2-direct-k4.db",
+  "new_files": [
+    "main/31060.json",
+    "main/31090.json",
+    "main/32170.json",
+    "main/33070.json"
+  ],
+  "import_result": {
+    "sources": 21,
+    "episodes": 96,
+    "failed_tasks": 0,
+    "revised_episodes": 15,
+    "database_totals": {
+      "sources": 68,
+      "episodes": 342,
+      "concepts": 392,
+      "associations": 1825
+    },
+    "scriptkr_speaker_fix": "扫描同一记录的全部 ScriptKr 命令，优先选择实际包含对话文本的命令，而不是立绘槽位更新命令"
+  },
+  "retrieval": {
+    "episode_top_k_per_query": 40,
+    "concept_top_k_per_query": 20,
+    "atomic_search_queries": "2-4",
+    "whole_question_episode_anchors": 10,
+    "atomic_episode_anchors_per_query": 6,
+    "iterative_followup_queries_max": 4,
+    "rrf_k": 60,
+    "candidate_limit": 600,
+    "answer_episode_limit": 30,
+    "answer_concept_limit": 20,
+    "answer_path_limit": 24,
+    "growth_episode_limit": 40,
+    "graph_beam_width": 20,
+    "graph_max_hops": 3,
+    "growth_max_rounds": 2
+  },
+  "preflight": {
+    "files": 4,
+    "source_segments": 21,
+    "segment_target_chars": 6000,
+    "segment_max_chars": 8000,
+    "segment_overlap_chars": 800,
+    "per_file_segments": {
+      "main/31060.json": 4,
+      "main/31090.json": 5,
+      "main/32170.json": 5,
+      "main/33070.json": 7
+    }
+  },
+  "questions": {
+    "makeup_club_hidden_purpose": {
+      "required_sources": ["main/31060.json", "main/31090.json"],
+      "required_facts": [
+        "补习部表面围绕不及格与补习成立",
+        "渚把嫌疑对象聚集在补习部",
+        "她认为其中藏有圣三一的叛徒",
+        "叛徒的目的被认为是阻止伊甸条约签订"
+      ],
+      "anchors": ["补习部", "不及格", "圣三一的叛徒", "阻止伊甸条约的签订"]
+    },
+    "paradise_paradox_political_projection": {
+      "required_sources": ["main/33030.json", "main/31090.json", "main/32170.json"],
+      "required_facts": [
+        "无法从乐园之外观测抵达乐园的人",
+        "渚因猜疑叛徒而成立补习部集中排查",
+        "未花承认行动可称为政变",
+        "未花要让渚下台并成为茶会话事人",
+        "阿里乌斯从一开始就是政变的道具"
+      ],
+      "anchors": ["乐园存在证明的悖论", "叛徒", "让小渚下台", "话事人", "政变", "阿里乌斯", "道具"]
+    },
+    "old_cathedral_attack_causal_chain": {
+      "required_sources": ["main/33070.json", "main/32170.json"],
+      "required_facts": [
+        "一枚巡航导弹不足以解释古圣堂爆炸规模",
+        "阿里乌斯分校势力直接进入并袭击古圣堂",
+        "未花秘密支援阿里乌斯",
+        "未花把阿里乌斯作为推翻渚的政变工具",
+        "未花的支援是成功渗透的前置政治条件；具体爆破执行细节不可凭空补全"
+      ],
+      "anchors": ["巡航导弹", "古圣堂", "阿里乌斯分校", "一手造成", "秘密支援", "政变的道具", "未花"]
+    }
+  },
+  "grading_rules": {
+    "evidence_first": true,
+    "require_source_keys": true,
+    "separate_fact_from_inference": true,
+    "penalize_unsupported_specifics": true,
+    "inspect_reused_association_ids": true,
+    "inspect_reinforced_association_ids": true,
+    "require_changed_association_in_answer_path": true,
+    "growth_write_gate": "DeepSeek 与 GLM 双模型均接受，并通过确定性跨事件因果门卫",
+    "growth_provenance_fields": [
+      "claim_level",
+      "audit_status",
+      "evidence_json",
+      "audit_json"
+    ]
+  },
+  "v3_20_acceptance": {
+    "evaluation_report": "validation/evaluation-stage3-full-v320/evaluation-report.json",
+    "scorecard": "validation/evaluation-stage3-full-v320/scorecard.json",
+    "passed": "9/9",
+    "graph_growth": {
+      "created_associations": 10,
+      "reinforced_associations": 1,
+      "all_changes_used_in_answer_paths": true,
+      "all_created_claim_level": "supported_inference",
+      "all_created_audit_status": "dual_accepted"
+    },
+    "deterministic_tests": "53/53"
+  }
+}

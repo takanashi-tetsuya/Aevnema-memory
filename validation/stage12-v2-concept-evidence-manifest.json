@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "kind": "concept_mechanism",
+  "questions": {
+    "concept_gap_01": {
+      "required_episode_groups": [
+        [
+          245
+        ]
+      ],
+      "required_sources": [
+        "event/10038/1003805.json"
+      ],
+      "answer": "放河灯、赏烟花、欣赏演奏。",
+      "evidence_quote": "她说明，虽然因诸多缘由可能无法上演京剧，但放河灯、赏烟花、欣赏演奏等活动仍可期待。",
+      "concept_id": 401,
+      "canonical_name": "放河灯",
+      "maximum_baseline_similarity": 0.4462398886680603
+    },
+    "concept_gap_02": {
+      "required_episode_groups": [
+        [
+          301
+        ]
+      ],
+      "required_sources": [
+        "main/32170.json"
+      ],
+      "answer": "花子过去曾在礼拜堂穿泳装上课，并因此被赶了出去。",
+      "evidence_quote": "未花起初没认出花子，经回忆后认出她是浦和花子（Urawa Hanako），并提及她过去曾在礼拜堂穿泳装上课并被赶出去的往事。",
+      "concept_id": 404,
+      "canonical_name": "礼拜堂泳装事件",
+      "maximum_baseline_similarity": 0.5534974932670593
+    },
+    "concept_gap_03": {
+      "required_episode_groups": [
+        [
+          246
+        ]
+      ],
+      "required_sources": [
+        "event/10038/1003805.json"
+      ],
+      "answer": "月饼",
+      "evidence_quote": "妃咲承诺会多备水果与月饼。",
+      "concept_id": 402,
+      "canonical_name": "月饼",
+      "maximum_baseline_similarity": 0.5565131902694702
+    },
+    "concept_gap_04": {
+      "required_episode_groups": [
+        [
+          272
+        ]
+      ],
+      "required_sources": [
+        "main/31090.json"
+      ],
+      "answer": "圣三一原本有一套关于不及格、停学、退学的校规，但手续非常繁琐冗长，需要多方确认与讨论，并且非常重视程序。",
+      "evidence_quote": "渚解释圣三一原本有关于不及格、停学、退学的校规，但手续繁琐冗长，需要多方确认与讨论，并强调圣三一与格黑娜不同，非常重视程序。",
+      "concept_id": 403,
+      "canonical_name": "校规",
+      "maximum_baseline_similarity": 0.5957111120223999
+    },
+    "concept_gap_05": {
+      "required_episode_groups": [
+        [
+          274
+        ]
+      ],
+      "required_sources": [
+        "main/31090.json"
+      ],
+      "answer": "渚将其比作一种因共同处于不稳定状态而形成的敌对性和平同盟。",
+      "evidence_quote": "渚将此比喻为‘吴越同舟’，是一种因共同处于不稳定状态而形成的敌对性和平同盟。",
+      "concept_id": 397,
+      "canonical_name": "吴越同舟",
+      "maximum_baseline_similarity": 0.6395570635795593
+    },
+    "concept_gap_06": {
+      "required_episode_groups": [
+        [
+          85
+        ]
+      ],
+      "required_sources": [
+        "main/33050.json"
+      ],
+      "answer": "一位发言人插话说“这也是没办法的事吧？”，随后被另一人低声制止。",
+      "evidence_quote": "另一名记者询问社会对联邦学生会能力评价日益严苛的问题，一名发言人插话说“这也是没办法的事吧？”，被另一人低声制止。",
+      "concept_id": 406,
+      "canonical_name": "联邦学生会记者招待会",
+      "maximum_baseline_similarity": 0.6723595261573792
+    },
+    "concept_gap_07": {
+      "required_episode_groups": [
+        [
+          210
+        ]
+      ],
+      "required_sources": [
+        "favor/10000/100002.json"
+      ],
+      "answer": "阿露认为，给予与优秀成果相符的奖赏是提高职员工作热情的必要措施。",
+      "evidence_quote": "阿露要求老师认真考虑奖赏问题，认为给予与优秀成果相符的奖赏是提高职员工作热情的必要措施。",
+      "concept_id": 400,
+      "canonical_name": "奖赏的重要性",
+      "maximum_baseline_similarity": 0.8230109214782715
+    },
+    "concept_gap_08": {
+      "required_episode_groups": [
+        [
+          87
+        ]
+      ],
+      "required_sources": [
+        "main/33050.json"
+      ],
+      "answer": "联邦学生会的行政官 린 阐述的原则是，各学园自治区的事件基本交由各自学园处理，联邦学生会无端介入反而是不负责任的表现。",
+      "evidence_quote": "在昨天的记者招待会上，行政官 린 回应称，各学园自治区的事件基本交由各自学园处理，联邦学生会无端介入反而是不负责任的表现。",
+      "concept_id": 405,
+      "canonical_name": "联邦学生会的介入原则",
+      "maximum_baseline_similarity": 0.9269212484359741
+    }
+  }
+}

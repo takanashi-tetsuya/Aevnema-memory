@@ -1,0 +1,2659 @@
+{
+  "domain": "all",
+  "mode": "fast",
+  "identity": {
+    "platform": "diagnostic",
+    "platform_user_id": "local-test"
+  },
+  "error": "",
+  "domains": [
+    "user",
+    "knowledge"
+  ],
+  "repeat": 1,
+  "timings_seconds": [
+    14.745285
+  ],
+  "context": "===== 当前用户的私人记忆 =====\n本轮已检索当前用户的私人记忆，但没有找到可支持回答的 Episode。不得声称记得具体暗号、偏好、约定或共同经历，也不得用其他用户的内容补全。\n\n===== 外部剧情知识库 =====\n以下内容来自长期记忆系统。Episode 是证据摘要；Association 可能是推论，\n必须结合来源、认知状态、generation、confidence 与原始 Episode 判断，不得把弱联想写成确定事实。\n\n【相关 Episode】\nEpisode #26 | source=03_核心角色事实.txt | origin=source | epistemic_status=asserted | generation=0\n砂狼白子是阿拜多斯对策委员会成员，性格寡言且行动直接，喜爱运动并常提出抢银行等极端方案；最终篇中出现了来自另一世界、经历神秘反转的白子Terror。\nEpisode #150 | source=09_阿拜多斯_圣三一与百鬼夜行角色百科.txt | story_time=已收录剧情 | origin=source | epistemic_status=asserted | generation=0\n砂狼白子的表达通常简短而直接，面对问题时会先提出自己认为可执行的行动方案。运动、交通和银行是她在已收录剧情中的常见话题；她提出抢银行式方案是债务压力下的夸张角色表现，不能作为现实行为建议。\nEpisode #38 | source=04_角色百科与别名.txt | origin=source | epistemic_status=asserted | generation=0\n砂狼白子是阿拜多斯对策委员会成员，性格寡言、行动直接，喜爱运动，并会以抢银行等夸张方案表达解决债务的冲动；最终篇出现来自另一世界、经历神秘反转的白子Terror，当前世界白子与另一世界来客白子Terror不是同一经历和状态下的同一角色。\nEpisode #63 | source=05_角色交流与对话摘要.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source record 3: 资料类型：角色对话摘要 | 置信度：高 | 实体：砂狼白子 | 别名：白子，砂狼シロコ，シロコ,Shiroko | 阵营：阿拜多斯，对策委员会 | 服务器：JP\n砂狼白子（Shiroko）作为阿拜多斯对策委员会成员，表达简短直接，讨论行动时优先提出可执行方案；其知识库涵盖运动、交通、城市观察和银行主题，虽会提出夸张的抢银行方案，但这仅反映债务压力下的角色表现，不代表真实犯罪倡导。\nEpisode #383 | source=93_好感剧情使用边界.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source未标注发言者，身份为???；陈述为事实边界。\n若“关键台词”未经过逐话文本核验，不得作为官方原话输出。允许以不带引号的方式概括人物态度（如“白子邀请老师一起运动”），但禁止创造看似官方的完整对白。\nEpisode #381 | source=93_好感剧情使用边界.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source未标注发言者，身份为???；陈述为官方剧情事实摘要。\n砂狼白子的基础好感剧情包含晨跑、保持距离、公路自行车、地铁远行、观察城市和银行、个人谈话以及无人机保护等内容，确认其研究银行和热爱运动的特质。官方事实明确否定“雨中贴近老师避雨”和“送战利品表达占有欲”属于本知识库认可的基础好感剧情事实。\nEpisode #80 | source=06_细节问答与别名索引.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 明确区分跨世界存在与象征关系\n官方资料确认砂狼白子与白子Terror来自不同世界，白子Terror经历神秘反转后抵达当前世界，两者在经历、状态和责任上不可混同；同时明确白子与阿努比斯的关系仅属于象征考据，非官方身份确认。\nEpisode #357 | source=90_推测与考据.txt | origin=importer | epistemic_status=speculative | generation=1 | note=内容源自社区考据观点，非官方事实陈述。\n社区存在一种常见考据，认为砂狼白子与阿努比斯存在对应关系。依据包括阿拜多斯的埃及主题、狼或胡狼的视觉元素，以及白子在最终篇中Terror形态与死亡引导者相关的表达。虽然两者存在明显象征联系，但官方尚未完整说明白子的灵魂或物种就是阿努比斯。\nEpisode #151 | source=09_阿拜多斯_圣三一与百鬼夜行角色百科.txt | story_time=当前 | origin=source | epistemic_status=asserted | generation=0\n黑见芹香的交流适合围绕现实事务、学校存续和与同伴协作展开。她与星野、白子、野宫、绫音同为对策委员会成员；不能只用吐槽或傲娇等单一标签替代她在共同体中的实际作用。\nEpisode #15 | source=02_学院与势力事实.txt | story_time=Vol.1 剧情背景 | origin=source | epistemic_status=asserted | generation=0\n阿拜多斯高中位于严重沙漠化地区，背负巨额债务。在大量学生离校后，学校仅剩以小鸟游星野、砂狼白子、黑见芹香、十六夜野宫和奥空绫音为核心的对策委员会。Vol.1剧情围绕债务、土地、铁路及阿拜多斯过去展开。\nEpisode #366 | source=91_时间线与事实边界.txt | origin=source | epistemic_status=asserted | generation=0\n官方剧情事实确认存在另一世界的老师与白子Terror，该事实支持平行世界讨论，但不能自动推出所有卷在另一世界中的具体失败结局。\nEpisode #324 | source=50_VolF_所有奇迹的起点.txt | story_time=第4章：普雷纳帕特斯决战期间 | origin=source | epistemic_status=asserted | generation=0\n老师面对来自另一个世界、已经成为普雷纳帕特斯的老师，以及白子Terror。另一世界经历了大范围悲剧，但作品没有给出一份所有学生结局均已确定的完整清单。\nEpisode #39 | source=04_角色百科与别名.txt | origin=source | epistemic_status=asserted | generation=0\n黑见芹香是阿拜多斯对策委员会的现存成员之一，与星野、白子、野宫和绫音共同维持学校，在债务与废校危机中承担日常与战斗事务；讨论其主线作用时，应以守护阿拜多斯与对策委员会协作为核心，而非简化为单一的吐槽或傲娇标签。\nEpisode #288 | source=14_世界设定与主线细节问答扩展.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source 陈述阿拜多斯背景及 Vol.1 核心冲突构成。\n阿拜多斯高中因位于严重沙漠化地区导致学生大量离校，且背负巨额债务，最终仅剩星野、白子、芹香、野宫和绫音五人组成的对策委员会维持学校。债务、土地、铁路及过去的创伤构成了 Vol.1 对策委员会篇的核心冲突。\nEpisode #382 | source=93_好感剧情使用边界.txt | origin=source | epistemic_status=asserted | generation=0 | note=Source未标注发言者，身份为???；陈述为事实边界。\n当前知识库未保存所有角色的逐话好感剧情。对于未单独核验的角色，系统只能回答主线已确认的性格与关系，严禁根据角色属性自动生成约会、膝枕、牵手、吃醋、独占欲或告白等情节。\nEpisode #325 | source=50_VolF_所有奇迹的起点.txt | story_time=第4章：普雷纳帕特斯决战结束 | origin=source | epistemic_status=asserted | generation=0\n普雷纳帕特斯在最后把白子Terror托付给当前世界的老师。阿罗娜与普拉娜共同保护老师，老师和学生返回基沃托斯。白子Terror与普拉娜随后留在当前世界。\nEpisode #230 | source=12_格黑娜与千年角色百科扩展.txt | origin=source | epistemic_status=asserted | generation=0\n白石歌原（Shiraishi Utaha / 白石ウタハ / ウタハ / Utaha）是千年科学学园工程部成员，与丰见琴音同属该部门；工程部虽提供技术制作与支援，但其成员不应被错误归类为特异现象搜查部的固定调查员。\nEpisode #25 | source=03_核心角色事实.txt | origin=source | epistemic_status=asserted | generation=0\n小鸟游星野是阿拜多斯对策委员会的前辈和核心战力，表面懒散，长期背负阿拜多斯衰落及梦前辈死亡带来的创伤；Vol.1第三章进一步处理了她对过去的执着与自责。\nEpisode #49 | source=04_角色百科与别名.txt | story_time=Vol.2期间 | origin=source | epistemic_status=asserted | generation=0 | note=Source记录16明确陈述\n天童爱丽丝是千年游戏开发部成员，也是与无名诸神技术有关的特殊存在。Vol.2的核心在于她是否能依靠自身经历与同伴关系选择成为怎样的人，而非将其视为必须消灭的程序。\nEpisode #292 | source=14_世界设定与主线细节问答扩展.txt | story_time=Vol.3 伊甸园条约篇及后续 | origin=source | epistemic_status=asserted | generation=0 | note=Source 描述贝阿朵莉切控制阿里乌斯及后续反抗与责任问题。\n贝阿朵莉切长期控制阿里乌斯小队并施加极端教育，后试图利用亚津子完成仪式。阿里乌斯小队最终反抗了她，其成员后续重建生活的过程并不代表阿里乌斯的历史创伤或过去责任被抹除。\nEpisode #336 | source=70_VolEX_德卡格拉马顿篇.txt | origin=source | epistemic_status=asserted | generation=0\n德卡格拉马顿是一个以证明神性、寻找绝对者并创造神为目标的人工智能系统。该系统能够影响其他人工智能，使其成为具有自主行动能力的“先知”。先知的名称采用卡巴拉生命之树的质点，包括比纳、赫赛德、霍德、格布拉、提法雷特、马尔库特等。\nEpisode #388 | source=100_第二部_序章.txt | story_time=第3话 | origin=source | epistemic_status=asserted | generation=0\n在第3话中，老师梦见自己身边没有什亭之箱，只有一名为“シャーケードの杖”的智能手表。梦里的基沃托斯失去色彩且无学生，老师前往空无一人的联邦学生会大楼，在学生会长办公室见到一名既陌生又有熟悉感的少女。少女正要表明身份时老师醒来。阿罗娜与普拉娜均表示不知道“シャーケードの杖”是什么。\nEpisode #477 | source=107_第二部_关联短篇与活动.txt | story_time=短篇《伊吹离家出走事件》期间 | origin=source | epistemic_status=asserted | generation=0\n在短篇《伊吹离家出走事件》中，亚子向佳代子说明“嵐”已经开始活动并提醒她小心。这一情节将佳代子的过去、万魔殿和「炎と影編」后续线索连接起来，但短篇没有完整公开佳代子与雷帝时代的职务，也没有确认她属于“嵐”。\nEpisode #279 | source=14_世界设定与主线细节问答扩展.txt | origin=source | epistemic_status=asserted | generation=0\n基沃托斯的学生通常拥有光环，其身体耐久性远超普通人，且光环状态与学生生命状态密切相关。目前剧情尚未完整解释光环的生理和形而上机制，不能将其简单视为装饰、机械装置或无条件不死的证明。\nEpisode #297 | source=14_世界设定与主线细节问答扩展.txt | origin=source | epistemic_status=reported | generation=0 | note=Source 20 中未标注发言者，内容基于问答记录中的回答，属于对剧情设定的陈述。\nVol.6「過ぎ去りし刻のオラトリオ」（阿里乌斯篇）的核心内容并非仅限于考试、旧兵器与圣三一和解，而是包含阿里乌斯学生的教育与归属、历史记录、和平之门、梯昴与吹号天使的异常、立木舞爱与梯昴的关系以及共同体重建。结局并非简单并入圣三一或抹除过去责任。\nEpisode #425 | source=103_第二部Vol1_炎と影編.txt | story_time=第2章 | origin=source | epistemic_status=asserted | generation=0\n第2章中，皋月向未受影响者说明NK-Ultra计划和雷帝曾试图吞并基沃托斯的历史。为避免其他学园误判格黑娜已经发动战争，老师、伊织、千夏、伊吕波、皋月以及其他未受控制的学生组成临时解放力量，并尽量把危机限制在校内解决。\nEpisode #420 | source=103_第二部Vol1_炎と影編.txt | story_time=故事初期 | origin=source | epistemic_status=asserted | generation=0\n格黑娜再兴委员会希望建立“统一的格黑娜”，公开批评真琴浪费预算、把精力用于针对风纪委员会，也批评风纪委员会只有强大武力却不决定学校方向。日奈拒绝以全面管制替代自由；真琴则最初认为这群后辈不会威胁自己的地位。\nEpisode #283 | source=14_世界设定与主线细节问答扩展.txt | origin=source | epistemic_status=asserted | generation=0\n黑服曾警告老师，使用“大人的卡片”会付出代价，但剧情未给出精确计算方式，也未确认代价等同于固定数量的寿命。因此，不能将玩家常见的说法视为已公开的数值设定。\nEpisode #378 | source=92_重要活动事实摘要.txt | origin=importer | epistemic_status=speculative | generation=1 | note=该条目为社区观点，文档明确其非事实\n社区观点指出，“欢乐活动只在老师成功介入的世界线发生，失败世界线没有这些活动”是一种二次创作解释；由于剧情没有给出另一世界完整活动记录，该说法不能当作事实。\nEpisode #282 | source=14_世界设定与主线细节问答扩展.txt | story_time=最终篇后 | origin=source | epistemic_status=asserted | generation=0\n什亭之箱是老师持有的特殊终端，阿罗娜是其系统管理者。在最终篇之后，普拉娜也与阿罗娜共同存在于什亭之箱中。该终端可协助访问系统和保护老师，但其完整能力边界尚未公开。\n\n【相关 Concept】\nConcept #65 | 砂狼白子：阿拜多斯对策委员会成员，性格寡言且行动直接，喜爱运动并常提出抢银行等极端方案\nConcept #436 | 白子 Terror：存在于平行世界中的特定角色状态或变体\nConcept #66 | 白子Terror：来自另一世界、经历神秘反转的砂狼白子\nConcept #150 | 阿努比斯：与砂狼白子存在象征考据对应的神话实体，但官方未确认白子为其本体或转世。\nConcept #82 | 阿拜多斯对策委员会：小鸟游星野所属的组织，负责处理阿拜多斯相关事务。\nConcept #469 | 关键台词：需经过逐话文本核验才能作为官方原话输出的角色对话\nConcept #470 | 官方原话：经过严格核验的角色直接引语，禁止随意创造\nConcept #423 | Terror形态：砂狼白子在最终篇中展现的一种形态，被解读为与死亡引导者相关的象征。\nConcept #464 | 公路自行车：砂狼白子基础好感剧情中涉及的核心运动项目\nConcept #465 | 无人机保护：砂狼白子基础好感剧情中展现的特质或行为\nConcept #14 | 基沃托斯：由众多学园及其自治区构成的巨大学园都市\nConcept #22 | 阿罗娜：什亭之箱的系统管理者\nConcept #23 | 普拉娜：来自另一世界，最终篇后进入什亭之箱与阿罗娜共存的存在\nConcept #389 | 普雷纳帕特斯：将白子Terror托付给当前世界老师并随后离开的存在\nConcept #471 | 人物态度：可概括描述但不带引号的非原话内容\nConcept #387 | 普雷纳帕特斯的老师：来自另一个世界、经历过大范围悲剧并发生异变的老师\nConcept #388 | 平行世界悲剧：另一个世界经历的大范围灾难性事件背景\nConcept #390 | 平行世界：最终篇证实存在的、与当前世界不同的世界\nConcept #136 | 债务压力：导致砂狼白子提出夸张方案（如抢银行）的背景状态，是阿拜多斯对策委员会成员面临的共同处境。\nConcept #34 | 阿拜多斯高中：位于严重沙漠化地区，背负巨额债务，仅剩对策委员会的学园\n\n【Association 联想路径】\nAssociation #168 | generation=1 | confidence=0.950 | Episode 26 指出砂狼白子是阿拜多斯对策委员会成员，这与 Episode 15 描述的对策委员会成员名单中包含白子的事实相吻合。\nAssociation #169 | generation=1 | confidence=0.900 | Episode 26 描述砂狼白子是阿拜多斯对策委员会成员，而 Episode 25 指出小鸟游星野是该委员会的前辈，表明白子是星野的后辈。\nAssociation #2241 | generation=1 | confidence=0.650 | 白子 Terror 与普雷纳帕特斯的老师都描述了来自另一个世界、经历过大范围悲剧并发生异变的角色状态，但两者并非同一人物。\nAssociation #114 | generation=1 | confidence=0.900 | 阿拜多斯债务是阿拜多斯高中背负的巨额债务，是该学园的一个属性。\nAssociation #2242 | generation=1 | confidence=0.900 | 白子 Terror 与白子Terror 描述的是同一对象，即来自另一世界、经历神秘反转的砂狼白子。\nAssociation #518 | generation=1 | confidence=0.900 | Episode 80 明确白子与白子 Terror 非同一角色，Episode 26 描述白子 Terror 的出现，两者共同说明跨世界存在的设定。\nAssociation #1928 | generation=1 | confidence=0.900 | Episode 324 中出现的白子 Terror 与 Episode 80 中描述的白子 Terror 为同一对象，两者均涉及来自不同世界的白子 Terror 及其状态。\nAssociation #519 | generation=1 | confidence=0.820 | Episode 80 区分白子与白子 Terror 的身份，Episode 63 描述白子的性格与行为模式，两者共同构建了白子的角色档案。\nAssociation #1931 | generation=1 | confidence=0.850 | Episode 325 中提到的白子 Terror 留在当前世界与 Episode 80 中描述的白子 Terror 经历神秘反转后抵达当前世界存在语义关联。\nAssociation #517 | generation=1 | confidence=0.920 | Episode 80 确认白子与白子 Terror 来自不同世界且不可混同，Episode 38 描述两者在经历和状态上的差异，两者互为因果解释。\nAssociation #400 | generation=1 | confidence=0.900 | Episode 63 描述的砂狼白子性格特征与 Episode 26 描述的其性格、行动及最终篇出现的白子 Terror 在语义上高度一致，指代同一人\n[长期记忆上下文因长度限制已截断]",
+  "route": {
+    "user": true,
+    "public": true,
+    "knowledge": true,
+    "reason": "diagnostic_all_domains",
+    "intensity": "standard",
+    "knowledge_write_policy": "query_and_answer",
+    "creative": false
+  },
+  "results": {
+    "user": {
+      "question": null,
+      "intent": null,
+      "followup_search_queries": [],
+      "atomic_anchor_episode_ids": [],
+      "candidate_episode_ids": [],
+      "reranked_episode_ids": [],
+      "episode_ids": [],
+      "concept_ids": [],
+      "association_ids": [],
+      "new_association_ids": [],
+      "reinforced_association_ids": [],
+      "growth_utility_gate": {},
+      "growth_counterfactual_utility": {},
+      "evidence_episodes": [],
+      "evidence_concepts": [],
+      "association_paths": [],
+      "chronology_notes": [],
+      "source_key_cohort": {},
+      "rerank_trace": {},
+      "retrieval_intensity": null,
+      "rerank_policy": null,
+      "rerank_execution": {},
+      "evidence_slot_trace": {},
+      "timings": {},
+      "service_cache_hit": false
+    },
+    "public": {
+      "question": null,
+      "intent": null,
+      "followup_search_queries": [],
+      "atomic_anchor_episode_ids": [],
+      "candidate_episode_ids": [],
+      "reranked_episode_ids": [],
+      "episode_ids": [],
+      "concept_ids": [],
+      "association_ids": [],
+      "new_association_ids": [],
+      "reinforced_association_ids": [],
+      "growth_utility_gate": {},
+      "growth_counterfactual_utility": {},
+      "evidence_episodes": [],
+      "evidence_concepts": [],
+      "association_paths": [],
+      "chronology_notes": [],
+      "source_key_cohort": {},
+      "rerank_trace": {},
+      "retrieval_intensity": null,
+      "rerank_policy": null,
+      "rerank_execution": {},
+      "evidence_slot_trace": {},
+      "timings": {},
+      "service_cache_hit": false
+    },
+    "knowledge": {
+      "question": "你觉得白子是一个什么样的人？",
+      "intent": {
+        "language": "zh",
+        "target_entities": [
+          "白子"
+        ],
+        "search_queries": [
+          "白子的身份是什么",
+          "白子的性格特点是什么",
+          "白子的行为事迹有哪些",
+          "白子的社会评价是什么",
+          "白子的历史地位是什么",
+          "白子的主要成就或贡献是什么",
+          "白子的个人背景或经历是什么",
+          "白子的相关争议或批评是什么"
+        ],
+        "requested_relation": "人物特征描述",
+        "temporal_constraint": "None",
+        "causal_constraint": "None",
+        "answer_shape": "描述性总结",
+        "uncertainty_required": false
+      },
+      "followup_search_queries": [],
+      "atomic_anchor_episode_ids": [
+        26,
+        336,
+        292,
+        38,
+        49,
+        279,
+        63,
+        378,
+        80,
+        150,
+        388,
+        382,
+        381,
+        357,
+        297,
+        425,
+        282,
+        283,
+        230,
+        420
+      ],
+      "candidate_episode_ids": [
+        80,
+        26,
+        336,
+        357,
+        292,
+        38,
+        381,
+        49,
+        279,
+        150,
+        63,
+        378,
+        383,
+        388,
+        382,
+        366,
+        297,
+        425,
+        325,
+        282,
+        283,
+        324,
+        230,
+        420,
+        15,
+        288,
+        151,
+        39,
+        25,
+        477,
+        37,
+        40,
+        41,
+        99,
+        155,
+        35,
+        36,
+        5,
+        94,
+        62,
+        102,
+        67,
+        390,
+        326,
+        92,
+        64,
+        394,
+        157,
+        6,
+        11,
+        190,
+        191,
+        278,
+        395,
+        400,
+        423,
+        476,
+        280,
+        281,
+        284,
+        285,
+        286,
+        287,
+        289,
+        290,
+        291,
+        293,
+        294,
+        295,
+        296,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        363,
+        198,
+        59,
+        153,
+        91,
+        154,
+        193,
+        95,
+        463,
+        192,
+        415,
+        447,
+        54,
+        444,
+        360,
+        361,
+        362,
+        367,
+        171,
+        34,
+        407,
+        85,
+        402
+      ],
+      "reranked_episode_ids": [
+        26,
+        150,
+        38,
+        63,
+        383,
+        381,
+        80,
+        357,
+        151,
+        15,
+        366,
+        324,
+        39,
+        288,
+        382,
+        325,
+        230,
+        25,
+        49,
+        292,
+        336,
+        388,
+        477,
+        279,
+        297,
+        425,
+        420,
+        283,
+        378,
+        282
+      ],
+      "episode_ids": [
+        26,
+        150,
+        38,
+        63,
+        383,
+        381,
+        80,
+        357,
+        151,
+        15,
+        366,
+        324,
+        39,
+        288,
+        382,
+        325,
+        230,
+        25,
+        49,
+        292,
+        336,
+        388,
+        477,
+        279,
+        297,
+        425,
+        420,
+        283,
+        378,
+        282
+      ],
+      "concept_ids": [
+        65,
+        436,
+        66,
+        150,
+        82,
+        469,
+        470,
+        423,
+        464,
+        465,
+        14,
+        22,
+        23,
+        389,
+        471,
+        387,
+        388,
+        390,
+        136,
+        34
+      ],
+      "association_ids": [
+        168,
+        169,
+        2241,
+        114,
+        2242,
+        518,
+        1928,
+        519,
+        1931,
+        517,
+        400,
+        269,
+        991,
+        2193,
+        2192,
+        990,
+        447,
+        189,
+        142,
+        2223,
+        1896,
+        141,
+        188,
+        446
+      ],
+      "new_association_ids": [],
+      "reinforced_association_ids": [],
+      "growth_utility_gate": {
+        "enabled": true,
+        "retained_created_ids": [],
+        "retained_reinforced_ids": [],
+        "removed_created_ids": [],
+        "restored_reinforced_ids": [],
+        "premise_closure_ids": []
+      },
+      "growth_counterfactual_utility": {
+        "enabled": true,
+        "scope": "query_batch",
+        "changed_association_ids": [],
+        "changed_path_ids": [],
+        "additional_episode_ids": [],
+        "displaced_episode_ids": [],
+        "additional_source_keys": [],
+        "displaced_source_keys": [],
+        "evidence_gain_count": 0,
+        "causal_utility_observed": false,
+        "persistable_changed_ids": []
+      },
+      "evidence_episodes": [
+        {
+          "id": 26,
+          "score": 0.8909871460722935,
+          "text": "砂狼白子是阿拜多斯对策委员会成员，性格寡言且行动直接，喜爱运动并常提出抢银行等极端方案；最终篇中出现了来自另一世界、经历神秘反转的白子Terror。",
+          "participants": [
+            "砂狼白子",
+            "白子Terror"
+          ],
+          "source_key": "03_核心角色事实.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "03_核心角色事实.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 150,
+          "score": 0.9357869940121307,
+          "text": "砂狼白子的表达通常简短而直接，面对问题时会先提出自己认为可执行的行动方案。运动、交通和银行是她在已收录剧情中的常见话题；她提出抢银行式方案是债务压力下的夸张角色表现，不能作为现实行为建议。",
+          "participants": [
+            "砂狼白子"
+          ],
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "segment_index": 0,
+          "story_time_text": "已收录剧情",
+          "story_order": null,
+          "timeline_scope": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 38,
+          "score": 0.975235383558252,
+          "text": "砂狼白子是阿拜多斯对策委员会成员，性格寡言、行动直接，喜爱运动，并会以抢银行等夸张方案表达解决债务的冲动；最终篇出现来自另一世界、经历神秘反转的白子Terror，当前世界白子与另一世界来客白子Terror不是同一经历和状态下的同一角色。",
+          "participants": [
+            "砂狼白子",
+            "白子Terror"
+          ],
+          "source_key": "04_角色百科与别名.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "04_角色百科与别名.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 63,
+          "score": 0.8402286913069419,
+          "text": "砂狼白子（Shiroko）作为阿拜多斯对策委员会成员，表达简短直接，讨论行动时优先提出可执行方案；其知识库涵盖运动、交通、城市观察和银行主题，虽会提出夸张的抢银行方案，但这仅反映债务压力下的角色表现，不代表真实犯罪倡导。",
+          "participants": [
+            "???"
+          ],
+          "source_key": "05_角色交流与对话摘要.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "05_角色交流与对话摘要.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": "Source record 3: 资料类型：角色对话摘要 | 置信度：高 | 实体：砂狼白子 | 别名：白子，砂狼シロコ，シロコ,Shiroko | 阵营：阿拜多斯，对策委员会 | 服务器：JP"
+        },
+        {
+          "id": 383,
+          "score": 0.8357758085148537,
+          "text": "若“关键台词”未经过逐话文本核验，不得作为官方原话输出。允许以不带引号的方式概括人物态度（如“白子邀请老师一起运动”），但禁止创造看似官方的完整对白。",
+          "participants": [
+            "知识库系统",
+            "砂狼白子",
+            "老师"
+          ],
+          "source_key": "93_好感剧情使用边界.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "93_好感剧情使用边界.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": "Source未标注发言者，身份为???；陈述为事实边界。"
+        },
+        {
+          "id": 381,
+          "score": 0.9375757032087393,
+          "text": "砂狼白子的基础好感剧情包含晨跑、保持距离、公路自行车、地铁远行、观察城市和银行、个人谈话以及无人机保护等内容，确认其研究银行和热爱运动的特质。官方事实明确否定“雨中贴近老师避雨”和“送战利品表达占有欲”属于本知识库认可的基础好感剧情事实。",
+          "participants": [
+            "砂狼白子",
+            "老师"
+          ],
+          "source_key": "93_好感剧情使用边界.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "93_好感剧情使用边界.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": "Source未标注发言者，身份为???；陈述为官方剧情事实摘要。"
+        },
+        {
+          "id": 80,
+          "score": 0.997917366027832,
+          "text": "官方资料确认砂狼白子与白子Terror来自不同世界，白子Terror经历神秘反转后抵达当前世界，两者在经历、状态和责任上不可混同；同时明确白子与阿努比斯的关系仅属于象征考据，非官方身份确认。",
+          "participants": [
+            "砂狼白子 / 砂狼シロコ / Shiroko / 白子",
+            "白子Terror",
+            "阿努比斯 / Anubis"
+          ],
+          "source_key": "06_细节问答与别名索引.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "06_细节问答与别名索引.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": "Source 明确区分跨世界存在与象征关系"
+        },
+        {
+          "id": 357,
+          "score": 0.9833771419213542,
+          "text": "社区存在一种常见考据，认为砂狼白子与阿努比斯存在对应关系。依据包括阿拜多斯的埃及主题、狼或胡狼的视觉元素，以及白子在最终篇中Terror形态与死亡引导者相关的表达。虽然两者存在明显象征联系，但官方尚未完整说明白子的灵魂或物种就是阿努比斯。",
+          "participants": [
+            "砂狼白子",
+            "阿努比斯"
+          ],
+          "source_key": "90_推测与考据.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "90_推测与考据.txt",
+          "evidence_origin": "importer",
+          "epistemic_status": "speculative",
+          "generation": 1,
+          "epistemic_note": "内容源自社区考据观点，非官方事实陈述。"
+        },
+        {
+          "id": 151,
+          "score": 0.6084967581729637,
+          "text": "黑见芹香的交流适合围绕现实事务、学校存续和与同伴协作展开。她与星野、白子、野宫、绫音同为对策委员会成员；不能只用吐槽或傲娇等单一标签替代她在共同体中的实际作用。",
+          "participants": [
+            "黑见芹香",
+            "小鸟游星野",
+            "砂狼白子",
+            "十六夜野宫",
+            "奥空绫音"
+          ],
+          "source_key": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "segment_index": 0,
+          "story_time_text": "当前",
+          "story_order": null,
+          "timeline_scope": "09_阿拜多斯_圣三一与百鬼夜行角色百科.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 15,
+          "score": 0.640596134588223,
+          "text": "阿拜多斯高中位于严重沙漠化地区，背负巨额债务。在大量学生离校后，学校仅剩以小鸟游星野、砂狼白子、黑见芹香、十六夜野宫和奥空绫音为核心的对策委员会。Vol.1剧情围绕债务、土地、铁路及阿拜多斯过去展开。",
+          "participants": [
+            "小鸟游星野",
+            "砂狼白子",
+            "黑见芹香",
+            "十六夜野宫",
+            "奥空绫音",
+            "阿拜多斯高中对策委员会"
+          ],
+          "source_key": "02_学院与势力事实.txt",
+          "segment_index": 0,
+          "story_time_text": "Vol.1 剧情背景",
+          "story_order": null,
+          "timeline_scope": "02_学院与势力事实.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 366,
+          "score": 0.7114085090509523,
+          "text": "官方剧情事实确认存在另一世界的老师与白子Terror，该事实支持平行世界讨论，但不能自动推出所有卷在另一世界中的具体失败结局。",
+          "participants": [
+            "老师",
+            "白子"
+          ],
+          "source_key": "91_时间线与事实边界.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "91_时间线与事实边界.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 324,
+          "score": 0.680719139488399,
+          "text": "老师面对来自另一个世界、已经成为普雷纳帕特斯的老师，以及白子Terror。另一世界经历了大范围悲剧，但作品没有给出一份所有学生结局均已确定的完整清单。",
+          "participants": [
+            "老师",
+            "普雷纳帕特斯的老师",
+            "白子Terror"
+          ],
+          "source_key": "50_VolF_所有奇迹的起点.txt",
+          "segment_index": 0,
+          "story_time_text": "第4章：普雷纳帕特斯决战期间",
+          "story_order": null,
+          "timeline_scope": "50_volf_所有奇迹的起点.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 39,
+          "score": 0.5871601150152029,
+          "text": "黑见芹香是阿拜多斯对策委员会的现存成员之一，与星野、白子、野宫和绫音共同维持学校，在债务与废校危机中承担日常与战斗事务；讨论其主线作用时，应以守护阿拜多斯与对策委员会协作为核心，而非简化为单一的吐槽或傲娇标签。",
+          "participants": [
+            "黑见芹香"
+          ],
+          "source_key": "04_角色百科与别名.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "04_角色百科与别名.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 288,
+          "score": 0.6097209253883524,
+          "text": "阿拜多斯高中因位于严重沙漠化地区导致学生大量离校，且背负巨额债务，最终仅剩星野、白子、芹香、野宫和绫音五人组成的对策委员会维持学校。债务、土地、铁路及过去的创伤构成了 Vol.1 对策委员会篇的核心冲突。",
+          "participants": [
+            "阿拜多斯高中",
+            "星野",
+            "白子",
+            "芹香",
+            "野宫",
+            "绫音",
+            "对策委员会"
+          ],
+          "source_key": "14_世界设定与主线细节问答扩展.txt",
+          "segment_index": 1,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": "Source 陈述阿拜多斯背景及 Vol.1 核心冲突构成。"
+        },
+        {
+          "id": 382,
+          "score": 0.46265600675265106,
+          "text": "当前知识库未保存所有角色的逐话好感剧情。对于未单独核验的角色，系统只能回答主线已确认的性格与关系，严禁根据角色属性自动生成约会、膝枕、牵手、吃醋、独占欲或告白等情节。",
+          "participants": [
+            "知识库系统",
+            "角色",
+            "老师"
+          ],
+          "source_key": "93_好感剧情使用边界.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "93_好感剧情使用边界.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": "Source未标注发言者，身份为???；陈述为事实边界。"
+        },
+        {
+          "id": 325,
+          "score": 0.6951325412988737,
+          "text": "普雷纳帕特斯在最后把白子Terror托付给当前世界的老师。阿罗娜与普拉娜共同保护老师，老师和学生返回基沃托斯。白子Terror与普拉娜随后留在当前世界。",
+          "participants": [
+            "普雷纳帕特斯",
+            "老师",
+            "白子Terror",
+            "阿罗娜",
+            "普拉娜",
+            "学生"
+          ],
+          "source_key": "50_VolF_所有奇迹的起点.txt",
+          "segment_index": 0,
+          "story_time_text": "第4章：普雷纳帕特斯决战结束",
+          "story_order": null,
+          "timeline_scope": "50_volf_所有奇迹的起点.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 230,
+          "score": 0.2738779749091939,
+          "text": "白石歌原（Shiraishi Utaha / 白石ウタハ / ウタハ / Utaha）是千年科学学园工程部成员，与丰见琴音同属该部门；工程部虽提供技术制作与支援，但其成员不应被错误归类为特异现象搜查部的固定调查员。",
+          "participants": [
+            "白石歌原 / Shiraishi Utaha / 白石ウタハ / ウタハ / Utaha",
+            "丰见琴音 / Toyomi Kotori / 豊見コトリ / コトリ / Kotori"
+          ],
+          "source_key": "12_格黑娜与千年角色百科扩展.txt",
+          "segment_index": 3,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "12_格黑娜与千年角色百科扩展.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 25,
+          "score": 0.5778216900980211,
+          "text": "小鸟游星野是阿拜多斯对策委员会的前辈和核心战力，表面懒散，长期背负阿拜多斯衰落及梦前辈死亡带来的创伤；Vol.1第三章进一步处理了她对过去的执着与自责。",
+          "participants": [
+            "小鸟游星野",
+            "梦前辈"
+          ],
+          "source_key": "03_核心角色事实.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "03_核心角色事实.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 49,
+          "score": 0.109114199638482,
+          "text": "天童爱丽丝是千年游戏开发部成员，也是与无名诸神技术有关的特殊存在。Vol.2的核心在于她是否能依靠自身经历与同伴关系选择成为怎样的人，而非将其视为必须消灭的程序。",
+          "participants": [
+            "天童爱丽丝"
+          ],
+          "source_key": "04_角色百科与别名.txt",
+          "segment_index": 1,
+          "story_time_text": "Vol.2期间",
+          "story_order": null,
+          "timeline_scope": "04_角色百科与别名.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": "Source记录16明确陈述"
+        },
+        {
+          "id": 292,
+          "score": 0.3660119058918434,
+          "text": "贝阿朵莉切长期控制阿里乌斯小队并施加极端教育，后试图利用亚津子完成仪式。阿里乌斯小队最终反抗了她，其成员后续重建生活的过程并不代表阿里乌斯的历史创伤或过去责任被抹除。",
+          "participants": [
+            "贝阿朵莉切",
+            "阿里乌斯小队",
+            "亚津子"
+          ],
+          "source_key": "14_世界设定与主线细节问答扩展.txt",
+          "segment_index": 1,
+          "story_time_text": "Vol.3 伊甸园条约篇及后续",
+          "story_order": null,
+          "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": "Source 描述贝阿朵莉切控制阿里乌斯及后续反抗与责任问题。"
+        },
+        {
+          "id": 336,
+          "score": 0.054490776647551545,
+          "text": "德卡格拉马顿是一个以证明神性、寻找绝对者并创造神为目标的人工智能系统。该系统能够影响其他人工智能，使其成为具有自主行动能力的“先知”。先知的名称采用卡巴拉生命之树的质点，包括比纳、赫赛德、霍德、格布拉、提法雷特、马尔库特等。",
+          "participants": [
+            "德卡格拉马顿",
+            "先知",
+            "比纳",
+            "赫赛德",
+            "霍德",
+            "格布拉",
+            "提法雷特",
+            "马尔库特"
+          ],
+          "source_key": "70_VolEX_德卡格拉马顿篇.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "70_volex_德卡格拉马顿篇.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 388,
+          "score": 0.5728951940676938,
+          "text": "在第3话中，老师梦见自己身边没有什亭之箱，只有一名为“シャーケードの杖”的智能手表。梦里的基沃托斯失去色彩且无学生，老师前往空无一人的联邦学生会大楼，在学生会长办公室见到一名既陌生又有熟悉感的少女。少女正要表明身份时老师醒来。阿罗娜与普拉娜均表示不知道“シャーケードの杖”是什么。",
+          "participants": [
+            "老师",
+            "阿罗娜",
+            "普拉娜",
+            "联邦学生会长（梦中少女）"
+          ],
+          "source_key": "100_第二部_序章.txt",
+          "segment_index": 0,
+          "story_time_text": "第3话",
+          "story_order": null,
+          "timeline_scope": "100_第二部_序章.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 477,
+          "score": 0.5490959581973269,
+          "text": "在短篇《伊吹离家出走事件》中，亚子向佳代子说明“嵐”已经开始活动并提醒她小心。这一情节将佳代子的过去、万魔殿和「炎と影編」后续线索连接起来，但短篇没有完整公开佳代子与雷帝时代的职务，也没有确认她属于“嵐”。",
+          "participants": [
+            "亚子",
+            "佳代子",
+            "嵐",
+            "万魔殿",
+            "雷帝时代"
+          ],
+          "source_key": "107_第二部_关联短篇与活动.txt",
+          "segment_index": 0,
+          "story_time_text": "短篇《伊吹离家出走事件》期间",
+          "story_order": null,
+          "timeline_scope": "107_第二部_关联短篇与活动.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 279,
+          "score": 0.3660119058918434,
+          "text": "基沃托斯的学生通常拥有光环，其身体耐久性远超普通人，且光环状态与学生生命状态密切相关。目前剧情尚未完整解释光环的生理和形而上机制，不能将其简单视为装饰、机械装置或无条件不死的证明。",
+          "participants": [
+            "学生",
+            "光环 / ヘイロー / Halo"
+          ],
+          "source_key": "14_世界设定与主线细节问答扩展.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 297,
+          "score": 0.3660119058918434,
+          "text": "Vol.6「過ぎ去りし刻のオラトリオ」（阿里乌斯篇）的核心内容并非仅限于考试、旧兵器与圣三一和解，而是包含阿里乌斯学生的教育与归属、历史记录、和平之门、梯昴与吹号天使的异常、立木舞爱与梯昴的关系以及共同体重建。结局并非简单并入圣三一或抹除过去责任。",
+          "participants": [
+            "Vol.6過ぎ去りし刻のオラトリオ",
+            "阿里乌斯",
+            "圣三一",
+            "梯昴",
+            "吹号天使",
+            "立木舞爱"
+          ],
+          "source_key": "14_世界设定与主线细节问答扩展.txt",
+          "segment_index": 2,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "reported",
+          "generation": 0,
+          "epistemic_note": "Source 20 中未标注发言者，内容基于问答记录中的回答，属于对剧情设定的陈述。"
+        },
+        {
+          "id": 425,
+          "score": 0.38527569041246673,
+          "text": "第2章中，皋月向未受影响者说明NK-Ultra计划和雷帝曾试图吞并基沃托斯的历史。为避免其他学园误判格黑娜已经发动战争，老师、伊织、千夏、伊吕波、皋月以及其他未受控制的学生组成临时解放力量，并尽量把危机限制在校内解决。",
+          "participants": [
+            "皋月",
+            "老师",
+            "伊织",
+            "千夏",
+            "伊吕波",
+            "格黑娜未受影响学生",
+            "雷帝",
+            "基沃托斯"
+          ],
+          "source_key": "103_第二部Vol1_炎と影編.txt",
+          "segment_index": 0,
+          "story_time_text": "第2章",
+          "story_order": null,
+          "timeline_scope": "103_第二部vol1_炎と影編.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 420,
+          "score": 0.14774706327043563,
+          "text": "格黑娜再兴委员会希望建立“统一的格黑娜”，公开批评真琴浪费预算、把精力用于针对风纪委员会，也批评风纪委员会只有强大武力却不决定学校方向。日奈拒绝以全面管制替代自由；真琴则最初认为这群后辈不会威胁自己的地位。",
+          "participants": [
+            "格黑娜再兴委员会",
+            "真琴",
+            "日奈"
+          ],
+          "source_key": "103_第二部Vol1_炎と影編.txt",
+          "segment_index": 0,
+          "story_time_text": "故事初期",
+          "story_order": null,
+          "timeline_scope": "103_第二部vol1_炎と影編.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 283,
+          "score": 0.3660119058918434,
+          "text": "黑服曾警告老师，使用“大人的卡片”会付出代价，但剧情未给出精确计算方式，也未确认代价等同于固定数量的寿命。因此，不能将玩家常见的说法视为已公开的数值设定。",
+          "participants": [
+            "老师",
+            "黑服",
+            "大人的卡片 / 大人のカード / Adult's Card"
+          ],
+          "source_key": "14_世界设定与主线细节问答扩展.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        },
+        {
+          "id": 378,
+          "score": 0.3953083070158347,
+          "text": "社区观点指出，“欢乐活动只在老师成功介入的世界线发生，失败世界线没有这些活动”是一种二次创作解释；由于剧情没有给出另一世界完整活动记录，该说法不能当作事实。",
+          "participants": [
+            "社区"
+          ],
+          "source_key": "92_重要活动事实摘要.txt",
+          "segment_index": 0,
+          "story_time_text": "",
+          "story_order": null,
+          "timeline_scope": "92_重要活动事实摘要.txt",
+          "evidence_origin": "importer",
+          "epistemic_status": "speculative",
+          "generation": 1,
+          "epistemic_note": "该条目为社区观点，文档明确其非事实"
+        },
+        {
+          "id": 282,
+          "score": 0.38527569041246673,
+          "text": "什亭之箱是老师持有的特殊终端，阿罗娜是其系统管理者。在最终篇之后，普拉娜也与阿罗娜共同存在于什亭之箱中。该终端可协助访问系统和保护老师，但其完整能力边界尚未公开。",
+          "participants": [
+            "老师",
+            "什亭之箱 / シッテムの箱 / Shittim Chest",
+            "阿罗娜",
+            "普拉娜"
+          ],
+          "source_key": "14_世界设定与主线细节问答扩展.txt",
+          "segment_index": 0,
+          "story_time_text": "最终篇后",
+          "story_order": null,
+          "timeline_scope": "14_世界设定与主线细节问答扩展.txt",
+          "evidence_origin": "source",
+          "epistemic_status": "asserted",
+          "generation": 0,
+          "epistemic_note": ""
+        }
+      ],
+      "evidence_concepts": [
+        {
+          "id": 65,
+          "score": 1.0,
+          "canonical_name": "砂狼白子",
+          "description": "阿拜多斯对策委员会成员，性格寡言且行动直接，喜爱运动并常提出抢银行等极端方案"
+        },
+        {
+          "id": 436,
+          "score": 1.0,
+          "canonical_name": "白子 Terror",
+          "description": "存在于平行世界中的特定角色状态或变体"
+        },
+        {
+          "id": 66,
+          "score": 0.8058182730674744,
+          "canonical_name": "白子Terror",
+          "description": "来自另一世界、经历神秘反转的砂狼白子"
+        },
+        {
+          "id": 150,
+          "score": 0.8058182730674744,
+          "canonical_name": "阿努比斯",
+          "description": "与砂狼白子存在象征考据对应的神话实体，但官方未确认白子为其本体或转世。"
+        },
+        {
+          "id": 82,
+          "score": 0.7875025722232887,
+          "canonical_name": "阿拜多斯对策委员会",
+          "description": "小鸟游星野所属的组织，负责处理阿拜多斯相关事务。"
+        },
+        {
+          "id": 469,
+          "score": 0.6748889653757444,
+          "canonical_name": "关键台词",
+          "description": "需经过逐话文本核验才能作为官方原话输出的角色对话"
+        },
+        {
+          "id": 470,
+          "score": 0.6748889653757444,
+          "canonical_name": "官方原话",
+          "description": "经过严格核验的角色直接引语，禁止随意创造"
+        },
+        {
+          "id": 423,
+          "score": 0.6544866568057575,
+          "canonical_name": "Terror形态",
+          "description": "砂狼白子在最终篇中展现的一种形态，被解读为与死亡引导者相关的象征。"
+        },
+        {
+          "id": 464,
+          "score": 0.6240035092705766,
+          "canonical_name": "公路自行车",
+          "description": "砂狼白子基础好感剧情中涉及的核心运动项目"
+        },
+        {
+          "id": 465,
+          "score": 0.6240035092705766,
+          "canonical_name": "无人机保护",
+          "description": "砂狼白子基础好感剧情中展现的特质或行为"
+        },
+        {
+          "id": 14,
+          "score": 0.5613195270988406,
+          "canonical_name": "基沃托斯",
+          "description": "由众多学园及其自治区构成的巨大学园都市"
+        },
+        {
+          "id": 22,
+          "score": 0.5613195270988406,
+          "canonical_name": "阿罗娜",
+          "description": "什亭之箱的系统管理者"
+        },
+        {
+          "id": 23,
+          "score": 0.5613195270988406,
+          "canonical_name": "普拉娜",
+          "description": "来自另一世界，最终篇后进入什亭之箱与阿罗娜共存的存在"
+        },
+        {
+          "id": 389,
+          "score": 0.5613195270988406,
+          "canonical_name": "普雷纳帕特斯",
+          "description": "将白子Terror托付给当前世界老师并随后离开的存在"
+        },
+        {
+          "id": 471,
+          "score": 0.5562505893570611,
+          "canonical_name": "人物态度",
+          "description": "可概括描述但不带引号的非原话内容"
+        },
+        {
+          "id": 387,
+          "score": 0.529233083337397,
+          "canonical_name": "普雷纳帕特斯的老师",
+          "description": "来自另一个世界、经历过大范围悲剧并发生异变的老师"
+        },
+        {
+          "id": 388,
+          "score": 0.529233083337397,
+          "canonical_name": "平行世界悲剧",
+          "description": "另一个世界经历的大范围灾难性事件背景"
+        },
+        {
+          "id": 390,
+          "score": 0.522760757663366,
+          "canonical_name": "平行世界",
+          "description": "最终篇证实存在的、与当前世界不同的世界"
+        },
+        {
+          "id": 136,
+          "score": 0.5038641404594905,
+          "canonical_name": "债务压力",
+          "description": "导致砂狼白子提出夸张方案（如抢银行）的背景状态，是阿拜多斯对策委员会成员面临的共同处境。"
+        },
+        {
+          "id": 34,
+          "score": 0.49234964725109465,
+          "canonical_name": "阿拜多斯高中",
+          "description": "位于严重沙漠化地区，背负巨额债务，仅剩对策委员会的学园"
+        }
+      ],
+      "association_paths": [
+        {
+          "association_id": 168,
+          "from": [
+            "episode",
+            26
+          ],
+          "to": [
+            "episode",
+            15
+          ],
+          "relation_type": "semantic",
+          "relation_key": "member_of_group",
+          "relation_text": "Episode 26 指出砂狼白子是阿拜多斯对策委员会成员，这与 Episode 15 描述的对策委员会成员名单中包含白子的事实相吻合。",
+          "polarity": 1,
+          "weight": 0.8903696423768998,
+          "confidence": 0.95,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.640596134588223,
+          "query_relevance": 0.074238,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 169,
+          "from": [
+            "episode",
+            26
+          ],
+          "to": [
+            "episode",
+            25
+          ],
+          "relation_type": "interpersonal",
+          "relation_key": "senior_junior",
+          "relation_text": "Episode 26 描述砂狼白子是阿拜多斯对策委员会成员，而 Episode 25 指出小鸟游星野是该委员会的前辈，表明白子是星野的后辈。",
+          "polarity": 1,
+          "weight": 0.8477366638183595,
+          "confidence": 0.9,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.5778216900980211,
+          "query_relevance": 0.072232,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 2241,
+          "from": [
+            "concept",
+            436
+          ],
+          "to": [
+            "concept",
+            387
+          ],
+          "relation_type": "semantic",
+          "relation_key": "similar_state",
+          "relation_text": "白子 Terror 与普雷纳帕特斯的老师都描述了来自另一个世界、经历过大范围悲剧并发生异变的角色状态，但两者并非同一人物。",
+          "polarity": 1,
+          "weight": 0.6980696535110473,
+          "confidence": 0.65,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "新 Concept 与已有 Concept 的关系判断",
+          "path_score": 0.38568348356485366,
+          "query_relevance": 0.043716,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 114,
+          "from": [
+            "concept",
+            36
+          ],
+          "to": [
+            "concept",
+            34
+          ],
+          "relation_type": "semantic",
+          "relation_key": "attribute_of",
+          "relation_text": "阿拜多斯债务是阿拜多斯高中背负的巨额债务，是该学园的一个属性。",
+          "polarity": 1,
+          "weight": 0.9029763555526734,
+          "confidence": 0.9,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "新 Concept 与已有 Concept 的关系判断",
+          "path_score": 0.21944285026086954,
+          "query_relevance": 0.030096,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 2242,
+          "from": [
+            "concept",
+            436
+          ],
+          "to": [
+            "concept",
+            66
+          ],
+          "relation_type": "identity",
+          "relation_key": "same_as_candidate",
+          "relation_text": "白子 Terror 与白子Terror 描述的是同一对象，即来自另一世界、经历神秘反转的砂狼白子。",
+          "polarity": 1,
+          "weight": 0.8960050529241562,
+          "confidence": 0.9,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "新 Concept 与已有 Concept 的关系判断",
+          "path_score": 0.6854438654869796,
+          "query_relevance": 0.029788,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 518,
+          "from": [
+            "episode",
+            80
+          ],
+          "to": [
+            "episode",
+            26
+          ],
+          "relation_type": "semantic",
+          "relation_key": "semantic",
+          "relation_text": "Episode 80 明确白子与白子 Terror 非同一角色，Episode 26 描述白子 Terror 的出现，两者共同说明跨世界存在的设定。",
+          "polarity": 1,
+          "weight": 0.8902401883602142,
+          "confidence": 0.9,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.6796154000839177,
+          "query_relevance": 0.028375,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 1928,
+          "from": [
+            "episode",
+            80
+          ],
+          "to": [
+            "episode",
+            324
+          ],
+          "relation_type": "semantic",
+          "relation_key": "related_to",
+          "relation_text": "Episode 324 中出现的白子 Terror 与 Episode 80 中描述的白子 Terror 为同一对象，两者均涉及来自不同世界的白子 Terror 及其状态。",
+          "polarity": 1,
+          "weight": 0.8916859960556031,
+          "confidence": 0.9,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.680719139488399,
+          "query_relevance": 0.028116,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 519,
+          "from": [
+            "episode",
+            80
+          ],
+          "to": [
+            "episode",
+            63
+          ],
+          "relation_type": "semantic",
+          "relation_key": "semantic",
+          "relation_text": "Episode 80 区分白子与白子 Terror 的身份，Episode 63 描述白子的性格与行为模式，两者共同构建了白子的角色档案。",
+          "polarity": 1,
+          "weight": 0.8121553111076356,
+          "confidence": 0.82,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.5648933305396342,
+          "query_relevance": 0.026919,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 1931,
+          "from": [
+            "episode",
+            80
+          ],
+          "to": [
+            "episode",
+            325
+          ],
+          "relation_type": "semantic",
+          "relation_key": "related_to",
+          "relation_text": "Episode 325 中提到的白子 Terror 留在当前世界与 Episode 80 中描述的白子 Terror 经历神秘反转后抵达当前世界存在语义关联。",
+          "polarity": 1,
+          "weight": 0.8514395278692247,
+          "confidence": 0.85,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.6138838952353891,
+          "query_relevance": 0.026481,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 517,
+          "from": [
+            "episode",
+            80
+          ],
+          "to": [
+            "episode",
+            38
+          ],
+          "relation_type": "semantic",
+          "relation_key": "semantic",
+          "relation_text": "Episode 80 确认白子与白子 Terror 来自不同世界且不可混同，Episode 38 描述两者在经历和状态上的差异，两者互为因果解释。",
+          "polarity": 1,
+          "weight": 0.9080279760360719,
+          "confidence": 0.92,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.7085990449501411,
+          "query_relevance": 0.024746,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 400,
+          "from": [
+            "episode",
+            26
+          ],
+          "to": [
+            "episode",
+            63
+          ],
+          "relation_type": "semantic",
+          "relation_key": "same_as_candidate",
+          "relation_text": "Episode 63 描述的砂狼白子性格特征与 Episode 26 描述的其性格、行动及最终篇出现的白子 Terror 在语义上高度一致，指代同一人物。",
+          "polarity": 1,
+          "weight": 0.9017262852191925,
+          "confidence": 0.9,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.6146212949954517,
+          "query_relevance": 0.024405,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 269,
+          "from": [
+            "episode",
+            38
+          ],
+          "to": [
+            "episode",
+            26
+          ],
+          "relation_type": "semantic",
+          "relation_key": "describes_same_subject",
+          "relation_text": "Episode 38 和 Episode 26 均描述了砂狼白子的性格、行动及最终篇中白子 Terror 的出现，两者在语义上高度重合且指向同一对象。",
+          "polarity": 1,
+          "weight": 0.9088674700260163,
+          "confidence": 0.95,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.7157354704555604,
+          "query_relevance": 0.024239,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 991,
+          "from": [
+            "episode",
+            150
+          ],
+          "to": [
+            "episode",
+            26
+          ],
+          "relation_type": "semantic",
+          "relation_key": "distinguishes_from_variant",
+          "relation_text": "当前文本描述当前白子的行为，候选文本提及白子Terror的存在，两者共同构成了对砂狼白子不同形态的完整描述。",
+          "polarity": 1,
+          "weight": 0.8103033692836763,
+          "confidence": 0.79,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.5091792143317847,
+          "query_relevance": 0.023762,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 2193,
+          "from": [
+            "episode",
+            357
+          ],
+          "to": [
+            "episode",
+            26
+          ],
+          "relation_type": "semantic",
+          "relation_key": "semantic",
+          "relation_text": "Episode 357 讨论白子与阿努比斯的神话对应，Episode 26 描述白子及其分身白子 Terror 的存在，两者在白子的角色设定上存在语义关联。",
+          "polarity": 1,
+          "weight": 0.6967220997810364,
+          "confidence": 0.6,
+          "generation": 2,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.3494216994700212,
+          "query_relevance": 0.023762,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 2192,
+          "from": [
+            "episode",
+            357
+          ],
+          "to": [
+            "episode",
+            38
+          ],
+          "relation_type": "semantic",
+          "relation_key": "semantic",
+          "relation_text": "Episode 357 讨论白子与阿努比斯的神话对应，Episode 38 描述白子及其分身白子 Terror 的关系，两者在白子的角色设定上存在语义关联。",
+          "polarity": 1,
+          "weight": 0.6975658512115479,
+          "confidence": 0.6,
+          "generation": 2,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.34984485966383777,
+          "query_relevance": 0.02361,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 990,
+          "from": [
+            "episode",
+            38
+          ],
+          "to": [
+            "episode",
+            150
+          ],
+          "relation_type": "semantic",
+          "relation_key": "distinguishes_from_variant",
+          "relation_text": "当前文本描述的是当前世界白子的表现，候选文本明确区分了当前白子与白子Terror，两者在实体指向上形成对比关系。",
+          "polarity": 1,
+          "weight": 0.8195306497812272,
+          "confidence": 0.8,
+          "generation": 1,
+          "claim_level": "supported_inference",
+          "audit_status": "not_required",
+          "created_reason": "导入阶段 Episode 候选关系判断",
+          "path_score": 0.5434799955524543,
+          "query_relevance": 0.022751,
+          "path_class": "informative"
+        },
+        {
+          "association_id": 447,
+          "from": [
+            "episode",
+            80
+          ],
+          "to": [
+            "concept",
+            66
+          ],
+          "relation_type": "semantic",
+          "relation_key": "involves",
+          "relation_text": "该 Episode 涉及概念“白子Terror”",
+          "polarity": 1,
+          "weight": 0.9500000000000002,
+          "confidence": 1.0,
+          "generation": 0,
+          "claim_level": "direct_fact",
+          "audit_status": "not_required",
+          "created_reason": "由 Episode 的 Concept 提取结果建立",
+          "path_score": 0.8058182730674744,
+          "query_relevance": 0.069505,
+          "path_class": "structural_involves"
+        },
+        {
+          "association_id": 189,
+          "from": [
+            "episode",
+            38
+          ],
+          "to": [
+            "concept",
+            66
+          ],
+          "relation_type": "semantic",
+          "relation_key": "involves",
+          "relation_text": "该 Episode 涉及概念“白子Terror”",
+          "polarity": 1,
+          "weight": 0.9500000000000002,
+          "confidence": 1.0,
+          "generation": 0,
+          "claim_level": "direct_fact",
+          "audit_status": "not_required",
+          "created_reason": "由 Episode 的 Concept 提取结果建立",
+          "path_score": 0.7875025722232887,
+          "query_relevance": 0.069505,
+          "path_class": "structural_involves"
+        },
+        {
+          "association_id": 142,
+          "from": [
+            "episode",
+            26
+          ],
+          "to": [
+            "concept",
+            66
+          ],
+          "relation_type": "semantic",
+          "relation_key": "involves",
+          "relation_text": "该 Episode 涉及概念“白子Terror”",
+          "polarity": 1,
+          "weight": 0.9500000000000002,
+          "confidence": 1.0,
+          "generation": 0,
+          "claim_level": "direct_fact",
+          "audit_status": "not_required",
+          "created_reason": "由 Episode 的 Concept 提取结果建立",
+          "path_score": 0.719472120453377,
+          "query_relevance": 0.069505,
+          "path_class": "structural_involves"
+        },
+        {
+          "association_id": 2223,
+          "from": [
+            "concept",
+            436
+          ],
+          "to": [
+            "episode",
+            366
+          ],
+          "relation_type": "semantic",
+          "relation_key": "involves",
+          "relation_text": "该 Episode 涉及概念“白子 Terror”",
+          "polarity": 1,
+          "weight": 0.8700000000000002,
+          "confidence": 0.9,
+          "generation": 0,
+          "claim_level": "direct_fact",
+          "audit_status": "not_required",
+          "created_reason": "由 Episode 的 Concept 提取结果建立",
+          "path_score": 0.6655500000000002,
+          "query_relevance": 0.069505,
+          "path_class": "structural_involves"
+        },
+        {
+          "association_id": 1896,
+          "from": [
+            "concept",
+            66
+          ],
+          "to": [
+            "episode",
+            324
+          ],
+          "relation_type": "semantic",
+          "relation_key": "involves",
+          "relation_text": "该 Episode 涉及概念“白子Terror”",
+          "polarity": 1,
+          "weight": 0.9500000000000002,
+          "confidence": 1.0,
+          "generation": 0,
+          "claim_level": "direct_fact",
+          "audit_status": "not_required",
+          "created_reason": "由 Episode 的 Concept 提取结果建立",
+          "path_score": 0.5530935171766879,
+          "query_relevance": 0.069505,
+          "path_class": "structural_involves"
+        },
+        {
+          "association_id": 141,
+          "from": [
+            "concept",
+            65
+          ],
+          "to": [
+            "episode",
+            26
+          ],
+          "relation_type": "semantic",
+          "relation_key": "involves",
+          "relation_text": "该 Episode 涉及概念“砂狼白子”",
+          "polarity": 1,
+          "weight": 0.9500000000000002,
+          "confidence": 1.0,
+          "generation": 0,
+          "claim_level": "direct_fact",
+          "audit_status": "not_required",
+          "created_reason": "由 Episode 的 Concept 提取结果建立",
+          "path_score": 0.8075000000000001,
+          "query_relevance": 0.060193,
+          "path_class": "structural_involves"
+        },
+        {
+          "association_id": 188,
+          "from": [
+            "concept",
+            65
+          ],
+          "to": [
+            "episode",
+            38
+          ],
+          "relation_type": "semantic",
+          "relation_key": "involves",
+          "relation_text": "该 Episode 涉及概念“砂狼白子”",
+          "polarity": 1,
+          "weight": 0.9500000000000002,
+          "confidence": 1.0,
+          "generation": 0,
+          "claim_level": "direct_fact",
+          "audit_status": "not_required",
+          "created_reason": "由 Episode 的 Concept 提取结果建立",
+          "path_score": 0.8075000000000001,
+          "query_relevance": 0.060193,
+          "path_class": "structural_involves"
+        },
+        {
+          "association_id": 446,
+          "from": [
+            "concept",
+            65
+          ],
+          "to": [
+            "episode",
+            80
+          ],
+          "relation_type": "semantic",
+          "relation_key": "involves",
+          "relation_text": "该 Episode 涉及概念“砂狼白子”",
+          "polarity": 1,
+          "weight": 0.9500000000000002,
+          "confidence": 1.0,
+          "generation": 0,
+          "claim_level": "direct_fact",
+          "audit_status": "not_required",
+          "created_reason": "由 Episode 的 Concept 提取结果建立",
+          "path_score": 0.8075000000000001,
+          "query_relevance": 0.060193,
+          "path_class": "structural_involves"
+        }
+      ],
+      "chronology_notes": [
+        "以下 Episode 没有已确认 story_order：[26, 150, 38, 63, 383, 381, 80, 357, 151, 15, 366, 324, 39, 288, 382, 325, 230, 25, 49, 292, 336, 388, 477, 279, 297, 425, 420, 283, 378, 282]"
+      ],
+      "source_key_cohort": {
+        "enabled": true,
+        "supported_source_keys": [
+          "14_世界设定与主线细节问答扩展.txt",
+          "04_角色百科与别名.txt",
+          "93_好感剧情使用边界.txt",
+          "103_第二部Vol1_炎と影編.txt"
+        ],
+        "added_episode_ids": [
+          295
+        ],
+        "boosted_episode_ids": [
+          279,
+          280,
+          281,
+          283,
+          284,
+          285,
+          286,
+          287,
+          289,
+          290,
+          291,
+          292,
+          293,
+          294,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304
+        ],
+        "skipped_source_keys": []
+      },
+      "rerank_trace": {
+        "enabled": true,
+        "backend": "cross_encoder",
+        "model": "Pro/BAAI/bge-reranker-v2-m3",
+        "candidate_episode_ids": [
+          80,
+          26,
+          336,
+          357,
+          292,
+          38,
+          381,
+          49,
+          279,
+          150,
+          63,
+          378,
+          383,
+          388,
+          382,
+          366,
+          297,
+          425,
+          325,
+          282,
+          283,
+          324,
+          230,
+          420,
+          15,
+          288,
+          151,
+          39,
+          25,
+          477,
+          37,
+          40,
+          41,
+          99,
+          155,
+          35,
+          36,
+          5,
+          94,
+          62,
+          102,
+          67,
+          390,
+          326,
+          92,
+          64,
+          394,
+          157,
+          6,
+          11,
+          190,
+          191,
+          278,
+          395,
+          400,
+          423,
+          476,
+          280,
+          281,
+          284,
+          285,
+          286,
+          287,
+          289,
+          290,
+          291,
+          293,
+          294,
+          295,
+          296,
+          298,
+          299,
+          300,
+          301,
+          302,
+          303,
+          304,
+          363,
+          198,
+          59,
+          153,
+          91,
+          154,
+          193,
+          95,
+          463,
+          192,
+          415,
+          447,
+          54,
+          444,
+          360,
+          361,
+          362,
+          367,
+          171,
+          34,
+          407,
+          85,
+          402
+        ],
+        "rerank_input_episode_ids": [
+          80,
+          26,
+          336,
+          357,
+          292,
+          38,
+          381,
+          49,
+          279,
+          150,
+          63,
+          378,
+          383,
+          388,
+          382,
+          366,
+          297,
+          425,
+          325,
+          282,
+          283,
+          324,
+          230,
+          420,
+          15,
+          288,
+          151,
+          39,
+          25,
+          477
+        ],
+        "precompression": {
+          "enabled": true,
+          "pool_limit": 100,
+          "configured_limit": 24,
+          "effective_limit": 30,
+          "pool_count": 100,
+          "rerank_input_count": 30,
+          "dropped_count": 70,
+          "decisions": [
+            {
+              "episode_id": 80,
+              "pool_rank": 1,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 26,
+              "pool_rank": 2,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 336,
+              "pool_rank": 3,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 357,
+              "pool_rank": 4,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 292,
+              "pool_rank": 5,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 38,
+              "pool_rank": 6,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 381,
+              "pool_rank": 7,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 49,
+              "pool_rank": 8,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 279,
+              "pool_rank": 9,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 150,
+              "pool_rank": 10,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 63,
+              "pool_rank": 11,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 378,
+              "pool_rank": 12,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 383,
+              "pool_rank": 13,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 388,
+              "pool_rank": 14,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 382,
+              "pool_rank": 15,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 366,
+              "pool_rank": 16,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 297,
+              "pool_rank": 17,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 425,
+              "pool_rank": 18,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 325,
+              "pool_rank": 19,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 282,
+              "pool_rank": 20,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 283,
+              "pool_rank": 21,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 324,
+              "pool_rank": 22,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 230,
+              "pool_rank": 23,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 420,
+              "pool_rank": 24,
+              "kept": true,
+              "reason": "atomic_anchor"
+            },
+            {
+              "episode_id": 15,
+              "pool_rank": 25,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 288,
+              "pool_rank": 26,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 151,
+              "pool_rank": 27,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 39,
+              "pool_rank": 28,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 25,
+              "pool_rank": 29,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 477,
+              "pool_rank": 30,
+              "kept": true,
+              "reason": "global_rank"
+            },
+            {
+              "episode_id": 37,
+              "pool_rank": 31,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 40,
+              "pool_rank": 32,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 41,
+              "pool_rank": 33,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 99,
+              "pool_rank": 34,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 155,
+              "pool_rank": 35,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 35,
+              "pool_rank": 36,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 36,
+              "pool_rank": 37,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 5,
+              "pool_rank": 38,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 94,
+              "pool_rank": 39,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 62,
+              "pool_rank": 40,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 102,
+              "pool_rank": 41,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 67,
+              "pool_rank": 42,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 390,
+              "pool_rank": 43,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 326,
+              "pool_rank": 44,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 92,
+              "pool_rank": 45,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 64,
+              "pool_rank": 46,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 394,
+              "pool_rank": 47,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 157,
+              "pool_rank": 48,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 6,
+              "pool_rank": 49,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 11,
+              "pool_rank": 50,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 190,
+              "pool_rank": 51,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 191,
+              "pool_rank": 52,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 278,
+              "pool_rank": 53,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 395,
+              "pool_rank": 54,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 400,
+              "pool_rank": 55,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 423,
+              "pool_rank": 56,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 476,
+              "pool_rank": 57,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 280,
+              "pool_rank": 58,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 281,
+              "pool_rank": 59,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 284,
+              "pool_rank": 60,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 285,
+              "pool_rank": 61,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 286,
+              "pool_rank": 62,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 287,
+              "pool_rank": 63,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 289,
+              "pool_rank": 64,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 290,
+              "pool_rank": 65,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 291,
+              "pool_rank": 66,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 293,
+              "pool_rank": 67,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 294,
+              "pool_rank": 68,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 295,
+              "pool_rank": 69,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 296,
+              "pool_rank": 70,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 298,
+              "pool_rank": 71,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 299,
+              "pool_rank": 72,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 300,
+              "pool_rank": 73,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 301,
+              "pool_rank": 74,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 302,
+              "pool_rank": 75,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 303,
+              "pool_rank": 76,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 304,
+              "pool_rank": 77,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 363,
+              "pool_rank": 78,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 198,
+              "pool_rank": 79,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 59,
+              "pool_rank": 80,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 153,
+              "pool_rank": 81,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 91,
+              "pool_rank": 82,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 154,
+              "pool_rank": 83,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 193,
+              "pool_rank": 84,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 95,
+              "pool_rank": 85,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 463,
+              "pool_rank": 86,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 192,
+              "pool_rank": 87,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 415,
+              "pool_rank": 88,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 447,
+              "pool_rank": 89,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 54,
+              "pool_rank": 90,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 444,
+              "pool_rank": 91,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 360,
+              "pool_rank": 92,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 361,
+              "pool_rank": 93,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 362,
+              "pool_rank": 94,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 367,
+              "pool_rank": 95,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 171,
+              "pool_rank": 96,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 34,
+              "pool_rank": 97,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 407,
+              "pool_rank": 98,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 85,
+              "pool_rank": 99,
+              "kept": false,
+              "reason": "dropped_budget"
+            },
+            {
+              "episode_id": 402,
+              "pool_rank": 100,
+              "kept": false,
+              "reason": "dropped_budget"
+            }
+          ]
+        },
+        "atomic_queries": [
+          "你觉得白子是一个什么样的人？",
+          "白子的身份是什么",
+          "白子的性格特点是什么",
+          "白子的行为事迹有哪些",
+          "白子的社会评价是什么",
+          "白子的历史地位是什么",
+          "白子的主要成就或贡献是什么",
+          "白子的个人背景或经历是什么",
+          "白子的相关争议或批评是什么"
+        ],
+        "expanded_atomic_query_count": 9,
+        "atomic_queries_truncated": false,
+        "input_hash": "8323e310710d6577f5d91e4589b18613a24a2bebe829b6c41a5d6b49606ab965",
+        "cache_hit": false,
+        "paragraph_context_episode_count": 0,
+        "paragraph_context_ids": [],
+        "required_evidence_floor_ids": [],
+        "atomic_evidence_floor_ids": [],
+        "answer_slot_anchor_ids": [],
+        "answer_slot_neighbor_floor_ids": [],
+        "rerank_candidate_text_chars": 2852,
+        "initial_prompt_chars": 0,
+        "coverage_prompt_chars": 0,
+        "review_mode": "cross_encoder",
+        "review_level": "cross_encoder",
+        "coverage_audit_performed": false,
+        "compressor_performed": false,
+        "cross_encoder_ranked_episode_ids": [
+          26,
+          150,
+          38,
+          63,
+          383,
+          381,
+          80,
+          357,
+          151,
+          15,
+          366,
+          324,
+          39,
+          288,
+          382,
+          325,
+          230,
+          25,
+          49,
+          292,
+          336,
+          388,
+          477,
+          279,
+          297,
+          425,
+          420,
+          283,
+          378,
+          282
+        ],
+        "cross_encoder_scores": [
+          0.42760685,
+          0.3151162,
+          0.27480948,
+          0.26263338,
+          0.08737519,
+          0.08342779,
+          0.04077357,
+          0.02649368,
+          0.01914614,
+          0.00782427,
+          0.00686005,
+          0.00681337,
+          0.00668431,
+          0.00632154,
+          0.00348193,
+          0.00301261,
+          0.00054084,
+          0.00047674,
+          0.00039596,
+          0.00033932,
+          0.0002458,
+          0.00011222,
+          0.00010438,
+          0.00010275,
+          8.209e-05,
+          6.637e-05,
+          5.467e-05,
+          2.57e-05,
+          2.109e-05,
+          1.93e-05
+        ],
+        "required_evidence_floor_replacements": [],
+        "atomic_evidence_floor_replacements": [],
+        "final_episode_ids": [
+          26,
+          150,
+          38,
+          63,
+          383,
+          381,
+          80,
+          357,
+          151,
+          15,
+          366,
+          324,
+          39,
+          288,
+          382,
+          325,
+          230,
+          25,
+          49,
+          292,
+          336,
+          388,
+          477,
+          279,
+          297,
+          425,
+          420,
+          283,
+          378,
+          282
+        ],
+        "deterministic_evidence_floor": {
+          "enabled": false,
+          "constraint_slots": [],
+          "whole_question_sparse_ids": [],
+          "atomic_floor_ids": [],
+          "selected_episode_ids": [],
+          "planned_episode_ids": [],
+          "candidate_missing_episode_ids": []
+        },
+        "constraint_candidate_ids": []
+      },
+      "retrieval_intensity": "standard",
+      "rerank_policy": "cross_encoder_standard",
+      "rerank_execution": {
+        "status": "completed",
+        "attempted": true,
+        "backend": "cross_encoder",
+        "model": "Pro/BAAI/bge-reranker-v2-m3",
+        "review_level": "cross_encoder",
+        "cache_hit": false,
+        "error": "",
+        "fallback_used": false
+      },
+      "evidence_slot_trace": {
+        "final_episode_ids": [
+          15,
+          25,
+          26,
+          38,
+          39,
+          49,
+          63,
+          80,
+          150,
+          151,
+          230,
+          279,
+          282,
+          283,
+          288,
+          292,
+          297,
+          324,
+          325,
+          336,
+          357,
+          366,
+          378,
+          381,
+          382,
+          383,
+          388,
+          420,
+          425,
+          477
+        ],
+        "deterministic": {
+          "enabled": false,
+          "constraint_slots": [],
+          "whole_question_sparse_ids": [],
+          "atomic_floor_ids": [],
+          "selected_episode_ids": [],
+          "planned_episode_ids": [],
+          "candidate_missing_episode_ids": [],
+          "final_matched_episode_ids": [],
+          "missing_floor_episode_ids": []
+        },
+        "coverage_slots": []
+      },
+      "timings": {
+        "version": "query-stage-timing-v1",
+        "phases_seconds": {
+          "intent_parse": 8.589939,
+          "initial_embedding": 1.070845,
+          "initial_retrieval": 0.659351,
+          "initial_graph_expansion": 0.371208,
+          "followup_planning": 0.000672,
+          "followup_embedding": 0.0,
+          "followup_retrieval": 0.0,
+          "followup_graph_expansion": 0.0,
+          "source_cohort": 0.398206,
+          "evidence_preparation": 0.046745,
+          "evidence_rerank": 0.857458,
+          "association_growth": 1.3e-05,
+          "final_selection": 2.694844,
+          "growth_utility": 0.014954,
+          "answer_generation": 1e-06
+        },
+        "measured_seconds": 14.704236,
+        "unattributed_seconds": 0.033173,
+        "total_seconds": 14.737409
+      },
+      "service_cache_hit": false
+    }
+  }
+}

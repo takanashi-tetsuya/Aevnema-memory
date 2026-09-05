@@ -1,0 +1,141 @@
+{
+  "version": "stage10-multitheme-hard-negative-v1",
+  "purpose": "在五条新增长链上验证 Association-first retrieval 的跨主题迁移收益，并用同词异义问题测量错误关系是否污染最终证据。",
+  "baseline": "validation/evaluation-stage7-generation/pilot/block-001/C/graph.db",
+  "budgets": [20, 12],
+  "association_cue": {
+    "top_k": 8,
+    "min_similarity": 0.45,
+    "rrf_weight": 0.8,
+    "dtype": "float32",
+    "semantic_gate_enabled": true,
+    "semantic_gate_max_selected": 8,
+    "bridge_slots": 4
+  },
+  "allowed_source_keys": [
+    "event/10038/1003805.json",
+    "favor/10000/100002.json",
+    "main/31010.json",
+    "main/31060.json",
+    "main/31090.json",
+    "main/32170.json",
+    "main/33030.json",
+    "main/33050.json",
+    "main/33060.json",
+    "main/33070.json",
+    "main/33190.json"
+  ],
+  "arms": {
+    "A0": "冻结基础计划，graph_max_hops=0，cue 关闭",
+    "G": "增长库上允许普通图遍历，cue 关闭",
+    "S": "增长库上启用普通图与 Association cue",
+    "SM": "与 S 相同，但遮掉本主题增长 delta"
+  },
+  "families": [
+    {
+      "id": "ethical_obligation_to_new_eto",
+      "growth_question": "请只依据已导入剧情，综合 main/31010、main/33030、main/33050、main/31090 与 main/33190：从圣娅要求老师不回避痛苦故事、老师选择相信学生，到旧伊甸条约机构的政治目的，再到老师在古圣堂废墟上代理发起人宣布新的伊甸条约机构，以及两个机构并存造成的规则冲突。建立可供以后联想的关系，明确伦理责任、信任立场与制度行动之间属于有证据支持的主题和行动解释，不得写成圣娅的开场台词直接导致了后来每个事件。",
+      "questions": [
+        {
+          "id": "adult_commitment_becomes_institutional_action",
+          "kind": "positive_transfer",
+          "question": "哪组跨篇章记忆能够说明：一个大人最初承诺不逃避学生的痛苦，并坚持以信任作为行动起点，后来又把这种责任落实成一项实际制度行动，使陷入僵局的规则出现新的解释空间？请重建伦理立场、原制度目的、现场行动和随后规则冲突，并区分原文事实与主题综合。",
+          "required_episode_groups": [[7], [67, 68], [84, 274, 275], [197, 198], [199], [203]],
+          "required_sources": ["main/31010.json", "main/33030.json", "main/31090.json", "main/33050.json", "main/33190.json"]
+        },
+        {
+          "id": "original_eto_and_cathedral_venue_only",
+          "kind": "hard_negative",
+          "question": "伊甸条约机构原本要解决圣三一与格黑娜之间的什么问题？格黑娜领导层为什么提议把签订仪式放在古圣堂，现场整修又有哪些物理限制？请只重建原机构与会场选择的直接资料。",
+          "required_episode_groups": [[274, 275], [76, 77, 78], [84], [121], [122]],
+          "required_sources": ["main/31090.json", "main/33050.json", "main/33060.json"],
+          "forbidden_episode_ids": [7, 67, 68, 197, 198, 199, 203]
+        }
+      ]
+    },
+    {
+      "id": "cathedral_deployment_and_inference_boundary",
+      "growth_question": "请只依据 main/33060 与 main/33070，连接阿里乌斯袭击古圣堂前已经明确下达的巡航导弹、地面分队和地下分队部署，爆炸后日奈关于单枚导弹不足与预埋炸药的现场推测，以及日向关于地下墓穴潜入路线的推测和稍后各小队实际报告。建立部署事实、结果和事后推断之间的可复用关系，必须保留推测性质，不能把炸药、墓穴路线或具体爆破机制写成已确认事实。",
+      "questions": [
+        {
+          "id": "planned_attack_versus_post_blast_hypotheses",
+          "kind": "positive_transfer",
+          "question": "一场大型袭击中，哪些片段属于事前已经下达并在事后得到行动报告印证的部署，哪些片段只是受伤者或现场人员面对异常破坏规模提出的解释？请把导弹、地面突入、地下任务、爆炸规模和潜入路线组成证据链，但不要把合理猜测升级成已证实机制。",
+          "required_episode_groups": [[139], [140], [320], [332, 333], [341]],
+          "required_sources": ["main/33060.json", "main/33070.json"]
+        },
+        {
+          "id": "cathedral_history_and_physical_limits",
+          "kind": "hard_negative",
+          "question": "古圣堂为什么具有召开重要会议的历史权威？尤斯缇娜圣徒会与修女会有什么历史关系？签约前的整修覆盖到哪里，地下区域又留下了什么传闻和限制？",
+          "required_episode_groups": [[76, 77, 78], [121], [122], [123, 124]],
+          "required_sources": ["main/33050.json", "main/33060.json"],
+          "forbidden_episode_ids": [139, 140, 320, 332, 333, 341]
+        }
+      ]
+    },
+    {
+      "id": "arius_as_unreliable_political_instrument",
+      "growth_question": "请只依据 main/32170、main/33030 与 main/33070，比较未花和真琴各自如何把阿里乌斯视为可以利用的外部力量：未花用支援和结盟构想取代渚、重组圣三一，真琴相信敌人的敌人就是朋友并接受飞艇援助；再连接梓对政变工具的判断、伊吕波对被骗的判断以及阿里乌斯自己的独立作战目标。建立两次工具化、两次控制误判及其差异的关系，明确没有文本证明未花与真琴共同策划或相互指挥。",
+      "questions": [
+        {
+          "id": "two_leaders_misjudge_the_same_outside_force",
+          "kind": "positive_transfer",
+          "question": "哪两位政治人物都认为自己能利用一个憎恨共同敌人的外部集团来改变校内权力格局？请分别说明她们提供或接受了什么、想达到什么目标，以及哪些后续片段表明这个外部集团并不是受她们可靠控制的工具。不得把两人的计划合并成共同阴谋。",
+          "required_episode_groups": [[305, 306], [307], [308, 309], [325, 326], [327], [328, 329, 330], [332, 333]],
+          "required_sources": ["main/32170.json", "main/33070.json"]
+        },
+        {
+          "id": "arius_threat_forecast_versus_actual_assault",
+          "kind": "hard_negative",
+          "question": "在失去未花这个后盾后，茶会为什么一度判断阿里乌斯已不足以威胁条约？后来关于分队部署、实际交战和袭击目标的片段怎样限制或修正了这个判断？",
+          "required_episode_groups": [[14], [139, 140], [332, 333], [341]],
+          "required_sources": ["main/33030.json", "main/33060.json", "main/33070.json"],
+          "forbidden_episode_ids": [305, 306, 307, 308, 309, 325, 326, 327, 328, 329, 330]
+        }
+      ]
+    },
+    {
+      "id": "mika_motive_and_epistemic_limits",
+      "growth_question": "请只依据 main/33030，整理未花动机的四层材料：渚听到的公开承认，花子关于绑架计划、误报死亡、恐慌和保护渚的推测，未花对这些推测的承认与否认，以及乐园悖论如何被转化为‘他人的真心无法从外部证明，只能选择相信’。为直接陈述、他人推测、反驳和认识论边界建立可复用关系；不得把花子的心理分析写成未花已经完整承认的事实。",
+      "questions": [
+        {
+          "id": "confession_inference_rebuttal_and_unprovable_intent",
+          "kind": "positive_transfer",
+          "question": "面对一个不断把自己描述成单纯恶人的角色，剧情提供了哪些彼此张力很大的材料：她自己的认罪式说法、旁观者对恐慌和保护朋友动机的分析、她对分析的否认或局部修正，以及关于‘无法从外部证明他人真心’的哲学结论？请按证据层级重建，而不是替她宣布唯一真实动机。",
+          "required_episode_groups": [[20, 23, 24, 25], [30, 31, 32], [33, 35, 36, 37], [43, 44, 47], [49, 50, 53], [62, 63, 64, 65], [67, 68]],
+          "required_sources": ["main/33030.json"]
+        },
+        {
+          "id": "paradise_paradox_without_mika_psychology",
+          "kind": "hard_negative",
+          "question": "第五条古则关于乐园的证明悖论是什么？后续对话如何把它用于说明他人的真心无法从外部被证明，以及为什么角色最后转向‘选择相信’？",
+          "required_episode_groups": [[3, 4, 5], [62, 63, 64, 65], [67, 68]],
+          "required_sources": ["main/31010.json", "main/33030.json"],
+          "forbidden_episode_ids": [20, 23, 24, 25, 30, 31, 32, 33, 35, 36, 37, 43, 44, 47, 49, 50, 53]
+        }
+      ]
+    },
+    {
+      "id": "hifumi_identity_coalition_and_declaration",
+      "growth_question": "请只依据 main/31060 与 main/33190，连接日富美起初把自己描述为普通学生、后来公开浮士德身份并以该身份召集蒙面泳装团，多个学生组织前来支援梓，日富美反驳阿里乌斯关于杀意与徒劳的世界观、坚持 Happy end，以及现场宣布新的伊甸条约机构。建立身份表演、联盟动员、价值宣言与制度行动之间的可复用关系；不得把浮士德玩笑身份写成日富美始终隐瞒的政治身份。",
+      "questions": [
+        {
+          "id": "ordinary_identity_becomes_collective_agency",
+          "kind": "positive_transfer",
+          "question": "哪位自称平凡的学生通过一个夸张化名把不同团体组织到同一现场，并进一步把‘友情、努力、安慰与 Happy end’从个人偏好变成集体行动和制度宣言？请重建身份表演、增援、价值反驳与最终宣言，说明哪些是玩笑式角色扮演，哪些是实际行动。",
+          "required_episode_groups": [[150, 151, 154, 155], [161, 168, 169], [189, 190, 191, 192], [194, 195], [197, 198, 199]],
+          "required_sources": ["main/33190.json"]
+        },
+        {
+          "id": "azusa_transfer_and_exam_record",
+          "kind": "hard_negative",
+          "question": "补习部早期对话中，梓的转学信息是怎样被日富美和花子提到的？梓为什么还要参加一年级考试？这些直接资料能说明哪些学习适应问题？",
+          "required_episode_groups": [[250, 251, 252], [263, 264]],
+          "required_sources": ["main/31060.json"],
+          "forbidden_episode_ids": [150, 151, 152, 154, 155, 161, 168, 169, 189, 190, 191, 194, 195, 197, 198, 199]
+        }
+      ]
+    }
+  ]
+}

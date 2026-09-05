@@ -1,0 +1,124 @@
+{
+  "version": "stage5-causality-v1",
+  "frozen_at": "2026-08-25T23:44:26.739392+00:00",
+  "baseline": {
+    "path": "C:\\Users\\Admin\\PycharmProjects\\PythonProject\\validation\\ba-stage3-deep-v37.db",
+    "sha256": "7f94a12d70fe69a54b0efa85f2bfa639c1d8380c03a705de9599ccc32ea44ea9"
+  },
+  "questions": {
+    "eden_obligation_to_new_institution": {
+      "id": "eden_obligation_to_new_institution",
+      "question": "请只依据已导入的剧情文件，重建“老师的义务”如何从圣娅在故事开端提出的伦理要求，发展到古圣堂废墟上“新的伊甸条约机构”这一制度性宣言。回答必须依次说明：圣娅提出的义务及乐园问题、老师后来关于信任学生的立场、原伊甸条约机构原本要解决什么、古圣堂与戒律守护者的历史作用、谁凭什么解释老师能够代理发起人，以及两个伊甸条约机构并存后现场发生了什么。请明确区分原文事实、跨片段推论和文本没有确定的部分；不要把“出现两个 ETO”写成守护者已经明确服从新 ETO。",
+      "expected_capability": "跨 main/31010、33030、33050、33060、33190 至少七个证据槽，完成伦理承诺→信任立场→原制度→历史守护→夏莱权限→新 ETO→规则冲突的制度链，同时保持结论强度受限。"
+    },
+    "old_cathedral_symbol_infrastructure_and_limits": {
+      "id": "old_cathedral_symbol_infrastructure_and_limits",
+      "question": "古圣堂为什么既被选作伊甸条约签订场所，又在袭击中成为高风险地点？请把“条约的政治目的、古圣堂的第一次公会议/守护者历史、会场只整修上层而地下仍是废墟、地下墓穴传闻、阿里乌斯的作战部署、爆炸后的导弹与炸药猜测、现场对地下潜入的推测、废墟上新 ETO 的出现”连成一条证据链。最后必须说明哪些环节只是推测：尤其不能把会场选择者、地下墓穴、预埋炸药或未花直接写成已被文本证明的具体渗透机制。",
+      "expected_capability": "跨 main/31090、33050、33060、33070、33190 的八组证据，完成象征意义、物理基础设施、攻击部署和认识论边界的多层因果分析。"
+    },
+    "kisaki_mika_governance_analogy_with_boundary": {
+      "id": "kisaki_mika_governance_analogy_with_boundary",
+      "question": "把山海经月影祭前后的对外校不安，与圣三一未花反对伊甸条约的行动放在一起比较：妃咲面对内部排外情绪、传统与外校来访时采取了什么治理方式；未花面对格黑娜与条约时又采取了什么方式；弥奈与玄龙门成员的顾虑、京剧部事件、未花对茶会命令和阿里乌斯的使用分别说明了什么？请给出“相似点”和“根本差异”，并明确说明这只是跨剧情的类比推论，不是两条剧情之间存在文本直接因果或人物互相影响的证据。",
+      "expected_capability": "跨 event/10038/1003805 与 main/32170 的八组证据，测试跨模块概念联想、治理方式比较与禁止虚构跨剧情因果。"
+    }
+  },
+  "q2_evidence_criterion": {
+    "required_episode_groups": [
+      [
+        274,
+        275
+      ],
+      [
+        76,
+        77,
+        78
+      ],
+      [
+        121
+      ],
+      [
+        122
+      ],
+      [
+        139,
+        140
+      ],
+      [
+        320
+      ],
+      [
+        341
+      ],
+      [
+        197,
+        199
+      ]
+    ],
+    "required_sources": [
+      "main/31090.json",
+      "main/33050.json",
+      "main/33060.json",
+      "main/33070.json",
+      "main/33190.json"
+    ],
+    "required_terms": [
+      "古圣堂",
+      "阿里乌斯",
+      "地下墓穴",
+      "伊甸条约"
+    ],
+    "required_term_groups": [
+      [
+        "事实",
+        "原文",
+        "文本明确"
+      ],
+      [
+        "推测",
+        "推论",
+        "推断"
+      ],
+      [
+        "未知",
+        "未明确",
+        "不能确定",
+        "无法确定"
+      ]
+    ]
+  },
+  "allowed_source_keys": [
+    "event/10038/1003805.json",
+    "favor/10000/100002.json",
+    "main/31010.json",
+    "main/31060.json",
+    "main/31090.json",
+    "main/32170.json",
+    "main/33030.json",
+    "main/33050.json",
+    "main/33060.json",
+    "main/33070.json",
+    "main/33190.json"
+  ],
+  "configuration": {
+    "prompt_version": "v3.21_atomic_coverage_source_audit",
+    "reasoning_model": "deepseek-ai/DeepSeek-V3.2",
+    "fallback_model": "zai-org/GLM-4.5V",
+    "embedding_model": "Pro/BAAI/bge-m3",
+    "embedding_dimension": 1024,
+    "embedding_dtype": "float32",
+    "episode_top_k": 40,
+    "concept_top_k": 20,
+    "candidate_limit": 600,
+    "graph_max_hops": 3,
+    "graph_beam_width": 20,
+    "growth_max_rounds": 2,
+    "growth_episode_limit": 40,
+    "answer_episode_limit": 30,
+    "answer_path_limit": 24
+  },
+  "official_blocks": 10,
+  "pilot_excluded": true,
+  "primary_outcome": "paired Q2 required-group Recall@30 deltas",
+  "edge_count_policy": "audit_only_never_scored",
+  "schedule_path": "C:\\Users\\Admin\\PycharmProjects\\PythonProject\\validation\\stage5-randomized-schedule.json"
+}

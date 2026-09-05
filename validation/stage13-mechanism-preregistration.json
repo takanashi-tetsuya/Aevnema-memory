@@ -1,0 +1,39 @@
+{
+  "version": "stage13-evidence-context-concept-utility-v1",
+  "frozen_before_treatment_retrieval": true,
+  "embedding_dtype": "float32",
+  "purpose": "分别检验 Paragraph 作为 Source 级原文证据、以及细粒度抽取复用既有 Concept 所形成的跨 Episode 桥，是否在不扩散错误范围的情况下产生稳定收益。",
+  "paragraph_treatment": {
+    "seed_expansion": false,
+    "rerank_context": true,
+    "context_per_source": 2,
+    "context_chars": 1000,
+    "provenance_rule": "Paragraph 明确标记为 source_level_raw_paragraph，只证明该 Source 原文出现过该信息，不自动升级为候选 Episode 摘要事实。"
+  },
+  "concept_treatment": {
+    "discovery_profile": "fine_grained",
+    "new_concept_min_distinct_episodes": 2,
+    "actual_new_concepts_retained": 0,
+    "existing_concept_reuse_links_retained": 140,
+    "vector_seed_min_reachable_episodes": 2,
+    "exact_alias_bypass": true,
+    "rationale": "单 Episode 新标签不是图桥；复用已有 Concept 可立即把新 Episode 接入既有记忆簇。"
+  },
+  "paired_rerank": {
+    "canonical_input_hash": true,
+    "identical_input_reuse": true,
+    "cache_fail_closed": true,
+    "rule": "只有问题、意图、原子查询、候选顺序及内容、Source 上下文、预算、模型和提示版本完全一致时才共享整次精排结果。"
+  },
+  "budgets": [20, 12, 8],
+  "primary_outcome": "对应机制题中单项处理臂相对 A 的 required Episode group Selected Recall@20 配对差值。",
+  "pressure_outcomes": ["Selected Recall@12", "Selected Recall@8", "Candidate@100 recall"],
+  "success_gates": {
+    "stable_positive": "同一问题至少 2/3 次差值大于 0 且没有负差值。",
+    "mechanism_benefit": "相应机制题至少两题 stable_positive，题集平均差值大于 0，并可由 Paragraph 上下文或 Concept reuse 路径归因。",
+    "nonregression": "network 与 scope_control 在 Top-20 均不得出现 stable_negative，且总体平均差值不得小于 0。",
+    "candidate_integrity": "P 与 A 的图候选必须完全一致；Paragraph 只能改变精排输入。",
+    "edge_policy": "Concept 与 Association 数量仅作资产审计，不是成功指标。"
+  },
+  "interpretation": "若只在 Top-12/8 获益而 Top-20 饱和，则记录为压缩收益，不宣称扩大 Candidate recall。若 Concept 桥召回伴随范围题退化，则不启用。"
+}
