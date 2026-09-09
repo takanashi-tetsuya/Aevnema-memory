@@ -586,6 +586,157 @@ class ContextualTargetGateV3Tests(unittest.TestCase):
             (item.node_type, item.node_id, item.score) for item in hits
         ])
 
+    def test_strict_source_closure_rejects_bad_quote_span_and_changed_source(self):
+        valid_episode = _episode(2, 2)
+        valid_episode["evidence_spans_json"] = "[[1, 1]]"
+        valid_episode["evidence_quotes_json"] = '["source evidence"]'
+        valid_source = _source(2)
+        valid_source["raw_text"] = "source evidence"
+        engine = self._engine(
+            episodes=[valid_episode],
+            sources=[valid_source],
+            target_vectors={2: [0, 1, 0]},
+        )
+
+        facts, reasons = engine._v3_source_fact_closure([2])
+        self.assertIn(2, facts)
+        self.assertEqual("source_bound", reasons[2])
+
+        bad_quote = dict(valid_episode)
+        bad_quote["evidence_quotes_json"] = '["different quote"]'
+        quote_engine = self._engine(
+            episodes=[bad_quote],
+            sources=[valid_source],
+            target_vectors={2: [0, 1, 0]},
+        )
+        quote_facts, quote_reasons = quote_engine._v3_source_fact_closure([2])
+        self.assertNotIn(2, quote_facts)
+        self.assertEqual("source_evidence_quote_span_mismatch", quote_reasons[2])
+
+        bad_span = dict(valid_episode)
+        bad_span["evidence_spans_json"] = "[[2, 2]]"
+        span_engine = self._engine(
+            episodes=[bad_span],
+            sources=[valid_source],
+            target_vectors={2: [0, 1, 0]},
+        )
+        span_facts, span_reasons = span_engine._v3_source_fact_closure([2])
+        self.assertNotIn(2, span_facts)
+        self.assertEqual("source_evidence_span_out_of_range", span_reasons[2])
+
+        changed_source = dict(valid_source)
+        changed_source["raw_text"] = "changed source record"
+        changed_engine = self._engine(
+            episodes=[valid_episode],
+            sources=[changed_source],
+            target_vectors={2: [0, 1, 0]},
+        )
+        changed_facts, changed_reasons = changed_engine._v3_source_fact_closure([2])
+        self.assertNotIn(2, changed_facts)
+        self.assertEqual("source_evidence_quote_span_mismatch", changed_reasons[2])
+
+    def test_rerank_candidate_input_fingerprint_binds_order_text_and_context(self):
+        episodes = [
+            {"id": 1, "text": "alpha", "source_id": 1, "source_key": "a"},
+            {"id": 2, "text": "beta", "source_id": 2, "source_key": "b"},
+        ]
+        contexts = {1: [{"paragraph_id": 10, "text": "context a"}]}
+        baseline = QueryEngine._rerank_candidate_input_fingerprint(
+            episodes, contexts
+        )
+        self.assertEqual(
+            baseline,
+            QueryEngine._rerank_candidate_input_fingerprint(episodes, contexts),
+        )
+        self.assertNotEqual(
+            baseline,
+            QueryEngine._rerank_candidate_input_fingerprint(
+                list(reversed(episodes)), contexts
+            ),
+        )
+        self.assertNotEqual(
+            baseline,
+            QueryEngine._rerank_candidate_input_fingerprint(
+                [{**episodes[0], "text": "changed"}, episodes[1]], contexts
+            ),
+        )
+        self.assertNotEqual(
+            baseline,
+            QueryEngine._rerank_candidate_input_fingerprint(
+                episodes, {1: [{"paragraph_id": 10, "text": "changed context"}]}
+            ),
+        )
+
+    def test_derived_candidate_descendant_cannot_become_base_without_independent_route(self):
+        def source_bound_episode(episode_id: int) -> dict:
+            row = _episode(episode_id, episode_id)
+            row["evidence_spans_json"] = "[[1, 1]]"
+            row["evidence_quotes_json"] = '["source evidence"]'
+            return row
+
+        episodes = [
+            {**source_bound_episode(1), "score": 0.9},
+            {**source_bound_episode(2), "score": 0.7},
+            {**source_bound_episode(3), "score": 0.6},
+        ]
+        sources = [
+            {**_source(episode_id), "raw_text": "source evidence"}
+            for episode_id in (1, 2, 3)
+        ]
+        engine = self._engine(
+            episodes=episodes,
+            sources=sources,
+            target_vectors={1: [1, 0, 0], 2: [0, 1, 0], 3: [0, 1, 0]},
+        )
+        slot = EvidenceSlot(slot_id="slot", question="need", clause_ids=("slot",))
+        requirements = RequirementResolution(
+            request_mode="factual",
+            status="resolved",
+            requirements=(slot,),
+            planner_origin="explicit",
+        )
+
+        _dependent, dependent_trace = engine._select_contextual_slots_v3(
+            episodes=episodes,
+            slots=[slot],
+            slot_support={3: {"slot"}},
+            bundle=None,
+            domain="test",
+            endpoint_limit=1,
+            anchor_activations={1: 1.0},
+            authoritative_requirements=requirements,
+            evaluation_as_of=AS_OF,
+            prepared_early_contextual_episode_ids=(2,),
+            prepared_early_contextual_derived_episode_ids=(2, 3),
+        )
+        self.assertEqual([1], dependent_trace["base_endpoint_manifest"])
+        self.assertEqual(
+            [2, 3],
+            dependent_trace["prepared_early_contextual_derived_endpoint_manifest"],
+        )
+        self.assertNotIn(
+            3,
+            [item["episode_id"] for item in dependent_trace["merged_candidates"]],
+        )
+
+        _independent, independent_trace = engine._select_contextual_slots_v3(
+            episodes=episodes,
+            slots=[slot],
+            slot_support={3: {"slot"}},
+            bundle=None,
+            domain="test",
+            endpoint_limit=1,
+            anchor_activations={1: 1.0},
+            authoritative_requirements=requirements,
+            evaluation_as_of=AS_OF,
+            prepared_early_contextual_episode_ids=(2,),
+            prepared_early_contextual_derived_episode_ids=(2,),
+        )
+        self.assertEqual([1, 3], independent_trace["base_endpoint_manifest"])
+        self.assertEqual(
+            [3], independent_trace["masked_selected_episode_ids"]
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

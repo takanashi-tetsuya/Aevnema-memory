@@ -94,6 +94,9 @@ def run(
     env_file: Path,
     treatment_edge_id: int,
     deadline_seconds: float = 120.0,
+    conditions: tuple[tuple[str, bool, bool, bool], ...] = CONDITIONS,
+    schema: str = SCHEMA,
+    report_filename: str = "W08_PREPARED_EARLY_CANDIDATE_POOL_MATRIX.md",
 ) -> dict[str, str]:
     learned_snapshot = learned_snapshot.resolve()
     matrix_manifest = matrix_manifest.resolve()
@@ -115,7 +118,7 @@ def run(
     evaluation_as_of = _utc_now()
     snapshot_hash = _sha256_file(learned_snapshot)
     payload: dict[str, Any] = {
-        "schema": SCHEMA,
+        "schema": schema,
         "status": "running",
         "started_at": _utc_now(),
         "formal_scoring": "disabled_unapproved_gold",
@@ -136,7 +139,7 @@ def run(
                 "candidate_pool_enabled": pool,
                 "entry": "public QueryEngine.query(stop_after='evidence')",
             }
-            for name, prepared, masked, pool in CONDITIONS
+            for name, prepared, masked, pool in conditions
         },
         "arms": {},
         "no_retry_policy": "Each independent local arm runs once; terminal outcomes are retained.",
@@ -147,7 +150,7 @@ def run(
         plan_path = prepared_plan_dir / f"{variant.identifier}.frozen_query_plan.full_local.json"
         if not plan_path.is_file():
             raise FileNotFoundError(plan_path)
-        for condition, prepared, masked, pool in CONDITIONS:
+        for condition, prepared, masked, pool in conditions:
             key = f"{variant.identifier}__{condition}"
             payload["arms"][key] = {
                 "status": "pending",
@@ -185,7 +188,7 @@ def run(
         payload["snapshot_sha256_after"] == snapshot_hash
     )
     _write_json(full_local, payload)
-    report = output_dir / "W08_PREPARED_EARLY_CANDIDATE_POOL_MATRIX.md"
+    report = output_dir / report_filename
     report.write_text(_report(payload) + "\n", encoding="utf-8")
     return {"full_local": str(full_local), "report": str(report)}
 

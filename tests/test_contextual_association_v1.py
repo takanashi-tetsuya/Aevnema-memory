@@ -194,6 +194,68 @@ class ContextualAssociationTests(unittest.TestCase):
         self.assertEqual("c", c["gate_trace"]["scoring_mode"])
         self.assertEqual("w", w["gate_trace"]["scoring_mode"])
 
+    def test_double_key_changes_when_only_context_or_only_need_changes(self):
+        class Repo:
+            @staticmethod
+            def get_contextual_for_prototypes(*_args, **_kwargs):
+                return [
+                    {
+                        "id": 18,
+                        "from_type": "episode",
+                        "from_id": 1,
+                        "to_id": 2,
+                        "context_cue_id": 10,
+                        "need_cue_id": 20,
+                        "lifecycle_state": "active",
+                        "utility_weight": 1.0,
+                    }
+                ]
+
+        context = EmbeddingIndex(3)
+        need = EmbeddingIndex(3)
+        context.add(10, [1, 0, 0])
+        need.add(20, [0, 1, 0])
+        matcher = ContextualAssociationMatcher(
+            context,
+            need,
+            Repo(),
+            context_threshold=0.5,
+            need_threshold=0.5,
+        )
+
+        def bundle(whole, slot):
+            return QueryVectorBundle(
+                model_id="test",
+                dimension=3,
+                whole=np.asarray(whole, dtype=np.float32),
+                queries=(
+                    QueryVector(
+                        "slot", "slot-hash", "atomic",
+                        np.asarray(slot, dtype=np.float32), slot_id="slot",
+                    ),
+                ),
+            )
+
+        common = {
+            "domain": "knowledge",
+            "active_anchor_ids": {1: 1.0},
+            "unresolved_slot_ids": ["slot"],
+            "evaluation_as_of": "2026-01-01T00:00:00+00:00",
+            "scoring_mode": "cn",
+        }
+        self.assertEqual(
+            [18],
+            [item.association_id for item in matcher.match_bundle(bundle([1, 0, 0], [0, 1, 0]), **common)["pre_target_proposals"]],
+        )
+        self.assertEqual(
+            [],
+            matcher.match_bundle(bundle([1, 0, 0], [1, 0, 0]), **common)["pre_target_proposals"],
+        )
+        self.assertEqual(
+            [],
+            matcher.match_bundle(bundle([0, 1, 0], [0, 1, 0]), **common)["pre_target_proposals"],
+        )
+
     def test_double_key_never_runs_without_a_base_anchor(self):
         class Repo:
             def get_contextual_for_prototypes(self, *_args, **_kwargs):

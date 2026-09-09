@@ -90,6 +90,15 @@ def _compact_result(value: object) -> dict[str, Any]:
             ),
             "proposal_generated": prepared.get("proposal_generated", False),
             "source_validated": prepared.get("source_validated", False),
+            "source_metadata_validated": prepared.get(
+                "source_metadata_validated", False
+            ),
+            "source_binding_validated": prepared.get(
+                "source_binding_validated", False
+            ),
+            "source_binding_status": prepared.get(
+                "source_binding_status", "not_observed"
+            ),
             "current_requirement_supported": prepared.get(
                 "current_requirement_supported", False
             ),
@@ -113,6 +122,13 @@ def _compact_result(value: object) -> dict[str, Any]:
             "candidate_pool_injection_reason": prepared.get(
                 "candidate_pool_injection_reason", "not_observed"
             ),
+            "candidate_pool_strict_source_status": prepared.get(
+                "candidate_pool_strict_source_status", []
+            ),
+            "candidate_pool_dependency_partition": prepared.get(
+                "candidate_pool_dependency_partition", {}
+            ),
+            "rerank_input_reuse": prepared.get("rerank_input_reuse", {}),
             "ordinary_retrieval_continues": prepared.get(
                 "ordinary_retrieval_continues", None
             ),

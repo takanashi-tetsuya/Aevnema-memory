@@ -2235,7 +2235,14 @@ class QueryEngine:
             "independent_anchor_episode_ids": sorted(independent_anchors),
             "cue_excluded_anchor_episode_ids": sorted(excluded_anchor_ids),
             "proposal_generated": False,
+            # Backwards-compatible name for the metadata/current-version
+            # target gate below. It is deliberately not a quote/span binding
+            # claim; candidate treatment performs that stricter closure only
+            # before an accepted proposal may alter graph seeds.
             "source_validated": False,
+            "source_metadata_validated": False,
+            "source_binding_validated": False,
+            "source_binding_status": "not_checked",
             "current_requirement_supported": False,
             "current_requirement_support_status": (
                 "not_evaluated_before_base_selection"
@@ -2392,6 +2399,7 @@ class QueryEngine:
             for item in gate_result.hits
         ]
         trace["source_validated"] = bool(gate_result.hits)
+        trace["source_metadata_validated"] = bool(gate_result.hits)
         trace["candidate_pool_validated_episode_ids"] = [
             int(item.target_episode_id) for item in gate_result.hits
         ]
@@ -2759,8 +2767,17 @@ class QueryEngine:
     def _v3_source_fact_closure(
         self,
         episode_ids: Sequence[int],
+        *,
+        cache: dict[int, tuple[SourceFactRef | None, str]] | None = None,
     ) -> tuple[dict[int, SourceFactRef], dict[int, str]]:
-        """Fetch source truth once for all request-local candidate Episodes."""
+        """Fetch source truth once for all request-local candidate Episodes.
+
+        ``cache`` is intentionally request-local and retains the strict
+        ``SourceFactRef`` revision identity alongside the decision. It avoids
+        rescanning the same raw Source when a prepared candidate later reaches
+        the contribution selector, without upgrading a metadata-only gate to
+        a source-binding proof.
+        """
 
         normalized_ids: set[int] = set()
         for value in episode_ids:
@@ -2773,13 +2790,33 @@ class QueryEngine:
         ids = tuple(sorted(normalized_ids))
         if not ids:
             return {}, {}
-        try:
-            episode_rows, source_rows = self._current_target_rows(ids)
-        except (AttributeError, TypeError, ValueError, KeyError):
-            return {}, {episode_id: "source_closure_unavailable" for episode_id in ids}
+        cached_ids = set(cache or {})
+        missing_ids = tuple(episode_id for episode_id in ids if episode_id not in cached_ids)
         facts: dict[int, SourceFactRef] = {}
         reasons: dict[int, str] = {}
-        for episode_id in ids:
+        if cache is not None:
+            for episode_id in ids:
+                cached = cache.get(episode_id)
+                if cached is None:
+                    continue
+                fact, reason = cached
+                reasons[episode_id] = reason
+                if fact is not None:
+                    facts[episode_id] = fact
+        if not missing_ids:
+            return facts, reasons
+        try:
+            episode_rows, source_rows = self._current_target_rows(missing_ids)
+        except (AttributeError, TypeError, ValueError, KeyError):
+            unavailable = {
+                episode_id: "source_closure_unavailable" for episode_id in missing_ids
+            }
+            reasons.update(unavailable)
+            if cache is not None:
+                for episode_id, reason in unavailable.items():
+                    cache[episode_id] = (None, reason)
+            return facts, reasons
+        for episode_id in missing_ids:
             episode = episode_rows.get(episode_id)
             try:
                 source_id = int(self._record_value(episode, "source_id"))
@@ -2793,6 +2830,8 @@ class QueryEngine:
             reasons[episode_id] = reason
             if fact is not None:
                 facts[episode_id] = fact
+            if cache is not None:
+                cache[episode_id] = (fact, reason)
         return facts, reasons
 
     @classmethod
@@ -2845,6 +2884,7 @@ class QueryEngine:
         contextual_hits: Sequence[ContextualSlotHit] = (),
         target_relevance_scores: dict[tuple[str, int], float] | None = None,
         base_episode_ids: Sequence[int] | None = None,
+        source_fact_cache: dict[int, tuple[SourceFactRef | None, str]] | None = None,
     ) -> tuple[list[CandidateContribution], dict[int, str], list[dict[str, object]]]:
         """Preserve all base and accepted contextual routes before merging.
 
@@ -2875,7 +2915,8 @@ class QueryEngine:
                 if episode_id > 0 and episode_id in materialized_episode_ids:
                     normalized_base_episode_ids.add(episode_id)
         facts, source_reasons = self._v3_source_fact_closure(
-            [int(item["id"]) for item in episode_rows]
+            [int(item["id"]) for item in episode_rows],
+            cache=source_fact_cache,
         )
         contributions: list[CandidateContribution] = []
         trace_rows: list[dict[str, object]] = []
@@ -3326,6 +3367,8 @@ class QueryEngine:
         learning_independent_base_episode_ids: Sequence[int] | None = None,
         learning_initial_delivered_episode_ids: Sequence[int] | None = None,
         prepared_early_contextual_episode_ids: Sequence[int] = (),
+        prepared_early_contextual_derived_episode_ids: Sequence[int] = (),
+        source_fact_cache: dict[int, tuple[SourceFactRef | None, str]] | None = None,
     ) -> tuple[list[dict], dict]:
         """Run the V3 request-local contribution treatment/masked comparison."""
 
@@ -3349,7 +3392,18 @@ class QueryEngine:
                 }
             )
         )
-        prepared_early_contextual_id_set = set(prepared_early_contextual_ids)
+        prepared_early_contextual_derived_ids = tuple(
+            sorted(
+                {
+                    int(value)
+                    for value in prepared_early_contextual_derived_episode_ids
+                    if int(value) > 0
+                }
+            )
+        )
+        prepared_early_contextual_id_set = set(
+            prepared_early_contextual_ids
+        ).union(prepared_early_contextual_derived_ids)
         base_route_episode_ids = tuple(
             sorted(
                 int(item["id"])
@@ -3407,6 +3461,7 @@ class QueryEngine:
                 slots=slots,
                 slot_support=slot_support,
                 base_episode_ids=base_route_episode_ids,
+                source_fact_cache=source_fact_cache,
             )
         )
         masked_aggregates = aggregate_contributions(base_contributions)
@@ -3447,6 +3502,9 @@ class QueryEngine:
             "base_endpoint_manifest": list(base_route_episode_ids),
             "prepared_early_contextual_endpoint_manifest": list(
                 prepared_early_contextual_ids
+            ),
+            "prepared_early_contextual_derived_endpoint_manifest": list(
+                prepared_early_contextual_derived_ids
             ),
             "independent_base_endpoint_manifest": list(independent_base_ids),
             "masked_selected_episode_ids": list(initial_masked.selected_episode_ids),
@@ -3636,6 +3694,7 @@ class QueryEngine:
                 contextual_hits=gate_result.hits,
                 target_relevance_scores=target_relevance,
                 base_episode_ids=base_route_episode_ids,
+                source_fact_cache=source_fact_cache,
             )
         )
         treatment_aggregates = aggregate_contributions(treatment_contributions)
@@ -3740,6 +3799,8 @@ class QueryEngine:
         learning_independent_base_episode_ids: Sequence[int] | None = None,
         learning_initial_delivered_episode_ids: Sequence[int] | None = None,
         prepared_early_contextual_episode_ids: Sequence[int] = (),
+        prepared_early_contextual_derived_episode_ids: Sequence[int] = (),
+        source_fact_cache: dict[int, tuple[SourceFactRef | None, str]] | None = None,
     ) -> tuple[list[dict], dict]:
         """Run masked/treatment set-cover without changing factual evidence rules."""
         slots, slot_support = self._request_evidence_slots(
@@ -3802,6 +3863,10 @@ class QueryEngine:
                 prepared_early_contextual_episode_ids=(
                     prepared_early_contextual_episode_ids
                 ),
+                prepared_early_contextual_derived_episode_ids=(
+                    prepared_early_contextual_derived_episode_ids
+                ),
+                source_fact_cache=source_fact_cache,
             )
         base_candidates = self._slot_candidates(
             episodes, slot_support, reranked_episode_ids
@@ -5747,6 +5812,12 @@ class QueryEngine:
         )
         rerank_trace["deterministic_evidence_floor"] = evidence_floor_trace
         rerank_trace["constraint_candidate_ids"] = constraint_candidate_ids
+        rerank_trace["candidate_input_fingerprint"] = (
+            self._rerank_candidate_input_fingerprint(
+                candidate_episodes,
+                paragraph_context_by_source,
+            )
+        )
         bundle = {
             "version": (
                 3
@@ -7299,6 +7370,64 @@ class QueryEngine:
                 trace=trace,
             )
         return selected_ids, trace
+
+    @staticmethod
+    def _rerank_candidate_input_fingerprint(
+        episodes: Sequence[Mapping[str, object]],
+        paragraph_context_by_source: Mapping[int, Sequence[Mapping[str, object]]]
+        | None = None,
+    ) -> str:
+        """Bind reusable rerank output to its exact local candidate input.
+
+        The digest covers IDs, order, text and request-visible paragraph
+        contexts. It intentionally records no text itself. A frozen rerank
+        result is reusable only when this fingerprint matches; a candidate
+        treatment otherwise stays a local candidate diagnostic instead of
+        inheriting an LLM judgement made for a different candidate list.
+        """
+
+        normalized_episodes: list[dict[str, object]] = []
+        for position, episode in enumerate(episodes, start=1):
+            try:
+                episode_id = int(episode.get("id", 0))
+            except (TypeError, ValueError):
+                continue
+            if episode_id <= 0:
+                continue
+            text = str(episode.get("text", ""))
+            normalized_episodes.append(
+                {
+                    "position": position,
+                    "episode_id": episode_id,
+                    "text_sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
+                    "source_id": int(episode.get("source_id", 0) or 0),
+                    "source_key_sha256": hashlib.sha256(
+                        str(episode.get("source_key", "")).encode("utf-8")
+                    ).hexdigest(),
+                    "participants": [str(item) for item in episode.get("participants", [])],
+                    "story_time_text": str(episode.get("story_time_text", "")),
+                }
+            )
+        contexts: list[dict[str, object]] = []
+        for source_id, rows in sorted((paragraph_context_by_source or {}).items()):
+            for position, row in enumerate(rows, start=1):
+                contexts.append(
+                    {
+                        "source_id": int(source_id),
+                        "position": position,
+                        "paragraph_id": int(row.get("paragraph_id", 0) or 0),
+                        "text_sha256": hashlib.sha256(
+                            str(row.get("text", "")).encode("utf-8")
+                        ).hexdigest(),
+                    }
+                )
+        payload = json.dumps(
+            {"version": 1, "episodes": normalized_episodes, "contexts": contexts},
+            ensure_ascii=True,
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode("utf-8")
+        return "sha256:" + hashlib.sha256(payload).hexdigest()
 
     def _rerank_answer_episodes(
         self,
@@ -14938,6 +15067,13 @@ class QueryEngine:
                 if item.node_type == "episode"
             }
         )
+        # Keep strict Source closures request-local. Metadata validation may
+        # cheaply inspect a candidate first, but only this cache can make a
+        # candidate eligible to alter the ordinary seed pool.
+        prepared_early_source_cache: dict[
+            int, tuple[SourceFactRef | None, str]
+        ] = {}
+        base_seeds_before_prepared_early = list(seeds)
         base_anchor_activations = self._base_anchor_activations(seeds)
         # A relation-cue endpoint may participate in ordinary retrieval, but
         # it is not an independent anchor for a prepared contextual proposal.
@@ -14973,16 +15109,88 @@ class QueryEngine:
         # becoming an apparent independent retrieval result merely because it
         # participated in traversal.
         prepared_early_contextual_episode_ids: tuple[int, ...] = ()
+        prepared_early_contextual_derived_episode_ids: tuple[int, ...] = ()
+        prepared_early_root_edge_ids_by_episode: dict[int, tuple[int, ...]] = {}
+        injected_hits: list[SearchHit] = []
         if bool(
             self.config.retrieval.contextual_prepared_early_candidate_pool_enabled
         ):
+            accepted_candidates = prepared_early_trace.get(
+                "accepted_candidate_order", []
+            )
+            if not isinstance(accepted_candidates, list):
+                accepted_candidates = []
+            target_ids: list[int] = []
+            for candidate in accepted_candidates:
+                if not isinstance(candidate, Mapping):
+                    continue
+                try:
+                    target_episode_id = int(candidate.get("target_episode_id", 0))
+                except (TypeError, ValueError):
+                    continue
+                if target_episode_id > 0:
+                    target_ids.append(target_episode_id)
+            strict_facts, strict_reasons = self._v3_source_fact_closure(
+                target_ids,
+                cache=prepared_early_source_cache,
+            )
+            strict_bound_ids = set(strict_facts)
+            prepared_early_trace["source_binding_status"] = (
+                "strict_source_bound"
+                if target_ids and all(target_id in strict_bound_ids for target_id in target_ids)
+                else "strict_source_binding_rejected"
+                if target_ids
+                else "no_metadata_validated_candidate"
+            )
+            prepared_early_trace["source_binding_validated"] = bool(
+                target_ids and all(target_id in strict_bound_ids for target_id in target_ids)
+            )
+            prepared_early_trace["candidate_pool_strict_source_status"] = [
+                {
+                    "episode_id": target_episode_id,
+                    "status": strict_reasons.get(
+                        target_episode_id, "source_closure_missing"
+                    ),
+                    "source_revision_id": (
+                        strict_facts[target_episode_id].source_revision_id
+                        if target_episode_id in strict_facts
+                        else ""
+                    ),
+                }
+                for target_episode_id in sorted(set(target_ids))
+            ]
+            strict_candidates: list[Mapping[str, object]] = []
+            for candidate in accepted_candidates:
+                if not isinstance(candidate, Mapping):
+                    continue
+                try:
+                    target_episode_id = int(candidate.get("target_episode_id", 0))
+                except (TypeError, ValueError):
+                    continue
+                if target_episode_id in strict_bound_ids:
+                    strict_candidates.append(candidate)
             injected_hits, prepared_early_contextual_episode_ids = (
                 self._prepared_early_candidate_pool_hits(
-                    prepared_early_trace.get("accepted_candidate_order", []),
+                    strict_candidates,
                     set(base_episode_ids_before_contextual),
                 )
             )
             eligible_ids = list(prepared_early_contextual_episode_ids)
+            root_edge_sets: dict[int, set[int]] = {
+                episode_id: set() for episode_id in eligible_ids
+            }
+            for candidate in strict_candidates:
+                try:
+                    target_episode_id = int(candidate.get("target_episode_id", 0))
+                    association_id = int(candidate.get("association_id", 0))
+                except (TypeError, ValueError):
+                    continue
+                if target_episode_id in root_edge_sets and association_id > 0:
+                    root_edge_sets[target_episode_id].add(association_id)
+            prepared_early_root_edge_ids_by_episode = {
+                episode_id: tuple(sorted(edge_ids))
+                for episode_id, edge_ids in sorted(root_edge_sets.items())
+            }
             prepared_early_trace["candidate_pool_eligible_episode_ids"] = (
                 eligible_ids
             )
@@ -14999,9 +15207,11 @@ class QueryEngine:
                     **dict(prepared_early_trace.get("executed_modules", {})),
                     "prepared_early_candidate_pool": True,
                 }
-            elif prepared_early_trace.get("source_validated"):
+            elif prepared_early_trace.get("source_metadata_validated"):
                 prepared_early_trace["candidate_pool_injection_reason"] = (
-                    "source_validated_targets_already_independent_base_anchors"
+                    "strict_source_bound_targets_already_independent_base_anchors"
+                    if strict_bound_ids
+                    else "metadata_validated_but_strict_source_binding_rejected"
                 )
             else:
                 prepared_early_trace["candidate_pool_injection_reason"] = (
@@ -15039,6 +15249,99 @@ class QueryEngine:
             self.config.retrieval.candidate_limit,
             cue_fast_endpoint_keys,
         )
+        if injected_hits:
+            # Candidate treatment adds a root seed, so ordinary traversal no
+            # longer tells us by itself whether a later Episode had an
+            # independent route. Replaying the same bounded graph locally
+            # once without injected roots, plus once per injected root, gives
+            # a small provenance partition without a model call or DB write.
+            dependency_started = perf_counter()
+            ensure_deadline("prepared_early_candidate_dependency")
+            base_only_nodes, _base_only_paths = self.traverser.expand(
+                base_seeds_before_prepared_early,
+                self.config.retrieval.graph_beam_width,
+                self.config.retrieval.graph_max_hops,
+            )
+            base_only_nodes = self._truncate_traversed_nodes(
+                base_only_nodes,
+                self.config.retrieval.candidate_limit,
+                cue_fast_endpoint_keys,
+            )
+            base_only_episode_ids = {
+                int(item.node_id)
+                for item in base_only_nodes
+                if item.node_type == "episode"
+            }
+            materialized_episode_ids = {
+                int(item.node_id)
+                for item in traversed
+                if item.node_type == "episode"
+            }
+            root_edge_sets_by_episode: dict[int, set[int]] = {}
+            root_closure_episode_ids: set[int] = set()
+            for injected_hit in injected_hits:
+                root_nodes, _root_paths = self.traverser.expand(
+                    [injected_hit],
+                    self.config.retrieval.graph_beam_width,
+                    self.config.retrieval.graph_max_hops,
+                )
+                root_nodes = self._truncate_traversed_nodes(
+                    root_nodes,
+                    self.config.retrieval.candidate_limit,
+                    cue_fast_endpoint_keys,
+                )
+                root_episode_ids = {
+                    int(item.node_id)
+                    for item in root_nodes
+                    if item.node_type == "episode"
+                }.intersection(materialized_episode_ids)
+                root_closure_episode_ids.update(root_episode_ids)
+                for episode_id in root_episode_ids:
+                    root_edge_sets_by_episode.setdefault(episode_id, set()).update(
+                        prepared_early_root_edge_ids_by_episode.get(
+                            int(injected_hit.node_id), ()
+                        )
+                    )
+            derived_only_ids = tuple(
+                sorted(root_closure_episode_ids.difference(base_only_episode_ids))
+            )
+            overlap_ids = tuple(
+                sorted(root_closure_episode_ids.intersection(base_only_episode_ids))
+            )
+            prepared_early_contextual_derived_episode_ids = derived_only_ids
+            prepared_early_root_edge_ids_by_episode = {
+                episode_id: tuple(sorted(root_edge_sets_by_episode.get(episode_id, set())))
+                for episode_id in sorted(root_closure_episode_ids)
+            }
+            prepared_early_trace["candidate_pool_dependency_partition"] = {
+                "method": "bounded_base_only_and_per_root_graph_replay_v1",
+                "scope": "initial_graph_expansion_only",
+                "base_only_episode_ids": sorted(base_only_episode_ids),
+                "root_closure_episode_ids": sorted(root_closure_episode_ids),
+                "derived_only_episode_ids": list(derived_only_ids),
+                "independent_overlap_episode_ids": list(overlap_ids),
+                "root_edge_ids_by_episode": {
+                    str(episode_id): list(edge_ids)
+                    for episode_id, edge_ids in sorted(
+                        prepared_early_root_edge_ids_by_episode.items()
+                    )
+                },
+            }
+            self._record_phase(
+                phase_seconds,
+                "prepared_early_candidate_dependency",
+                dependency_started,
+            )
+        else:
+            prepared_early_trace["candidate_pool_dependency_partition"] = {
+                "method": "not_run_no_injected_candidate",
+                "scope": "initial_graph_expansion_only",
+                "base_only_episode_ids": [],
+                "root_closure_episode_ids": [],
+                "derived_only_episode_ids": [],
+                "independent_overlap_episode_ids": [],
+                "root_edge_ids_by_episode": {},
+            }
         self._record_phase(
             phase_seconds,
             "initial_graph_expansion",
@@ -15300,11 +15603,61 @@ class QueryEngine:
             phase_started,
         )
         evidence_floor_trace: dict = {}
+        observed_rerank_input_fingerprint = (
+            self._rerank_candidate_input_fingerprint(
+                base_episodes,
+                paragraph_context_by_source,
+            )
+        )
         if frozen_plan is not None:
             reranked_episode_ids = [
                 int(value) for value in frozen_plan.get("reranked_episode_ids", [])
             ]
             rerank_trace = deepcopy(frozen_plan.get("rerank_trace", {}))
+            expected_fingerprint = str(
+                rerank_trace.get("candidate_input_fingerprint", "")
+            )
+            rerank_reuse = {
+                "observed_candidate_input_fingerprint": (
+                    observed_rerank_input_fingerprint
+                ),
+                "frozen_candidate_input_fingerprint": expected_fingerprint,
+                "candidate_pool_changed": bool(
+                    prepared_early_contextual_derived_episode_ids
+                ),
+            }
+            if prepared_early_contextual_derived_episode_ids:
+                if (
+                    expected_fingerprint
+                    and hmac.compare_digest(
+                        expected_fingerprint,
+                        observed_rerank_input_fingerprint,
+                    )
+                ):
+                    rerank_reuse["status"] = "frozen_input_fingerprint_matched"
+                else:
+                    # Do not present a frozen reranker decision as if it had
+                    # evaluated the newly injected candidates. The public Q2
+                    # lane remains runnable as a candidate-layer diagnostic,
+                    # but no stale coverage/mapping record may authorize
+                    # source delivery for the changed set.
+                    rerank_reuse["status"] = (
+                        "frozen_input_fingerprint_missing_or_mismatched"
+                    )
+                    reranked_episode_ids = []
+                    rerank_trace = {
+                        "enabled": False,
+                        "reason": "candidate_pool_changed_frozen_rerank_not_reused",
+                        "candidate_input_fingerprint": (
+                            observed_rerank_input_fingerprint
+                        ),
+                        "candidate_input_reuse": rerank_reuse,
+                        "merged_coverage": {"coverage": []},
+                        "deterministic_evidence_floor": {},
+                    }
+            else:
+                rerank_reuse["status"] = "candidate_pool_unchanged_frozen_reuse"
+            prepared_early_trace["rerank_input_reuse"] = rerank_reuse
         else:
             phase_started = perf_counter()
             evidence_floor_trace = self._hybrid_evidence_floor_trace(
@@ -15367,6 +15720,9 @@ class QueryEngine:
             )
             rerank_trace["deterministic_evidence_floor"] = evidence_floor_trace
             rerank_trace["constraint_candidate_ids"] = constraint_candidate_ids
+            rerank_trace["candidate_input_fingerprint"] = (
+                observed_rerank_input_fingerprint
+            )
             self._record_phase(
                 phase_seconds,
                 "evidence_preparation",
@@ -15610,6 +15966,10 @@ class QueryEngine:
                 prepared_early_contextual_episode_ids=(
                     prepared_early_contextual_episode_ids
                 ),
+                prepared_early_contextual_derived_episode_ids=(
+                    prepared_early_contextual_derived_episode_ids
+                ),
+                source_fact_cache=prepared_early_source_cache,
             )
         # The late selector returns its own trace object.  Preserve the
         # earlier observation as a distinct stage rather than overwriting it
