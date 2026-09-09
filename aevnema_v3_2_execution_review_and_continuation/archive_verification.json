@@ -1,0 +1,9 @@
+{
+  "archive": "/mnt/data/deliverable.redacted.zip",
+  "member_count": 26,
+  "included_hash_entries_verified": 25,
+  "withheld_entries_not_available_for_rehash": 161,
+  "mismatches": [],
+  "crc_error": null,
+  "note": "Only included archive entries were rehashed. This does not re-verify withheld files, source SQLite databases, or code tests."
+}

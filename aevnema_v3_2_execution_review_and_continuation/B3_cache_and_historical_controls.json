@@ -1,0 +1,127 @@
+{
+  "schema": "aevnema.v3_2.source_validated_cache_control_run.v1",
+  "controls": {
+    "B0_ordinary_search": {
+      "status": "completed",
+      "evidence_acquisition_ms": 19449.543,
+      "delivered_episode_ids": [
+        32
+      ],
+      "provider_counts": {
+        "logical_batches": 5,
+        "http_attempts": 6,
+        "sent": 6,
+        "succeeded": 5,
+        "failed_or_rejected": 1,
+        "fallbacks": 1
+      },
+      "execution_mode": "ordinary_search_no_edge_no_exact_revisit_no_cache",
+      "observation_only": true,
+      "comparison_status": "historical_observation_not_retimed"
+    },
+    "B1_request_local_vector_reuse": {
+      "status": "completed",
+      "evidence_acquisition_ms": 17589.809,
+      "delivered_episode_ids": [
+        32
+      ],
+      "provider_counts": {
+        "logical_batches": 6,
+        "http_attempts": 7,
+        "sent": 7,
+        "succeeded": 5,
+        "failed_or_rejected": 2,
+        "fallbacks": 1
+      },
+      "execution_mode": "ordinary_search_with_one_request_local_whole_question_embedding",
+      "observation_only": true,
+      "comparison_status": "request_local_vector_reuse_not_cross_request_evidence_cache"
+    },
+    "B2_historical_plan_cache": {
+      "status": "not_observed_independent_control",
+      "comparison_status": "not_run"
+    },
+    "B3_source_validated_evidence_cache": {
+      "status": "hit_source_validated",
+      "evidence_acquisition_ms": 3.659,
+      "cache_seed_source_validation_ms": 4.532,
+      "delivered_episode_ids": [
+        32
+      ],
+      "provider_counts": {
+        "logical_batches": 0,
+        "http_attempts": 0,
+        "sent": 0,
+        "succeeded": 0,
+        "failed_or_rejected": 0,
+        "fallbacks": 0
+      },
+      "executed_modules": {
+        "cache_key_validation": true,
+        "source_identity_validation": true,
+        "source_quote_validation": true,
+        "source_materialization": true,
+        "planner": false,
+        "embedding": false,
+        "retrieval": false,
+        "reranker": false,
+        "contextual_matcher": false,
+        "answer_generation": false,
+        "answer_audit": false
+      },
+      "comparison_status": "actual_local_source_validated_cache_read"
+    },
+    "B4_exact_edge_reuse": {
+      "status": "completed",
+      "elapsed_ms": 253.248,
+      "delivered_episode_ids": [
+        32
+      ],
+      "delivered_coverage": true,
+      "provider_counts": {
+        "logical_batches": 0,
+        "http_attempts": 0,
+        "sent": 0,
+        "succeeded": 0,
+        "failed_or_rejected": 0,
+        "fallbacks": 0
+      },
+      "execution_modules": {
+        "planner": false,
+        "embedding": false,
+        "reranker": false,
+        "contextual_matcher": true,
+        "target_gate": true,
+        "source_closure": true,
+        "contribution_selector": true,
+        "answer_generation": false
+      },
+      "historical_arm": "learning_ready_q2",
+      "comparison_status": "historical_exact_edge_observation_not_retimed"
+    },
+    "B4M_exact_edge_mask": {
+      "status": "exact_revisit_miss",
+      "elapsed_ms": 24.593,
+      "delivered_episode_ids": [],
+      "delivered_coverage": false,
+      "provider_counts": {
+        "logical_batches": 0,
+        "http_attempts": 0,
+        "sent": 0,
+        "succeeded": 0,
+        "failed_or_rejected": 0,
+        "fallbacks": 0
+      },
+      "execution_modules": {},
+      "historical_arm": "edge_masked_q2",
+      "comparison_status": "exact_only_mask_miss_no_ordinary_fallback_observed"
+    }
+  },
+  "fairness_boundary": {
+    "B3_reads_association_tables": false,
+    "B3_uses_answer_cache": false,
+    "B3_revalidates_scope_source_and_budget": true,
+    "B4M_end_to_end_fallback_observed": false,
+    "timing_ratio_claimed": false
+  }
+}

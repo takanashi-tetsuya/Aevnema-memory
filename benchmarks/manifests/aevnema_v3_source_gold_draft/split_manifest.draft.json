@@ -1,0 +1,64 @@
+{
+  "all_source_keys": [
+    "main/31060.json",
+    "main/31090.json",
+    "main/32170.json",
+    "main/33030.json",
+    "main/33070.json"
+  ],
+  "assignments": [
+    {
+      "availability": {
+        "K_full": "unmapped",
+        "K_old": true
+      },
+      "family_id": "stage3:makeup_club_hidden_purpose",
+      "rationale": "Historical Stage3 family; not eligible as an independent holdout until source-span review and source-disjoint families exist.",
+      "source_component_id": "stage3-main-source-connected-1",
+      "source_keys": [
+        "main/31060.json",
+        "main/31090.json"
+      ],
+      "split": "legacy_calibration"
+    },
+    {
+      "availability": {
+        "K_full": "unmapped",
+        "K_old": true
+      },
+      "family_id": "stage3:paradise_paradox_political_projection",
+      "rationale": "Historical Stage3 family; not eligible as an independent holdout until source-span review and source-disjoint families exist.",
+      "source_component_id": "stage3-main-source-connected-1",
+      "source_keys": [
+        "main/31090.json",
+        "main/32170.json",
+        "main/33030.json"
+      ],
+      "split": "legacy_calibration"
+    },
+    {
+      "availability": {
+        "K_full": "unmapped",
+        "K_old": true
+      },
+      "family_id": "stage3:old_cathedral_attack_causal_chain",
+      "rationale": "Historical Stage3 family; not eligible as an independent holdout until source-span review and source-disjoint families exist.",
+      "source_component_id": "stage3-main-source-connected-1",
+      "source_keys": [
+        "main/32170.json",
+        "main/33070.json"
+      ],
+      "split": "legacy_calibration"
+    }
+  ],
+  "gold_manifest_sha256": "9425db8dd1749a4698002495a9776a337c1da248d4c1b3c0f319e80df2a7bbe9",
+  "grouping_policy": {
+    "random_question_split_allowed": false,
+    "reason": "The three historical questions share source keys through a single connected component.",
+    "unit": "source_connected_component"
+  },
+  "schema_version": "aevnema.gold-split.draft.v1",
+  "status": "draft_pending_source_span_review",
+  "unassigned_holdout_reason": "No source-disjoint reviewed family is available in this draft.",
+  "visibility": "evaluator_only"
+}

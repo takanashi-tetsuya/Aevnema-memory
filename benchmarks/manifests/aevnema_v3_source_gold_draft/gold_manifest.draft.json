@@ -1,0 +1,636 @@
+{
+  "families": [
+    {
+      "claim_groups": [
+        {
+          "candidate_source_keys": [
+            "main/31060.json"
+          ],
+          "claim_group_id": "makeup_club_hidden_purpose:legacy-slot-1",
+          "coverage_clause": {
+            "members": [
+              "makeup_club_hidden_purpose:legacy-slot-1:candidate-247",
+              "makeup_club_hidden_purpose:legacy-slot-1:candidate-248"
+            ],
+            "operator": "any_of",
+            "required": true
+          },
+          "evidence_atoms": [
+            {
+              "episode_id": 247,
+              "episode_text_sha256": "df2dbae5b3c41ad97b7d9de6332f9bd061c13086c75f85cf2a25f1345ad03d44",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 0,
+              "source_key": "main/31060.json",
+              "source_segment_sha256": "4da810b833307af326652ba1040a03866f0d8eca3d2a68df0f6972c1e6c77605",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            },
+            {
+              "episode_id": 248,
+              "episode_text_sha256": "7e56cb6929a9c9c542464ebc9ac0b91b2e2187992fd0b43f6c510572a9b3e981",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 0,
+              "source_key": "main/31060.json",
+              "source_segment_sha256": "4da810b833307af326652ba1040a03866f0d8eca3d2a68df0f6972c1e6c77605",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            }
+          ],
+          "legacy_episode_alternatives": [
+            247,
+            248
+          ],
+          "review_status": "pending_source_span_review",
+          "usable_for_scoring": false
+        },
+        {
+          "candidate_source_keys": [
+            "main/31090.json"
+          ],
+          "claim_group_id": "makeup_club_hidden_purpose:legacy-slot-2",
+          "coverage_clause": {
+            "members": [
+              "makeup_club_hidden_purpose:legacy-slot-2:candidate-273"
+            ],
+            "operator": "any_of",
+            "required": true
+          },
+          "evidence_atoms": [
+            {
+              "episode_id": 273,
+              "episode_text_sha256": "f1a8b0a356f25212e7e9ac57d887090d7de0d11c651d5e9b82ce9e368d27d72c",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 1,
+              "source_key": "main/31090.json",
+              "source_segment_sha256": "bf9841fe4504cc5dc95a119f01793b4e2522ee0d64e80f9f058d5b09515bfc7b",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            }
+          ],
+          "legacy_episode_alternatives": [
+            273
+          ],
+          "review_status": "pending_source_span_review",
+          "usable_for_scoring": false
+        },
+        {
+          "candidate_source_keys": [
+            "main/31090.json"
+          ],
+          "claim_group_id": "makeup_club_hidden_purpose:legacy-slot-3",
+          "coverage_clause": {
+            "members": [
+              "makeup_club_hidden_purpose:legacy-slot-3:candidate-277",
+              "makeup_club_hidden_purpose:legacy-slot-3:candidate-279"
+            ],
+            "operator": "any_of",
+            "required": true
+          },
+          "evidence_atoms": [
+            {
+              "episode_id": 277,
+              "episode_text_sha256": "f4b759d90e9cccb9d8329088be0d4c424d64bbd5627e1770bec95ef912c9de71",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 2,
+              "source_key": "main/31090.json",
+              "source_segment_sha256": "683ea0eb84e984fd088d446599d9190270b757e29b27e568f4a3e52a7107305b",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            },
+            {
+              "episode_id": 279,
+              "episode_text_sha256": "541c9c68751755212c23649cdb0b20f2306673645415f140f329af44d8042aba",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 2,
+              "source_key": "main/31090.json",
+              "source_segment_sha256": "683ea0eb84e984fd088d446599d9190270b757e29b27e568f4a3e52a7107305b",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            }
+          ],
+          "legacy_episode_alternatives": [
+            277,
+            279
+          ],
+          "review_status": "pending_source_span_review",
+          "usable_for_scoring": false
+        }
+      ],
+      "family_id": "stage3:makeup_club_hidden_purpose",
+      "hard_negatives": [],
+      "legacy_anchors": [
+        "补习部",
+        "不及格",
+        "圣三一的叛徒",
+        "阻止伊甸条约的签订"
+      ],
+      "legacy_required_facts": [
+        "补习部表面围绕不及格与补习成立",
+        "渚把嫌疑对象聚集在补习部",
+        "她认为其中藏有圣三一的叛徒",
+        "叛徒的目的被认为是阻止伊甸条约签订"
+      ],
+      "legacy_required_sources": [
+        "main/31060.json",
+        "main/31090.json"
+      ],
+      "legacy_status": "legacy_calibration_only",
+      "query_mode": "factual",
+      "question_coverage": {
+        "members": [
+          "makeup_club_hidden_purpose:legacy-slot-1",
+          "makeup_club_hidden_purpose:legacy-slot-2",
+          "makeup_club_hidden_purpose:legacy-slot-3"
+        ],
+        "operator": "all_of"
+      },
+      "question_file": "validation/evaluation-questions-stage3-deep.json",
+      "question_id": "makeup_club_hidden_purpose",
+      "question_sha256": "63baa590fd693ea8705275b590a23f01397fd34d09e0e6fffe6c07760ce2c6b4",
+      "review_status": "pending_source_span_review",
+      "usable_for_scoring": false
+    },
+    {
+      "claim_groups": [
+        {
+          "candidate_source_keys": [
+            "main/33030.json"
+          ],
+          "claim_group_id": "paradise_paradox_political_projection:legacy-slot-1",
+          "coverage_clause": {
+            "members": [
+              "paradise_paradox_political_projection:legacy-slot-1:candidate-62",
+              "paradise_paradox_political_projection:legacy-slot-1:candidate-63",
+              "paradise_paradox_political_projection:legacy-slot-1:candidate-64",
+              "paradise_paradox_political_projection:legacy-slot-1:candidate-65"
+            ],
+            "operator": "any_of",
+            "required": true
+          },
+          "evidence_atoms": [
+            {
+              "episode_id": 62,
+              "episode_text_sha256": "1ccbe8155cd3dc874318d392638c17e933a88939226707a7b9ca6ae0c478d67a",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 10,
+              "source_key": "main/33030.json",
+              "source_segment_sha256": "0794a79bb47a86e6d7144b240cd7e49474035c84b61125f4afc9a8896733be1f",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            },
+            {
+              "episode_id": 63,
+              "episode_text_sha256": "a6f38efe1759b8ff1c9e59da2eb9da0a8af81ad664d4c634ecb973512304829d",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 10,
+              "source_key": "main/33030.json",
+              "source_segment_sha256": "0794a79bb47a86e6d7144b240cd7e49474035c84b61125f4afc9a8896733be1f",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            },
+            {
+              "episode_id": 64,
+              "episode_text_sha256": "3c0bde5c8401cb31099e4a1d0e249ac0288e1427cd022047c8e97c39d2794525",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 10,
+              "source_key": "main/33030.json",
+              "source_segment_sha256": "0794a79bb47a86e6d7144b240cd7e49474035c84b61125f4afc9a8896733be1f",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            },
+            {
+              "episode_id": 65,
+              "episode_text_sha256": "25470e0d535c1e6ba1447f3152dc77afd5745cf1a7b3b8922055065ebfbb8442",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 10,
+              "source_key": "main/33030.json",
+              "source_segment_sha256": "0794a79bb47a86e6d7144b240cd7e49474035c84b61125f4afc9a8896733be1f",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            }
+          ],
+          "legacy_episode_alternatives": [
+            62,
+            63,
+            64,
+            65
+          ],
+          "review_status": "pending_source_span_review",
+          "usable_for_scoring": false
+        },
+        {
+          "candidate_source_keys": [
+            "main/31090.json"
+          ],
+          "claim_group_id": "paradise_paradox_political_projection:legacy-slot-2",
+          "coverage_clause": {
+            "members": [
+              "paradise_paradox_political_projection:legacy-slot-2:candidate-273",
+              "paradise_paradox_political_projection:legacy-slot-2:candidate-277",
+              "paradise_paradox_political_projection:legacy-slot-2:candidate-279"
+            ],
+            "operator": "any_of",
+            "required": true
+          },
+          "evidence_atoms": [
+            {
+              "episode_id": 273,
+              "episode_text_sha256": "f1a8b0a356f25212e7e9ac57d887090d7de0d11c651d5e9b82ce9e368d27d72c",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 1,
+              "source_key": "main/31090.json",
+              "source_segment_sha256": "bf9841fe4504cc5dc95a119f01793b4e2522ee0d64e80f9f058d5b09515bfc7b",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            },
+            {
+              "episode_id": 277,
+              "episode_text_sha256": "f4b759d90e9cccb9d8329088be0d4c424d64bbd5627e1770bec95ef912c9de71",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 2,
+              "source_key": "main/31090.json",
+              "source_segment_sha256": "683ea0eb84e984fd088d446599d9190270b757e29b27e568f4a3e52a7107305b",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            },
+            {
+              "episode_id": 279,
+              "episode_text_sha256": "541c9c68751755212c23649cdb0b20f2306673645415f140f329af44d8042aba",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 2,
+              "source_key": "main/31090.json",
+              "source_segment_sha256": "683ea0eb84e984fd088d446599d9190270b757e29b27e568f4a3e52a7107305b",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            }
+          ],
+          "legacy_episode_alternatives": [
+            273,
+            277,
+            279
+          ],
+          "review_status": "pending_source_span_review",
+          "usable_for_scoring": false
+        },
+        {
+          "candidate_source_keys": [
+            "main/32170.json"
+          ],
+          "claim_group_id": "paradise_paradox_political_projection:legacy-slot-3",
+          "coverage_clause": {
+            "members": [
+              "paradise_paradox_political_projection:legacy-slot-3:candidate-307",
+              "paradise_paradox_political_projection:legacy-slot-3:candidate-309"
+            ],
+            "operator": "any_of",
+            "required": true
+          },
+          "evidence_atoms": [
+            {
+              "episode_id": 307,
+              "episode_text_sha256": "99fda667eafd59258b4c870fd795bd9f7764f5450491e493f5d9faa4e26d35ef",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 3,
+              "source_key": "main/32170.json",
+              "source_segment_sha256": "f7c1dd811b0f4192d1dfa1cd98137cf708c1bfb9d46537b9e6752f9249461ed9",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            },
+            {
+              "episode_id": 309,
+              "episode_text_sha256": "5e36b000fe72b725855a57f1bc28e93add73e23b3481090efd61c89f9e2abcde",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 3,
+              "source_key": "main/32170.json",
+              "source_segment_sha256": "f7c1dd811b0f4192d1dfa1cd98137cf708c1bfb9d46537b9e6752f9249461ed9",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            }
+          ],
+          "legacy_episode_alternatives": [
+            307,
+            309
+          ],
+          "review_status": "pending_source_span_review",
+          "usable_for_scoring": false
+        }
+      ],
+      "family_id": "stage3:paradise_paradox_political_projection",
+      "hard_negatives": [],
+      "legacy_anchors": [
+        "乐园存在证明的悖论",
+        "叛徒",
+        "让小渚下台",
+        "话事人",
+        "政变",
+        "阿里乌斯",
+        "道具"
+      ],
+      "legacy_required_facts": [
+        "无法从乐园之外观测抵达乐园的人",
+        "渚因猜疑叛徒而成立补习部集中排查",
+        "未花承认行动可称为政变",
+        "未花要让渚下台并成为茶会话事人",
+        "阿里乌斯从一开始就是政变的道具"
+      ],
+      "legacy_required_sources": [
+        "main/33030.json",
+        "main/31090.json",
+        "main/32170.json"
+      ],
+      "legacy_status": "legacy_calibration_only",
+      "query_mode": "factual",
+      "question_coverage": {
+        "members": [
+          "paradise_paradox_political_projection:legacy-slot-1",
+          "paradise_paradox_political_projection:legacy-slot-2",
+          "paradise_paradox_political_projection:legacy-slot-3"
+        ],
+        "operator": "all_of"
+      },
+      "question_file": "validation/evaluation-questions-stage3-deep.json",
+      "question_id": "paradise_paradox_political_projection",
+      "question_sha256": "d81b3c15e213e918e18eb1b3aeba796061755b84832d4bb8ec3a8197855175e9",
+      "review_status": "pending_source_span_review",
+      "usable_for_scoring": false
+    },
+    {
+      "claim_groups": [
+        {
+          "candidate_source_keys": [
+            "main/33070.json"
+          ],
+          "claim_group_id": "old_cathedral_attack_causal_chain:legacy-slot-1",
+          "coverage_clause": {
+            "members": [
+              "old_cathedral_attack_causal_chain:legacy-slot-1:candidate-320"
+            ],
+            "operator": "any_of",
+            "required": true
+          },
+          "evidence_atoms": [
+            {
+              "episode_id": 320,
+              "episode_text_sha256": "88007e1e83a96e21c3276bee1579a209fa1b309ecbc1f4d54fc81772938825aa",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 1,
+              "source_key": "main/33070.json",
+              "source_segment_sha256": "5d9ebaa16a5d15209a0e23c982d7d4cf03b84cbf2bcc61de92f4043fe0a94727",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            }
+          ],
+          "legacy_episode_alternatives": [
+            320
+          ],
+          "review_status": "pending_source_span_review",
+          "usable_for_scoring": false
+        },
+        {
+          "candidate_source_keys": [
+            "main/33070.json"
+          ],
+          "claim_group_id": "old_cathedral_attack_causal_chain:legacy-slot-2",
+          "coverage_clause": {
+            "members": [
+              "old_cathedral_attack_causal_chain:legacy-slot-2:candidate-332",
+              "old_cathedral_attack_causal_chain:legacy-slot-2:candidate-341"
+            ],
+            "operator": "any_of",
+            "required": true
+          },
+          "evidence_atoms": [
+            {
+              "episode_id": 332,
+              "episode_text_sha256": "38cf3bb10dac1b4efe4fca6636d668e677e4b2b5c0a12f38dbf48e1845f6b671",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 4,
+              "source_key": "main/33070.json",
+              "source_segment_sha256": "107de22792ba07e03954a205a4800a8e8e33535d5f0563394ebc1a315ec49895",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            },
+            {
+              "episode_id": 341,
+              "episode_text_sha256": "fec775b0839577fef6a3f5c3ba3588ef55867b3e14e1cf37253bb252c6b722a4",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 6,
+              "source_key": "main/33070.json",
+              "source_segment_sha256": "08e0a77783634701cee14893db20da3c184c3c81a7f3dab32628e64865a72432",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            }
+          ],
+          "legacy_episode_alternatives": [
+            332,
+            341
+          ],
+          "review_status": "pending_source_span_review",
+          "usable_for_scoring": false
+        },
+        {
+          "candidate_source_keys": [
+            "main/32170.json"
+          ],
+          "claim_group_id": "old_cathedral_attack_causal_chain:legacy-slot-3",
+          "coverage_clause": {
+            "members": [
+              "old_cathedral_attack_causal_chain:legacy-slot-3:candidate-307",
+              "old_cathedral_attack_causal_chain:legacy-slot-3:candidate-309"
+            ],
+            "operator": "any_of",
+            "required": true
+          },
+          "evidence_atoms": [
+            {
+              "episode_id": 307,
+              "episode_text_sha256": "99fda667eafd59258b4c870fd795bd9f7764f5450491e493f5d9faa4e26d35ef",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 3,
+              "source_key": "main/32170.json",
+              "source_segment_sha256": "f7c1dd811b0f4192d1dfa1cd98137cf708c1bfb9d46537b9e6752f9249461ed9",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            },
+            {
+              "episode_id": 309,
+              "episode_text_sha256": "5e36b000fe72b725855a57f1bc28e93add73e23b3481090efd61c89f9e2abcde",
+              "legacy_episode_evidence_quote_count": 0,
+              "legacy_episode_evidence_span_count": 0,
+              "raw_span_sha256": null,
+              "record_locator": null,
+              "review_status": "pending_source_span_review",
+              "segment_index": 3,
+              "source_key": "main/32170.json",
+              "source_segment_sha256": "f7c1dd811b0f4192d1dfa1cd98137cf708c1bfb9d46537b9e6752f9249461ed9",
+              "span_end": null,
+              "span_start": null,
+              "usable_for_scoring": false
+            }
+          ],
+          "legacy_episode_alternatives": [
+            307,
+            309
+          ],
+          "review_status": "pending_source_span_review",
+          "usable_for_scoring": false
+        }
+      ],
+      "family_id": "stage3:old_cathedral_attack_causal_chain",
+      "hard_negatives": [],
+      "legacy_anchors": [
+        "巡航导弹",
+        "古圣堂",
+        "阿里乌斯分校",
+        "一手造成",
+        "秘密支援",
+        "政变的道具",
+        "未花"
+      ],
+      "legacy_required_facts": [
+        "一枚巡航导弹不足以解释古圣堂爆炸规模",
+        "阿里乌斯分校势力直接进入并袭击古圣堂",
+        "未花秘密支援阿里乌斯",
+        "未花把阿里乌斯作为推翻渚的政变工具",
+        "未花的支援是成功渗透的前置政治条件；具体爆破执行细节不可凭空补全"
+      ],
+      "legacy_required_sources": [
+        "main/33070.json",
+        "main/32170.json"
+      ],
+      "legacy_status": "legacy_calibration_only",
+      "query_mode": "factual",
+      "question_coverage": {
+        "members": [
+          "old_cathedral_attack_causal_chain:legacy-slot-1",
+          "old_cathedral_attack_causal_chain:legacy-slot-2",
+          "old_cathedral_attack_causal_chain:legacy-slot-3"
+        ],
+        "operator": "all_of"
+      },
+      "question_file": "validation/evaluation-questions-stage3-deep.json",
+      "question_id": "old_cathedral_attack_causal_chain",
+      "question_sha256": "dffcaa89cfdb1c5c73f0bc6083ae91dc96981e566e35b473c2e7fbc096bcf9d7",
+      "review_status": "pending_source_span_review",
+      "usable_for_scoring": false
+    }
+  ],
+  "legacy_keyword_diagnostic": {
+    "description": "Preserved separately as the historical five-question, fifteen-keyword diagnostic; it is not Source claim gold.",
+    "path": "benchmarks/manifests/original_five_question_quality_benchmark.json"
+  },
+  "limitations": [
+    "Every evidence atom is pending source record/span review and is unusable for score gating.",
+    "Legacy Episode IDs are only re-anchoring candidates and must not be reused across snapshots without hash verification.",
+    "No source file hash or raw span hash is available until a reviewer anchors a source record/span.",
+    "This asset is evaluator-only and production modules must not read it."
+  ],
+  "question_manifest_sha256": "7a4deeb5ad0703c334cc60e539001a49ee1792f5eb075d96c1a0541f94054c06",
+  "schema_version": "aevnema.source-gold.draft.v1",
+  "snapshots": [
+    {
+      "availability": {
+        "K_full": "unmapped",
+        "K_old": true
+      },
+      "database_filename": "testing-kb.historical-restored.db",
+      "database_sha256": "ca087c333fca85971160ebe2e58e5c00ca62372d7a3ad3a25ebd2b8bb32b8208",
+      "episode_id_stability": "snapshot_local_only",
+      "snapshot_id": "legacy-testing-kb.historical-restored"
+    }
+  ],
+  "source_manifest_sha256": "6b565b5b66c95bfe8c6c4a1484f7c5d2b64fd1e17301d537e296f86e887e4878",
+  "status": "draft_pending_source_span_review",
+  "visibility": "evaluator_only"
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "aevnema.v3_2.plan_sources.v1",
+  "basis": "conversation attachments actually available during plan creation; report claims not independently reproduced as repo execution",
+  "sources": [
+    {
+      "id": "S01",
+      "files": [
+        {
+          "filename": "N11D_CLASSIFICATION.md",
+          "sha256": "cd270f0aaa965d3fcb14c31d11f9c8dcaea366f5e1dc2dca156ab627f0faa872",
+          "bytes": 1657,
+          "locator": "Status; What was observed",
+          "included_in_plan_bundle": false
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "files": [
+        {
+          "filename": "FINAL_DELIVERY_REPORT.md",
+          "sha256": "25250d0867f1ca2f23557c78954b76b3af1677be991e7205f9f9e4eb9ad33015",
+          "bytes": 7977,
+          "locator": "Q1; zero-model Q2; source-delivery and checkpoint regressions",
+          "included_in_plan_bundle": false
+        },
+        {
+          "filename": "FROZEN_LOCAL_FIX_BASELINE_20260908.md",
+          "sha256": "1c747612f52346a3e9df9b0cd12241877d2bc904bf975ccc51f39bd788982686",
+          "bytes": 4308,
+          "locator": "Q1; zero-model Q2; source-delivery and checkpoint regressions",
+          "included_in_plan_bundle": false
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "files": [
+        {
+          "filename": "OBSERVED_STAGE_TIMING_AND_CALL_LEDGER.md",
+          "sha256": "1dc9bc8cfce1f029fff424fcc9dd9552843fec58b191d739a0fead643d0c519e",
+          "bytes": 4355,
+          "locator": "evidence/answer/audit accounting; ordinary cache scope",
+          "included_in_plan_bundle": false
+        },
+        {
+          "filename": "BASELINE_COMPARISON_REPORT.md",
+          "sha256": "5cd3b2744d4735e3d655d1e93fdac3655837f816fac78d5c951e6542d0319581",
+          "bytes": 3663,
+          "locator": "evidence/answer/audit accounting; ordinary cache scope",
+          "included_in_plan_bundle": false
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "files": [
+        {
+          "filename": "N12C_EXECUTION_REVIEW.md",
+          "sha256": "a9378b39e0867087eead54ec60a56a108149b0693b6f054545342515cb5df477",
+          "bytes": 7682,
+          "locator": "Frozen inputs; terminal states; localized corrections",
+          "included_in_plan_bundle": false
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "files": [
+        {
+          "filename": "same_chapter_learning_matrix.full_local.json",
+          "sha256": "7144a4400ebd050f4c3a039cc365e7b12bb7f104f682e53e1f69f54c545dec95",
+          "bytes": 849540,
+          "locator": "q1.record.result.answer; answer_audits; rerank_trace; arms.*.record; arms.*.summary",
+          "included_in_plan_bundle": false
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "files": [
+        {
+          "filename": "source_gold_review(1).md",
+          "sha256": "829ea16dafc5491c8316fe6c4fdb434e98864e5a1a5b6ccff2b82cb2e157f187",
+          "bytes": 228055,
+          "locator": "pending source-span candidates; claim boundary; human decision",
+          "included_in_plan_bundle": false
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "files": [
+        {
+          "filename": "N13_SOURCE_GOLD_AND_FULL_CORPUS_STATUS_20260908.md",
+          "sha256": "3400e879e82f0984ce50681d94461dd6d89ae257d9819d1bdd6f0ac9b097689b",
+          "bytes": 4297,
+          "locator": "19 candidates; 564 files/4704 segments; four unresolved historical imports",
+          "included_in_plan_bundle": false
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "files": [
+        {
+          "filename": "aevnema_v3_plan/Aevnema_memory_v3_development_experiment_plan_2026-09-05.md",
+          "sha256": "20db5e3964157dceb988ee633b41bd4c3337678445d0fe627384e987ede611d4",
+          "bytes": 87345,
+          "locator": "v3 §27; v3.1 task and evidence/answer separation; historical proposals not outcomes",
+          "included_in_plan_bundle": false
+        },
+        {
+          "filename": "aevnema_v3_1_next_plan/Aevnema_v3_1_next_step_plan_2026-09-07.md",
+          "sha256": "1b2425eeaa4fd410abfd8268be7ea2b1a9c0abdd7b00d6e2f8c09052759eb501",
+          "bytes": 58804,
+          "locator": "v3 §27; v3.1 task and evidence/answer separation; historical proposals not outcomes",
+          "included_in_plan_bundle": false
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "files": [
+        {
+          "filename": "v3_same_chapter_different_requirement_matrix.json",
+          "sha256": "fa1e4597cea3e2bef37cfeafd1fc387602959729d5a87a7aa456d392fb5c160a",
+          "bytes": 1893,
+          "locator": "q1; q2_variants; runtime/evaluator boundary",
+          "included_in_plan_bundle": false
+        }
+      ]
+    }
+  ],
+  "new_proposals": "接口/调度/参数/预算/实验设计均为新计划，不是历史结果。",
+  "sensitive_full_local_included": false
+}

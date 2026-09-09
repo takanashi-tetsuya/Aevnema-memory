@@ -1,0 +1,228 @@
+{
+  "schema": "aevnema.v3_2.campaign_state.v1",
+  "status": "template_not_started",
+  "campaign_id": null,
+  "source_plan": "Aevnema_v3_2_integrated_development_experiment_plan_2026-09-08.md",
+  "current_batch": 0,
+  "code_snapshot": null,
+  "tasks": [
+    {
+      "id": "W00",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "记录两个仓库commit、未提交差异、配置白名单、解释器和授权范围；不自动pull/reset。"
+    },
+    {
+      "id": "W01",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "核对deadline_at修复已经作用于actual exact result与answer/audit控制流。"
+    },
+    {
+      "id": "W02",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "在现有public query中复用/实现stop-after-evidence，核心取证不复制到benchmarks。"
+    },
+    {
+      "id": "W03",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "规范准备的query/context/requirements/vector bundle，区分生产生成和evaluator信息。"
+    },
+    {
+      "id": "W04",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "明确requirement、探索query与极性hint的定义，不把搜索短语变成必答条款。"
+    },
+    {
+      "id": "W05",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "提取8臂已观测阶段、HTTP/coverage audit、E18/E19/E31/E32原文；历史未知保持。"
+    },
+    {
+      "id": "W06",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "保留exact检查；确认已有restricted-rewrite/semantic入口，优先复用。"
+    },
+    {
+      "id": "W07",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "位置固定后运行W/C/N/CN/shuffled，记录context/need是否为相同向量。"
+    },
+    {
+      "id": "W08",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "实现bench-only普通来源校验证据缓存B3，不读边、不存答案，但执行同等scope/source/budget检查。"
+    },
+    {
+      "id": "W09",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "拆清planner/rerank/coverage-audit/answer/audit/修正实际调用和内外层计时。"
+    },
+    {
+      "id": "W10",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "逐项提出清楚的原文主张，必要时split/reject而非固定保留19条“事实”。"
+    },
+    {
+      "id": "W11",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "实际核对四个outstanding文件和六个静态空文件，不只重复预检数字。"
+    },
+    {
+      "id": "W12",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "将N11d/N12c及看过的题留开发回归；准备至少三个独立来源主题。"
+    },
+    {
+      "id": "W13",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "预算内对新增family一次公开Q1产生真实学习，失败不补边；既有合法Q1仅作开发continuation。"
+    },
+    {
+      "id": "W14",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "分别记录recovery增量与reuse等质量省工作；不按use_count自我确认。"
+    },
+    {
+      "id": "W15",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "选择预注册正例/无收益/负例进行少量完整回答配对，Q2学习关闭。"
+    },
+    {
+      "id": "W16",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "先同内容V_base/V_new，再K_old/K_full共同题，扩展题独立分母。"
+    },
+    {
+      "id": "W17",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "冻结一次学习/部分线索/话题切换/两agent/纠正/遗忘序列，与无学习、纯权重、contextual对照。"
+    },
+    {
+      "id": "W18",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "分别评价exact、受限改写、多槽、private/creative与聊天服务；不一刀切称全通过。"
+    },
+    {
+      "id": "W19",
+      "status": "planned",
+      "evidence": [],
+      "blockers": [],
+      "next_action": "每工作包/实验阶段当场更新状态，按已完成和真正阻塞输出，不等所有Go才汇总。"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "E32-00",
+      "status": "planned_not_executed",
+      "stage_results": {},
+      "artifacts": []
+    },
+    {
+      "id": "E32-01",
+      "status": "planned_not_executed",
+      "stage_results": {},
+      "artifacts": []
+    },
+    {
+      "id": "E32-02",
+      "status": "planned_not_executed",
+      "stage_results": {},
+      "artifacts": []
+    },
+    {
+      "id": "E32-03",
+      "status": "planned_not_executed",
+      "stage_results": {},
+      "artifacts": []
+    },
+    {
+      "id": "E32-04",
+      "status": "planned_not_executed",
+      "stage_results": {},
+      "artifacts": []
+    },
+    {
+      "id": "E32-05",
+      "status": "planned_not_executed",
+      "stage_results": {},
+      "artifacts": []
+    },
+    {
+      "id": "E32-06",
+      "status": "planned_not_executed",
+      "stage_results": {},
+      "artifacts": []
+    },
+    {
+      "id": "E32-07",
+      "status": "planned_not_executed",
+      "stage_results": {},
+      "artifacts": []
+    },
+    {
+      "id": "E32-08",
+      "status": "planned_not_executed",
+      "stage_results": {},
+      "artifacts": []
+    },
+    {
+      "id": "E32-09",
+      "status": "planned_not_executed",
+      "stage_results": {},
+      "artifacts": []
+    },
+    {
+      "id": "E32-10",
+      "status": "planned_not_executed",
+      "stage_results": {},
+      "artifacts": []
+    }
+  ],
+  "external_decisions": [],
+  "provider_usage": {
+    "observed_http_attempts": 0,
+    "authorized_remaining": null,
+    "this_is_not_an_execution_receipt": true
+  },
+  "next_runnable_tasks": [
+    "W00"
+  ],
+  "last_actual_checkpoint": null
+}

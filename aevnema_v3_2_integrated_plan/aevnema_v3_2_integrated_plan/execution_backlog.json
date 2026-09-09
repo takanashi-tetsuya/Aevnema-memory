@@ -1,0 +1,968 @@
+{
+  "schema": "aevnema.v3_2.plan_backlog.v1",
+  "date": "2026-09-08",
+  "timezone": "Asia/Tokyo",
+  "main_plan": "Aevnema_v3_2_integrated_development_experiment_plan_2026-09-08.md",
+  "status": "planning_artifact_not_implementation_results",
+  "dependencies_mean": "实施依赖；不是逐项向用户申请的审批。gold和云预算只阻塞相应实验类型；已存在且验证的实现可满足依赖。最终汇总W19始终继续。",
+  "max_development_batches": 3,
+  "max_local_repair_cycles_same_cause": 2,
+  "tasks": [
+    {
+      "id": "W00",
+      "title": "冻结当前工作区并定位历史资产",
+      "status": "planned",
+      "depends_on": [],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "双仓库 git 状态及既有运行配置",
+        "validation/ 历史 N11d/N12b/N12c/N13",
+        "现有测试与实际解释器"
+      ],
+      "steps": [
+        "记录两个仓库commit、未提交差异、配置白名单、解释器和授权范围；不自动pull/reset。",
+        "核对N11d与N12b学习快照、N12c原始trace及向量原件；相同整数ID必须加快照来源。",
+        "创建新campaign目录与actual_commands.md；映射已完成实现，不重复修复。"
+      ],
+      "regression_tests": [
+        "所有输入存在性/哈希与缺失状态区分",
+        "公开运行参数与配置实际值",
+        "历史文件前后未修改"
+      ],
+      "acceptance": [
+        "所有后续工作有当前代码/来源基线",
+        "缺失附件或批准不假定存在",
+        "已完成项有verified_existing证据"
+      ],
+      "required_artifacts": [
+        "current_baseline.redacted.json",
+        "asset_availability.json",
+        "actual_commands.md"
+      ],
+      "experiment_ids": [
+        "E32-00"
+      ],
+      "external_conditions": [],
+      "on_failure": "某历史文件不可用仅标明相关对照不可复现；继续当前代码/其他资产任务。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W01",
+      "title": "收束exact完整回答路径与已有来源回归",
+      "status": "planned",
+      "depends_on": [
+        "W00"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "src/memory_demo/retrieval/engine.py",
+        "src/memory_demo/retrieval/revisit.py",
+        "src/memory_demo/retrieval/context.py",
+        "tests/test_q1_q2_diagnostic_pilot.py",
+        "当前 exact/manifest/source 测试模块"
+      ],
+      "steps": [
+        "核对deadline_at修复已经作用于actual exact result与answer/audit控制流。",
+        "固定provider在传输接口返回，不patch被测answer controller，执行public query exact与普通分支。",
+        "验证rich requirement、whole绑定、typed manifest、source工厂/UDF、来源交付、2400边界、日志排除；已有通过不另造框架。"
+      ],
+      "regression_tests": [
+        "exact+evidence_only",
+        "exact+完整初答审核通过/拒绝",
+        "余量不足修正不启动",
+        "迟到和取消无写入",
+        "遮罩和Source变更拒绝",
+        "相同whole多检索短语不丢合同"
+      ],
+      "acceptance": [
+        "NameError分支有失败复现与修复回执",
+        "所有分支共享原deadline",
+        "模拟provider不冒充真实语义实验"
+      ],
+      "required_artifacts": [
+        "exact_full_path_regression.json",
+        "source_boundary_regression.json"
+      ],
+      "experiment_ids": [
+        "E32-00"
+      ],
+      "external_conditions": [],
+      "on_failure": "确定性错误先本地修；两次同因修复仍失败暂停对应live路径，其他工作继续。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W02",
+      "title": "公共取证边界与不丢观察的阶段结果",
+      "status": "planned",
+      "depends_on": [
+        "W00",
+        "W01"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "src/memory_demo/retrieval/engine.py",
+        "src/memory_demo/types.py",
+        "当前 trace/事件模块",
+        "src/memory_demo/event_log.py"
+      ],
+      "steps": [
+        "在现有public query中复用/实现stop-after-evidence，核心取证不复制到benchmarks。",
+        "整理EvidenceResult、阶段状态、实际交付引用；区分source绑定/运行时支持/审核。",
+        "候选、边门控、selector、evidence materialized各阶段立即保存，终端失败不清空。",
+        "evidence-only关闭回答审核、学习和业务计数写入；诊断输出允许。"
+      ],
+      "regression_tests": [
+        "相同配置evidence-only与full-answer前缀相同",
+        "answer超时仍保留检索结果",
+        "未进入matcher!=空命中",
+        "normal和exact均只读取证",
+        "prompt实际发送与仅组装区分"
+      ],
+      "acceptance": [
+        "可独立返回实际原文而不是selected ID列表",
+        "未审核取证不能产生学习凭据",
+        "每臂中断可独立恢复结果"
+      ],
+      "required_artifacts": [
+        "public_evidence_contract.md",
+        "evidence_boundary_tests.json",
+        "stage_status_example.json"
+      ],
+      "experiment_ids": [
+        "E32-00",
+        "E32-01"
+      ],
+      "external_conditions": [],
+      "on_failure": "trace持久化失败停止该臂并明确观察缺失，不推断补齐；继续其他独立臂。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W03",
+      "title": "请求准备、向量共享与严格重放输入",
+      "status": "planned",
+      "depends_on": [
+        "W00",
+        "W02"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "src/memory_demo/embeddings/coordinator.py",
+        "src/memory_demo/retrieval/query_planning.py",
+        "src/memory_demo/retrieval/engine.py",
+        "benchmarks/ 已有replay工具"
+      ],
+      "steps": [
+        "规范准备的query/context/requirements/vector bundle，区分生产生成和evaluator信息。",
+        "相同文本编码一次，完整保留role/slot；不同需要不同向量，一次批次可含多个文本。",
+        "建立input_frozen/candidate_frozen/live模式；复用真实原始数组，不从哈希伪造。",
+        "同Q2共同准备一次，准备费用作为共享成本且在live估计中只计一次，不隐藏。"
+      ],
+      "regression_tests": [
+        "一文本多slot不丢绑定",
+        "不同文本不能误用同物理ID",
+        "模型空间/维度不一致拒绝",
+        "未来Q2答案不得进入Q1",
+        "mask前上游相同",
+        "数组加载禁pickle"
+      ],
+      "acceptance": [
+        "上下游输入依赖指纹闭合",
+        "新followup编码如实记新增批次",
+        "无未记录的网络调用"
+      ],
+      "required_artifacts": [
+        "preparation_contract.md",
+        "prepared_input_inventory.json",
+        "vector_replay_tests.json"
+      ],
+      "experiment_ids": [
+        "E32-02"
+      ],
+      "external_conditions": [],
+      "on_failure": "缺失向量先找原artifact，确无则登记预算内新准备；已有其他完整输入继续。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W04",
+      "title": "需求与回答范围、全断言审核覆盖",
+      "status": "planned",
+      "depends_on": [
+        "W00",
+        "W02"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "src/memory_demo/retrieval/query_planning.py",
+        "config/prompt_config/memory_prompts.py",
+        "src/memory_demo/llm/prompts.py",
+        "src/memory_demo/retrieval/engine.py"
+      ],
+      "steps": [
+        "明确requirement、探索query与极性hint的定义，不把搜索短语变成必答条款。",
+        "单事实问题不强制联想路径/其他解释/排除理由章节；保持复杂问题必要完整度。",
+        "审核检查输出中的实质断言而非只一条核心主张，绑定答案和证据版本。",
+        "answer/audit实际字符串中的必要原文一致且无静默截断；证据未知不升级。"
+      ],
+      "regression_tests": [
+        "单原因不推导排除其他动机",
+        "角色自述与客观事实",
+        "联合前提和空槽保留",
+        "否定hint语义与policy区分",
+        "审核少覆盖断言明确unknown",
+        "不同版本审核结果不可复用"
+      ],
+      "acceptance": [
+        "不新增审核模型层",
+        "输出范围收窄不删用户明确需求",
+        "历史audit不被回填重判"
+      ],
+      "required_artifacts": [
+        "answer_claim_crosswalk.md",
+        "requirements_and_audit_regression.json",
+        "prompt_change_diff.md"
+      ],
+      "experiment_ids": [
+        "E32-01",
+        "E32-06"
+      ],
+      "external_conditions": [],
+      "on_failure": "无法从现有来源判断的断言标不确定；不通过反复调用审核器选pass。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W05",
+      "title": "N12c阶段复盘与成对取证执行",
+      "status": "planned",
+      "depends_on": [
+        "W01",
+        "W02",
+        "W03"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "benchmarks/run_q1_q2_diagnostic_pilot.py",
+        "同章matrix runner现有模块",
+        "N12c仅只读artifact"
+      ],
+      "steps": [
+        "提取8臂已观测阶段、HTTP/coverage audit、E18/E19/E31/E32原文；历史未知保持。",
+        "使用合法N12b冻结学习快照，Q2独立clone，无Q2学习。",
+        "四个历史变体与新增中性上下文变体，分别有边/遮罩，在evidence边界结束。",
+        "每臂单独落盘并从事件生成case report，完成后自动进入位置/评分实验。"
+      ],
+      "regression_tests": [
+        "mask保留基础贡献",
+        "共同snapshot不变化",
+        "一个臂失败不丢其他臂",
+        "E19与E18按原文而非ID判定支持",
+        "旧未发送内容不可补成原观察"
+      ],
+      "acceptance": [
+        "每个预定变体有可解释证据对照或具体阻塞",
+        "不要求云端答案成功才能汇报取证",
+        "没有新Q1替代旧成功经历"
+      ],
+      "required_artifacts": [
+        "N12c_stage_crosswalk.md",
+        "prepared_pair_results.json",
+        "case_reports/"
+      ],
+      "experiment_ids": [
+        "E32-01",
+        "E32-02"
+      ],
+      "external_conditions": [],
+      "on_failure": "某变体准备失败只阻塞它；继续完整输入的其他变体和离线回归。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W06",
+      "title": "非精确早期提案与残差补漏分工",
+      "status": "planned",
+      "depends_on": [
+        "W02",
+        "W03",
+        "W04"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "src/memory_demo/retrieval/engine.py",
+        "src/memory_demo/retrieval/contextual_association.py",
+        "src/memory_demo/retrieval/revisit.py",
+        "src/memory_demo/retrieval/query_planning.py"
+      ],
+      "steps": [
+        "保留exact检查；确认已有restricted-rewrite/semantic入口，优先复用。",
+        "实现或接通共享向量+当前轻量独立anchor的候选提案，放在宽搜索前；不等待late缺槽。",
+        "新query近似仅生成候选，不把旧source支持自动授予新需求；不确定继续普通取证。",
+        "同一图对比late/prepared-early/query-first三种位置，实际skip可观察。"
+      ],
+      "regression_tests": [
+        "全库搜索前proposal实际执行",
+        "anchor不来自自己引入的目标",
+        "同词不同需要/同需要不同主体",
+        "上下文缺失不猜指代",
+        "版本未变但新要求不完整则不早停",
+        "旧exact不回退"
+      ],
+      "acceptance": [
+        "无per-edge云调用或新增事实层",
+        "可明确报告省掉了哪些阶段",
+        "不靠删exact限制实现改写命中"
+      ],
+      "required_artifacts": [
+        "routing_before_after.md",
+        "semantic_proposal_regression.json",
+        "position_ablation.json"
+      ],
+      "experiment_ids": [
+        "E32-03"
+      ],
+      "external_conditions": [],
+      "on_failure": "早停无法被本地现有合同支持时降级候选预激活，不放宽事实标准；保留位置对照结果。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W07",
+      "title": "双键消融、选择与贡献级归因",
+      "status": "planned",
+      "depends_on": [
+        "W05",
+        "W06"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "src/memory_demo/retrieval/contextual_association.py",
+        "src/memory_demo/retrieval/coverage.py",
+        "当前mask/overlay模块",
+        "benchmarks/ 消融入口"
+      ],
+      "steps": [
+        "位置固定后运行W/C/N/CN/shuffled，记录context/need是否为相同向量。",
+        "保留每个edge-slot来源和父贡献，mask只移除该来源；SE/LOO排除冗余。",
+        "支持joint/alternative、旧槽+新槽、候选缺失/已有被丢/已齐但昂贵三类。",
+        "统一端点和证据预算，先检查target再计配额，不能用恶化baseline造gain。"
+      ],
+      "regression_tests": [
+        "两渠道同目标mask一条另一条仍在",
+        "两个边同目标不覆盖彼此来源",
+        "joint缺一项不complete",
+        "same-source独立事实不去掉",
+        "打乱控制数量/分布相同"
+      ],
+      "acceptance": [
+        "双键优势若无则不坚持",
+        "运行时support不是gold",
+        "所有增益定位到实际贡献"
+      ],
+      "required_artifacts": [
+        "key_ablation_results.json",
+        "contribution_mask_and_loo.json",
+        "selector_failure_taxonomy.md"
+      ],
+      "experiment_ids": [
+        "E32-03",
+        "E32-05"
+      ],
+      "external_conditions": [],
+      "on_failure": "无收益保留并尝试独立主题/规模，不追加无依据图边；有害结果停止该profile。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W08",
+      "title": "来源校验缓存与公平速度对照",
+      "status": "planned",
+      "depends_on": [
+        "W03",
+        "W05"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "benchmarks/ 控制缓存小模块",
+        "当前public evidence入口",
+        "provider/call ledger汇总",
+        "报告渲染器"
+      ],
+      "steps": [
+        "实现bench-only普通来源校验证据缓存B3，不读边、不存答案，但执行同等scope/source/budget检查。",
+        "B0/B1/B2/B3/B4/B4M按程序规定分阶段执行，不默认全笛卡尔积。",
+        "固定同Q2和质量，分冷索引/热索引/实际进程重启、准备成本和本地取证。",
+        "原请求内向量组命名保持，报告仍发生的BGE调用，不宣称它是真跨请求缓存。"
+      ],
+      "regression_tests": [
+        "B3来源失效拒绝",
+        "B4M无manifest旁路",
+        "全部answer prose cache off",
+        "准备计费无漏记或双算",
+        "真实进程与new app标签区分"
+      ],
+      "acceptance": [
+        "最终时间比不跨不同截止点",
+        "缓存同效可如实得出简化结论",
+        "配对输出来源与主张完整性相等后才称加速"
+      ],
+      "required_artifacts": [
+        "source_validated_cache_control.json",
+        "paired_latency_results.json",
+        "CACHE_AND_LATENCY_RESULTS.md"
+      ],
+      "experiment_ids": [
+        "E32-04"
+      ],
+      "external_conditions": [],
+      "on_failure": "完整live对照不可用则报本地/准备冻结结果，不从旧Q1全耗时推算新速度。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W09",
+      "title": "回答与重排调用的有界策略",
+      "status": "planned",
+      "depends_on": [
+        "W02",
+        "W04"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "src/memory_demo/retrieval/engine.py",
+        "src/memory_demo/llm/client.py",
+        "src/memory_demo/config.py",
+        "config/prompt_config/memory_prompts.py"
+      ],
+      "steps": [
+        "拆清planner/rerank/coverage-audit/answer/audit/修正实际调用和内外层计时。",
+        "保留冻结旧profile，比较局部-first且歧义/缺槽才升级的开发profile，不能全局跳过事实标准。",
+        "全部阶段共享deadline和请求次数上限，修正准入覆盖完整尾链。",
+        "实施已有预算器的campaign限额与失败暂停规则；不扩建通用provider框架。"
+      ],
+      "regression_tests": [
+        "25秒失败回退不会给新120秒",
+        "coverage audit统计不漏",
+        "资源不足有明确终态和保留证据",
+        "语义拒绝不可transport重试",
+        "连续服务失败只暂停云分支"
+      ],
+      "acceptance": [
+        "调用量与候选边数无关",
+        "优化不通过无审核学习取巧",
+        "不以模型结果未知当质量下降"
+      ],
+      "required_artifacts": [
+        "stage_call_inventory.json",
+        "execution_profile_ablation.json",
+        "budget_fault_tests.json"
+      ],
+      "experiment_ids": [
+        "E32-06",
+        "E32-10"
+      ],
+      "external_conditions": [],
+      "on_failure": "在线不稳定时转recorded/local，达到阈值暂停云任务；不自动换模型或增加重试。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W10",
+      "title": "19个Source候选主张和跨度真正收窄",
+      "status": "planned",
+      "depends_on": [
+        "W00"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "benchmarks/manifests/ evaluator-only",
+        "Source审核包生成工具",
+        "已授权原始剧情只读目录"
+      ],
+      "steps": [
+        "逐项提出清楚的原文主张，必要时split/reject而非固定保留19条“事实”。",
+        "选择最小原始字段span、speaker/指代上下文，计算真实hash和code-point偏移。",
+        "一张精简审阅表列claim/quote/why/争议/建议，原全文在附录索引。",
+        "保持human acceptance为空，集中提交可直接确认材料，不反复输出同一个全文包。"
+      ],
+      "regression_tests": [
+        "候选文本严格回到原始Source",
+        "speaker无证不从摘要补",
+        "任意修改span hash失效",
+        "旧ID与当前Source对齐",
+        "evaluator标签不进runtime"
+      ],
+      "acceptance": [
+        "19/19都有具体处置建议或有证据的不足说明",
+        "审核建议不是批准",
+        "人工待决不阻塞无关代码/语料工作"
+      ],
+      "required_artifacts": [
+        "gold_review_narrowed.md",
+        "gold_proposals.json",
+        "DECISIONS_REQUIRED.gold.md"
+      ],
+      "experiment_ids": [
+        "E32-07"
+      ],
+      "external_conditions": [
+        "最终gold签核来自真实审核者；准备无需等待签核"
+      ],
+      "on_failure": "无足够原文则明确needs_context；不要杜撰主张/自动signed。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W11",
+      "title": "全量残留处置与接受库准备",
+      "status": "planned",
+      "depends_on": [
+        "W00"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "benchmarks/import_corpus.py",
+        "src/memory_demo/adapters/blue_archive.py",
+        "src/memory_demo/ingestion/",
+        "src/memory_demo/database.py",
+        "已授权语料与历史ledger"
+      ],
+      "steps": [
+        "实际核对四个outstanding文件和六个静态空文件，不只重复预检数字。",
+        "已有审核safe-skip receipt核验后并列current acceptance，不改历史partial/failed。",
+        "必要second-pass只重试影响任务，完整导入/新花费必须在已有授权内。",
+        "通过项目连接工厂做一致性快照、UDF/FTS/外键/向量/来源检查，形成K_old/K_diag/K_full实际目录。"
+      ],
+      "regression_tests": [
+        "无UDF裸连接禁止用于变更",
+        "成功任务不重复入库",
+        "合法空内容非伪造Episode",
+        "Source只读和clone一致",
+        "语义核验不由quick_check替代"
+      ],
+      "acceptance": [
+        "所有输入有解释处置或明确未解决",
+        "不取消大规模导入主线",
+        "不假定564parseable等于clean"
+      ],
+      "required_artifacts": [
+        "full_corpus_disposition.json",
+        "kb_snapshot_inventory.json",
+        "corpus_remaining_work.md"
+      ],
+      "experiment_ids": [
+        "E32-08"
+      ],
+      "external_conditions": [
+        "必要模型导入需要匹配原授权与剩余预算"
+      ],
+      "on_failure": "缺预算暂停残留模型步骤但完成静态核验/其他快照；禁止直接改ledger凑完成。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W12",
+      "title": "跨来源family与独立开发/盲测划分",
+      "status": "planned",
+      "depends_on": [
+        "W10"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "benchmarks/manifests/",
+        "现有Source scorer和split validator",
+        "evaluator-only原文选择工具"
+      ],
+      "steps": [
+        "将N11d/N12c及看过的题留开发回归；准备至少三个独立来源主题。",
+        "Q1经历与Q2同family可共享来源；开发/校准与holdout事件近重复隔离。",
+        "冻结同文/改写/中性上下文/反例，runtime文件与evaluator标签分离。",
+        "预算和审批未全满足仍交付完整可运行diagnostic清单与待审formal候选。"
+      ],
+      "regression_tests": [
+        "Q2答案不影响Q1cue",
+        "同题改写不随机拆进holdout",
+        "所有条件输入对称",
+        "只给模糊线索时不隐藏target",
+        "old/new库span对齐"
+      ],
+      "acceptance": [
+        "独立family不是同章换问题",
+        "formal批准缺失只阻塞formal评分",
+        "runtime不读gold"
+      ],
+      "required_artifacts": [
+        "diagnostic_family_manifest.json",
+        "holdout_candidate_manifest.json",
+        "split_leakage_review.md"
+      ],
+      "experiment_ids": [
+        "E32-05",
+        "E32-07",
+        "E32-09"
+      ],
+      "external_conditions": [
+        "formal阶段需要真实已批准gold与split"
+      ],
+      "on_failure": "已有原文不够则标来源缺失并完成其他候选，不能指定答案做runtime辅助。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W13",
+      "title": "跨主题自动学习、改写与多槽取证",
+      "status": "planned",
+      "depends_on": [
+        "W03",
+        "W06",
+        "W07",
+        "W12"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "现有公开query/finalizer",
+        "benchmarks/ matrix与replay",
+        "独立clone/学习快照"
+      ],
+      "steps": [
+        "预算内对新增family一次公开Q1产生真实学习，失败不补边；既有合法Q1仅作开发continuation。",
+        "同一Q1快照上独立运行Q2变体及mask，先evidence后live-answer。",
+        "新旧槽、joint证据和三类遗漏分别定位；支持未知不宣称当前问题已证明。",
+        "冻结最多3个开发批次，批次结果全部保留，阶段完成后自动推进下一主题。"
+      ],
+      "regression_tests": [
+        "fresh-Q1来源和真实ready时间",
+        "Q2不学习和快照不变",
+        "未来query无泄漏",
+        "跨Source同ID不混淆",
+        "partial有无context正确标注"
+      ],
+      "acceptance": [
+        "每family有真实状态与可读路径",
+        "至少3主题目标若未达到明确缺口",
+        "准备后机制与fresh服务结果分开"
+      ],
+      "required_artifacts": [
+        "cross_topic_learning_results.json",
+        "RETRIEVAL_TRANSFER_RESULTS.md",
+        "family_case_reports/"
+      ],
+      "experiment_ids": [
+        "E32-05",
+        "E32-09"
+      ],
+      "external_conditions": [
+        "fresh provider只在既有授权和campaign额度内"
+      ],
+      "on_failure": "Q1失败只阻塞它的依赖臂；继续其他family/保存输入对照；不整个campaign退出。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W14",
+      "title": "学习效用、纠正与持久性",
+      "status": "planned",
+      "depends_on": [
+        "W07",
+        "W13"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "src/memory_demo/associations/plasticity.py",
+        "src/memory_demo/repositories/association.py",
+        "src/memory_demo/retrieval/revisit.py",
+        "长期诊断runner"
+      ],
+      "steps": [
+        "分别记录recovery增量与reuse等质量省工作；不按use_count自我确认。",
+        "对版本变化、追加矛盾来源、用户时间性修正测读取与退休，不删除原始经历。",
+        "保持创建回合不计独立成功、同轮扩散不级联建边，Q2诊断不更新utility。",
+        "实际进程重启、跨会话、重复receipt幂等与低效路径竞争在隔离库验证。"
+      ],
+      "regression_tests": [
+        "无模型自生成信息洗白",
+        "新增冲突旧Sourcehash不变仍有边界",
+        "用户域隔离",
+        "同family重复不伪造独立证据",
+        "源修订与vector版本失效"
+      ],
+      "acceptance": [
+        "无错误事实写回Source",
+        "有害退休不伪造删除记忆效果",
+        "技术未知不当语义负奖励"
+      ],
+      "required_artifacts": [
+        "learning_utility_report.md",
+        "correction_persistence_tests.json"
+      ],
+      "experiment_ids": [
+        "E32-09",
+        "E32-10"
+      ],
+      "external_conditions": [],
+      "on_failure": "严重错误立刻停相应新路由，既有ordinary可用分支与离线工作继续。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W15",
+      "title": "完整答案与真实聊天边界验收",
+      "status": "planned",
+      "depends_on": [
+        "W01",
+        "W04",
+        "W08",
+        "W09",
+        "W13"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "Aevnema/src/bot/request_planning.py",
+        "Aevnema/src/bot/chat_service.py",
+        "Aevnema/src/memory/{contracts,domain,system,growth}.py",
+        "核心public query与finalizer"
+      ],
+      "steps": [
+        "选择预注册正例/无收益/负例进行少量完整回答配对，Q2学习关闭。",
+        "adapter调用与核心入口共用已验证路径，检查发送前后实际prompt证据与丢失。",
+        "记录core返回、adapter发送、学习提交、索引ready四时间；不伪造即时或OS重启。",
+        "固定provider完整聊天回归先完成，实际外部消息发送须原权限；失败不改事实标准。"
+      ],
+      "regression_tests": [
+        "adapter到Q2真实复用",
+        "guard不签未送的Treatment",
+        "来源交付截断",
+        "取消与迟到无业务写入",
+        "answer全断言审核范围"
+      ],
+      "acceptance": [
+        "核心成功不代替聊天端到端",
+        "端到端/取证/答案审核时长分开",
+        "普通正确与边贡献分别归因"
+      ],
+      "required_artifacts": [
+        "chat_boundary_tests.json",
+        "live_answer_pairs.json",
+        "delivered_prompt_audit.md"
+      ],
+      "experiment_ids": [
+        "E32-06"
+      ],
+      "external_conditions": [
+        "外部模型和adapter动作在已有明确权限内"
+      ],
+      "on_failure": "服务持续失败暂停live，不抹已完成取证结论；给具体外部成本与未审状态。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W16",
+      "title": "大库旧新比较与正式盲测",
+      "status": "planned",
+      "depends_on": [
+        "W08",
+        "W11",
+        "W12",
+        "W13"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "benchmarks/run_recall_v3.py",
+        "原五题runner",
+        "evaluator-onlySource scorer",
+        "实际快照/代码配置矩阵"
+      ],
+      "steps": [
+        "先同内容V_base/V_new，再K_old/K_full共同题，扩展题独立分母。",
+        "Paragraph/BGE/预算分因子，记录实际表行数与向量空间；旧版本不可恢复标缺失。",
+        "全部检索盲测与代表性完整回答分层计费，gold未批只能准备和非评分诊断。",
+        "独立gold上算Candidate/Selected/EvidenceReturn/Delivered/Answer及失败分母，family分组区间。"
+      ],
+      "regression_tests": [
+        "代码/语料/预算单因素归因",
+        "段号/ID复用不误配",
+        "全部失败不删",
+        "runtime禁止gold读入",
+        "whole-query completeness不按关键词替代"
+      ],
+      "acceptance": [
+        "99%目标保持且未达如实报告",
+        "大库结果不得由小库替代",
+        "formal批准和规模不足明确"
+      ],
+      "required_artifacts": [
+        "FULL_CORPUS_COMPARISON.md",
+        "holdout_metrics.json",
+        "legacy_keyword_scorecard.json",
+        "source_claim_scorecard.json"
+      ],
+      "experiment_ids": [
+        "E32-08",
+        "E32-09"
+      ],
+      "external_conditions": [
+        "正式语义分数需要独立已批准gold/split",
+        "大样本provider费用须在明确总额内"
+      ],
+      "on_failure": "gold/预算缺失时完成可运行准备与diagnostic、不造正式分数，转其他独立工作。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W17",
+      "title": "拟人序列与相关规模压力",
+      "status": "planned",
+      "depends_on": [
+        "W11",
+        "W13",
+        "W14"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "会话/agent隔离诊断runner",
+        "当前索引和query入口",
+        "原始Source与学习副本"
+      ],
+      "steps": [
+        "冻结一次学习/部分线索/话题切换/两agent/纠正/遗忘序列，与无学习、纯权重、contextual对照。",
+        "单跳可解释后单独测两跳，不同轮用自己的输出当证据。",
+        "先真实规模再1k/10k/100k合成边；并发1后4/8，测内存/扫描量/启动。",
+        "本地provider故障验证HTTP不随边增长、失败资源可回收、结果独立持久。"
+      ],
+      "regression_tests": [
+        "相同人设不同经历可追溯差异",
+        "无context不能凭隐藏答案命中",
+        "新增冲突与旧source不变",
+        "无随机删除Source",
+        "合成性能不作语义分数"
+      ],
+      "acceptance": [
+        "哪些拟人特征证实逐项报告",
+        "不以自然语言解释代替实际图路径",
+        "资源超限停止扩规模不换小库冒充通过"
+      ],
+      "required_artifacts": [
+        "HUMANLIKE_MEMORY_RESULTS.md",
+        "scale_and_fault_report.json"
+      ],
+      "experiment_ids": [
+        "E32-09",
+        "E32-10"
+      ],
+      "external_conditions": [],
+      "on_failure": "单跳未过则两跳not_applicable；完成其他连续性/资源测量并报告依赖。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W18",
+      "title": "能力分级、回滚与发布候选",
+      "status": "planned",
+      "depends_on": [
+        "W15",
+        "W16",
+        "W17"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "现有feature配置与runtime文档",
+        "最终实验报告/测试结果",
+        "既有回滚机制"
+      ],
+      "steps": [
+        "分别评价exact、受限改写、多槽、private/creative与聊天服务；不一刀切称全通过。",
+        "正式Go依据质量/调用/来源/负例与稳定性；不满足给有数据的No-Go和继续路线。",
+        "验证新路由开关回退到已冻结ordinary，保留所有Source/旧边；不引入新发布系统。",
+        "只有用户已有生产授权才执行受限shadow/canary，否则交付建议与一次性待决项。"
+      ],
+      "regression_tests": [
+        "feature-off不损坏库",
+        "shadow只观测Treatment不签学习",
+        "权限/来源/向量版本拒绝",
+        "旧资料与失败日志保留"
+      ],
+      "acceptance": [
+        "每能力都有证据等级和范围",
+        "未测不当fail或pass",
+        "不擅自扩大线上权限"
+      ],
+      "required_artifacts": [
+        "FINAL_CAPABILITY_REPORT.md",
+        "release_recommendation.md",
+        "rollback_check.json"
+      ],
+      "experiment_ids": [],
+      "external_conditions": [
+        "实际生产发布、promotion、canary需明确批准"
+      ],
+      "on_failure": "依赖外部阻塞时本包仍可生成暂定能力报告，不能等待永远不结案。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    },
+    {
+      "id": "W19",
+      "title": "总报告、打包与可继续状态",
+      "status": "planned",
+      "depends_on": [
+        "W00"
+      ],
+      "path_resolution": "文件/符号是工作区定位目标；先核对当前实现。已存在等价实现则复用并验证，不按旧附件行号覆盖。",
+      "repository": "Aevnema-memory；明确标为 Aevnema 的路径属于聊天仓库",
+      "files": [
+        "validation/aevnema-v3_2/<campaign_id>/",
+        "当前报告生成与分享工具"
+      ],
+      "steps": [
+        "每工作包/实验阶段当场更新状态，按已完成和真正阻塞输出，不等所有Go才汇总。",
+        "打包脱敏原文/trace/实验配置/代码差异/测试/失败明细，排除默认敏感伴随文件。",
+        "生成一次DECISIONS_REQUIRED，列批准gold、缺预算等必要材料；不提出每个小任务的新请求。",
+        "最终交付全部真实产物、校验和、实际命令和直接续接入口；未创建文件不列已交付。"
+      ],
+      "regression_tests": [
+        "同名ID跨快照区分",
+        "包内引用存在和校验和一致",
+        "敏感payload不混普通分享",
+        "blocked分支不让完成成果丢失"
+      ],
+      "acceptance": [
+        "用户不再需要逐步调度",
+        "每项明确done/失败/外部阻塞",
+        "计划文件/测试声明与实际产物相符"
+      ],
+      "required_artifacts": [
+        "campaign_state.json",
+        "FINAL_CAPABILITY_REPORT.md",
+        "DECISIONS_REQUIRED.md",
+        "artifacts.sha256",
+        "deliverable.redacted.zip"
+      ],
+      "experiment_ids": [],
+      "external_conditions": [],
+      "on_failure": "工具/会话资源受限时先保存状态与真实部分成果，下一会话用同计划续接，不许许诺后台补交。",
+      "continuation": "保留已完成阶段与原始失败，更新campaign_state，执行其他依赖满足的工作包；仅暂停受影响分支。",
+      "safety": "不写正式知识库，不覆盖历史trial，不更换未授权模型，不代签gold，不增加per-edge云调用。"
+    }
+  ]
+}

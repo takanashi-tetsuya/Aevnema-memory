@@ -1,9 +1,15 @@
 from __future__ import annotations
 
+from contextlib import redirect_stdout
+import io
+import os
 from pathlib import Path
+import sys
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 
+import benchmarks.import_corpus as import_corpus
 from benchmarks.import_corpus import (
     begin_ledger_file_attempt,
     failed_retry_preflight,
@@ -15,6 +21,52 @@ from memory_demo.repositories.source import SourceRepository
 
 
 class ImportCorpusRetryTests(unittest.TestCase):
+    def test_fresh_target_initializes_schema_before_recovery(self) -> None:
+        """A new import target must not crash before it can recover anything."""
+
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            story = root / "story"
+            (story / "main").mkdir(parents=True)
+            database_path = root / "new-target.sqlite"
+            env_file = root / "pilot.env"
+            env_file.write_text(
+                f"MEMORY_DB_PATH={database_path}\nMEMORY_LOG_DIR={root / 'logs'}\n",
+                encoding="utf-8",
+            )
+            ledger = root / "ledger.json"
+            argv = [
+                "import_corpus.py",
+                str(story),
+                "--env-file",
+                str(env_file),
+                "--ledger",
+                str(ledger),
+                "--categories",
+                "main",
+                "--limit",
+                "0",
+            ]
+            with (
+                patch.dict(os.environ, {}, clear=True),
+                patch.object(sys, "argv", argv),
+                patch.object(import_corpus, "install_graceful_termination_handlers"),
+                patch.object(import_corpus.atexit, "register"),
+                redirect_stdout(io.StringIO()),
+            ):
+                import_corpus.main()
+
+            connection = __import__("sqlite3").connect(database_path)
+            try:
+                self.assertIsNotNone(
+                    connection.execute(
+                        "SELECT name FROM sqlite_master "
+                        "WHERE type = 'table' AND name = 'extraction_run'"
+                    ).fetchone()
+                )
+            finally:
+                connection.close()
+
     def test_selection_only_retries_requested_terminal_statuses(self) -> None:
         ledger = {
             "files": {

@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any
 
 from memory_demo.database import Database, utc_now
+from memory_demo.event_log import redact_for_export
 
 
 class TerminalRunReplacementError(RuntimeError):
@@ -29,7 +30,7 @@ class ExtractionRepository:
                 ) VALUES('running', ?, ?, ?, ?)
                 """,
                 (
-                    json.dumps(config_snapshot, ensure_ascii=False),
+                    json.dumps(redact_for_export(config_snapshot), ensure_ascii=False),
                     json.dumps(prompt_versions, ensure_ascii=False),
                     str(log_path),
                     utc_now(),

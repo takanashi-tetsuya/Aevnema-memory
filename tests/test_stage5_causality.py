@@ -13,7 +13,7 @@ from memory_demo.association_overlay import (
     StagedAssociationOverlay,
 )
 from memory_demo.config import AppConfig
-from memory_demo.database import Database
+from memory_demo.database import Database, transaction_liveness
 from memory_demo.embeddings import EmbeddingIndex, encode_embedding
 from memory_demo.event_log import JsonlEventLogger
 from memory_demo.ingestion.pipeline import ImportPipeline
@@ -85,6 +85,154 @@ class Stage5CausalityTests(unittest.TestCase):
             self.assertGreater(mapping[temporary_id], 0)
             self.assertEqual(durable.stats()["edges"], 1)
             self.assertEqual(int(durable.get(mapping[temporary_id])["use_count"]), 1)
+
+    def test_staged_commit_rolls_back_every_prior_draft_on_later_failure(self):
+        """A failed staged commit must not leave a partially learned graph."""
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config = test_config(root)
+            db = Database(config.database_path)
+            db.initialize()
+            source_id = SourceRepository(db).insert("原始证据")
+            episodes = EpisodeRepository(db)
+            blob = encode_embedding(
+                np.ones(config.model.embedding_dimension, dtype=np.float32),
+                config.model.embedding_dimension,
+            )
+            first = episodes.insert(
+                source_id, "main/test.json", 0, EpisodeDraft("证据甲"), blob
+            )
+            second = episodes.insert(
+                source_id, "main/test.json", 1, EpisodeDraft("证据乙"), blob
+            )
+            durable = AssociationRepository(db, config.weights)
+            staged = StagedAssociationOverlay(durable)
+            valid_id = staged.upsert(
+                AssociationDraft(
+                    "episode", first, "episode", second,
+                    "semantic", "valid_first", "应当回滚的有效草稿",
+                    generation=0,
+                )
+            )
+            # The overlay accepts speculative rows; the durable transaction
+            # must reject the missing endpoint and roll back ``valid_id`` too.
+            staged.upsert(
+                AssociationDraft(
+                    "episode", first, "episode", 9_999_999,
+                    "semantic", "invalid_later", "不存在的终点",
+                    generation=1,
+                )
+            )
+            staged.mark_used([valid_id])
+
+            with self.assertRaisesRegex(ValueError, "to node does not exist"):
+                staged.commit()
+
+            self.assertEqual(0, durable.stats()["edges"])
+
+    def test_staged_commit_rolls_back_if_request_expires_before_sqlite_commit(self):
+        """A liveness failure at COMMIT must publish no staged association."""
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config = test_config(root)
+            db = Database(config.database_path)
+            db.initialize()
+            source_id = SourceRepository(db).insert("原始证据")
+            episodes = EpisodeRepository(db)
+            blob = encode_embedding(
+                np.ones(config.model.embedding_dimension, dtype=np.float32),
+                config.model.embedding_dimension,
+            )
+            first = episodes.insert(
+                source_id, "main/test.json", 0, EpisodeDraft("证据甲"), blob
+            )
+            second = episodes.insert(
+                source_id, "main/test.json", 1, EpisodeDraft("证据乙"), blob
+            )
+            durable = AssociationRepository(db, config.weights)
+            staged = StagedAssociationOverlay(durable)
+            temporary_id = staged.upsert(
+                AssociationDraft(
+                    "episode",
+                    first,
+                    "episode",
+                    second,
+                    "semantic",
+                    "late_commit",
+                    "不应在请求失效后提交。",
+                    generation=0,
+                )
+            )
+            staged.mark_used([temporary_id])
+            checks = 0
+
+            def require_live() -> None:
+                nonlocal checks
+                checks += 1
+                # The first checks allow staged SQL statements to run.  The
+                # transaction hook immediately before SQLite COMMIT must
+                # roll all of them back once the request expires.
+                if checks == 4:
+                    raise TimeoutError("query deadline exceeded before commit")
+
+            with self.assertRaisesRegex(TimeoutError, "before commit"):
+                staged.commit(require_live=require_live)
+
+            self.assertEqual(4, checks)
+            self.assertEqual(0, durable.stats()["edges"])
+
+    def test_mark_used_rolls_back_if_request_expires_before_sqlite_commit(self):
+        """Usage accounting follows the same deadline-safe write rule."""
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config = test_config(root)
+            db = Database(config.database_path)
+            db.initialize()
+            source_id = SourceRepository(db).insert("原始证据")
+            episodes = EpisodeRepository(db)
+            blob = encode_embedding(
+                np.ones(config.model.embedding_dimension, dtype=np.float32),
+                config.model.embedding_dimension,
+            )
+            first = episodes.insert(
+                source_id, "main/test.json", 0, EpisodeDraft("证据甲"), blob
+            )
+            second = episodes.insert(
+                source_id, "main/test.json", 1, EpisodeDraft("证据乙"), blob
+            )
+            durable = AssociationRepository(db, config.weights)
+            association_id = durable.upsert(
+                AssociationDraft(
+                    "episode",
+                    first,
+                    "episode",
+                    second,
+                    "semantic",
+                    "late_utility",
+                    "不应在请求失效后增加使用计数。",
+                    generation=0,
+                )
+            )
+            checks = 0
+
+            def require_live() -> None:
+                nonlocal checks
+                checks += 1
+                if checks == 2:
+                    raise TimeoutError("query deadline exceeded before utility commit")
+
+            with self.assertRaisesRegex(TimeoutError, "utility commit"):
+                # This mirrors a generic application finalizer: it retains
+                # the historical repository method signature, while the
+                # request-scoped ContextVar still fences its SQLite commit.
+                with transaction_liveness(require_live):
+                    durable.mark_used([association_id])
+
+            self.assertEqual(2, checks)
+            self.assertEqual(0, int(durable.get(association_id)["use_count"]))
 
     def _fixture(self, root: Path):
         config = test_config(root)

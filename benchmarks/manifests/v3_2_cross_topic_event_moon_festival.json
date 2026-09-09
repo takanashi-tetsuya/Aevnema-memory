@@ -1,0 +1,19 @@
+{
+  "schema": "aevnema.v3.same_chapter_learning_matrix.v1",
+  "purpose": "Pre-registered non-scoring cross-topic evidence-transfer diagnostic. Runtime receives only authored Q1/Q2 text and not any source locator, answer, or evaluator label.",
+  "formal_scoring_eligible": false,
+  "promotion_prohibited": true,
+  "selected_files": ["event/10038/1003810.json"],
+  "source_bindings": [{"source_key": "event/10038/1003810.json", "sha256": "6158f5bab31f110efe4e62168fb4b87e9b8cbbff28e7fc7ce8e650255ad981f4"}],
+  "q1": {
+    "text": "玄武商会为什么在月影祭临近时仍感到人手不足？",
+    "contextual_domain": "knowledge",
+    "contextual_revisit_scope": "v3-2-cross-topic-event-moon-festival"
+  },
+  "q2_variants": [
+    {"id": "same_text", "kind": "same_text", "text": "玄武商会为什么在月影祭临近时仍感到人手不足？", "context_mode": "absent", "reference_basis": "query_text_only"},
+    {"id": "paraphrase", "kind": "paraphrase", "text": "月影祭快到了，玄武商会为何说缺少人手？", "context_mode": "absent", "reference_basis": "query_text_only"},
+    {"id": "partial_clue", "kind": "partial_clue", "text": "在月影祭的筹备中，为什么他们还会缺人手？", "context_mode": "absent", "reference_basis": "query_text_only"},
+    {"id": "near_neighbor_counterexample", "kind": "near_neighbor_counterexample", "text": "玄武商会为什么认为夜行学院能常年准备祭典？", "context_mode": "absent", "reference_basis": "query_text_only"}
+  ]
+}

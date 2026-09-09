@@ -60,7 +60,14 @@ class ContextualAssociationTests(unittest.TestCase):
         )
         self.assertEqual(model.calls, 1)
         self.assertEqual(coordinator.last_batch_size, 2)
-        self.assertEqual(len(bundle.queries), 2)
+        # The physical provider batch is deduplicated, but both logical need
+        # roles remain available to downstream slot-aware selection.
+        self.assertEqual(len(bundle.queries), 3)
+        self.assertEqual(2, bundle.physical_count)
+        self.assertEqual(
+            bundle.queries[1].physical_id,
+            bundle.queries[2].physical_id,
+        )
         self.assertEqual(bundle.whole.dtype, np.float32)
 
     def test_double_key_requires_both_prototypes(self):
@@ -117,11 +124,75 @@ class ContextualAssociationTests(unittest.TestCase):
                 domain="knowledge",
                 active_anchor_ids={anchor_id: 1.0},
                 unresolved_slot_ids=["q"],
+                evaluation_as_of="2026-01-01T00:00:00+00:00",
             )
             self.assertEqual([edge_id], [hit.association_id for hit in result["hits"]])
             self.assertEqual([target_id], result["attached_episode_ids"])
             self.assertEqual("q", result["hits"][0].matched_slot_id)
             self.assertEqual(0, result["external_calls"])
+
+    def test_prepared_early_key_modes_keep_the_same_anchor_contract(self):
+        class Repo:
+            @staticmethod
+            def get_contextual_for_prototypes(*_args, **_kwargs):
+                return [
+                    {
+                        "id": 17,
+                        "from_type": "episode",
+                        "from_id": 1,
+                        "to_id": 2,
+                        "context_cue_id": 10,
+                        "need_cue_id": 20,
+                        "lifecycle_state": "active",
+                        "utility_weight": 1.0,
+                    }
+                ]
+
+        context = EmbeddingIndex(3)
+        need = EmbeddingIndex(3)
+        context.add(10, [1, 0, 0])
+        need.add(20, [0, 1, 0])
+        matcher = ContextualAssociationMatcher(
+            context,
+            need,
+            Repo(),
+            context_threshold=0.5,
+            need_threshold=0.5,
+        )
+        # The current request still supplies a legal slot vector, but it does
+        # not pass the N cue gate. C and W are intentionally diagnostic key
+        # ablations; CN retains the ordinary double-key rejection.
+        bundle = QueryVectorBundle(
+            model_id="test",
+            dimension=3,
+            whole=np.asarray([1, 0, 0], dtype=np.float32),
+            queries=(
+                QueryVector(
+                    "slot",
+                    "slot-hash",
+                    "atomic",
+                    np.asarray([1, 0, 0], dtype=np.float32),
+                    slot_id="slot",
+                ),
+            ),
+        )
+        common = {
+            "domain": "knowledge",
+            "active_anchor_ids": {1: 1.0},
+            "unresolved_slot_ids": ["slot"],
+            "evaluation_as_of": "2026-01-01T00:00:00+00:00",
+        }
+        cn = matcher.match_bundle(bundle, scoring_mode="cn", **common)
+        c = matcher.match_bundle(bundle, scoring_mode="c", **common)
+        n = matcher.match_bundle(bundle, scoring_mode="n", **common)
+        w = matcher.match_bundle(bundle, scoring_mode="w", **common)
+
+        self.assertEqual([], cn["pre_target_proposals"])
+        self.assertEqual([], n["pre_target_proposals"])
+        self.assertEqual([17], [item.association_id for item in c["pre_target_proposals"]])
+        self.assertEqual([17], [item.association_id for item in w["pre_target_proposals"]])
+        self.assertEqual("c", c["gate_trace"]["scoring_mode"])
+        self.assertEqual("w", w["gate_trace"]["scoring_mode"])
 
     def test_double_key_never_runs_without_a_base_anchor(self):
         class Repo:
@@ -137,6 +208,7 @@ class ContextualAssociationTests(unittest.TestCase):
             query_ids=["q"],
             slot_ids=["slot-a"],
             unresolved_slot_ids=["slot-a"],
+            evaluation_as_of="2026-01-01T00:00:00+00:00",
         )
         self.assertEqual([], result["hits"])
         self.assertEqual("no_active_anchor", result["reason"])
@@ -178,6 +250,7 @@ class ContextualAssociationTests(unittest.TestCase):
             unresolved_slot_ids=["missing"],
             target_support_scores={},
             target_support_floor=0.05,
+            evaluation_as_of="2026-01-01T00:00:00+00:00",
         )
         self.assertEqual([], no_support["hits"])
         supported = matcher.match(
@@ -189,6 +262,7 @@ class ContextualAssociationTests(unittest.TestCase):
             unresolved_slot_ids=["missing"],
             target_support_scores={("missing", 2): 0.6},
             target_support_floor=0.05,
+            evaluation_as_of="2026-01-01T00:00:00+00:00",
         )
         self.assertEqual([17], [item.association_id for item in supported["hits"]])
 

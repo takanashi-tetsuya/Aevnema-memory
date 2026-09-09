@@ -1167,11 +1167,16 @@ def evidence_rerank_audit_prompt(
 
 ANSWER_SYSTEM = """你是证据约束的长期记忆回答器。只能使用提供的 Episode、Source 摘要和
 Association 路径，禁止使用模型自身知识。必须区分文档陈述、角色说法、推测、综合推论和未知；
-资料不足时直接说明。回答应包含结论、关键证据、必要的联想路径、其他解释、排除理由和不确定性。
+资料不足时直接说明。回答应包含结论、关键证据、必要的联想路径。  
+单一事实主张可不输出“其他解释/排除理由/不确定性”；只有在存在复合主张、可替代解释较多或扩展推断时才补充，并保持逐条可追溯。
 
 Episode 的数据库编号只来自对象顶层 id；source_text 中的 [record: N] 必须称为“Source record N”，
 不能称作 Episode。引用证据时给出对象提供的精确 source_key，例如“Episode #ID（source_key）”；
 不得引用输入中不存在的编号或文件名。
+
+source_evidence_delivery 为 source_bound 才表示该 Episode 的已保存直接 Source 证据完整出现在
+source_text；其他状态不允许把 Episode 概述写成已交付、可核验的直接事实。此时应明确证据交付不足，
+而不是以同名人物、相邻记录或模型自身知识补全。
 
 evidence_origin 表示内容作者层，epistemic_status 表示中心命题的认识状态。observed/asserted 只表示
 文档以事实口吻陈述，不代表系统已独立核验；reported 只支持“有人这样说”，speculative 只支持
@@ -1193,6 +1198,8 @@ Episode 核对答案，不得使用外部知识。逐项检查问题要求的实
 同时检查 evidence_origin、epistemic_status 和 generation：reported 只支持“有人这样说”，speculative
 只支持“存在该推测”，importer/system 必须归因，高 generation 必须标为推论。Source record 引用必须
 带精确 source_key，且支持文本实际出现在提供的 source_excerpt；Episode 编号必须存在且内容匹配。
+source_evidence_delivery 只有为 source_bound 时，才表示该 Episode 的已保存直接 Source 证据完整出现在
+source_excerpt。其他状态只能说明检索摘要或证据交付失败，不能把 Episode 概述当作已向审计器交付的直接原文。
 
 身份、成员、职位、别名和同一性必须有直接证据，不能从交互、目标、受益、知情或共现转移。跨
 source_key 的因果、使能或具体机制必须有证据明确连接两个观察；共享实体、先后或背景相关性不足以
@@ -1271,11 +1278,24 @@ def answer_audit_prompt(
         "correction_instructions": ["改用有直接身份和行为证据的候选人"],
     }
     compact_episodes = [
-        {key: episode.get(key) for key in ("id", "text", "participants", "source_key")}
+        {
+            key: episode.get(key)
+            for key in (
+                "id",
+                "text",
+                "participants",
+                "source_key",
+                "source_evidence_delivery",
+                "source_evidence_quote_count",
+            )
+        }
         for episode in episodes
     ]
     for compact, episode in zip(compact_episodes, episodes):
-        compact["source_excerpt"] = str(episode.get("source_text", ""))[:2400]
+        # ``source_text`` has already passed the bounded Source-excerpt
+        # contract.  Auditing a further prefix can erase the very record that
+        # grounded the answer, so audit the same delivered evidence as answer.
+        compact["source_excerpt"] = str(episode.get("source_text", ""))
     return (
         f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
         f"问题：{question}\n"

@@ -3,9 +3,10 @@ from __future__ import annotations
 from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 import json
-from typing import Any, Iterable
+from typing import Any, Callable, Iterable
 
 from memory_demo.repositories import AssociationRepository
+from memory_demo.repositories.association import normalize_evaluation_as_of
 from memory_demo.types import AssociationDraft
 
 
@@ -100,8 +101,16 @@ class AssociationOverlay:
     ):
         self.repository = repository
         self.hidden_ids = {int(value) for value in hidden_ids}
-        self.hidden_context_cue_ids = {int(value) for value in hidden_context_cue_ids}
-        self.hidden_need_cue_ids = {int(value) for value in hidden_need_cue_ids}
+        # These keyword arguments existed in the first counterfactual overlay
+        # implementation.  A cue prototype is shared by many contextual
+        # associations, though, so using either set as a global filter makes
+        # rolling back one edge also erase unrelated edges.  Retain the
+        # parameters for call compatibility, but deliberately do not turn
+        # them into lookup masks.  An association id is the smallest durable
+        # unit a counterfactual may hide.
+        _ = hidden_context_cue_ids, hidden_need_cue_ids
+        self.hidden_context_cue_ids: set[int] = set()
+        self.hidden_need_cue_ids: set[int] = set()
         self.restored_rows = {
             int(key): dict(value) for key, value in (restored_rows or {}).items()
         }
@@ -110,25 +119,10 @@ class AssociationOverlay:
     def from_delta(
         cls, repository: AssociationRepository, delta: AssociationDelta
     ) -> "AssociationOverlay":
-        rows = [
-            item.get("after", {})
-            for item in delta.created
-            if isinstance(item.get("after"), dict)
-        ]
         return cls(
             repository,
             delta.created_ids,
             delta.reinforced_before,
-            hidden_context_cue_ids=(
-                int(row["context_cue_id"])
-                for row in rows
-                if row.get("context_cue_id") is not None
-            ),
-            hidden_need_cue_ids=(
-                int(row["need_cue_id"])
-                for row in rows
-                if row.get("need_cue_id") is not None
-            ),
         )
 
     def _visible(self, row) -> dict[str, Any] | None:
@@ -185,22 +179,49 @@ class AssociationOverlay:
         visible.sort(key=lambda item: float(item["weight"]), reverse=True)
         return visible
 
-    def mark_used(self, association_ids: list[int]) -> None:
+    def mark_used(
+        self,
+        association_ids: list[int],
+        *,
+        require_live: Callable[[], None] | None = None,
+    ) -> None:
         # Counterfactual replay and masked full queries must leave the treatment
         # database byte-for-byte unchanged at the Association layer.
+        if require_live is not None:
+            require_live()
         return None
 
     def get_contextual_for_prototypes(self, context_ids, need_ids, **kwargs):
-        rows = self.repository.get_contextual_for_prototypes(
-            context_ids, need_ids, **kwargs
+        """Keep v3 anchor-first filtering intact through a read-only view."""
+
+        repository_kwargs = dict(kwargs)
+        is_v3 = (
+            repository_kwargs.get("anchor_episode_ids") is not None
+            or repository_kwargs.get("evaluation_as_of") is not None
         )
-        return [
-            row
+        requested_limit = repository_kwargs.get("limit")
+        # Ask the underlying repository for the complete already-anchor-scoped
+        # set. Hiding an edge after its SQL limit would otherwise shrink the
+        # visible candidate universe and reintroduce a pre-score cutoff.
+        if is_v3 and requested_limit is not None:
+            repository_kwargs["limit"] = None
+        rows = self.repository.get_contextual_for_prototypes(
+            context_ids, need_ids, **repository_kwargs
+        )
+        # Filter and restore by association id only.  Context/need cue ids are
+        # shared prototype references, not ownership boundaries for an edge.
+        # Applying a cue-level mask here would make one treatment's rollback
+        # suppress a sibling association that happens to share either cue.
+        visible = [
+            item
             for row in rows
-            if int(row["id"]) not in self.hidden_ids
-            and int(row["context_cue_id"]) not in self.hidden_context_cue_ids
-            and int(row["need_cue_id"]) not in self.hidden_need_cue_ids
+            if (item := self._visible(row)) is not None
         ]
+        if is_v3:
+            visible.sort(key=lambda item: int(item["id"]))
+            if requested_limit is not None:
+                return visible[: max(1, int(requested_limit))]
+        return visible
 
     def record_utility(self, observations) -> dict[str, int]:
         return {"updated": 0, "successes": 0, "noops": 0, "harms": 0}
@@ -490,32 +511,96 @@ class StagedAssociationOverlay:
         return sorted(rows.values(), key=lambda item: int(item["id"]))
 
     def get_contextual_for_prototypes(self, context_ids, need_ids, **kwargs):
+        """Mirror the repository's v3 anchor/as-of semantics in RAM.
+
+        Staged contextual rows are unusual today, but treating them with the
+        same predicates avoids a later transaction-local edge bypassing the
+        production read-only/replay contract.
+        """
+
+        repository_kwargs = dict(kwargs)
+        is_v3 = (
+            repository_kwargs.get("anchor_episode_ids") is not None
+            or repository_kwargs.get("evaluation_as_of") is not None
+        )
+        requested_limit = repository_kwargs.get("limit", 1000)
+        if is_v3 and requested_limit is not None:
+            repository_kwargs["limit"] = None
         rows = self.repository.get_contextual_for_prototypes(
-            context_ids, need_ids, **kwargs
+            context_ids, need_ids, **repository_kwargs
         )
         visible = {
             int(row["id"]): dict(row)
             for row in rows
             if int(row["id"]) not in self._deleted_ids
         }
-        context_set = {int(value) for value in context_ids}
-        need_set = {int(value) for value in need_ids}
+        context_set = (
+            None if context_ids is None else {int(value) for value in context_ids}
+        )
+        need_set = None if need_ids is None else {int(value) for value in need_ids}
+        active_anchor_ids: set[int] | None = None
+        evaluation_as_of: str | None = None
+        domain = repository_kwargs.get("domain")
+        if is_v3:
+            raw_anchors = repository_kwargs.get("anchor_episode_ids")
+            raw_as_of = repository_kwargs.get("evaluation_as_of")
+            if raw_anchors is None or raw_as_of is None:
+                # Match the durable repository's fail-closed contract rather
+                # than letting a transaction-local row bypass it.
+                raise ValueError(
+                    "anchor_episode_ids and evaluation_as_of are both required for v3 lookup"
+                )
+            active_anchor_ids = set()
+            for value in raw_anchors:
+                try:
+                    anchor_id = int(value)
+                except (TypeError, ValueError):
+                    continue
+                if anchor_id > 0:
+                    active_anchor_ids.add(anchor_id)
+            evaluation_as_of = normalize_evaluation_as_of(raw_as_of)
         for association_id, row in self._rows.items():
             if association_id in self._deleted_ids:
                 continue
-            if (
-                str(row.get("association_mode", "")) == "contextual_recall"
-                and int(row.get("context_cue_id", -1)) in context_set
-                and int(row.get("need_cue_id", -1)) in need_set
-            ):
-                visible[association_id] = dict(row)
+            if str(row.get("association_mode", "")) != "contextual_recall":
+                continue
+            if context_set is not None and int(row.get("context_cue_id", -1)) not in context_set:
+                continue
+            if need_set is not None and int(row.get("need_cue_id", -1)) not in need_set:
+                continue
+            if is_v3:
+                if str(row.get("from_type", "")) != "episode":
+                    continue
+                if int(row.get("from_id", -1)) not in (active_anchor_ids or set()):
+                    continue
+                if str(row.get("lifecycle_state", "")) not in {"probation", "active"}:
+                    continue
+                expires_at = str(row.get("expires_at", "") or "").strip()
+                if expires_at:
+                    try:
+                        if normalize_evaluation_as_of(expires_at) <= str(evaluation_as_of):
+                            continue
+                    except ValueError:
+                        # A malformed staged expiry cannot be treated as a
+                        # perpetual edge in a strict/replay view.
+                        continue
+                if domain and str(row.get("cue_domain", "") or "") != str(domain):
+                    # The staged row has no independently stored cue-domain
+                    # proof, so fail closed rather than borrowing the caller's.
+                    continue
+            visible[association_id] = dict(row)
+        if is_v3:
+            ordered = sorted(visible.values(), key=lambda item: int(item["id"]))
+            if requested_limit is None:
+                return ordered
+            return ordered[: max(1, int(requested_limit))]
         return sorted(
             visible.values(),
             key=lambda item: (
                 -float(item.get("utility_weight", 0.0)),
                 int(item["id"]),
             ),
-        )[: int(kwargs.get("limit", 1000))]
+        )[: int(requested_limit)]
 
     def record_utility(self, _observations):
         return {"updated": 0, "successes": 0, "noops": 0, "harms": 0}
@@ -567,7 +652,14 @@ class StagedAssociationOverlay:
                 restored.append(value)
         return restored
 
-    def mark_used(self, association_ids: list[int]) -> None:
+    def mark_used(
+        self,
+        association_ids: list[int],
+        *,
+        require_live: Callable[[], None] | None = None,
+    ) -> None:
+        if require_live is not None:
+            require_live()
         self._used_ids.extend(int(value) for value in association_ids)
 
     def stats(self) -> dict[str, int]:
@@ -600,8 +692,20 @@ class StagedAssociationOverlay:
 
         return json.dumps(visit(payload), ensure_ascii=False)
 
-    def commit(self) -> dict[int, int]:
-        """Commit the post-gate staged rows and return temporary→durable IDs."""
+    def commit(
+        self,
+        *,
+        require_live: Callable[[], None] | None = None,
+    ) -> dict[int, int]:
+        """Atomically commit post-gate staged rows and return temp→durable IDs.
+
+        A query can create/reinforce several dependent associations.  All of
+        them, including the final ``mark_used`` update, share one SQLite
+        transaction so a later validation or write failure cannot leave an
+        earlier subset durably learned.
+        """
+        if require_live is not None:
+            require_live()
         mapping: dict[int, int] = {}
         ordered = sorted(
             self._drafts,
@@ -611,19 +715,34 @@ class StagedAssociationOverlay:
                 association_id,
             ),
         )
-        for association_id in ordered:
-            if association_id in self._deleted_ids:
-                continue
-            durable_id: int | None = None
-            for draft in self._drafts.get(association_id, []):
-                committed_draft = replace(
-                    draft,
-                    evidence_json=self._remap_json_ids(draft.evidence_json, mapping),
-                    audit_json=self._remap_json_ids(draft.audit_json, mapping),
-                )
-                durable_id = self.repository.upsert(committed_draft)
-            if durable_id is not None:
-                mapping[association_id] = int(durable_id)
-        used = [mapping.get(value, value) for value in self._used_ids]
-        self.repository.mark_used(list(dict.fromkeys(used)))
+        self.repository._concept_reach_cache.clear()
+        # ``before_commit`` closes the interval between the last individual
+        # statement and SQLite's durable COMMIT.  The earlier checks avoid
+        # doing unnecessary work after the request is already expired.
+        with self.repository.db.transaction(before_commit=require_live) as connection:
+            for association_id in ordered:
+                if association_id in self._deleted_ids:
+                    continue
+                durable_id: int | None = None
+                for draft in self._drafts.get(association_id, []):
+                    if require_live is not None:
+                        require_live()
+                    committed_draft = replace(
+                        draft,
+                        evidence_json=self._remap_json_ids(
+                            draft.evidence_json, mapping
+                        ),
+                        audit_json=self._remap_json_ids(draft.audit_json, mapping),
+                    )
+                    durable_id = self.repository._upsert_in_transaction(
+                        connection, committed_draft
+                    )
+                if durable_id is not None:
+                    mapping[association_id] = int(durable_id)
+            used = [mapping.get(value, value) for value in self._used_ids]
+            if require_live is not None:
+                require_live()
+            self.repository._mark_used_in_transaction(
+                connection, list(dict.fromkeys(used))
+            )
         return mapping

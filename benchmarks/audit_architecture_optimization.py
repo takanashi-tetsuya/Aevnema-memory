@@ -21,16 +21,28 @@ from memory_demo.ingestion.extractor import MemoryExtractor
 from benchmarks.support.stage5 import load_json, write_json
 
 
-def _jsonl_files(paths: Iterable[Path]) -> list[Path]:
+def _jsonl_files(
+    paths: Iterable[Path], *, include_answer_evidence: bool = False
+) -> list[Path]:
     files: list[Path] = []
     for path in paths:
         files.extend(sorted(path.rglob("*.jsonl")) if path.is_dir() else [path])
-    return sorted({path.resolve() for path in files if path.is_file()})
+    return sorted({
+        path.resolve()
+        for path in files
+        if path.is_file()
+        and (
+            include_answer_evidence
+            or not path.name.endswith(".answer-evidence.jsonl")
+        )
+    })
 
 
-def _events(paths: Iterable[Path]) -> list[dict[str, Any]]:
+def _events(
+    paths: Iterable[Path], *, include_answer_evidence: bool = False
+) -> list[dict[str, Any]]:
     result: list[dict[str, Any]] = []
-    for path in _jsonl_files(paths):
+    for path in _jsonl_files(paths, include_answer_evidence=include_answer_evidence):
         with path.open(encoding="utf-8") as stream:
             for line in stream:
                 try:
@@ -667,10 +679,19 @@ def main() -> int:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--minimum-episodes", type=int, default=2)
     parser.add_argument("--batch-size", type=int, default=48)
+    parser.add_argument(
+        "--include-answer-evidence",
+        action="store_true",
+        help="include explicit local-only *.answer-evidence.jsonl companions",
+    )
     args = parser.parse_args()
 
-    concept_events = _events([args.concept_logs])
-    query_events = _events([args.query_logs])
+    concept_events = _events(
+        [args.concept_logs], include_answer_evidence=args.include_answer_evidence
+    )
+    query_events = _events(
+        [args.query_logs], include_answer_evidence=args.include_answer_evidence
+    )
     query_token_baseline = _token_summary(query_events)
     retrieval_ablation = _retrieval_ablation(load_json(args.retrieval_report))
     report = {

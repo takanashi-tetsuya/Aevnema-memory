@@ -4,7 +4,6 @@ import argparse
 import atexit
 from copy import deepcopy
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
-from dataclasses import asdict
 from datetime import datetime, timezone
 import json
 from pathlib import Path
@@ -16,13 +15,18 @@ import traceback
 
 from memory_demo.app import MemoryApplication
 from memory_demo.config import AppConfig
-from memory_demo.database import DatabaseBusyError
+from memory_demo.database import Database, DatabaseBusyError
 from memory_demo.ingestion.interruption import (
     ImportProcessLease,
     recover_stale_file_runs,
 )
 from memory_demo.ingestion.pipeline import ImportPipeline
-from memory_demo.llm import ModelClient, ModelTransportUnavailable
+from memory_demo.llm import (
+    ModelClient,
+    ModelTransportUnavailable,
+    provider_call_accounting_snapshot,
+)
+from memory_demo.event_log import redact_for_export, safe_config_snapshot
 
 
 def utc_now() -> str:
@@ -42,7 +46,7 @@ def save_ledger(path: Path, ledger: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_text(
-        json.dumps(ledger, ensure_ascii=False, indent=2, default=str),
+        json.dumps(redact_for_export(ledger), ensure_ascii=False, indent=2, default=str),
         encoding="utf-8",
     )
     temporary.replace(path)
@@ -387,6 +391,12 @@ def main() -> None:
     # every return and uncaught exception without relying on a fragile manual
     # release path; a force-killed process is recovered by the next startup.
     atexit.register(lease.release)
+    # A new target SQLite file has no extraction tables yet.  Recovery is
+    # deliberately the first mutating import decision, but it needs the
+    # schema to distinguish an empty new database from an interrupted run.
+    # ``initialize`` is idempotent and applies only to the configured target,
+    # never to a Source file or an existing frozen snapshot.
+    Database(config.database_path).initialize()
     recovery = recover_stale_file_runs(
         config.database_path,
         ledger,
@@ -682,7 +692,8 @@ def main() -> None:
                 "pause_file": str(pause_file) if pause_file else None,
                 "submitted_files": pause_state["submitted"],
                 "recovery": shutdown_recovery,
-                "config": asdict(config),
+                "config": safe_config_snapshot(config),
+                "provider_calls": provider_call_accounting_snapshot(),
                 "totals": totals,
             }
             save_ledger(ledger_path, ledger)
@@ -713,7 +724,8 @@ def main() -> None:
             "retry_failed": args.retry_failed,
             "retry_failed_files": len(retry_failed_keys),
         },
-        "config": asdict(config),
+        "config": safe_config_snapshot(config),
+        "provider_calls": provider_call_accounting_snapshot(),
         "totals": totals,
     }
     save_ledger(ledger_path, ledger)

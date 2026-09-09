@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "scope": "plan_package_only_not_repository_or_benchmark",
+  "tasks": 20,
+  "experiments": 11,
+  "checks": [
+    "required_work_package_fields",
+    "acyclic_dependencies",
+    "task_experiment_cross_references",
+    "prospective_status_only",
+    "no_fabricated_permissions_or_measurements",
+    "no_per_edge_calls_or_runtime_gold",
+    "source_reference_consistency",
+    "continuation_state_consistency"
+  ],
+  "negative_self_tests": [
+    "cycle_rejected",
+    "unknown_dependency_rejected",
+    "fabricated_network_authority_rejected",
+    "runtime_gold_leak_rejected"
+  ],
+  "checksums": "not_present_during_initial_assembly",
+  "network_calls": 0,
+  "repository_tests_run": false,
+  "formal_gold_approved": false
+}

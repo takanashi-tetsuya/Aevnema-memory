@@ -95,13 +95,26 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Summarize memory-demo JSONL logs")
     parser.add_argument("inputs", nargs="+", help="JSONL file or directory")
     parser.add_argument("--output", required=True)
+    parser.add_argument(
+        "--include-answer-evidence",
+        action="store_true",
+        help="include explicit local-only *.answer-evidence.jsonl companions",
+    )
     args = parser.parse_args()
 
     files: list[Path] = []
     for raw in args.inputs:
         path = Path(raw)
         files.extend(sorted(path.rglob("*.jsonl")) if path.is_dir() else [path])
-    files = sorted(dict.fromkeys(path.resolve() for path in files if path.is_file()))
+    files = sorted(dict.fromkeys(
+        path.resolve()
+        for path in files
+        if path.is_file()
+        and (
+            args.include_answer_evidence
+            or not path.name.endswith(".answer-evidence.jsonl")
+        )
+    ))
 
     events: list[dict] = []
     parse_errors: list[dict] = []

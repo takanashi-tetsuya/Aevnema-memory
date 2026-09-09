@@ -38,8 +38,9 @@ from memory_demo.llm.prompts import (
     GROWTH_AUDIT_SYSTEM,
     GROWTH_SYSTEM,
     HOP_QUERY_SYSTEM,
+    answer_audit_prompt,
 )
-from memory_demo.retrieval.context import source_excerpt
+from memory_demo.retrieval.context import source_excerpt, verified_evidence_views
 from memory_demo.ingestion.pipeline import ImportPipeline
 from memory_demo.repositories.extraction import ExtractionRepository
 from memory_demo.repositories.source import SourceRepository
@@ -3504,7 +3505,9 @@ meaning: 心情很糟时需要安静陪伴。
         self.assertIn("必须出现在问题或节点原文", HOP_QUERY_SYSTEM)
         self.assertIn("尚无直接证据", HOP_QUERY_SYSTEM)
         self.assertIn("精确 source_key", ANSWER_SYSTEM)
+        self.assertIn("source_evidence_delivery", ANSWER_SYSTEM)
         self.assertIn("source_excerpt", ANSWER_AUDIT_SYSTEM)
+        self.assertIn("source_evidence_delivery", ANSWER_AUDIT_SYSTEM)
         self.assertIn("问题中的提示只用于检索", ANSWER_AUDIT_SYSTEM)
 
     def test_source_excerpt_keeps_relevant_complete_record(self):
@@ -3519,6 +3522,142 @@ meaning: 心情很糟时需要安静陪伴。
         self.assertLessEqual(len(excerpt), 300)
         self.assertIn("阿洛娜遇见老师", excerpt)
         self.assertIn("[source_key: main/a.json]", excerpt)
+
+    def test_source_excerpt_prefers_persisted_episode_evidence(self):
+        direct = "[record: 99]\n[speaker_raw: Morgan]\nzh-CN: Morgan 明确批准了请求。"
+        raw = "\n\n".join(
+            [
+                "[source_key: main/a.json]\n[segment_index: 4]",
+                *[
+                    f"[record: {index}]\nzh-CN: Morgan 正在讨论其他事情。"
+                    for index in range(1, 20)
+                ],
+                direct,
+            ]
+        )
+        excerpt = source_excerpt(
+            raw,
+            "Morgan 批准了请求。",
+            ["Morgan"],
+            300,
+            evidence_quotes=[direct],
+        )
+        self.assertLessEqual(len(excerpt), 300)
+        self.assertIn(direct, excerpt)
+        self.assertIn("[source_key: main/a.json]", excerpt)
+
+    def test_source_excerpt_delivers_raw_record_for_verified_reasoning_view_quote(self):
+        raw_record = (
+            "[record: 100]\n"
+            "[speaker_raw: Mika]\n"
+            "[script_raw: 3;Mika;01;raw engine text]\n"
+            "zh-CN: 我一直在暗中支援阿里乌斯。\n"
+            "en: I have been secretly supporting Arius.\n"
+            "zh-TW: 我一直暗中支援奧利斯。"
+        )
+        raw = "[source_key: main/a.json]\n[segment_index: 4]\n\n" + raw_record
+        projected_quote = (
+            "[record: 100]\n"
+            "[speaker_raw: Mika]\n"
+            "zh-CN: 我一直在暗中支援阿里乌斯。\n"
+            "en: I have been secretly supporting Arius.\n"
+            "ko: 아리우스를 몰래 지원해 왔어."
+        )
+
+        views = verified_evidence_views(raw, [projected_quote])
+        excerpt = source_excerpt(
+            raw,
+            "Mika 一直暗中支援阿里乌斯。",
+            ["Mika"],
+            1_000,
+            evidence_quotes=[projected_quote],
+        )
+
+        self.assertEqual([raw_record], views)
+        self.assertIn(raw_record, excerpt)
+        self.assertIn("[script_raw: 3;Mika;01;raw engine text]", excerpt)
+
+    def test_projected_evidence_record_with_mismatching_shared_translation_is_rejected(self):
+        raw = (
+            "[source_key: main/a.json]\n\n"
+            "[record: 100]\n[speaker_raw: Mika]\n"
+            "zh-CN: 我一直在暗中支援阿里乌斯。\n"
+            "en: I have been secretly supporting Arius."
+        )
+        forged_projection = (
+            "[record: 100]\n[speaker_raw: Mika]\n"
+            "zh-CN: 我从未支援阿里乌斯。\n"
+            "en: I have been secretly supporting Arius."
+        )
+
+        self.assertEqual([], verified_evidence_views(raw, [forged_projection]))
+
+    def test_projected_evidence_rejects_duplicate_language_fields(self):
+        raw = (
+            "[source_key: main/a.json]\n\n"
+            "[record: 100]\n[speaker_raw: Mika]\n"
+            "[script_raw: raw metadata]\n"
+            "zh-CN: Mika 支援阿里乌斯。"
+        )
+        ambiguous_projection = (
+            "[record: 100]\n[speaker_raw: Mika]\n"
+            "zh-CN: Mika 支援错误组织。\n"
+            "zh-CN: Mika 支援阿里乌斯。"
+        )
+
+        self.assertEqual([], verified_evidence_views(raw, [ambiguous_projection]))
+
+    def test_projected_evidence_rejects_multiline_translation_field(self):
+        raw = (
+            "[source_key: main/a.json]\n\n"
+            "[record: 100]\n[speaker_raw: Mika]\n"
+            "[script_raw: raw metadata]\n"
+            "zh-CN: Mika 支援阿里乌斯。"
+        )
+        ambiguous_projection = (
+            "[record: 100]\n[speaker_raw: Mika]\n"
+            "zh-CN: Mika 支援阿里乌斯。\n"
+            "这行续文未受格式化约束。"
+        )
+
+        self.assertEqual([], verified_evidence_views(raw, [ambiguous_projection]))
+
+    def test_answer_audit_prompt_exposes_source_delivery_status(self):
+        prompt = answer_audit_prompt(
+            "谁批准了请求？",
+            {},
+            "Morgan 批准了请求。",
+            [
+                {
+                    "id": 7,
+                    "text": "Morgan 批准了请求。",
+                    "participants": ["Morgan"],
+                    "source_key": "main/a.json",
+                    "source_evidence_delivery": "source_bound",
+                    "source_evidence_quote_count": 1,
+                    "source_text": "[record: 99]\\nzh-CN: Morgan 明确批准了请求。",
+                }
+            ],
+        )
+        self.assertIn('"source_evidence_delivery": "source_bound"', prompt)
+        self.assertIn("Morgan 明确批准了请求", prompt)
+
+    def test_answer_audit_prompt_receives_the_full_delivered_source_excerpt(self):
+        source_text = (
+            "[record: 1]\\nzh-CN: 前置证据。\\n"
+            + "x" * 2_400
+            + "\\n[record: 2]\\n[speaker_raw: Morgan]\\n"
+            "zh-CN: Morgan 明确批准了请求。"
+        )
+        prompt = answer_audit_prompt(
+            "谁批准了请求？",
+            {},
+            "Morgan 批准了请求。",
+            [{"id": 7, "text": "摘要", "source_text": source_text}],
+        )
+
+        self.assertIn("[record: 2]", prompt)
+        self.assertIn("[speaker_raw: Morgan]", prompt)
 
 
 if __name__ == "__main__":

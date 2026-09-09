@@ -1,0 +1,19 @@
+{
+  "schema": "aevnema.v3.same_chapter_learning_matrix.v1",
+  "purpose": "Pre-registered non-scoring cross-topic evidence-transfer diagnostic. Runtime receives only authored Q1/Q2 text and not any source locator, answer, or evaluator label.",
+  "formal_scoring_eligible": false,
+  "promotion_prohibited": true,
+  "selected_files": ["main/32040.json"],
+  "source_bindings": [{"source_key": "main/32040.json", "sha256": "3fb4aff6036717556b1cf157178af48e453df47e1ef9fe7c72ef72f9f608f67a"}],
+  "q1": {
+    "text": "花子为什么认为梓应该再多睡一会？",
+    "contextual_domain": "knowledge",
+    "contextual_revisit_scope": "v3-2-cross-topic-main-rest"
+  },
+  "q2_variants": [
+    {"id": "same_text", "kind": "same_text", "text": "花子为什么认为梓应该再多睡一会？", "context_mode": "absent", "reference_basis": "query_text_only"},
+    {"id": "paraphrase", "kind": "paraphrase", "text": "花子觉得该让梓继续休息的理由是什么？", "context_mode": "absent", "reference_basis": "query_text_only"},
+    {"id": "partial_clue", "kind": "partial_clue", "text": "在那场雨天清晨的谈话里，为什么她主张让梓继续睡？", "context_mode": "absent", "reference_basis": "query_text_only"},
+    {"id": "near_neighbor_counterexample", "kind": "near_neighbor_counterexample", "text": "梓在梦里反复说起的是什么？", "context_mode": "absent", "reference_basis": "query_text_only"}
+  ]
+}

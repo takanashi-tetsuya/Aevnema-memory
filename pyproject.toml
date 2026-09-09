@@ -11,6 +11,7 @@ requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.0",
     "requests>=2.32",
+    "jsonschema>=4.23",
 ]
 
 [project.scripts]
@@ -20,7 +21,7 @@ memory-demo = "memory_demo.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-memory_demo = ["schema.sql"]
+memory_demo = ["schema.sql", "contracts/*.schema.json"]
 
 [tool.pytest.ini_options]
 pythonpath = [".", "src"]

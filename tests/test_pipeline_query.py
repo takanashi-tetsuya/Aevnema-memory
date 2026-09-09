@@ -474,6 +474,48 @@ class PipelineQueryTests(unittest.TestCase):
         self.assertFalse(trace["coverage_audit_performed"])
         self.assertFalse(trace["compressor_performed"])
 
+    def test_llm_rerank_does_not_pad_a_valid_short_evidence_selection(self):
+        class ShortSelectionModel:
+            def chat_json(self, _system, _user, **_kwargs):
+                return {
+                    "coverage": [
+                        {"query": "narrow relation", "episode_ids": [1]}
+                    ],
+                    "missing_aspects": [],
+                }
+
+        engine = QueryEngine.__new__(QueryEngine)
+        engine.config = AppConfig()
+        engine.config.retrieval.rerank_enabled = True
+        engine.config.retrieval.rerank_backend = "llm"
+        engine.config.retrieval.rerank_review_mode = "lean"
+        engine.config.retrieval.rerank_atomic_query_limit = 1
+        engine.config.retrieval.rerank_answer_slot_neighbor_radius = 0
+        engine.config.retrieval.rerank_answer_slot_neighbor_total_limit = 0
+        engine.model = ShortSelectionModel()
+        engine.logger = None
+        episodes = [
+            {
+                "id": index,
+                "score": 1.0 / index,
+                "text": f"evidence {index}",
+                "participants": [],
+                "source_key": "source",
+            }
+            for index in range(1, 4)
+        ]
+
+        selected, trace = engine._rerank_answer_episodes(
+            "narrow relation",
+            QueryIntent.from_dict({"search_queries": ["narrow relation"]}),
+            ["narrow relation"],
+            episodes,
+            3,
+        )
+
+        self.assertEqual([1], selected)
+        self.assertEqual([1], trace["final_episode_ids"])
+
     def test_rerank_atomic_budget_preserves_special_and_late_queries(self):
         queries = [
             "完整问题",
@@ -680,6 +722,35 @@ class PipelineQueryTests(unittest.TestCase):
                 QueryIntent(
                     search_queries=[f"证据槽{index}" for index in range(12)]
                 ),
+            ),
+        )
+
+    def test_missing_slots_followup_uses_only_empty_initial_candidate_slots(self):
+        engine = QueryEngine.__new__(QueryEngine)
+        engine.config = AppConfig()
+        engine.config.retrieval.followup_planning_mode = "missing_slots"
+        queries = ["whole question", "first slot", "second slot"]
+
+        self.assertEqual(
+            ["second slot"],
+            engine._initial_missing_followup_slots(
+                queries,
+                {
+                    "fused_episode": [[{"id": 1}], [{"id": 2}], []],
+                    "atomic_episode": [[], [], []],
+                    "sparse_episode": [[], [], []],
+                },
+            ),
+        )
+        self.assertEqual(
+            [],
+            engine._initial_missing_followup_slots(
+                queries,
+                {
+                    "fused_episode": [[{"id": 1}], [{"id": 2}], []],
+                    "atomic_episode": [[], [], [{"id": 3}]],
+                    "sparse_episode": [[], [], []],
+                },
             ),
         )
 

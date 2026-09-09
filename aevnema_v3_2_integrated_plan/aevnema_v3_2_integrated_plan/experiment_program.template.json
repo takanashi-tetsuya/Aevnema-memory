@@ -1,0 +1,406 @@
+{
+  "schema": "aevnema.v3_2.experiment_program_spec.v1",
+  "date": "2026-09-08",
+  "executable": false,
+  "notice": "这是待映射到当前仓库实际CLI的计划模板，不是provider授权，也不是已运行结果。代理应一次填入已知路径和授权，生成冻结副本；不要求用户逐项填表。",
+  "main_plan": "Aevnema_v3_2_integrated_development_experiment_plan_2026-09-08.md",
+  "workspace": {
+    "core_repository": null,
+    "chat_repository": null,
+    "source_root": null,
+    "campaign_output": null,
+    "current_commit": null,
+    "working_diff_hash": null
+  },
+  "authorized_models_from_reports": {
+    "reasoning": "deepseek-ai/DeepSeek-V3.2",
+    "transport_fallback": "zai-org/GLM-4.5V",
+    "embedding": "Pro/BAAI/bge-m3",
+    "embedding_dimension": 1024,
+    "ingestion_roles": "沿已有显式授权核对，不由本模板新增模型"
+  },
+  "network_policy": {
+    "enabled": false,
+    "authorization_reference": null,
+    "campaign_http_remaining": null,
+    "campaign_spend_remaining": null,
+    "suggested_diagnostic_batch_http_cap": 40,
+    "effective_http_cap_rule": "min(明确已有授权剩余HTTP, 已冻结本批上限)；无明确额度时仅准备/离线，不自动把建议值当授权。",
+    "all_attempts_count": true,
+    "per_edge_external_calls_max": 0,
+    "general_retries": 0,
+    "initial_request_timeout_seconds": 25,
+    "initial_diagnostic_deadline_seconds": 120,
+    "transport_fallback": "仅实际已有角色与总预算允许，记录为同一逻辑请求内attempt，不重新发总预算。",
+    "pause_paid_branch_after_consecutive_technical_failures": 3,
+    "pause_paid_branch_after_batch_deadline_failures": 2,
+    "scope_on_pause": "只暂停付费provider分支，继续本地/资料/报告工作",
+    "full_corpus_reimport_default": false
+  },
+  "iteration_policy": {
+    "max_development_batches": 3,
+    "max_same_cause_local_repair_cycles": 2,
+    "overwrite_old_runs": false,
+    "unplanned_retry_until_success": false,
+    "local_latency_repetitions_per_arm": 30,
+    "determinism_repetitions": 3,
+    "latency_repetitions_are_independent_semantic_samples": false
+  },
+  "evidence_policy": {
+    "answer_cache": false,
+    "diagnostic_q2_learning": false,
+    "gold_runtime_access": false,
+    "gold_approval_fabrication": false,
+    "same_q2_common_preparation": true,
+    "deduplicate_identical_text_only": true,
+    "new_texts_may_have_distinct_vectors_in_same_batch": true,
+    "source_bound_is_semantic_entailment": false,
+    "all_materialized_evidence_is_finally_sent": false
+  },
+  "diagnostic_proposed_limits": {
+    "proposal_endpoint_inspection_cap": 8,
+    "new_endpoint_cap": 2,
+    "initial_hop_limit": 1,
+    "thresholds": "由开发集冻结，不凭单个失败不断降低，不从heldout调参。"
+  },
+  "cache_arms": [
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B4M"
+  ],
+  "position_arms": [
+    "P0",
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "key_arms": [
+    "W",
+    "C",
+    "N",
+    "CN",
+    "CN-shuffled"
+  ],
+  "experiments": [
+    {
+      "id": "E32-00",
+      "title": "资格与完整入口回归",
+      "work_packages": [
+        "W00",
+        "W01",
+        "W02"
+      ],
+      "status": "planned_not_executed",
+      "execution_mode": "offline_regression",
+      "design": [
+        "当前工作区定位及历史冻结核对",
+        "public query exact/ordinary × evidence/full-answer，provider只在网络边界mock",
+        "来源/hash/2400/typedmanifest/UDF/迟到日志回归"
+      ],
+      "acceptance": [
+        "已确认代码断点有复现与修复",
+        "未调用真实provider",
+        "已有成功路径无退化"
+      ],
+      "expected_outcome": "unknown_until_run",
+      "requires_actual_cloud_authorization": false,
+      "formal_scoring_requires_reviewed_gold": false,
+      "required_artifacts": [
+        "baseline.json",
+        "local_regression.json"
+      ]
+    },
+    {
+      "id": "E32-01",
+      "title": "原始N12c阶段复盘",
+      "work_packages": [
+        "W02",
+        "W04",
+        "W05"
+      ],
+      "status": "planned_not_executed",
+      "execution_mode": "saved_trace_analysis",
+      "design": [
+        "只读八臂原始结果",
+        "保留input证据与终端未知",
+        "Q1扩展断言与audit实际覆盖对照"
+      ],
+      "acceptance": [
+        "25/11/9计数可由账本复算",
+        "阶段完成不会因answer失败丢失",
+        "不补写历史内容"
+      ],
+      "expected_outcome": "unknown_until_run",
+      "requires_actual_cloud_authorization": false,
+      "formal_scoring_requires_reviewed_gold": false,
+      "required_artifacts": [
+        "N12c_stage_crosswalk.md",
+        "audit_scope_review.md"
+      ]
+    },
+    {
+      "id": "E32-02",
+      "title": "同章冻结输入取证配对",
+      "work_packages": [
+        "W03",
+        "W05"
+      ],
+      "status": "planned_not_executed",
+      "execution_mode": "prepared_evidence",
+      "design": [
+        "N12b合法学习快照",
+        "历史四变体+明确中性上下文和话题变更变体",
+        "有边/仅本轮边mask，相同query准备，Q2不学习"
+      ],
+      "acceptance": [
+        "每臂终态与每slot结果",
+        "不调用answer或answeraudit",
+        "取证本身的planner/rerank准备如实计费"
+      ],
+      "expected_outcome": "unknown_until_run",
+      "requires_actual_cloud_authorization": true,
+      "formal_scoring_requires_reviewed_gold": false,
+      "required_artifacts": [
+        "prepared_inputs.json",
+        "paired_evidence_results.json"
+      ]
+    },
+    {
+      "id": "E32-03",
+      "title": "位置与键的分步消融",
+      "work_packages": [
+        "W06",
+        "W07"
+      ],
+      "status": "planned_not_executed",
+      "execution_mode": "prepared_evidence",
+      "design": [
+        "P0普通/P1late/P2preparedearly/P3queryfirst",
+        "选定位置后W/C/N/CN/shuffled",
+        "标记同物理context/need，不伪造双键优势"
+      ],
+      "acceptance": [
+        "候选门控不是事实证明",
+        "actual skip和归因明确",
+        "更简单优于双键可接受"
+      ],
+      "expected_outcome": "unknown_until_run",
+      "requires_actual_cloud_authorization": false,
+      "formal_scoring_requires_reviewed_gold": false,
+      "required_artifacts": [
+        "position_ablation.json",
+        "key_ablation.json"
+      ]
+    },
+    {
+      "id": "E32-04",
+      "title": "来源缓存与取证速度",
+      "work_packages": [
+        "W08"
+      ],
+      "status": "planned_not_executed",
+      "execution_mode": "mixed_separately_reported",
+      "design": [
+        "先B0/B3/B4，再必要B1/B2/B4M分解",
+        "同Q2对等来源校验，无answerprose缓存",
+        "本地30次冻结顺序，在线预注册有限代表组"
+      ],
+      "acceptance": [
+        "质量保持后算时间",
+        "startup/prepare/evidence/answer/audit分开",
+        "B3不能故意弱化"
+      ],
+      "expected_outcome": "unknown_until_run",
+      "requires_actual_cloud_authorization": true,
+      "formal_scoring_requires_reviewed_gold": false,
+      "required_artifacts": [
+        "cache_control.json",
+        "latency_pairs.json"
+      ]
+    },
+    {
+      "id": "E32-05",
+      "title": "跨来源学习与多槽",
+      "work_packages": [
+        "W07",
+        "W12",
+        "W13"
+      ],
+      "status": "planned_not_executed",
+      "execution_mode": "fresh_learning_then_evidence",
+      "design": [
+        "至少三个独立主题，每主题一个Q1",
+        "同文/2改写/有无中性上下文/近邻反例",
+        "joint/alternative/旧槽+新槽与三类遗漏"
+      ],
+      "acceptance": [
+        "公开finalizer真实建边",
+        "Q2不泄漏不学习",
+        "未达三个主题不假称完成"
+      ],
+      "expected_outcome": "unknown_until_run",
+      "requires_actual_cloud_authorization": true,
+      "formal_scoring_requires_reviewed_gold": false,
+      "required_artifacts": [
+        "cross_topic_results.json",
+        "family_reports/"
+      ]
+    },
+    {
+      "id": "E32-06",
+      "title": "有限完整回答与聊天链",
+      "work_packages": [
+        "W04",
+        "W09",
+        "W15"
+      ],
+      "status": "planned_not_executed",
+      "execution_mode": "live_answer",
+      "design": [
+        "取证有结果后选择预注册正/无收益/负例",
+        "相同profile的成对答案",
+        "actual adapter/core/learningready四时间与主张审核"
+      ],
+      "acceptance": [
+        "所有实质断言审核范围明确",
+        "技失败仍保留取证",
+        "取证快不冒充聊天快"
+      ],
+      "expected_outcome": "unknown_until_run",
+      "requires_actual_cloud_authorization": true,
+      "formal_scoring_requires_reviewed_gold": false,
+      "required_artifacts": [
+        "live_answer_pairs.json",
+        "chat_e2e.json"
+      ]
+    },
+    {
+      "id": "E32-07",
+      "title": "独立Source审核准备",
+      "work_packages": [
+        "W10",
+        "W12"
+      ],
+      "status": "planned_not_executed",
+      "execution_mode": "evaluator_only",
+      "design": [
+        "19历史候选逐项claim/span收窄",
+        "跨Sourcefamily与heldout冻结",
+        "一个待审核包包含明确accept/split/reject建议"
+      ],
+      "acceptance": [
+        "不代签",
+        "不复制全文替代收窄",
+        "runtime永不读标签"
+      ],
+      "expected_outcome": "unknown_until_run",
+      "requires_actual_cloud_authorization": false,
+      "formal_scoring_requires_reviewed_gold": false,
+      "required_artifacts": [
+        "gold_proposals.json",
+        "gold_review_narrowed.md"
+      ]
+    },
+    {
+      "id": "E32-08",
+      "title": "全量收尾与历史比较",
+      "work_packages": [
+        "W11",
+        "W16"
+      ],
+      "status": "planned_not_executed",
+      "execution_mode": "data_preparation_then_controlled_evaluation",
+      "design": [
+        "四项outstanding与六静态空文件实际处置",
+        "Vold/Vbase/Vnew×Kold/Kdiag/Kfull可兼容矩阵",
+        "Gcommon/Gexpanded、Paragraph/BGE/预算单独控制"
+      ],
+      "acceptance": [
+        "历史账本不改写",
+        "无formalgold时只diagnostic",
+        "完整数据不被小切片替代"
+      ],
+      "expected_outcome": "unknown_until_run",
+      "requires_actual_cloud_authorization": true,
+      "formal_scoring_requires_reviewed_gold": true,
+      "required_artifacts": [
+        "full_corpus_disposition.json",
+        "FULL_CORPUS_COMPARISON.md"
+      ]
+    },
+    {
+      "id": "E32-09",
+      "title": "盲测与拟人序列",
+      "work_packages": [
+        "W12",
+        "W13",
+        "W14",
+        "W16",
+        "W17"
+      ],
+      "status": "planned_not_executed",
+      "execution_mode": "heldout_and_longitudinal",
+      "design": [
+        "目标40dev/100holdoutfamily/300negative/300turn按预算分阶段",
+        "episode-bound one-shot/部分线索/agent经历/纠正/遗忘",
+        "单跳后单独两跳，按family统计"
+      ],
+      "acceptance": [
+        "gold批准与预算不足单列",
+        "模型命中不自动强化",
+        "目标未达列实值"
+      ],
+      "expected_outcome": "unknown_until_run",
+      "requires_actual_cloud_authorization": true,
+      "formal_scoring_requires_reviewed_gold": true,
+      "required_artifacts": [
+        "holdout_metrics.json",
+        "HUMANLIKE_MEMORY_RESULTS.md"
+      ]
+    },
+    {
+      "id": "E32-10",
+      "title": "相关规模、限流与恢复",
+      "work_packages": [
+        "W09",
+        "W14",
+        "W17"
+      ],
+      "status": "planned_not_executed",
+      "execution_mode": "local_fault_and_scale",
+      "design": [
+        "真实库后合成1k/10k/100k边",
+        "并发1后4/8",
+        "假provider429timeout取消/late，逐阶段保存"
+      ],
+      "acceptance": [
+        "边数不放大HTTP",
+        "失败无业务写入",
+        "合成吞吐不当语义质量"
+      ],
+      "expected_outcome": "unknown_until_run",
+      "requires_actual_cloud_authorization": false,
+      "formal_scoring_requires_reviewed_gold": false,
+      "required_artifacts": [
+        "scale_metrics.json",
+        "fault_results.json"
+      ]
+    }
+  ],
+  "formal_scoring": {
+    "enabled": false,
+    "approved_gold_path": null,
+    "approved_split_path": null,
+    "independent_source_manifest_path": null,
+    "block_scope": "只阻塞formal质量分数与发布，不阻塞evaluator准备和非评分诊断"
+  },
+  "production_actions": {
+    "promotion": false,
+    "canary": false,
+    "formal_kb_writes": false,
+    "requires_separate_existing_authorization": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "aevnema.v3.same_chapter_learning_matrix.v1",
+  "purpose": "Pre-registered non-scoring cross-topic evidence-transfer diagnostic. Runtime receives only authored Q1/Q2 text and not any source locator, answer, or evaluator label.",
+  "formal_scoring_eligible": false,
+  "promotion_prohibited": true,
+  "selected_files": ["favor/20034/200342.json"],
+  "source_bindings": [{"source_key": "favor/20034/200342.json", "sha256": "9ddc333803c127bc4a33077b07d34c2532276b7cc138b9ff67bf7bb914e7c952"}],
+  "q1": {
+    "text": "为了准备新年大胃王比赛，阿卡丽当天早餐吃了多少？",
+    "contextual_domain": "knowledge",
+    "contextual_revisit_scope": "v3-2-cross-topic-favor-competition"
+  },
+  "q2_variants": [
+    {"id": "same_text", "kind": "same_text", "text": "为了准备新年大胃王比赛，阿卡丽当天早餐吃了多少？", "context_mode": "absent", "reference_basis": "query_text_only"},
+    {"id": "paraphrase", "kind": "paraphrase", "text": "阿卡丽为参加新年大胃王比赛，早餐只吃了多少？", "context_mode": "absent", "reference_basis": "query_text_only"},
+    {"id": "partial_clue", "kind": "partial_clue", "text": "围绕那场新年比赛，她为了准备早餐吃了多少？", "context_mode": "absent", "reference_basis": "query_text_only"},
+    {"id": "near_neighbor_counterexample", "kind": "near_neighbor_counterexample", "text": "阿卡丽为什么希望老师陪同去看新年大胃王比赛？", "context_mode": "absent", "reference_basis": "query_text_only"}
+  ]
+}

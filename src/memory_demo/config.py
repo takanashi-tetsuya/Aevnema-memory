@@ -169,8 +169,20 @@ class RetrievalConfig:
     # ``always`` preserves the deep/background path. ``entity_resolved``
     # spends a second LLM planning call only when a later question clause
     # depends on the unknown person/organization found by an earlier clause.
+    # ``missing_slots`` waits for the local initial candidate pass and invokes
+    # the planner only if an initial answer/constraint slot has no candidate.
     # ``off`` is reserved for controlled retrieval experiments.
     followup_planning_mode: str = "always"
+    # V3.1 diagnostic answer completion profile.  These are admission
+    # envelopes, not a promise that a provider will respond within the
+    # interval.  A correction may start only when the shared request deadline
+    # can still cover its primary attempt, one permitted transport fallback,
+    # the required re-audit, and local finalization/delivery reserve.
+    answer_correction_max_revisions: int = 1
+    answer_correction_attempt_envelope_seconds: float = 25.0
+    answer_correction_fallback_envelope_seconds: float = 25.0
+    answer_reaudit_envelope_seconds: float = 25.0
+    answer_finalization_reserve_seconds: float = 5.0
     rerank_enabled: bool = True
     # ``llm`` preserves the evidence-coverage reasoner. ``cross_encoder`` uses
     # the dedicated reranker and then reapplies deterministic evidence floors.
@@ -284,6 +296,20 @@ class RetrievalConfig:
     # a single configuration change.
     contextual_association_enabled: bool = False
     contextual_association_shadow: bool = True
+    # W06 prepared-early is a separately controlled diagnostic lane.  It may
+    # inspect a request's already-bound requirements and vector bundle before
+    # broad traversal, but the initial implementation is shadow-only: it
+    # never short-circuits ordinary retrieval or represents a proposal as
+    # delivered evidence.
+    contextual_prepared_early_enabled: bool = False
+    contextual_prepared_early_shadow: bool = True
+    # A separate local diagnostic may admit already source-validated prepared
+    # candidates into the ordinary graph seed pool.  It never permits an
+    # answer/early-stop path and remains off in normal operation.
+    contextual_prepared_early_candidate_pool_enabled: bool = False
+    # W07 diagnostic-only key ablation.  ``cn`` is the ordinary double-key
+    # rule; the other values exist only for a frozen, local comparison.
+    contextual_prepared_early_scoring_mode: str = "cn"
     contextual_context_top_k: int = 8
     contextual_need_top_k: int = 8
     contextual_edge_top_k: int = 16
@@ -303,15 +329,27 @@ class RetrievalConfig:
     contextual_noop_decay: float = 0.98
     contextual_harm_multiplier: float = 0.5
     contextual_association_allow_network: bool = False
+    # T16 is a deliberately narrow, HMAC-authorized rewrite lane.  It stays
+    # disabled until an operator also supplies its process-local HMAC key via
+    # MEMORY_CONTEXTUAL_RESTRICTED_REWRITE_HMAC_KEY(_ID); the secret never
+    # becomes part of this serialisable configuration object.
+    contextual_restricted_rewrite_enabled: bool = False
     answer_whole_question_anchor_episodes: int = 10
     answer_anchor_episodes_per_query: int = 6
     source_excerpt_chars: int = 3_000
+    # Raw Source/answer/audit checkpoints are an explicitly enabled,
+    # experiment-local artifact.  Ordinary operational JSONL stays redacted.
+    answer_evidence_checkpoint_enabled: bool = False
     concept_relation_min_similarity: float = 0.72
 
     def validate(self) -> None:
         if self.contextual_combine_mode not in {"product", "minimum", "geomean"}:
             raise ValueError(
                 "contextual_combine_mode must be product, minimum, or geomean"
+            )
+        if self.contextual_prepared_early_scoring_mode not in {"w", "c", "n", "cn"}:
+            raise ValueError(
+                "contextual_prepared_early_scoring_mode must be w, c, n, or cn"
             )
         for name in (
             "contextual_context_threshold",
@@ -593,6 +631,25 @@ class AppConfig:
             "MEMORY_CONTEXTUAL_ASSOCIATION_SHADOW",
             config.retrieval.contextual_association_shadow,
         )
+        config.retrieval.contextual_prepared_early_enabled = env_bool(
+            "MEMORY_CONTEXTUAL_PREPARED_EARLY_ENABLED",
+            config.retrieval.contextual_prepared_early_enabled,
+        )
+        config.retrieval.contextual_prepared_early_shadow = env_bool(
+            "MEMORY_CONTEXTUAL_PREPARED_EARLY_SHADOW",
+            config.retrieval.contextual_prepared_early_shadow,
+        )
+        config.retrieval.contextual_prepared_early_candidate_pool_enabled = env_bool(
+            "MEMORY_CONTEXTUAL_PREPARED_EARLY_CANDIDATE_POOL_ENABLED",
+            config.retrieval.contextual_prepared_early_candidate_pool_enabled,
+        )
+        prepared_early_scoring_mode = os.getenv(
+            "MEMORY_CONTEXTUAL_PREPARED_EARLY_SCORING_MODE"
+        )
+        if prepared_early_scoring_mode is not None:
+            config.retrieval.contextual_prepared_early_scoring_mode = (
+                prepared_early_scoring_mode.strip().casefold()
+            )
         config.retrieval.contextual_promotion_enabled = env_bool(
             "MEMORY_CONTEXTUAL_ASSOCIATION_PROMOTION_ENABLED",
             config.retrieval.contextual_promotion_enabled,
@@ -600,6 +657,10 @@ class AppConfig:
         config.retrieval.contextual_association_allow_network = env_bool(
             "MEMORY_CONTEXTUAL_ASSOCIATION_ALLOW_NETWORK",
             config.retrieval.contextual_association_allow_network,
+        )
+        config.retrieval.contextual_restricted_rewrite_enabled = env_bool(
+            "MEMORY_CONTEXTUAL_RESTRICTED_REWRITE_ENABLED",
+            config.retrieval.contextual_restricted_rewrite_enabled,
         )
         if config.retrieval.contextual_association_allow_network:
             raise ValueError(

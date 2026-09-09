@@ -1,0 +1,22 @@
+{
+  "schema": "aevnema.v3.q1_q2_diagnostic_source_slice.v1",
+  "purpose": "Isolated real-Source data preparation for one non-scorable Q1-to-Q2 diagnostic pilot. This is not a gold manifest, split, benchmark specification, or promotion input.",
+  "formal_scoring_eligible": false,
+  "promotion_prohibited": true,
+  "selected_files": [
+    "main/32170.json"
+  ],
+  "source_bindings": [
+    {
+      "source_key": "main/32170.json",
+      "sha256": "2078eb5900fa83d30191e3d5d67ee4e308b5893e9eaee7fc579207484cac00c8"
+    }
+  ],
+  "pilot_input": {
+    "q1_text": "圣园未花说自己一直在暗中支援哪个组织？",
+    "q2_text": "圣园未花说自己一直在暗中支援哪个组织？",
+    "contextual_domain": "knowledge",
+    "contextual_revisit_scope": "v3-real-source-diagnostic-pilot-32170",
+    "input_provenance": "authored diagnostic question; no approved or draft gold answer, evidence atom, or scoring label is read by the pilot"
+  }
+}

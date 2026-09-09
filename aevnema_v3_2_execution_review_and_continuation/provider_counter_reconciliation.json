@@ -1,0 +1,60 @@
+{
+  "source_archive_sha256": "5df6948c8b680a89b06bf92f4b496510f6f2ddbc385e20923ebbb738ed014417",
+  "source_member": "campaign_state.json",
+  "campaign_reported_http_attempts": 39,
+  "scope_record_totals": [
+    {
+      "scope": "E32-02_live_input_observation",
+      "input_preparation_mode": "live_input_per_condition",
+      "preparation_recorded_http_attempts": 0,
+      "arm_recorded_http_attempts": 27,
+      "raw_count_sum": 27,
+      "arm_count": 8,
+      "missing_edge_entry_reason_count": 8
+    },
+    {
+      "scope": "E32-02_frozen_plan_without_runtime_vectors",
+      "input_preparation_mode": "shared_public_frozen_query_plan_per_variant",
+      "preparation_recorded_http_attempts": 16,
+      "arm_recorded_http_attempts": 0,
+      "raw_count_sum": 16,
+      "arm_count": 8,
+      "missing_edge_entry_reason_count": 8
+    },
+    {
+      "scope": "E32-02_frozen_plan_with_unbound_slots",
+      "input_preparation_mode": "shared_public_frozen_query_plan_per_variant",
+      "preparation_recorded_http_attempts": 15,
+      "arm_recorded_http_attempts": 0,
+      "raw_count_sum": 15,
+      "arm_count": 8,
+      "missing_edge_entry_reason_count": 8
+    },
+    {
+      "scope": "E32-02_restored_slot_vector_observation",
+      "input_preparation_mode": "shared_public_frozen_query_plan_per_variant",
+      "preparation_recorded_http_attempts": 0,
+      "arm_recorded_http_attempts": 0,
+      "raw_count_sum": 0,
+      "arm_count": 8,
+      "missing_edge_entry_reason_count": 8
+    },
+    {
+      "scope": "fresh_q1:event_moon_festival",
+      "raw_count_sum": 6,
+      "status": "failed"
+    },
+    {
+      "scope": "fresh_q1:main_rest",
+      "raw_count_sum": 6,
+      "status": "completed"
+    },
+    {
+      "scope": "fresh_q1:favor_competition",
+      "raw_count_sum": 0,
+      "status": "not_started"
+    }
+  ],
+  "raw_count_sum_not_deduplicated": 70,
+  "interpretation": "Counters sum to 70 before attempt-level deduplication, including 31 in two preparation sections beyond the 39=27 live-arm + 12 fresh-Q1 subtotal. Raw call_id/timestamp provenance is required to determine unique actual attempts and batch allocation. No violation or actual billed total is asserted by this report."
+}

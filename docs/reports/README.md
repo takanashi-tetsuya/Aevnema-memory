@@ -2,6 +2,8 @@
 
 本目录保存 Associative Memory 引擎各阶段的实验结论、测试计划和架构审计。
 
+- `V3_IMPLEMENTATION_PROGRESS_AND_BENCHMARK_GATE_2026-09-07.md`：v3 当前实现、T18/T19 收尾硬化（含锁域隔离与旧记录 fail-closed）、T04 Source-gold/formal benchmark 门禁（原始 bytes、来源 span/全量冻结清单和本地路径检查）、695 项核心与 251 项聊天侧离线回归。
+
 - `COMPREHENSIVE_SYSTEM_EXPERIMENT_REPORT_2026-08-26.md`：早期完整系统实验总结。
 - `BASE_RETRIEVAL_RELIABILITY_REPORT_2026-08-26.md`：基础召回可靠性。
 - `ARCHITECTURE_OPTIMIZATION_REPORT_2026-08-29.md`：架构和流程优化。

@@ -1,0 +1,59 @@
+{
+  "artifact_version": "t17-component-validation-v2",
+  "generated_on": "2026-09-06",
+  "repository_revision_observed": "536dbb2c734ef9b44c0978e757940c64297404c2",
+  "runtime": {
+    "python": "3.12.14",
+    "working_directory": "C:\\Users\\Admin\\PycharmProjects\\PythonProject"
+  },
+  "component_state": {
+    "engine_sha256": "efc419ef33d15e515989f56a497a7c0f4e5aacd0146b596b8b660bf11d93b3b0",
+    "query_planning_sha256": "1dec48a004f67d4f81113eeb4d5cbfedf18316ad75c30d0e7444976c99b354ac",
+    "test_sha256": "11f7cbf266596983d3a2bc6167f286e190a399e5190b4e5ca05183a4cb3215e3",
+    "working_tree_note": "These component files were uncommitted at capture; the file hashes identify the tested state."
+  },
+  "scope": "Component-level validation of the T17 trace-only residual local diagnostic helper; it is not public query-path behavior.",
+  "implementation_status": {
+    "residual_repair_plan": "implemented",
+    "bounded_local_diagnostic_helper": "implemented",
+    "semantic_verifier_capability": "unavailable",
+    "candidate_evidence_delivery": "disabled",
+    "public_query_integration": "not_integrated",
+    "benchmark_or_live_corpus_run": "not_run",
+    "full_t17_acceptance": "not_achieved"
+  },
+  "completion_evidence_level": "unit_verified",
+  "tested_guarantees": [
+    "Only explicitly supplied current missing required slots are eligible; an empty set does not expand into all requirements, and stale slot IDs fail closed.",
+    "The component reuses only an exact request-scoped atomic QueryVectorBundle binding and does not invoke a provider embedding call.",
+    "At most one bounded local diagnostic round is performed, with a capped slot count; whole-question retry and full rerank are skipped.",
+    "Dense/sparse local hits, candidate-missing IDs, and ResidualSourceMappingReceipt values are diagnostics only.",
+    "The existing selected evidence is preserved and no candidate Episode is appended or materialized.",
+    "When a local diagnostic pass completes, the component stops with semantic_verifier_unavailable."
+  ],
+  "test_runs": [
+    {
+      "command": "$env:PYTHONPATH='.;src'; & 'C:\\Users\\Admin\\Documents\\chat_bot\\.venv\\Scripts\\python.exe' -m unittest -v tests.test_residual_gap_repair_t17",
+      "result": "passed",
+      "tests_run": 10,
+      "elapsed_seconds": 0.009
+    },
+    {
+      "command": "$env:PYTHONPATH='.;src'; & 'C:\\Users\\Admin\\Documents\\chat_bot\\.venv\\Scripts\\python.exe' -m unittest -v tests.test_residual_gap_repair_t17 tests.test_recall_v3_sqlite_preflight tests.test_recall_v3_replay_executor tests.test_readonly_replay_database tests.test_authoritative_requirements tests.test_query_vector_bundle_v3 tests.test_engine_contribution_selector_v3",
+      "result": "passed",
+      "tests_run": 49,
+      "elapsed_seconds": 21.898
+    }
+  ],
+  "not_tested_or_not_claimed": [
+    "Candidate-missing Source recovery or candidate evidence delivery.",
+    "Semantic proof that a Source fact supports a specific slot.",
+    "Public QueryEngine.query integration.",
+    "Live provider, corpus import, benchmark, full-corpus, or full T17 acceptance results."
+  ],
+  "limitations": [
+    "A typed receipt plus a current source-fact identity match is structural provenance diagnostics, not a trusted semantic-verifier capability.",
+    "No ranking, candidate-missing hint, dense/sparse hit, source-window hit, graph-path result, or receipt may become delivered evidence in this component.",
+    "A real candidate-missing Source-recovery acceptance test remains blocked until a trusted per-span semantic verifier is introduced."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "aevnema.v3.same_chapter_learning_matrix.v1",
+  "purpose": "Frozen, non-scorable same-chapter different-requirement diagnostic. It tests observed evidence delivery and edge participation only; it is not a gold set, benchmark, promotion input, or generalization claim.",
+  "formal_scoring_eligible": false,
+  "promotion_prohibited": true,
+  "selected_files": [
+    "main/32170.json"
+  ],
+  "source_bindings": [
+    {
+      "source_key": "main/32170.json",
+      "sha256": "2078eb5900fa83d30191e3d5d67ee4e308b5893e9eaee7fc579207484cac00c8"
+    }
+  ],
+  "q1": {
+    "text": "圣园未花为什么限制茶会命令所及人员的行动？",
+    "contextual_domain": "knowledge",
+    "contextual_revisit_scope": "v3-same-chapter-different-requirement-mika-action-restriction-32170",
+    "input_provenance": "authored diagnostic input; no answer, expected episode, source span, gold atom, or scoring label is available to the runner or models"
+  },
+  "q2_variants": [
+    {
+      "id": "same_text",
+      "kind": "same_text",
+      "text": "圣园未花为什么限制茶会命令所及人员的行动？",
+      "context_mode": "absent",
+      "reference_basis": "query_text_only"
+    },
+    {
+      "id": "paraphrase",
+      "kind": "paraphrase",
+      "text": "未花为何以各种理由让能接到茶会命令的人停下？",
+      "context_mode": "absent",
+      "reference_basis": "query_text_only"
+    },
+    {
+      "id": "partial_clue_no_context",
+      "kind": "partial_clue",
+      "text": "为什么她让这些人停下？",
+      "context_mode": "absent",
+      "reference_basis": "query_text_only"
+    },
+    {
+      "id": "near_neighbor_counterexample",
+      "kind": "near_neighbor_counterexample",
+      "text": "圣园未花向阿里乌斯提出联手的原因是什么？",
+      "context_mode": "absent",
+      "reference_basis": "query_text_only"
+    }
+  ]
+}

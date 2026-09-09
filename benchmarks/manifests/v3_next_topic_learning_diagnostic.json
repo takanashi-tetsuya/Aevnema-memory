@@ -1,0 +1,23 @@
+{
+  "schema": "aevnema.v3.q1_q2_diagnostic_source_slice.v1",
+  "purpose": "Prepared, not executed: isolated non-scorable learning diagnostic on a different claim within the frozen real Source slice. This is not a gold manifest, split, benchmark specification, or promotion input.",
+  "status": "prepared_not_executed",
+  "formal_scoring_eligible": false,
+  "promotion_prohibited": true,
+  "selected_files": [
+    "main/32170.json"
+  ],
+  "source_bindings": [
+    {
+      "source_key": "main/32170.json",
+      "sha256": "2078eb5900fa83d30191e3d5d67ee4e308b5893e9eaee7fc579207484cac00c8"
+    }
+  ],
+  "pilot_input": {
+    "q1_text": "圣园未花为什么限制茶会命令所及人员的行动？",
+    "q2_text": "圣园未花为什么限制茶会命令所及人员的行动？",
+    "contextual_domain": "knowledge",
+    "contextual_revisit_scope": "v3-next-topic-mika-action-restriction-32170",
+    "input_provenance": "authored diagnostic question; no approved or draft gold answer, evidence atom, or scoring label is read by the pilot"
+  }
+}

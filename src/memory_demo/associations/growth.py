@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections import Counter
+from contextlib import nullcontext
 from dataclasses import dataclass, field
 import json
 import re
@@ -8,6 +9,7 @@ import re
 from memory_demo.associations.builder import AssociationBuilder
 from memory_demo.config import WeightConfig
 from memory_demo.event_log import JsonlEventLogger
+from memory_demo.llm.client import TracePersistenceError
 from memory_demo.llm.prompts import (
     GROWTH_ADVERSARIAL_AUDIT_SYSTEM,
     GROWTH_AUDIT_SYSTEM,
@@ -84,6 +86,14 @@ class AssociationGrowthEngine:
         self.weights = weights
         self.logger = logger
 
+    def _provider_purpose_scope(self, role: str, purpose: str):
+        """Use the same finite labels as the query trace when available."""
+
+        bind_purpose = getattr(self.model, "provider_purpose", None)
+        if not callable(bind_purpose):
+            return nullcontext()
+        return bind_purpose(role, purpose)
+
     def _initial_weight(self, llm_score: float, confidence: float) -> float:
         return max(
             0.0,
@@ -105,17 +115,26 @@ class AssociationGrowthEngine:
         label: str,
         model_name: str | None = None,
     ) -> tuple[dict[int, dict], list[str]]:
+        purpose = {
+            "primary": "association_growth_primary_audit",
+            "adversarial": "association_growth_adversarial_audit",
+        }.get(label)
+        if purpose is None:
+            raise ValueError(f"unsupported association growth audit label: {label}")
         try:
             prompt = growth_audit_prompt(question, nodes, relationships, edges)
-            if model_name:
-                payload = self.model.chat_json(
-                    system,
-                    prompt,
-                    model=model_name,
-                    allow_fallback=False,
-                )
-            else:
-                payload = self.model.chat_json(system, prompt)
+            with self._provider_purpose_scope("audit", purpose):
+                if model_name:
+                    payload = self.model.chat_json(
+                        system,
+                        prompt,
+                        model=model_name,
+                        allow_fallback=False,
+                    )
+                else:
+                    payload = self.model.chat_json(system, prompt)
+        except TracePersistenceError:
+            raise
         except Exception as exc:
             return {}, [f"{label} growth evidence audit request failed: {exc}"]
         if not isinstance(payload, dict) or not isinstance(
@@ -479,13 +498,13 @@ class AssociationGrowthEngine:
         }
         if not evidence_episode_ids:
             return GrowthOutcome()
-        payload = (
-            {"relationships": relationships_override}
-            if relationships_override is not None
-            else self.model.chat_json(
-                GROWTH_SYSTEM, growth_prompt(question, nodes, edges)
-            )
-        )
+        if relationships_override is not None:
+            payload = {"relationships": relationships_override}
+        else:
+            with self._provider_purpose_scope("planner", "association_growth"):
+                payload = self.model.chat_json(
+                    GROWTH_SYSTEM, growth_prompt(question, nodes, edges)
+                )
         relationships, errors = parse_growth_relationships(payload)
         relationships, premise_errors = self._attach_visible_premises(
             relationships, edges

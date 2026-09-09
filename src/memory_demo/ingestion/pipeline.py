@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
+from contextlib import nullcontext
 from dataclasses import asdict
 import json
 import os
@@ -17,6 +18,7 @@ from memory_demo.concepts import ConceptResolver
 from memory_demo.database import Database, DatabaseBusyError
 from memory_demo.embeddings import EmbeddingIndex, encode_embedding, normalize_embedding
 from memory_demo.event_log import JsonlEventLogger
+from memory_demo.event_log import safe_config_snapshot
 from memory_demo.ingestion.extractor import (
     EmptyEpisodeAudit,
     EmptyEpisodeExtraction,
@@ -142,6 +144,21 @@ class ImportPipeline:
         self.build_inference_relations = bool(build_inference_relations)
         self.task_max_attempts = max(1, int(config.ingestion.task_max_attempts))
         self._active_relation_executor: ThreadPoolExecutor | None = None
+
+    def _background_provider_scope(self):
+        """Mark import-originated model work as background when supported.
+
+        ``ContextVar`` bindings do not cross the preparation/relation worker
+        threads. Their worker entrypoints bind this same scope again, while
+        ordinary lightweight test models simply receive a no-op context.
+        """
+
+        bind_workload = getattr(
+            getattr(self, "model", None), "provider_workload", None
+        )
+        if not callable(bind_workload):
+            return nullcontext()
+        return bind_workload("background")
 
     def _shutdown_relation_executor(self, *, wait: bool) -> None:
         executor = self._active_relation_executor
@@ -1173,10 +1190,11 @@ class ImportPipeline:
             return
 
         def execute(item: tuple[str, object]) -> list[AssociationDraft]:
-            kind, payload = item
-            if kind == "concept":
-                return self.builder.judge_new_concept_batches(payload)
-            return self.builder.judge_episode_batches(payload)
+            with self._background_provider_scope():
+                kind, payload = item
+                if kind == "concept":
+                    return self.builder.judge_new_concept_batches(payload)
+                return self.builder.judge_episode_batches(payload)
 
         judged: list[AssociationDraft] = []
         if executor is not None:
@@ -1299,6 +1317,33 @@ class ImportPipeline:
         raise AssertionError("unreachable import retry state")
 
     def _prepare_segment_for_persistence(
+        self,
+        task_id: int,
+        source_text: str,
+        scope: str,
+        document_context: str = "",
+    ) -> tuple[
+        list[EpisodeDraft],
+        list[str],
+        list[list[ConceptDraft]],
+        list[str],
+        list[ParagraphDraft],
+        list[Any],
+        list[Any],
+        list[Any],
+    ]:
+        # This method commonly runs in a ThreadPoolExecutor, whose worker
+        # context starts empty. Rebind the import workload before any model
+        # extraction/embedding call can enter the shared provider gate.
+        with self._background_provider_scope():
+            return self._prepare_segment_for_persistence_unscoped(
+                task_id,
+                source_text,
+                scope,
+                document_context,
+            )
+
+    def _prepare_segment_for_persistence_unscoped(
         self,
         task_id: int,
         source_text: str,
@@ -1476,6 +1521,26 @@ class ImportPipeline:
         }
 
     def _prepare_second_pass_group(
+        self,
+        targets: list[tuple[int, object, int]],
+        summaries: list[dict],
+        source_text: str,
+    ) -> tuple[
+        list[tuple[object, int, EpisodeDraft]],
+        list[tuple[int, str]],
+        list,
+        list[list[ConceptDraft]],
+        list[str],
+    ]:
+        # As with pass one, pass-two preparation may execute in a worker.
+        with self._background_provider_scope():
+            return self._prepare_second_pass_group_unscoped(
+                targets,
+                summaries,
+                source_text,
+            )
+
+    def _prepare_second_pass_group_unscoped(
         self,
         targets: list[tuple[int, object, int]],
         summaries: list[dict],
@@ -2332,10 +2397,7 @@ class ImportPipeline:
             raise ValueError(
                 f"directory contains no supported .txt, .md, or .json files: {input_path}"
             )
-        config_snapshot = asdict(self.config)
-        # Paths are serialized by the repository's JSON encoder after conversion.
-        config_snapshot["database_path"] = str(self.config.database_path)
-        config_snapshot["log_dir"] = str(self.config.log_dir)
+        config_snapshot = safe_config_snapshot(self.config)
         run_id = self.extractions.start_run(
             config_snapshot,
             {"all": self.config.prompt_version},
@@ -2374,7 +2436,8 @@ class ImportPipeline:
             unsupported_files=unsupported_display,
         )
         try:
-            self._import_files(run_id, root, files, summary)
+            with self._background_provider_scope():
+                self._import_files(run_id, root, files, summary)
         except BaseException as exc:
             self._shutdown_relation_executor(wait=False)
             retryable_infrastructure_abort = isinstance(
