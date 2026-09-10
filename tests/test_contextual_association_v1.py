@@ -22,7 +22,14 @@ from memory_demo.retrieval.coverage import (
     select_evidence,
     strict_contextual_attribution,
 )
-from memory_demo.types import QueryVector, QueryVectorBundle, SlotCandidate
+from memory_demo.types import (
+    CandidateAggregate,
+    CandidateContribution,
+    EvidenceSlot as RuntimeEvidenceSlot,
+    QueryVector,
+    QueryVectorBundle,
+    SlotCandidate,
+)
 
 
 class CountingModel:
@@ -376,6 +383,64 @@ class ContextualAssociationTests(unittest.TestCase):
         self.assertEqual("q-need", slots[0].slot_id)
         self.assertEqual("q-need", slots[0].query_id)
         self.assertEqual({"q-need"}, support[4])
+
+    def test_floor_and_failed_rerank_cannot_create_source_bound_slot_support(self):
+        slot = RuntimeEvidenceSlot(
+            "reason", "why did the character stop the others?", clause_ids=("reason",)
+        )
+        slots, support = QueryEngine._request_evidence_slots(
+            {
+                "error": "ReadTimeout",
+                "merged_coverage": {
+                    "coverage": [
+                        {"query": slot.question, "episode_ids": [19], "clause_ids": ["reason"]}
+                    ]
+                },
+                "deterministic_evidence_floor": {
+                    "atomic_slots": [
+                        {"query": slot.question, "floor_episode_ids": [19], "clause_ids": ["reason"]}
+                    ]
+                },
+            },
+            authoritative_requirements=(slot,),
+        )
+        self.assertEqual([slot], slots)
+        self.assertEqual({}, support)
+        self.assertEqual(
+            "rerank_error",
+            QueryEngine._rerank_slot_mapping_status({"error": "ReadTimeout"}),
+        )
+
+    def test_contextual_priority_keeps_a_maskable_overlapping_route(self):
+        base = CandidateContribution(
+            contribution_id="base", episode_id=18, slot_id="__base_rank__",
+            lane="base_rerank", rank_features={"fusion_rank_score": 0.4},
+        )
+        contextual = CandidateContribution(
+            contribution_id="edge", episode_id=18, slot_id="reason",
+            lane="contextual", edge_id=121,
+            rank_features={"contextual_priority_score": 0.6},
+        )
+        combined = CandidateAggregate(18, (base, contextual))
+        masked = CandidateAggregate(18, (base,))
+        self.assertAlmostEqual(0.76, combined.relevance_score)
+        self.assertAlmostEqual(0.4, masked.relevance_score)
+
+    def test_frozen_rerank_reuse_requires_input_match_without_derived_ids(self):
+        # Candidate origin is intentionally absent from this contract: a
+        # changed order alone changes the rerank prompt-facing input.
+        self.assertEqual(
+            "frozen_input_fingerprint_missing_or_mismatched",
+            QueryEngine._frozen_rerank_reuse_decision("old", "new"),
+        )
+        self.assertEqual(
+            "legacy_frozen_input_fingerprint_missing",
+            QueryEngine._frozen_rerank_reuse_decision("", "new"),
+        )
+        self.assertEqual(
+            "frozen_input_fingerprint_matched",
+            QueryEngine._frozen_rerank_reuse_decision("same", "same"),
+        )
 
     def test_strict_attribution_requires_a_selected_new_slot(self):
         slots = [

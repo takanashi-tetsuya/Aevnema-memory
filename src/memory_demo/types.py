@@ -866,7 +866,40 @@ class CandidateAggregate:
 
     @property
     def relevance_score(self) -> float:
-        return max((item.relevance_score for item in self.contributions), default=0.0)
+        """Combine independent ranking routes without multiplying evidence.
+
+        A contextual route is a bounded inspection-priority signal, not a new
+        source fact and not a requirement mapping.  When the same Episode was
+        also found by ordinary retrieval, keep both route contributions and
+        combine their already-normalised priorities with the simple
+        ``1 - (1-base) * (1-contextual)`` union.  Masking an edge removes only
+        its contribution, returning the independent base priority unchanged.
+        """
+
+        base_scores = [
+            float(item.relevance_score)
+            for item in self.contributions
+            if not item.is_contextual
+        ]
+        base_score = max(base_scores, default=0.0)
+        contextual_scores: list[float] = []
+        for item in self.contributions:
+            if not item.is_contextual:
+                continue
+            raw_priority = item.feature_map.get("contextual_priority_score")
+            if raw_priority is None:
+                continue
+            try:
+                priority = float(raw_priority)
+            except (TypeError, ValueError):
+                continue
+            if math.isfinite(priority):
+                contextual_scores.append(min(1.0, max(0.0, priority)))
+        if not contextual_scores:
+            return base_score
+        contextual_score = max(contextual_scores)
+        normalized_base = min(1.0, max(0.0, base_score))
+        return 1.0 - (1.0 - normalized_base) * (1.0 - contextual_score)
 
     @property
     def contextual_contribution_ids(self) -> tuple[str, ...]:

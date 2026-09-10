@@ -1092,9 +1092,13 @@ class QueryEngine:
     ) -> tuple[list[EvidenceSlot], dict[int, set[str]]]:
         """Translate existing coverage/floor traces into local slot support.
 
-        The conversion intentionally uses only already-produced deterministic
-        or reranker metadata.  It never asks a model to label candidates just
-        for contextual recall.
+        The conversion intentionally uses only an already-produced *valid*
+        reranker coverage mapping.  It never asks a model to label candidates
+        just for contextual recall.  Deterministic floors remain useful for
+        candidate admission and ranking, but are not a semantic mapping: a
+        lexical or vector floor cannot by itself satisfy a current request
+        requirement merely because the selected Episode has a valid Source
+        span.
 
         When a caller supplies ``authoritative_requirements``, those request
         requirements are the complete slot denominator.  Candidate records
@@ -1105,31 +1109,21 @@ class QueryEngine:
         if authoritative_requirements is not None:
             slots = list(authoritative_requirements)
             observations: list[dict] = []
-            merged = rerank_trace.get("merged_coverage", {})
-            coverage = merged.get("coverage", []) if isinstance(merged, dict) else []
-            for item in coverage if isinstance(coverage, list) else []:
-                if not isinstance(item, dict):
-                    continue
-                observations.append(
-                    {
-                        "query": item.get("query"),
-                        "episode_ids": item.get("episode_ids", []),
-                        "clause_ids": item.get("clause_ids", []),
-                    }
+            if QueryEngine._rerank_slot_mapping_status(rerank_trace) == "accepted":
+                merged = rerank_trace.get("merged_coverage", {})
+                coverage = (
+                    merged.get("coverage", []) if isinstance(merged, dict) else []
                 )
-            deterministic = rerank_trace.get("deterministic_evidence_floor", {})
-            if isinstance(deterministic, dict):
-                for lane in ("constraint_slots", "atomic_slots"):
-                    for item in deterministic.get(lane, []):
-                        if not isinstance(item, dict):
-                            continue
-                        observations.append(
-                            {
-                                "query": item.get("query"),
-                                "episode_ids": item.get("floor_episode_ids", []),
-                                "clause_ids": item.get("clause_ids", []),
-                            }
-                        )
+                for item in coverage if isinstance(coverage, list) else []:
+                    if not isinstance(item, dict):
+                        continue
+                    observations.append(
+                        {
+                            "query": item.get("query"),
+                            "episode_ids": item.get("episode_ids", []),
+                            "clause_ids": item.get("clause_ids", []),
+                        }
+                    )
             return slots, requirement_support_from_records(slots, observations)
 
         slots: list[EvidenceSlot] = []
@@ -1188,16 +1182,59 @@ class QueryEngine:
 
         merged = rerank_trace.get("merged_coverage", {})
         coverage = merged.get("coverage", []) if isinstance(merged, dict) else []
-        for item in coverage if isinstance(coverage, list) else []:
-            if isinstance(item, dict):
-                add_slot(item.get("query"), item.get("episode_ids"), "coverage")
-        deterministic = rerank_trace.get("deterministic_evidence_floor", {})
-        if isinstance(deterministic, dict):
-            for lane in ("constraint_slots", "atomic_slots"):
-                for item in deterministic.get(lane, []):
-                    if isinstance(item, dict):
-                        add_slot(item.get("query"), item.get("floor_episode_ids"), lane)
+        if QueryEngine._rerank_slot_mapping_status(rerank_trace) == "accepted":
+            for item in coverage if isinstance(coverage, list) else []:
+                if isinstance(item, dict):
+                    add_slot(item.get("query"), item.get("episode_ids"), "coverage")
         return slots, support
+
+    @staticmethod
+    def _rerank_slot_mapping_status(rerank_trace: Mapping[str, object]) -> str:
+        """Classify whether a saved rerank coverage mapping may cover a slot.
+
+        Source closure verifies that a delivered quote still belongs to its
+        Source.  It cannot repair a failed or stale semantic rerank response.
+        This small request-local classifier keeps those contracts separate;
+        it neither calls a model nor interprets the source text.
+        """
+
+        if not isinstance(rerank_trace, Mapping):
+            return "not_observed"
+        if str(rerank_trace.get("error", "")).strip():
+            return "rerank_error"
+        reuse = rerank_trace.get("candidate_input_reuse")
+        if isinstance(reuse, Mapping):
+            reuse_status = str(reuse.get("status", "")).strip()
+            if reuse_status in {
+                "frozen_input_fingerprint_missing_or_mismatched",
+                "legacy_frozen_input_fingerprint_missing",
+            }:
+                return reuse_status
+        merged = rerank_trace.get("merged_coverage")
+        coverage = merged.get("coverage") if isinstance(merged, Mapping) else None
+        if not isinstance(coverage, list) or not coverage:
+            return "coverage_not_observed"
+        return "accepted"
+
+    @staticmethod
+    def _frozen_rerank_reuse_decision(
+        expected_fingerprint: object,
+        observed_fingerprint: object,
+    ) -> str:
+        """Return the only permitted frozen rerank reuse decision.
+
+        This deliberately takes no candidate-origin flag: provenance explains
+        an edge's effect, whereas replay validity is solely a contract between
+        the saved reranker input and the input about to be reused.
+        """
+
+        expected = str(expected_fingerprint or "")
+        observed = str(observed_fingerprint or "")
+        if not expected:
+            return "legacy_frozen_input_fingerprint_missing"
+        if hmac.compare_digest(expected, observed):
+            return "frozen_input_fingerprint_matched"
+        return "frozen_input_fingerprint_missing_or_mismatched"
 
     def _residual_repair_slot_bindings(
         self,
@@ -3045,6 +3082,13 @@ class QueryEngine:
                 relevance_scores.get((slot_id, episode_id), hit.target_support_score)
             )
             contextual_score = self._v3_finite_score(hit.total_score)
+            # The target gate already produced a request-local, normalised
+            # target relevance estimate.  It may change inspection order only;
+            # the contribution below remains relevance-only and cannot cover a
+            # factual requirement.  Keeping it as a distinct feature lets an
+            # edge mask remove this path while preserving an overlapping base
+            # retrieval contribution for the same Episode.
+            contextual_priority = min(1.0, max(0.0, relevance))
             supports: tuple[ClauseSupport, ...] = ()
             if slot is not None:
                 # The double-key match says "inspect this target for this
@@ -3087,6 +3131,7 @@ class QueryEngine:
                 rank_features={
                     "current_relevance_estimate": relevance,
                     "contextual_combined_score": contextual_score,
+                    "contextual_priority_score": contextual_priority,
                 },
                 source_facts=source_refs,
                 clause_supports=supports,
@@ -3803,6 +3848,9 @@ class QueryEngine:
         source_fact_cache: dict[int, tuple[SourceFactRef | None, str]] | None = None,
     ) -> tuple[list[dict], dict]:
         """Run masked/treatment set-cover without changing factual evidence rules."""
+        base_support_mapping_status = self._rerank_slot_mapping_status(
+            rerank_trace
+        )
         slots, slot_support = self._request_evidence_slots(
             rerank_trace,
             bundle,
@@ -3830,6 +3878,7 @@ class QueryEngine:
                     if authoritative_requirements is not None
                     else None
                 ),
+                "base_support_mapping_status": base_support_mapping_status,
                 "hits": [],
                 "external_calls": 0,
             }
@@ -3840,7 +3889,7 @@ class QueryEngine:
             # V3 callers provide a request-frozen requirement denominator.
             # Route them through contribution aggregation rather than the
             # legacy flat SlotCandidate/strict-edge attribution selector.
-            return self._select_contextual_slots_v3(
+            selected, trace = self._select_contextual_slots_v3(
                 episodes=episodes,
                 slots=slots,
                 slot_support=slot_support,
@@ -3868,6 +3917,8 @@ class QueryEngine:
                 ),
                 source_fact_cache=source_fact_cache,
             )
+            trace["base_support_mapping_status"] = base_support_mapping_status
+            return selected, trace
         base_candidates = self._slot_candidates(
             episodes, slot_support, reranked_episode_ids
         )
@@ -5385,6 +5436,86 @@ class QueryEngine:
         return sorted(best.values(), key=lambda item: item.score, reverse=True)
 
     @staticmethod
+    def _frozen_search_hits(value: object) -> list[SearchHit]:
+        """Decode a saved seed stage without inferring an omitted stage.
+
+        Frozen plans are external inputs.  A malformed row is ignored rather
+        than being coerced into a seed, and callers must separately classify a
+        plan that never recorded a stage at all.
+        """
+
+        if not isinstance(value, list):
+            return []
+        hits: list[SearchHit] = []
+        for item in value:
+            if not isinstance(item, Mapping):
+                continue
+            try:
+                node_type = str(item["node_type"])
+                node_id = int(item["node_id"])
+                score = float(item["score"])
+            except (KeyError, TypeError, ValueError):
+                continue
+            if node_id <= 0 or not math.isfinite(score):
+                continue
+            hits.append(SearchHit(node_type, node_id, score))
+        return QueryEngine._merge_hits(hits)
+
+    @staticmethod
+    def _seed_hit_source_summary(
+        hits: Sequence[SearchHit],
+        rankings: Mapping[str, object],
+    ) -> list[dict[str, object]]:
+        """Record the observed local retrieval lanes for a saved seed stage."""
+
+        episode_lanes: dict[int, set[str]] = {}
+
+        def add_ranked(lane: str, rows: object, *, id_key: str = "id") -> None:
+            if not isinstance(rows, list):
+                return
+            for ranking in rows:
+                if not isinstance(ranking, list):
+                    continue
+                for row in ranking:
+                    if not isinstance(row, Mapping):
+                        continue
+                    try:
+                        episode_id = int(row.get(id_key, 0))
+                    except (TypeError, ValueError):
+                        continue
+                    if episode_id > 0:
+                        episode_lanes.setdefault(episode_id, set()).add(lane)
+
+        add_ranked("dense_episode", rankings.get("episode"))
+        add_ranked("sparse_episode", rankings.get("sparse_episode"))
+        add_ranked("fused_episode", rankings.get("fused_episode"))
+        add_ranked(
+            "sparse_source_episode_expansion",
+            rankings.get("sparse_source_episode_expansion"),
+            id_key="episode_id",
+        )
+        add_ranked(
+            "paragraph_episode_expansion",
+            rankings.get("paragraph_episode_expansion"),
+            id_key="episode_id",
+        )
+        result: list[dict[str, object]] = []
+        for hit in hits:
+            lanes = (
+                sorted(episode_lanes.get(int(hit.node_id), set()))
+                if hit.node_type == "episode"
+                else []
+            )
+            result.append(
+                {
+                    "node_type": hit.node_type,
+                    "node_id": int(hit.node_id),
+                    "retrieval_lanes": lanes or ["not_observed_in_rankings"],
+                }
+            )
+        return result
+
+    @staticmethod
     def _interleave_anchor_ids(*groups: list[int]) -> list[int]:
         """Interleave retrieval phases so later-hop anchors are not tail-dropped."""
         merged: list[int] = []
@@ -5735,6 +5866,7 @@ class QueryEngine:
         )
         followup_rankings: dict[str, list] = {"episode": [], "concept": []}
         followup_hits: list[SearchHit] = []
+        source_cohort_hits: list[SearchHit] = []
         followup_anchor_ids: list[int] = []
         if followup_queries:
             with self._provider_purpose_scope(
@@ -5759,12 +5891,12 @@ class QueryEngine:
             self.config.retrieval.graph_max_hops,
         )
         final_traversed = final_traversed[: self.config.retrieval.candidate_limit]
-        cohort_hits, source_key_cohort_trace = self._source_key_cohort_hits(
+        source_cohort_hits, source_key_cohort_trace = self._source_key_cohort_hits(
             initial_anchor_ids,
             final_traversed,
         )
-        if cohort_hits:
-            seeds = self._merge_hits(seeds, cohort_hits)
+        if source_cohort_hits:
+            seeds = self._merge_hits(seeds, source_cohort_hits)
             final_traversed, _final_paths = self.traverser.expand(
                 seeds,
                 self.config.retrieval.graph_beam_width,
@@ -5835,7 +5967,11 @@ class QueryEngine:
             "initial_seed_hits": self._serialize_hits(
                 self._merge_hits(initial_hits, alias_hits)
             ),
+            "initial_seed_hit_sources": self._seed_hit_source_summary(
+                self._merge_hits(initial_hits, alias_hits), initial_rankings
+            ),
             "followup_seed_hits": self._serialize_hits(followup_hits),
+            "source_cohort_seed_hits": self._serialize_hits(source_cohort_hits),
             "final_seed_hits": self._serialize_hits(seeds),
             "initial_episode_anchor_ids": initial_anchor_ids,
             "followup_episode_anchor_ids": followup_anchor_ids,
@@ -8187,32 +8323,41 @@ class QueryEngine:
             if str(clause_id)
         }
 
-        # Preserve only markers actually recorded by a selector.  If no
-        # selector emits one, coverage remains not_observed rather than being
-        # upgraded to complete because a Source excerpt exists.
-        marker_names = {
-            "missing_required_slot_ids",
-            "missing_required_clauses",
-            "unresolved_slot_ids",
-            "missing_slots",
+        # Coverage is an end-state selector property, not a recursive union of
+        # every intermediate initial/masked/joint diagnostic.  The latter made
+        # a source-complete output appear unresolved merely because an earlier
+        # stage had not yet selected its evidence.
+        evidence_slot_trace = result.get("evidence_slot_trace")
+        evidence_slot_trace = (
+            evidence_slot_trace
+            if isinstance(evidence_slot_trace, Mapping)
+            else {}
+        )
+        selector_trace = evidence_slot_trace.get("slot_selector_v3")
+        if not isinstance(selector_trace, Mapping):
+            selector_trace = evidence_slot_trace.get("slot_selector_v2")
+        selector_trace = (
+            selector_trace if isinstance(selector_trace, Mapping) else {}
+        )
+        selector_key = (
+            "masked_selector"
+            if bool(selector_trace.get("shadow", False))
+            else "treatment_selector"
+        )
+        terminal_selector = selector_trace.get(selector_key)
+        if not isinstance(terminal_selector, Mapping):
+            terminal_selector = selector_trace.get("masked_selector")
+        terminal_selector = (
+            terminal_selector
+            if isinstance(terminal_selector, Mapping)
+            else {}
+        )
+        missing_markers = {
+            str(item)
+            for item in terminal_selector.get("missing_required_clauses", [])
+            if str(item)
         }
-        missing_markers: set[str] = set()
-        coverage_observed = False
-        pending: list[object] = [result.get("evidence_slot_trace")]
-        while pending:
-            current = pending.pop()
-            if isinstance(current, Mapping):
-                for key, value in current.items():
-                    if str(key) in marker_names:
-                        coverage_observed = True
-                        if isinstance(value, (list, tuple, set)):
-                            missing_markers.update(
-                                str(item) for item in value if str(item)
-                            )
-                    if isinstance(value, (Mapping, list, tuple)):
-                        pending.append(value)
-            elif isinstance(current, (list, tuple)):
-                pending.extend(current)
+        coverage_observed = bool(terminal_selector)
         unresolved_requirements: list[dict[str, str]] = []
         for marker in sorted(missing_markers):
             if marker in required_slot_ids:
@@ -8260,7 +8405,7 @@ class QueryEngine:
             str(item.get("source_evidence_delivery", "")) == "source_bound"
             for item in rows
         )
-        evidence_state = (
+        source_delivery_state = (
             "failed" if not rows or not materialized_refs else
             "complete" if all_source_bound else "partial"
         )
@@ -8290,6 +8435,14 @@ class QueryEngine:
         phase_seconds = phase_seconds if isinstance(phase_seconds, Mapping) else {}
         rerank = result.get("rerank_trace")
         rerank = rerank if isinstance(rerank, Mapping) else {}
+        frozen_input = bool(result.get("query_plan_frozen", False))
+        rerank_reuse = rerank.get("candidate_input_reuse")
+        rerank_reuse = rerank_reuse if isinstance(rerank_reuse, Mapping) else {}
+        rerank_reuse_status = str(rerank_reuse.get("status", ""))
+        rerank_result_reused = bool(
+            (frozen_input and rerank_reuse_status == "frozen_input_fingerprint_matched")
+            or (not frozen_input and bool(rerank.get("cache_hit", False)))
+        )
         executed_modules = {
             "planner": "intent_parse" in phase_seconds and not exact,
             "embedding": bool(
@@ -8298,7 +8451,9 @@ class QueryEngine:
                 > 0
             ),
             "retrieval": "initial_retrieval" in phase_seconds,
-            "reranker": bool(rerank.get("enabled", False)),
+            "reranker": bool(
+                rerank.get("enabled", False) and not rerank_result_reused
+            ),
             "contextual_matcher": (
                 edge_state != "not_entered"
                 or bool(
@@ -8324,11 +8479,26 @@ class QueryEngine:
         return {
             "request_id": None,
             "request_id_status": "not_observed_by_query_api",
-            "execution_profile": (
-                "input_frozen" if bool(result.get("query_plan_frozen", False))
-                else "live_evidence"
+            "execution_profile": "input_frozen" if frozen_input else "live_evidence",
+            # Compatibility: this historical field described excerpt delivery,
+            # not semantic support.  The explicit fields below remove that
+            # ambiguity for new consumers.
+            "evidence_state": source_delivery_state,
+            "evidence_state_compatibility_note": "source_delivery_state",
+            "source_delivery_state": source_delivery_state,
+            "requirement_coverage_state": (
+                "not_observed"
+                if not coverage_observed
+                else "complete"
+                if not missing_markers
+                else "unresolved"
             ),
-            "evidence_state": evidence_state,
+            "terminal_selector": selector_key if coverage_observed else "not_observed",
+            "replay_states": {
+                "prepared_inputs_replayed": frozen_input,
+                "rerank_result_reused": rerank_result_reused,
+                "rerank_reuse_status": rerank_reuse_status or "not_observed",
+            },
             "requirements": requirements,
             "selected_refs": selected_refs,
             "materialized_source_refs": materialized_refs,
@@ -14944,20 +15114,77 @@ class QueryEngine:
             vector_trace_origins = origins
             vector_trace_stage_index += 1
 
+        frozen_followup_seed_hits: list[SearchHit] = []
+        frozen_source_cohort_seed_hits: list[SearchHit] = []
+        frozen_final_seed_hits: list[SearchHit] = []
+        frozen_seed_stage_replay: dict[str, object] = {
+            "classification": "live_request",
+            "initial_seed_source": "live_initial_retrieval",
+            "followup_seed_source": "live_followup_retrieval",
+            "source_cohort_seed_source": "live_source_cohort_retrieval",
+        }
         if frozen_plan is not None:
             initial_queries = [str(value) for value in frozen_plan["initial_queries"]]
             initial_episode_anchor_ids = [
                 int(value)
                 for value in frozen_plan.get("initial_episode_anchor_ids", [])
             ]
-            seeds = [
-                SearchHit(
-                    str(item["node_type"]),
-                    int(item["node_id"]),
-                    float(item["score"]),
-                )
-                for item in frozen_plan["final_seed_hits"]
-            ]
+            frozen_final_seed_hits = self._frozen_search_hits(
+                frozen_plan.get("final_seed_hits")
+            )
+            initial_payload_present = isinstance(
+                frozen_plan.get("initial_seed_hits"), list
+            )
+            initial_seed_hits = self._frozen_search_hits(
+                frozen_plan.get("initial_seed_hits")
+            )
+            frozen_followup_seed_hits = self._frozen_search_hits(
+                frozen_plan.get("followup_seed_hits")
+            )
+            source_cohort_payload_present = isinstance(
+                frozen_plan.get("source_cohort_seed_hits"), list
+            )
+            frozen_source_cohort_seed_hits = self._frozen_search_hits(
+                frozen_plan.get("source_cohort_seed_hits")
+            )
+            if initial_payload_present:
+                seeds = initial_seed_hits
+                frozen_seed_stage_replay = {
+                    "classification": (
+                        "stage_complete_frozen_replay"
+                        if source_cohort_payload_present
+                        else "initial_and_followup_saved_final_delta_reconstructed"
+                    ),
+                    "initial_seed_source": "saved_initial_seed_hits",
+                    "initial_seed_count": len(initial_seed_hits),
+                    "initial_seed_hit_sources": deepcopy(
+                        frozen_plan.get("initial_seed_hit_sources", [])
+                    ),
+                    "followup_seed_source": "saved_followup_seed_hits",
+                    "followup_seed_count": len(frozen_followup_seed_hits),
+                    "source_cohort_seed_source": (
+                        "saved_source_cohort_seed_hits"
+                        if source_cohort_payload_present
+                        else "reconstructed_final_seed_delta_not_historical_stage"
+                    ),
+                    "source_cohort_seed_count": len(frozen_source_cohort_seed_hits),
+                    "final_seed_count": len(frozen_final_seed_hits),
+                }
+            else:
+                # Historical plans that stored only final seeds remain useful
+                # for legacy reproduction, but must never be cited as an
+                # independent prepared-early input or early-work saving.
+                seeds = frozen_final_seed_hits
+                frozen_seed_stage_replay = {
+                    "classification": "legacy_final_input_replay",
+                    "initial_seed_source": "not_observed_final_seed_fallback",
+                    "initial_seed_count": 0,
+                    "followup_seed_source": "not_observed",
+                    "followup_seed_count": 0,
+                    "source_cohort_seed_source": "not_observed",
+                    "source_cohort_seed_count": 0,
+                    "final_seed_count": len(frozen_final_seed_hits),
+                }
             active_cue_ids = [
                 int(value)
                 for value in frozen_plan.get("association_cue_association_ids", [])
@@ -15101,6 +15328,7 @@ class QueryEngine:
             evaluation_as_of=request_contextual_evaluation_as_of,
             cue_endpoint_episode_ids=cue_anchor_exclusions,
         )
+        prepared_early_trace["input_stage_replay"] = frozen_seed_stage_replay
         # The experimental candidate-pool lane is deliberately tiny: a
         # source-validated, non-base prepared target may seed the *ordinary*
         # graph traversal. It remains a contextual provenance route, is not
@@ -15399,6 +15627,24 @@ class QueryEngine:
             followup_rankings = deepcopy(
                 frozen_plan.get("followup_rankings", followup_rankings)
             )
+            if frozen_seed_stage_replay.get("classification") != "legacy_final_input_replay":
+                seeds = self._merge_hits(seeds, frozen_followup_seed_hits)
+                traversed, paths = self.traverser.expand(
+                    seeds,
+                    self.config.retrieval.graph_beam_width,
+                    self.config.retrieval.graph_max_hops,
+                )
+                paths.extend(
+                    self._explicit_association_paths(active_cue_ids, cue_scores)
+                )
+                traversed = self._truncate_traversed_nodes(
+                    traversed,
+                    self.config.retrieval.candidate_limit,
+                    cue_fast_endpoint_keys,
+                )
+                frozen_seed_stage_replay["followup_seed_replay_applied"] = True
+            else:
+                frozen_seed_stage_replay["followup_seed_replay_applied"] = False
         elif followup_queries:
             followup_vector_specs = self._request_vector_specs(
                 followup_queries,
@@ -15552,6 +15798,40 @@ class QueryEngine:
             source_key_cohort_trace = deepcopy(
                 frozen_plan.get("source_key_cohort", {})
             )
+            if frozen_seed_stage_replay.get("classification") != "legacy_final_input_replay":
+                if frozen_seed_stage_replay.get("source_cohort_seed_source") == (
+                    "saved_source_cohort_seed_hits"
+                ):
+                    replayed_cohort_hits = frozen_source_cohort_seed_hits
+                else:
+                    existing_keys = {
+                        (hit.node_type, int(hit.node_id)) for hit in seeds
+                    }
+                    replayed_cohort_hits = [
+                        hit
+                        for hit in frozen_final_seed_hits
+                        if (hit.node_type, int(hit.node_id)) not in existing_keys
+                    ]
+                seeds = self._merge_hits(seeds, replayed_cohort_hits)
+                traversed, paths = self.traverser.expand(
+                    seeds,
+                    self.config.retrieval.graph_beam_width,
+                    self.config.retrieval.graph_max_hops,
+                )
+                paths.extend(
+                    self._explicit_association_paths(active_cue_ids, cue_scores)
+                )
+                traversed = self._truncate_traversed_nodes(
+                    traversed,
+                    self.config.retrieval.candidate_limit,
+                    cue_fast_endpoint_keys,
+                )
+                frozen_seed_stage_replay["source_cohort_seed_replay_applied"] = True
+                frozen_seed_stage_replay["replayed_source_cohort_seed_count"] = len(
+                    replayed_cohort_hits
+                )
+            else:
+                frozen_seed_stage_replay["source_cohort_seed_replay_applied"] = False
         else:
             cohort_hits, source_key_cohort_trace = self._source_key_cohort_hits(
                 initial_episode_anchor_ids,
@@ -15622,41 +15902,43 @@ class QueryEngine:
                     observed_rerank_input_fingerprint
                 ),
                 "frozen_candidate_input_fingerprint": expected_fingerprint,
+                "historical_rerank_mapping_status": (
+                    self._rerank_slot_mapping_status(rerank_trace)
+                ),
                 "candidate_pool_changed": bool(
                     prepared_early_contextual_derived_episode_ids
                 ),
             }
-            if prepared_early_contextual_derived_episode_ids:
-                if (
-                    expected_fingerprint
-                    and hmac.compare_digest(
-                        expected_fingerprint,
-                        observed_rerank_input_fingerprint,
-                    )
-                ):
-                    rerank_reuse["status"] = "frozen_input_fingerprint_matched"
-                else:
-                    # Do not present a frozen reranker decision as if it had
-                    # evaluated the newly injected candidates. The public Q2
-                    # lane remains runnable as a candidate-layer diagnostic,
-                    # but no stale coverage/mapping record may authorize
-                    # source delivery for the changed set.
-                    rerank_reuse["status"] = (
-                        "frozen_input_fingerprint_missing_or_mismatched"
-                    )
-                    reranked_episode_ids = []
-                    rerank_trace = {
-                        "enabled": False,
-                        "reason": "candidate_pool_changed_frozen_rerank_not_reused",
-                        "candidate_input_fingerprint": (
-                            observed_rerank_input_fingerprint
-                        ),
-                        "candidate_input_reuse": rerank_reuse,
-                        "merged_coverage": {"coverage": []},
-                        "deterministic_evidence_floor": {},
-                    }
-            else:
-                rerank_reuse["status"] = "candidate_pool_unchanged_frozen_reuse"
+            rerank_reuse["status"] = self._frozen_rerank_reuse_decision(
+                expected_fingerprint,
+                observed_rerank_input_fingerprint,
+            )
+            if rerank_reuse["status"] != "frozen_input_fingerprint_matched":
+                # Candidate derivation answers a provenance question; it is
+                # not an input-identity shortcut.  A saved rerank decision can
+                # be replayed only when the actual prompt-facing candidates
+                # and paragraph context fingerprint match.  Old plans without
+                # a fingerprint remain replayable for historical comparison,
+                # but cannot grant a new mapping, early stop, or learning
+                # qualification.
+                reranked_episode_ids = []
+                rerank_trace = {
+                    "enabled": False,
+                    "reason": "frozen_rerank_not_reused_without_matching_input",
+                    "candidate_input_fingerprint": (
+                        observed_rerank_input_fingerprint
+                    ),
+                    "candidate_input_reuse": rerank_reuse,
+                    "historical_rerank": {
+                        "enabled": bool(rerank_trace.get("enabled", False)),
+                        "had_error": bool(str(rerank_trace.get("error", "")).strip()),
+                        "mapping_status": rerank_reuse[
+                            "historical_rerank_mapping_status"
+                        ],
+                    },
+                    "merged_coverage": {"coverage": []},
+                    "deterministic_evidence_floor": {},
+                }
             prepared_early_trace["rerank_input_reuse"] = rerank_reuse
         else:
             phase_started = perf_counter()
@@ -16177,6 +16459,7 @@ class QueryEngine:
                 "reason",
                 "requirements_status",
                 "authoritative_requirements",
+                "base_support_mapping_status",
                 "evaluation_as_of",
                 "target_gate",
                 "target_checks",

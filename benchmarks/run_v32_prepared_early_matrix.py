@@ -156,9 +156,21 @@ def _compact_result(value: object) -> dict[str, Any]:
             "selected_contextual_contribution_ids": contextual.get(
                 "selected_contextual_contribution_ids", []
             ),
+            "base_support_mapping_status": contextual.get(
+                "base_support_mapping_status", "not_observed"
+            ),
         },
         "evidence_delivery": {
             "state": evidence.get("evidence_state", "not_observed"),
+            "source_delivery_state": evidence.get(
+                "source_delivery_state", "not_observed"
+            ),
+            "requirement_coverage_state": evidence.get(
+                "requirement_coverage_state", "not_observed"
+            ),
+            "terminal_selector": evidence.get(
+                "terminal_selector", "not_observed"
+            ),
             "selected_refs": evidence.get("selected_refs", []),
             "materialized_source_refs": evidence.get(
                 "materialized_source_refs", []
@@ -166,6 +178,7 @@ def _compact_result(value: object) -> dict[str, Any]:
             "participation": evidence.get("participation", {}),
             "executed_modules": evidence.get("executed_modules", {}),
             "actual_skipped_modules": evidence.get("actual_skipped_modules", []),
+            "replay_states": evidence.get("replay_states", {}),
         },
         "phase_seconds": timings.get("phases_seconds", {}),
         "query_vector_bundle": result.get("query_vector_bundle"),
@@ -190,34 +203,48 @@ def _run_arm(
     deadline_seconds: float,
     scoring_mode: str = "cn",
     candidate_pool_enabled: bool = False,
+    selection_shadow: bool | None = None,
 ) -> dict[str, Any]:
     database = output_dir / "work" / f"{variant_id}__{condition}.sqlite"
-    _clone_sqlite(snapshot, database)
-    app, config = _open_app(
-        env_file, database, output_dir / "logs" / variant_id / condition
-    )
-    # This is a post-plan runtime diagnostic switch, deliberately outside the
-    # frozen plan configuration.  It cannot change its text/vectors/seeds or
-    # make the proposal a delivery decision.
-    config.retrieval.contextual_prepared_early_enabled = prepared_early_enabled
-    config.retrieval.contextual_prepared_early_shadow = True
-    config.retrieval.contextual_prepared_early_scoring_mode = scoring_mode
-    config.retrieval.contextual_prepared_early_candidate_pool_enabled = (
-        candidate_pool_enabled
-    )
-    config.retrieval.validate()
-    engine = app.query_engine(config=config)
-    if edge_masked:
-        _mask_engine_edge(engine, treatment_edge_id)
-    plan = _read(plan_path)
-    restore = getattr(engine, "restore_frozen_query_vectors", None)
-    if not callable(restore):
-        raise TypeError("public engine lacks restore_frozen_query_vectors")
-    bundle = restore(question, plan)
     ledger = ProviderLedger()
     started_at = _utc_now()
     started = perf_counter()
+    config = None
     try:
+        _clone_sqlite(snapshot, database)
+        app, config = _open_app(
+            env_file, database, output_dir / "logs" / variant_id / condition
+        )
+        # Prepared-early controls are outside the stored retrieval plan: they
+        # can observe or seed the request-local candidate pool, but never
+        # alter its text, vectors, source snapshot, or early-stop policy.
+        config.retrieval.contextual_prepared_early_enabled = prepared_early_enabled
+        config.retrieval.contextual_prepared_early_shadow = True
+        config.retrieval.contextual_prepared_early_scoring_mode = scoring_mode
+        config.retrieval.contextual_prepared_early_candidate_pool_enabled = (
+            candidate_pool_enabled
+        )
+        # The final selector shadow setting *is* part of the frozen replay
+        # configuration.  A local matrix may request only the value already
+        # frozen by the plan; otherwise retain a terminal preflight failure
+        # instead of silently changing the request contract.
+        if (
+            selection_shadow is not None
+            and bool(config.retrieval.contextual_association_shadow)
+            != bool(selection_shadow)
+        ):
+            raise ValueError(
+                "selection_shadow differs from the frozen Q2 plan configuration"
+            )
+        config.retrieval.validate()
+        engine = app.query_engine(config=config)
+        if edge_masked:
+            _mask_engine_edge(engine, treatment_edge_id)
+        plan = _read(plan_path)
+        restore = getattr(engine, "restore_frozen_query_vectors", None)
+        if not callable(restore):
+            raise TypeError("public engine lacks restore_frozen_query_vectors")
+        bundle = restore(question, plan)
         with _trace_context(engine.model, ledger):
             result = engine.query(
                 question,
@@ -258,6 +285,11 @@ def _run_arm(
                 "shadow": True,
                 "key_scoring_mode": scoring_mode,
                 "candidate_pool_enabled": candidate_pool_enabled,
+                "selection_shadow": (
+                    config.retrieval.contextual_association_shadow
+                    if config is not None
+                    else "not_observed"
+                ),
                 "early_stop_permitted": False,
             },
             "result": result,
@@ -289,6 +321,7 @@ def _run_arm(
                 "shadow": True,
                 "key_scoring_mode": scoring_mode,
                 "candidate_pool_enabled": candidate_pool_enabled,
+                "selection_shadow": config.retrieval.contextual_association_shadow,
                 "early_stop_permitted": False,
             },
             "error": {
