@@ -872,8 +872,16 @@ class CandidateAggregate:
         source fact and not a requirement mapping.  When the same Episode was
         also found by ordinary retrieval, keep both route contributions and
         combine their already-normalised priorities with the simple
-        ``1 - (1-base) * (1-contextual)`` union.  Masking an edge removes only
-        its contribution, returning the independent base priority unchanged.
+        ``1 - (1-base) * (1-contextual)`` union.  Independent contextual
+        signals use the same bounded union, taking only the strongest signal
+        per anchor Source.  Several Episodes, edges, cues or query rewrites
+        originating from one Source therefore cannot multiply its activation.
+
+        The producer must supply ``contextual_anchor_source_id`` from the
+        anchor's current Source closure.  Without that provenance independence
+        is unknown: legacy/unknown signals compete with the known-source union
+        by maximum, never by addition.  Masking rebuilds the union entirely
+        from surviving contributions and preserves an independent base route.
         """
 
         base_scores = [
@@ -882,22 +890,43 @@ class CandidateAggregate:
             if not item.is_contextual
         ]
         base_score = max(base_scores, default=0.0)
-        contextual_scores: list[float] = []
+        source_scores: dict[int, float] = {}
+        unknown_priority = 0.0
+        has_contextual_priority = False
         for item in self.contributions:
             if not item.is_contextual:
                 continue
-            raw_priority = item.feature_map.get("contextual_priority_score")
+            features = item.feature_map
+            raw_priority = features.get("contextual_priority_score")
             if raw_priority is None:
                 continue
             try:
                 priority = float(raw_priority)
             except (TypeError, ValueError):
                 continue
-            if math.isfinite(priority):
-                contextual_scores.append(min(1.0, max(0.0, priority)))
-        if not contextual_scores:
+            if not math.isfinite(priority):
+                continue
+            has_contextual_priority = True
+            priority = min(1.0, max(0.0, priority))
+            source_id = features.get("contextual_anchor_source_id")
+            # Features are floats.  Reject fractional, nonpositive and IDs
+            # beyond exact integer precision instead of inventing provenance.
+            if (
+                source_id is None
+                or source_id <= 0
+                or source_id > (2**53 - 1)
+                or not source_id.is_integer()
+            ):
+                unknown_priority = max(unknown_priority, priority)
+                continue
+            key = int(source_id)
+            source_scores[key] = max(source_scores.get(key, 0.0), priority)
+        if not has_contextual_priority:
             return base_score
-        contextual_score = max(contextual_scores)
+        residual = math.prod(
+            1.0 - source_scores[key] for key in sorted(source_scores)
+        )
+        contextual_score = max(unknown_priority, 1.0 - residual)
         normalized_base = min(1.0, max(0.0, base_score))
         return 1.0 - (1.0 - normalized_base) * (1.0 - contextual_score)
 

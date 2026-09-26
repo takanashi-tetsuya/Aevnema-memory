@@ -2640,6 +2640,7 @@ class QueryEngine:
             not evidence_basis
             or evidence_basis in {"unknown", "legacy_unavailable"}
             or evidence_basis.startswith("legacy_")
+            or evidence_basis not in {"source_id", "reasoning_view_nonempty_lines_v1"}
         ):
             return None, "source_evidence_basis_invalid"
 
@@ -2712,7 +2713,7 @@ class QueryEngine:
             ]
             if all(
                 any(
-                    quote in span_text or span_text in quote
+                    quote in span_text
                     for span_text in candidate_span_texts
                     if span_text
                 )
@@ -3047,6 +3048,24 @@ class QueryEngine:
                     endpoint_provenance="initial_base",
                 )
 
+        # Source identity, rather than an edge/query/cue occurrence, defines
+        # an independent local activation.  Read current anchor provenance in
+        # one batch; missing Source closure leaves a conservative legacy max.
+        anchor_source_ids: dict[int, int] = {}
+        try:
+            anchor_rows, anchor_sources = self._current_target_rows(
+                [int(hit.anchor_episode_id) for hit in contextual_hits]
+            )
+        except (AttributeError, TypeError, ValueError, KeyError):
+            anchor_rows, anchor_sources = {}, {}
+        for anchor_id, anchor_row in anchor_rows.items():
+            try:
+                source_id = int(self._record_value(anchor_row, "source_id"))
+            except (TypeError, ValueError):
+                continue
+            if 0 < source_id <= (2**53 - 1) and source_id in anchor_sources:
+                anchor_source_ids[anchor_id] = source_id
+
         relevance_scores = target_relevance_scores or {}
         for occurrence, hit in enumerate(contextual_hits, start=1):
             episode_id = int(hit.target_episode_id)
@@ -3132,6 +3151,10 @@ class QueryEngine:
                     "current_relevance_estimate": relevance,
                     "contextual_combined_score": contextual_score,
                     "contextual_priority_score": contextual_priority,
+                    "contextual_anchor_episode_id": int(hit.anchor_episode_id),
+                    "contextual_anchor_source_id": anchor_source_ids.get(
+                        int(hit.anchor_episode_id)
+                    ),
                 },
                 source_facts=source_refs,
                 clause_supports=supports,
@@ -5436,6 +5459,33 @@ class QueryEngine:
         return sorted(best.values(), key=lambda item: item.score, reverse=True)
 
     @staticmethod
+    def _normalize_warm_episode_activations(
+        activations: dict[int, float] | None,
+    ) -> dict[int, float] | None:
+        """Bound request-local search hints before they can seed traversal.
+
+        These scores carry attention from an earlier retrieval round.  They
+        are not evidence of a factual claim or independent current-query
+        anchors, and must never be persisted as graph weights.
+        """
+
+        if activations is None:
+            return None
+        if not isinstance(activations, dict) or len(activations) > 32:
+            raise ValueError("warm_episode_activations must be a dict of at most 32 episodes")
+        normalized: dict[int, float] = {}
+        for episode_id, score in activations.items():
+            if type(episode_id) is not int or not 0 < episode_id <= 2**53 - 1:
+                raise ValueError("warm episode IDs must be positive safe integers")
+            if type(score) not in (int, float):
+                raise ValueError("warm episode activation scores must be numbers")
+            value = float(score)
+            if not math.isfinite(value) or not 0.0 < value <= 1.0:
+                raise ValueError("warm episode activation scores must be finite and in (0, 1]")
+            normalized[episode_id] = value
+        return normalized
+
+    @staticmethod
     def _frozen_search_hits(value: object) -> list[SearchHit]:
         """Decode a saved seed stage without inferring an omitted stage.
 
@@ -6333,9 +6383,13 @@ class QueryEngine:
                     concepts[:20],
                 ),
             )
-        if not isinstance(payload, dict):
-            return []
-        raw_queries = payload.get("followup_queries", [])
+        # The natural-language planner may return the requested questions as
+        # a plain list. Normalize that shape locally instead of requiring the
+        # model to reproduce a machine wrapper around readable text.
+        raw_queries = (
+            payload.get("followup_queries", [])
+            if isinstance(payload, dict) else payload
+        )
         if not isinstance(raw_queries, list):
             return []
         existing = {question, *intent.search_queries}
@@ -14504,6 +14558,7 @@ class QueryEngine:
         contextual_learning: bool = False,
         learning_request_id: str | None = None,
         exact_revisit_input: ExactRevisitInput | None = None,
+        warm_episode_activations: dict[int, float] | None = None,
     ) -> dict:
         """Execute a query, optionally finalizing a strict source-bound V3 plan.
 
@@ -14526,10 +14581,22 @@ class QueryEngine:
         ``exact_revisit_input`` is an independently opt-in transient V3
         contract.  It can skip planning only after rerunning local matcher,
         target/source provenance, and contribution-selector checks.
+
+        ``warm_episode_activations`` carries up to 32 bounded Episode search
+        hints from an earlier retrieval round.  It bypasses automatic exact
+        revisit so the new question can traverse the graph with both fresh
+        and retained activation.  The activation trace is not evidence.
         """
 
         if stop_after not in (None, "evidence"):
             raise ValueError("stop_after must be None or 'evidence'")
+        warm_episode_activations = self._normalize_warm_episode_activations(
+            warm_episode_activations
+        )
+        if warm_episode_activations is not None and exact_revisit_input is not None:
+            raise ValueError(
+                "warm_episode_activations cannot be combined with exact_revisit_input"
+            )
         evidence_only = stop_after == "evidence"
         if evidence_only:
             if contextual_learning or learning_request_id is not None:
@@ -14612,6 +14679,7 @@ class QueryEngine:
                 record_association_use=record_association_use,
                 trace_bridge=trace_bridge,
                 request_deadline_at=exact_request_deadline_at,
+                warm_episode_activations=warm_episode_activations,
             )
 
         def execute() -> dict:
@@ -14637,7 +14705,7 @@ class QueryEngine:
                     trace_bridge=trace_bridge,
                     deadline_at=exact_request_deadline_at,
                 )
-                if exact_revisit_input is None
+                if exact_revisit_input is None and warm_episode_activations is None
                 else None
             )
             restricted_rewrite = (
@@ -14656,7 +14724,9 @@ class QueryEngine:
                     trace_bridge=trace_bridge,
                     deadline_at=exact_request_deadline_at,
                 )
-                if exact_revisit_input is None and automatic_revisit is None
+                if exact_revisit_input is None
+                and automatic_revisit is None
+                and warm_episode_activations is None
                 else None
             )
             effective_exact_input = (
@@ -14704,7 +14774,7 @@ class QueryEngine:
                     )
                 ),
                 restricted_rewrite=restricted_rewrite,
-            )
+            ) if warm_episode_activations is None else None
             if exact_result is not None:
                 return exact_result
             if evidence_only:
@@ -14879,6 +14949,7 @@ class QueryEngine:
         record_association_use: bool = True,
         trace_bridge: QueryTraceBridge | None = None,
         request_deadline_at: float | None = None,
+        warm_episode_activations: dict[int, float] | None = None,
     ) -> dict:
         self.last_query_embeddings.clear()
         self.last_query_embedding_cache_trace = {"hits": [], "misses": []}
@@ -15274,6 +15345,21 @@ class QueryEngine:
                 "initial_retrieval",
                 initial_finalize_started,
             )
+        # Carry prior-round attention into the same bounded graph traversal as
+        # fresh vector/sparse seeds.  Keep the fresh snapshot separate: warm
+        # Episode IDs are search hints, not independent current-query anchors
+        # for contextual provenance or learning.
+        fresh_query_seeds = list(seeds)
+        if warm_episode_activations is not None:
+            seeds = self._merge_hits(
+                seeds,
+                [
+                    SearchHit("episode", episode_id, score)
+                    for episode_id, score in sorted(
+                        warm_episode_activations.items()
+                    )
+                ],
+            )
         contextual_trace = {
             "enabled": False,
             "backend": "contextual_double_key",
@@ -15290,7 +15376,7 @@ class QueryEngine:
         base_episode_ids_before_contextual = sorted(
             {
                 int(item.node_id)
-                for item in seeds
+                for item in fresh_query_seeds
                 if item.node_type == "episode"
             }
         )
@@ -15301,7 +15387,7 @@ class QueryEngine:
             int, tuple[SourceFactRef | None, str]
         ] = {}
         base_seeds_before_prepared_early = list(seeds)
-        base_anchor_activations = self._base_anchor_activations(seeds)
+        base_anchor_activations = self._base_anchor_activations(fresh_query_seeds)
         # A relation-cue endpoint may participate in ordinary retrieval, but
         # it is not an independent anchor for a prepared contextual proposal.
         # Compute the exclusion before the broad traversal so both the early
@@ -15477,6 +15563,22 @@ class QueryEngine:
             self.config.retrieval.candidate_limit,
             cue_fast_endpoint_keys,
         )
+        # This bounded readout is request-local attention for a later gap
+        # query.  It includes propagation from both current-query and warm
+        # seeds, but says nothing about whether an Episode proves a claim.
+        initial_graph_episode_activations = [
+            {
+                "episode_id": int(item.node_id),
+                "score": min(1.0, max(0.0, float(item.score))),
+            }
+            for item in sorted(
+                traversed,
+                key=lambda node: (-float(node.score), int(node.node_id)),
+            )
+            if item.node_type == "episode"
+            and math.isfinite(float(item.score))
+            and float(item.score) > 0.0
+        ][:32]
         if injected_hits:
             # Candidate treatment adds a root seed, so ordinary traversal no
             # longer tells us by itself whether a later Episode had an
@@ -16506,6 +16608,16 @@ class QueryEngine:
                 else None
             ),
             "followup_search_queries": followup_queries,
+            "episode_activation_trace": {
+                "role": "retrieval_attention_only",
+                "warm_input": [
+                    {"episode_id": episode_id, "score": score}
+                    for episode_id, score in sorted(
+                        (warm_episode_activations or {}).items()
+                    )
+                ],
+                "initial_graph_top_episodes": initial_graph_episode_activations,
+            },
             "followup_planner_invoked": followup_planner_invoked,
             "followup_planning_mode": (
                 self.config.retrieval.followup_planning_mode

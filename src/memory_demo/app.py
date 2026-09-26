@@ -951,6 +951,48 @@ class MemoryApplication:
             contextual_learning_finalizer=self.finalize_recall_event,
         )
 
+    def recall(
+        self,
+        question: str,
+        *,
+        mode: str | None = None,
+        context: str = "",
+        resume: str | None = None,
+        timeout_seconds: float | None = None,
+        learn: bool = True,
+        cancelled=None,
+        model=None,
+        max_waves: int | None = None,
+    ) -> dict:
+        """Progressive source-checked recall; deep=360s, max_effort=1800s.
+
+        Every call gets its own policy/client. Only explicit feedback or
+        successfully source-reviewed links change persistent strength. The
+        returned session ID can resume an interrupted read on an unchanged DB.
+        ``model`` permits a caller-owned provider with a shared campaign cap.
+        """
+        from copy import deepcopy
+        from memory_demo.retrieval.progressive import ProgressiveRecall
+
+        if model is None:
+            model_config = deepcopy(self.config.model)
+            if model_config.reasoning_max_tokens is None:
+                model_config.reasoning_max_tokens = 8192
+            model = ModelClient(model_config, self.new_logger("recall"))
+        return ProgressiveRecall(self.config, self.db, model).query(
+            question, mode=mode, context=context, resume=resume,
+            timeout_seconds=timeout_seconds, learn=learn,
+            cancelled=cancelled, max_waves=max_waves,
+        )
+
+    def recall_feedback(self, session_id: str, *, positive: bool, feedback_id: str) -> dict:
+        """Apply one idempotent feedback event to a delivered recall's edges."""
+        from memory_demo.retrieval.progressive import ProgressiveRecall
+
+        return ProgressiveRecall(self.config, self.db, None).apply_feedback(
+            session_id, positive=positive, feedback_id=feedback_id,
+        )
+
     def stats(self) -> dict:
         return {
             "database": str(self.config.database_path),

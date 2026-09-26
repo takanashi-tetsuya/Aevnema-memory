@@ -4,6 +4,7 @@ from dataclasses import asdict, is_dataclass
 from datetime import datetime, timezone
 import json
 from pathlib import Path
+import os
 import re
 from threading import Lock
 from typing import Any
@@ -250,6 +251,12 @@ class JsonlEventLogger:
 
         return self.path.with_name(self.path.stem + ".answer-evidence.jsonl")
 
+    @property
+    def model_payload_path(self) -> Path:
+        """Private companion stream for explicitly enabled provider payloads."""
+
+        return self.path.with_name(self.path.stem + ".model-payloads.jsonl")
+
     def _write(self, path: Path, record: dict[str, Any]) -> None:
         line = json.dumps(
             record,
@@ -268,6 +275,33 @@ class JsonlEventLogger:
             **payload,
         })
         self._write(self.path, record)
+
+    def emit_model_payload(
+        self, event: str, *, request_id: str, endpoint: str, payload: Any
+    ) -> None:
+        """Write a full local provider payload without relaxing audit-log redaction."""
+
+        if event not in {"llm_request", "llm_response"}:
+            raise ValueError(f"unsupported model payload event: {event}")
+        record = redact_for_answer_evidence_checkpoint({
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "event": event,
+            "request_id": request_id,
+            "endpoint": endpoint,
+            "payload": payload,
+        })
+        path = self.model_payload_path
+        line = json.dumps(record, ensure_ascii=False, default=_json_default, separators=(",", ":"))
+        with self._lock:
+            fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_APPEND, 0o600)
+            try:
+                os.fchmod(fd, 0o600)
+                with os.fdopen(fd, "a", encoding="utf-8") as stream:
+                    fd = -1
+                    stream.write(line + "\n")
+            finally:
+                if fd >= 0:
+                    os.close(fd)
 
     def emit_answer_evidence_checkpoint(self, event: str, **payload: Any) -> None:
         """Persist an allow-listed answer-boundary evidence receipt locally.

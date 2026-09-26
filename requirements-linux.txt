@@ -1,0 +1,15 @@
+# Runtime dependency versions observed in the final Windows offline regression.
+# Install with Python 3.12, then: python -m pip install -e .
+# Linux execution has not yet been tested.
+numpy==2.3.5
+requests==2.34.2
+jsonschema==4.26.0
+attrs==26.1.0
+certifi==2026.7.22
+charset-normalizer==3.5.1
+idna==3.19
+jsonschema-specifications==2025.9.1
+referencing==0.37.0
+rpds-py==2026.6.3
+typing_extensions==4.16.0
+urllib3==2.7.0

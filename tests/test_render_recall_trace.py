@@ -142,6 +142,21 @@ class RenderRecallTraceTests(unittest.TestCase):
 
             self.assertFalse(output.exists())
 
+            # Restore the local pointer, then verify the renderer also applies
+            # the writer's opaque-stage boundary to persisted input.
+            records[0]["payload"]["query_artifact_id"] = records[0]["artifact_refs"][0][
+                "artifact_id"
+            ]
+            records[0]["stage"] = "private stage text"
+            writer.events_path.write_text(
+                "".join(json.dumps(record) + "\n" for record in records),
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(TraceRenderError, "opaque machine label"):
+                render_recall_trace(writer.run_dir, output)
+
+            self.assertFalse(output.exists())
+
     def test_rejects_a_symlinked_artifact_even_when_its_content_matches(self):
         with TemporaryDirectory() as directory:
             root = Path(directory)
@@ -156,21 +171,6 @@ class RenderRecallTraceTests(unittest.TestCase):
             output = root / "case-report.md"
 
             with self.assertRaisesRegex(TraceRenderError, "symbolic link"):
-                render_recall_trace(writer.run_dir, output)
-
-            self.assertFalse(output.exists())
-
-            # Restore the local pointer, then verify the renderer also applies
-            # the writer's opaque-stage boundary to persisted input.
-            records[0]["payload"]["query_artifact_id"] = records[0]["artifact_refs"][0][
-                "artifact_id"
-            ]
-            records[0]["stage"] = "private stage text"
-            writer.events_path.write_text(
-                "".join(json.dumps(record) + "\n" for record in records),
-                encoding="utf-8",
-            )
-            with self.assertRaisesRegex(TraceRenderError, "opaque machine label"):
                 render_recall_trace(writer.run_dir, output)
 
             self.assertFalse(output.exists())

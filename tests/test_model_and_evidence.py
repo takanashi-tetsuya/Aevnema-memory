@@ -1320,7 +1320,7 @@ unknown: River acknowledged the decision."""
                 indexes = sorted(
                     {
                         int(value)
-                        for value in re.findall(r'"segment_index"\s*:\s*(\d+)', user)
+                        for value in re.findall(r'segment_index：\s*(\d+)', user)
                     }
                 )
                 return {
@@ -1679,7 +1679,7 @@ unknown: River acknowledged the decision."""
             def chat_json(self, system, user, **_kwargs):
                 if "最小蕴含审计器" in system:
                     self.audit_received_participants = (
-                        '"participants": ["Ayumu"]' in user
+                        'participants：\n' in user and 'Ayumu' in user
                     )
                     return {
                         "reviews": [
@@ -2045,6 +2045,27 @@ unknown: River acknowledged the decision."""
         with self.assertRaisesRegex(ModelClientError, "invalid JSON after repair"):
             client.chat_json("system", "user", allow_fallback=False)
         self.assertEqual(["primary", "primary"], client.calls)
+
+    def test_chat_json_retry_does_not_send_malformed_output_back_to_model(self):
+        class CaptureClient(ModelClient):
+            def __init__(self):
+                super().__init__(ModelConfig(
+                    api_key="test", reasoning_model="primary",
+                    fallback_model="fallback", max_retries=0,
+                ))
+                self.sent = []
+
+            def _chat_once(self, system, user, model, temperature=0.1):
+                self.sent.append((system, user))
+                return "{broken machine output" if len(self.sent) == 1 else '{"ok":true}'
+
+        client = CaptureClient()
+        self.assertEqual({"ok": True}, client.chat_json(
+            "請依據資料回答", "問題：誰製作文件？", allow_fallback=False,
+        ))
+        self.assertEqual(client.sent[1][0], "請依據資料回答")
+        self.assertIn("問題：誰製作文件？", client.sent[1][1])
+        self.assertNotIn("broken machine output", client.sent[1][1])
 
     def test_chat_json_repairs_bare_line_ids_locally(self):
         class BareLineIdClient(ModelClient):
@@ -3639,7 +3660,7 @@ meaning: 心情很糟时需要安静陪伴。
                 }
             ],
         )
-        self.assertIn('"source_evidence_delivery": "source_bound"', prompt)
+        self.assertIn('source_evidence_delivery：source_bound', prompt)
         self.assertIn("Morgan 明确批准了请求", prompt)
 
     def test_answer_audit_prompt_receives_the_full_delivered_source_excerpt(self):

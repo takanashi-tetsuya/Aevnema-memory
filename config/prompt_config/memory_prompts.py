@@ -2,9 +2,48 @@
 
 from __future__ import annotations
 
-import json
 import re
 from typing import Any
+
+
+def natural_prompt_data(value: Any) -> str:
+    """Present evidence and output field examples as readable lines, not JSON.
+
+    Stable field names and numeric evidence references remain because the
+    parser binds the model's answer to local rows. Physical hashes and byte
+    offsets are program data and never belong in model context.
+    """
+    lines: list[str] = []
+
+    def render(item: Any, level: int = 0, label: str = "") -> None:
+        prefix = "  " * level
+        if isinstance(item, dict):
+            if label:
+                lines.append(f"{prefix}{label}：")
+                level += 1
+                prefix = "  " * level
+            if not item:
+                lines.append(f"{prefix}无。")
+            for key, child in item.items():
+                name = str(key)
+                if name.endswith("_hash") or name in {"sha256", "byte_offset", "offset"}:
+                    continue
+                render(child, level, name)
+        elif isinstance(item, (list, tuple)):
+            if label:
+                lines.append(f"{prefix}{label}：")
+                level += 1
+                prefix = "  " * level
+            if not item:
+                lines.append(f"{prefix}无。")
+            for index, child in enumerate(item, 1):
+                render(child, level, f"第{index}项")
+        else:
+            body = "是" if item is True else "否" if item is False else "未提供" if item is None else str(item).strip() or "未提供"
+            lines.append(f"{prefix}{label}：{body}" if label else f"{prefix}{body}")
+
+    render(value)
+    return "\n".join(lines)
 
 
 EPISODE_SYSTEM = """你是长期记忆系统的事实提取器。只能依据给定 Source，不能使用外部知识。
@@ -154,7 +193,7 @@ participants 不是额外证据。正文人物名必须逐字见于 evidence，�
 def episode_entailment_audit_prompt(items: list[dict[str, Any]]) -> str:
     return (
         "逐条审计以下 Episode。Source evidence 由程序按行号重建，是唯一事实依据。\n"
-        f"ITEMS:\n{json.dumps(items, ensure_ascii=False)}"
+        f"ITEMS:\n{natural_prompt_data(items)}"
     )
 
 
@@ -187,8 +226,8 @@ def document_map_prompt(
     return (
         f"source_key={source_key}\n"
         "为以下 segment 生成导航地图。地图以后只能帮助定位，不能作为 Episode 证据。\n"
-        f"严格返回结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"SEGMENTS:\n{json.dumps(segments, ensure_ascii=False)}"
+        f"严格返回结构：{natural_prompt_data(schema)}\n"
+        f"SEGMENTS:\n{natural_prompt_data(segments)}"
     )
 
 
@@ -214,8 +253,8 @@ def document_anchor_map_prompt(
         "为以下被拆分的同一文件生成抽取式导航锚点。禁止写 overview、事件摘要、因果、结论或未在原文中"
         "逐字出现的别名。anchor_terms 选择 2—8 个能区分该片段的原文短语；participants 只列原文人物"
         "标记，可为空。\n"
-        f"严格返回结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"SEGMENTS:\n{json.dumps(segments, ensure_ascii=False)}"
+        f"严格返回结构：{natural_prompt_data(schema)}\n"
+        f"SEGMENTS:\n{natural_prompt_data(segments)}"
     )
 
 
@@ -305,7 +344,7 @@ def episode_prompt(source_text: str, timeline_scope: str) -> str:
         "Episode text 使用 Source 中信息最完整的语言来写（中文可用时优先中文），不要重复罗列各语言译文。\n"
         "边界示例：若 A 现在前来增援，同时说‘上次我和 B 帮助 C 夺回大楼’，至少拆为："
         "①当前 A 前来增援；②过去 A 与 B 帮助 C 夺回大楼（story_time_text='上次，据A回忆'）。\n"
-        f"输出结构示例：{json.dumps(schema, ensure_ascii=False)}\n\nSOURCE:\n{source_text}"
+        f"输出结构示例：{natural_prompt_data(schema)}\n\nSOURCE:\n{source_text}"
     )
 
 
@@ -355,8 +394,8 @@ def temporal_audit_prompt(
         "例如‘A 现在抱怨 B 没记住她，并提到上次两人差点交手’必须产生："
         "①当前 A 与 B 争论名字（当前时间）；②据 A 说法，A 与 B 上次差点交手（story_time_text='上次，据A说法'）。"
         "审计完成后，不得残留以‘说/提到/回忆上次 Y’来代替独立过去事件的条目。\n"
-        f"严格返回结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"候选 Episode：{json.dumps(episodes, ensure_ascii=False)}\n\n"
+        f"严格返回结构：{natural_prompt_data(schema)}\n"
+        f"候选 Episode：{natural_prompt_data(episodes)}\n\n"
         f"SOURCE：\n{source_text}"
     )
 
@@ -398,8 +437,8 @@ def granularity_audit_prompt(
     return (
         "审计并重写下面的完整候选列表。重点合并同场景的微小对白/反应，移除纯标题，"
         "把未经 Source 证实的身份猜测恢复成未知标记；不得合并不同实际时间。\n"
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"候选 EPISODES：{json.dumps(episodes, ensure_ascii=False)}\n"
+        f"输出结构：{natural_prompt_data(schema)}\n"
+        f"候选 EPISODES：{natural_prompt_data(episodes)}\n"
         f"SOURCE：\n{source_text}"
     )
 
@@ -453,8 +492,8 @@ def episode_quality_audit_prompt(
         "仍在某个 Episode 中，并保留参与者及‘据谁回忆/说法’等证据限定。逐句反查发言者、动作主体和"
         "动作对象，不能把‘A 说她看见 B 对 C 做事’改成 A 或 C 做事；Source 未写明的职务、组织归属、"
         "中文译名和全名一律删除。\n"
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"候选 EPISODES：{json.dumps(episodes, ensure_ascii=False)}\n"
+        f"输出结构：{natural_prompt_data(schema)}\n"
+        f"候选 EPISODES：{natural_prompt_data(episodes)}\n"
         f"SOURCE：\n{source_text}"
     )
 
@@ -527,8 +566,8 @@ def episode_factual_audit_prompt(
         "逐条审计下面的候选列表。先从 Source 独立建立 evidence_frames，再查看候选是否忠实；不要先"
         "接受候选中的实体关系。reviews 必须覆盖从 0 开始的每个候选索引且恰好一次。supported 的"
         "corrected_episode 必须为 null；corrected 必须提供完整修订；ambiguous/rejected 不得伪造修订。\n"
-        f"严格输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"候选 EPISODES：{json.dumps(episodes, ensure_ascii=False)}\n\n"
+        f"严格输出结构：{natural_prompt_data(schema)}\n"
+        f"候选 EPISODES：{natural_prompt_data(episodes)}\n\n"
         f"SOURCE：\n{source_text}"
     )
 
@@ -588,9 +627,9 @@ def concept_prompt(
         "这是软范围，允许 0 个，不能为凑数量制造泛化节点。\n"
         "每行只写一个 Concept 名称；没有可复用 Concept 时写“无”。\n"
         f"Source 人物别名表（只用于同一人物的 aliases，不得补充事实）：{alias_context or '无'}\n"
-        f"已知参与者：{json.dumps(participants, ensure_ascii=False)}\n"
+        f"已知参与者：{natural_prompt_data(participants)}\n"
         "Episode 证据层（Concept 描述不得把 reported/speculative 升级为事实）："
-        f"{json.dumps(evidence_info or {}, ensure_ascii=False)}\n"
+        f"{natural_prompt_data(evidence_info or {})}\n"
         f"EPISODE:\n{episode_text}"
     )
 
@@ -615,7 +654,7 @@ def concept_batch_prompt(
         "先写一行“Episode N”，随后每行只写一个 Concept 名称；没有可复用 Concept 时写“无”。"
         "不同 Episode 之间留一个空行。不要填写 JSON 或数据库字段。\n"
         f"Source 人物别名表（只用于同一人物的 aliases，不得补充事实）：{alias_context or '无'}\n"
-        f"EPISODES：{json.dumps(episodes, ensure_ascii=False)}"
+        f"EPISODES：{natural_prompt_data(episodes)}"
     )
 
 
@@ -647,16 +686,16 @@ def concept_admission_batch_prompt(items: list[dict[str, Any]]) -> str:
     return (
         "逐项判断候选是否应进入长期 Concept 图。reuse 时 existing_concept_id 必须来自该候选的 similar_concepts；"
         "promote/transient 时必须为 null。不要为了达到数量目标而 promote。\n"
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"候选：{json.dumps(items, ensure_ascii=False)}"
+        f"输出结构：{natural_prompt_data(schema)}\n"
+        f"候选：{natural_prompt_data(items)}"
     )
 
 
 def concept_update_prompt(existing: dict[str, Any], incoming: dict[str, Any]) -> str:
     return (
         '返回 {"concept":{canonical_name,description,embedding_text,aliases,confidence}}。\n'
-        f"已有 Concept：{json.dumps(existing, ensure_ascii=False)}\n"
-        f"新证据：{json.dumps(incoming, ensure_ascii=False)}"
+        f"已有 Concept：{natural_prompt_data(existing)}\n"
+        f"新证据：{natural_prompt_data(incoming)}"
     )
 
 
@@ -687,8 +726,8 @@ def episode_relation_prompt(
         '输出 {"relationships":[{"candidate_id":1,"relation_type":"causal",'
         '"relation_key":"caused_by","relation_text":"...","polarity":1,'
         '"llm_score":0.8,"confidence":0.7}]}。\n'
-        f"当前：{json.dumps(current, ensure_ascii=False)}\n"
-        f"候选：{json.dumps(candidates, ensure_ascii=False)}"
+        f"当前：{natural_prompt_data(current)}\n"
+        f"候选：{natural_prompt_data(candidates)}"
     )
 
 
@@ -718,8 +757,8 @@ def episode_relation_batch_prompt(items: list[dict[str, Any]]) -> str:
         "不得让 relation_key 与 relation_text 相反。\n"
         "Episode 正向 identity 只用于同一事件/同一场景；共享人物、称号、面具或角色身份只能建立其他关系，"
         "不得把使用同一称号的不同人物判为同一人物。\n"
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"分组：{json.dumps(items, ensure_ascii=False)}"
+        f"输出结构：{natural_prompt_data(schema)}\n"
+        f"分组：{natural_prompt_data(items)}"
     )
 
 
@@ -744,10 +783,10 @@ def concept_relation_prompt(
         "相似但不同建立 semantic；明确不同可建立 identity/not_same_as 且 polarity=-1。\n"
         "正向 identity 必须有名称、别名、唯一代号或 Source 明示的同一对象证据；描述相似、共同参与事件、"
         "相邻出现或同属组织都不构成 identity。两个不同具名参与者即使描述相同也不是同一人物。\n"
-        f"必须逐字段输出以下结构，不能省略 relation_type：{json.dumps(schema, ensure_ascii=False)}。"
+        f"必须逐字段输出以下结构，不能省略 relation_type：{natural_prompt_data(schema)}。"
         "candidate_id 指已有 Concept。\n"
-        f"新 Concept：{json.dumps(current, ensure_ascii=False)}\n"
-        f"已有候选：{json.dumps(candidates, ensure_ascii=False)}"
+        f"新 Concept：{natural_prompt_data(current)}\n"
+        f"已有候选：{natural_prompt_data(candidates)}"
     )
 
 
@@ -777,8 +816,8 @@ def concept_relation_batch_prompt(items: list[dict[str, Any]]) -> str:
         "identity 必须有名称、别名、唯一代号或 Source 明示的同一对象证据。描述相似、共同参加同一事件、"
         "一句话中并列出现、同属一个组织或向彼此汇报，都不能证明是同一对象；两个不同具名参与者不得"
         "因为 embedding_text 相同而建立正向 identity。\n"
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"分组：{json.dumps(items, ensure_ascii=False)}"
+        f"输出结构：{natural_prompt_data(schema)}\n"
+        f"分组：{natural_prompt_data(items)}"
     )
 
 
@@ -814,10 +853,10 @@ def second_pass_prompt(
         },
     }
     return (
-        f"严格返回此结构：{json.dumps(schema, ensure_ascii=False)}。participants 必须是 JSON 数组。\n"
+        f"严格返回此结构：{natural_prompt_data(schema)}。participants 必须是 JSON 数组。\n"
         f"目标 ID：{episode_id}\n"
-        f"目标 Episode：{json.dumps(episode, ensure_ascii=False)}\n"
-        f"同文件纲要/相邻 Episode：{json.dumps(nearby, ensure_ascii=False)}\n"
+        f"目标 Episode：{natural_prompt_data(episode)}\n"
+        f"同文件纲要/相邻 Episode：{natural_prompt_data(nearby)}\n"
         f"SOURCE：\n{source_text}"
     )
 
@@ -850,9 +889,9 @@ def second_pass_batch_prompt(
     return (
         "逐项修订输入 Episode；每个 episode_id 必须恰好返回一次，不能合并、遗漏或新增 ID。"
         "participants 必须是 JSON 数组。证据不足时保留 ???、[USERNAME] 或原始人物标记。\n"
-        f"严格返回此结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"待修订项：{json.dumps(items, ensure_ascii=False)}\n"
-        f"共享的同文件纲要/相邻 Episode：{json.dumps(shared_context or [], ensure_ascii=False)}\n"
+        f"严格返回此结构：{natural_prompt_data(schema)}\n"
+        f"待修订项：{natural_prompt_data(items)}\n"
+        f"共享的同文件纲要/相邻 Episode：{natural_prompt_data(shared_context or [])}\n"
         f"SOURCE：\n{source_text}"
     )
 
@@ -886,26 +925,25 @@ def hop_query_prompt(
     episodes: list[dict[str, Any]],
     concepts: list[dict[str, Any]],
 ) -> str:
-    schema = {
-        "followup_queries": [
-            "已识别实体Y与问题所求关系R的直接证据是什么",
-            "问题中尚未覆盖的时间或因果槽位是什么",
-        ]
-    }
-    compact_episodes = [
-        {key: episode.get(key) for key in ("id", "text", "participants", "source_key")}
-        for episode in episodes
+    queries = intent.get("search_queries") or []
+    episode_lines = [
+        f"第{index}条记忆：{str(row.get('text') or '').strip()}"
+        for index, row in enumerate(episodes, 1)
+        if isinstance(row, dict) and str(row.get("text") or "").strip()
     ]
-    compact_concepts = [
-        {key: concept.get(key) for key in ("id", "canonical_name", "description")}
-        for concept in concepts
+    concept_lines = [
+        f"相关概念：{str(row.get('canonical_name') or '').strip()}。"
+        f"{str(row.get('description') or '').strip()}"
+        for row in concepts if isinstance(row, dict)
     ]
     return (
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
+        "请判断首轮记忆仍缺少哪些事实，再提出两到八个下一步检索问题。"
+        "只用下面可见的名称和事件，不要猜答案。没有缺口时可返回空列表。\n\n"
         f"原问题：{question}\n"
-        f"查询意图：{json.dumps(intent, ensure_ascii=False)}\n"
-        f"第一轮Episode：{json.dumps(compact_episodes, ensure_ascii=False)}\n"
-        f"第一轮Concept：{json.dumps(compact_concepts, ensure_ascii=False)}"
+        f"首轮检索想回答：{'；'.join(map(str, queries)) or question}\n"
+        f"首轮记忆：\n{chr(10).join(episode_lines) or '没有。'}\n"
+        f"相关概念：\n{chr(10).join(concept_lines) or '没有。'}\n\n"
+        "请将检索问题写入 followup_queries 列表。"
     )
 
 
@@ -963,10 +1001,10 @@ def growth_prompt(
         ]
     }
     return (
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
+        f"输出结构：{natural_prompt_data(schema)}\n"
         f"问题：{question}\n"
-        f"节点：{json.dumps(nodes, ensure_ascii=False)}\n"
-        f"已有关系：{json.dumps(edges, ensure_ascii=False)}"
+        f"节点：{natural_prompt_data(nodes)}\n"
+        f"已有关系：{natural_prompt_data(edges)}"
     )
 
 
@@ -1032,11 +1070,11 @@ def growth_audit_prompt(
         for index, relationship in enumerate(relationships)
     ]
     return (
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
+        f"输出结构：{natural_prompt_data(schema)}\n"
         f"问题：{question}\n"
-        f"节点：{json.dumps(nodes, ensure_ascii=False)}\n"
-        f"已有关系：{json.dumps(edges, ensure_ascii=False)}\n"
-        f"待审计关系：{json.dumps(indexed, ensure_ascii=False)}"
+        f"节点：{natural_prompt_data(nodes)}\n"
+        f"已有关系：{natural_prompt_data(edges)}\n"
+        f"待审计关系：{natural_prompt_data(indexed)}"
     )
 
 
@@ -1078,6 +1116,40 @@ EVIDENCE_COVERAGE_AUDIT_SYSTEM = """你是第二名独立证据覆盖侦察器�
 使用外部知识或问题暗示补答案。只输出合法 JSON。"""
 
 
+def _readable_evidence_candidates(candidates: list[dict[str, Any]]) -> str:
+    lines: list[str] = []
+    for item in candidates:
+        if not isinstance(item, dict):
+            continue
+        number = item.get("id")
+        lines.append(f"记忆 {number}：{str(item.get('text') or '').strip()}")
+        for label, key in (("说话者或参与者", "participants"),
+                           ("故事时间", "story_time_text"),
+                           ("来源", "source_key"),
+                           ("叙述状态", "epistemic_status"),
+                           ("限定", "epistemic_note")):
+            value = item.get(key)
+            if value:
+                rendered = "、".join(map(str, value)) if isinstance(value, list) else str(value)
+                lines.append(f"  {label}：{rendered}")
+        refs = item.get("source_context_refs") or []
+        if refs:
+            lines.append("  可参看的原文片段：" + "、".join(map(str, refs)))
+    return "\n".join(lines) or "没有候选记忆。"
+
+
+def _readable_source_contexts(contexts: list[dict[str, Any]] | None) -> str:
+    lines: list[str] = []
+    for item in contexts or []:
+        if not isinstance(item, dict):
+            continue
+        lines.append(
+            f"原文片段 {item.get('paragraph_id')}，来源 {item.get('source_id')}："
+            f"{str(item.get('text') or '').strip()}"
+        )
+    return "\n".join(lines) or "没有附加原文片段。"
+
+
 def evidence_rerank_prompt(
     question: str,
     intent: dict[str, Any],
@@ -1086,27 +1158,18 @@ def evidence_rerank_prompt(
     limit: int,
     source_contexts: list[dict[str, Any]] | None = None,
 ) -> str:
-    schema = {
-        "coverage": [
-            {
-                "query": "原子问题",
-                "mode": "alternatives",
-                "episode_ids": [1],
-                "reason": "Episode 直接给出所需行动细节",
-            }
-        ],
-        "missing_aspects": [],
-    }
     return (
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"limit：{limit}\n"
-        f"问题：{question}\n"
-        f"查询意图：{json.dumps(intent, ensure_ascii=False)}\n"
-        f"原子检索问题：{json.dumps(atomic_queries, ensure_ascii=False)}\n"
-        f"候选 Episode：{json.dumps(candidates, ensure_ascii=False)}\n"
-        "Source 原文上下文只证明对应 Source 中出现过该内容，不自动证明某一 Episode 摘要包含它；"
-        "候选仅可通过 source_context_refs 引用："
-        f"{json.dumps(source_contexts or [], ensure_ascii=False)}"
+        "请从下列记忆中找出能回答各个事实问题的证据。不要直接回答用户。"
+        "相同话题不等于支持同一事实；说话者、时间、否定和推测都须分别核对。"
+        f"最终最多保留 {limit} 条记忆。\n\n"
+        f"用户问题：{question}\n"
+        f"要分别查明：{'；'.join(map(str, atomic_queries)) or question}\n\n"
+        f"候选记忆：\n{_readable_evidence_candidates(candidates)}\n\n"
+        "下列原文只能证明其所属来源出现过这些话，不能自动证明一条记忆摘要的全部内容。\n"
+        f"{_readable_source_contexts(source_contexts)}\n\n"
+        "请在 coverage 中逐项填写所回答的问题、相关记忆编号和简短理由；"
+        "同一事实有多条可替代证据时使用 alternatives，必须合用时使用 joint。"
+        "未找到的事实写入 missing_aspects。"
     )
 
 
@@ -1116,24 +1179,16 @@ def evidence_coverage_audit_prompt(
     candidates: list[dict[str, Any]],
     source_contexts: list[dict[str, Any]] | None = None,
 ) -> str:
-    schema = {
-        "coverage": [
-            {
-                "query": "独立原子证据槽",
-                "mode": "alternatives",
-                "episode_ids": [1],
-                "reason": "Episode 直接证明该槽，且未混淆开端与结尾",
-            }
-        ],
-        "missing_aspects": [],
-    }
     return (
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"问题：{question}\n"
-        f"原子检索问题：{json.dumps(atomic_queries, ensure_ascii=False)}\n"
-        f"候选 Episode：{json.dumps(candidates, ensure_ascii=False)}\n"
-        "Source 原文上下文是 Source 级证据，候选通过 source_context_refs 引用："
-        f"{json.dumps(source_contexts or [], ensure_ascii=False)}"
+        "请独立复查候选记忆是否覆盖每个事实问题。不要回答用户，"
+        "也不要把同一来源的相关话题当成事实证明。\n\n"
+        f"用户问题：{question}\n"
+        f"要分别查明：{'；'.join(map(str, atomic_queries)) or question}\n\n"
+        f"候选记忆：\n{_readable_evidence_candidates(candidates)}\n\n"
+        f"原文片段：\n{_readable_source_contexts(source_contexts)}\n\n"
+        "请在 coverage 中逐项说明能支持问题的记忆编号和理由。"
+        "可替代证据使用 alternatives，必须合用的证据使用 joint；"
+        "无法证实的部分写入 missing_aspects。"
     )
 
 
@@ -1145,23 +1200,25 @@ def evidence_rerank_audit_prompt(
     limit: int,
     source_contexts: list[dict[str, Any]] | None = None,
 ) -> str:
-    schema = {
-        "valid": False,
-        "final_episode_ids": [1, 2],
-        "replacements": [
-            {"remove_id": 3, "add_id": 2, "reason": "后者含有具体行动细节"}
-        ],
-        "missing_aspects": [],
-    }
+    initial_lines = []
+    for item in initial.get("coverage") or []:
+        if isinstance(item, dict):
+            initial_lines.append(
+                f"{item.get('query') or '一项事实'}："
+                f"{','.join(map(str, item.get('episode_ids') or [])) or '未找到'}；"
+                f"{item.get('reason') or ''}"
+            )
     return (
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
-        f"limit：{limit}\n"
-        f"问题：{question}\n"
-        f"原子检索问题：{json.dumps(atomic_queries, ensure_ascii=False)}\n"
-        f"证据短名单 Episode：{json.dumps(candidates, ensure_ascii=False)}\n"
-        "Source 原文上下文是 Source 级证据，候选通过 source_context_refs 引用："
-        f"{json.dumps(source_contexts or [], ensure_ascii=False)}\n"
-        f"覆盖侦察结果：{json.dumps(initial, ensure_ascii=False)}"
+        f"请检查下列证据短名单，最终保留 {limit} 条不同的记忆。"
+        "不得丢掉某个问题唯一的直接证据，也不要拿相同话题替代不同事实。\n\n"
+        f"用户问题：{question}\n"
+        f"要分别查明：{'；'.join(map(str, atomic_queries)) or question}\n\n"
+        f"候选记忆：\n{_readable_evidence_candidates(candidates)}\n\n"
+        f"原文片段：\n{_readable_source_contexts(source_contexts)}\n\n"
+        f"初步覆盖结果：\n{chr(10).join(initial_lines) or '没有。'}\n\n"
+        "请说明初步结果是否有效，在 final_episode_ids 中列出最终编号；"
+        "若替换证据，在 replacements 中注明删去与加入的编号及理由；"
+        "仍缺少的事实写入 missing_aspects。"
     )
 
 
@@ -1251,10 +1308,10 @@ def event_continuity_audit_prompt(
         for episode in episodes
     ]
     return (
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
+        f"输出结构：{natural_prompt_data(schema)}\n"
         f"问题：{question}\n"
         f"待审计答案：{answer}\n"
-        f"Episode证据：{json.dumps(compact_episodes, ensure_ascii=False)}"
+        f"Episode证据：{natural_prompt_data(compact_episodes)}"
     )
 
 
@@ -1297,11 +1354,11 @@ def answer_audit_prompt(
         # grounded the answer, so audit the same delivered evidence as answer.
         compact["source_excerpt"] = str(episode.get("source_text", ""))
     return (
-        f"输出结构：{json.dumps(schema, ensure_ascii=False)}\n"
+        f"输出结构：{natural_prompt_data(schema)}\n"
         f"问题：{question}\n"
-        f"查询意图：{json.dumps(intent, ensure_ascii=False)}\n"
+        f"查询意图：{natural_prompt_data(intent)}\n"
         f"待审计答案：{answer}\n"
-        f"Episode证据：{json.dumps(compact_episodes, ensure_ascii=False)}"
+        f"Episode证据：{natural_prompt_data(compact_episodes)}"
     )
 
 
@@ -1312,7 +1369,7 @@ def answer_correction_prompt(answer: str, audit: dict[str, Any]) -> str:
         "若审计指出跨观察因果越界，必须检查全文每一段，删除或降级所有未被证据连接的因果、使能、"
         "必要条件和具体机制措辞；不能保留强结论后只在别处添加免责声明。\n"
         f"上一版答：{answer}\n"
-        f"审计结果：{json.dumps(audit, ensure_ascii=False)}"
+        f"审计结果：{natural_prompt_data(audit)}"
     )
 
 
@@ -1326,11 +1383,11 @@ def answer_prompt(
 ) -> str:
     return (
         f"问题：{question}\n"
-        f"查询意图：{json.dumps(intent, ensure_ascii=False)}\n"
-        f"Episode证据：{json.dumps(episodes, ensure_ascii=False)}\n"
-        f"Concept：{json.dumps(concepts, ensure_ascii=False)}\n"
-        f"Association路径：{json.dumps(paths, ensure_ascii=False)}\n"
-        f"时间线备注：{json.dumps(chronology_notes, ensure_ascii=False)}"
+        f"查询意图：{natural_prompt_data(intent)}\n"
+        f"Episode证据：{natural_prompt_data(episodes)}\n"
+        f"Concept：{natural_prompt_data(concepts)}\n"
+        f"Association路径：{natural_prompt_data(paths)}\n"
+        f"时间线备注：{natural_prompt_data(chronology_notes)}"
     )
 
 
@@ -1466,10 +1523,10 @@ def fixed_endpoint_growth_prompt(rows: list[dict[str, Any]]) -> str:
     return (
         "回答后固定端点候选审计。候选不是证据；只能依据给出的两个 Episode 端点判断，"
         "不得改换端点或新增关系：\n"
-        + json.dumps(rows, ensure_ascii=False, separators=(",", ":"))
+        + natural_prompt_data(rows)
     )
 
 
 __all__ = tuple(
-    name for name in globals() if name.isupper() or name.endswith("_prompt")
+    name for name in globals() if name.isupper() or name.endswith("_prompt") or name == "natural_prompt_data"
 )

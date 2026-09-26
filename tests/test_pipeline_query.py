@@ -160,7 +160,7 @@ class SinglePassFakeModel(FakeModel):
                 {
                     int(value)
                     for value in re.findall(
-                        r'"episode_index"\s*:\s*(\d+)', user
+                        r'episode_index：\s*(\d+)', user
                     )
                 }
             )
@@ -217,7 +217,7 @@ class DocumentMapFakeModel(SinglePassFakeModel):
                 {
                     int(value)
                     for value in re.findall(
-                        r'"episode_index"\s*:\s*(\d+)', user
+                        r'episode_index：\s*(\d+)', user
                     )
                 }
             )
@@ -248,7 +248,12 @@ class AdaptiveAnchorMapFakeModel(DocumentMapFakeModel):
     def chat_json(self, system: str, user: str, **kwargs):
         if "长文档的抽取式导航器" in system:
             self.document_anchor_map_calls += 1
-            segments = json.loads(user.split("SEGMENTS:\n", 1)[1])
+            segments = [
+                {"segment_index": int(value)}
+                for value in re.findall(
+                    r"segment_index：\s*(\d+)", user.split("SEGMENTS:\n", 1)[1]
+                )
+            ]
             return {
                 "segment_anchors": [
                     {
@@ -1981,6 +1986,7 @@ class PipelineQueryTests(unittest.TestCase):
                     "initial_embedding",
                     "initial_retrieval",
                     "initial_graph_expansion",
+                    "prepared_early_contextual",
                     "followup_planning",
                     "followup_embedding",
                     "followup_retrieval",

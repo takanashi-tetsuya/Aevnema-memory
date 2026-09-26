@@ -134,6 +134,31 @@ class EngineContributionSelectorV3Tests(unittest.TestCase):
     def _episode_view(episode_id: int, score: float) -> dict:
         return {"id": episode_id, "score": score, "source_key": "local-only"}
 
+    def test_source_fact_rejects_quote_with_invented_suffix(self):
+        raw = "Actor_A: I fabricated the registry and documents."
+        episode = _episode(
+            1, 1, source_key="story/a.json", spans=[[1, 1]],
+            quotes=[raw + " Actor_B knew and approved the plan."],
+        )
+        episode["evidence_basis"] = "source_id"
+        fact, reason = self._engine([episode], [_source(1, raw)])._v3_source_fact_for_closure(
+            episode_id=1, episode=episode, source=_source(1, raw),
+        )
+        self.assertIsNone(fact)
+        self.assertEqual("source_evidence_quote_span_mismatch", reason)
+
+    def test_source_fact_rejects_unregistered_coordinate_basis(self):
+        raw = "Actor_A: I fabricated the registry and documents."
+        episode = _episode(
+            1, 1, source_key="story/a.json", spans=[[1, 1]], quotes=[raw],
+        )
+        episode["evidence_basis"] = "unregistered_record_id_coordinates_v999"
+        fact, reason = self._engine([episode], [_source(1, raw)])._v3_source_fact_for_closure(
+            episode_id=1, episode=episode, source=_source(1, raw),
+        )
+        self.assertIsNone(fact)
+        self.assertEqual("source_evidence_basis_invalid", reason)
+
     def test_source_fact_uses_declared_reasoning_view_coordinates(self):
         raw = "\n".join(
             (

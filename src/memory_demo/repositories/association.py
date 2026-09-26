@@ -532,17 +532,39 @@ class AssociationRepository:
         return int(row["id"]) if row is not None else None
 
     def neighbors(self, node_type: NodeType, node_id: int, limit: int = 100):
+        sql = """
+            SELECT * FROM association
+            WHERE (from_type = ? AND from_id = ?)
+               OR (to_type = ? AND to_id = ?)
+            ORDER BY weight DESC, confidence DESC
+        """
+        parameters = (node_type, node_id, node_type, node_id)
         with self.db.connection() as connection:
-            return connection.execute(
-                """
-                SELECT * FROM association
-                WHERE (from_type = ? AND from_id = ?)
-                   OR (to_type = ? AND to_id = ?)
-                ORDER BY weight DESC, confidence DESC
-                LIMIT ?
-                """,
-                (node_type, node_id, node_type, node_id, limit),
+            rows = connection.execute(
+                sql + " LIMIT ?", (*parameters, limit),
             ).fetchall()
+            valid_simple_ids = self._valid_simple_recall_ids(rows)
+            if valid_simple_ids is None:
+                return rows
+            filtered = [row for row in rows if row["association_mode"] != "simple_recall"
+                        or int(row["id"]) in valid_simple_ids]
+            if len(filtered) == len(rows) or limit < 0:
+                return filtered
+            # Preserve the bounded legacy fast path unless a stale shortcut
+            # occupied a result slot. Refill only after filtering, so invalid
+            # shortcuts cannot hide lower-ranked, usable associations.
+            candidates = connection.execute(sql, parameters).fetchall()
+            return [row for row in candidates if row["association_mode"] != "simple_recall"
+                    or int(row["id"]) in valid_simple_ids][:limit]
+
+    def _valid_simple_recall_ids(self, rows) -> set[int] | None:
+        if not any("association_mode" in row.keys() and row["association_mode"] == "simple_recall" for row in rows):
+            return None
+        # Import lazily: associations' package initializer also uses these
+        # repositories. This read-only sidecar lookup changes no V3 contracts.
+        from memory_demo.associations.feedback import RecallFeedbackService
+
+        return RecallFeedbackService(self.db).valid_learned_edge_ids()
 
     def neighbors_many(
         self,
@@ -573,7 +595,14 @@ class AssociationRepository:
                 [node_type, *requested, node_type, *requested],
             ).fetchall()
         requested_set = set(requested)
+        valid_simple_ids = self._valid_simple_recall_ids(rows)
         for row in rows:
+            if (
+                valid_simple_ids is not None
+                and row["association_mode"] == "simple_recall"
+                and int(row["id"]) not in valid_simple_ids
+            ):
+                continue
             endpoints: set[int] = set()
             if str(row["from_type"]) == node_type:
                 endpoints.add(int(row["from_id"]))

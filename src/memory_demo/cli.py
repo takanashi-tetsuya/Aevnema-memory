@@ -49,6 +49,7 @@ def _configure_console_encoding() -> None:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="memory-demo")
     parser.add_argument("--env-file", default=".env")
+    parser.add_argument("--database", help="working SQLite database; use a copy for experiments")
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("init", help="initialize the database")
     prepare = subparsers.add_parser("prepare", help="parse and segment without API calls")
@@ -75,6 +76,15 @@ def build_parser() -> argparse.ArgumentParser:
     query = subparsers.add_parser("query", help="query the memory network")
     query.add_argument("question")
     query.add_argument("--json", action="store_true")
+    query.add_argument("--mode", choices=["light", "standard", "deep", "max_effort"], help="progressive recall: deep 6 minutes, max_effort 30 minutes")
+    query.add_argument("--context", default="", help="visible context for progressive recall")
+    query.add_argument("--resume", help="resume a progressive recall session id")
+    query.add_argument("--timeout", type=float, help="shorter request deadline in seconds")
+    query.add_argument("--no-learn", action="store_true", help="retrieve and verify without changing association strengths")
+    feedback = subparsers.add_parser("recall-feedback", help="rate the actual edges used by a saved recall")
+    feedback.add_argument("session_id")
+    feedback.add_argument("verdict", choices=["positive", "negative"])
+    feedback.add_argument("--feedback-id", required=True, help="stable event id; retries do not repeat learning")
     subparsers.add_parser("stats")
     subparsers.add_parser("rebuild-index")
     contextual = subparsers.add_parser(
@@ -232,6 +242,8 @@ def main(argv: list[str] | None = None) -> int:
     _configure_console_encoding()
     args = build_parser().parse_args(argv)
     config = AppConfig.from_env(args.env_file)
+    if args.database:
+        config.database_path = Path(args.database)
     if args.command == "prepare":
         _print_json(_prepare(args.path, config))
         return 0
@@ -253,6 +265,9 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     app = MemoryApplication(config)
+    if args.command == "recall-feedback":
+        _print_json(app.recall_feedback(args.session_id, positive=args.verdict == "positive", feedback_id=args.feedback_id))
+        return 0
     if args.command == "init":
         print(f"initialized {config.database_path}")
         return 0
@@ -325,6 +340,24 @@ def main(argv: list[str] | None = None) -> int:
         _print_json(app.stats())
         return 0
     if args.command == "query":
+        from memory_demo.retrieval.recall_policy import requests_maximum_recall
+
+        if args.mode or args.resume or requests_maximum_recall(args.question):
+            result = app.recall(
+                args.question, mode=args.mode, context=args.context,
+                resume=args.resume, timeout_seconds=args.timeout,
+                learn=not args.no_learn,
+            )
+            if args.json:
+                _print_json(result)
+            else:
+                print(result["answer"] or "尚未取得通过原文核验的证据。")
+                print(f"\n回想状态：{result['status']}；会话：{result['session_id']}")
+                if result["missing_requirements"]:
+                    print("尚未补齐：" + "；".join(result["missing_requirements"]))
+            return 0 if result["complete"] else 2
+        if args.timeout is not None or args.context or args.no_learn:
+            raise SystemExit("--timeout/--context/--no-learn require --mode for progressive recall")
         app.rebuild_indexes()
         result = app.query_engine().query(args.question)
         _print_json(result) if args.json else print(result["answer"])

@@ -97,6 +97,7 @@ _APPROVED_REVIEW_STATUSES = frozenset(
 _SHA256_RE = re.compile(r"^[0-9a-fA-F]{64}$")
 _ARRAY_INDEX_RE = re.compile(r"^(?:0|[1-9][0-9]*)$")
 _MAX_ARRAY_INDEX_DIGITS = 19
+_MAX_JSON_NESTING = 512
 
 _PathIdentity = tuple[int, int, int, int]
 _PathSnapshot = tuple[Path, _PathIdentity]
@@ -152,7 +153,27 @@ def _status_category(value: object) -> str:
 
 
 def _strict_json_loads(raw: bytes) -> object:
-    """Decode JSON while rejecting duplicate keys and non-finite constants."""
+    """Reject excessive nesting, duplicate keys, and non-finite constants."""
+
+    # CPython's JSON recursion ceiling differs between platform builds. Check
+    # container nesting before decoding instead of relying on RecursionError.
+    depth, in_string, escaped = 0, False, False
+    for byte in raw:
+        if in_string:
+            if escaped:
+                escaped = False
+            elif byte == 92:  # backslash
+                escaped = True
+            elif byte == 34:  # double quote
+                in_string = False
+        elif byte == 34:
+            in_string = True
+        elif byte in (91, 123):  # array or object opening
+            depth += 1
+            if depth > _MAX_JSON_NESTING:
+                raise ValueError("JSON container nesting exceeds supported limit")
+        elif byte in (93, 125):
+            depth -= 1
 
     def reject_duplicate_keys(pairs: list[tuple[str, object]]) -> dict[str, object]:
         result: dict[str, object] = {}

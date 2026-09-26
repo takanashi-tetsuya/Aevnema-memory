@@ -44,3 +44,13 @@ validation/*
 # Temporary exports.
 *.tmp
 *.bak
+
+# Local research inputs and handoff artifacts. Publish reviewed code and
+# documentation explicitly; keep corpus text, exports, and test answers local.
+/corpus/
+/exports/
+/research/
+/HANDOFF*.md
+/EXPERIMENT_GOAL_95.md
+/TEST-QUESTIONS-15.md
+/*.zip

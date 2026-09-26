@@ -496,6 +496,23 @@ class SourceGoldValidationTests(unittest.TestCase):
                         frozen_source_manifest_bytes=source_manifest_path.read_bytes(),
                     )
 
+    def test_json_nesting_limit_ignores_escaped_string_content(self) -> None:
+        depth = source_gold_validator._MAX_JSON_NESTING
+        text = '[{"escaped quote: \\" and slash: \\\\"}]' * 1000
+        raw = b"[" * depth + json.dumps(text).encode() + b"]" * depth
+        parsed = source_gold_validator._strict_json_loads(raw)
+        for _ in range(depth):
+            parsed = parsed[0]
+        self.assertEqual(parsed, text)
+        with self.assertRaisesRegex(ValueError, "nesting"):
+            source_gold_validator._strict_json_loads(b"[" + raw + b"]")
+
+    def test_json_nesting_limit_also_counts_objects(self) -> None:
+        depth = source_gold_validator._MAX_JSON_NESTING
+        raw = b'{"item":' * (depth + 1) + b"0" + b"}" * (depth + 1)
+        with self.assertRaisesRegex(ValueError, "nesting"):
+            source_gold_validator._strict_json_loads(raw)
+
     def test_source_root_rejects_unc_syntax_and_link_aliases(self) -> None:
         unc_source_root = r"\\server\share\frozen-source"
         self.assertEqual(

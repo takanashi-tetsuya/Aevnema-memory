@@ -1,121 +1,65 @@
-# Associative Memory
+# Aevnema Memory
 
-一个以 SQLite、NumPy、embedding 和 Association 图为核心的长期记忆引擎。项目只负责材料导入、证据检索、图关系增长和可审计结果，不负责聊天平台、用户身份、角色语气或最终回复。
+Aevnema Memory 是獨立的關聯記憶引擎，負責匯入材料、保存可回溯的來源、建立 Episode／Concept／Association 索引，以及按問題取回證據。它不處理聊天平台、使用者身份、人格提示詞或最終對話文字；這些由 [Aevnema chatbot](https://github.com/takanashi-tetsuya/Aevnema) 負責。
 
-## 数据模型
+本倉庫同時是記憶演算法的開發與評測場所。研究中的召回率、來源可達率、片段充分性和最終答案正確率是不同指標；實驗報告不能視為目前產品的準確率保證。
 
-- `Source`：长度受控的原始证据文本。Episode、Paragraph 通过 `source_id` 回到原文。
-- `Episode`：自包含的事件、状态或可检索事实，保存参与者、时间语义、证据状态、generation 和 float32 embedding。
-- `Paragraph`：可选的局部语义召回层，只提高候选召回，不替代 Source 或 Episode。
-- `Concept`：实体、抽象概念、情绪、关系主题及其多语言别名。
-- `Association`：Episode/Concept 之间的有向关系，保存关系文本、权重、证据状态、generation、前提和使用统计。
+## 安裝與首次使用
 
-`generation=0` 表示直接材料或不依赖推论的结构；更大的 generation 表示推断链离直接证据更远。可信度与 generation 分开记录。
-
-Embedding 在 SQLite 和 RAM 中统一使用 float32。SQLite 是持久化真实来源，RAM 索引可以从数据库重建。
-
-## 代码边界
-
-```text
-src/memory_demo/
-├── __init__.py          公共 Python API
-├── app.py               组合根：数据库、仓库、索引和模型客户端
-├── contracts/           与上层应用共享的请求/回答合同
-├── adapters/            JSON/TXT 输入兼容层
-├── ingestion/           分片、提取、审计、目录顺序和事务写入
-│   └── ordering.py      通用目录时间线分组与自然文件排序
-├── retrieval/           向量、稀疏、Paragraph 和图检索
-│   ├── context.py       有界 Source 证据摘录
-│   └── query_planning.py 模型 intent 到证据槽的确定性转换
-├── associations/        Association 建立、增长和遍历
-├── chronology/          时间顺序与人工审查
-├── repositories/        SQLite 表级读写
-├── embeddings/          float32 编码和 RAM 矩阵索引
-├── llm/                 模型调用、prompt facade 和结构校验
-├── config.py            引擎配置
-├── database.py          连接工厂、事务和 schema 初始化
-└── types.py             引擎内部领域类型
-
-config/prompt_config/    所有模型提示词
-benchmarks/              当前离线评测与运维工具
-benchmarks/support/      评测共用代码，不属于运行时包
-validation/              实验结果和固定验收资产
-tests/                   单元与回归测试
-_archive/                历史实验或重构回退资产
-```
-
-上层应用只应依赖：
-
-```python
-from memory_demo import AppConfig, Database, MemoryApplication
-from memory_demo.contracts import RequestAnswerContract
-```
-
-不要从 `benchmarks` 引用生产逻辑，也不要让聊天机器人直接操作 repositories。
-
-## 导入流程
-
-```text
-文件
-→ InputAdapter 解析
-→ NaturalSegmenter 形成 SourceSegment
-→ Source 写入
-→ 文档锚点/全文结构理解（按配置）
-→ Episode 提取与证据审计
-→ Concept 提取、别名解析与去重
-→ float32 embedding
-→ Episode/Concept/Paragraph 写入
-→ 直接 Association 与推论候选
-→ 事务提交
-→ RAM 索引更新
-→ 日志记录成功、部分失败和重试信息
-```
-
-Embedding 模型没有 fallback。推理、提取和审计模型可以按配置重试或切换备用模型。导入失败必须保留文件、Source、任务、prompt 版本、模型输出和异常信息，目录导入可以继续处理其他文件并汇总失败。
-
-## 查询流程
-
-```text
-问题与请求级 RetrievalPlan
-→ 意图/槽位解析
-→ Episode、Concept、Paragraph、稀疏索引并行召回
-→ Source cohort 与 Association 候选扩展
-→ 可选 cross-encoder/LLM rerank
-→ Coverage Selector 保证实体和事实槽覆盖
-→ 时间线与证据状态检查
-→ 选择可回答证据和 Association 路径
-→ 可选候选边审计与增长
-→ 返回证据、质量指标、路径和完整 trace
-```
-
-`light`、`standard`、`deep` 是请求级预设，不应修改共享全局配置。普通问题先用 standard；证据槽缺失、冲突或时间线不完整时再升级 deep。
-
-引擎不认识具体作品的章节、人物或地点。调用方可以通过请求级 intent 提供实体、关系、时间、因果和答案槽；确定性规划层只保存这些结构，不补写领域结论。
-
-## 安装与配置
+需要 Python 3.12 或更新版本。從倉庫根目錄執行：
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate
 python -m pip install -e .
 cp .env.example .env
 ```
 
-至少配置：
-
-```dotenv
-SILICONFLOW_API_KEY=
-MEMORY_DB_PATH=database/memory_demo.db
-MEMORY_LOG_DIR=logs
-```
-
-模型、分片、审计、检索和增长参数位于 `.env`、`config/model_config.toml` 与 `config/prompt_config/`。模型输出维度固定为 1024，持久化和内存 dtype 固定为 float32。
-
-## CLI
+在本機 `.env` 填入所使用模型服務的 `SILICONFLOW_API_KEY`，並按需設定 `MEMORY_DB_PATH`、模型及檢索參數。`.env` 不應提交；`.env.example` 是不含真實憑證的模板。此獨立引擎目前由 `AppConfig.from_env()` 讀取這些設定。chatbot 的模型路由配置是另一份文件，位於其自身倉庫的 `config/model_config.toml`。
 
 ```bash
 memory-demo init
 memory-demo prepare ./documents
 memory-demo import ./documents
-memory-demo query "问题"
+memory-demo query "要查詢的問題" --json
+```
+
+`init` 建立資料庫 schema；`prepare` 只解析並分段，不呼叫模型；`import` 和一般 `query` 可能向配置的模型服務發送材料、消耗配額。處理重要資料或執行實驗時，使用 `--database` 指向獨立的 SQLite 副本：
+
+```bash
+memory-demo --database ./working.sqlite import ./documents
+memory-demo --database ./working.sqlite query "要查詢的問題" --mode deep --json
+```
+
+已安裝的命令入口為 `memory-demo`；也可使用 `python -m memory_demo.cli`。`memory-demo --help` 和各子命令的 `--help` 列出當前可用參數。
+
+## 資料與執行邊界
+
+| 物件 | 職責 |
+| --- | --- |
+| Source | 保存導入的原始材料及可回溯位置。 |
+| Episode | 從材料提取的事件、狀態或候選事實；摘要本身不等於原文已證實整個主張。 |
+| Paragraph | 可選的可逆局部片段，協助 Source 內定位。 |
+| Concept | 實體、概念及其別名。 |
+| Association | Episode／Concept 間的關係、權重與來源狀態；關聯不自動構成因果證明。 |
+
+SQLite 保存來源與索引資料，RAM 向量索引可由資料庫重建。向量持久化及記憶體運算使用 float32；已建立的資料庫必須繼續使用相容的 embedding 空間。推理模型可以配置備援，embedding 模型不能任意切換到另一個向量空間。
+
+匯入路徑由 `MemoryApplication` 組合資料庫、來源解析、分段、模型提取、審核、向量化及關聯寫入。查詢路徑在向量、詞面、Paragraph 和圖線索之間組合候選，再以來源及需求槽檢查交付品質。具體演算法可按請求配置；取得相關 Episode 或 Source 並不表示讀出的片段已完整支持答案。
+
+`memory-demo query` 的一般入口沿用 `QueryEngine.query()`。指定 `--mode light|standard|deep|max_effort`、續接 ID，或在問題中明確要求最大程度回想時，會使用 `MemoryApplication.recall()`；可用 `--resume SESSION_ID` 續接、`--no-learn` 避免更新關聯權重，並透過 `recall-feedback` 對已交付且可歸因的關聯提供回饋。這些模式有不同的搜尋預設和本地工作預算，並非正確率等級。詳細的歷史設計與驗證界線見 [逐步回想說明](docs/PROGRESSIVE_RECALL.md)。
+
+上層程式只應使用 `memory_demo` 的公開 API，例如 `AppConfig`、`Database`、`MemoryApplication` 與 `memory_demo.contracts`；不要直接修改 repositories 或引用 `benchmarks` 中的實驗實作。Aevnema chatbot 把已驗證的引擎程式複製為自身的 `memory-engine/` 執行快照，本倉庫仍保留實驗與測試。
+
+## 常用命令
+
+```bash
+memory-demo prepare ./documents
+memory-demo import ./documents --allow-partial
+memory-demo query "問題" --json
+memory-demo query "問題" --mode deep --no-learn --json
+memory-demo query "問題" --mode max_effort --resume SESSION_ID --json
+memory-demo recall-feedback SESSION_ID positive --feedback-id event-001
 memory-demo stats
 memory-demo rebuild-index
 memory-demo timeline --help
@@ -124,26 +68,24 @@ memory-demo concept --help
 memory-demo episode --help
 ```
 
-在未安装 editable package 时可使用：
+目錄匯入支援 `--source-root` 指定穩定的來源鍵；`--allow-partial` 只改變部分失敗時的退出碼，不代表失敗已修復。管理或刪除資料前應使用資料庫副本，並檢查子命令的確認選項。
 
-```bash
-python -m memory_demo.cli --help
+## 專案結構與驗證
+
+```text
+src/memory_demo/       公開 API、匯入、檢索、關聯、儲存與模型客戶端
+config/prompt_config/  引擎使用的抽取、檢索及審核提示詞
+tests/                 單元與回歸測試
+benchmarks/            可執行的離線評測工具，不屬於執行時 API
+docs/                  目前架構說明與歷史研究報告
+validation/            本地實驗結果與封存；大部分不進版本控制
 ```
 
-## 测试
-
 ```bash
+python -m pip install pytest
 python -m pytest -q
 ```
 
-`pyproject.toml` 将测试限制在 `tests/`，不会递归执行 `_archive`、validation、日志或数据库目录中的历史脚本。
+`pyproject.toml` 將預設測試收集限制在 `tests/`。真實語料、資料庫、日誌、模型回覆、實驗封包、憑證及私人對話均應留在本機；公開原始碼提交只包含可審閱的程式、測試、配置模板和文檔。歷史報告記錄當時的資料及協議，不能用其數字替代新版本驗收。
 
-## 设计约束
-
-- 不在 prompt 或代码中写死某一部剧情的结论。
-- Source 原文不可被模型改写；摘要、事实与推论分层保存。
-- 不把相关性分数当成完整证据覆盖。
-- 不把 generation 当成可信度；两者分别参与最终判断。
-- 新增长边必须保存依据、关系文本和审计结果，并能被检索 A/B 评估。
-- 数据库是真实来源；内存索引失败时必须可以重建。
-- 实验阶段编号只存在于 benchmarks 或 `_archive`，不能进入生产包 API。
+授權條款：AGPL-3.0-or-later，詳見 [LICENSE](LICENSE)。

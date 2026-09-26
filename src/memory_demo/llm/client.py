@@ -6,6 +6,8 @@ from contextvars import ContextVar
 from dataclasses import dataclass
 import hashlib
 import json
+import os
+from pathlib import Path
 import random
 import re
 import time
@@ -21,7 +23,6 @@ from urllib3.connectionpool import HTTPSConnectionPool
 
 from memory_demo.config import ModelConfig
 from memory_demo.event_log import JsonlEventLogger
-from memory_demo.llm.prompts import JSON_REPAIR_SYSTEM, json_repair_prompt
 from memory_demo.runtime.deadline import DeadlineBudget
 
 
@@ -278,6 +279,196 @@ class ProviderCallAccounting:
             self._operations.clear()
             self._endpoints.clear()
             self._outcomes.clear()
+
+
+class CampaignBudgetError(RuntimeError):
+    """A local campaign-budget control signal, never a provider response."""
+
+
+class CampaignBudgetExhausted(CampaignBudgetError):
+    """No further provider HTTP attempt may be dispatched for this campaign.
+
+    This deliberately does not inherit :class:`ModelClientError`.  Retry,
+    repair, and fallback loops must stop rather than interpreting an exhausted
+    campaign allowance as a reason to try another paid provider request.
+    """
+
+
+class CampaignBudgetConfigurationError(CampaignBudgetError):
+    """The durable campaign receipt cannot safely be opened or updated."""
+
+
+@dataclass(frozen=True, slots=True)
+class CampaignHttpReservation:
+    """A conservative, durable reservation for one actual HTTP dispatch."""
+
+    campaign_id: str
+    ordinal: int
+    remaining_after_reservation: int
+
+
+class CampaignHttpBudget:
+    """Small shared hard-stop for one explicitly configured model campaign.
+
+    The object is intentionally opt-in: ordinary application calls keep their
+    existing behaviour until a controlled runner opens a named campaign and
+    supplies it to every ``ModelClient`` it creates.  A single process is the
+    dispatcher for a campaign.  Within that process, ``open`` returns one
+    shared object for each receipt path, and the receipt makes a later process
+    continue from the already-reserved count.
+
+    A reservation is made immediately before transport dispatch and is never
+    released.  That is conservative by design: cancellation, timeout, or an
+    unknown provider outcome can still have consumed billable work.
+    """
+
+    schema = "aevnema.campaign_http_budget.v1"
+    _opened_lock = Lock()
+    _opened: dict[Path, "CampaignHttpBudget"] = {}
+
+    def __init__(
+        self,
+        *,
+        campaign_id: str,
+        max_http_attempts: int,
+        receipt_path: Path,
+    ) -> None:
+        normalized_campaign_id = str(campaign_id).strip()
+        if not normalized_campaign_id:
+            raise ValueError("campaign_id must not be empty")
+        if int(max_http_attempts) < 1:
+            raise ValueError("max_http_attempts must be at least one")
+        self.campaign_id = normalized_campaign_id
+        self.max_http_attempts = int(max_http_attempts)
+        self.receipt_path = Path(receipt_path).expanduser().resolve()
+        self._lock = Lock()
+        self._reserved_http_attempts = 0
+        self._load_or_create()
+
+    @classmethod
+    def open(
+        cls,
+        *,
+        campaign_id: str,
+        max_http_attempts: int,
+        receipt_path: str | Path,
+    ) -> "CampaignHttpBudget":
+        """Open the process-shared budget for a controlled campaign.
+
+        The path is part of the identity so an unrelated campaign cannot
+        silently inherit this campaign's allowance.  Reopening the same path
+        with a different id or cap is rejected instead of resetting it.
+        """
+
+        path = Path(receipt_path).expanduser().resolve()
+        with cls._opened_lock:
+            existing = cls._opened.get(path)
+            if existing is not None:
+                if (
+                    existing.campaign_id != str(campaign_id).strip()
+                    or existing.max_http_attempts != int(max_http_attempts)
+                ):
+                    raise CampaignBudgetConfigurationError(
+                        "campaign receipt is already open with different settings"
+                    )
+                return existing
+            budget = cls(
+                campaign_id=campaign_id,
+                max_http_attempts=max_http_attempts,
+                receipt_path=path,
+            )
+            cls._opened[path] = budget
+            return budget
+
+    @classmethod
+    def _clear_process_cache_for_test(cls) -> None:
+        """Simulate a fresh dispatcher in local persistence tests only."""
+
+        with cls._opened_lock:
+            cls._opened.clear()
+
+    def _validated_payload(self, payload: object) -> int:
+        if not isinstance(payload, dict):
+            raise CampaignBudgetConfigurationError("campaign receipt is not an object")
+        if payload.get("schema") != self.schema:
+            raise CampaignBudgetConfigurationError("campaign receipt schema mismatch")
+        if payload.get("campaign_id") != self.campaign_id:
+            raise CampaignBudgetConfigurationError("campaign receipt id mismatch")
+        if payload.get("max_http_attempts") != self.max_http_attempts:
+            raise CampaignBudgetConfigurationError("campaign receipt cap mismatch")
+        reserved = payload.get("reserved_http_attempts")
+        if isinstance(reserved, bool) or not isinstance(reserved, int):
+            raise CampaignBudgetConfigurationError("campaign receipt count is invalid")
+        if reserved < 0 or reserved > self.max_http_attempts:
+            raise CampaignBudgetConfigurationError("campaign receipt count is out of range")
+        return reserved
+
+    def _payload_locked(self) -> dict[str, object]:
+        return {
+            "schema": self.schema,
+            "campaign_id": self.campaign_id,
+            "max_http_attempts": self.max_http_attempts,
+            "reserved_http_attempts": self._reserved_http_attempts,
+        }
+
+    def _persist_locked(self) -> None:
+        try:
+            self.receipt_path.parent.mkdir(parents=True, exist_ok=True)
+            temporary = self.receipt_path.with_name(
+                f".{self.receipt_path.name}.{uuid4().hex}.tmp"
+            )
+            temporary.write_text(
+                json.dumps(self._payload_locked(), ensure_ascii=False, indent=2)
+                + "\n",
+                encoding="utf-8",
+            )
+            temporary.replace(self.receipt_path)
+        except OSError as exc:
+            raise CampaignBudgetConfigurationError(
+                "campaign receipt could not be persisted before dispatch"
+            ) from exc
+
+    def _load_or_create(self) -> None:
+        with self._lock:
+            try:
+                if self.receipt_path.exists():
+                    self._reserved_http_attempts = self._validated_payload(
+                        json.loads(self.receipt_path.read_text(encoding="utf-8"))
+                    )
+                    return
+            except (OSError, json.JSONDecodeError) as exc:
+                raise CampaignBudgetConfigurationError(
+                    "campaign receipt could not be read safely"
+                ) from exc
+            self._persist_locked()
+
+    def reserve(self) -> CampaignHttpReservation:
+        """Atomically reserve one irreversible real provider dispatch."""
+
+        with self._lock:
+            if self._reserved_http_attempts >= self.max_http_attempts:
+                raise CampaignBudgetExhausted(
+                    "campaign HTTP budget exhausted before provider dispatch"
+                )
+            self._reserved_http_attempts += 1
+            self._persist_locked()
+            return CampaignHttpReservation(
+                campaign_id=self.campaign_id,
+                ordinal=self._reserved_http_attempts,
+                remaining_after_reservation=(
+                    self.max_http_attempts - self._reserved_http_attempts
+                ),
+            )
+
+    def snapshot(self) -> dict[str, object]:
+        with self._lock:
+            return {
+                **self._payload_locked(),
+                "remaining_http_attempts": (
+                    self.max_http_attempts - self._reserved_http_attempts
+                ),
+                "receipt_filename": self.receipt_path.name,
+            }
 
 
 _PROCESS_PROVIDER_ACCOUNTING = ProviderCallAccounting()
@@ -590,6 +781,7 @@ class ModelClient:
         logger: JsonlEventLogger | None = None,
         *,
         accounting: ProviderCallAccounting | None = None,
+        campaign_budget: CampaignHttpBudget | None = None,
     ):
         self.config = config
         self.logger = logger
@@ -598,6 +790,7 @@ class ModelClient:
         # another client.  This opaque token cannot collide by identity.
         self._provider_context_identity = object()
         self._accounting = accounting or _PROCESS_PROVIDER_ACCOUNTING
+        self._campaign_budget = campaign_budget
         request_limit = max(1, int(config.max_concurrent_requests))
         # Keep the per-client semaphore for the client's own Session/adapter
         # pool, then apply a second, process-wide provider gate immediately
@@ -631,6 +824,13 @@ class ModelClient:
         """Expose only shared queue counters; no endpoint/key material leaks."""
 
         return self._provider_scheduler.snapshot()
+
+    def campaign_budget_snapshot(self) -> dict[str, object] | None:
+        """Return the attached controlled-campaign receipt, if one exists."""
+
+        if self._campaign_budget is None:
+            return None
+        return self._campaign_budget.snapshot()
 
     def _current_deadline_budget(self) -> DeadlineBudget | None:
         """Return this client's request-local budget without cross-talk."""
@@ -1077,6 +1277,30 @@ class ModelClient:
             self._thread_sessions.session = session
         return session
 
+    def _emit_model_payload(
+        self, event: str, *, request_id: str, endpoint: str, payload: Any
+    ) -> bool:
+        """Keep complete payloads in a private opt-in stream, never in audit JSONL."""
+
+        if not self.logger or os.getenv(
+            "MEMORY_LOG_MODEL_PAYLOADS", "false"
+        ).strip().casefold() not in {"true", "1", "yes", "on"}:
+            return False
+        try:
+            self.logger.emit_model_payload(
+                event, request_id=request_id, endpoint=endpoint, payload=payload
+            )
+        except Exception as exc:
+            # A diagnostic write failure must not retry a completed paid call.
+            self.logger.emit(
+                "model_payload_log_failed",
+                request_id=request_id,
+                endpoint=endpoint,
+                error_type=type(exc).__name__,
+            )
+            return False
+        return True
+
     def _post(self, endpoint: str, payload: dict[str, Any]) -> dict[str, Any]:
         scope = self._current_call_scope() or self._standalone_call_scope(
             endpoint, payload
@@ -1144,6 +1368,12 @@ class ModelClient:
         }
         request_id = call_id
         if self.logger:
+            payload_logged = self._emit_model_payload(
+                "llm_request",
+                request_id=request_id,
+                endpoint=endpoint,
+                payload=payload,
+            )
             self.logger.emit(
                 "llm_request",
                 request_id=request_id,
@@ -1152,6 +1382,7 @@ class ModelClient:
                 endpoint=endpoint,
                 payload=_request_log_summary(payload),
                 content_logged=False,
+                payload_companion_logged=payload_logged,
             )
         response: Any | None = None
         sent = False
@@ -1200,6 +1431,23 @@ class ModelClient:
             except ModelDeadlineExceeded as error:
                 observe(status="rejected_before_send", sent=False, error=error)
                 raise
+            # Reserve immediately before the transport boundary.  The receipt
+            # records dispatched work conservatively: it is intentionally not
+            # released for a timeout, interrupt, or otherwise unknown result.
+            # This exception is not a ModelClientError, so no retry/repair or
+            # fallback loop can turn an exhausted campaign into another call.
+            if self._campaign_budget is not None:
+                try:
+                    self._campaign_budget.reserve()
+                except CampaignBudgetExhausted as error:
+                    observe(status="rejected_before_send", sent=False, error=error)
+                    if self.logger:
+                        self.logger.emit(
+                            "campaign_budget_exhausted",
+                            campaign_id=self._campaign_budget.campaign_id,
+                            endpoint=endpoint,
+                        )
+                    raise
             self._record_http_attempt(scope, endpoint)
             sent = True
             network_started_at = time.monotonic()
@@ -1422,6 +1670,12 @@ class ModelClient:
             http_status=self._http_status(response),
         )
         if self.logger:
+            payload_logged = self._emit_model_payload(
+                "llm_response",
+                request_id=request_id,
+                endpoint=endpoint,
+                payload=value,
+            )
             self.logger.emit(
                 "llm_response",
                 request_id=request_id,
@@ -1429,6 +1683,7 @@ class ModelClient:
                 endpoint=endpoint,
                 payload=_response_log_summary(value),
                 content_logged=False,
+                payload_companion_logged=payload_logged,
             )
         return value
 
@@ -1606,11 +1861,18 @@ class ModelClient:
                     self._require_deadline("provider_json_delivery")
                     return parsed
                 except ValueError as first_error:
-                    repair_prompt = json_repair_prompt(text)
+                    # Ask the original natural-language task again.  The
+                    # malformed machine output is local diagnostic data and
+                    # must not become a second model prompt.
+                    retry_prompt = (
+                        str(user)
+                        + "\n上一轮回复无法被程序解析。请重新完整回答，"
+                          "不要复制或修补上一轮的输出。"
+                    )
                     try:
                         repaired = self.chat_text(
-                            JSON_REPAIR_SYSTEM,
-                            repair_prompt,
+                            system,
+                            retry_prompt,
                             model=model_name,
                             allow_fallback=False,
                             temperature=0.0,

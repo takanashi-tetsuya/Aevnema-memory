@@ -154,7 +154,7 @@ class QueryLearningFinalizationV3Tests(unittest.TestCase):
                         evidence_quotes_json, evidence_spans_json, evidence_basis,
                         embedding, created_at, updated_at
                     ) VALUES(?, ?, ?, ?, 'source', 'observed', 0, ?, ?,
-                             'literal_source_span', ?, ?, ?)
+                             'source_id', ?, ?, ?)
                     """,
                     (
                         source_id,

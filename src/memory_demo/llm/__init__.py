@@ -1,4 +1,7 @@
 from .client import (
+    CampaignBudgetConfigurationError,
+    CampaignBudgetExhausted,
+    CampaignHttpBudget,
     ModelClient,
     ModelClientError,
     ModelDeadlineExceeded,
@@ -9,6 +12,9 @@ from .client import (
 )
 
 __all__ = [
+    "CampaignBudgetConfigurationError",
+    "CampaignBudgetExhausted",
+    "CampaignHttpBudget",
     "ModelClient",
     "ModelClientError",
     "ModelDeadlineExceeded",
